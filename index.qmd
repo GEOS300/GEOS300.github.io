@@ -10,13 +10,16 @@ title: "Syllabus"
 
 with {{< var instructor.name >}} 
 
+This course webpage/syllabus is a living document and may be updated as the semester progresses.
+
+# About the Course
+
 ::::{.columns}
 
 
 :::{.column width="65%"}
 
-
-In this course we’ll focus on the interactions between the surface, vegetation and atmosphere, and the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed to the basic instrumentation and methods used in today's monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behaviour of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!
+In this course we’ll focus on the interactions between the surface, vegetation and atmosphere, and the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed to the basic instrumentation and methods used in today's monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behavior of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!
 
 :::
 
@@ -50,7 +53,15 @@ In this course we’ll focus on the interactions between the surface, vegetation
 
 # Key Information
 
-## Your Instructor
+## Lectures
+
+Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}.  Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material.  You may find the recordings [here]({{< var keyInfo.recordings >}}).  **Note**: Recording is provided as a courtesy and the quality of recordings is not guaranteed.
+
+Lecture attendance/participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  These points are only available during lecture only during each lecture session.
+
+# Instructors
+
+## Your Professor
 
 **{{< var instructor.name >}}**
 
@@ -105,13 +116,6 @@ In this course we’ll focus on the interactions between the surface, vegetation
 ::: 
 
 ::::
-
-# Lectures
-
-Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}. 
-
-- Recordings will be posted afterwards. Find them [here]({{< var keyInfo.recordings >}})
-  - *Note*: Recording is provided as a courtesy and the quality of recorded lectures is not guaranteed.
 
 
 # Evaluation

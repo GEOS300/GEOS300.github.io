@@ -1,0 +1,24 @@
+---
+title: "Lecture Slides"
+jupyter: python3
+---
+
+```{python}
+#| echo: False
+import pandas as pd
+import numpy as np
+Mon = pd.date_range("20240108", "20240412", freq='W-Mon')
+Wed = pd.date_range("20240108", "20240412", freq='W-Wed')
+Week = np.arange(1,Mon.shape[0])
+Lecture_Dates = Mon.union(Wed)
+
+Lectures = pd.DataFrame(data={'Date':Lecture_Dates})
+Lectures = Lectures.set_index('Date')
+Lectures['Topic']=''
+# Lectures.index+=1
+# Lectures.index/=2
+# Lectures.index=Lectures.index.astype(float)
+Lectures
+```
+
+Your lectures will be posted here as they become available

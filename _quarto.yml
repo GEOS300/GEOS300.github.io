@@ -9,8 +9,20 @@ project:
   resources: www
 
 website:
-  title: "Atmospheric Environments"
+  title: "Microscale Weather and Climate"
   navbar:
     left:
       - href: index.qmd
         text: Syllabus
+  #     # - href: Lectures.qmd
+  #     #   text: Lectures
+  #     # - href: Labs.qmd
+  #     #   text: Lab Assignments
+    right:
+      - icon: github
+        href: https://github.com/June-Skeeter
+        aria-label: Quarto GitHub
+  sidebar:
+    style: "docked"
+    search: true
+    contents: auto

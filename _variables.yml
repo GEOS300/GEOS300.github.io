@@ -1,6 +1,6 @@
 course:
-  term: 2023 W1
-  code: GEOS 200 / APBI 244
+  term: 2023 W2
+  code: GEOS 300
 
 instructor:
   name: Dr. June skeeter
@@ -13,9 +13,9 @@ instructor:
 
 keyInfo:
   lecture_time: Monday & Wednesday, 14:00 - 15:30
-  lecture_room: Geography Building, Room 110
-  zoom: https://ubc.zoom.us/j/66197337942?pwd=N1RSaGdRWk9RMlozckZUU2RKR0hJQT09
-  recordings: https://drive.google.com/drive/folders/1oazs1h_V7bHgqIOEoqzjMJGuC64OK1S5?usp=sharing
+  lecture_room: Geography Building, Room 101
+  zoom:
+  recordings: https://ubc.ca.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=046ea647-526b-42cd-bfd8-b0ed012399db
   iclicker_info: https://lthub.ubc.ca/guides/iclicker-cloud-student-guide/ 
 
 exam:
