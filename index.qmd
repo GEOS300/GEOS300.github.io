@@ -1,0 +1,195 @@
+---
+title: "Syllabus"
+---
+
+
+{{< include _imports.qmd >}}
+
+
+**{{< var course.code >}}**: {{< var course.term >}}
+
+with {{< var instructor.name >}} 
+
+::::{.columns}
+
+
+:::{.column width="65%"}
+
+
+In this course we’ll focus on the interactions between the surface, vegetation and atmosphere, and the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed to the basic instrumentation and methods used in today's monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behaviour of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!
+
+:::
+
+
+:::{.column width="5%"}
+
+:::
+
+
+:::{.column width="30%"}
+
+![](images/Illisarvik.png)
+
+:::
+
+::::
+
+
+# Learning Outcomes
+
+* Understand the physical and biological processes that determine the microclimate of a surface.
+* Explain how microclimates vary in time & space (vertically and horizontally).
+*	Explain how the surface radiation and energy budget affects the surface climate.
+*	Describe important surface characteristics that affect surface radiation and energy budget and surface microclimates.
+* Describe interactions between the biosphere and the atmosphere, and to understand how surface-atmosphere feedbacks respond to environmental change.
+*	Understand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.
+*	Know the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today's monitoring and modelling of weather and climate in the atmospheric boundary layer.
+*	Analyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.
+* Provide examples how the principles of biometeorology have practical application to society.
+
+
+# Key Information
+
+## Your Instructor
+
+**{{< var instructor.name >}}**
+
+:::: {.columns}
+
+:::{.column width="30%"}
+
+![](images/{{< var instructor.photo >}}){width=85%}
+
+:::
+
+::: {.column width="70%"}
+
+
+**Pronouns:** {{< var instructor.pronouns >}}
+
+**Email:** {{< var instructor.email >}}
+
+**Office Hours:** {{< var instructor.office >}}
+
+**Bio:** {{< var instructor.about >}}
+
+::: 
+
+::::
+
+## Your TA
+
+
+**{{< var Lab.TA1.name >}}**
+
+:::: {.columns}
+
+:::{.column width="30%"}
+
+![](images/{{< var Lab.TA1.photo >}})
+
+:::
+
+:::{.column width="2%"}
+
+:::
+
+:::{.column width="68%"}
+
+
+**Pronouns:** {{< var Lab.TA1.pronouns >}}
+
+**Email:** {{< var Lab.TA1.email >}}
+
+**Bio:** {{< var Lab.TA1.about >}}
+::: 
+
+::::
+
+# Lectures
+
+Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}. 
+
+- Recordings will be posted afterwards. Find them [here]({{< var keyInfo.recordings >}})
+  - *Note*: Recording is provided as a courtesy and the quality of recorded lectures is not guaranteed.
+
+
+# Evaluation
+
+```{r}
+#| echo: false
+#| label: tbl-grades
+#| tbl-cap: "Components of your final grade"
+
+
+grades <- read.csv(file = '_Data/GradeBreakdown.csv')
+
+kable(grades, col.names = gsub("[.]", " ", names(grades)))
+
+```
+
+
+## Examinations 
+
+Exams will make up the largest portion of your grade.  These will be written in-person.  The midterm will be Wednesday on March 13th.  The final exam will be completed during the examination period.
+
+
+## Assignments
+
+Assignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.
+- All assignments are required to be labelled with course number, student number, student name and assignment number.
+- Assignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.
+  - Late assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned
+- Collaboration is encouraged. However, you should think about the problems yourself before discussing them with others.
+  - Write-ups must be done independently.
+  - It is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.
+
+## Participation and Study Questions
+
+Participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  You may only earn participation points in person, only during lecture.
+
+Self-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.
+
+
+# Course Policies
+
+My aim for this semester is to provide a flexible and supportive learning environment while respecting the boundaries of myself and your TAs.  These course policies are intended to establish a framework for navigating the course.
+
+
+## Participation & Absences
+
+If you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself.  Lectures are recorded so you can catch up on the material you miss.
+
+* Participation points are only available during the lecture session.  Makeup points will not be offered, but I will offer bonus participation points a the end of term which you can use to compensate for an absence or two.
+
+##  Accommodations
+
+Please contact the [Center for Accessibility](https://students.ubc.ca/about-student-services/centre-for-accessibility) if you require accommodations for a disability.  Once you are registered please make me aware of any necessary accommodations by email in a timely manner.
+
+* If you require an accommodation please contact me by email: {{< var instructor.email >}}
+
+## Academic Concessions
+
+If you experience extenuating circumstances that prevent you completing course work, you may be elidible for an [Academic Concession](https://www.arts.ubc.ca/degree-planning/academic-performance/academic-concession/).
+
+* I can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e. **before** a due date).
+* Please email me promptly ({{< var instructor.email >}}) so that we can work together to figure out an accommodation for your situation.
+  * You are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating.  However, you must to communicate any need for a concession in a timely manner.  If you require multiple concessions I may refer you to [Arts Advising](https://www.arts.ubc.ca/student-support/academic-support/academic-advising/).
+
+
+# Academic Integrity
+
+The academic enterprise is founded on honesty, civility, and integrity. As members of this enterprise, all students are expected to know, understand, and follow the codes of conduct regarding academic integrity. At the most basic level, this means submitting only original work done by you and acknowledging all sources of information or ideas and attributing them to others as required. This also means you should not cheat, copy, or mislead others about what is your work. Violations of academic integrity (i.e., misconduct) lead to the breakdown of the academic enterprise, and therefore serious consequences arise and harsh sanctions are imposed.
+
+Plagiarism and cheating will be taken very seriously.  The first incident of plagiarism/copying/cheating will result in a zero for the assignment.  Further incidents will be reported to the President’s Advisory Committee on Student Discipline in addition to a zero.  A more detailed description of academic integrity, including the University’s policies and procedures, may be found [here](https://learningcommons.ubc.ca/academic-integrity/Links)
+
+Though you may work together with your classmates on the assignments and help each other, ALL STUDENTS MUST SUBMIT THEIR OWN ORIGINAL WORK. This means that your maps must be your own, and your answers must be in your own words. Failure to submit your own work can result in failing the assignment or worse, so please be careful. See the Academic Integrity section of the Syllabus for more information.
+
+# Strategies for Success
+
+**Be proactive!** 
+
+* Keep track of deadlines & note the late submission policies
+  * Timely communication is important!  If you have an issue, please bring it to my attention.
+  * Partial credit is better than no credit.  If you can't finish a lab before the deadline - just submit what you've got done already. 
+* Drop by office hours & ask questions!

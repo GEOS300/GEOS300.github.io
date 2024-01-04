@@ -1,0 +1,39 @@
+course:
+  term: 2023 W1
+  code: GEOS 200 / APBI 244
+
+instructor:
+  name: Dr. June skeeter
+  pronouns: They/Them/Theirs
+  email: june.skeeter@ubc.ca
+  office: Wednesdays 11:00-11:45 Room 127, Geography Bldg.  Alternative times available by appointment.
+  photo: June.jpg
+  about: My name is June.  I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015.  I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group.  I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth's climate system.  My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment.
+
+
+keyInfo:
+  lecture_time: Monday & Wednesday, 14:00 - 15:30
+  lecture_room: Geography Building, Room 110
+  zoom: https://ubc.zoom.us/j/66197337942?pwd=N1RSaGdRWk9RMlozckZUU2RKR0hJQT09
+  recordings: https://drive.google.com/drive/folders/1oazs1h_V7bHgqIOEoqzjMJGuC64OK1S5?usp=sharing
+  iclicker_info: https://lthub.ubc.ca/guides/iclicker-cloud-student-guide/ 
+
+exam:
+  type: asynchronous over Canvas
+
+Lab:
+  late_penalty: 10% per day
+  turn_around_time: 7 days
+  TA1: 
+    name: Zoe
+    pronouns: She/Her/Hers
+    email: hehanzha@student.ubc.ca
+    office: Geography room 207
+    photo: Zoe.jpg
+    about: I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types.
+  assignments:
+    instructions: 
+    quizLink: 
+    quizInfo: 
+    rubricInfo: 
+    saving: 

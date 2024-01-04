@@ -1,0 +1,16 @@
+project:
+  type: website
+  output-dir: docs
+  # pre-render: 
+  #   - _code/MakeKeys.py
+  #   - _code/SummaryLists.py
+  #   - _code/RefreshData.py
+  # post-render: _code/MoveKeys.py
+  resources: www
+
+website:
+  title: "Atmospheric Environments"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Syllabus
