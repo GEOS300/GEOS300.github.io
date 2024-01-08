@@ -87,7 +87,7 @@ kable(SN)
 * Winds are named after the direction from which the air is moving.
 * Example: if the wind direction is 45 degrees, wind is from Northeast.
 
-![](images/Wind_Components.png)
+<!-- ![](images/Wind_Components.png)
 
 ![](images/Wind_Refernece.png)
-
+ -->
