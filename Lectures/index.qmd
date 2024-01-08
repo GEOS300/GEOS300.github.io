@@ -4,7 +4,7 @@ jupyter: python3
 ---
 
 
-Your lectures will be posted here as they become available
+Your lectures and any required readings will be posted here as they become available.
 
 ```{python}
 #| echo: False
