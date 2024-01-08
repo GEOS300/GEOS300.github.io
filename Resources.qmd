@@ -1,0 +1,97 @@
+---
+title: "Programming Resources"
+---
+
+{{< include _imports.qmd >}}
+
+In this course, I will rely heavily on examples that incorporate scientific programming.  Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts.  Programming will also be helpful when completing your assignments.  However, programming experience **is not a prerequisite** for this course.
+
+* You could complete the course without doing any coding yourself.  You can complete calculations by hand or in Excel instead if you prefer.
+* That said, I strongly encourage you to give it a try!  Programming is a valuable skill for anyone interested in pursuing sciences.
+  * I will provide support and advice to help get you started, and am happy to make time in office hours to provide assistance with coding.
+
+![](images/real_programmers.png)
+
+# Programming Languages
+
+Just as English, Mandarin, Punjabi, or any other language could be used to explain climate change; Python, R, JavaScript, or any other programming language can all be used to quantify and visualize the scale of the problem.  There are a number of different options when it comes to programming languages.  Each have their pro's and cons.  In this course, I encourage you to use either Python or R, but if you already know another language (e.g., MATLAB) you could use that instead.
+
+## Python
+
+Python is my personal preference.  I like python because its very flexible, general-purpose programming language that is fairly easy to read / write.  It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free!  If you want to install Python on your own computer and don't know where to start, I suggest you go with [Anaconda](https://www.anaconda.com/download).  Its a scientific programming platform that will install python for you along with most of the commonly used extensions. 
+
+## R
+
+R is also a great option.  It is a programming language that was developed specifically for statistical computing and graphics.  This means its not a flexible as a langue like Python, but also that it can be a bit easier to use "out of the box" for specific applications, like data visualization.  Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax.  One advantage R has over python, is that its a bit easier to install.  All you need to do to get setup is to [install R and RStudio](https://posit.co/download/rstudio-desktop/).
+
+## Online Access
+
+UBC also provides students with free server space that you can use at [https://ubc.syzygy.ca/](https://ubc.syzygy.ca/).  This isn't necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations.  However, it already comes with both Python and R installed, and will probably be sufficient for most things we'll do in this course.  So you can use it to try things out without installing anything on your own computer.
+
+# Additional Resources
+
+[Stack Overflow](https://stackoverflow.com/) is a great resource for general programming inquires.  Chances are, if you're having an issue, someone else has already encountered it and the question has already been asked/answered on here.
+
+[ChatGPT](https://chat.openai.com/auth/login) can read/write code.  It won't give you prefect answers to specific application, so you'll still need to figure out how to edit things to suit your needs.  But it it can be helpful resource to get the ball rolling
+
+* Be careful when relying on a resource like this.  If you let the AI do all the heavy lifting, you risk not actually learning how to code yourself.
+
+[GitHub](https://github.com/) I suggest you create a GitHub account.  Git/GitHub are useful for many things beyond just this course.  Depending on your career trajectory, it could benefit you immensely down the road.  All course materials are hosted on GitHub and you could use Git to easily access them on your own computer.  
+
+* I won't require you to use GitHub for anything in the course, I will always provide ways to access materials that do not require an account or knowledge of the platform.
+
+* You can find a bit more info about it [here](https://ubc-micromet.github.io/Documentation/UsingGit.html).   
+
+<!-- 
+# Important Symbols
+
+These are list of symbols that will be used to represent key variables in the course.
+
+
+
+#| label: tbl-symbols
+#| tbl-cap: "Definitions of symbols."
+#| tbl-colwidths: [25,35,40]
+
+
+Sy <- read.csv(file = '_Data/Symbols.csv', check.names = FALSE)
+
+kable(Sy[,1:3])
+
+
+
+# Constants
+
+
+
+#| label: tbl-constants
+#| tbl-cap: "Definitions of constants."
+#| tbl-colwidths: [25,35,40]
+
+
+Sy <- read.csv(file = '_Data/Constants.csv', check.names = FALSE)
+
+kable(Sy[,1:3])
+
+
+
+
+#| label: tbl-saturation
+#| tbl-cap: "Saturation vapor density $\\rho^*_v$ and saturation vapor pressure $e^*$ as a function of temperature $T$.  This table can also be used to determine  $\\rho^*_{vw}$ corresponding to a given $T_w$"
+
+Data <- read.csv(file = '_Data/Saturation.csv',sep=',')
+
+col_Names <- c("$T (^{\\circ} C)$","$\\rho^*_v$","$e^*$")
+
+kable(Data, col.names = col_Names)
+
+
+
+
+# Important Equations and Helpful Conversions
+
+A list of important equations used in the course.
+
+* Note these are listed in no particular order
+
+{{< include _Equations/EquationList.qmd >}} -->

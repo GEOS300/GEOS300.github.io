@@ -1,0 +1,33 @@
+
+```{r include=FALSE}
+# import packages
+library(tidyverse)
+library(lubridate)
+library(plotly)
+library(knitr)
+library(tidyr)
+library(dplyr)
+library(ggplot2)
+# Needed for .pdf outputs to function properly
+if (!require(webshot2)){
+  install.packages("webshot2",repos = "http://cran.us.r-project.org")
+}
+
+if (!require(latex2exp)){
+  install.packages("latex2exp",repos = "http://cran.us.r-project.org")
+}
+library(latex2exp)
+
+m = 50
+
+Margin_m <- list(
+  l = m,
+  r = m,
+  b = m,
+  t = m,
+  pad = 4
+
+)
+
+```
+

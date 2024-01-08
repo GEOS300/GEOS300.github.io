@@ -3,8 +3,13 @@ title: "Lecture Slides"
 jupyter: python3
 ---
 
+
+Your lectures will be posted here as they become available
+
 ```{python}
 #| echo: False
+#| label: tbl-Lectures
+#| tbl-cap: "Lecture schedule"
 import pandas as pd
 import numpy as np
 Mon = pd.date_range("20240108", "20240412", freq='W-Mon')
@@ -13,12 +18,19 @@ Week = np.arange(1,Mon.shape[0])
 Lecture_Dates = Mon.union(Wed)
 
 Lectures = pd.DataFrame(data={'Date':Lecture_Dates})
-Lectures = Lectures.set_index('Date')
 Lectures['Topic']=''
+Topics = [
+'Course Overview',
+'What is Micrometeorology?'
+]
+
+for i,row in Lectures.iterrows():
+    if i <= len(Topics)-1:
+        Lectures.loc[Lectures.index==i,'Topic'] = Topics[i]
+
 # Lectures.index+=1
 # Lectures.index/=2
 # Lectures.index=Lectures.index.astype(float)
+Lectures.set_index('Date',inplace=True)
 Lectures
 ```
-
-Your lectures will be posted here as they become available

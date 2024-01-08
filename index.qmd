@@ -10,7 +10,7 @@ title: "Syllabus"
 
 with {{< var instructor.name >}} 
 
-This course webpage/syllabus is a living document and may be updated as the semester progresses.
+The course syllabus is intended to give an overview of what you can expect over the term and outline the course policies.  It is a living document and may be updated as the semester progresses.
 
 # About the Course
 
@@ -38,30 +38,10 @@ In this course we’ll focus on the interactions between the surface, vegetation
 ::::
 
 
-# Learning Outcomes
-
-* Understand the physical and biological processes that determine the microclimate of a surface.
-* Explain how microclimates vary in time & space (vertically and horizontally).
-*	Explain how the surface radiation and energy budget affects the surface climate.
-*	Describe important surface characteristics that affect surface radiation and energy budget and surface microclimates.
-* Describe interactions between the biosphere and the atmosphere, and to understand how surface-atmosphere feedbacks respond to environmental change.
-*	Understand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.
-*	Know the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today's monitoring and modelling of weather and climate in the atmospheric boundary layer.
-*	Analyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.
-* Provide examples how the principles of biometeorology have practical application to society.
-
 
 # Key Information
 
-## Lectures
-
-Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}.  Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material.  You may find the recordings [here]({{< var keyInfo.recordings >}}).  **Note**: Recording is provided as a courtesy and the quality of recordings is not guaranteed.
-
-Lecture attendance/participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  These points are only available during lecture only during each lecture session.
-
-# Instructors
-
-## Your Professor
+## Your Instructor
 
 **{{< var instructor.name >}}**
 
@@ -112,13 +92,27 @@ Lecture attendance/participation will be assessed using iClicker, [click here to
 
 **Email:** {{< var Lab.TA1.email >}}
 
+**Office:** {{< var Lab.TA1.office >}}
+
 **Bio:** {{< var Lab.TA1.about >}}
 ::: 
 
 ::::
 
 
-# Evaluation
+## Learning Outcomes
+
+* Understand the physical and biological processes that determine the microclimate of a surface.
+* Explain how microclimates vary in time & space (vertically and horizontally).
+*	Describe important surface characteristics that affect surface radiation and energy budget and surface microclimates.
+* Describe interactions between the biosphere and the atmosphere, and understand how surface-atmosphere feedbacks respond to environmental change.
+*	Understand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.
+*	Know the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today's monitoring and modelling of weather and climate in the atmospheric boundary layer.
+*	Analyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.
+* Provide examples how the principles of biometeorology have practical application to society.
+
+
+## Evaluation
 
 ```{r}
 #| echo: false
@@ -132,15 +126,20 @@ kable(grades, col.names = gsub("[.]", " ", names(grades)))
 
 ```
 
+## Lectures
 
-## Examinations 
+Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}.  Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material.  You may find the recordings [here]({{< var keyInfo.recordings >}}).  **Note**: Recording is provided as a courtesy and the quality of recordings is not guaranteed.
 
-Exams will make up the largest portion of your grade.  These will be written in-person.  The midterm will be Wednesday on March 13th.  The final exam will be completed during the examination period.
+### Participation 
+
+Participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  You may only earn participation points in person, only during lecture.
+
 
 
 ## Assignments
 
 Assignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.
+
 - All assignments are required to be labelled with course number, student number, student name and assignment number.
 - Assignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.
   - Late assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned
@@ -148,9 +147,12 @@ Assignments will most easily be completed using a programming language such as R
   - Write-ups must be done independently.
   - It is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.
 
-## Participation and Study Questions
 
-Participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  You may only earn participation points in person, only during lecture.
+## Examinations 
+
+Exams will make up the half of your overall grade.  These will be written in-person.  The midterm will be Wednesday on March 13th.  The final exam will be completed during the examination period.
+
+### Study Questions
 
 Self-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.
 
@@ -164,7 +166,7 @@ My aim for this semester is to provide a flexible and supportive learning enviro
 
 If you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself.  Lectures are recorded so you can catch up on the material you miss.
 
-* Participation points are only available during the lecture session.  Makeup points will not be offered, but I will offer bonus participation points a the end of term which you can use to compensate for an absence or two.
+* Participation points are only available during the lecture session.  Makeup points will not be offered, but I will normalize participation grades to negate the effect of two absences.
 
 ##  Accommodations
 

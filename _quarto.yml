@@ -14,15 +14,42 @@ website:
     left:
       - href: index.qmd
         text: Syllabus
-  #     # - href: Lectures.qmd
-  #     #   text: Lectures
-  #     # - href: Labs.qmd
-  #     #   text: Lab Assignments
+      - href: Lectures/index.qmd
+        text: Lectures
+      - href: Assignments/index.qmd
+        text: Assignments 
     right:
       - icon: github
         href: https://github.com/June-Skeeter
         aria-label: Quarto GitHub
   sidebar:
-    style: "docked"
-    search: true
-    contents: auto
+    - title: "Syllabus"
+      style: "docked"
+      background: light
+      collapse-level: 1
+      contents:
+      - index.qmd
+      - acknowledgement.qmd
+      - Resources.qmd
+      
+
+    - title: "Lectures"
+      style: "docked"
+      background: light
+      collapse-level: 1
+      contents: Lectures
+
+      
+    - title: "Assignments"
+      style: "docked"
+      background: light
+      collapse-level: 1
+      contents:
+      - Assignments
+      
+    - title: "Study Questions"
+      style: "docked"
+      background: light
+      collapse-level: 1
+      contents:
+      - Study_Questions

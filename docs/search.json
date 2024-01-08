@@ -1,13 +1,20 @@
 [
   {
-    "objectID": "StudyQuestions/index.html",
-    "href": "StudyQuestions/index.html",
+    "objectID": "Study_Questions/index.html",
+    "href": "Study_Questions/index.html",
     "title": "Study Questions",
     "section": "",
-    "text": "Your study questions will be posted here as they become available",
+    "text": "Your study questions will be posted here as they become available"
+  },
+  {
+    "objectID": "Lectures/index.html",
+    "href": "Lectures/index.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "Your lectures will be posted here as they become available\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\n\n\n\nTopic\n\n\nDate\n\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n2024-01-10\nWhat is Micrometeorology?\n\n\n2024-01-15\n\n\n\n2024-01-17\n\n\n\n2024-01-22\n\n\n\n2024-01-24\n\n\n\n2024-01-29\n\n\n\n2024-01-31\n\n\n\n2024-02-05\n\n\n\n2024-02-07\n\n\n\n2024-02-12\n\n\n\n2024-02-14\n\n\n\n2024-02-19\n\n\n\n2024-02-21\n\n\n\n2024-02-26\n\n\n\n2024-02-28\n\n\n\n2024-03-04\n\n\n\n2024-03-06\n\n\n\n2024-03-11\n\n\n\n2024-03-13\n\n\n\n2024-03-18\n\n\n\n2024-03-20\n\n\n\n2024-03-25\n\n\n\n2024-03-27\n\n\n\n2024-04-01\n\n\n\n2024-04-03\n\n\n\n2024-04-08\n\n\n\n2024-04-10",
     "crumbs": [
-      "Syllabus",
-      "Study Questions"
+      "Lectures",
+      "Lecture Slides"
     ]
   },
   {
@@ -15,91 +22,183 @@
     "href": "index.html",
     "title": "Syllabus",
     "section": "",
-    "text": "GEOS 300: 2023 W2\nwith Dr. June skeeter\nThis course webpage/syllabus is a living document and may be updated as the semester progresses."
+    "text": "GEOS 300: 2023 W2\nwith Dr. June skeeter\nThe course syllabus is intended to give an overview of what you can expect over the term and outline the course policies. It is a living document and may be updated as the semester progresses.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
-    "objectID": "index.html#lectures",
-    "href": "index.html#lectures",
+    "objectID": "index.html#your-instructor",
+    "href": "index.html#your-instructor",
     "title": "Syllabus",
-    "section": "Lectures",
-    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\nLecture attendance/participation will be assessed using iClicker, click here to learn more about iClicker. These points are only available during lecture only during each lecture session."
-  },
-  {
-    "objectID": "index.html#your-professor",
-    "href": "index.html#your-professor",
-    "title": "Syllabus",
-    "section": "Your Professor",
-    "text": "Your Professor\nDr. June skeeter\n\n\n\n\nPronouns: They/Them/Theirs\nEmail: june.skeeter@ubc.ca\nOffice Hours: Wednesdays 11:00-11:45 Room 127, Geography Bldg. Alternative times available by appointment.\nBio: My name is June. I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015. I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group. I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth’s climate system. My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment."
+    "section": "Your Instructor",
+    "text": "Your Instructor\nDr. June skeeter\n\n\n\n\nPronouns: They/Them/Theirs\nEmail: june.skeeter@ubc.ca\nOffice Hours: Wednesdays 11:00-11:45 Room 127, Geography Bldg. Alternative times available by appointment.\nBio: My name is June. I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015. I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group. I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth’s climate system. My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
     "objectID": "index.html#your-ta",
     "href": "index.html#your-ta",
     "title": "Syllabus",
     "section": "Your TA",
-    "text": "Your TA\nZoe\n\n\n\n\n\n\nPronouns: She/Her/Hers\nEmail: hehanzha@student.ubc.ca\nBio: I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types."
+    "text": "Your TA\nZoe\n\n\n\n\n\n\nPronouns: She/Her/Hers\nEmail: hehanzha@student.ubc.ca\nOffice: Geography room 207\nBio: I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
-    "objectID": "index.html#examinations",
-    "href": "index.html#examinations",
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
     "title": "Syllabus",
-    "section": "Examinations",
-    "text": "Examinations\nExams will make up the largest portion of your grade. These will be written in-person. The midterm will be Wednesday on March 13th. The final exam will be completed during the examination period."
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nUnderstand the physical and biological processes that determine the microclimate of a surface.\nExplain how microclimates vary in time & space (vertically and horizontally).\nDescribe important surface characteristics that affect surface radiation and energy budget and surface microclimates.\nDescribe interactions between the biosphere and the atmosphere, and understand how surface-atmosphere feedbacks respond to environmental change.\nUnderstand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.\nKnow the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today’s monitoring and modelling of weather and climate in the atmospheric boundary layer.\nAnalyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.\nProvide examples how the principles of biometeorology have practical application to society.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#evaluation",
+    "href": "index.html#evaluation",
+    "title": "Syllabus",
+    "section": "Evaluation",
+    "text": "Evaluation\n\n\n\n\nTable 1: Components of your final grade\n\n\n\n\n\n\nPoints Distribution\nPercent of Final Grade\n\n\n\n\nLecture Participation\n5%\n\n\nStudy Questions\n5%\n\n\nAssignments\n40%\n\n\nMid-term exam\n20%\n\n\nFinal exam\n30%",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "Syllabus",
+    "section": "Lectures",
+    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\n\nParticipation\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
     "objectID": "index.html#assignments",
     "href": "index.html#assignments",
     "title": "Syllabus",
     "section": "Assignments",
-    "text": "Assignments\nAssignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn. - All assignments are required to be labelled with course number, student number, student name and assignment number. - Assignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date. - Late assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned - Collaboration is encouraged. However, you should think about the problems yourself before discussing them with others. - Write-ups must be done independently. - It is OK for other people to explain their solutions to you, but you must not copy their solutions as your own."
+    "text": "Assignments\nAssignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.\n\nAll assignments are required to be labelled with course number, student number, student name and assignment number.\nAssignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.\n\nLate assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned\n\nCollaboration is encouraged. However, you should think about the problems yourself before discussing them with others.\n\nWrite-ups must be done independently.\nIt is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
-    "objectID": "index.html#participation-and-study-questions",
-    "href": "index.html#participation-and-study-questions",
+    "objectID": "index.html#examinations",
+    "href": "index.html#examinations",
     "title": "Syllabus",
-    "section": "Participation and Study Questions",
-    "text": "Participation and Study Questions\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit."
+    "section": "Examinations",
+    "text": "Examinations\nExams will make up the half of your overall grade. These will be written in-person. The midterm will be Wednesday on March 13th. The final exam will be completed during the examination period.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
     "objectID": "index.html#participation-absences",
     "href": "index.html#participation-absences",
     "title": "Syllabus",
     "section": "Participation & Absences",
-    "text": "Participation & Absences\nIf you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself. Lectures are recorded so you can catch up on the material you miss.\n\nParticipation points are only available during the lecture session. Makeup points will not be offered, but I will offer bonus participation points a the end of term which you can use to compensate for an absence or two."
+    "text": "Participation & Absences\nIf you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself. Lectures are recorded so you can catch up on the material you miss.\n\nParticipation points are only available during the lecture session. Makeup points will not be offered, but I will normalize participation grades to negate the effect of two absences.",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
     "objectID": "index.html#accommodations",
     "href": "index.html#accommodations",
     "title": "Syllabus",
     "section": "Accommodations",
-    "text": "Accommodations\nPlease contact the Center for Accessibility if you require accommodations for a disability. Once you are registered please make me aware of any necessary accommodations by email in a timely manner.\n\nIf you require an accommodation please contact me by email: june.skeeter@ubc.ca"
+    "text": "Accommodations\nPlease contact the Center for Accessibility if you require accommodations for a disability. Once you are registered please make me aware of any necessary accommodations by email in a timely manner.\n\nIf you require an accommodation please contact me by email: june.skeeter@ubc.ca",
+    "crumbs": [
+      "Syllabus"
+    ]
   },
   {
     "objectID": "index.html#academic-concessions",
     "href": "index.html#academic-concessions",
     "title": "Syllabus",
     "section": "Academic Concessions",
-    "text": "Academic Concessions\nIf you experience extenuating circumstances that prevent you completing course work, you may be elidible for an Academic Concession.\n\nI can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e. before a due date).\nPlease email me promptly (june.skeeter@ubc.ca) so that we can work together to figure out an accommodation for your situation.\n\nYou are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating. However, you must to communicate any need for a concession in a timely manner. If you require multiple concessions I may refer you to Arts Advising."
+    "text": "Academic Concessions\nIf you experience extenuating circumstances that prevent you completing course work, you may be elidible for an Academic Concession.\n\nI can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e. before a due date).\nPlease email me promptly (june.skeeter@ubc.ca) so that we can work together to figure out an accommodation for your situation.\n\nYou are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating. However, you must to communicate any need for a concession in a timely manner. If you require multiple concessions I may refer you to Arts Advising.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "acknowledgement.html",
+    "href": "acknowledgement.html",
+    "title": "Territorial Acknowledgement",
+    "section": "",
+    "text": "The University of British Columbia and the city of Vancouver are on the traditional, ancestral, and unceded territory of the Coast Salish Peoples. Specifically the UBC Vancouver campus is on xʷməθkʷəy̓əm (Musqueam) land.\n\nThere are nearly 200 First Nations spread through BC, and many more across the continent.\n\nIt is essential to recognize Indigenous territories and Indigenous sovereignty, especially within the context of geography courses.\nTo learn more about the Indigenous people, culture, and languages where you live and around the world, check out native-land.ca.\n\n\n\n\n\nMap Source\n\n\n\n\n\nWhy Do an Acknowledgement?\nA land acknowledgement is meant to convey a deep rooted cultural connection to the land and the historical and present day injustices and violence enacted on Indigenous communities through colonialism. For centuries, settler societies have perpetuated a genocide against Indigenous people across the globe. In many ways this genocide is still ongoing here in British Columbia and across Canada. There has been concerted effort by the government, religious organizations, and educational institutions to erase Indigenous culture and identity which as marginalized these communities in Canadian Society.\n\nAn acknowledgement is one small way to help with that, but it cannot be treated as a formality. It is a time to reflect and build understanding.\n\n\n\nWhat does it mean?\n\n\nTraditional and Ancestral Recognize by whom the lands were traditionally used and/or occupied and the cultures have been handed down from generation to generation. The area around UBC was used by many different people, including the xʷməθkʷəy̓əm, əl̓ilwətaɁɬ, and Skwxwú7mesh-ulh Nations. The map to the left shows the overlapping territories of these nations, along with others in the region.\nThese people are are part of a broader linguistic / cultural group of Coast Salish speaking people. The xʷməθkʷəy̓əm and əl̓ilwətaɁɬ speak dialects of Hul’q’umi’num’ / Halq’eméylem / hən̓q̓əmin̓əm̓ and the Skwxwú7mesh-ulh speak Sḵwx̱wú7mesh sníchim.\n\n\n\n\n\n\n\nUnceded: Refers to land that was not turned over to the government by a treaty or other agreement. Over 95% of the land in BC, and many lands elsewhere in the world were never ceded by treaty. Without treaties, these lands remain the sovereign territory of the First Nations that call them home. Yet at the same time, the lands have been claimed by Canada and these First Nations living on these lands lack a framework to express their sovereignty. This by no means absolves the Canadian government of their crimes where lands were “ceded” by treaty. Treaties were more frequently reached by coercion than negotiation. The RCMP was created specifically to force indigenous people off their lands by any means necessary.",
+    "crumbs": [
+      "Syllabus",
+      "Territorial Acknowledgement"
+    ]
   },
   {
     "objectID": "Assignments/index.html",
     "href": "Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Your assignments will be posted here as they become available",
+    "text": "Your assignments will be posted here as they become available"
+  },
+  {
+    "objectID": "Lectures/01.html#derived-units",
+    "href": "Lectures/01.html#derived-units",
+    "title": "What is Micrometeorology?",
+    "section": "Derived Units",
+    "text": "Derived Units\nDerived units can then be formed and related to base units by the process of multiplication or division using unity as the only multiplying factor.\n\n\n\n\nTable 2: SI Derived Units.\n\n\n\n\n\n\n\n\n\n\n\nSI unit\nSymbol\nDefinition\n\n\n\n\nNewton\nN\nkg m s-2\n\n\nPascal\nPa\nN m-2\n\n\nJoule\nJ\nN m\n\n\nWatt\nW\nJ s-1",
     "crumbs": [
-      "Syllabus",
-      "Assignments"
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
     ]
   },
   {
-    "objectID": "Lectures/index.html",
-    "href": "Lectures/index.html",
-    "title": "Lecture Slides",
+    "objectID": "Resources.html",
+    "href": "Resources.html",
+    "title": "Programming Resources",
     "section": "",
-    "text": "Topic\n\n\nDate\n\n\n\n\n\n2024-01-08\n\n\n\n2024-01-10\n\n\n\n2024-01-15\n\n\n\n2024-01-17\n\n\n\n2024-01-22\n\n\n\n2024-01-24\n\n\n\n2024-01-29\n\n\n\n2024-01-31\n\n\n\n2024-02-05\n\n\n\n2024-02-07\n\n\n\n2024-02-12\n\n\n\n2024-02-14\n\n\n\n2024-02-19\n\n\n\n2024-02-21\n\n\n\n2024-02-26\n\n\n\n2024-02-28\n\n\n\n2024-03-04\n\n\n\n2024-03-06\n\n\n\n2024-03-11\n\n\n\n2024-03-13\n\n\n\n2024-03-18\n\n\n\n2024-03-20\n\n\n\n2024-03-25\n\n\n\n2024-03-27\n\n\n\n2024-04-01\n\n\n\n2024-04-03\n\n\n\n2024-04-08\n\n\n\n2024-04-10\n\n\n\n\n\n\n\n\nYour lectures will be posted here as they become available",
+    "text": "In this course, I will rely heavily on examples that incorporate scientific programming. Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts. Programming will also be helpful when completing your assignments. However, programming experience is not a prerequisite for this course.",
     "crumbs": [
       "Syllabus",
-      "Lecture Slides"
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#python",
+    "href": "Resources.html#python",
+    "title": "Programming Resources",
+    "section": "Python",
+    "text": "Python\nPython is my personal preference. I like python because its very flexible, general-purpose programming language that is fairly easy to read / write. It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free! If you want to install Python on your own computer and don’t know where to start, I suggest you go with Anaconda. Its a scientific programming platform that will install python for you along with most of the commonly used extensions.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#r",
+    "href": "Resources.html#r",
+    "title": "Programming Resources",
+    "section": "R",
+    "text": "R\nR is also a great option. It is a programming language that was developed specifically for statistical computing and graphics. This means its not a flexible as a langue like Python, but also that it can be a bit easier to use “out of the box” for specific applications, like data visualization. Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax. One advantage R has over python, is that its a bit easier to install. All you need to do to get setup is to install R and RStudio.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#online-access",
+    "href": "Resources.html#online-access",
+    "title": "Programming Resources",
+    "section": "Online Access",
+    "text": "Online Access\nUBC also provides students with free server space that you can use at https://ubc.syzygy.ca/. This isn’t necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations. However, it already comes with both Python and R installed, and will probably be sufficient for most things we’ll do in this course. So you can use it to try things out without installing anything on your own computer.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
     ]
   }
 ]
