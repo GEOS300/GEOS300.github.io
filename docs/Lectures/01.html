@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -333,8 +398,46 @@
 </div>
 
 </section>
+<section id="learning-objectives" class="slide level2">
+<h2>Learning Objectives</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Define essential variables, units, and conventions</li>
+<li>Define the scales relevant to micrometeorology</li>
+<li>Talk about applications of the discipline</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_2_2.jpg"></p>
+<figcaption>Fog in the Fraser Valley (Photo: A. Christen)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="iclicker-test" class="slide level2">
+<h2>iClicker Test</h2>
+<p>Are you able to access the course iClicker?</p>
+<ul>
+<li>A - Yes</li>
+<li>B - No?</li>
+</ul>
+</section>
+<section id="some-boring-housekeeping-stuff" class="slide level2">
+<h2>Some Boring Housekeeping Stuff</h2>
+<ul>
+<li>How to use these slides
+<ul>
+<li>Why use this format?</li>
+<li>.pdf exports?</li>
+</ul></li>
+<li>Units and conventions</li>
+</ul>
+</section>
 <section>
-<section id="the-si-system" class="title-slide slide level1 center">
+<section id="the-si-system" class="title-slide slide level1 smaller center">
 <h1>The SI System</h1>
 <p>The SI (Système International d’Unités or International System of Units) is the official unit system in science and therefore mandatory in climatology. This system uses a small number of base units from which other derived units can be obtained. The SI base units are listed in <a href="#/the-si-system" class="quarto-xref">Table&nbsp;1</a> and should be used whenever applicable in this course.</p>
 <div class="cell" data-tbl-colwidths="[25,35,40]">
@@ -401,8 +504,11 @@ Table&nbsp;1: SI Base Units.
 </figure>
 </div>
 </div>
+</section>
+<section id="kelvin-vs.-celsius" class="slide level2 smaller">
+<h2>Kelvin vs.&nbsp;Celsius</h2>
 <ul>
-<li>The unit for temperature is Kelvin (K, <em>not</em> <span class="math inline">\(^{\circ} K\)</span>). Temperatures may be also indicated in degree Celsius ( <span class="math inline">\(^{\circ} C\)</span> ). However, temperature-differences should be referred to as Kelvin (K). The conversion is listed in <a href="#/the-si-system" class="quarto-xref">Equation&nbsp;1</a>. Note how one Kelvin is equivalent to one degree Celsius, but the units have different zero points.
+<li>The unit for temperature is Kelvin (K, <em>not</em> <span class="math inline">\(^{\circ} K\)</span>). Temperatures may be also indicated in degree Celsius ( <span class="math inline">\(^{\circ} C\)</span> ). However, temperature-differences should be referred to as Kelvin (K). The conversion is listed in <a href="#/kelvin-vs.-celsius" class="quarto-xref">Equation&nbsp;1</a>. Note how one Kelvin is equivalent to one degree Celsius, but the units have different zero points.
 <ul>
 <li>0 K represents <strong>absolute zero</strong>, which is the <strong>lowest possible temperature</strong>: i.e., a complete lack of energy in a system.
 <ul>
@@ -425,7 +531,60 @@ Table&nbsp;1: SI Base Units.
 T(K) = T(\deg C) + 273.15
 \qquad(1)\]</span></span></p>
 </section>
-<section id="derived-units" class="slide level2">
+<section id="unit-conversion" class="slide level2">
+<h2>Unit Conversion</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Converts between Celsius and Kelvin</span></span>
+<span id="cb1-2"><a></a>TConvert <span class="ot">&lt;-</span> <span class="cf">function</span>(Temp,<span class="at">uIn=</span><span class="st">"C"</span>){</span>
+<span id="cb1-3"><a></a>    <span class="cf">if</span> (uIn <span class="sc">==</span> <span class="st">"C"</span>) {</span>
+<span id="cb1-4"><a></a>       <span class="fu">return</span>(Temp<span class="fl">+273.15</span>)</span>
+<span id="cb1-5"><a></a>    } <span class="cf">else</span> <span class="cf">if</span> (uIn <span class="sc">==</span> <span class="st">"K"</span>) {</span>
+<span id="cb1-6"><a></a>       <span class="fu">return</span>(Temp<span class="fl">-273.15</span>)</span>
+<span id="cb1-7"><a></a>    } <span class="cf">else</span> {</span>
+<span id="cb1-8"><a></a>       <span class="fu">stop</span>(<span class="st">"Invalid unit"</span>)</span>
+<span id="cb1-9"><a></a>    }</span>
+<span id="cb1-10"><a></a>}</span>
+<span id="cb1-11"><a></a></span>
+<span id="cb1-12"><a></a>TempC <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">10</span>)</span>
+<span id="cb1-13"><a></a><span class="fu">TConvert</span>(TempC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 263.15 273.15 283.15</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>TempK <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>)</span>
+<span id="cb3-2"><a></a><span class="fu">TConvert</span>(TempK,<span class="at">uIn=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] -73.15  26.85 126.85</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Converts between Celsius and Kelvin</span></span>
+<span id="cb5-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-3"><a></a><span class="kw">def</span> TConvert(Temp,uIn<span class="op">=</span><span class="st">"C"</span>):</span>
+<span id="cb5-4"><a></a>    <span class="cf">if</span> uIn <span class="op">==</span> <span class="st">"C"</span>:</span>
+<span id="cb5-5"><a></a>       <span class="cf">return</span>(Temp<span class="op">+</span><span class="fl">273.15</span>)</span>
+<span id="cb5-6"><a></a>    <span class="cf">elif</span> uIn <span class="op">==</span> <span class="st">"K"</span>:</span>
+<span id="cb5-7"><a></a>       <span class="cf">return</span>(Temp<span class="op">-</span><span class="fl">273.15</span>)</span>
+<span id="cb5-8"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb5-9"><a></a>       <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'Invalid unit'</span>)</span>
+<span id="cb5-10"><a></a></span>
+<span id="cb5-11"><a></a>TempC <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">10</span>])</span>
+<span id="cb5-12"><a></a>TConvert(TempC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([263.15, 273.15, 283.15])</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>TempK <span class="op">=</span> np.array([<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>])</span>
+<span id="cb7-2"><a></a>TConvert(TempK,uIn<span class="op">=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>array([-73.15,  26.85, 126.85])</code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="derived-units" class="slide level2 smaller">
 <h2>Derived Units</h2>
 <p>Derived units can then be formed and related to base units by the process of multiplication or division using unity as the only multiplying factor.</p>
 <div class="cell" data-tbl-colwidths="[25,35,40]">
@@ -478,7 +637,7 @@ Table&nbsp;2: SI Derived Units.
 </div>
 </div>
 </section></section>
-<section id="scientific-notation" class="title-slide slide level1 center">
+<section id="scientific-notation" class="title-slide slide level1 smaller center">
 <h1>Scientific Notation</h1>
 <p>Scientific notation can be used to modify SI base units and make very large/small numbers more readable by presenting them more concisely.</p>
 <div class="cell" data-tbl-colwidths="[25,35,40]">
@@ -572,24 +731,594 @@ Table&nbsp;3: Meeting day/time by lab section.
 </div>
 </section>
 
-<section id="wind-references" class="title-slide slide level1 center">
+<section>
+<section id="wind-references" class="title-slide slide level1 smaller center">
 <h1>Wind References</h1>
 <ul>
 <li>Winds are named after the direction from which the air is moving.</li>
 <li>Example: if the wind direction is 45 degrees, wind is from Northeast.</li>
 </ul>
-<!-- ![](images/Wind_Components.png)
-
-![](images/Wind_Refernece.png)
- -->
-
-
+<p><img data-src="images/Wind_Components.png"></p>
+<p><img data-src="images/Wind_Refernece.png"></p>
 </section>
-    <div class="quarto-auto-generated-content">
+<section id="what-is-micrometeorology" class="slide level2">
+<h2>What is Micrometeorology</h2>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/Zoe_BBS.jpg"></p>
+<figcaption>Measuring soil carbon loss after forest fires (&lt;1m<sup>2</sup>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/BB1_Flux_Sensors.jpg"></p>
+<figcaption>Measuring wetland trace gas exchange (&lt;1km<sup>2</sup>)</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_7_9.jpg"></p>
+<figcaption>Clouds and circulation patterns in a mountainous terrain (&lt;10km<sup>2</sup>)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>How do feedbacks between ecosystems and the atmosphere influence microclimates and the global climate system? In this course we’ll focus on the&nbsp;interactions between the surface, vegetation and atmosphere, and&nbsp;the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed&nbsp;to the basic instrumentation and methods used in today’s monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behavior of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="relevant-scales" class="slide level2 smaller">
+<h2>Relevant Scales</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div id="tbl-13_2" class="cell quarto-float">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-13_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;4: Spatial scales in meteorology.
+</figcaption>
+<div aria-describedby="tbl-13_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Scale</th>
+<th style="text-align: left;">Spatial Extent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Micro</td>
+<td style="text-align: left;">10<sup>-2</sup> to 10<sup>3</sup> m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Local</td>
+<td style="text-align: left;">10<sup>2</sup> to 5 x 10<sup>4</sup> m</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Meso</td>
+<td style="text-align: left;">10<sup>4</sup> to 2 x 10<sup>5</sup> m</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Macro</td>
+<td style="text-align: left;">10<sup>5</sup> to 10<sup>8</sup> m</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_12_5.jpg"></p>
+<figcaption>Oke and Christen (2014)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>mm’s to hundreds to kms; &lt;s to days</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="relevant-scales-1" class="slide level2">
+<h2>Relevant Scales</h2>
+<div class="quarto-layout-panel" data-layout-ncol="3">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_13_4.jpg"></p>
+<figcaption>Micro-scale</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_13_7.jpg"></p>
+<figcaption>Meso-scale</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 33.3%;justify-content: flex-start;display: flex;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_13_9.jpg"></p>
+<figcaption>Macro-scale</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>In these terms GEOB 300 is mainly restricted to atmospheric features whose horizontal extent falls within the micro- and local scale categories.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="weather-vs-climate" class="slide level2">
+<h2>Weather vs Climate?</h2>
+<p>What is the difference between weather &amp; climate?</p>
+</section>
+<section id="micro-scale-weather-vs-climate" class="slide level2">
+<h2>Micro-scale Weather vs Climate?</h2>
+<p><strong>Micrometeorology</strong> focuses on short-term fluctuations of atmospheric variables (up to one hour) and the detailed physical processes (e.g.&nbsp;turbulence) that drive exchange at small scales.</p>
+<p><strong>Microclimatology</strong> deals with long-term integral effects (from hours to decades) namely, the average and variability of specific climates near the surface with respect to different geographic settings.</p>
+</section>
+<section id="boundary-layers" class="slide level2">
+<h2>Boundary layers</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In a fluid, a <strong>boundary layer</strong> refers to the region immediately above a surface where flow is significantly influenced by:</p>
+<ul>
+<li>Energy and mass exchange</li>
+<li>Surface friction.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_16_2.png"></p>
+<figcaption>Mean wind speed with height above a surface</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>We’re focused on what’s going on in the atmospheric boundary layer A boundary layer comes into picture when a fluid is interacting with a solid during its flow.&nbsp;</p>
+<p>When the fluid touches the surface, the layer making contact with the surface immediately comes to rest which is popularly known as no slip condition. Due to the property viscosity, this layer slows down the adjacent layer and so on. So the velocity profile varies parabolically and at some distance from the surface, the velocity is not affected by the viscous force.&nbsp;The thickness up to which the viscous forces are significant is known as the boundary layer thickness and this region is known as boundary layer. (Source: https://www.quora.com/What-is-a-boundary-layer)</p>
+<p>The atmospheric boundary layer is formed as a consequence of the interactions between the atmosphere and the underlying surface (land or water) over time scales of a few hours to about 1 day.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="fluid-flow" class="slide level2">
+<h2>Fluid Flow</h2>
+<p>Flow can be laminar (i.e.&nbsp;“orderly”) or turbulent (i.e.&nbsp;“Random”).</p>
+<ul>
+<li>When flow interacts with a solid surface, it causes the flow slow and generates turbulent motions.
+<ul>
+<li>This also happens when one flow interacts with another.</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-a-boundary-layer" class="slide level2">
+<h2>What is a boundary layer?</h2>
+
+<img data-src="images/01_17_3.jpg" class="r-stretch quarto-figure-center"><p class="caption">Photo: Visualization of a boundary layer in a wind tunnel (M. A. Carper, Saint Anthony Falls Laboratory, University of Minnesota).</p><aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-atmospheric-boundary-layer" class="slide level2">
+<h2>The Atmospheric Boundary Layer</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The atmospheric boundary layer (ABL) refers to the lowest 300-3000 m of the troposphere. The ABL is controlled by the roughness, thermal mixing and the injections of moisture and pollutants from the underlying surface.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_18_0.jpg"></p>
+<figcaption>A humid and polluted ABL capped by clouds (Photo: A. Christen)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>This layer is particularly characterized by well developed mixing (turbulence) generated by frictional drag as the Atmosphere moves across the rough and rigid surface of the Earth, and by the ‘bubbling-up’ of air parcels from the heated surface.</p>
+<p>The boundary layer receives much of its heat and all of its water through this process of turbulence.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/01_19_3.png" class="r-stretch quarto-figure-center"><p class="caption">The ABL over Vancouver (Photo: A. Christen)</p><aside class="notes">
+<p>Lower parts of the fair weather cumulus clouds The height of the boundary layer (i.e.&nbsp;the depth of surface-related influence) is not constant with time, it depends upon the strength of the surface-generated mixing. By day, when the Earths surface is heated by the Sun, there is an upward transfer of heat into the cooler Atmosphere. This vigorous thermal mixing (convection) enables the boundary layer depth to extend to about 1 to 2 km. Conversely by night, when the Earths surface cools more rapidly than the Atmosphere, there is a downward transfer of heat. This tends to suppress mixing and the boundary layer depth may shrink to less than 100 m. (Sometimes called&nbsp;free air.) That portion of the earth’s&nbsp;atmosphere, above the&nbsp;planetary boundary layer, in which the effect of the earth’s&nbsp;surface friction&nbsp;on the air motion is negligible, and in which the air is usually treated (dynamically) as an&nbsp;ideal fluid.</p>
+<p>Naturally this ideal picture can be considerably disrupted by large-scale weather systems whose wind and cloud patterns are not tied to surface features, or to the daily heating cycle.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-atmospheric-boundary-layer-1" class="slide level2">
+<h2>The Atmospheric Boundary Layer</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>The ABL reacts within several hours (&lt; 1 day) to changes at the surface.</li>
+<li>Therefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_20_4.jpg"></p>
+<figcaption>The ABL in the foreground, with the “free atmosphere” above.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Therefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the PBL. We often forget that this daily routine does not affect the whole atmosphere! The influence of the surface is effectively limited to the lowest 10 km of the Atmosphere in a layer called the troposphere. Over time periods of about one day this influence is restricted to a very much shallower zone known as the atmospheric (planetary) boundary layer, often referred to simply as the ‘boundary layer’.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="applications" class="slide level2">
+<h2>Applications</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Global climate change</li>
+<li>Clean energy</li>
+</ul>
+<p><img data-src="images/01_50_3.jpg"></p>
+</div><div class="column" style="width:50%;">
+<ul>
+<li>Food and water resources</li>
+<li>Air pollution and industry</li>
+</ul>
+<p><img data-src="images/01_36_5.jpg"></p>
+</div>
+</div>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="climate-change" class="slide level2">
+<h2>Climate Change</h2>
+
+<img data-src="images/01_38_2.png" class="r-stretch quarto-figure-center"><p class="caption">Rising CO2 concentrations</p><aside class="notes">
+<p>We know CO2 concentrations are rising And of course we know that this has important implications for the planet and is the leading cause of climate change (including rising temperatures, changes in precipitation patterns, more drought and heat waves, hurricanes will become stronger and more intense, rising sea levels (1-4 feet), loss of artic sea ice).</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="terrestrial-ecosystems-are-key-components-of-the-global-carbon-cycle" class="slide level2">
+<h2>Terrestrial ecosystems are key components of the global carbon cycle</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><strong>Sources</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_39_2.jpg"></p>
+<figcaption>12% 4.8 GtCO2/yr</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_39_4.jpg"></p>
+<figcaption>88% 34.4 GtCO2/yr</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<p><strong>Sinks</strong></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_39_5.jpg"></p>
+<figcaption>46% 17.2 GtCO2/yr</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_39_9.jpg"></p>
+<figcaption>24% 8.8 GtCO2/yr</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_39_13.jpg"></p>
+<figcaption>30% 11.0 GtCO2/yr</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>However, thankfully not all the CO2 that we emit stays in the atmosphere – Of what is emitted, about 46% remains in the atmosphere, 24% is absorbed by our oceans and 30% by the land. So the exchange of CO2 into and out of ecosystems is really key in regulating the global carbon cycle. Understanding land atmosphere interactions is key to understanding global carbon dynamics and climate change. -Average for 2007-2016</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-breathing-of-the-biosphere" class="slide level2">
+<h2>The breathing of the biosphere</h2>
+
+<img data-src="images/BreathingBiosphere.gif" class="r-stretch"><aside class="notes">
+<p>This is one of my favorite clips that really highlights the importance and magnitude of land-atmosphere interactions how this influences GHG concentrations in the atmosphere This nicely illustrates how dynamic the exchange of GHG into and out of ecosystems is and how this really influences the global carbon cycle.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="global-climate-change" class="slide level2">
+<h2>Global climate change</h2>
+<p>Knowledge on micrometeorology and climatology help:</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Determine greenhouse-gas emissions and uptake between the land surface and the atmosphere.</li>
+<li>Study climate-surface feedbacks (e.g.&nbsp;due to thawing permafrost).</li>
+<li>Determine the melt rate and mass balance of ice-sheets and glaciers.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/01_41_4.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>Important concepts from the class: Energy and mass balance, radiation, flux-gradient relations, eddy covariance, plant-atmosphere interactions</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="food-security" class="slide level2">
+<h2>Food security</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Food security is a major challenge of our century.</p>
+<ul>
+<li>Microclimates play a key role in understanding agriculture</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_43_1.jpg"></p>
+<figcaption>Photo: J. Verfaillie</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="food-and-water-resources" class="slide level2">
+<h2>Food and water resources</h2>
+<p>Food requires water for growth, in many places the availability of water is the limiting factor.</p>
+
+<img data-src="images/01_44_3.jpg" class="r-stretch"></section>
+<section id="food-and-water-resources-1" class="slide level2">
+<h2>Food and water resources</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Warmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_45_3.png"></p>
+<figcaption>Photo: A. Christen</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>In a world scorched by high temperatures, Canada’s Western provinces – home to more than 80 per cent of Canada’s farmable lands – have been the country’s hot spot this week. On Friday, the forecast highs in Medicine Hat, Alta. and Medina, Saudi Arabia, were both in the low 40s.</p>
+<p>Warmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.</p>
+<p>(Source: https://www.theglobeandmail.com/canada/alberta/article-drought-in-western-canada-is-becoming-an-agricultural-nightmare-for/)</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="food-and-water-resources-2" class="slide level2">
+<h2>Food and water resources</h2>
+<p>Knowledge on micrometeorology and climatology help:</p>
+<ul>
+<li>Develop strategies to use water efficiency (soil moisture, evapotranspiration).</li>
+<li>Quantify and model local and regional rates of evapotranspiration.</li>
+<li>To predict frost and protect crops properly from frost.</li>
+<li>To manage wind erosion and sheltering.</li>
+<li>To efficiently plan agricultural operations (seeding, spraying, burning).</li>
+</ul>
+<aside class="notes">
+<p>Course relevant materials: The water cycle at land-atmosphere interfaces, Measuring and modeling evapotranspiration, Soil thermal properties and heat transfer</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="clean-energy" class="slide level2">
+<h2>Clean energy</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Energy is a central need of growing populations and economies. How can we secure energy without harming our climate system?</p></li>
+<li><p>Clean energy production, along with efficient distribution and use of energy, are key tasks of moving into a more sustainable 21st century.</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/01_50_3.jpg"></p>
+</div>
+</div>
+</section>
+<section id="clean-energy-engineering-architecture" class="slide level2">
+<h2>Clean energy, engineering &amp; architecture</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Knowledge on micrometeorology and climatology helps:</p>
+<ul>
+<li>Maximize use of renewable energies (wind, solar).</li>
+<li>Optimize thermal climate and energetics of buildings.</li>
+<li>Calculate wind loading of buildings and structures.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/01_51_3.png"></p>
+<figcaption>Wind turbine on Grouse Mountain, Vancouver (Photo: A. Christen)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>Related to concepts we’ll touch on radiation and turbulence</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+
+
+</section><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 <p><a href="index.html">Back to Homepage</a></p>
 </div>
-</div></div>
+</div></section>
+    </div>
   </div>
 
   <script>window.backupDefine = window.define; window.define = undefined;</script>

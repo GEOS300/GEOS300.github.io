@@ -11,14 +11,52 @@ format:
     show-slide-number: all
     pdfMaxPagesPerSlide: 1
     footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
 title: What is Micrometeorology?
 subtitle: The study of the atmosphere at "small" scales.
 ---
 
+
 {{< include _imports.qmd >}}
 
 
-# The SI System
+## Learning Objectives
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Define essential variables, units, and conventions
+* Define the scales relevant to micrometeorology
+* Talk about applications of the discipline
+
+:::
+
+::: {.column width="50%"}
+
+![Fog in the Fraser Valley (Photo: A. Christen)](images/01_2_2.jpg)
+
+:::
+
+::::
+
+## iClicker Test
+
+Are you able to access the course iClicker?
+
+* A - Yes
+* B - No?
+
+## Some Boring Housekeeping Stuff
+
+* How to use these slides
+  + Why use this format?
+  + .pdf exports?
+* Units and conventions
+
+
+# The SI System {.smaller}
 
 The SI (Système International d’Unités or International System of Units) is the official unit system in science and therefore mandatory in climatology. This system uses a small number of base units from which other derived units can be obtained.  The SI base units are listed in @tbl-si-Base and should be used whenever applicable in this course.
 
@@ -28,11 +66,13 @@ The SI (Système International d’Unités or International System of Units) is 
 #| tbl-colwidths: [25,35,40]
 
 
-SI <- read.csv(file = '../_Data/SI_Units.csv', check.names = FALSE)
+SI <- read.csv(file = 'Data/SI_Units.csv', check.names = FALSE)
 
 kable(SI)
 
 ```
+
+## Kelvin vs. Celsius {.smaller}
 
 * The unit for temperature is Kelvin (K, *not* $^{\circ} K$). Temperatures may be also indicated in degree Celsius ( $^{\circ} C$ ). However, temperature-differences should be referred to as Kelvin (K).  The conversion is listed in @eq-Kelvin.  Note how one Kelvin is equivalent to one degree Celsius, but the units have different zero points.
   * 0 K represents **absolute zero**, which is the **lowest possible temperature**: i.e., a complete lack of energy in a system.
@@ -47,7 +87,62 @@ kable(SI)
 
 {{< include ../_Equations/Kelvin.qmd >}}
 
-## Derived Units
+## Unit Conversion
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+```{R}
+#| echo: true
+# Converts between Celsius and Kelvin
+TConvert <- function(Temp,uIn="C"){
+    if (uIn == "C") {
+       return(Temp+273.15)
+    } else if (uIn == "K") {
+       return(Temp-273.15)
+    } else {
+       stop("Invalid unit")
+    }
+}
+
+TempC <- c(-10,0,10)
+TConvert(TempC)
+
+TempK <- c(200,300,400)
+TConvert(TempK,uIn='K')
+
+```
+
+:::
+
+::: {.column width="50%"}
+
+
+```{python}
+#| echo: true
+# Converts between Celsius and Kelvin
+import numpy as np
+def TConvert(Temp,uIn="C"):
+    if uIn == "C":
+       return(Temp+273.15)
+    elif uIn == "K":
+       return(Temp-273.15)
+    else:
+       raise ValueError('Invalid unit')
+
+TempC = np.array([-10,0,10])
+TConvert(TempC)
+
+TempK = np.array([200,300,400])
+TConvert(TempK,uIn='K')
+
+```
+
+:::
+::::
+
+## Derived Units {.smaller}
 
 Derived units can then be formed and related to base units by the process of multiplication or division using unity as the only multiplying factor.
 
@@ -57,13 +152,13 @@ Derived units can then be formed and related to base units by the process of mul
 #| tbl-colwidths: [25,35,40]
 
 
-SID <- read.csv(file = '../_Data/Derived_Units.csv', check.names = FALSE)
+SID <- read.csv(file = 'Data/Derived_Units.csv', check.names = FALSE)
 
 kable(SID)
 
 ```
 
-# Scientific Notation
+# Scientific Notation {.smaller}
 
 Scientific notation can be used to modify SI base units and make very large/small numbers more readable by presenting them more concisely.
 
@@ -73,19 +168,620 @@ Scientific notation can be used to modify SI base units and make very large/smal
 #| tbl-colwidths: [25,35,40]
 
 
-SN <- read.csv(file = '../_Data/ScientificNotation.csv', check.names = FALSE)
+SN <- read.csv(file = 'Data/ScientificNotation.csv', check.names = FALSE)
 
 kable(SN)
 
 ```
 
-# Wind References
+# Wind References {.smaller}
 
 
 * Winds are named after the direction from which the air is moving.
 * Example: if the wind direction is 45 degrees, wind is from Northeast.
 
-<!-- ![](images/Wind_Components.png)
+![](images/Wind_Components.png)
 
 ![](images/Wind_Refernece.png)
- -->
+
+
+
+
+
+## What is Micrometeorology
+
+::: {layout-ncol=3}
+
+![Measuring soil carbon loss after forest fires (<1m<sup>2</sup>)](images/Zoe_BBS.jpg)
+
+
+![Measuring wetland trace gas exchange (<1km<sup>2</sup>)](images/BB1_Flux_Sensors.jpg)
+
+
+![Clouds and circulation patterns in a mountainous terrain (<10km<sup>2</sup>)](images/01_7_9.jpg)
+
+
+:::
+
+::: {.notes}
+
+How do feedbacks between ecosystems and the atmosphere influence microclimates and the global climate system? In this course we’ll focus on the interactions between the surface, vegetation and atmosphere, and the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed to the basic instrumentation and methods used in today's monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behavior of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!
+
+:::
+
+
+
+
+## Relevant Scales {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+```{r}
+#| label: tbl-13_2
+#| tbl-cap: Spatial scales in meteorology.
+
+Data <- read.csv(file = 'Data/MetScales.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Oke and Christen (2014)](images/01_12_5.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+mm’s to hundreds to kms; <s to days
+
+:::
+
+
+
+
+## Relevant Scales
+
+::: {layout-ncol=3}
+
+
+
+![Micro-scale](images/01_13_4.jpg)
+
+
+
+![Meso-scale](images/01_13_7.jpg)
+
+
+
+![Macro-scale](images/01_13_9.jpg)
+
+
+:::
+
+
+
+::: {.notes}
+
+In these terms GEOB 300 is mainly restricted to atmospheric features whose horizontal extent falls within the micro- and local scale categories.
+
+:::
+
+
+
+
+## Weather vs Climate?
+
+
+What is the difference between weather & climate?
+
+
+
+
+## Micro-scale Weather vs Climate?
+
+**Micrometeorology** focuses on short-term fluctuations of atmospheric variables (up to one hour) and the detailed physical processes (e.g. turbulence) that drive exchange at small scales.
+
+**Microclimatology** deals with long-term integral effects (from hours to decades) namely, the average and variability of specific climates near the surface with respect to different geographic settings.
+
+
+
+
+## Boundary layers
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+In a fluid, a **boundary layer** refers to the region immediately above a surface where flow is significantly influenced by:
+
+* Energy and mass exchange 
+* Surface friction.
+
+
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Mean wind speed with height above a surface](images/01_16_2.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+We’re focused on what’s going on in the atmospheric boundary layer
+A boundary layer comes into picture when a fluid is interacting with a solid during its flow. 
+
+
+When the fluid touches the surface, the layer making contact with the surface immediately comes to rest which is popularly known as no slip condition. Due to the property viscosity, this layer slows down the adjacent layer and so on. So the velocity profile varies parabolically and at some distance from the surface, the velocity is not affected by the viscous force. The thickness up to which the viscous forces are significant is known as the boundary layer thickness and this region is known as boundary layer. (Source: https://www.quora.com/What-is-a-boundary-layer)
+
+The atmospheric boundary layer is formed as a consequence of the interactions between the atmosphere and the underlying surface (land or water) over time scales of a few hours to about 1 day. 
+
+
+:::
+
+## Fluid Flow
+
+Flow can be laminar (i.e. "orderly”) or turbulent (i.e. "Random”).  
+
+* When flow interacts with a solid surface, it causes the flow slow and generates turbulent motions.
+  * This also happens when one flow interacts with another.
+
+## What is a boundary layer?
+
+![Photo: Visualization of a boundary layer in a wind tunnel (M. A. Carper, Saint Anthony Falls Laboratory, University of Minnesota).  ](images/01_17_3.jpg)
+
+
+::: {.notes}
+
+
+
+:::
+
+
+
+## The Atmospheric Boundary Layer
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+The atmospheric boundary layer (ABL) refers to the lowest 300-3000 m of the troposphere. The ABL is controlled by the roughness, thermal mixing and the injections of moisture and pollutants from the underlying surface.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![A humid and polluted ABL capped by clouds  (Photo: A. Christen)](images/01_18_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+This layer is particularly characterized by well developed mixing (turbulence) generated by frictional drag as the Atmosphere moves across the rough and rigid surface of the Earth, and by the ‘bubbling-up’ of air parcels from the heated surface. 
+
+The boundary layer receives much of its heat and all of its water through this process of turbulence. 
+
+
+
+:::
+
+
+
+
+---
+
+
+
+![The ABL over Vancouver (Photo: A. Christen)](images/01_19_3.png)
+
+
+::: {.notes}
+
+Lower parts of the fair weather cumulus clouds
+The height of the boundary layer (i.e. the depth of surface-related influence) is not constant with time, it depends upon the strength of the surface-generated mixing. 
+By day, when the Earths surface is heated by the Sun, there is an upward transfer of heat into the cooler Atmosphere. This vigorous thermal mixing (convection) enables the boundary layer depth to extend to about 1 to 2 km. 
+Conversely by night, when the Earths surface cools more rapidly than the Atmosphere, there is a downward transfer of heat. This tends to suppress mixing and the boundary layer depth may shrink to less than 100 m. 
+(Sometimes called free air.) That portion of the earth's atmosphere, above the planetary boundary layer, in which the effect of the earth's surface friction on the air motion is negligible, and in which the air is usually treated (dynamically) as an ideal fluid.
+
+Naturally this ideal picture can be considerably disrupted by large-scale weather systems whose wind and cloud patterns are not tied to surface features, or to the daily heating cycle. 
+
+
+
+
+:::
+
+
+
+
+## The Atmospheric Boundary Layer
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* The ABL reacts within several hours (< 1 day) to changes at the surface. 
+* Therefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![The ABL in the foreground, with the "free atmosphere" above.](images/01_20_4.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Therefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the PBL.
+We often forget that this daily routine does not affect the whole atmosphere!
+The influence of the surface is effectively limited to the lowest 10 km of the Atmosphere in a layer called the troposphere. 
+Over time periods of about one day this influence is restricted to a very much shallower zone known as the atmospheric (planetary) boundary layer, often referred to simply as the ‘boundary layer’. 
+
+
+:::
+
+
+
+
+
+
+## Applications
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+*  Global climate change
+*  Clean energy
+
+![](images/01_50_3.jpg)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+*  Food and water resources
+*  Air pollution and industry
+
+
+![](images/01_36_5.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+
+
+:::
+
+
+
+
+## Climate Change
+
+
+
+![Rising CO2 concentrations](images/01_38_2.png)
+
+
+::: {.notes}
+
+We know CO2 concentrations are rising
+And of course we know that this has important implications for the planet and is the leading cause of climate change (including rising temperatures, changes in precipitation patterns, more drought and heat waves, hurricanes will become stronger and more intense, rising sea levels (1-4 feet), loss of artic sea ice).
+
+:::
+
+
+
+
+## Terrestrial ecosystems are key components of the global carbon cycle
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Sources**
+
+![12% 4.8 GtCO2/yr](images/01_39_2.jpg)
+
+![88% 34.4 GtCO2/yr](images/01_39_4.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+**Sinks**
+
+![46% 17.2 GtCO2/yr](images/01_39_5.jpg)
+
+![24% 8.8 GtCO2/yr](images/01_39_9.jpg)
+
+![30% 11.0 GtCO2/yr](images/01_39_13.jpg)
+
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+However, thankfully not all the CO2 that we emit stays in the atmosphere – Of what is emitted, about 46% remains in the atmosphere, 24% is absorbed by our oceans and 30% by the land. So the exchange of CO2 into and out of ecosystems is really key in regulating the global carbon cycle. Understanding land atmosphere interactions is key to understanding global carbon dynamics and climate change.
+-Average for 2007-2016
+
+
+:::
+
+
+
+
+## The breathing of the biosphere
+
+![](images/BreathingBiosphere.gif)
+
+
+::: {.notes}
+
+This is one of my favorite clips that really highlights the importance and magnitude of land-atmosphere interactions how this influences GHG concentrations in the atmosphere
+This nicely illustrates how dynamic the exchange of GHG into and out of ecosystems is and how this really influences the global carbon cycle.
+
+
+:::
+
+
+
+
+## Global climate change
+
+
+Knowledge on micrometeorology and climatology help:
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Determine greenhouse-gas emissions and uptake between the land surface and the atmosphere.
+* Study climate-surface feedbacks (e.g. due to thawing permafrost).
+* Determine the melt rate and mass balance of ice-sheets and glaciers.
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/01_41_4.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Important concepts from the class: Energy and mass balance, radiation, flux-gradient relations, eddy covariance, plant-atmosphere interactions
+
+:::
+
+
+
+
+## Food security
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Food security is a major challenge of our century.
+
+* Microclimates play a key role in understanding agriculture
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Photo: J. Verfaillie](images/01_43_1.jpg)
+
+
+:::
+
+::::
+
+
+
+## Food and water resources
+
+Food requires water for growth, in many places the availability of water is the limiting factor.
+
+![](images/01_44_3.jpg)
+
+
+
+## Food and water resources
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ 
+Warmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.
+
+:::
+::: {.column width="50%"}
+
+
+
+
+![Photo: A. Christen](images/01_45_3.png)
+
+:::
+::::
+
+::: {.notes}
+
+In a world scorched by high temperatures, Canada’s Western provinces – home to more than 80 per cent of Canada’s farmable lands – have been the country’s hot spot this week. On Friday, the forecast highs in Medicine Hat, Alta. and Medina, Saudi Arabia, were both in the low 40s.
+
+Warmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.
+
+(Source: https://www.theglobeandmail.com/canada/alberta/article-drought-in-western-canada-is-becoming-an-agricultural-nightmare-for/)
+
+:::
+
+
+
+
+## Food and water resources
+
+
+
+Knowledge on micrometeorology and climatology help:
+
+
+* Develop strategies to use water efficiency (soil moisture, evapotranspiration).
+* Quantify and model local and regional rates of evapotranspiration.
+* To predict frost and protect crops properly from frost.
+* To manage wind erosion and sheltering.
+* To efficiently plan agricultural operations (seeding, spraying, burning).
+
+
+::: {.notes}
+
+Course relevant materials: The water cycle at land-atmosphere interfaces, Measuring and modeling evapotranspiration, Soil thermal properties and heat transfer
+
+:::
+
+
+
+
+## Clean energy
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Energy is a central need of growing populations and economies. How can we secure energy without harming our climate system?
+
+* Clean energy production, along with efficient distribution and use of energy, are key tasks of moving into a more sustainable 21st century.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/01_50_3.jpg)
+
+
+:::
+
+::::
+
+
+
+## Clean energy, engineering & architecture
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+
+Knowledge on micrometeorology and climatology helps:
+
+* Maximize use of renewable energies (wind, solar).
+* Optimize thermal climate and energetics of buildings.
+* Calculate wind loading of buildings and structures.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Wind turbine on Grouse Mountain, Vancouver (Photo: A. Christen)](images/01_51_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Related to concepts we’ll touch on radiation and turbulence
+
+:::
+
+
