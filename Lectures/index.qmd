@@ -1,5 +1,6 @@
 ---
 title: "Lecture Slides"
+format: html
 jupyter: python3
 ---
 

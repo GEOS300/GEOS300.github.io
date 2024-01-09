@@ -3,7 +3,6 @@ format:
   revealjs:
     theme: default
     scrollable: true
-    # code-fold: true
     controls: true
     navigation-mode: linear
     controls-layout: bottom-right
@@ -12,7 +11,6 @@ format:
     show-slide-number: all
     pdfMaxPagesPerSlide: 1
     footer: <a href="index.html">Back to Homepage</a>
-    
 title: What is Micrometeorology?
 subtitle: The study of the atmosphere at "small" scales.
 ---

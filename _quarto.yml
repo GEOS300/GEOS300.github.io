@@ -18,6 +18,8 @@ website:
         text: Lectures
       - href: Assignments/index.qmd
         text: Assignments 
+      - href: Study_Questions/index.qmd
+        text: Study Questions 
     right:
       - icon: github
         href: https://github.com/June-Skeeter
@@ -44,12 +46,10 @@ website:
       style: "docked"
       background: light
       collapse-level: 1
-      contents:
-      - Assignments
+      contents: Assignments
       
     - title: "Study Questions"
       style: "docked"
       background: light
       collapse-level: 1
-      contents:
-      - Study_Questions
+      contents: Study_Questions

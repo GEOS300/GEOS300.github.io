@@ -4,7 +4,10 @@
     "href": "Study_Questions/index.html",
     "title": "Study Questions",
     "section": "",
-    "text": "Your study questions will be posted here as they become available"
+    "text": "Your study questions will be posted here as they become available",
+    "crumbs": [
+      "Study Questions"
+    ]
   },
   {
     "objectID": "Lectures/index.html",
@@ -143,7 +146,10 @@
     "href": "Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Your assignments will be posted here as they become available"
+    "text": "Your assignments will be posted here as they become available",
+    "crumbs": [
+      "Assignments"
+    ]
   },
   {
     "objectID": "Lectures/01.html#derived-units",
