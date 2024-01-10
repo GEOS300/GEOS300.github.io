@@ -27,6 +27,7 @@ subtitle: The study of the atmosphere at "small" scales.
 
 ::: {.column width="50%"}
 
+* Some Boring Housekeeping Stuff
 * Define essential variables, units, and conventions
 * Define the scales relevant to micrometeorology
 * Talk about applications of the discipline
@@ -48,17 +49,35 @@ Are you able to access the course iClicker?
 * A - Yes
 * B - No?
 
-## Some Boring Housekeeping Stuff
+## About these Slides 
 
-* How to use these slides
-  + Why use this format?
-  + .pdf exports?
-* Units and conventions
+* reveal.js is a flexible HTML based alternative to power point
+  + Embed interactive visualizations and code blocks
+* Navigating the slide deck
+  + Click arrows in bottom right or left/right arrows on keyboard
+  + Menu in bottom left has extra options + help menu
+* Slides can be exported as .pdf files.
+  + Note that I may update slides as needed
 
 
-# The SI System {.smaller}
+## Scientific Notation {.smaller}
 
-The SI (Système International d’Unités or International System of Units) is the official unit system in science and therefore mandatory in climatology. This system uses a small number of base units from which other derived units can be obtained.  The SI base units are listed in @tbl-si-Base and should be used whenever applicable in this course.
+```{r}
+#| label: tbl-times
+#| tbl-cap: "Scientific notation can be used to units and make large/small numbers more readable."
+#| tbl-colwidths: [25,35,40]
+
+
+SN <- read.csv(file = 'Data/ScientificNotation.csv', check.names = FALSE)
+
+kable(SN)
+
+```
+
+
+## The SI System {.smaller}
+
+The SI (Système International d’Unités) is the official unit system in science. This system uses a small number of base units from which other derived units can be obtained.
 
 ```{r}
 #| label: tbl-si-Base
@@ -72,22 +91,73 @@ kable(SI)
 
 ```
 
-## Kelvin vs. Celsius {.smaller}
 
-* The unit for temperature is Kelvin (K, *not* $^{\circ} K$). Temperatures may be also indicated in degree Celsius ( $^{\circ} C$ ). However, temperature-differences should be referred to as Kelvin (K).  The conversion is listed in @eq-Kelvin.  Note how one Kelvin is equivalent to one degree Celsius, but the units have different zero points.
-  * 0 K represents **absolute zero**, which is the **lowest possible temperature**: i.e., a complete lack of energy in a system.
-    * Kelvin is on a ratio scale: it starts at a fixed, meaningful zero value and can only take positive values.  This allows for relative comparisons between values: 
-      * e.ge., 100 K is "twice as hot" as 50 K
-  * $^{\circ} C$ is the freezing point of fresh water at 1 atm (mean atmospheric pressure at sea level).
-    * Celsius is on an interval scale > it has an arbitrary zero value and can take positive or negative values.  This **prevents** relative comparisons between values: 
-      * e.ge., 100 $^{\circ} C$ **is not** "twice as hot" as 50 $^{\circ} C$
+## Derived Units {.smaller}
 
-* You can use the following equation to convert between Celsius and Kelvin:
+Derived units can be formed and related to base units by the process of multiplication or division.  
+
+* This allows the representation of more complex phenomena (e.g., atmospheric pressure, radiative flux) in "relatively" simple terms.
+
+```{r}
+#| label: tbl-si-Derived
+#| tbl-cap: "SI Derived Units."
+#| tbl-colwidths: [25,35,40]
+
+
+SID <- read.csv(file = 'Data/Derived_Units.csv', check.names = FALSE)
+
+kable(SID)
+
+```
+
+
+## A Note: Kelvin vs. Celsius {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+* The unit for temperature is Kelvin (K, *not* $^{\circ} K$). 
+* Temperatures may be also indicated in degree Celsius ( $^{\circ} C$ ); but differences should be in K.
+  * 0 K represents **absolute zero**, lowest possible temperature.
+  * 0 $^{\circ} C$ is the freezing point of fresh water at 1 atm (mean atmospheric pressure at sea level).
+* The conversion between Celsius and Kelvin is simple:
 
 
 {{< include ../_Equations/Kelvin.qmd >}}
 
-## Unit Conversion
+:::
+
+::: {.column width="40%"}
+
+![](images/Temperature_Scales.png)
+
+:::
+::::
+
+## Types of Data: Kelvin vs. Celsius
+
+* **Kelvin** is on a ratio scale: a fixed, meaningful zero point and can only take positive values.  
+  + Allows relative comparisons: e.g., $100 K = 2*50 K$
+* **Celsius** is on an interval scale: an arbitrary zero value and can take positive or negative values.
+  + **Prevents** relative comparisons: e.g., $100 ^{\circ} C \neq 2*50 ^{\circ} C$
+* **Suggested Reading:** Open Geomatics section [3.1](https://www.opengeomatics.ca/types-of-data.html#types-of-phenomena) & [3.2](https://www.opengeomatics.ca/types-of-data.html#types-of-data-1) to understand the difference between types of data and measurement scales.
+
+
+## Programmatic Examples (iClicker)
+
+Do you have any previous programming experience?
+
+* A - No prior experience
+* B - Some prior experience with R
+* C - Some prior experience with Python
+* D - Some prior experience with both R and Python
+* E - No prior experience with R or Python, but some prior experience with another language
+
+
+## Unit Conversion: Programmatic Examples {.smaller}
+
+You can use [this tool](https://ubc.syzygy.ca/) to test both examples.
 
 :::: {.columns}
 
@@ -142,47 +212,22 @@ TConvert(TempK,uIn='K')
 :::
 ::::
 
-## Derived Units {.smaller}
 
-Derived units can then be formed and related to base units by the process of multiplication or division using unity as the only multiplying factor.
+## Wind References
 
-```{r}
-#| label: tbl-si-Derived
-#| tbl-cap: "SI Derived Units."
-#| tbl-colwidths: [25,35,40]
+* In Meteorology: horizontal (2D) winds are named after the direction from which the air is moving.
+
+![](images/Wind_Refernece.png)
 
 
-SID <- read.csv(file = 'Data/Derived_Units.csv', check.names = FALSE)
+## Wind References {.smaller}
 
-kable(SID)
-
-```
-
-# Scientific Notation {.smaller}
-
-Scientific notation can be used to modify SI base units and make very large/small numbers more readable by presenting them more concisely.
-
-```{r}
-#| label: tbl-times
-#| tbl-cap: "Meeting day/time by lab section."
-#| tbl-colwidths: [25,35,40]
-
-
-SN <- read.csv(file = 'Data/ScientificNotation.csv', check.names = FALSE)
-
-kable(SN)
-
-```
-
-# Wind References {.smaller}
-
-
-* Winds are named after the direction from which the air is moving.
-* Example: if the wind direction is 45 degrees, wind is from Northeast.
+* In reality, wind is a vector consisting of three components:
+  + x, y, & z represent fixed (e.g., cartesian coordinates in space)
+  + Wind has u, v, & w components that are referenced to the either the cartesian coordinates, or mean flow, depending on the reference frame.
 
 ![](images/Wind_Components.png)
 
-![](images/Wind_Refernece.png)
 
 
 
@@ -354,6 +399,8 @@ Flow can be laminar (i.e. "orderly”) or turbulent (i.e. "Random”).
 * When flow interacts with a solid surface, it causes the flow slow and generates turbulent motions.
   * This also happens when one flow interacts with another.
 
+![](images/WindTunnle.gif)
+
 ## What is a boundary layer?
 
 ![Photo: Visualization of a boundary layer in a wind tunnel (M. A. Carper, Saint Anthony Falls Laboratory, University of Minnesota).  ](images/01_17_3.jpg)
@@ -434,17 +481,18 @@ Naturally this ideal picture can be considerably disrupted by large-scale weathe
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 * The ABL reacts within several hours (< 1 day) to changes at the surface. 
-* Therefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.
+* We measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.
+  + The free atmosphere above is less tied to the diurnal cycle; requires less frequent measurement
 
 
 
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 
 ![The ABL in the foreground, with the "free atmosphere" above.](images/01_20_4.jpg)
@@ -527,19 +575,23 @@ And of course we know that this has important implications for the planet and is
 
 
 
-## Terrestrial ecosystems are key components of the global carbon cycle
+## Climate Change {.smaller}
 
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="30%"}
 
 
 **Sources**
 
-![12% 4.8 GtCO2/yr](images/01_39_2.jpg)
+![Land use changes: 12% 4.8 GtCO2/yr](images/01_39_2.jpg)
 
-![88% 34.4 GtCO2/yr](images/01_39_4.jpg)
+![Industry and agriculture: 88% 34.4 GtCO2/yr](images/01_39_4.jpg)
+
+:::
+
+::: {.column width="10%"}
 
 :::
 
@@ -547,13 +599,15 @@ And of course we know that this has important implications for the planet and is
 
 **Sinks**
 
-![46% 17.2 GtCO2/yr](images/01_39_5.jpg)
+::: {layout-ncol=2}
 
-![24% 8.8 GtCO2/yr](images/01_39_9.jpg)
+![Atmosphere: 46% 17.2 GtCO2/yr](images/01_39_5.jpg)
 
-![30% 11.0 GtCO2/yr](images/01_39_13.jpg)
+![Oceans: 24% 8.8 GtCO2/yr](images/01_39_9.jpg)
 
+![Terrestrial Ecosystems: 30% 11.0 GtCO2/yr](images/01_39_13.jpg)
 
+:::
 
 
 :::
@@ -598,8 +652,8 @@ Knowledge on micrometeorology and climatology help:
 
 ::: {.column width="50%"}
 
-* Determine greenhouse-gas emissions and uptake between the land surface and the atmosphere.
-* Study climate-surface feedbacks (e.g. due to thawing permafrost).
+* Determine greenhouse-gas emissions and uptake between.
+* Study climate-surface feedbacks (e.g. thawing permafrost).
 * Determine the melt rate and mass balance of ice-sheets and glaciers.
 
 :::
@@ -653,7 +707,7 @@ Food security is a major challenge of our century.
 
 
 
-## Food and water resources
+## Food and Water Resources
 
 Food requires water for growth, in many places the availability of water is the limiting factor.
 
@@ -661,7 +715,7 @@ Food requires water for growth, in many places the availability of water is the 
 
 
 
-## Food and water resources
+## Food and Water Resources
 
 
 :::: {.columns}
@@ -695,7 +749,7 @@ Warmer temperatures mean even when the rains come, evaporation can wick much of 
 
 
 
-## Food and water resources
+## Food and Water Resources
 
 
 
@@ -718,14 +772,13 @@ Course relevant materials: The water cycle at land-atmosphere interfaces, Measur
 
 
 
-## Clean energy
+## Clean Energy
 
+Energy is a central need of growing populations and economies. How can we secure energy without harming our climate system?
 
 :::: {.columns}
 
 ::: {.column width="50%"}
-
-* Energy is a central need of growing populations and economies. How can we secure energy without harming our climate system?
 
 * Clean energy production, along with efficient distribution and use of energy, are key tasks of moving into a more sustainable 21st century.
 
@@ -746,17 +799,15 @@ Course relevant materials: The water cycle at land-atmosphere interfaces, Measur
 
 
 
-## Clean energy, engineering & architecture
+## Clean Energy
 
+
+Knowledge on micrometeorology and climatology helps:
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-
-
-
-Knowledge on micrometeorology and climatology helps:
 
 * Maximize use of renewable energies (wind, solar).
 * Optimize thermal climate and energetics of buildings.
@@ -785,3 +836,8 @@ Related to concepts we’ll touch on radiation and turbulence
 :::
 
 
+## Coming Up Next?
+
+A deep dive into energy and mass balances.
+
+* Next week we'll start taking an in-depth look at the processes governing ecosystem scale fluxes of energy and mass.

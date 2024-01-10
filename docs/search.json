@@ -14,7 +14,7 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\n\n\n\nTopic\n\n\nDate\n\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n2024-01-10\nWhat is Micrometeorology?\n\n\n2024-01-15\n\n\n\n2024-01-17\n\n\n\n2024-01-22\n\n\n\n2024-01-24\n\n\n\n2024-01-29\n\n\n\n2024-01-31\n\n\n\n2024-02-05\n\n\n\n2024-02-07\n\n\n\n2024-02-12\n\n\n\n2024-02-14\n\n\n\n2024-02-19\n\n\n\n2024-02-21\n\n\n\n2024-02-26\n\n\n\n2024-02-28\n\n\n\n2024-03-04\n\n\n\n2024-03-06\n\n\n\n2024-03-11\n\n\n\n2024-03-13\n\n\n\n2024-03-18\n\n\n\n2024-03-20\n\n\n\n2024-03-25\n\n\n\n2024-03-27\n\n\n\n2024-04-01\n\n\n\n2024-04-03\n\n\n\n2024-04-08\n\n\n\n2024-04-10",
+    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\n\n\n\nTopic\nSuggested Reading\n\n\nDate\n\n\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section [3.1](https://www.openg...\n\n\n2024-01-15\n\n\n\n\n2024-01-17\n\n\n\n\n2024-01-22\n\n\n\n\n2024-01-24\n\n\n\n\n2024-01-29\n\n\n\n\n2024-01-31\n\n\n\n\n2024-02-05\n\n\n\n\n2024-02-07\n\n\n\n\n2024-02-12\n\n\n\n\n2024-02-14\n\n\n\n\n2024-02-19\n\n\n\n\n2024-02-21\n\n\n\n\n2024-02-26\n\n\n\n\n2024-02-28\n\n\n\n\n2024-03-04\n\n\n\n\n2024-03-06\n\n\n\n\n2024-03-11\n\n\n\n\n2024-03-13\n\n\n\n\n2024-03-18\n\n\n\n\n2024-03-20\n\n\n\n\n2024-03-25\n\n\n\n\n2024-03-27\n\n\n\n\n2024-04-01\n\n\n\n\n2024-04-03\n\n\n\n\n2024-04-08\n\n\n\n\n2024-04-10",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
@@ -156,7 +156,7 @@
     "href": "Lectures/01.html#learning-objectives",
     "title": "What is Micrometeorology?",
     "section": "Learning Objectives",
-    "text": "Learning Objectives\n\n\n\nDefine essential variables, units, and conventions\nDefine the scales relevant to micrometeorology\nTalk about applications of the discipline\n\n\n\n\n\nFog in the Fraser Valley (Photo: A. Christen)",
+    "text": "Learning Objectives\n\n\n\nSome Boring Housekeeping Stuff\nDefine essential variables, units, and conventions\nDefine the scales relevant to micrometeorology\nTalk about applications of the discipline\n\n\n\n\n\nFog in the Fraser Valley (Photo: A. Christen)",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -176,11 +176,35 @@
     ]
   },
   {
-    "objectID": "Lectures/01.html#some-boring-housekeeping-stuff",
-    "href": "Lectures/01.html#some-boring-housekeeping-stuff",
+    "objectID": "Lectures/01.html#about-these-slides",
+    "href": "Lectures/01.html#about-these-slides",
     "title": "What is Micrometeorology?",
-    "section": "Some Boring Housekeeping Stuff",
-    "text": "Some Boring Housekeeping Stuff\n\nHow to use these slides\n\nWhy use this format?\n.pdf exports?\n\nUnits and conventions",
+    "section": "About these Slides",
+    "text": "About these Slides\n\nreveal.js is a flexible HTML based alternative to power point\n\nEmbed interactive visualizations and code blocks\n\nNavigating the slide deck\n\nClick arrows in bottom right or left/right arrows on keyboard\nMenu in bottom left has extra options + help menu\n\nSlides can be exported as .pdf files.\n\nNote that I may update slides as needed",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#scientific-notation",
+    "href": "Lectures/01.html#scientific-notation",
+    "title": "What is Micrometeorology?",
+    "section": "Scientific Notation",
+    "text": "Scientific Notation\n\n\n\n\nTable 1: Scientific notation can be used to units and make large/small numbers more readable.\n\n\n\n\n\n\n\n\n\n\n\nScientific notation\nPrefix\nSymbol\n\n\n\n\n\\(10^{12}\\)\ntera\nT\n\n\n\\(10^{+9}\\)\ngiga\nG\n\n\n\\(10^{6}\\)\nmega\nM\n\n\n\\(10^{3}\\)\nkilo\nk\n\n\n\\(10^{2}\\)\nhecto\nh\n\n\n\\(10^{-1}\\)\ndeci\nd\n\n\n\\(10^{-2}\\)\ncenit\nc\n\n\n\\(10^{-3}\\)\nmilli\nm\n\n\n\\(10^{-6}\\)\nmicro\n\\(\\mu\\)\n\n\n\\(10^{-9}\\)\nnano\nn\n\n\n\\(10^{-12}\\)\npico\np",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#the-si-system",
+    "href": "Lectures/01.html#the-si-system",
+    "title": "What is Micrometeorology?",
+    "section": "The SI System",
+    "text": "The SI System\nThe SI (Système International d’Unités) is the official unit system in science. This system uses a small number of base units from which other derived units can be obtained.\n\n\n\n\nTable 2: SI Base Units.\n\n\n\n\n\n\n\n\n\n\n\nSI base unit\nSymbol\nQuantity\n\n\n\n\nMeter\nm\nLength\n\n\nKilogram\nKg\nMass\n\n\nSecond\ns\nTime\n\n\nKelvin\nK\nThermodynamic Temperature\n\n\nAmpere\nA\nElectric current\n\n\nMole\nmol\nAmount of a substance\n\n\nCandela\ncd\nLuminous intensity",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -192,7 +216,79 @@
     "href": "Lectures/01.html#derived-units",
     "title": "What is Micrometeorology?",
     "section": "Derived Units",
-    "text": "Derived Units\nDerived units can then be formed and related to base units by the process of multiplication or division using unity as the only multiplying factor.\n\n\n\n\nTable 2: SI Derived Units.\n\n\n\n\n\n\n\n\n\n\n\nSI unit\nSymbol\nDefinition\n\n\n\n\nNewton\nN\nkg m s-2\n\n\nPascal\nPa\nN m-2\n\n\nJoule\nJ\nN m\n\n\nWatt\nW\nJ s-1",
+    "text": "Derived Units\nDerived units can be formed and related to base units by the process of multiplication or division.\n\nThis allows the representation of more complex phenomena (e.g., atmospheric pressure, radiative flux) in “relatively” simple terms.\n\n\n\n\n\nTable 3: SI Derived Units.\n\n\n\n\n\n\n\n\n\n\n\nSI unit\nSymbol\nDefinition\n\n\n\n\nNewton\nN\nkg m s-2\n\n\nPascal\nPa\nN m-2\n\n\nJoule\nJ\nN m\n\n\nWatt\nW\nJ s-1",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#a-note-kelvin-vs.-celsius",
+    "href": "Lectures/01.html#a-note-kelvin-vs.-celsius",
+    "title": "What is Micrometeorology?",
+    "section": "A Note: Kelvin vs. Celsius",
+    "text": "A Note: Kelvin vs. Celsius\n\n\n\nThe unit for temperature is Kelvin (K, not \\(^{\\circ} K\\)).\nTemperatures may be also indicated in degree Celsius ( \\(^{\\circ} C\\) ); but differences should be in K.\n\n0 K represents absolute zero, lowest possible temperature.\n0 \\(^{\\circ} C\\) is the freezing point of fresh water at 1 atm (mean atmospheric pressure at sea level).\n\nThe conversion between Celsius and Kelvin is simple:\n\n\\[\nT(K) = T(\\deg C) + 273.15\n\\qquad(1)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#types-of-data-kelvin-vs.-celsius",
+    "href": "Lectures/01.html#types-of-data-kelvin-vs.-celsius",
+    "title": "What is Micrometeorology?",
+    "section": "Types of Data: Kelvin vs. Celsius",
+    "text": "Types of Data: Kelvin vs. Celsius\n\nKelvin is on a ratio scale: a fixed, meaningful zero point and can only take positive values.\n\nAllows relative comparisons: e.g., \\(100 K = 2*50 K\\)\n\nCelsius is on an interval scale: an arbitrary zero value and can take positive or negative values.\n\nPrevents relative comparisons: e.g., \\(100 ^{\\circ} C \\neq 2*50 ^{\\circ} C\\)\n\nSuggested Reading: Open Geomatics section 3.1 & 3.2 to understand the difference between types of data and measurement scales.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#programmatic-examples-iclicker",
+    "href": "Lectures/01.html#programmatic-examples-iclicker",
+    "title": "What is Micrometeorology?",
+    "section": "Programmatic Examples (iClicker)",
+    "text": "Programmatic Examples (iClicker)\nDo you have any previous programming experience?\n\nA - No prior experience\nB - Some prior experience with R\nC - Some prior experience with Python\nD - Some prior experience with both R and Python\nE - No prior experience with R or Python, but some prior experience with another language",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#unit-conversion-programmatic-examples",
+    "href": "Lectures/01.html#unit-conversion-programmatic-examples",
+    "title": "What is Micrometeorology?",
+    "section": "Unit Conversion: Programmatic Examples",
+    "text": "Unit Conversion: Programmatic Examples\nYou can use this tool to test both examples.\n\n\n\n# Converts between Celsius and Kelvin\nTConvert &lt;- function(Temp,uIn=\"C\"){\n    if (uIn == \"C\") {\n       return(Temp+273.15)\n    } else if (uIn == \"K\") {\n       return(Temp-273.15)\n    } else {\n       stop(\"Invalid unit\")\n    }\n}\n\nTempC &lt;- c(-10,0,10)\nTConvert(TempC)\n\n[1] 263.15 273.15 283.15\n\nTempK &lt;- c(200,300,400)\nTConvert(TempK,uIn='K')\n\n[1] -73.15  26.85 126.85\n\n\n\n\n# Converts between Celsius and Kelvin\nimport numpy as np\ndef TConvert(Temp,uIn=\"C\"):\n    if uIn == \"C\":\n       return(Temp+273.15)\n    elif uIn == \"K\":\n       return(Temp-273.15)\n    else:\n       raise ValueError('Invalid unit')\n\nTempC = np.array([-10,0,10])\nTConvert(TempC)\n\narray([263.15, 273.15, 283.15])\n\nTempK = np.array([200,300,400])\nTConvert(TempK,uIn='K')\n\narray([-73.15,  26.85, 126.85])",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#wind-references",
+    "href": "Lectures/01.html#wind-references",
+    "title": "What is Micrometeorology?",
+    "section": "Wind References",
+    "text": "Wind References\n\nIn Meteorology: horizontal (2D) winds are named after the direction from which the air is moving.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#wind-references-1",
+    "href": "Lectures/01.html#wind-references-1",
+    "title": "What is Micrometeorology?",
+    "section": "Wind References",
+    "text": "Wind References\n\nIn reality, wind is a vector consisting of three components:\n\nx, y, & z represent fixed (e.g., cartesian coordinates in space)\nWind has u, v, & w components that are referenced to the either the cartesian coordinates, or mean flow, depending on the reference frame.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -312,7 +408,7 @@
     "href": "Lectures/01.html#the-atmospheric-boundary-layer-1",
     "title": "What is Micrometeorology?",
     "section": "The Atmospheric Boundary Layer",
-    "text": "The Atmospheric Boundary Layer\n\n\n\nThe ABL reacts within several hours (&lt; 1 day) to changes at the surface.\nTherefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.\n\n\n\n\n\nThe ABL in the foreground, with the “free atmosphere” above.\n\n\n\n\n\nTherefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the PBL. We often forget that this daily routine does not affect the whole atmosphere! The influence of the surface is effectively limited to the lowest 10 km of the Atmosphere in a layer called the troposphere. Over time periods of about one day this influence is restricted to a very much shallower zone known as the atmospheric (planetary) boundary layer, often referred to simply as the ‘boundary layer’.",
+    "text": "The Atmospheric Boundary Layer\n\n\n\nThe ABL reacts within several hours (&lt; 1 day) to changes at the surface.\nWe measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.\n\nThe free atmosphere above is less tied to the diurnal cycle; requires less frequent measurement\n\n\n\n\n\n\nThe ABL in the foreground, with the “free atmosphere” above.\n\n\n\n\n\nTherefore we measure a diurnal cycle of temperature, humidity, wind and air pollutants in the PBL. We often forget that this daily routine does not affect the whole atmosphere! The influence of the surface is effectively limited to the lowest 10 km of the Atmosphere in a layer called the troposphere. Over time periods of about one day this influence is restricted to a very much shallower zone known as the atmospheric (planetary) boundary layer, often referred to simply as the ‘boundary layer’.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -344,11 +440,11 @@
     ]
   },
   {
-    "objectID": "Lectures/01.html#terrestrial-ecosystems-are-key-components-of-the-global-carbon-cycle",
-    "href": "Lectures/01.html#terrestrial-ecosystems-are-key-components-of-the-global-carbon-cycle",
+    "objectID": "Lectures/01.html#climate-change-1",
+    "href": "Lectures/01.html#climate-change-1",
     "title": "What is Micrometeorology?",
-    "section": "Terrestrial ecosystems are key components of the global carbon cycle",
-    "text": "Terrestrial ecosystems are key components of the global carbon cycle\n\n\nSources\n\n\n\n12% 4.8 GtCO2/yr\n\n\n\n\n\n88% 34.4 GtCO2/yr\n\n\n\nSinks\n\n\n\n46% 17.2 GtCO2/yr\n\n\n\n\n\n24% 8.8 GtCO2/yr\n\n\n\n\n\n30% 11.0 GtCO2/yr\n\n\n\n\n\nHowever, thankfully not all the CO2 that we emit stays in the atmosphere – Of what is emitted, about 46% remains in the atmosphere, 24% is absorbed by our oceans and 30% by the land. So the exchange of CO2 into and out of ecosystems is really key in regulating the global carbon cycle. Understanding land atmosphere interactions is key to understanding global carbon dynamics and climate change. -Average for 2007-2016",
+    "section": "Climate Change",
+    "text": "Climate Change\n\n\nSources\n\n\n\nLand use changes: 12% 4.8 GtCO2/yr\n\n\n\n\n\nIndustry and agriculture: 88% 34.4 GtCO2/yr\n\n\n\n\n\nSinks\n\n\n\n\n\n\nAtmosphere: 46% 17.2 GtCO2/yr\n\n\n\n\n\n\n\nOceans: 24% 8.8 GtCO2/yr\n\n\n\n\n\n\n\n\n\nTerrestrial Ecosystems: 30% 11.0 GtCO2/yr\n\n\n\n\n\n\n\n\nHowever, thankfully not all the CO2 that we emit stays in the atmosphere – Of what is emitted, about 46% remains in the atmosphere, 24% is absorbed by our oceans and 30% by the land. So the exchange of CO2 into and out of ecosystems is really key in regulating the global carbon cycle. Understanding land atmosphere interactions is key to understanding global carbon dynamics and climate change. -Average for 2007-2016",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -372,7 +468,7 @@
     "href": "Lectures/01.html#global-climate-change",
     "title": "What is Micrometeorology?",
     "section": "Global climate change",
-    "text": "Global climate change\nKnowledge on micrometeorology and climatology help:\n\n\n\nDetermine greenhouse-gas emissions and uptake between the land surface and the atmosphere.\nStudy climate-surface feedbacks (e.g. due to thawing permafrost).\nDetermine the melt rate and mass balance of ice-sheets and glaciers.\n\n\n\n\n\n\nImportant concepts from the class: Energy and mass balance, radiation, flux-gradient relations, eddy covariance, plant-atmosphere interactions",
+    "text": "Global climate change\nKnowledge on micrometeorology and climatology help:\n\n\n\nDetermine greenhouse-gas emissions and uptake between.\nStudy climate-surface feedbacks (e.g. thawing permafrost).\nDetermine the melt rate and mass balance of ice-sheets and glaciers.\n\n\n\n\n\n\nImportant concepts from the class: Energy and mass balance, radiation, flux-gradient relations, eddy covariance, plant-atmosphere interactions",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -395,8 +491,8 @@
     "objectID": "Lectures/01.html#food-and-water-resources",
     "href": "Lectures/01.html#food-and-water-resources",
     "title": "What is Micrometeorology?",
-    "section": "Food and water resources",
-    "text": "Food and water resources\nFood requires water for growth, in many places the availability of water is the limiting factor.",
+    "section": "Food and Water Resources",
+    "text": "Food and Water Resources\nFood requires water for growth, in many places the availability of water is the limiting factor.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -407,8 +503,8 @@
     "objectID": "Lectures/01.html#food-and-water-resources-1",
     "href": "Lectures/01.html#food-and-water-resources-1",
     "title": "What is Micrometeorology?",
-    "section": "Food and water resources",
-    "text": "Food and water resources\n\n\nWarmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nIn a world scorched by high temperatures, Canada’s Western provinces – home to more than 80 per cent of Canada’s farmable lands – have been the country’s hot spot this week. On Friday, the forecast highs in Medicine Hat, Alta. and Medina, Saudi Arabia, were both in the low 40s.\nWarmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.\n(Source: https://www.theglobeandmail.com/canada/alberta/article-drought-in-western-canada-is-becoming-an-agricultural-nightmare-for/)",
+    "section": "Food and Water Resources",
+    "text": "Food and Water Resources\n\n\nWarmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nIn a world scorched by high temperatures, Canada’s Western provinces – home to more than 80 per cent of Canada’s farmable lands – have been the country’s hot spot this week. On Friday, the forecast highs in Medicine Hat, Alta. and Medina, Saudi Arabia, were both in the low 40s.\nWarmer temperatures mean even when the rains come, evaporation can wick much of the moisture away.\n(Source: https://www.theglobeandmail.com/canada/alberta/article-drought-in-western-canada-is-becoming-an-agricultural-nightmare-for/)",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -419,8 +515,8 @@
     "objectID": "Lectures/01.html#food-and-water-resources-2",
     "href": "Lectures/01.html#food-and-water-resources-2",
     "title": "What is Micrometeorology?",
-    "section": "Food and water resources",
-    "text": "Food and water resources\nKnowledge on micrometeorology and climatology help:\n\nDevelop strategies to use water efficiency (soil moisture, evapotranspiration).\nQuantify and model local and regional rates of evapotranspiration.\nTo predict frost and protect crops properly from frost.\nTo manage wind erosion and sheltering.\nTo efficiently plan agricultural operations (seeding, spraying, burning).\n\n\nCourse relevant materials: The water cycle at land-atmosphere interfaces, Measuring and modeling evapotranspiration, Soil thermal properties and heat transfer",
+    "section": "Food and Water Resources",
+    "text": "Food and Water Resources\nKnowledge on micrometeorology and climatology help:\n\nDevelop strategies to use water efficiency (soil moisture, evapotranspiration).\nQuantify and model local and regional rates of evapotranspiration.\nTo predict frost and protect crops properly from frost.\nTo manage wind erosion and sheltering.\nTo efficiently plan agricultural operations (seeding, spraying, burning).\n\n\nCourse relevant materials: The water cycle at land-atmosphere interfaces, Measuring and modeling evapotranspiration, Soil thermal properties and heat transfer",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -431,8 +527,8 @@
     "objectID": "Lectures/01.html#clean-energy",
     "href": "Lectures/01.html#clean-energy",
     "title": "What is Micrometeorology?",
-    "section": "Clean energy",
-    "text": "Clean energy\n\n\n\nEnergy is a central need of growing populations and economies. How can we secure energy without harming our climate system?\nClean energy production, along with efficient distribution and use of energy, are key tasks of moving into a more sustainable 21st century.",
+    "section": "Clean Energy",
+    "text": "Clean Energy\nEnergy is a central need of growing populations and economies. How can we secure energy without harming our climate system?\n\n\n\nClean energy production, along with efficient distribution and use of energy, are key tasks of moving into a more sustainable 21st century.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -440,11 +536,23 @@
     ]
   },
   {
-    "objectID": "Lectures/01.html#clean-energy-engineering-architecture",
-    "href": "Lectures/01.html#clean-energy-engineering-architecture",
+    "objectID": "Lectures/01.html#clean-energy-1",
+    "href": "Lectures/01.html#clean-energy-1",
     "title": "What is Micrometeorology?",
-    "section": "Clean energy, engineering & architecture",
-    "text": "Clean energy, engineering & architecture\n\n\nKnowledge on micrometeorology and climatology helps:\n\nMaximize use of renewable energies (wind, solar).\nOptimize thermal climate and energetics of buildings.\nCalculate wind loading of buildings and structures.\n\n\n\n\n\nWind turbine on Grouse Mountain, Vancouver (Photo: A. Christen)\n\n\n\n\n\nRelated to concepts we’ll touch on radiation and turbulence",
+    "section": "Clean Energy",
+    "text": "Clean Energy\nKnowledge on micrometeorology and climatology helps:\n\n\n\nMaximize use of renewable energies (wind, solar).\nOptimize thermal climate and energetics of buildings.\nCalculate wind loading of buildings and structures.\n\n\n\n\n\nWind turbine on Grouse Mountain, Vancouver (Photo: A. Christen)\n\n\n\n\n\nRelated to concepts we’ll touch on radiation and turbulence",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "What is Micrometeorology?"
+    ]
+  },
+  {
+    "objectID": "Lectures/01.html#coming-up-next",
+    "href": "Lectures/01.html#coming-up-next",
+    "title": "What is Micrometeorology?",
+    "section": "Coming Up Next?",
+    "text": "Coming Up Next?\nA deep dive into energy and mass balances.\n\nNext week we’ll start taking an in-depth look at the processes governing ecosystem scale fluxes of energy and mass.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -493,30 +601,6 @@
     "crumbs": [
       "Syllabus",
       "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Lectures/01.html#kelvin-vs.-celsius",
-    "href": "Lectures/01.html#kelvin-vs.-celsius",
-    "title": "What is Micrometeorology?",
-    "section": "Kelvin vs. Celsius",
-    "text": "Kelvin vs. Celsius\n\nThe unit for temperature is Kelvin (K, not \\(^{\\circ} K\\)). Temperatures may be also indicated in degree Celsius ( \\(^{\\circ} C\\) ). However, temperature-differences should be referred to as Kelvin (K). The conversion is listed in Equation 1. Note how one Kelvin is equivalent to one degree Celsius, but the units have different zero points.\n\n0 K represents absolute zero, which is the lowest possible temperature: i.e., a complete lack of energy in a system.\n\nKelvin is on a ratio scale: it starts at a fixed, meaningful zero value and can only take positive values. This allows for relative comparisons between values:\n\ne.ge., 100 K is “twice as hot” as 50 K\n\n\n\\(^{\\circ} C\\) is the freezing point of fresh water at 1 atm (mean atmospheric pressure at sea level).\n\nCelsius is on an interval scale &gt; it has an arbitrary zero value and can take positive or negative values. This prevents relative comparisons between values:\n\ne.ge., 100 \\(^{\\circ} C\\) is not “twice as hot” as 50 \\(^{\\circ} C\\)\n\n\n\nYou can use the following equation to convert between Celsius and Kelvin:\n\n\\[\nT(K) = T(\\deg C) + 273.15\n\\qquad(1)\\]",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "What is Micrometeorology?"
-    ]
-  },
-  {
-    "objectID": "Lectures/01.html#unit-conversion",
-    "href": "Lectures/01.html#unit-conversion",
-    "title": "What is Micrometeorology?",
-    "section": "Unit Conversion",
-    "text": "Unit Conversion\n\n\n\n# Converts between Celsius and Kelvin\nTConvert &lt;- function(Temp,uIn=\"C\"){\n    if (uIn == \"C\") {\n       return(Temp+273.15)\n    } else if (uIn == \"K\") {\n       return(Temp-273.15)\n    } else {\n       stop(\"Invalid unit\")\n    }\n}\n\nTempC &lt;- c(-10,0,10)\nTConvert(TempC)\n\n[1] 263.15 273.15 283.15\n\nTempK &lt;- c(200,300,400)\nTConvert(TempK,uIn='K')\n\n[1] -73.15  26.85 126.85\n\n\n\n\n# Converts between Celsius and Kelvin\nimport numpy as np\ndef TConvert(Temp,uIn=\"C\"):\n    if uIn == \"C\":\n       return(Temp+273.15)\n    elif uIn == \"K\":\n       return(Temp-273.15)\n    else:\n       raise ValueError('Invalid unit')\n\nTempC = np.array([-10,0,10])\nTConvert(TempC)\n\narray([263.15, 273.15, 283.15])\n\nTempK = np.array([200,300,400])\nTConvert(TempK,uIn='K')\n\narray([-73.15,  26.85, 126.85])",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "What is Micrometeorology?"
     ]
   }
 ]

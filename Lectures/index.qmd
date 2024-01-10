@@ -20,14 +20,21 @@ Lecture_Dates = Mon.union(Wed)
 
 Lectures = pd.DataFrame(data={'Date':Lecture_Dates})
 Lectures['Topic']=''
+Lectures['Suggested Reading']=''
 Topics = [
 'Course Overview',
 'What is Micrometeorology?'
+]
+Readings = [
+    '',
+    'Open Geomatics section [3.1](https://www.opengeomatics.ca/types-of-data.html#types-of-phenomena) & [3.2](https://www.opengeomatics.ca/types-of-data.html#types-of-data-1)'
 ]
 
 for i,row in Lectures.iterrows():
     if i <= len(Topics)-1:
         Lectures.loc[Lectures.index==i,'Topic'] = Topics[i]
+    if i <= len(Readings)-1:
+        Lectures.loc[Lectures.index==i,'Suggested Reading'] = Readings[i]
 
 # Lectures.index+=1
 # Lectures.index/=2
