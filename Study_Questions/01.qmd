@@ -1,0 +1,56 @@
+---
+title: Study Question Set 01
+subtitle: Mass Balances
+---
+
+Let us write the general conservation equation for humidity in the air:
+
+$$
+0 = \frac{\partial \rho_v}{\partial t} + u \frac{\partial \rho_v}{\partial x} + v \frac{\partial \rho_v}{\partial y} + w \frac{\partial \rho_v}{\partial z} 
+$$
+
+where $\rho_v$ is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.
+
+1. What does the term $\frac{\partial \rho_v}{\partial t}$ describe, and what is the unit of the term?
+
+
+::: {.callout-tip collapse="true"}
+
+The term $\frac{\partial \rho_v}{\partial t}$ describes the change in absolute humidity $\partial \rho_v$ in time $\partial t$ and as such is the **change in storage** within the `volume'. Its unit is partial density of water vapor ($\rm{g}\,\rm{m}^{-3}$) divided by time (in $\rm{s}$), i.e. \rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}
+
+:::
+
+2. What does the term $u \frac{\partial \rho_v}{\partial x}$ describe, and what is the unit of the term?
+
+
+::: {.callout-tip collapse="true"}
+
+The term $u\frac{\partial \rho_v}{\partial x}$ describes **transport** of a humidity gradient along the $x$-axis by the wind. Its unit is wind speed ($\rm{m}\,\rm{s}^{-1}$) times partial density of water vapor ($\rm{g}\,\rm{m}^{-3}$) divided by distance (in $\rm{m}$), i.e. again $\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}$
+
+:::
+
+
+
+3. Assume horizontally homogeneous conditions, and $\frac{\partial \rho_v}{\partial z} = -1\,\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}$. $u =  2\,\rm{m}\,\rm{s}^{-1}$, $v =  0\,\rm{m}\,\rm{s}^{-1}$ and $w = 0.1 \,\rm{m}\,\rm{s}^{-1}$  Is the air drying out, becoming more humid, or is the humidity staying constant?
+
+::: {.callout-tip collapse="true"}
+
+Horizontally homogeneous conditions mean $\frac{\partial \rho_v}{\partial x} = 0$ and $\frac{\partial \rho_v}{\partial y} = 0$. So the conservation equation simplifies to:
+$$
+0 = \frac{\partial \rho_v}{\partial t} + w \frac{\partial \rho_v}{\partial z} 
+$$
+or 
+$$
+\frac{\partial \rho_v}{\partial t} = - w \frac{\partial \rho_v}{\partial z} 
+$$
+
+Inserting $\frac{\partial \rho_v}{\partial z} = -1\,\rm{g}\,\rm{m}^{-3}\,\rm{m}^{-1}$ and $w = 0.1 \,\rm{m}\,\rm{s}^{-1}$ results in:
+$$
+\frac{\partial \rho_v}{\partial t} = 0.1\,\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}.
+$$
+
+So the `volume' becomes more humid over time.
+
+:::
+
+

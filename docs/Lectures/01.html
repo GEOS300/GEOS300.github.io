@@ -403,9 +403,9 @@
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Some Boring Housekeeping Stuff</li>
-<li>Define essential variables, units, and conventions</li>
-<li>Define the scales relevant to micrometeorology</li>
+<li>Some boring housekeeping stuff</li>
+<li>Define key units, and conventions</li>
+<li>Discuss the scales relevant to micrometeorology</li>
 <li>Talk about applications of the discipline</li>
 </ul>
 </div><div class="column" style="width:50%;">
@@ -420,7 +420,7 @@
 </section>
 <section id="iclicker-test" class="slide level2">
 <h2>iClicker Test</h2>
-<p>Are you able to access the course iClicker?</p>
+<p>Are you able to access the course iClicker? If you haven’t done so yet, you can find the course here: <a href="https://join.iclicker.com/HXHO">https://join.iclicker.com/HXHO</a></p>
 <ul>
 <li>A - Yes</li>
 <li>B - No?</li>
@@ -701,11 +701,12 @@ T(K) = T(\deg C) + 273.15
 <li>E - No prior experience with R or Python, but some prior experience with another language</li>
 </ul>
 </section>
-<section id="unit-conversion-programmatic-examples" class="slide level2 smaller">
-<h2>Unit Conversion: Programmatic Examples</h2>
-<p>You can use <a href="https://ubc.syzygy.ca/">this tool</a> to test both examples.</p>
+<section id="programmatic-examples" class="slide level2 smaller">
+<h2>Programmatic Examples</h2>
+<p>These code blocks demonstrate a simple unit conversion in R and Python respectively. You can use <a href="https://ubc.syzygy.ca/">syzygy</a> to try them out.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
+<h3 id="r-code">R Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="co"># Converts between Celsius and Kelvin</span></span>
 <span id="cb1-2"><a></a>TConvert <span class="ot">&lt;-</span> <span class="cf">function</span>(Temp,<span class="at">uIn=</span><span class="st">"C"</span>){</span>
@@ -717,19 +718,21 @@ T(K) = T(\deg C) + 273.15
 <span id="cb1-8"><a></a>       <span class="fu">stop</span>(<span class="st">"Invalid unit"</span>)</span>
 <span id="cb1-9"><a></a>    }</span>
 <span id="cb1-10"><a></a>}</span>
-<span id="cb1-11"><a></a></span>
+<span id="cb1-11"><a></a><span class="co"># Celsius to Kelvin</span></span>
 <span id="cb1-12"><a></a>TempC <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="sc">-</span><span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">10</span>)</span>
 <span id="cb1-13"><a></a><span class="fu">TConvert</span>(TempC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 263.15 273.15 283.15</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>TempK <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>)</span>
-<span id="cb3-2"><a></a><span class="fu">TConvert</span>(TempK,<span class="at">uIn=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="co"># Kelvin to Celsius</span></span>
+<span id="cb3-2"><a></a>TempK <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>)</span>
+<span id="cb3-3"><a></a><span class="fu">TConvert</span>(TempK,<span class="at">uIn=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] -73.15  26.85 126.85</code></pre>
 </div>
 </div>
 </div><div class="column" style="width:50%;">
+<h3 id="python-code">Python Code</h3>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># Converts between Celsius and Kelvin</span></span>
 <span id="cb5-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -740,14 +743,15 @@ T(K) = T(\deg C) + 273.15
 <span id="cb5-7"><a></a>       <span class="cf">return</span>(Temp<span class="op">-</span><span class="fl">273.15</span>)</span>
 <span id="cb5-8"><a></a>    <span class="cf">else</span>:</span>
 <span id="cb5-9"><a></a>       <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="st">'Invalid unit'</span>)</span>
-<span id="cb5-10"><a></a></span>
+<span id="cb5-10"><a></a><span class="co"># Celsius to Kelvin</span></span>
 <span id="cb5-11"><a></a>TempC <span class="op">=</span> np.array([<span class="op">-</span><span class="dv">10</span>,<span class="dv">0</span>,<span class="dv">10</span>])</span>
 <span id="cb5-12"><a></a>TConvert(TempC)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([263.15, 273.15, 283.15])</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>TempK <span class="op">=</span> np.array([<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>])</span>
-<span id="cb7-2"><a></a>TConvert(TempK,uIn<span class="op">=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># Kelvin to Celsius</span></span>
+<span id="cb7-2"><a></a>TempK <span class="op">=</span> np.array([<span class="dv">200</span>,<span class="dv">300</span>,<span class="dv">400</span>])</span>
+<span id="cb7-3"><a></a>TConvert(TempK,uIn<span class="op">=</span><span class="st">'K'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>array([-73.15,  26.85, 126.85])</code></pre>
 </div>
@@ -765,10 +769,10 @@ T(K) = T(\deg C) + 273.15
 <section id="wind-references-1" class="slide level2 smaller">
 <h2>Wind References</h2>
 <ul>
-<li>In reality, wind is a vector consisting of three components:
+<li>In reality, wind is a vector consisting of three components (u, v, &amp; w). They can be referenced to either:
 <ul>
-<li>x, y, &amp; z represent fixed (e.g., cartesian coordinates in space)</li>
-<li>Wind has u, v, &amp; w components that are referenced to the either the cartesian coordinates, or mean flow, depending on the reference frame.</li>
+<li>Fixed cartesian coordinates (x, y, &amp; z)</li>
+<li>Mean flow: u is aligned with the mean flow, v (horizontal) and w (vertical) are orthogonal u</li>
 </ul></li>
 </ul>
 
@@ -972,12 +976,9 @@ Table&nbsp;4: Spatial scales in meteorology.
 </section>
 <section id="fluid-flow" class="slide level2">
 <h2>Fluid Flow</h2>
-<p>Flow can be laminar (i.e.&nbsp;“orderly”) or turbulent (i.e.&nbsp;“Random”).</p>
+<p>Flow can be laminar (orderly) or turbulent (random).</p>
 <ul>
-<li>When flow interacts with a solid surface, it causes the flow slow and generates turbulent motions.
-<ul>
-<li>This also happens when one flow interacts with another.</li>
-</ul></li>
+<li>When flow interacts with a surface, it slows and generates turbulent motions.</li>
 </ul>
 
 <img data-src="images/WindTunnle.gif" class="r-stretch"></section>
@@ -1048,7 +1049,7 @@ Table&nbsp;4: Spatial scales in meteorology.
 <section id="the-atmospheric-boundary-layer-1" class="slide level2">
 <h2>The Atmospheric Boundary Layer</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:70%;">
 <ul>
 <li>The ABL reacts within several hours (&lt; 1 day) to changes at the surface.</li>
 <li>We measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.
@@ -1056,7 +1057,7 @@ Table&nbsp;4: Spatial scales in meteorology.
 <li>The free atmosphere above is less tied to the diurnal cycle; requires less frequent measurement</li>
 </ul></li>
 </ul>
-</div><div class="column" style="width:40%;">
+</div><div class="column" style="width:30%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/01_20_4.jpg"></p>
@@ -1078,6 +1079,14 @@ Table&nbsp;4: Spatial scales in meteorology.
           overflow: hidden!important;
           display:block!important;
       }</style></aside>
+</section>
+<section id="the-free-atmosphere-iclicker" class="slide level2">
+<h2>The Free Atmosphere (iClicker)</h2>
+<p>The free atmosphere refers to the region of the atmosphere farther away from the Earth’s surface that is less directly influenced by short time-scale processes at the surface, and is therefore not the primary focus of this course.</p>
+<ul>
+<li>A - True</li>
+<li>B - False</li>
+</ul>
 </section>
 <section id="applications" class="slide level2">
 <h2>Applications</h2>

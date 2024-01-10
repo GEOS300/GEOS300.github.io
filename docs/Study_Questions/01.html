@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microscale Weather and Climate - Study Questions</title>
+<title>Microscale Weather and Climate - Study Question Set 01</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -121,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/01.html">Study Question Set 01</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -135,7 +164,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../Study_Questions/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../Study_Questions/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Study Questions</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -144,7 +173,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Study_Questions/01.html" class="sidebar-item-text sidebar-link">
+  <a href="../Study_Questions/01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Study Question Set 01</span></a>
   </div>
 </li>
@@ -159,9 +188,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/01.html">Study Question Set 01</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Study Questions</h1>
+<h1 class="title">Study Question Set 01</h1>
+<p class="subtitle lead">Mass Balances</p>
 </div>
 
 
@@ -178,7 +208,76 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Your study questions will be posted here as they become available. These are to be uploaded to canvas in advance of the mid-term and final examinations. Specific due dates will be provided soon. The solutions to the study questions are already provided, but you should write up and submit your own responses as a .pdf or .docx file. Number the questions clearly have your response clearly indicated.</p>
+<p>Let us write the general conservation equation for humidity in the air:</p>
+<p><span class="math display">\[
+0 = \frac{\partial \rho_v}{\partial t} + u \frac{\partial \rho_v}{\partial x} + v \frac{\partial \rho_v}{\partial y} + w \frac{\partial \rho_v}{\partial z}
+\]</span></p>
+<p>where <span class="math inline">\(\rho_v\)</span> is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.</p>
+<ol type="1">
+<li>What does the term <span class="math inline">\(\frac{\partial \rho_v}{\partial t}\)</span> describe, and what is the unit of the term?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The term <span class="math inline">\(\frac{\partial \rho_v}{\partial t}\)</span> describes the change in absolute humidity <span class="math inline">\(\partial \rho_v\)</span> in time <span class="math inline">\(\partial t\)</span> and as such is the <strong>change in storage</strong> within the `volume’. Its unit is partial density of water vapor (<span class="math inline">\(\rm{g}\,\rm{m}^{-3}\)</span>) divided by time (in <span class="math inline">\(\rm{s}\)</span>), i.e.&nbsp;</p>
+</div>
+</div>
+</div>
+<ol start="2" type="1">
+<li>What does the term <span class="math inline">\(u \frac{\partial \rho_v}{\partial x}\)</span> describe, and what is the unit of the term?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The term <span class="math inline">\(u\frac{\partial \rho_v}{\partial x}\)</span> describes <strong>transport</strong> of a humidity gradient along the <span class="math inline">\(x\)</span>-axis by the wind. Its unit is wind speed (<span class="math inline">\(\rm{m}\,\rm{s}^{-1}\)</span>) times partial density of water vapor (<span class="math inline">\(\rm{g}\,\rm{m}^{-3}\)</span>) divided by distance (in <span class="math inline">\(\rm{m}\)</span>), i.e.&nbsp;again <span class="math inline">\(\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}\)</span></p>
+</div>
+</div>
+</div>
+<ol start="3" type="1">
+<li>Assume horizontally homogeneous conditions, and <span class="math inline">\(\frac{\partial \rho_v}{\partial z} = -1\,\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}\)</span>. <span class="math inline">\(u =  2\,\rm{m}\,\rm{s}^{-1}\)</span>, <span class="math inline">\(v =  0\,\rm{m}\,\rm{s}^{-1}\)</span> and <span class="math inline">\(w = 0.1 \,\rm{m}\,\rm{s}^{-1}\)</span> Is the air drying out, becoming more humid, or is the humidity staying constant?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Horizontally homogeneous conditions mean <span class="math inline">\(\frac{\partial \rho_v}{\partial x} = 0\)</span> and <span class="math inline">\(\frac{\partial \rho_v}{\partial y} = 0\)</span>. So the conservation equation simplifies to: <span class="math display">\[
+0 = \frac{\partial \rho_v}{\partial t} + w \frac{\partial \rho_v}{\partial z}
+\]</span> or <span class="math display">\[
+\frac{\partial \rho_v}{\partial t} = - w \frac{\partial \rho_v}{\partial z}
+\]</span></p>
+<p>Inserting <span class="math inline">\(\frac{\partial \rho_v}{\partial z} = -1\,\rm{g}\,\rm{m}^{-3}\,\rm{m}^{-1}\)</span> and <span class="math inline">\(w = 0.1 \,\rm{m}\,\rm{s}^{-1}\)</span> results in: <span class="math display">\[
+\frac{\partial \rho_v}{\partial t} = 0.1\,\rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}.
+\]</span></p>
+<p>So the `volume’ becomes more humid over time.</p>
+</div>
+</div>
+</div>
 
 
 

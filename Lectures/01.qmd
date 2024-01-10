@@ -27,9 +27,9 @@ subtitle: The study of the atmosphere at "small" scales.
 
 ::: {.column width="50%"}
 
-* Some Boring Housekeeping Stuff
-* Define essential variables, units, and conventions
-* Define the scales relevant to micrometeorology
+* Some boring housekeeping stuff
+* Define key units, and conventions
+* Discuss the scales relevant to micrometeorology
 * Talk about applications of the discipline
 
 :::
@@ -44,7 +44,7 @@ subtitle: The study of the atmosphere at "small" scales.
 
 ## iClicker Test
 
-Are you able to access the course iClicker?
+Are you able to access the course iClicker?  If you haven't done so yet, you can find the course here: [https://join.iclicker.com/HXHO](https://join.iclicker.com/HXHO)
 
 * A - Yes
 * B - No?
@@ -155,13 +155,15 @@ Do you have any previous programming experience?
 * E - No prior experience with R or Python, but some prior experience with another language
 
 
-## Unit Conversion: Programmatic Examples {.smaller}
+## Programmatic Examples {.smaller}
 
-You can use [this tool](https://ubc.syzygy.ca/) to test both examples.
+These code blocks demonstrate a simple unit conversion in R and Python respectively.  You can use [syzygy](https://ubc.syzygy.ca/) to try them out.
 
 :::: {.columns}
 
 ::: {.column width="50%"}
+
+### R Code
 
 ```{R}
 #| echo: true
@@ -175,10 +177,10 @@ TConvert <- function(Temp,uIn="C"){
        stop("Invalid unit")
     }
 }
-
+# Celsius to Kelvin
 TempC <- c(-10,0,10)
 TConvert(TempC)
-
+# Kelvin to Celsius
 TempK <- c(200,300,400)
 TConvert(TempK,uIn='K')
 
@@ -188,6 +190,7 @@ TConvert(TempK,uIn='K')
 
 ::: {.column width="50%"}
 
+### Python Code
 
 ```{python}
 #| echo: true
@@ -200,10 +203,10 @@ def TConvert(Temp,uIn="C"):
        return(Temp-273.15)
     else:
        raise ValueError('Invalid unit')
-
+# Celsius to Kelvin
 TempC = np.array([-10,0,10])
 TConvert(TempC)
-
+# Kelvin to Celsius
 TempK = np.array([200,300,400])
 TConvert(TempK,uIn='K')
 
@@ -222,9 +225,9 @@ TConvert(TempK,uIn='K')
 
 ## Wind References {.smaller}
 
-* In reality, wind is a vector consisting of three components:
-  + x, y, & z represent fixed (e.g., cartesian coordinates in space)
-  + Wind has u, v, & w components that are referenced to the either the cartesian coordinates, or mean flow, depending on the reference frame.
+* In reality, wind is a vector consisting of three components (u, v, & w).  They can be referenced to either:
+  + Fixed cartesian coordinates (x, y, & z)
+  + Mean flow: u is aligned with the mean flow, v (horizontal) and w (vertical) are orthogonal u
 
 ![](images/Wind_Components.png)
 
@@ -394,12 +397,13 @@ The atmospheric boundary layer is formed as a consequence of the interactions be
 
 ## Fluid Flow
 
-Flow can be laminar (i.e. "orderly”) or turbulent (i.e. "Random”).  
+Flow can be laminar (orderly) or turbulent (random).  
 
-* When flow interacts with a solid surface, it causes the flow slow and generates turbulent motions.
-  * This also happens when one flow interacts with another.
+* When flow interacts with a surface, it slows and generates turbulent motions.
 
 ![](images/WindTunnle.gif)
+
+
 
 ## What is a boundary layer?
 
@@ -481,7 +485,7 @@ Naturally this ideal picture can be considerably disrupted by large-scale weathe
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="70%"}
 
 * The ABL reacts within several hours (< 1 day) to changes at the surface. 
 * We measure a diurnal cycle of temperature, humidity, wind and air pollutants in the ABL.
@@ -492,7 +496,7 @@ Naturally this ideal picture can be considerably disrupted by large-scale weathe
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="30%"}
 
 
 ![The ABL in the foreground, with the "free atmosphere" above.](images/01_20_4.jpg)
@@ -513,7 +517,12 @@ Over time periods of about one day this influence is restricted to a very much s
 
 :::
 
+## The Free Atmosphere (iClicker)
 
+The free atmosphere refers to the region of the atmosphere farther away from the Earth's surface that is less directly influenced by short time-scale processes at the surface, and is therefore not the primary focus of this course.
+
+* A - True
+* B - False
 
 
 
