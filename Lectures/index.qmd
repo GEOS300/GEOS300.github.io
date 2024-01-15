@@ -13,32 +13,45 @@ Your lectures and any required readings will be posted here as they become avail
 #| tbl-cap: "Lecture schedule"
 import pandas as pd
 import numpy as np
+from IPython.display import Markdown
+from tabulate import tabulate
 Mon = pd.date_range("20240108", "20240412", freq='W-Mon')
 Wed = pd.date_range("20240108", "20240412", freq='W-Wed')
 Week = np.arange(1,Mon.shape[0])
-Lecture_Dates = Mon.union(Wed)
+Lecture_Dates = Mon.union(Wed).date
 
 Lectures = pd.DataFrame(data={'Date':Lecture_Dates})
 Lectures['Topic']=''
 Lectures['Suggested Reading']=''
+Lectures['Study Questions']=''
 Topics = [
 'Course Overview',
-'What is Micrometeorology?'
+'What is Micrometeorology?',
+'Energy and Mass Balances',
+'A Deeper Dive into Surface Energy Balances'
 ]
 Readings = [
     '',
-    'Open Geomatics section [3.1](https://www.opengeomatics.ca/types-of-data.html#types-of-phenomena) & [3.2](https://www.opengeomatics.ca/types-of-data.html#types-of-data-1)'
+    'Open Geomatics section [3.1](https://www.opengeomatics.ca/types-of-data.html#types-of-phenomena) & [3.2](https://www.opengeomatics.ca/types-of-data.html#types-of-data-1)',
+    ''
 ]
+Study = ['',
+        '',
+        '[01](../Study_Questions/01.html)',
+        ]
 
 for i,row in Lectures.iterrows():
     if i <= len(Topics)-1:
         Lectures.loc[Lectures.index==i,'Topic'] = Topics[i]
     if i <= len(Readings)-1:
         Lectures.loc[Lectures.index==i,'Suggested Reading'] = Readings[i]
+    if i <= len(Study)-1:
+        Lectures.loc[Lectures.index==i,'Study Questions'] = Study[i]
 
-# Lectures.index+=1
-# Lectures.index/=2
-# Lectures.index=Lectures.index.astype(float)
 Lectures.set_index('Date',inplace=True)
-Lectures
+Markdown(tabulate(
+  Lectures, 
+  headers=Lectures.columns
+))
 ```
+

@@ -1,0 +1,4 @@
+
+$$
+R_n = H + LE + G + \Delta S
+$${#eq-Surface-Energy-Balance}

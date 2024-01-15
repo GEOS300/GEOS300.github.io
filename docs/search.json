@@ -54,6 +54,521 @@
     ]
   },
   {
+    "objectID": "Lectures/02.html#learning-objectives",
+    "href": "Lectures/02.html#learning-objectives",
+    "title": "Energy and Mass Balances",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\n\nDescribe how we can we track energy and mass in the atmosphere.\nDescribe and simplify exchange processes of energy and mass at surface-atmosphere interfaces.\nReview: Define the dominant energy and mass transfer mechanisms in the atmosphere.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-of-energy",
+    "href": "Lectures/02.html#conservation-of-energy",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation of Energy",
+    "text": "Conservation of Energy\nOne of the most powerful laws used in micrometeorology is the First Law of Thermodynamics.\n\nEnergy cannot be created or destroyed by any ordinary means.\n\nWe can convert forms and move them around.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-of-energy-1",
+    "href": "Lectures/02.html#conservation-of-energy-1",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation of Energy",
+    "text": "Conservation of Energy\nEnergy of relevant to climatology exists in the Earth-Atmosphere system in four different forms:\n\nRadiant: energy from electromagnetic radiation\n\nAll inputs inputs to/outputs from the Earth system are radiant\n\nThermal: heat energy (both latent and sensible)\nKinetic: energy associated with motion\nPotential: energy stored in an object due to it’s position or state",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-laws",
+    "href": "Lectures/02.html#conservation-laws",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation Laws",
+    "text": "Conservation Laws\n\n\nIn general terms, we can define a conservation law as the balance between inputs, outputs, and storage (\\(\\Delta S\\)) for a given system:\n\\[\nIn - Out = \\Delta S\n\\qquad(1)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-in-3d-space",
+    "href": "Lectures/02.html#conservation-in-3d-space",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation in 3D Space",
+    "text": "Conservation in 3D Space\nIn this case, \\(\\Delta S = 0\\), because the inputs are balanced by the outputs.\n\n\n\n\n\n\n\nIn\nOut\n\\(\\Delta S\\)\n\n\n\n\n3u+1v+2w\n3u+1v+2w\n0\n\n\n\n\n\n\n\n\n\n\nthe sum of all sources (with sinks regarded as negative sources) gives the net flux out of a region. Divergence -&gt; change in storage in our box is negative Convergence = change in storage in the box is positive\nNegative divergence = This means a fluid flowing along the vector field defined by v would tend to become more dense at the point (x0, y0) Positive = the fluid flowing along the vector field becomes less dense around (x0, y0) Zero = no change in density\nSource: https://www.khanacademy.org/math/multivariable-calculus/multivariable-derivatives/divergence-and-curl-articles/a/divergence",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#convergence",
+    "href": "Lectures/02.html#convergence",
+    "title": "Energy and Mass Balances",
+    "section": "Convergence",
+    "text": "Convergence\nIn this case, we have convergence (\\(\\Delta S = 0\\)) in the system, because the inputs exceed the outputs.\n\n\n\n\n\n\n\nIn\nOut\n\\(\\Delta S\\)\n\n\n\n\n3u+3v+1w\n3u+1v+1w\n2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#convergence-1",
+    "href": "Lectures/02.html#convergence-1",
+    "title": "Energy and Mass Balances",
+    "section": "Convergence",
+    "text": "Convergence\nIn this case, we have convergence (\\(\\Delta S &gt; 0\\)) in the system, because the inputs exceed the outputs.\n\n\n\nConvergence indicates accumulation over time. It could mean:\n\nAir pressure increased\nAbsolute humidity increased\nHeat energy increased due to warming",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#divergence-iclicker",
+    "href": "Lectures/02.html#divergence-iclicker",
+    "title": "Energy and Mass Balances",
+    "section": "Divergence (iClicker)",
+    "text": "Divergence (iClicker)\nIn this case, we have divergence from the system, because the inputs to the system exceed the outputs from the system. What is the value of \\(\\Delta S\\)?\n\n\n\n\n\n\n\nIn\nOut\n\\(\\Delta S\\)\n\n\n\n\n3u+1v+1w\n3u+1v+3w\n??",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#divergence",
+    "href": "Lectures/02.html#divergence",
+    "title": "Energy and Mass Balances",
+    "section": "Divergence",
+    "text": "Divergence\nIn this case, we have divergence (\\(\\Delta S &lt; 0\\)) from the system, because the inputs to the system exceed the outputs from the system.\n\n\n\nDivergence indicates loss over time. It could mean:\n\nAir pressure decreased\nAbsolute humidity decreased\nHeat energy (e.g., temperature) decreased due to cooling",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-of-a-scalar",
+    "href": "Lectures/02.html#conservation-of-a-scalar",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation of a Scalar",
+    "text": "Conservation of a Scalar\nGiven some scalar \\(c\\), we can define it’s total change across a system \\(\\frac{dc}{dt}\\) as the sum of it’s partial derivatives (\\(\\partial\\)):\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\qquad(2)\\]\n\nAdvection: \\(u \\frac{\\partial c}{\\partial x}\\), \\(v \\frac{\\partial c}{\\partial y}\\), & \\(w \\frac{\\partial c}{\\partial z}\\) represents the flow of c in to and out of the system\nStorage (\\(\\Delta S\\)): \\(\\frac{\\partial c}{\\partial t}\\) represents the change in c within the system over time\n\n\nPartial derivative of a function of several variables is its derivative with respect to one of those variables, with the others held constant (as opposed to the total derivative, in which all variables are allowed to vary).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#spatial-variability-iclicker",
+    "href": "Lectures/02.html#spatial-variability-iclicker",
+    "title": "Energy and Mass Balances",
+    "section": "Spatial Variability (iClicker)",
+    "text": "Spatial Variability (iClicker)\n\n\nWhich term would you use to describe the landscape in this photograph, where there are numerous types of vegetation present and complex topography with hills, ponds, and open ocean.\n\nHeterogeneous\nHomogeneous\nHomeopathic\nPolymorphic\nStatic",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-at-a-land-interface",
+    "href": "Lectures/02.html#conservation-at-a-land-interface",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation at a land-interface",
+    "text": "Conservation at a land-interface\nNo wind can enter box from below; so transport from below is limited to diffusion from the soil.\n\n\n\n\n\n\n\nIn\nOut\n\\(\\Delta S\\)\n\n\n\n\n3u+1v+0w\n2u+1v+3w\n-2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#conservation-at-a-land-interface-1",
+    "href": "Lectures/02.html#conservation-at-a-land-interface-1",
+    "title": "Energy and Mass Balances",
+    "section": "Conservation at a land-interface",
+    "text": "Conservation at a land-interface\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\qquad(3)\\]\n\n\nKeeping track of all four terms can become quite difficult, especially in heterogeneous terrain.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#horizontal-homogeneity",
+    "href": "Lectures/02.html#horizontal-homogeneity",
+    "title": "Energy and Mass Balances",
+    "section": "Horizontal Homogeneity",
+    "text": "Horizontal Homogeneity\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\qquad(4)\\]\n\n\nOver flat, homogeneous ecosystems this task becomes “fairly” simple for most variables:\n\nThe mean horizontal gradients “vanish”",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#horizontal-homogeneity-1",
+    "href": "Lectures/02.html#horizontal-homogeneity-1",
+    "title": "Energy and Mass Balances",
+    "section": "Horizontal Homogeneity",
+    "text": "Horizontal Homogeneity\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\qquad(5)\\]\n\n\n\n\\(w \\frac{\\partial \\overline{c}}{\\partial z} \\gg u \\frac{\\partial \\overline{c}}{\\partial x} = v \\frac{\\partial \\overline{c}}{\\partial y} \\approx 0\\)\n\nOverbar indicates time-average (e.g, an hour)\nHorizontal transport reduces to zero in homogenous terrain",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#horizontal-homogeneity-2",
+    "href": "Lectures/02.html#horizontal-homogeneity-2",
+    "title": "Energy and Mass Balances",
+    "section": "Horizontal Homogeneity",
+    "text": "Horizontal Homogeneity\nReducing to 1D simplifies calculations. We assume horizontal advection on opposite sides of the ‘box’ cancel out. Only vertical exchange is considered.\n\n\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\qquad(6)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#making-assumptions",
+    "href": "Lectures/02.html#making-assumptions",
+    "title": "Energy and Mass Balances",
+    "section": "Making Assumptions",
+    "text": "Making Assumptions\nThere is a famous saying about assumptions …\n\n\n\nThere will always be some heterogeneity present, even in “uniform” ecosystems.\n\nBut depending on the scale we are concerned with, it is sufficient to “ignore” the small scale variability.\n\n\n\nVideo",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#study-question",
+    "href": "Lectures/02.html#study-question",
+    "title": "Energy and Mass Balances",
+    "section": "Study Question",
+    "text": "Study Question\nApply the conservation equation to absolute humidity.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer",
+    "href": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer",
+    "title": "Energy and Mass Balances",
+    "section": "Mechanisms of Energy and Mass Transfer",
+    "text": "Mechanisms of Energy and Mass Transfer\nRadiative exchange: electromagnetic waves, photons\n\nRadiation does not need molecules to propagate, it can travel through the vacuum of space\n\nAll inputs to / outputs from the Earth system",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer-1",
+    "href": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer-1",
+    "title": "Energy and Mass Balances",
+    "section": "Mechanisms of Energy and Mass Transfer",
+    "text": "Mechanisms of Energy and Mass Transfer\nMolecular exchange: conduction and diffusion\n\nNet flow of energy or matter from high concentration to low concentration\n\nHeat conduction is most effective in solids, less so in liquids and gasses\n\n\n\n\nDiffusion, process resulting from random motion of molecules by which there is a net flow of matter from a region of high concentration to a region of low concentration. Heat conduction involves thermal energy transported, or diffused, from higher to lower temperature. Heat conduction is usually an effective mode of transfer in solids, less so in liquids, and least important in gases. In general, pure molecular conduction is negligible in atmospheric applications, except within the very think laminar boundary layer. However, conduction is important to the transport of heat beneath the surface. As we’ll get to later in this course, conduction of heat is dependent on the thermal properties of the substrate.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer-2",
+    "href": "Lectures/02.html#mechanisms-of-energy-and-mass-transfer-2",
+    "title": "Energy and Mass Balances",
+    "section": "Mechanisms of Energy and Mass Transfer",
+    "text": "Mechanisms of Energy and Mass Transfer\n\n\nTurbulent exchange: - convection (bulk transport) in a fluid\n\nConvection is the most effective mode of transport in the atmosphere. It can be free (self propagating) or forced (mechanically induced).\n\n\n\n\n\n\n\ne.g. looking at boiling water In the atmosphere, the parcels of air (or eddies) transport energy and mass from one location to another. The eddies may be set into turbulent motion by free or forced convection. Free convection is due to the parcel of air being at a different density than the surrounding fluid (e.g. the motion of water in a heated kettle, and a similar bubbling of air parcels occurs when the Earth’s surface is strongly heated by solar radiation). Forced (mechanical) convection – flow of air or water over obstacles. Depends on the roughness of the surface and the speed of the horizontal flow.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#transport-of-energy-and-mass-in-the-climate-system",
+    "href": "Lectures/02.html#transport-of-energy-and-mass-in-the-climate-system",
+    "title": "Energy and Mass Balances",
+    "section": "Transport of Energy and Mass in the Climate System",
+    "text": "Transport of Energy and Mass in the Climate System\n\n\n\n\nTable 1: Examples of processes relevant to the Earth-Climate system.\n\n\n\n\n\n\n\n\n\n\n\n\nMethod of exchange\nElectromagnetic Energy\nHeat Energy\nMass\n\n\n\n\nRadiative\nShort Wave (\\(SW\\)) Long Wave (\\(LW\\)) Net Radiation (\\(R_n\\))\n-\n-\n\n\nMolecular\nElectricity conduction (not relevant in the atmosphere)\nHeat conduction\nDiffusion of water vapour molecules\n\n\nTurbulent\nTurbulent exchange of charged gases (thunderstorms)\nSensible heat flux density\nLatent heat flux density\n\n\n\n\n\n\n\n\n\nHeat, energy that is transferred from one body to another as the result of a difference in temperature.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#fluxes-vs-flux-densities",
+    "href": "Lectures/02.html#fluxes-vs-flux-densities",
+    "title": "Energy and Mass Balances",
+    "section": "Fluxes vs Flux Densities",
+    "text": "Fluxes vs Flux Densities\n\n\nEnergy: Radiant or heat energy, given in Joules (\\(\\rm{J}\\)), describes the total energy in system\n\n\nPower: Radiant or heat flux, given in Watts (\\(\\rm{W}=\\rm{J}\\rm{s^{-1}}\\)), describes the flow rate of energy.\n\n\nFlux Density: Radiant or heat flux density, given in Watts per unit area (\\(\\rm{W}\\rm{m^{-2}}\\)), describes flow of energy across a surface.\n\n\n\n\nEnergy is the quantitative property that must be transferred to an object in order to perform work on, or to heat, the object Common forms of energy include the kinetic energy of a moving object, the potential energy stored by an object’s position in a force field (gravitational, electric or magnetic), the radiant energy carried by light, and the thermal energy due to an object’s temperature (the elastic energy stored by stretching solid objects, the chemical energy released when a fuel burns)\npower is the rate of doing work or transferring heat (i.e. the amount of energy transferred or converted per unit time) power is energy divided by time",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#flux-densities",
+    "href": "Lectures/02.html#flux-densities",
+    "title": "Energy and Mass Balances",
+    "section": "Flux Densities",
+    "text": "Flux Densities\nFlux densities can be calculated for any property, just be mindful of the units.\n\n\nMass: (\\(\\rm{kg}\\rm{m^{-2}}\\))\n\n\nHeat: (\\(\\rm{W}\\rm{m^{-2}}\\))\n\n\nRadiation: (\\(\\rm{W}\\rm{m^{-2}}\\))\n\n\n\n\nEnergy is the quantitative property that must be transferred to an object in order to perform work on, or to heat, the object Common forms of energy include the kinetic energy of a moving object, the potential energy stored by an object’s position in a force field (gravitational, electric or magnetic), the radiant energy carried by light, and the thermal energy due to an object’s temperature (the elastic energy stored by stretching solid objects, the chemical energy released when a fuel burns)\npower is the rate of doing work or transferring heat (i.e. the amount of energy transferred or converted per unit time) power is energy divided by time",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#energy-fluxes-at-earths-surface",
+    "href": "Lectures/02.html#energy-fluxes-at-earths-surface",
+    "title": "Energy and Mass Balances",
+    "section": "Energy Fluxes at Earth’s Surface",
+    "text": "Energy Fluxes at Earth’s Surface\n\\[\nR_n = H + LE + G + \\Delta S\n\\qquad(7)\\]\n\n\n\n‘Ideal’ surface considered here is relatively smooth, horizontal, homogeneous, extensive, and opaque to radiation.\nOnly vertical fluxes need to be considered.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#net-radiation-r_n",
+    "href": "Lectures/02.html#net-radiation-r_n",
+    "title": "Energy and Mass Balances",
+    "section": "Net Radiation (\\(R_n\\))",
+    "text": "Net Radiation (\\(R_n\\))\nThe net radiative flux is a result of the radiation balance at the surface, which will be discussed in more detail in a few lectures.\n\nDaytime dominated by the solar radiation (toward the surface), at night the net radiation is much weaker & away from the surface.\n\nThe surface warms up during the daytime, while it cools during the evening and night hours.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#sensible-vs.-latent-heat-iclicker",
+    "href": "Lectures/02.html#sensible-vs.-latent-heat-iclicker",
+    "title": "Energy and Mass Balances",
+    "section": "Sensible vs. Latent Heat (iClicker)",
+    "text": "Sensible vs. Latent Heat (iClicker)\nOne component deals with heat energy we can feel, the other deals with heat energy that is “hidden”. Which component is describes that hidden heat energy?\n\nSensible Heat Flux\nLatent Heat Flux",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#sensible-heat-flux-h",
+    "href": "Lectures/02.html#sensible-heat-flux-h",
+    "title": "Energy and Mass Balances",
+    "section": "Sensible Heat Flux (\\(H\\))",
+    "text": "Sensible Heat Flux (\\(H\\))\nA result of the difference in the temperatures of the surface and the air above.\n\nIn the bottom few millimeters of the air, conduction is the primary mode of heat transfer.\nAbove this, advection or convection involving air motions become dominant.\nThe sensible heat flux is usually directed away from the surface during the daytime hours, when the surface is warmer than the air above, and vice versa during the evening and nighttime periods.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#latent-heat-flux-le",
+    "href": "Lectures/02.html#latent-heat-flux-le",
+    "title": "Energy and Mass Balances",
+    "section": "Latent Heat Flux (\\(LE\\))",
+    "text": "Latent Heat Flux (\\(LE\\))\nA result of the energy exchange associated with phase changes (evaporation, condensation, etc.) at the surface.\n\nEvaporation results in some cooling of the surface, and transfer of heat energy from the surface to the air above.\n\nThe opposite is true for condensation.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#ground-heat-flux-g",
+    "href": "Lectures/02.html#ground-heat-flux-g",
+    "title": "Energy and Mass Balances",
+    "section": "Ground Heat Flux (\\(G\\))",
+    "text": "Ground Heat Flux (\\(G\\))\nHeat exchange through the ground is primarily due to conduction if the medium is soil, rock, or concrete. Through water, advection or convection are also significant.\n\nThe depth of the medium which responds to changes in the energy fluxes at the surface on a diurnal basis, is typically &lt; 1 m for land surfaces and &lt; 50 m for lakes and oceans.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#storage-delta-s",
+    "href": "Lectures/02.html#storage-delta-s",
+    "title": "Energy and Mass Balances",
+    "section": "Storage (\\(\\Delta S\\))",
+    "text": "Storage (\\(\\Delta S\\))\nStorage is a catch all term that can include many different components deponing on the context.\n\nPhotosynthesis is a good example when dealing with vegetated surfaces. On a sunny day, a portion of the \\(R_n\\) is converted to chemical potential energy and stored in the ecosystem for later use.\n\nThis can give the appearance of an imbalance in the energy budget if photosynthesis is not monitored.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "Lectures/02.html#take-home-points",
+    "href": "Lectures/02.html#take-home-points",
+    "title": "Energy and Mass Balances",
+    "section": "Take home points",
+    "text": "Take home points\n\n\n\nWe discussed the conservation of energy and mass as a powerful principle to describe exchange in the atmosphere.\nTransfer of mass and energy (heat and radiant energy) can be quantified using flux densities, where transfer is normalized per unit area and unit time.\nWe introduced the surface energy balance for an ideal surface.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Energy and Mass Balances"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Syllabus",
+    "section": "",
+    "text": "GEOS 300: 2023 W2\nwith Dr. June skeeter\nThe course syllabus is intended to give an overview of what you can expect over the term and outline the course policies. It is a living document and may be updated as the semester progresses.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#your-instructor",
+    "href": "index.html#your-instructor",
+    "title": "Syllabus",
+    "section": "Your Instructor",
+    "text": "Your Instructor\nDr. June skeeter\n\n\n\n\nPronouns: They/Them/Theirs\nEmail: june.skeeter@ubc.ca\nOffice Hours: Mondays 11:00-11:45 Room 127, Geography Bldg. Alternative times available by appointment.\nBio: My name is June. I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015. I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group. I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth’s climate system. My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#your-ta",
+    "href": "index.html#your-ta",
+    "title": "Syllabus",
+    "section": "Your TA",
+    "text": "Your TA\nZoe\n\n\n\n\n\n\nPronouns: She/Her/Hers\nEmail: hehanzha@student.ubc.ca\nOffice: Geography room 207\nBio: I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#learning-outcomes",
+    "href": "index.html#learning-outcomes",
+    "title": "Syllabus",
+    "section": "Learning Outcomes",
+    "text": "Learning Outcomes\n\nUnderstand the physical and biological processes that determine the microclimate of a surface.\nExplain how microclimates vary in time & space (vertically and horizontally).\nDescribe important surface characteristics that affect surface radiation and energy budget and surface microclimates.\nDescribe interactions between the biosphere and the atmosphere, and understand how surface-atmosphere feedbacks respond to environmental change.\nUnderstand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.\nKnow the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today’s monitoring and modelling of weather and climate in the atmospheric boundary layer.\nAnalyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.\nProvide examples how the principles of biometeorology have practical application to society.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#evaluation",
+    "href": "index.html#evaluation",
+    "title": "Syllabus",
+    "section": "Evaluation",
+    "text": "Evaluation\n\n\n\n\nTable 1: Components of your final grade\n\n\n\n\n\n\nPoints Distribution\nPercent of Final Grade\n\n\n\n\nLecture Participation\n5%\n\n\nStudy Questions\n5%\n\n\nAssignments\n40%\n\n\nMid-term exam\n20%\n\n\nFinal exam\n30%",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#lectures",
+    "href": "index.html#lectures",
+    "title": "Syllabus",
+    "section": "Lectures",
+    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\n\nParticipation\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#assignments",
+    "href": "index.html#assignments",
+    "title": "Syllabus",
+    "section": "Assignments",
+    "text": "Assignments\nAssignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.\n\nAll assignments are required to be labelled with course number, student number, student name and assignment number.\nAssignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.\n\nLate assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned\n\nCollaboration is encouraged. However, you should think about the problems yourself before discussing them with others.\n\nWrite-ups must be done independently.\nIt is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#examinations",
+    "href": "index.html#examinations",
+    "title": "Syllabus",
+    "section": "Examinations",
+    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and will be written in-person. The midterm will be Wednesday on March 13th. The final exam will be completed during the examination period. I will give further details closer to the date of the exams.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#participation-absences",
+    "href": "index.html#participation-absences",
+    "title": "Syllabus",
+    "section": "Participation & Absences",
+    "text": "Participation & Absences\nIf you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself. Lectures are recorded so you can catch up on the material you miss.\n\nParticipation points are only available during the lecture session. Makeup points will not be offered, but I will normalize participation grades to negate the effect of two absences.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#accommodations",
+    "href": "index.html#accommodations",
+    "title": "Syllabus",
+    "section": "Accommodations",
+    "text": "Accommodations\nPlease contact the Center for Accessibility if you require accommodations for a disability. Once you are registered please make me aware of any necessary accommodations by email in a timely manner.\n\nIf you require an accommodation please contact me by email: june.skeeter@ubc.ca",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "index.html#academic-concessions",
+    "href": "index.html#academic-concessions",
+    "title": "Syllabus",
+    "section": "Academic Concessions",
+    "text": "Academic Concessions\nIf you experience extenuating circumstances that prevent you completing course work, you may be elidible for an Academic Concession.\n\nI can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e. before a due date).\nPlease email me promptly (june.skeeter@ubc.ca) so that we can work together to figure out an accommodation for your situation.\n\nYou are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating. However, you must to communicate any need for a concession in a timely manner. If you require multiple concessions I may refer you to Arts Advising.",
+    "crumbs": [
+      "Syllabus"
+    ]
+  },
+  {
+    "objectID": "acknowledgement.html",
+    "href": "acknowledgement.html",
+    "title": "Territorial Acknowledgement",
+    "section": "",
+    "text": "The University of British Columbia and the city of Vancouver are on the traditional, ancestral, and unceded territory of the Coast Salish Peoples. Specifically the UBC Vancouver campus is on xʷməθkʷəy̓əm (Musqueam) land.\n\nThere are nearly 200 First Nations spread through BC, and many more across the continent.\n\nIt is essential to recognize Indigenous territories and Indigenous sovereignty, especially within the context of geography courses.\nTo learn more about the Indigenous people, culture, and languages where you live and around the world, check out native-land.ca.\n\n\n\n\n\nMap Source\n\n\n\n\n\nWhy Do an Acknowledgement?\nA land acknowledgement is meant to convey a deep rooted cultural connection to the land and the historical and present day injustices and violence enacted on Indigenous communities through colonialism. For centuries, settler societies have perpetuated a genocide against Indigenous people across the globe. In many ways this genocide is still ongoing here in British Columbia and across Canada. There has been concerted effort by the government, religious organizations, and educational institutions to erase Indigenous culture and identity which as marginalized these communities in Canadian Society.\n\nAn acknowledgement is one small way to help with that, but it cannot be treated as a formality. It is a time to reflect and build understanding.\n\n\n\nWhat does it mean?\n\n\nTraditional and Ancestral Recognize by whom the lands were traditionally used and/or occupied and the cultures have been handed down from generation to generation. The area around UBC was used by many different people, including the xʷməθkʷəy̓əm, əl̓ilwətaɁɬ, and Skwxwú7mesh-ulh Nations. The map to the left shows the overlapping territories of these nations, along with others in the region.\nThese people are are part of a broader linguistic / cultural group of Coast Salish speaking people. The xʷməθkʷəy̓əm and əl̓ilwətaɁɬ speak dialects of Hul’q’umi’num’ / Halq’eméylem / hən̓q̓əmin̓əm̓ and the Skwxwú7mesh-ulh speak Sḵwx̱wú7mesh sníchim.\n\n\n\n\n\n\n\nUnceded: Refers to land that was not turned over to the government by a treaty or other agreement. Over 95% of the land in BC, and many lands elsewhere in the world were never ceded by treaty. Without treaties, these lands remain the sovereign territory of the First Nations that call them home. Yet at the same time, the lands have been claimed by Canada and these First Nations living on these lands lack a framework to express their sovereignty. This by no means absolves the Canadian government of their crimes where lands were “ceded” by treaty. Treaties were more frequently reached by coercion than negotiation. The RCMP was created specifically to force indigenous people off their lands by any means necessary.",
+    "crumbs": [
+      "Syllabus",
+      "Territorial Acknowledgement"
+    ]
+  },
+  {
+    "objectID": "Assignments/index.html",
+    "href": "Assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-19\n2024-02-09\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "crumbs": [
+      "Assignments"
+    ]
+  },
+  {
     "objectID": "Lectures/01.html#learning-objectives",
     "href": "Lectures/01.html#learning-objectives",
     "title": "What is Micrometeorology?",
@@ -474,142 +989,11 @@
     ]
   },
   {
-    "objectID": "Assignments/index.html",
-    "href": "Assignments/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-19\n2024-02-09\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
-    "crumbs": [
-      "Assignments"
-    ]
-  },
-  {
-    "objectID": "acknowledgement.html",
-    "href": "acknowledgement.html",
-    "title": "Territorial Acknowledgement",
-    "section": "",
-    "text": "The University of British Columbia and the city of Vancouver are on the traditional, ancestral, and unceded territory of the Coast Salish Peoples. Specifically the UBC Vancouver campus is on xʷməθkʷəy̓əm (Musqueam) land.\n\nThere are nearly 200 First Nations spread through BC, and many more across the continent.\n\nIt is essential to recognize Indigenous territories and Indigenous sovereignty, especially within the context of geography courses.\nTo learn more about the Indigenous people, culture, and languages where you live and around the world, check out native-land.ca.\n\n\n\n\n\nMap Source\n\n\n\n\n\nWhy Do an Acknowledgement?\nA land acknowledgement is meant to convey a deep rooted cultural connection to the land and the historical and present day injustices and violence enacted on Indigenous communities through colonialism. For centuries, settler societies have perpetuated a genocide against Indigenous people across the globe. In many ways this genocide is still ongoing here in British Columbia and across Canada. There has been concerted effort by the government, religious organizations, and educational institutions to erase Indigenous culture and identity which as marginalized these communities in Canadian Society.\n\nAn acknowledgement is one small way to help with that, but it cannot be treated as a formality. It is a time to reflect and build understanding.\n\n\n\nWhat does it mean?\n\n\nTraditional and Ancestral Recognize by whom the lands were traditionally used and/or occupied and the cultures have been handed down from generation to generation. The area around UBC was used by many different people, including the xʷməθkʷəy̓əm, əl̓ilwətaɁɬ, and Skwxwú7mesh-ulh Nations. The map to the left shows the overlapping territories of these nations, along with others in the region.\nThese people are are part of a broader linguistic / cultural group of Coast Salish speaking people. The xʷməθkʷəy̓əm and əl̓ilwətaɁɬ speak dialects of Hul’q’umi’num’ / Halq’eméylem / hən̓q̓əmin̓əm̓ and the Skwxwú7mesh-ulh speak Sḵwx̱wú7mesh sníchim.\n\n\n\n\n\n\n\nUnceded: Refers to land that was not turned over to the government by a treaty or other agreement. Over 95% of the land in BC, and many lands elsewhere in the world were never ceded by treaty. Without treaties, these lands remain the sovereign territory of the First Nations that call them home. Yet at the same time, the lands have been claimed by Canada and these First Nations living on these lands lack a framework to express their sovereignty. This by no means absolves the Canadian government of their crimes where lands were “ceded” by treaty. Treaties were more frequently reached by coercion than negotiation. The RCMP was created specifically to force indigenous people off their lands by any means necessary.",
-    "crumbs": [
-      "Syllabus",
-      "Territorial Acknowledgement"
-    ]
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Syllabus",
-    "section": "",
-    "text": "GEOS 300: 2023 W2\nwith Dr. June skeeter\nThe course syllabus is intended to give an overview of what you can expect over the term and outline the course policies. It is a living document and may be updated as the semester progresses.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#your-instructor",
-    "href": "index.html#your-instructor",
-    "title": "Syllabus",
-    "section": "Your Instructor",
-    "text": "Your Instructor\nDr. June skeeter\n\n\n\n\nPronouns: They/Them/Theirs\nEmail: june.skeeter@ubc.ca\nOffice Hours: Mondays 11:00-11:45 Room 127, Geography Bldg. Alternative times available by appointment.\nBio: My name is June. I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015. I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group. I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth’s climate system. My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#your-ta",
-    "href": "index.html#your-ta",
-    "title": "Syllabus",
-    "section": "Your TA",
-    "text": "Your TA\nZoe\n\n\n\n\n\n\nPronouns: She/Her/Hers\nEmail: hehanzha@student.ubc.ca\nOffice: Geography room 207\nBio: I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#learning-outcomes",
-    "href": "index.html#learning-outcomes",
-    "title": "Syllabus",
-    "section": "Learning Outcomes",
-    "text": "Learning Outcomes\n\nUnderstand the physical and biological processes that determine the microclimate of a surface.\nExplain how microclimates vary in time & space (vertically and horizontally).\nDescribe important surface characteristics that affect surface radiation and energy budget and surface microclimates.\nDescribe interactions between the biosphere and the atmosphere, and understand how surface-atmosphere feedbacks respond to environmental change.\nUnderstand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.\nKnow the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today’s monitoring and modelling of weather and climate in the atmospheric boundary layer.\nAnalyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.\nProvide examples how the principles of biometeorology have practical application to society.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#evaluation",
-    "href": "index.html#evaluation",
-    "title": "Syllabus",
-    "section": "Evaluation",
-    "text": "Evaluation\n\n\n\n\nTable 1: Components of your final grade\n\n\n\n\n\n\nPoints Distribution\nPercent of Final Grade\n\n\n\n\nLecture Participation\n5%\n\n\nStudy Questions\n5%\n\n\nAssignments\n40%\n\n\nMid-term exam\n20%\n\n\nFinal exam\n30%",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#lectures",
-    "href": "index.html#lectures",
-    "title": "Syllabus",
-    "section": "Lectures",
-    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\n\nParticipation\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#assignments",
-    "href": "index.html#assignments",
-    "title": "Syllabus",
-    "section": "Assignments",
-    "text": "Assignments\nAssignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.\n\nAll assignments are required to be labelled with course number, student number, student name and assignment number.\nAssignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.\n\nLate assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned\n\nCollaboration is encouraged. However, you should think about the problems yourself before discussing them with others.\n\nWrite-ups must be done independently.\nIt is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#examinations",
-    "href": "index.html#examinations",
-    "title": "Syllabus",
-    "section": "Examinations",
-    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and will be written in-person. The midterm will be Wednesday on March 13th. The final exam will be completed during the examination period. I will give further details closer to the date of the exams.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#participation-absences",
-    "href": "index.html#participation-absences",
-    "title": "Syllabus",
-    "section": "Participation & Absences",
-    "text": "Participation & Absences\nIf you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself. Lectures are recorded so you can catch up on the material you miss.\n\nParticipation points are only available during the lecture session. Makeup points will not be offered, but I will normalize participation grades to negate the effect of two absences.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#accommodations",
-    "href": "index.html#accommodations",
-    "title": "Syllabus",
-    "section": "Accommodations",
-    "text": "Accommodations\nPlease contact the Center for Accessibility if you require accommodations for a disability. Once you are registered please make me aware of any necessary accommodations by email in a timely manner.\n\nIf you require an accommodation please contact me by email: june.skeeter@ubc.ca",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
-    "objectID": "index.html#academic-concessions",
-    "href": "index.html#academic-concessions",
-    "title": "Syllabus",
-    "section": "Academic Concessions",
-    "text": "Academic Concessions\nIf you experience extenuating circumstances that prevent you completing course work, you may be elidible for an Academic Concession.\n\nI can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e. before a due date).\nPlease email me promptly (june.skeeter@ubc.ca) so that we can work together to figure out an accommodation for your situation.\n\nYou are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating. However, you must to communicate any need for a concession in a timely manner. If you require multiple concessions I may refer you to Arts Advising.",
-    "crumbs": [
-      "Syllabus"
-    ]
-  },
-  {
     "objectID": "Lectures/index.html",
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\n\n\n\nTopic\nSuggested Reading\n\n\nDate\n\n\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section [3.1](https://www.openg...\n\n\n2024-01-15\n\n\n\n\n2024-01-17\n\n\n\n\n2024-01-22\n\n\n\n\n2024-01-24\n\n\n\n\n2024-01-29\n\n\n\n\n2024-01-31\n\n\n\n\n2024-02-05\n\n\n\n\n2024-02-07\n\n\n\n\n2024-02-12\n\n\n\n\n2024-02-14\n\n\n\n\n2024-02-19\n\n\n\n\n2024-02-21\n\n\n\n\n2024-02-26\n\n\n\n\n2024-02-28\n\n\n\n\n2024-03-04\n\n\n\n\n2024-03-06\n\n\n\n\n2024-03-11\n\n\n\n\n2024-03-13\n\n\n\n\n2024-03-18\n\n\n\n\n2024-03-20\n\n\n\n\n2024-03-25\n\n\n\n\n2024-03-27\n\n\n\n\n2024-04-01\n\n\n\n\n2024-04-03\n\n\n\n\n2024-04-08\n\n\n\n\n2024-04-10",
+    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-22\n\n\n\n\n\n2024-01-24\n\n\n\n\n\n2024-01-29\n\n\n\n\n\n2024-01-31\n\n\n\n\n\n2024-02-05\n\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\n\n\n\n\n\n2024-02-21\n\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\n\n\n\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
@@ -620,7 +1004,7 @@
     "href": "Study_Questions/01.html",
     "title": "Study Question Set 01",
     "section": "",
-    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
+    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \\(\\rm{g} \\rm{m}^{-3} \\rm{s}^{-1}\\)\n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
     "crumbs": [
       "Study Questions",
       "Study Question Set 01"

@@ -16,7 +16,7 @@ where $\rho_v$ is vapor density (same as absolute humidity). For the purpose of 
 
 ::: {.callout-tip collapse="true"}
 
-The term $\frac{\partial \rho_v}{\partial t}$ describes the change in absolute humidity $\partial \rho_v$ in time $\partial t$ and as such is the **change in storage** within the `volume'. Its unit is partial density of water vapor ($\rm{g}\,\rm{m}^{-3}$) divided by time (in $\rm{s}$), i.e. \rm{g}\,\rm{m}^{-3}\,\rm{s}^{-1}
+The term $\frac{\partial \rho_v}{\partial t}$ describes the change in absolute humidity $\partial \rho_v$ in time $\partial t$ and as such is the **change in storage** within the `volume'. Its unit is partial density of water vapor ($\rm{g}\,\rm{m}^{-3}$) divided by time (in $\rm{s}$), i.e. $\rm{g} \rm{m}^{-3} \rm{s}^{-1}$
 
 :::
 

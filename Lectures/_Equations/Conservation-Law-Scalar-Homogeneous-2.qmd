@@ -1,0 +1,4 @@
+
+$$
+\frac{dc}{dt} = \frac{\partial c}{\partial t} \color{white}{+ u \frac{\partial c}{\partial x} + v \frac{\partial c}{\partial y}} + w \frac{\partial c}{\partial z} 
+$${#eq-Conservation-Law-Scalar-Homogeneous-2}
