@@ -10,47 +10,25 @@
     ]
   },
   {
-    "objectID": "Resources.html",
-    "href": "Resources.html",
-    "title": "Programming Resources",
+    "objectID": "Study_Questions/01.html",
+    "href": "Study_Questions/01.html",
+    "title": "Study Question Set 01",
     "section": "",
-    "text": "In this course, I will rely heavily on examples that incorporate scientific programming. Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts. Programming will also be helpful when completing your assignments. However, programming experience is not a prerequisite for this course.",
+    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \\(\\rm{g} \\rm{m}^{-3} \\rm{s}^{-1}\\)\n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
     "crumbs": [
-      "Syllabus",
-      "Programming Resources"
+      "Study Questions",
+      "Study Question Set 01"
     ]
   },
   {
-    "objectID": "Resources.html#python",
-    "href": "Resources.html#python",
-    "title": "Programming Resources",
-    "section": "Python",
-    "text": "Python\nPython is my personal preference. I like python because its very flexible, general-purpose programming language that is fairly easy to read / write. It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free! If you want to install Python on your own computer and don’t know where to start, I suggest you go with Anaconda. Its a scientific programming platform that will install python for you along with most of the commonly used extensions.",
+    "objectID": "Lectures/index.html",
+    "href": "Lectures/index.html",
+    "title": "Lecture Slides",
+    "section": "",
+    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-22\n\n\n\n\n\n2024-01-24\n\n\n\n\n\n2024-01-29\n\n\n\n\n\n2024-01-31\n\n\n\n\n\n2024-02-05\n\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\n\n\n\n\n\n2024-02-21\n\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\n\n\n\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10",
     "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#r",
-    "href": "Resources.html#r",
-    "title": "Programming Resources",
-    "section": "R",
-    "text": "R\nR is also a great option. It is a programming language that was developed specifically for statistical computing and graphics. This means its not a flexible as a langue like Python, but also that it can be a bit easier to use “out of the box” for specific applications, like data visualization. Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax. One advantage R has over python, is that its a bit easier to install. All you need to do to get setup is to install R and RStudio.",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#online-access",
-    "href": "Resources.html#online-access",
-    "title": "Programming Resources",
-    "section": "Online Access",
-    "text": "Online Access\nUBC also provides students with free server space that you can use at https://ubc.syzygy.ca/. This isn’t necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations. However, it already comes with both Python and R installed, and will probably be sufficient for most things we’ll do in this course. So you can use it to try things out without installing anything on your own computer.",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
+      "Lectures",
+      "Lecture Slides"
     ]
   },
   {
@@ -548,6 +526,17 @@
     ]
   },
   {
+    "objectID": "Assignments/01_R.html",
+    "href": "Assignments/01_R.html",
+    "title": "Assignment 1 R",
+    "section": "",
+    "text": "The code below will handle downloading and parsing your data for you, but if you are electing to complete the lab in excel or by hand, you can find the data here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nIn your virtual field visit you will see the radiation measurement site at Totem Field and discuss the way the instruments are deployed over the grass. You will use data from this site for your first assignment.\nUsing the link below you will be provided with data from a single day (the actual day is selected based on your student number, as shown on the webpage). Data are available for download in various formats:\nIn the files you will find measurements of the following variables: incoming and reflected short-wave radiation (\\(SW_{\\downarrow}\\), \\(SW_{\\uparrow}\\)), incoming and outgoing long-wave radiation (\\(LW_{\\downarrow}\\), \\(LW_{\\uparrow}\\)), air temperature (\\(T_a\\)) and relative humidity (\\(RH\\)). All measurements are from the set-up on CA-DBB (aka. BB1) Eddy Covariance station in Burns Bog.\nInstructions: Please upload your answers including calculations, discussions and graphs in a single, well-structured report (either Word, PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’. Label the report document with your name, your student number, the course and year. Upload your answers to Canvas by . Do not attach a spreadsheet.\nMarks are indicated in square brackets. In total, there are 50 marks. This assignment is worth 10% of the final course grade and requires a substantial time commitment.\nImport the necessary packages. This code block below should (fingers crossed) check if you have packages installed and install them for you if not.\n\n#|echo: True\n\nlist.of.packages &lt;- c(\"ggplot2\", \"reshape2\",\"latex2exp\")\nnew.packages &lt;- list.of.packages[!(list.of.packages %in% installed.packages()[,\"Package\"])]\nif(length(new.packages)) install.packages(new.packages)\nlibrary(\"reshape2\")\nlibrary(\"ggplot2\")\nlibrary(\"latex2exp\")\n\n\nQuestion 1\nDownload and parse your data. If you are using excel or doing calculations by hand (see instructions above). Otherwise review the code block below. We downloading the .csv file containing climate data from the CA-DBB flux station and formatting it to suit our needs.\nUsing the “head” command, you can get a preview of the first part of your dataset. What value do you see listed for Incoming \\(SW\\) in the first row of the table and why does it have this value? Make suer to specify the units in your answer.\n\nCheck the metadata provided here to make sure you understand the variable names and units.\n\n\n#|echo: True\n\ndf &lt;- read.csv(file = 'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv')\ndf[['TIMESTAMP']] &lt;- as.POSIXct(df[['TIMESTAMP']],format = \"%Y-%m-%d %H%M\")\n\nhead(df)\n\n            TIMESTAMP SW_IN_1_1_1 LW_IN_1_1_1 SW_OUT_1_1_1 LW_OUT_1_1_1\n1 2022-01-01 00:30:00  0.05977540    263.2279    1.3582480     271.2144\n2 2022-01-01 01:00:00  0.01990683    265.9375    1.1015637     274.9786\n3 2022-01-01 01:30:00  0.10298067    268.3632    0.6146293     279.2283\n4 2022-01-01 02:00:00  0.02578117    273.8807    0.3941725     281.6006\n5 2022-01-01 02:30:00  0.03268367    277.7110    0.3813828     283.5396\n6 2022-01-01 03:00:00  0.03338333    277.2797    0.3865185     284.4536\n           H       G_1  TA_1_1_1  TA_1_2_1     TS_1     TS_2     TS_3 RH_1_1_1\n1 -29.676018 -5.586875 -7.762711 -9.570630 3.630083 4.214648 7.489783 83.28255\n2         NA -5.553178 -7.200051 -9.533210 3.677612 4.251830 7.531122 82.64555\n3         NA -5.575220 -6.349798 -7.833451 3.669683 4.264247 7.550878 79.34940\n4         NA -5.574099 -6.297862 -7.050872 3.692943 4.280375 7.569431 79.83266\n5         NA -5.562795 -6.020581 -6.729948 3.708760 4.293371 7.578785 79.85045\n6  -6.500002 -5.563889 -5.811514 -6.359775 3.698611 4.284091 7.576676 79.45928\n  P_1_1_1 PA_1_1_1  WS_1_1_1  WD_1_1_1 VPD_1_1_1\n1       0 102.3971 0.6597374 0.6597374 0.5728984\n2       0 102.4034 1.4010231 1.4010231 0.6211866\n3       0 102.4177 1.6921777 1.6921777 0.7891113\n4       0 102.4485 1.8559053 1.8559053 0.7737166\n5       0 102.4614 2.0136266 2.0136266 0.7896050\n6       0 102.4637 2.0015748 2.0015748 0.8178825\n\n\n\n\nQuestion 2\nIn the example below - we are plotting traces of the four radiation components for the January 2024 cold-snap and snowstorm (Jan 12 to Jan 19). Looking at the trace below - what stands out to you? Comment on each component over time. Do you see any issues in the data?\n\nStart ='2024-01-12 0000'\nEnd ='2024-01-19 2359'\n\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;=End)),]\n\n\ndf_to_plot &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n  \np &lt;- ggplot(df_to_plot, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  labs(y = TeX('Units^{superscript}^{subscript}'))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station\\nStudent #')\n# \np\n\n\n\n\n\n\n\n\n\n\nQuestion 3\nUsing the example above as a template, plot the 4 component radiation for your assigned day. Additionally, calculate \\(R_n\\) and plot it on your chart as a solid black line.\n\n# Insert your code here",
+    "crumbs": [
+      "Assignments",
+      "Assignment 1 R"
+    ]
+  },
+  {
     "objectID": "acknowledgement.html",
     "href": "acknowledgement.html",
     "title": "Territorial Acknowledgement",
@@ -559,11 +548,22 @@
     ]
   },
   {
+    "objectID": "Assignments/01_py.html",
+    "href": "Assignments/01_py.html",
+    "title": "Assignment 1 Py",
+    "section": "",
+    "text": "The code below will handle downloading and parsing your data for you, but if you are electing to complete the lab in excel or by hand, you can find the data here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nIn your virtual field visit you will see the radiation measurement site at Totem Field and discuss the way the instruments are deployed over the grass. You will use data from this site for your first assignment.\nUsing the link below you will be provided with data from a single day (the actual day is selected based on your student number, as shown on the webpage). Data are available for download in various formats:\nIn the files you will find measurements of the following variables: incoming and reflected short-wave radiation (\\(SW_{\\downarrow}\\), \\(SW_{\\uparrow}\\)), incoming and outgoing long-wave radiation (\\(LW_{\\downarrow}\\), \\(LW_{\\uparrow}\\)), air temperature (\\(T_a\\)) and relative humidity (\\(RH\\)). All measurements are from the set-up on CA-DBB (aka. BB1) Eddy Covariance station in Burns Bog.\nInstructions: Please upload your answers including calculations, discussions and graphs in a single, well-structured report (either Word, PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’. Label the report document with your name, your student number, the course and year. Upload your answers to Canvas by . Do not attach a spreadsheet.\nMarks are indicated in square brackets. In total, there are 50 marks. This assignment is worth 10% of the final course grade and requires a substantial time commitment.\nImport the necessary packages. This code block below should (fingers crossed) check if you have packages installed and install them for you if not.\n\nimport pip\n\ndef import_or_install(package):\n    try:\n        return(__import__(package))\n    except ImportError:\n        pip.main(['install', package.split('.')[0]])  \n        return(__import__(package))\n    \nnp = import_or_install('numpy')\npd = import_or_install('pandas')\ndt = import_or_install('datetime')\nplt = import_or_install('matplotlib').pyplot\n\n\nQuestion 1\nDownload and parse your data. If you are using excel or doing calculations by hand (see instructions above). Otherwise review the code block below. We downloading the .csv file containing climate data from the CA-DBB flux station and formatting it to suit our needs.\nUsing the “head” command, you can get a preview of the first part of your dataset. What value do you see listed for Incoming \\(SW\\) in the first row of the table and why does it have this value? Make suer to specify the units in your answer.\n\nCheck the metadata provided here to make sure you understand the variable names and units.\n\n\ndf = pd.read_csv(\"https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv\",\n            parse_dates=['TIMESTAMP'],\n            index_col=['TIMESTAMP']\n            )\n\ndf.head()\n\n\n\n\n\n\n\n\nSW_IN_1_1_1\nLW_IN_1_1_1\nSW_OUT_1_1_1\nLW_OUT_1_1_1\nH\nG_1\nTA_1_1_1\nTA_1_2_1\nTS_1\nTS_2\nTS_3\nRH_1_1_1\nP_1_1_1\nPA_1_1_1\nWS_1_1_1\nWD_1_1_1\nVPD_1_1_1\n\n\nTIMESTAMP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2022-01-01 00:30:00\n0.059775\n263.22790\n1.358248\n271.21440\n-29.676018\n-5.586875\n-7.762711\n-9.570630\n3.630083\n4.214648\n7.489783\n83.282550\n0.0\n102.397125\n0.659737\n0.659737\n0.572898\n\n\n2022-01-01 01:00:00\n0.019907\n265.93750\n1.101564\n274.97858\nNaN\n-5.553178\n-7.200051\n-9.533210\n3.677612\n4.251830\n7.531122\n82.645550\n0.0\n102.403420\n1.401023\n1.401023\n0.621187\n\n\n2022-01-01 01:30:00\n0.102981\n268.36322\n0.614629\n279.22833\nNaN\n-5.575220\n-6.349798\n-7.833451\n3.669683\n4.264247\n7.550878\n79.349396\n0.0\n102.417690\n1.692178\n1.692178\n0.789111\n\n\n2022-01-01 02:00:00\n0.025781\n273.88068\n0.394172\n281.60062\nNaN\n-5.574099\n-6.297862\n-7.050872\n3.692943\n4.280375\n7.569431\n79.832660\n0.0\n102.448500\n1.855905\n1.855905\n0.773717\n\n\n2022-01-01 02:30:00\n0.032684\n277.71097\n0.381383\n283.53964\nNaN\n-5.562795\n-6.020581\n-6.729948\n3.708760\n4.293371\n7.578785\n79.850450\n0.0\n102.461420\n2.013627\n2.013627\n0.789605\n\n\n\n\n\n\n\n\n\nQuestion 2\nIn the example below - we are plotting traces of the four radiation components for the January 2024 cold-snap and snowstorm (Jan 12 to Jan 19). Looking at the trace below - what stands out to you? Comment on each component over time. Do you see any issues in the data?\n\nStart ='2024-01-12 0000'\nEnd ='2024-01-19 2359'\n\nSelection = df.loc[(\n    (df.index&gt;=dt.datetime.strptime(Start, '%Y-%m-%d %H%M'))\n    &\n    (df.index&lt;=dt.datetime.strptime(End, '%Y-%m-%d %H%M'))\n    )]\n\nfig,ax=plt.subplots()\nSelection.plot(ax=ax,\n              y=['SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1'],\n              color=['red','red','blue','blue'],\n              style=['-','--','-','--'])\nax.legend(['SW In','SW Out','LW In','LW Out'],ncol=4)\nax.set_ylabel('Units^{superscript}^{subscript}')\nax.set_ylim([0,425])\nax.set_title('Radiative Fluxes at CA-DBB Flux Station\\nStudent #')\nax.grid()\nfig.autofmt_xdate()\n\nSelection['Albedo'] = Selection['SW_OUT_1_1_1']/Selection['SW_IN_1_1_1']\nSelection['Albedo'].describe()\n\nC:\\Users\\User\\AppData\\Local\\Temp\\ipykernel_31824\\292309252.py:22: SettingWithCopyWarning: \nA value is trying to be set on a copy of a slice from a DataFrame.\nTry using .loc[row_indexer,col_indexer] = value instead\n\nSee the caveats in the documentation: https://pandas.pydata.org/pandas-docs/stable/user_guide/indexing.html#returning-a-view-versus-a-copy\n  Selection['Albedo'] = Selection['SW_OUT_1_1_1']/Selection['SW_IN_1_1_1']\nC:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\pandas\\core\\nanops.py:1010: RuntimeWarning: invalid value encountered in subtract\n  sqr = _ensure_numeric((avg - values) ** 2)\nC:\\Users\\User\\AppData\\Local\\Programs\\Python\\Python311\\Lib\\site-packages\\numpy\\lib\\function_base.py:4655: RuntimeWarning: invalid value encountered in subtract\n  diff_b_a = subtract(b, a)\n\n\ncount    383.000000\nmean            inf\nstd             NaN\nmin        0.000000\n25%        0.621897\n50%       22.547919\n75%             NaN\nmax             inf\nName: Albedo, dtype: float64\n\n\n\n\n\n\n\n\n\n\n\nQuestion 3\nUsing the example above as a template, plot the 4 component radiation for your assigned day. Additionally, calculate \\(R_n\\) and plot it on your chart as a solid black line.\n\n# Insert your code here",
+    "crumbs": [
+      "Assignments",
+      "Assignment 1 Py"
+    ]
+  },
+  {
     "objectID": "Assignments/index.html",
     "href": "Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-19\n2024-02-09\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-24\n2024-02-14\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
     "crumbs": [
       "Assignments"
     ]
@@ -989,25 +989,418 @@
     ]
   },
   {
-    "objectID": "Lectures/index.html",
-    "href": "Lectures/index.html",
-    "title": "Lecture Slides",
-    "section": "",
-    "text": "Your lectures and any required readings will be posted here as they become available.\n\n\n\n\nTable 1: Lecture schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-22\n\n\n\n\n\n2024-01-24\n\n\n\n\n\n2024-01-29\n\n\n\n\n\n2024-01-31\n\n\n\n\n\n2024-02-05\n\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\n\n\n\n\n\n2024-02-21\n\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\n\n\n\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10",
+    "objectID": "Lectures/03.html#surface-energy-balance",
+    "href": "Lectures/03.html#surface-energy-balance",
+    "title": "Surface Energy Balance",
+    "section": "Surface Energy Balance",
+    "text": "Surface Energy Balance",
     "crumbs": [
       "Lectures",
-      "Lecture Slides"
+      "Lecture Slides",
+      "Surface Energy Balance"
     ]
   },
   {
-    "objectID": "Study_Questions/01.html",
-    "href": "Study_Questions/01.html",
-    "title": "Study Question Set 01",
+    "objectID": "Lectures/03.html#todays-learning-objectives",
+    "href": "Lectures/03.html#todays-learning-objectives",
+    "title": "Surface Energy Balance",
+    "section": "Today’s learning objectives",
+    "text": "Today’s learning objectives\n\nDefine the energy balance equation for an ideal surface.\nDescribe how energy fluxes vary between daytime and nighttime.\nDefine the Bowen ratio.\nExplain when can we reduce a 3D land-atmosphere interface to 1D.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#why-are-we-interested-in-the-surface",
+    "href": "Lectures/03.html#why-are-we-interested-in-the-surface",
+    "title": "Surface Energy Balance",
+    "section": "Why are we interested in the ‘surface’?",
+    "text": "Why are we interested in the ‘surface’?\n\nUltimate goal: Predicting and managing surface-atmosphere interactions.\nQuantifying the impact of one system on another one.\nUnderstanding a system’s interior dynamics (black box).\nBoundary condition:\n\nLower boundary condition for the ABL\nUpper boundary for soil climates\nOuter boundary for organisms and buildings\n\n\n\nBoundary conditions apply constraints on solutions to equations that are motivated by the physical problem being considered. Both ordinary and partial differential equations need boundary conditions to be solved.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#types-of-surface-atmosphere-interfaces",
+    "href": "Lectures/03.html#types-of-surface-atmosphere-interfaces",
+    "title": "Surface Energy Balance",
+    "section": "Types of Surface-Atmosphere Interfaces",
+    "text": "Types of Surface-Atmosphere Interfaces\n\nSimple, homogenous bare soil/rock surface",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#types-of-surface-atmosphere-interfaces-1",
+    "href": "Lectures/03.html#types-of-surface-atmosphere-interfaces-1",
+    "title": "Surface Energy Balance",
+    "section": "Types of Surface-Atmosphere Interfaces",
+    "text": "Types of Surface-Atmosphere Interfaces\n\nComplex, vegetated surface (e.g., a forest canopy)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#types-of-surface-atmosphere-interfaces-2",
+    "href": "Lectures/03.html#types-of-surface-atmosphere-interfaces-2",
+    "title": "Surface Energy Balance",
+    "section": "Types of Surface-Atmosphere Interfaces",
+    "text": "Types of Surface-Atmosphere Interfaces\n\n“Two-dimensional”, semi-transparent surface (e.g., a leaf)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#types-of-surface-atmosphere-interfaces-3",
+    "href": "Lectures/03.html#types-of-surface-atmosphere-interfaces-3",
+    "title": "Surface Energy Balance",
+    "section": "Types of Surface-Atmosphere Interfaces",
+    "text": "Types of Surface-Atmosphere Interfaces\n\nThree-dimensional volume (e.g., an animal)\nFlat land-atmosphere (solid-fluid) interface with no mass. Example: Bare soil. Three-dimensional land-atmosphere interface with mass within the interface (air, vegetation, …). Example: Forest. Flat two-dimensional object without mass (solid) within a fluid (atmosphere or water). Example: Leaf. A three dimensional volume with mass surrounded by the fluid (atmosphere or water). Example: Animal.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#energy-fluxes-at-earths-surface",
+    "href": "Lectures/03.html#energy-fluxes-at-earths-surface",
+    "title": "Surface Energy Balance",
+    "section": "Energy Fluxes at Earth’s Surface",
+    "text": "Energy Fluxes at Earth’s Surface\n\n\n\n‘Ideal’ surface considered here is smooth, horizontal, homogeneous, extensive, and opaque to radiation.\nOnly vertical fluxes need to be considered.\nThe storage term is dropped \\(\\Delta S=0\\)\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(1)\\]\n\n\n\n\nThe net radiative flux is a result of the radiation balance at the surface, which will be discussed in more detail in a few lectures. Daytime dominated by the solar radiation (toward the surface), at night the net radiation is much weaker & away from the surface. The surface warms up during the daytime, while it cools during the evening and night hours. Sensible (direct) heat flux - arises as a result of the difference in the temperatures of the surface and the air above. &gt; few millimeters (the thickness of the molecular sublayer), the primary mode of heat exchange becomes advection or convection involving air motions. Thus, the heat flux is down the average temperature gradient. latent heat or water vapor flux is a result of evaporation, evapotranspiration, or condensation at the surface. Nevertheless, evaporation results in some cooling of the surface, which in the surface energy budget is represented by the latent heat flux from the surface to the air above. heat exchange through the ground medium is primarily due to conduction if the medium is soil, rock, or concrete. Through water, however, heat is transferred first by conduction in the top few millimeters (molecular sublayer) from the surface and then by advection or convection in the deeper layers (surface layer, mixed layer, etc.) of water in motion. The depth of the submedium, which responds to and is affected by changes in the energy fluxes at the surface on a diurnal basis, is typically less than a meter for land surfaces and several tens of meters for lakes and oceans.\nThis equation describes how the net radiation at the surface must be balanced by a combination of the sensible and latent heat fluxes to the air and the heat flux to the subsurface medium.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#sign-convention",
+    "href": "Lectures/03.html#sign-convention",
+    "title": "Surface Energy Balance",
+    "section": "Sign Convention",
+    "text": "Sign Convention\n\n\n\nAll the radiative fluxes directed toward the surface are positive.\nNon-radiative energy fluxes directed away from the surface are positive.\n\nEach component is on an interval scale\n\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(2)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#sign-convention-iclicker",
+    "href": "Lectures/03.html#sign-convention-iclicker",
+    "title": "Surface Energy Balance",
+    "section": "Sign Convention (iClicker)",
+    "text": "Sign Convention (iClicker)\nWhich component(s) of the energy balance can take negative values?\n\n\n\nNet-Radiation\nSensible & Latent Heat Flux\nGround Heat Flux\nAll of the above\nNone of the above",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#daytime",
+    "href": "Lectures/03.html#daytime",
+    "title": "Surface Energy Balance",
+    "section": "Daytime",
+    "text": "Daytime\n\n\n\nTypically:\n\n\\(R_n\\) &gt; 0\n\\(H\\), \\(LE\\), and \\(G\\) &gt; 0\n\nThere are plenty of exceptions\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(3)\\]\n\n\n\n\nDuring the daytime, the surface receives radiative energy (Q*&gt; 0), which is partitioned into sensible and latent heat fluxes to the atmosphere and the heat flux to the submedium. Typically, QH, QE, and QG are all positive over land surfaces during the day.\nActual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#nighttime",
+    "href": "Lectures/03.html#nighttime",
+    "title": "Surface Energy Balance",
+    "section": "Nighttime",
+    "text": "Nighttime\n\n\n\nTypically:\n\n\\(R_n\\) &lt; 0\n\\(H\\), \\(LE\\), and \\(G\\) &lt; 0\n\nThere are plenty of exceptions\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(4)\\]\n\n\n\n\nAt night, the surface loses energy by outgoing radiation, especially during clear or partially overcast conditions. This loss is compensated by gains of heat from air and soil media and, at times, from the latent heat of condensation released during the process of dew formation. All the terms of the surface energy balance for land surfaces are usually negative during the evening and nighttime periods. Their magnitudes are generally much smaller than the magnitudes of the daytime fluxes, except for QG. The magnitudes of QG do not differ widely between day and night, although the direction or sign obviously reverses. One can interpret the EB equation in terms of the partitioning of net radiation into other fluxes. The net radiation may be considered an external forcing, while the sensible, latent and ground heat fluxes are responses to this radiative forcing.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#bowen-ratio",
+    "href": "Lectures/03.html#bowen-ratio",
+    "title": "Surface Energy Balance",
+    "section": "Bowen Ratio",
+    "text": "Bowen Ratio\n\n\nThe Bowen Ratio (\\(B\\)) is used to express the partitioning of net radiation at a surface.\n\\[\nB = \\frac{H}{LE}\n\\qquad(5)\\]\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(6)\\]\n\n\n\n\nThe Bowen Ratio (B) is used to express the partitioning of net radiation at a surface. B&lt;&lt;1 for lakes, rice paddies, well irrigated fields; whereas the B is much larger for dry surfaces (Desert, Urban)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#bowen-ratio-iclicker",
+    "href": "Lectures/03.html#bowen-ratio-iclicker",
+    "title": "Surface Energy Balance",
+    "section": "Bowen Ratio (iClicker)",
+    "text": "Bowen Ratio (iClicker)\nOn a hot sunny day, which surface would you expect to have the largest Bowen Ratio?\n\n\n\nThe Ocean\nIce Sheet\nA Wheat Field\nA Pine Forest\nDesert Sand\n\n\n\\[\nB = \\frac{H}{LE}\n\\qquad(7)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#bowen-ratio-method",
+    "href": "Lectures/03.html#bowen-ratio-method",
+    "title": "Surface Energy Balance",
+    "section": "Bowen Ratio Method",
+    "text": "Bowen Ratio Method\n\n\n\\[\nB = \\frac{H}{LE}\n\\qquad(8)\\]\n\\[\nLE = \\frac{R_n-G}{1+B}\n\\qquad(9)\\]\n\\[\nH = \\frac{R_n-G}{1+B^{-1}}\n\\qquad(10)\\]\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\qquad(11)\\]\n\n\n\n\nThe simple relationship between the ground heat flux and net radiation allows for the sum of the sensible and latent heat fluxes to be easily determined from the measurement or calculation of net radiation. Further separation of the total heat flux into sensible and latent components can be made if the Bowen ratio, can be estimated independently (e.g., using the Bowen ratio method to be discussed later). B = measure vertical heat and vapor gradients",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#bowen-ratio-method-1",
+    "href": "Lectures/03.html#bowen-ratio-method-1",
+    "title": "Surface Energy Balance",
+    "section": "Bowen Ratio Method",
+    "text": "Bowen Ratio Method\nAssuming \\(B= 5.0\\) with daytime \\(R_n = 250 \\rm{W m^{-2}}\\) & \\(B = 75 \\rm{W m^{-2}}\\), estimate \\(\\rm{LE}\\) & \\(\\rm{H}\\).\n\ndef Bowen_Method(B,R_n,G):\n  H = (R_n-G)/(1+B**-1)\n  LE = (R_n-G)/(1+B)\n  return(H,LE)\n\nH,LE=Bowen_Method(5.0,250.0,75.0)\n\nprint(f'H = {H:.2f} & LE {LE:.2f} W m^-2')\n\nH = 145.83 & LE 29.17 W m^-2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#bowen-ratio-method-2",
+    "href": "Lectures/03.html#bowen-ratio-method-2",
+    "title": "Surface Energy Balance",
+    "section": "Bowen Ratio Method",
+    "text": "Bowen Ratio Method\nAssuming \\(B= 4.0\\) with daytime \\(R_n = -55 \\rm{W m^{-2}}\\) & \\(B = -25 \\rm{W m^{-2}}\\), estimate \\(\\rm{LE}\\) & \\(\\rm{H}\\).\n\nBowen_Method&lt;- function(B,R_n,G){\n  H = (R_n-G)/(1+B**-1)\n  LE = (R_n-G)/(1+B)\n  return(c(H,LE))\n}\n\nout=Bowen_Method(4.0,-55.0,-25.0)\n\nsprintf('H = {%.2f} & LE {%.2f} W m^-2',out[1],out[2])\n\n[1] \"H = {-24.00} & LE {-6.00} W m^-2\"",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#when-the-method-fails",
+    "href": "Lectures/03.html#when-the-method-fails",
+    "title": "Surface Energy Balance",
+    "section": "When The Method Fails",
+    "text": "When The Method Fails\n\n\nThis method relies on the assumption of Homogeneity.\n\nRough or irregular surfaces violate that assumption.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#when-the-method-fails-1",
+    "href": "Lectures/03.html#when-the-method-fails-1",
+    "title": "Surface Energy Balance",
+    "section": "When The Method Fails",
+    "text": "When The Method Fails\n\n\nThis method relies on the assumption of Homogeneity.\n\nRough or irregular surfaces violate that assumption.\n\n\n\n\n\nPhoto: A. Christen",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#adding-a-storage-term",
+    "href": "Lectures/03.html#adding-a-storage-term",
+    "title": "Surface Energy Balance",
+    "section": "Adding A Storage Term",
+    "text": "Adding A Storage Term\n\n\nWhen dealing with more complex, 3D volumes:\n\nWe need to account for the storage\nEnergy can be stored above and below the surface\n\n\n\n\n\n\n-More realistic to consider a volume.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#adding-a-storage-term-1",
+    "href": "Lectures/03.html#adding-a-storage-term-1",
+    "title": "Surface Energy Balance",
+    "section": "Adding A Storage Term",
+    "text": "Adding A Storage Term\n\n\n\nNet chemical energy & sensible heat storage in biomass\nNet sensible & latent heat storage in canopy air\nNet sensible heat storage in structures\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\qquad(12)\\]\n\n\n\n\n-More realistic to consider a volume.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#real-world-examples-fallow-rice-field",
+    "href": "Lectures/03.html#real-world-examples-fallow-rice-field",
+    "title": "Surface Energy Balance",
+    "section": "Real world examples: Fallow rice field",
+    "text": "Real world examples: Fallow rice field",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#real-world-examples-freshwater-marsh",
+    "href": "Lectures/03.html#real-world-examples-freshwater-marsh",
+    "title": "Surface Energy Balance",
+    "section": "Real world examples: Freshwater marsh",
+    "text": "Real world examples: Freshwater marsh\n\n\n\n\n\n\n\n\nWetting of the subsurface soil by precipitation or artificial irrigation can dramatically alter the surface energy balance, as well as the microclimate near the surface. The latent heat flux becomes an important or even dominant component of the surface energy balance, while the sensible heat flux to air is considerably reduced. The latter may even become negative during early periods of irrigation, particularly for small areas, due to advective effects. This is called the ‘oasis effect’ because it is similar to that of warm dry air blowing over a cool moist oasis. There is strong evaporation from the moist surface, resulting in cooling of the surface (due to latent heat transfer). The surface cooling causes a downward sensible heat flux from the warm air to the cool ground. Thus, QE is positive, while QH becomes negative, although much smaller in magnitude.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#real-world-examples-deciduous-shrub-wetland",
+    "href": "Lectures/03.html#real-world-examples-deciduous-shrub-wetland",
+    "title": "Surface Energy Balance",
+    "section": "Real world examples: Deciduous shrub wetland",
+    "text": "Real world examples: Deciduous shrub wetland",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#magnitudes-highly-variable",
+    "href": "Lectures/03.html#magnitudes-highly-variable",
+    "title": "Surface Energy Balance",
+    "section": "Magnitudes Highly Variable",
+    "text": "Magnitudes Highly Variable\n\n\n\n\n\nFreshwater Marsh (California)\n\n\n\n\n\n\nShrub Wetland (Wisconsin)\n\n\n\n\n\nActual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#magnitudes-highly-variable-1",
+    "href": "Lectures/03.html#magnitudes-highly-variable-1",
+    "title": "Surface Energy Balance",
+    "section": "Magnitudes Highly Variable",
+    "text": "Magnitudes Highly Variable\n\n\n\n\n\nShrub Wetland (Spring)\n\n\n\n\n\n\nShrub Wetland (Summer)\n\n\n\n\n\nActual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#energy-balance-of-a-leaf",
+    "href": "Lectures/03.html#energy-balance-of-a-leaf",
+    "title": "Surface Energy Balance",
+    "section": "Energy Balance of a Leaf",
+    "text": "Energy Balance of a Leaf\n\n\n\nA surface within a single medium (e.g. a leaf surrounded by air).\nNo third dimension, so heat storage is neglected.\nEnergy flux densities on both sides have to be taken into account.\nOrientation of the surface is important for exchange processes (radiation).\nStorage of chemical energy",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#energy-balance-of-a-3d-object",
+    "href": "Lectures/03.html#energy-balance-of-a-3d-object",
+    "title": "Surface Energy Balance",
+    "section": "Energy Balance of a 3D Object",
+    "text": "Energy Balance of a 3D Object\n\n\nUsually an organism or object (animal, person, building) surrounded by air.\n\nHeat and mass storage in the interface has to be taken into account. In living organisms the metabolic heat plays a role. In some cases, anthropogenic heat (e.g. combustion processes) might be important.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#applications",
+    "href": "Lectures/03.html#applications",
+    "title": "Surface Energy Balance",
+    "section": "Applications",
+    "text": "Applications\n\n\n\nThe energy budget over terrestrial surfaces is a key determinant of the land surface climate and governs a variety of physical, chemical and biological surface processes.\nEstimation of the rate of evaporation from bare ground and water surfaces and evapotranspiration from vegetative surfaces.\nPrediction of surface temperature.\n\n\n\n\n\nWang et al. 2015\n\n\n\n\n\nThe following list includes some of the applications of energy balance at or near the earth’s surface.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/03.html#take-home-points",
+    "href": "Lectures/03.html#take-home-points",
+    "title": "Surface Energy Balance",
+    "section": "Take home points",
+    "text": "Take home points\n\n\n\nLand-atmosphere interfaces are complex boundaries, with significant energy and mass exchange.\nWe covered the surface energy balance of (1) flat surfaces, (2) canopies, and (3) two-sided objects.\nThe Bowen ratio of the ratio of sensible to latent heat.\nWe explored how the surface energy budget varies by surface type and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Surface Energy Balance"
+    ]
+  },
+  {
+    "objectID": "Resources.html",
+    "href": "Resources.html",
+    "title": "Programming Resources",
     "section": "",
-    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \\(\\rm{g} \\rm{m}^{-3} \\rm{s}^{-1}\\)\n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
+    "text": "In this course, I will rely heavily on examples that incorporate scientific programming. Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts. Programming will also be helpful when completing your assignments. However, programming experience is not a prerequisite for this course.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#python",
+    "href": "Resources.html#python",
+    "title": "Programming Resources",
+    "section": "Python",
+    "text": "Python\nPython is my personal preference. I like python because its very flexible, general-purpose programming language that is fairly easy to read / write. It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free! If you want to install Python on your own computer and don’t know where to start, I suggest you go with Anaconda. Its a scientific programming platform that will install python for you along with most of the commonly used extensions.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#r",
+    "href": "Resources.html#r",
+    "title": "Programming Resources",
+    "section": "R",
+    "text": "R\nR is also a great option. It is a programming language that was developed specifically for statistical computing and graphics. This means its not a flexible as a langue like Python, but also that it can be a bit easier to use “out of the box” for specific applications, like data visualization. Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax. One advantage R has over python, is that its a bit easier to install. All you need to do to get setup is to install R and RStudio.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#online-access",
+    "href": "Resources.html#online-access",
+    "title": "Programming Resources",
+    "section": "Online Access",
+    "text": "Online Access\nUBC also provides students with free server space that you can use at https://ubc.syzygy.ca/. This isn’t necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations. However, it already comes with both Python and R installed, and will probably be sufficient for most things we’ll do in this course. So you can use it to try things out without installing anything on your own computer.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Study_Questions/02.html",
+    "href": "Study_Questions/02.html",
+    "title": "Study Question Set 02",
+    "section": "",
+    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\]\nand \\(\\gamma\\) is the fractional year, calculated as follows: \\[\n\\gamma = \\frac{2 \\pi }{ 365} (\\rm{DOY}-1)\n\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula (\\(\\ref{E1}\\)) returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula (\\(\\ref{E1}\\)) returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nIf you don’t need is that accurate, you can use the simplified equation in Lecture 4, Slide 7 (first equation, also in A 1.3 in T.R.,Oke `Boundary Layer Climates 2nd Edition’, p. 340): \\[\n\\begin{eqnarray}\n\\delta \\approx -23.4^{\\circ} \\, \\cos \\left[ 360(\\emph{DOY} + 10) / 365 \\right]\n\\label{E3}\n\\end{eqnarray}\n\\]\nInserting \\(\\emph{DOY}\\) into formula (\\(\\ref{E2}\\)) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nhe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(K_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nK_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(K_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(K_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
     "crumbs": [
       "Study Questions",
-      "Study Question Set 01"
+      "Study Question Set 02"
     ]
   }
 ]

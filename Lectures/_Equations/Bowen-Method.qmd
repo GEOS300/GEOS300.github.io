@@ -1,0 +1,8 @@
+
+$$
+LE = \frac{R_n-G}{1+B}
+$${#eq-LE-Bowen}
+
+$$
+H = \frac{R_n-G}{1+B^{-1}}
+$${#eq-H-Bowen}

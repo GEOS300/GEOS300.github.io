@@ -1,0 +1,19 @@
+
+Import the necessary packages.  This code block below should (fingers crossed) check if you have packages installed and install them for you if not.
+
+```{python}
+import pip
+
+def import_or_install(package):
+    try:
+        return(__import__(package))
+    except ImportError:
+        pip.main(['install', package.split('.')[0]])  
+        return(__import__(package))
+    
+np = import_or_install('numpy')
+pd = import_or_install('pandas')
+dt = import_or_install('datetime')
+plt = import_or_install('matplotlib').pyplot
+```
+

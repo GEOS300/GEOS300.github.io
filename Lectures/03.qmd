@@ -1,0 +1,728 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Surface Energy Balance
+---
+
+{{< include _imports.qmd >}}
+
+## Surface Energy Balance    
+
+![](images/BB1_Radiation.jpg)
+
+::: {.notes}
+
+:::
+
+## Today’s learning objectives
+
+* Define the energy balance equation for an ideal surface.
+* Describe how energy fluxes vary between daytime and nighttime.
+* Define the Bowen ratio.
+* Explain when can we reduce a 3D land-atmosphere interface to 1D.
+
+## Why are we interested in the ‘surface’?
+
+* Ultimate goal: Predicting and managing surface-atmosphere interactions. 
+
+* Quantifying the impact of one system on another one.
+* Understanding a system’s interior dynamics (black box).
+
+* Boundary condition: 
+  * Lower boundary condition for the ABL
+  * Upper boundary for soil climates
+  * Outer boundary for organisms and buildings
+
+
+::: {.notes}
+
+Boundary conditions apply constraints on solutions to equations that are motivated by the physical problem being considered.
+Both ordinary and partial differential equations need boundary conditions to be solved.
+
+:::
+
+## Types of Surface-Atmosphere Interfaces
+
+![Simple, homogenous bare soil/rock surface](images/BareSoil.png)
+
+
+## Types of Surface-Atmosphere Interfaces
+
+![Complex, vegetated surface (e.g., a forest canopy)](images/Canopy.png)
+
+
+## Types of Surface-Atmosphere Interfaces
+
+!["Two-dimensional", semi-transparent surface (e.g., a leaf)](images/Leaf.png)
+
+
+## Types of Surface-Atmosphere Interfaces
+
+![Three-dimensional volume (e.g., an animal)](images/Animal.jpg)
+
+::: {.notes}
+
+Flat land-atmosphere (solid-fluid) interface with no mass. Example: Bare soil.
+Three-dimensional land-atmosphere interface with mass within the interface (air, vegetation, ...). Example: Forest.
+Flat two-dimensional object without mass (solid) within a fluid (atmosphere or water). Example: Leaf.
+A three dimensional volume with mass surrounded by the fluid (atmosphere or water). Example:  Animal.
+
+:::
+
+## Energy Fluxes at Earth’s Surface
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* 'Ideal' surface considered here is smooth, horizontal, homogeneous, extensive, and opaque to radiation.
+* Only vertical fluxes need to be considered.
+* The storage term is dropped $\Delta S=0$
+
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/BareSoil_Arrows.png){width="90%"}
+
+
+:::
+
+::::
+
+::: {.notes}
+
+The net radiative flux is a result of the radiation balance at the surface, which will be discussed in more detail in a few lectures. Daytime dominated by the solar radiation (toward the surface), at night the net radiation is much weaker & away from the surface. The surface warms up during the daytime, while it cools during the evening and night hours.
+Sensible (direct) heat flux - arises as a result of the difference in the temperatures of the surface and the air above. > few millimeters (the thickness of the molecular sublayer), the primary mode of heat exchange becomes advection or convection involving air motions. Thus, the heat flux is down the average temperature gradient. 
+latent heat or water vapor flux is a result of evaporation, evapotranspiration, or condensation at the surface. Nevertheless, evaporation results in some cooling of the surface, which in the surface energy budget is represented by the latent heat flux from the surface to the air above. 
+heat exchange through the ground medium is primarily due to conduction if the medium is soil, rock, or concrete. Through water, however, heat is transferred first by conduction in the top few millimeters (molecular sublayer) from the surface and then by advection or convection in the deeper layers (surface layer, mixed layer, etc.) of water in motion. The depth of the submedium, which responds to and is affected by changes in the energy fluxes at the surface on a diurnal basis, is typically less than a meter for land surfaces and several tens of meters for lakes and oceans. 
+
+This equation describes how the net radiation at the surface must be balanced by a combination of the sensible and latent heat fluxes to the air and the heat flux to the subsurface medium. 
+
+:::
+
+
+## Sign Convention
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* All the radiative fluxes directed toward the surface are positive.
+* Non-radiative energy fluxes directed away from the surface are positive.
+  * Each component is on an **interval scale**
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/BareSoil_Arrows.png){width="90%"}
+
+:::
+
+::::
+
+
+## Sign Convention (iClicker)
+
+Which component(s) of the energy balance can take negative values?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Net-Radiation
+* Sensible & Latent Heat Flux
+* Ground Heat Flux
+* All of the above
+* None of the above
+
+:::
+
+::: {.column width="50%"}
+
+![](images/BareSoil_Arrows.png){width="90%"}
+
+
+:::
+
+::::
+
+## Daytime
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Typically:
+  * $R_n$ > 0
+  * $H$, $LE$, and $G$ > 0
+* There are plenty of exceptions
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/BareSoil_Arrows.png){width="90%"}
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+During the daytime, the surface receives radiative energy (Q*> 0), which is partitioned into sensible and latent heat fluxes to the atmosphere and the heat flux to the submedium. Typically, QH, QE, and QG are all positive over land surfaces during the day. 
+
+Actual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather. 
+
+:::
+
+## Nighttime
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* Typically:
+  * $R_n$ < 0
+  * $H$, $LE$, and $G$ < 0
+* There are plenty of exceptions
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/BareSoil_Arrows_Night.png){width="90%"}
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+At night, the surface loses energy by outgoing radiation, especially during clear or partially overcast conditions. 
+This loss is compensated by gains of heat from air and soil media and, at times, from the latent heat of condensation released during the process of dew formation. 
+All the terms of the surface energy balance for land surfaces are usually negative during the evening and nighttime periods. 
+Their magnitudes are generally much smaller than the magnitudes of the daytime fluxes, except for QG. The magnitudes of QG do not differ widely between day and night, although the direction or sign obviously reverses.
+One can interpret the EB equation in terms of the partitioning of net radiation into other fluxes. The net radiation may be considered an external forcing, while the sensible, latent and ground heat fluxes are responses to this radiative forcing. 
+
+:::
+
+## Bowen Ratio
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+The Bowen Ratio ($B$) is used to express the partitioning of net radiation at a surface.
+
+
+{{< include _Equations/Bowen-Ratio.qmd >}}
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/BareSoil_Arrows_Night.png){width="90%"}
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The Bowen Ratio (B) is used to express the partitioning of net radiation at a surface.
+B<<1 for lakes, rice paddies, well irrigated fields; whereas the B is much larger for dry surfaces (Desert, Urban)
+
+
+:::
+
+## Bowen Ratio (iClicker)
+
+
+On a hot sunny day, which surface would you expect to have the largest Bowen Ratio?
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* The Ocean
+* Ice Sheet
+* A Wheat Field
+* A Pine Forest
+* Desert Sand
+
+
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Bowen-Ratio.qmd >}}
+
+:::
+
+::::
+
+## Bowen Ratio Method
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+{{< include _Equations/Bowen-Ratio.qmd >}}
+
+
+{{< include _Equations/Bowen-Method.qmd >}}
+
+:::
+
+::: {.column width="50%"}
+
+{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+
+![](images/03_14_4.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The simple relationship between the ground heat flux and net radiation allows for the sum of the sensible and latent heat fluxes to be easily determined from the measurement or calculation of net radiation. Further separation of the total heat flux into sensible and latent components can be made if the Bowen ratio, can be estimated independently (e.g., using the Bowen ratio method to be discussed later). 
+B = measure vertical heat and vapor gradients
+
+:::
+
+## Bowen Ratio Method
+
+Assuming $B= 5.0$ with daytime $R_n = 250 \rm{W m^{-2}}$ & $B = 75 \rm{W m^{-2}}$, estimate $\rm{LE}$ & $\rm{H}$.
+
+```{python}
+#| echo: True
+
+
+def Bowen_Method(B,R_n,G):
+  H = (R_n-G)/(1+B**-1)
+  LE = (R_n-G)/(1+B)
+  return(H,LE)
+
+H,LE=Bowen_Method(5.0,250.0,75.0)
+
+print(f'H = {H:.2f} & LE {LE:.2f} W m^-2')
+
+```
+
+
+
+## Bowen Ratio Method
+
+Assuming $B= 4.0$ with daytime $R_n = -55 \rm{W m^{-2}}$ & $B = -25 \rm{W m^{-2}}$, estimate $\rm{LE}$ & $\rm{H}$.
+
+```{R}
+#| echo: True
+Bowen_Method<- function(B,R_n,G){
+  H = (R_n-G)/(1+B**-1)
+  LE = (R_n-G)/(1+B)
+  return(c(H,LE))
+}
+
+out=Bowen_Method(4.0,-55.0,-25.0)
+
+sprintf('H = {%.2f} & LE {%.2f} W m^-2',out[1],out[2])
+```
+
+## When The Method Fails
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+This method relies on the assumption of **Homogeneity**.
+
+* Rough or irregular surfaces violate that assumption.
+
+:::
+
+::: {.column width="50%"}
+
+![](images/Twints.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+
+:::
+
+## When The Method Fails
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+This method relies on the assumption of **Homogeneity**.
+
+* Rough or irregular surfaces violate that assumption.
+
+:::
+
+::: {.column width="50%"}
+
+![Photo: A. Christen](images/03_18_3.jpg)
+
+
+
+:::
+
+::::
+
+## Adding A Storage Term
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+When dealing with more complex, 3D volumes:
+
+* We need to account for the storage
+* Energy can be stored above and below the surface
+
+:::
+
+::: {.column width="50%"}
+
+![](images/EnergyBalance.png)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+-More realistic to consider a volume.
+
+:::
+
+
+## Adding A Storage Term
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
++ Net chemical energy & sensible heat storage in biomass
++ Net sensible & latent heat storage in canopy air
++ Net sensible heat storage in structures
+
+:::
+
+::: {.column width="50%"}
+
+
+{{< include _Equations/Surface-Energy-Balance-Storage.qmd >}}
+
+![](images/Canopy_Storage.png){width="90%"}
+
+:::
+
+::::
+
+
+::: {.notes}
+
+-More realistic to consider a volume.
+
+:::
+
+
+
+## Real world examples: Fallow rice field
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/03_29_2.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/FallowRice.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+:::
+
+## Real world examples: Freshwater marsh
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/03_29_3.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+![](images/FreshMarsh.png)
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Wetting of the subsurface soil by precipitation or artificial irrigation can dramatically alter the surface energy balance, as well as the microclimate near the surface. 
+The latent heat flux becomes an important or even dominant component of the surface energy balance, while the sensible heat flux to air is considerably reduced. 
+The latter may even become negative during early periods of irrigation, particularly for small areas, due to advective effects. This is called the 'oasis effect' because it is similar to that of warm dry air blowing over a cool moist oasis. There is strong evaporation from the moist surface, resulting in cooling of the surface (due to latent heat transfer). The surface cooling causes a downward sensible heat flux from the warm air to the cool ground. Thus, QE is positive, while QH becomes negative, although much smaller in magnitude. 
+
+:::
+
+## Real world examples: Deciduous shrub wetland
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/03_27_2.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+![](images/ShrubWetland.png)
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+:::
+
+
+## Magnitudes Highly Variable
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Freshwater Marsh (California)](images/FreshMarsh.png)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+![Shrub Wetland (Wisconsin)](images/ShrubWetland.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Actual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather. 
+
+
+:::
+
+## Magnitudes Highly Variable
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Shrub Wetland (Spring)](images/ShrubWetland_Spring.png)
+
+:::
+
+::: {.column width="50%"}
+
+![Shrub Wetland (Summer)](images/ShrubWetland.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Actual magnitudes of the various components of the surface energy budget depend on many factors, such as the type of surface and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather. 
+
+
+:::
+
+
+## Energy Balance of a Leaf {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* A surface within a single medium (e.g. a leaf surrounded by air).
+* No third dimension, so heat storage is neglected.
+* Energy flux densities on both sides have to be taken into account.
+* Orientation of the surface is important for exchange processes (radiation).
+* Storage of chemical energy
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/Leaf_Arrows.png)
+
+
+:::
+
+::::
+
+## Energy Balance of a 3D Object {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Usually an organism or object (animal, person, building) surrounded by air.  
+
+* Heat and mass storage in the interface has to be taken into account. In living organisms the metabolic heat plays a role. In some cases, anthropogenic heat (e.g. combustion processes) might be important.
+
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/Beans.png)
+
+
+:::
+
+::::
+
+## Applications {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+
+
+
+* The energy budget over terrestrial surfaces is a key determinant of the land surface climate and governs a variety of physical, chemical and biological surface processes.
+* Estimation of the rate of evaporation from bare ground and water surfaces and evapotranspiration from vegetative surfaces. 
+* Prediction of surface temperature.
+
+
+:::
+
+::: {.column width="50%"}
+
+![Wang et al. 2015](images/03_34_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The following list includes some of the applications of energy balance at or near the earth's surface. 
+
+
+:::
+
+## Take home points
+
+
+:::: {.columns}
+
+::: {.column width="100%"}
+
+* Land-atmosphere interfaces are complex boundaries, with significant energy and mass exchange. 
+* We covered the surface energy balance of (1) flat surfaces, (2) canopies, and (3) two-sided objects.
+* The Bowen ratio of the ratio of sensible to latent heat.
+* We explored how the surface energy budget varies by surface type and its characteristics (soil moisture, texture, vegetation, etc.), geographical location, month or season, time of day, and weather. 
+
+
+:::
+
+::: {.column width="0%"}
+
+:::
+
+::::

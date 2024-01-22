@@ -1,0 +1,4 @@
+
+$$
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G} + \color{green}{\Delta S}
+$${#eq-Surface-Energy-Balance-Storage}

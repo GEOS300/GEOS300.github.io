@@ -1,0 +1,23 @@
+---
+title: "Assignment 1 R"
+execute:
+  keep-md: true
+---
+
+
+{{< include _Includes/01_Preamble.qmd >}}
+
+{{< include _Includes/Import_R_code.qmd >}}
+
+{{< include _Includes/01_Q1.qmd >}}
+
+{{< include _Includes/01_CB1_R_code.qmd >}}
+
+{{< include _Includes/01_Q2.qmd >}}
+
+{{< include _Includes/01_CB2_R_code.qmd >}}
+
+{{< include _Includes/01_Q3.qmd >}}
+
+{{< include _Includes/01_CB_empty_R_code.qmd >}}
+

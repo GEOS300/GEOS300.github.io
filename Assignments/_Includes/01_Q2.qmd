@@ -1,0 +1,3 @@
+### Question 2 
+
+In the example below - we are plotting traces of the four radiation components for the January 2024 cold-snap and snowstorm (Jan 12 to Jan 19).  Looking at the trace below - what stands out to you?  Comment on each component over time.  Do you see any issues in the data?

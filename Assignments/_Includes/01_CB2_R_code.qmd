@@ -1,0 +1,25 @@
+
+
+```{R}
+#| echo: true
+Start ='2024-01-12 0000'
+End ='2024-01-19 2359'
+
+Selection <- df[which((df$TIMESTAMP >= Start) & (df$TIMESTAMP <=End)),]
+
+
+df_to_plot <- melt(
+  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],
+  id="TIMESTAMP")
+  
+p <- ggplot(df_to_plot, aes(x = TIMESTAMP, y = value, group = variable)) +
+  geom_line(aes(color = variable,linetype = variable)) +
+  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +
+  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c("solid","dashed","solid","dashed"))+
+  labs(y = TeX('Units^{superscript}^{subscript}'))+
+  ylim(0,425)+
+  ggtitle('Radiative Fluxes at CA-DBB Flux Station\nStudent #')
+# 
+p
+
+```

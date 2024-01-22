@@ -1,0 +1,140 @@
+---
+title: Study Question Set 02
+subtitle: Solar Geometry
+---
+
+
+(@) Calculate Earth's declination $\delta$ for the following dates: January 1, March 22, June 21, and December 31.
+
+
+
+::: {.callout-tip collapse="true"}
+
+$$
+\begin{eqnarray}
+\delta = & 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
+         & -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
+         & -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber 
+\end{eqnarray}
+$$
+
+and $\gamma$ is the fractional year, calculated as follows:
+$$
+\gamma = \frac{2 \pi }{ 365} (\rm{DOY}-1) 
+$$
+
+
+$\rm{DOY}$ is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1),  1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).
+
+Declination changes throughout the year, but for a given date it is the same for the whole planet. $\delta$ is $0^{\circ}$ during the vernal and autumnal equinox, and $\delta$ is $\pm 23.5^{\circ}$ (minimum / maximum) for the winter and summer solstices. 
+
+Inserting $\gamma$ into formula (\ref{E1}) returns declinations of $\delta = -23.1^{\circ}$ on January 1, $0.39^{\circ}$ on March 22, $23.5^{\circ}$ on June 21, and $-23.1^{\circ}$ on December 31, respectively. Note that formula (\ref{E1}) returns $\delta$ in radians, so you have to multiply the result form Eq. by $\frac{360}{2 \pi}$ to get degrees.
+
+If you don't need is that accurate, you can use the simplified equation in Lecture 4, Slide 7 (first equation, also in A 1.3 in T.R.\,Oke `Boundary Layer Climates 2nd Edition', p. 340):
+$$
+\begin{eqnarray}
+\delta \approx -23.4^{\circ} \, \cos \left[ 360(\emph{DOY} + 10) / 365 \right]
+\label{E3}
+\end{eqnarray}
+$$
+
+Inserting $\emph{DOY}$ into formula (\ref{E2}) returns declinations of $\delta = -23.0^{\circ}$ on January 1, $-0.1^{\circ}$ on March 22, $23.4^{\circ}$ on June 21, and $-23.1^{\circ}$ on December 31, respectively, which is slightly different from the calculation above. This is because formula (\ref{E3}) is \emph{simplified}. It assumes a circular orbit of Earth around the Sun.
+
+
+:::
+
+(@) Calculate the **Local Mean Solar Time** (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd. 
+
+
+::: {.callout-tip collapse="true"}
+
+Local mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that \emph{on average} the sun path reaches it's highest point at noon. 
+
+Port Hardy's longitude is $127^{\circ}30^{\prime}$W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at $120^{\circ}\textrm{W} (=8 \times 15^{\circ})$. The offset between PST and LMST is, in minutes:
+
+$$
+\begin{eqnarray}
+\textrm{PST} - \textrm{LST} = 4\,\textrm{min}/^{\circ} \times (120-127.5) = -30  \textrm{min}
+\end{eqnarray}
+$$
+
+At 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.
+
+:::
+
+(@) Calculate the **Local Apparent Time** (LAT) for the same location and times. 
+
+::: {.callout-tip collapse="true"}
+
+The local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth's rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:
+
+$$
+\begin{eqnarray}
+\Delta T_{\rm{LAT}} = \textrm{LMST} - \textrm{LAT}  = && 229.18 \times (0.000075 \\ &&+ 0.001868 \cos \gamma
+                - 0.032077 \sin \gamma \\
+               &&- 0.014615 \cos(2\gamma) - 0.040849 \sin(2 \gamma) 
+\end{eqnarray}
+$$
+
+
+where $\gamma$ is again the fractional year in radians (see question 1) which is $\gamma = 0.775$ for February 15, and $\gamma = 3.48$ for July 22. The offset $\Delta T_{\rm{LAT}} = \textrm{LMST} - \textrm{LAT}$ is -14.3 min for February 15 and -6.41 min for July 22. Hence, $\rm{LAT} = \rm{LMST} - \Delta T_{\rm{LAT}}$, is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.
+
+:::
+
+(@) Calculate the solar altitude angle $\beta$ for the same location and those two times. 
+
+::: {.callout-tip collapse="true"}
+
+he solar altitude $\beta$ can then be calculated by
+\begin{eqnarray*}
+\sin \beta = \sin \phi \sin \delta + \cos \phi \cos \delta \cos h
+\end{eqnarray*}
+$\phi$ is the latitude ($50^{\circ}72^{\prime}$N for Port Hardy), $\delta$ is the declination (see above), and $h$ is the hour angle:
+\begin{eqnarray*}
+h = 15^{\circ} (12 - \textrm{LAT})
+\end{eqnarray*}
+where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{\circ} (12 - 13.44) = -21.6^{\circ} $ for February 15, and $h = 15^{\circ} (12 - 6.36) = +84.6^{\circ}$ for July 22. 
+
+For February 15:
+\begin{eqnarray*}
+\sin \beta &=& \sin (50.72^{\circ}) \sin (-12.8^{\circ}) + \cos (50.72^{\circ})  \cos (-12.8^{\circ}) \cos (-21.6^{\circ}) \\ &=& 0.403 \\
+\beta &=& 23.74^{\circ}
+\end{eqnarray*}
+
+For July, 22:
+\begin{eqnarray*}
+\sin \beta &=& \sin (50.72^{\circ}) \sin (20.39^{\circ}) + \cos (50.72^{\circ})  \cos (20.39^{\circ}) \cos (84.6^{\circ}) \\&=& 0.325 \\
+\beta &=& 18.99^{\circ}
+\end{eqnarray*}
+
+Please make sure you transform all degrees to radians if your calculator is set to radians.
+
+:::
+
+(@) Calculate the extraterrestrial short-wave irradiance $SW_{Ex}$ for the same location and those two times. 
+
+
+::: {.callout-tip collapse="true"}
+
+The extraterrestrial short-wave irradiance $K_{Ex}$ is related through the cosine law of illumination to the solar constant and the solar altitude $\beta$:
+
+$$
+\begin{eqnarray*}
+K_{Ex} = I_0  \left( \frac{R_{av}}{R} \right)^2 \sin \beta
+\end{eqnarray*}
+$$
+
+$I_0$ is the solar constant  (1366.5 W m$^{-2}$) and the term $\left( \frac{R_{av}}{R} \right)^2$ accounts for the non-circular orbit (changing distance over course of a year). $\gamma$ is the fractional year as defined above.
+
+$$
+\begin{eqnarray*}
+\left( \frac{R_{av}}{R} \right)^2 &=& 1.00011 + 0.034221 \cos(\gamma) + 0.001280  \sin(\gamma) \\
+ && + 0.000719  \cos(2 \gamma) + 0.000077  \sin( \gamma)
+\end{eqnarray*}
+$$
+
+The term $\left( \frac{R_{av}}{R} \right)^2$ is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).
+
+$K_{Ex}$ = $1366.5 \times 1.02 \times \sin(23.74^{\circ})$ = 562 W m$^{-2}$ on February 15, 08:00 PST and $K_{Ex}$ = $1366 \times 0.97 \times \sin(18.99^{\circ})$ = 431 W m$^{-2}$. Again, make sure you transform the solar altitude to radians if your calculator is set to radians.
+
+:::

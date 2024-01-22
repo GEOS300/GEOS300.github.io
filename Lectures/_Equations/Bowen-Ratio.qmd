@@ -1,0 +1,4 @@
+
+$$
+B = \frac{H}{LE}
+$${#eq-Bowen-Ratio}

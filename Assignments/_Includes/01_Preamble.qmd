@@ -1,0 +1,15 @@
+The code below will handle downloading and parsing your data for you, but if you are electing to complete the lab in excel or by hand, you can find the data [here](https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv).  **Note** these data are in .csv format.  If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.
+
+
+In your virtual field visit you will see the radiation measurement site at Totem Field and discuss the way the instruments are deployed over the grass. You will use data from this site for your first assignment. 
+
+
+Using the link below you will be provided with data from a single day (the actual day is selected based on your student number, as shown on the webpage). Data are available for download in various formats:
+
+
+In the files you will find measurements of the following variables: incoming and reflected short-wave radiation ($SW_{\downarrow}$, $SW_{\uparrow}$), incoming and outgoing long-wave radiation ($LW_{\downarrow}$, $LW_{\uparrow}$), air temperature ($T_a$) and relative humidity ($RH$). All measurements are from the set-up on CA-DBB (aka. BB1) Eddy Covariance station in Burns Bog.
+
+Instructions: Please upload your answers including calculations, discussions and graphs in a single, well-structured report (either Word, PDF or HTML file). Note that you can download your .ipynb file under 'File $\gg$ Download as $\gg$ HTLM or PDF via Latex'. Label the report document with your name, your student number, the course and year. Upload your answers to Canvas by \underline{Monday, Feb 6, 2023, 11:59 pm}. Do not attach a spreadsheet. 
+
+Marks are indicated in square brackets. In total, there are 50 marks. This assignment is worth 10\% of the final course grade and requires a substantial time commitment.
+

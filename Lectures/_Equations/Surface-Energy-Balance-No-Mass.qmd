@@ -1,0 +1,4 @@
+
+$$
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G}
+$${#eq-Surface-Energy-Balance-No-Mass}

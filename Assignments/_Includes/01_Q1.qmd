@@ -1,0 +1,8 @@
+
+### Question 1 
+
+Download and parse your data.  If you are using excel or doing calculations by hand (see instructions above).  Otherwise review the code block below.  We downloading the .csv file containing climate data from the CA-DBB flux station and formatting it to suit our needs.
+
+Using the "head" command, you can get a preview of the first part of your dataset.  What value do you see listed for Incoming $SW$ in the first row of the table and why does it have this value?  Make suer to specify the units in your answer.
+
+* Check the metadata provided [here](https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md) to make sure you understand the variable names and units.

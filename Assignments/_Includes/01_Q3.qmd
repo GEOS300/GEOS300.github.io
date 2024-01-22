@@ -1,0 +1,3 @@
+### Question 3 
+
+Using the example above as a template, plot the 4 component radiation for your assigned day.  Additionally, calculate $R_n$ and plot it on your chart as a solid black line.
