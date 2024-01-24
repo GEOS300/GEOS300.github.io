@@ -1,0 +1,10 @@
+
+$$
+\cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
+$${#eq-Solar-Zenith}
+
+where the hour angle (h) is a function of local apparent time (LAT):
+
+$$
+h = 15^{\circ}(12-LAT)
+$${#eq-Hour-Angle}

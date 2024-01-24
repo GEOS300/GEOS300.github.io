@@ -1,0 +1,4 @@
+The code below will handle downloading and parsing your data for you, but if you are electing to complete the lab in excel or by hand, you can find all the relevant data files here [here](https://github.com/GEOS300/AssignmentData/).  **Note** these data are in .csv format.  If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.
+
+
+Instructions: Please upload your answers including calculations, discussions and graphs in a single, well-structured report (either Word, PDF or HTML file). Note that you can download your .ipynb file under 'File $\gg$ Download as $\gg$ HTLM or PDF via Latex'. Label the report document with your name, your student number, the course and year. Upload your answers to Canvas. **Do not attach a spreadsheet.** 

@@ -96,7 +96,7 @@ A three dimensional volume with mass surrounded by the fluid (atmosphere or wate
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/BareSoil_Arrows.png){width="90%"}
 
@@ -131,7 +131,7 @@ This equation describes how the net radiation at the surface must be balanced by
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/BareSoil_Arrows.png){width="90%"}
 
@@ -180,7 +180,7 @@ Which component(s) of the energy balance can take negative values?
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/BareSoil_Arrows.png){width="90%"}
 
@@ -215,7 +215,7 @@ Actual magnitudes of the various components of the surface energy budget depend 
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/BareSoil_Arrows_Night.png){width="90%"}
 
@@ -246,13 +246,13 @@ One can interpret the EB equation in terms of the partitioning of net radiation 
 The Bowen Ratio ($B$) is used to express the partitioning of net radiation at a surface.
 
 
-{{< include _Equations/Bowen-Ratio.qmd >}}
+{{< include ../_Equations/Bowen-Ratio.qmd >}}
 
 :::
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/BareSoil_Arrows_Night.png){width="90%"}
 
@@ -290,7 +290,7 @@ On a hot sunny day, which surface would you expect to have the largest Bowen Rat
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Bowen-Ratio.qmd >}}
+{{< include ../_Equations/Bowen-Ratio.qmd >}}
 
 :::
 
@@ -303,16 +303,16 @@ On a hot sunny day, which surface would you expect to have the largest Bowen Rat
 ::: {.column width="50%"}
 
 
-{{< include _Equations/Bowen-Ratio.qmd >}}
+{{< include ../_Equations/Bowen-Ratio.qmd >}}
 
 
-{{< include _Equations/Bowen-Method.qmd >}}
+{{< include ../_Equations/Bowen-Method.qmd >}}
 
 :::
 
 ::: {.column width="50%"}
 
-{{< include _Equations/Surface-Energy-Balance-No-Mass.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-No-Mass.qmd >}}
 
 ![](images/03_14_4.jpg)
 
@@ -462,7 +462,7 @@ When dealing with more complex, 3D volumes:
 ::: {.column width="50%"}
 
 
-{{< include _Equations/Surface-Energy-Balance-Storage.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance-Storage.qmd >}}
 
 ![](images/Canopy_Storage.png){width="90%"}
 

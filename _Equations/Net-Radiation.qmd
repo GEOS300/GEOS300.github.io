@@ -1,0 +1,5 @@
+
+$$
+R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
+$${#eq-Net-Radiation}
+

@@ -4,19 +4,18 @@ format: html
 jupyter: python3
 ---
 
-
-Your lectures and any required readings will be posted here as they become available.
+Your lectures and any readings will be posted here as they become available.
 
 ```{python}
-#| echo: False
+#| echo: false
 #| label: tbl-Lectures
-#| tbl-cap: "Lecture schedule"
+#| tbl-cap: "Class schedule"
 import pandas as pd
 import numpy as np
 from IPython.display import Markdown
 from tabulate import tabulate
 Mon = pd.date_range("20240108", "20240412", freq='W-Mon')
-Wed = pd.date_range("20240108", "20240412", freq='W-Wed')
+Wed = pd.date_range("20240108", "20240424", freq='W-Wed')
 Week = np.arange(1,Mon.shape[0])
 Lecture_Dates = Mon.union(Wed).date
 
@@ -28,16 +27,24 @@ Topics = [
 'Course Overview',
 'What is Micrometeorology?',
 'Energy and Mass Balances',
-'A Deeper Dive into Surface Energy Balances'
+'**Snow Day**/No Class',
+'A Deeper Dive into Surface Energy Balances',
+'Radiation Geometry'
 ]
 Readings = [
     '',
     'Open Geomatics section [3.1](https://www.opengeomatics.ca/types-of-data.html#types-of-phenomena) & [3.2](https://www.opengeomatics.ca/types-of-data.html#types-of-data-1)',
-    ''
+    '',
+    '',
+    '',
+    '[Additional Reading](../www/readings04_05.pdf)'
 ]
 Study = ['',
         '',
         '[01](../Study_Questions/01.html)',
+        '',
+        '',
+        '[02](../Study_Questions/02.html)',
         ]
 
 for i,row in Lectures.iterrows():
@@ -49,9 +56,20 @@ for i,row in Lectures.iterrows():
         Lectures.loc[Lectures.index==i,'Study Questions'] = Study[i]
 
 Lectures.set_index('Date',inplace=True)
+
+Lectures.loc[((Lectures.index>=pd.to_datetime('2024-02-19').date())&
+    (Lectures.index<=pd.to_datetime('2024-02-23').date())),'Topic'] = '**Reading Break**'
+
+Lectures.loc[Lectures.index==pd.to_datetime('2024-03-13').date(),'Topic'] = '**Midterm Exam**'
+Lectures.loc[Lectures.index==pd.to_datetime('2024-03-13').date(),'Study Questions'] = '**1-5 Due**'
+
+Lectures.loc[Lectures.index==pd.to_datetime('2024-04-24').date(),'Topic'] = '**Final Exam**'
+Lectures.loc[Lectures.index==pd.to_datetime('2024-04-24').date(),'Study Questions'] = '**6+ Due**'
+
 Markdown(tabulate(
   Lectures, 
   headers=Lectures.columns
 ))
+
 ```
 

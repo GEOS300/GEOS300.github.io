@@ -124,7 +124,7 @@ kable(SID)
 * The conversion between Celsius and Kelvin is simple:
 
 
-{{< include _Equations/Kelvin.qmd >}}
+{{< include ../_Equations/Kelvin.qmd >}}
 
 :::
 

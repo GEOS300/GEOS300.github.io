@@ -1,0 +1,5 @@
+
+$$
+\lambda_{max} = \frac{b}{T}
+$${#eq-Weins-Law}
+

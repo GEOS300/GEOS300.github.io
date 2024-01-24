@@ -1,0 +1,709 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Radiation Geometry
+subtitle: The position of the Sun in the sky and the path of the solar beam.
+---
+
+{{< include _imports.qmd >}}
+
+
+
+## Radiation Geometry
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Processes of absorption, reflection and scattering of radiation through the atmosphere determine the available short-wave radiation reaching Earth’s surface.
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![Photo: A. Christen](images/04_1_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Address survey concerns
+
+:::
+
+
+## Learning Objectives
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Be able to predict the relative position of the solar disk.
+* Use this to calculate the irradiance reaching our planet ‘at the top of the atmosphere’ (in absence of atmospheric effects).
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/WreckBeach.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+:::
+
+
+## Earth’s Climate System: Energy Inputs
+
+
+```{r}
+#| label: tbl-3_3
+#| tbl-cap: Average heat flux density from external sources at Earth’s surface
+
+Data <- read.csv(file = 'Data/04_3_3_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+::: {.notes}
+
+What drives our climate system and provides energy for all life on Earth.
+
+:::
+
+
+
+## Motivation {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* The geographic distribution of radiant energy is not equally distributed on Earth:
+  * Large scales (Earth’s geometry) 
+  * Small scales (topography)
+* Those differences cause many microclimates.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![Photo: A. Christen](images/04_5_0.jpg)
+
+
+:::
+
+::::
+
+---
+
+
+![](images/04_6_3.png){width="80%"}
+
+::: {.notes}
+
+Wh = one watt (1 W) of power expended for one hour (1 h) of time
+strong energetic gradients. 
+
+:::
+
+
+## Radiation applications
+
+
+![](images/04_9_1.jpg)
+
+
+## Radiation Properties and Laws
+
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+
+* Dual properties: wave/particle.
+* Frequency ν, wavelength λ and speed of light c.
+* The electromagnetic spectrum
+* Reading package Lecture 4-5 [‘Radiation Basics’](../www/readings04_05.pdf)
+
+
+:::
+
+::: {.column width="20%"}
+
+
+![](images/04_10_3.jpg)
+ 
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Electromagnetic waves. Radiation can be described as a form of energy due to the rapid oscillations of electromagnetic fields. The oscillations may be considered as travelling waves characterized by their wavelength λ (distance between successive wavecrests). 
+Radiation is able to travel in a vacuum, and all radiation moves at the speed of light (c=3×108 ms−1), and in a straight path. Hence, instead of wavelength, we can express radiation by its frequency ν (in oscillations per second, i.e. s−1) (v = c/λ)
+We’re typically concerned with 0.1 to 100 μm with visible from 0.4 to 0.7 μm 
+Particle properties. Radiation can be also described by discrete bundles of energy that have properties similar to particles. Quantum physics tells us that radiation is transferred as discrete packets called quanta (or photons if in the visible part of the spectrum). 
+Energy of quantum is e = h ν. (h = Plancks constant (6.63 × 10-34 J s))
+Plants can only use photons in the visible range of the spectrum which is also called photosynthetically active radiation (PAR, 0.4 - 0.7 μm). 
+
+:::
+
+
+## Radiation Properties and Laws {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Energy of a photon<sup>[1](https://geos200.github.io/Slides/Lecture2.html#/section)</sup>
+
+* Plank's law<sup>[2](https://geos200.github.io/Slides/Lecture2.html#/total-emissions)</sup>
+
+* Stefan Boltzmann law<sup>[3](https://geos200.github.io/Slides/Lecture2.html#/stefan-boltzmann-law-blackbody)</sup>
+
+
+* Wien’s Law<sup>[4](https://geos200.github.io/Slides/Lecture2.html#/wiens-displacement-law)</sup>
+
+* Kirchhoff’s Law<sup>[5](https://geos200.github.io/Slides/Lecture6.html?q=Kirch#/kirchhoffs-law)</sup>
+
+
+:::
+
+::: {.column width="50%"}
+
+
+{{< include ../_Equations/Energy-of-Photon.qmd >}}
+{{< include ../_Equations/Planks-Law.qmd >}}
+{{< include ../_Equations/Stefan-Boltzman-Law.qmd >}}
+{{< include ../_Equations/Weins-Law.qmd >}}
+{{< include ../_Equations/Kirchhoffs-Law.qmd >}}
+ 
+
+
+:::
+
+::::
+
+## Shortwave vs. Longwave
+
+![](images/04_11_3.jpg)
+
+::: {.notes}
+
+All bodies possessing energy (i.e. whose temperatures are above absolute zero, 0 K = −273.2◦C) emit radiation. 
+Total radiant heat energy emitted from a surface is proportional to the fourth power of its absolute temperature
+Wein’s displacement law: It states that a rise in the temperature of a body not only increases the total radiant output, but also increases the proportion of shorter wavelengths of which it is composed. 
+Kirchhoff’s law: Emissivity = absorptivity
+
+
+:::
+
+## Sun-Earth Geometry {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Solar declination ($\delta$)**: Angle between Sun’s rays and equatorial plane.
+
+**Latitude ($\Phi$)**: Angle between the equatorial plane and the site of interest (point P in the figure). 
+
+**Hour angle (h)**: Angle through which the Earth must turn to bring the meridian of the site P directly under the Sun. It is a function of the time of day. 
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/04_12_0.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Declination: The earth's equator is tilted 23.45 degrees with respect to the plane of the earth's orbit around the sun, so at various times during the year, as the earth orbits the sun, declination varies from 23.45 degrees north to 23.45 degrees south. This gives rise to the seasons.
+Meridian: meridian (or line of longitude)
+
+:::
+
+## Calculating Solar Declination {.smaller}
+
+$\delta$ only depends upon day of year, which gives returns $\delta$ in radians
+ 
+
+* The equation is complex due to the non-circular orbit of Earth
+
+{{< include ../_Equations/Solar-Declination.qmd >}}
+
+::: {.notes}
+
+One radian is just under 57.3 degrees.
+Radians = 180/pi
+The declination angle, denoted by δ, varies seasonally due to the tilt of the Earth on its axis of rotation and the rotation of the Earth around the sun
+
+NOTE: Simple approximation has angle in radians (2pi) whereas answers to study questions has it in degrees (360).
+
+:::
+
+
+## Calculating Solar Declination {.smaller}
+
+```{python}
+#| echo: true
+#| code-overflow: wrap
+#| tidy.opts: { width.cutoff: 60 }
+
+import numpy as np
+import pandas as pd
+import matplotlib.pyplot as plt
+
+def Solar_Declination(DOY):
+  gamma = 2*np.pi/365*(DOY-1)
+  delta = 0.006918 - 0.399912 * np.cos(gamma)+0.070257 *np.sin(gamma)-0.006758 *np.cos(2*gamma) + 0.000907*np.sin(2*gamma)-0.002697*np.cos(3*gamma)+0.00148 *np.sin(3*gamma)
+  return(delta*180/np.pi)
+
+Dates = pd.date_range('2024-01-01','2024-12-31')
+Declination = Solar_Declination(Dates.dayofyear)
+plt.figure(figsize=(6,3))
+plt.plot(Dates,Declination)
+plt.ylabel('Solar Declination')
+```
+
+::: {.notes}
+
+Radians = 180/pi
+-The declination angle, denoted by δ, varies seasonally due to the tilt of the Earth on its axis of rotation and the rotation of the Earth around the sun.
+-declination is zero at the equinoxes (March 22 and September 22), positive during the northern hemisphere summer and negative during the northern hemisphere winter. 
+
+:::
+
+
+## iClicker
+
+What is the solar declination on June 21st?
+
+* A 23.45 $^{\circ}$
+* B 0 $^{\circ}$
+* C -13.45 $^{\circ}$
+* D 18.45 $^{\circ}$
+* E -23.45 $^{\circ}$
+
+
+## Observer’s local geometry
+
+**Solar Zenith (Z)** Angle between Sun’s rays and observer’s local zenith.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Azimuth angle ($\Omega$)** Angle between projections onto local horizontal for both Sun rays and true North (0=360°).
+
+
+**Solar Altitude ($\beta$)** Angle between Sun’s rays and observer’s local horizon ($\beta$ = 90°- Z)
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/04_16_4.gif)
+
+
+:::
+
+::::
+
+
+## Calculating the Zenith {.smaller}
+
+{{< include ../_Equations/Solar-Zenith.qmd >}}
+
+::: {.notes}
+
+Beta = altitude angle
+Angle through which the Earth must turn to bring the meridian of the site P directly under the Sun. It is a function of the time of day. 
+360/24
+
+:::
+
+
+## So many times... {.smaller}
+
+* **Coordinated Universal Time (UTC)**: standard time, referenced to mean solar time at the prime meridian.
+* **Standard Time (LST)** - What is on your watch without daylight savings offset - same for all longitudes within a given time zone.
+* **Local Mean Solar Time (LMST)** - Mean solar time is fixed and ensures that on average, highest solar altitude is observed at noon (not at each day of the year). Changes with longitude.
+* **Local Apparent Time (LAT)** - A non-uniform time that varies through the year according to the equation of time. It ensures that highest solar altitude is always observed at noon.
+
+
+## Local Mean Solar Time
+
+Add (subtract) 4 min to LST for each degree of longitude east (west) of the standard meridian of the time zone.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* On the central meridian of -120 $^{\circ}$ PST = LMST
+* Any other longitude within time zone has an offset of 4 min per 1º between LMST and PST
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/04_19_3.png)
+
+
+:::
+
+::::
+
+## So Many Times {.smaller}
+
+{{< include ../_Equations/TimeEquations.qmd >}}
+
+
+## Planetary Orbits and Kepler’s Laws
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**Kepler’s first law:** states that planets follow an elliptical orbit, with the Sun in one focus. This implies that the Earth-Sun distance is changing during a year.
+
+
+![](images/04_20_3.png)
+
+:::
+
+::: {.column width="50%"}
+
+
+**Kepler's second law:** a planet moves fastest when it is near the perihelion and slowest when it is near Aphelion.
+
+
+![](images/04_20_9.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Perihelion (January) = closest to sun
+Aphelion (June)
+
+:::
+
+
+## Local Apparent Time
+
+```{python}
+import os
+from TzFuncs import TzFuncs
+
+tz = TzFuncs(lat_lon=[50,-127.5])
+Dates = pd.date_range('2024-01-01 12:00','2024-12-31 12:00')
+tz.convert(Dates)
+plt.figure()
+plt.plot(tz.Delta_LAT/60)
+plt.plot(tz.Delta_LAT*0,color='k')
+plt.grid()
+plt.ylabel('Minutes')
+plt.xlabel('DOY')
+plt.xlim([0,366])
+plt.title('Offset Between LAT and LMST')
+
+```
+
+
+
+## Local Apparent Time
+
+![Photo: A. Christen](images/04_24_3.jpg)
+
+
+## Sun path diagrams
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+![Paths of the Sun across the sky vault for a mid- latitude location in the Northern Hemisphere at the times of the solstices and equinoxes](images/04_26_2.png)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![The projection of (a) onto a two- dimensional plane thereby forming the basis of a Sun path diagram.](images/04_26_5.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+ 
+
+Altitude = 1-solar zenith angle (Angle between Sun’s rays and observer’s local horizon)
+Solar azimuth angle = Angle between projections onto local horizontal for both Sun rays and true North (0=360°).
+
+:::
+
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+
+![](images/04_27_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Solar altitude angle
+
+:::
+
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+
+![](images/04_28_3.jpg)
+
+
+:::
+
+::::
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+
+![](images/04_29_3.jpg)
+
+
+:::
+
+::::
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+
+![](images/04_30_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+:::
+
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="0%"}
+
+:::
+
+::: {.column width="100%"}
+
+
+![](images/04_31_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+http://ibis.geog.ubc.ca/courses/geob300/applets/sunpath/index.html
+https://www.esrl.noaa.gov/gmd/grad/solcalc/
+
+:::
+
+
+## Cosine Law of illumination
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+$R_p$ the radiative flux density on a surface perpendicular to the beam and Z is the zenith angle of incidence (i.e the angle between the surface and the direction of the beam).
+
+{{< include ../_Equations/Cosine-Law-of-Illumination.qmd >}}
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+![](images/04_32_6.gif)
+
+
+:::
+
+::::
+
+
+## Solar constant $I_0$ {.smaller}
+
+The radiant flux density (irradiance) at the top of the atmosphere normal to the solar beam an at Earth’s mean distance from Sun.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Present observations suggest $I_0 \approx 1361 W m{-2}$ 
+
+![](images/SolarConstant.png)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![The Nimbus satellite hosted the first instruments measuring the solar constant(NASA).](images/Nimbus.png){width=65%}
+
+
+:::
+
+::::
+
+
+## Earth’s Distance to Sun
+
+$R_av$ is the mean distance Earth-Sun over the year and $R$ is the actual distance Earth-Sun at a given time.
+
+![](images/AdjustedSolarConstant.png)
+
+
+::: {.notes}
+
+-Area ratio
+-Energy spreading over area
+-gamma = 2*pi/365*(DOY-1)
+
+
+:::
+
+
+## Extraterrestrial Irradiance
+
+
+{{< include ../_Equations/Extraterrestrial-Irradiance.qmd >}}
+
+
+
+## Take home points
+
+
+* We discussed a lengthy recipe to predict the relative position of the sun with reasonable accuracy, taking geometry and astronomical parameters into account.
+* We combined cosine law of illumination (GEOB 200, ATSC 201) with the solar constant to calculate extraterrestrial irradiance at any given time and for any location.
+* In the next lecture we will add the effects of the atmosphere with the goal to predict surface irradiance.
+

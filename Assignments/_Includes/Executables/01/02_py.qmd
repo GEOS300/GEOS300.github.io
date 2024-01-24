@@ -1,0 +1,49 @@
+
+
+```{python}
+Start ='2024-01-12 0000'
+End ='2024-01-20 0000'
+
+Selection = df.loc[(
+    (df.index>=dt.strptime(Start, '%Y-%m-%d %H%M'))
+    &
+    (df.index<=dt.strptime(End, '%Y-%m-%d %H%M'))
+    )].copy()
+
+fig,axes=plt.subplots(2,sharex=True)
+plt.suptitle(f'Student #: {Student_Number}')
+
+Selection.plot(ax=axes[0],
+              y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1'],
+              color=['blue','red','blue','red'],
+              style=['-','-','--','--'])
+axes[0].legend(['SW In','SW Out','LW In','LW Out'],ncol=4)
+axes[0].set_ylabel('Unit$_{sub}^{sup}$')
+axes[0].set_ylim([0,475])
+axes[0].set_title(f'Radiative Fluxes at CA-DBB Flux Station')
+axes[0].grid()
+
+
+Selection['Dummy_Trace'] = np.nan
+axes[1].plot()
+Selection.plot(ax=axes[1],
+              y=['TA_1_1_1','TS_1','Dummy_Trace'],
+              color=['red','red','blue'],
+              style=['-','--',':'])
+axes[1].legend(['Ta 2m','Ts 0.05m','RH 2m'],ncol=2,loc=4)
+axes[1].set_ylabel('C$\degree$')
+axes[1].set_ylim([-15,10])
+
+alt_x = axes[1].twinx()
+Selection.plot(ax=alt_x,
+              y=['RH_1_1_1'],
+              color=['blue'],
+              style=[':'],
+              legend=False)
+alt_x.set_ylabel('%')
+
+axes[1].set_xlabel('Date')
+axes[1].set_title('Temperature and Humidity')
+axes[1].grid()
+
+```

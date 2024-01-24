@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -216,61 +245,201 @@ ul.task-list li input[type="checkbox"] {
 <li><p>I won’t require you to use GitHub for anything in the course, I will always provide ways to access materials that do not require an account or knowledge of the platform.</p></li>
 <li><p>You can find a bit more info about it <a href="https://ubc-micromet.github.io/Documentation/UsingGit.html">here</a>.</p></li>
 </ul>
-<!-- 
-# Important Symbols
+</section>
+<section id="list-of-equations" class="level1">
+<h1>List of Equations</h1>
+<p>A list of important equations used in the course.</p>
+<ul>
+<li><strong>Note</strong> these are listed in no particular order - they’re just scarped from the site and collated here for your reference.</li>
+</ul>
+<section id="le-bowen" class="level2">
+<h2 class="anchored" data-anchor-id="le-bowen">LE Bowen</h2>
+<p><span id="eq-LE-Bowen"><span class="math display">\[
+LE = \frac{R_n-G}{1+B}
+\tag{1}\]</span></span></p>
+</section>
+<section id="h-bowen" class="level2">
+<h2 class="anchored" data-anchor-id="h-bowen">H Bowen</h2>
+<p><span id="eq-H-Bowen"><span class="math display">\[
+H = \frac{R_n-G}{1+B^{-1}}
+\tag{2}\]</span></span></p>
+</section>
+<section id="bowen-ratio" class="level2">
+<h2 class="anchored" data-anchor-id="bowen-ratio">Bowen Ratio</h2>
+<p><span id="eq-Bowen-Ratio"><span class="math display">\[
+B = \frac{H}{LE}
+\tag{3}\]</span></span></p>
+</section>
+<section id="conservation-law-scalar-1d" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-law-scalar-1d">Conservation Law Scalar 1D</h2>
+<p><span id="eq-Conservation-Law-Scalar-1D"><span class="math display">\[
+\frac{dc}{dt} = \frac{\partial c}{\partial t} + w \frac{\partial c}{\partial z}
+\tag{4}\]</span></span></p>
+</section>
+<section id="conservation-law-scalar-homogeneous-2" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-law-scalar-homogeneous-2">Conservation Law Scalar Homogeneous 2</h2>
+<p><span id="eq-Conservation-Law-Scalar-Homogeneous-2"><span class="math display">\[
+\frac{dc}{dt} = \frac{\partial c}{\partial t} \color{white}{+ u \frac{\partial c}{\partial x} + v \frac{\partial c}{\partial y}} + w \frac{\partial c}{\partial z}
+\tag{5}\]</span></span></p>
+</section>
+<section id="conservation-law-scalar-homogeneous" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-law-scalar-homogeneous">Conservation Law Scalar Homogeneous</h2>
+<p><span id="eq-Conservation-Law-Scalar-Homogeneous"><span class="math display">\[
+\frac{dc}{dt} = \frac{\partial c}{\partial t} \color{gray}{+ u \frac{\partial c}{\partial x} + v \frac{\partial c}{\partial y}} + w \frac{\partial c}{\partial z}
+\tag{6}\]</span></span></p>
+</section>
+<section id="conservation-law-scalar" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-law-scalar">Conservation Law Scalar</h2>
+<p><span id="eq-Conservation-Law-Scalar"><span class="math display">\[
+\frac{dc}{dt} = \frac{\partial c}{\partial t} + u \frac{\partial c}{\partial x} + v \frac{\partial c}{\partial y} + w \frac{\partial c}{\partial z}
+\tag{7}\]</span></span></p>
+</section>
+<section id="conservation-law-simplified" class="level2">
+<h2 class="anchored" data-anchor-id="conservation-law-simplified">Conservation Law Simplified</h2>
+<p><span id="eq-Conservation-Law-Simplified"><span class="math display">\[
+In - Out = \Delta S
+\tag{8}\]</span></span></p>
+</section>
+<section id="cosine-law-of-illumination" class="level2">
+<h2 class="anchored" data-anchor-id="cosine-law-of-illumination">Cosine Law of Illumination</h2>
+<p><span id="eq-Cosine-Law-of-Illumination"><span class="math display">\[
+R_s = R_p cos(Z)
+\tag{9}\]</span></span></p>
+</section>
+<section id="energy-of-photon" class="level2">
+<h2 class="anchored" data-anchor-id="energy-of-photon">Energy of Photon</h2>
+<p><span id="eq-Energy-of-Photon"><span class="math display">\[
+e = hv
+\tag{10}\]</span></span></p>
+</section>
+<section id="extraterrestrial-irradiance" class="level2">
+<h2 class="anchored" data-anchor-id="extraterrestrial-irradiance">Extraterrestrial Irradiance</h2>
+<p><span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
+I_ex=I_0(\frac{R_av}{R})^2\cos(Z)
+\tag{11}\]</span></span></p>
+</section>
+<section id="adjusted-constant" class="level2">
+<h2 class="anchored" data-anchor-id="adjusted-constant">Adjusted Constant</h2>
+<p><span id="eq-Adjusted-Constant"><span class="math display">\[
+\begin{eqnarray}(\frac{R_av}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
+\tag{12}\]</span></span></p>
+</section>
+<section id="kelvin" class="level2">
+<h2 class="anchored" data-anchor-id="kelvin">Kelvin</h2>
+<p><span id="eq-Kelvin"><span class="math display">\[
+T(K) = T(\deg C) + 273.15
+\tag{13}\]</span></span></p>
+</section>
+<section id="kirchhoffs-law" class="level2">
+<h2 class="anchored" data-anchor-id="kirchhoffs-law">Kirchhoffs Law</h2>
+<p><span id="eq-Kirchhoffs-Law"><span class="math display">\[
+a_{\lambda} = \epsilon_{\lambda}
+\tag{14}\]</span></span></p>
+</section>
+<section id="net-radiation-short" class="level2">
+<h2 class="anchored" data-anchor-id="net-radiation-short">Net Radiation Short</h2>
+<p><span id="eq-Net-Radiation-Short"><span class="math display">\[
+R_n = SW^* + LW^*
+\tag{15}\]</span></span></p>
+</section>
+<section id="net-radiation" class="level2">
+<h2 class="anchored" data-anchor-id="net-radiation">Net Radiation</h2>
+<p><span id="eq-Net-Radiation"><span class="math display">\[
+R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
+\tag{16}\]</span></span></p>
+</section>
+<section id="planks-law" class="level2">
+<h2 class="anchored" data-anchor-id="planks-law">Planks Law</h2>
+<p><span id="eq-Planks-Law"><span class="math display">\[
+E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
+\tag{17}\]</span></span></p>
+</section>
+<section id="solar-declination" class="level2">
+<h2 class="anchored" data-anchor-id="solar-declination">Solar Declination</h2>
+<p><span id="eq-Solar-Declination"><span class="math display">\[
+\begin{eqnarray}\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber \end{eqnarray}
+\tag{18}\]</span></span></p>
+</section>
+<section id="fractional-year" class="level2">
+<h2 class="anchored" data-anchor-id="fractional-year">Fractional Year</h2>
+<p><span id="eq-Fractional-Year"><span class="math display">\[
+\gamma = \frac{2 \pi }{365} (\rm{DOY}-1)
+\tag{19}\]</span></span></p>
+</section>
+<section id="solar-zenith" class="level2">
+<h2 class="anchored" data-anchor-id="solar-zenith">Solar Zenith</h2>
+<p><span id="eq-Solar-Zenith"><span class="math display">\[
+\cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
+\tag{20}\]</span></span></p>
+</section>
+<section id="hour-angle" class="level2">
+<h2 class="anchored" data-anchor-id="hour-angle">Hour Angle</h2>
+<p><span id="eq-Hour-Angle"><span class="math display">\[
+h = 15^{\circ}(12-LAT)
+\tag{21}\]</span></span></p>
+</section>
+<section id="stefan-boltzman-law-grey-body-adjusted" class="level2">
+<h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body-adjusted">Stefan Boltzman Law Grey Body Adjusted</h2>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body-Adjusted"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4 + (1-\epsilon) * (SW\downarrow+LW\downarrow)
+\tag{22}\]</span></span></p>
+</section>
+<section id="stefan-boltzman-law-grey-body" class="level2">
+<h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body">Stefan Boltzman Law Grey Body</h2>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4
+\tag{23}\]</span></span></p>
+</section>
+<section id="stefan-boltzman-law" class="level2">
+<h2 class="anchored" data-anchor-id="stefan-boltzman-law">Stefan Boltzman Law</h2>
+<p><span id="eq-Stefan-Boltzman-Law"><span class="math display">\[
+E_b = \sigma_b T^4
+\tag{24}\]</span></span></p>
+</section>
+<section id="surface-energy-balance-no-mass" class="level2">
+<h2 class="anchored" data-anchor-id="surface-energy-balance-no-mass">Surface Energy Balance No Mass</h2>
+<p><span id="eq-Surface-Energy-Balance-No-Mass"><span class="math display">\[
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G}
+\tag{25}\]</span></span></p>
+</section>
+<section id="surface-energy-balance-storage" class="level2">
+<h2 class="anchored" data-anchor-id="surface-energy-balance-storage">Surface Energy Balance Storage</h2>
+<p><span id="eq-Surface-Energy-Balance-Storage"><span class="math display">\[
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G} + \color{green}{\Delta S}
+\tag{26}\]</span></span></p>
+</section>
+<section id="surface-energy-balance" class="level2">
+<h2 class="anchored" data-anchor-id="surface-energy-balance">Surface Energy Balance</h2>
+<p><span id="eq-Surface-Energy-Balance"><span class="math display">\[
+R_n = H + LE + G + \Delta S
+\tag{27}\]</span></span></p>
+</section>
+<section id="lmst" class="level2">
+<h2 class="anchored" data-anchor-id="lmst">LMST</h2>
+<p><span id="eq-LMST"><span class="math display">\[
+LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
+\tag{28}\]</span></span></p>
+</section>
+<section id="lat" class="level2">
+<h2 class="anchored" data-anchor-id="lat">LAT</h2>
+<p><span id="eq-LAT"><span class="math display">\[
+LAT = LMST-\Delta LAT
+\tag{29}\]</span></span></p>
+</section>
+<section id="delta-lat" class="level2">
+<h2 class="anchored" data-anchor-id="delta-lat">Delta LAT</h2>
+<p><span id="eq-Delta-LAT"><span class="math display">\[
+\begin{eqnarray}\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
+\tag{30}\]</span></span></p>
+</section>
+<section id="weins-law" class="level2">
+<h2 class="anchored" data-anchor-id="weins-law">Weins Law</h2>
+<p><span id="eq-Weins-Law"><span class="math display">\[
+\lambda_{max} = \frac{b}{T}
+\tag{31}\]</span></span></p>
 
-These are list of symbols that will be used to represent key variables in the course.
 
-
-
-#| label: tbl-symbols
-#| tbl-cap: "Definitions of symbols."
-#| tbl-colwidths: [25,35,40]
-
-
-Sy <- read.csv(file = '_Data/Symbols.csv', check.names = FALSE)
-
-kable(Sy[,1:3])
-
-
-
-# Constants
-
-
-
-#| label: tbl-constants
-#| tbl-cap: "Definitions of constants."
-#| tbl-colwidths: [25,35,40]
-
-
-Sy <- read.csv(file = '_Data/Constants.csv', check.names = FALSE)
-
-kable(Sy[,1:3])
-
-
-
-
-#| label: tbl-saturation
-#| tbl-cap: "Saturation vapor density $\\rho^*_v$ and saturation vapor pressure $e^*$ as a function of temperature $T$.  This table can also be used to determine  $\\rho^*_{vw}$ corresponding to a given $T_w$"
-
-Data <- read.csv(file = '_Data/Saturation.csv',sep=',')
-
-col_Names <- c("$T (^{\\circ} C)$","$\\rho^*_v$","$e^*$")
-
-kable(Data, col.names = col_Names)
-
-
-
-
-# Important Equations and Helpful Conversions
-
-A list of important equations used in the course.
-
-* Note these are listed in no particular order
-
- -->
-
-
+</section>
 </section>
 
 </main> <!-- /main -->

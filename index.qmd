@@ -150,7 +150,7 @@ Assignments will most easily be completed using a programming language such as R
 
 ## Examinations 
 
-Exams will make up the half of your overall grade.  Exams will be open book, and will be written in-person.  The midterm will be Wednesday on March 13th.  The final exam will be completed during the examination period.  I will give further details closer to the date of the exams.
+Exams will make up the half of your overall grade.  Exams will be open book, and and completed **asynchronously**.  The midterm will be Wednesday on March 13th.  The final exam will be completed during the examination period.  I will give further details closer to the date of the exams.
 
 ### Study Questions
 

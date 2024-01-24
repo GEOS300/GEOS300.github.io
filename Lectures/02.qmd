@@ -79,7 +79,7 @@ Energy of relevant to climatology exists in the Earth-Atmosphere system in four 
 In general terms, we can define a conservation law as the balance between inputs, outputs, and storage ($\Delta S$) for a given system:
 
 
-{{< include _Equations/Conservation-Law-Simplified.qmd >}}
+{{< include ../_Equations/Conservation-Law-Simplified.qmd >}}
 
 :::
 
@@ -257,7 +257,7 @@ In this case, we have divergence ($\Delta S < 0$) from the system, because the i
 
 Given some scalar $c$, we can define it's total change across a system $\frac{dc}{dt}$ as the sum of it's partial derivatives ($\partial$):
 
-{{< include _Equations/Conservation-Law-Scalar.qmd >}}
+{{< include ../_Equations/Conservation-Law-Scalar.qmd >}}
 
 * **Advection:** $u \frac{\partial c}{\partial x}$, $v \frac{\partial c}{\partial y}$, & $w \frac{\partial c}{\partial z}$ represents the flow of c in to and out of the system
 * **Storage ($\Delta S$):** $\frac{\partial c}{\partial t}$ represents the change in c within the system over time
@@ -331,7 +331,7 @@ kable(Data, col.names = c('In','Out','$\\Delta S$'),escape = FALSE)
 
 ## Conservation at a land-interface
 
-{{< include _Equations/Conservation-Law-Scalar.qmd >}}
+{{< include ../_Equations/Conservation-Law-Scalar.qmd >}}
 
 
 :::: {.columns}
@@ -359,7 +359,7 @@ Keeping track of all four terms can become quite difficult, especially in hetero
 
 ## Horizontal Homogeneity
 
-{{< include _Equations/Conservation-Law-Scalar-Homogeneous.qmd >}}
+{{< include ../_Equations/Conservation-Law-Scalar-Homogeneous.qmd >}}
 
 :::: {.columns}
 
@@ -391,7 +391,7 @@ Over flat, homogeneous ecosystems this task becomes "fairly" simple for most var
 
 ## Horizontal Homogeneity
 
-{{< include _Equations/Conservation-Law-Scalar-Homogeneous-2.qmd >}}
+{{< include ../_Equations/Conservation-Law-Scalar-Homogeneous-2.qmd >}}
 
 :::: {.columns}
 
@@ -431,7 +431,7 @@ Reducing to 1D simplifies calculations.  We assume horizontal advection on oppos
 ::: {.column width="50%"}
 
 
-{{< include _Equations/Conservation-Law-Scalar-1D.qmd >}}
+{{< include ../_Equations/Conservation-Law-Scalar-1D.qmd >}}
 
 
 :::
@@ -677,7 +677,7 @@ power is energy divided by time
 ## Energy Fluxes at Earth’s Surface
 
 
-{{< include _Equations/Surface-Energy-Balance.qmd >}}
+{{< include ../_Equations/Surface-Energy-Balance.qmd >}}
 
 
 :::: {.columns}

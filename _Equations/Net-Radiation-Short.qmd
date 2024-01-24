@@ -1,0 +1,5 @@
+
+$$
+R_n = SW^* + LW^*
+$${#eq-Net-Radiation-Short}
+

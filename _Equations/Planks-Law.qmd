@@ -1,0 +1,4 @@
+
+$$
+E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
+$${#eq-Planks-Law}

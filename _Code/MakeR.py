@@ -4,19 +4,21 @@ import re
 In_Dir = 'Assignments/'
 # Out_Dir = '../AssignmentCode/'
 
-py_head = '''Py"
+py_head = '''
 jupyter: python3
 execute:
   keep-ipynb: true
----'''
+echo: false
+'''
 
-R_head = '''R"
+R_head = '''
 execute:
   keep-md: true
----'''
+echo: true
+'''
 
-py_code = 'py_code'
-R_code = 'R_code'
+py_code = '_py.'
+R_code = '_R.'
 
 print(In_Dir)
 for file in os.listdir(In_Dir):
@@ -24,6 +26,7 @@ for file in os.listdir(In_Dir):
         with open(f"{In_Dir}/{file}",'r',encoding='utf-8') as T:
 
             text = T.read().replace(py_head,R_head)
+            print(text[:100])
             text = text.replace(py_code,R_code)
             # A = re.findall(r'::: {.cell-output .cell-output-stdout}(.*?):::',text)
             # for i,a in enumerate(A):

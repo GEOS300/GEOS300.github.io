@@ -1,24 +1,26 @@
 ---
-title: "Assignment 1 Py"
+title: "Assignment 1"
+subtitle: "GEOS 300, 2024"
 jupyter: python3
 execute:
   keep-ipynb: true
+echo: false
 ---
-
 
 {{< include _Includes/01_Preamble.qmd >}}
 
-{{< include _Includes/Import_py_code.qmd >}}
+{{< include _Includes/Executables/Import_py.qmd >}}
 
-{{< include _Includes/01_Q1.qmd >}}
+{{< include _Includes/Questions/01/01.qmd >}}
 
-{{< include _Includes/01_CB1_py_code.qmd >}}
+{{< include _Includes/Executables/01/01_py.qmd >}}
 
-{{< include _Includes/01_Q2.qmd >}}
+{{< include _Includes/Questions/01/02.qmd >}}
 
-{{< include _Includes/01_CB2_py_code.qmd >}}
+{{< include _Includes/Executables/01/02_py.qmd >}}
 
-{{< include _Includes/01_Q3.qmd >}}
+{{< include _Includes/Questions/01/03_py.qmd >}}
 
-{{< include _Includes/01_CB_empty_py_code.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
+{{< include _Includes/Executables/empty_code_py.qmd >}}

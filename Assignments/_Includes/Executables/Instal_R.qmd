@@ -1,0 +1,15 @@
+
+Import the necessary packages.  This code block below should (fingers crossed) check if you have packages installed and install them for you if not.
+
+```{r}
+#|echo: True
+local({r <- getOption("repos")
+       r["CRAN"] <- "https://cran.r-project.org" 
+       options(repos=r)
+})
+list.of.packages <- c("ggplot2", "reshape2","latex2exp","patchwork")
+new.packages <- list.of.packages[!(list.of.packages %in% installed.packages()[,"Package"])]
+if(length(new.packages)) install.packages(new.packages)
+
+loading.packages = lapply(list.of.packages, require, character.only = TRUE)
+```

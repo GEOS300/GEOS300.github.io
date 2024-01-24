@@ -1,0 +1,4 @@
+## Question 3
+
+
+Using the equations from lecture, calculate the solar declination $\delta$, solar zenith angle $\Z$, and extraterrestrial irradiance $I_ex$ for solar noon (i.e., LAT = 12:00) on January 12th, 2024.

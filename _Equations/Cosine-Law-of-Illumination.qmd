@@ -1,0 +1,5 @@
+
+$$
+R_s = R_p cos(Z)
+$${#eq-Cosine-Law-of-Illumination}
+

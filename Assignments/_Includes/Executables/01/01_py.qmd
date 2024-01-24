@@ -1,0 +1,17 @@
+
+
+```{python}
+
+Student_Number = 0
+
+# Import the data from github & parse the timestamp for each record
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'
+df = pd.read_csv(data_url,parse_dates=['TIMESTAMP'],index_col=['TIMESTAMP'])
+
+# Calculate Albedo
+df['Albedo'] = df['SW_OUT_1_1_1']/df['SW_IN_1_1_1']
+
+# Preview the table using .head()
+df.head()
+
+```

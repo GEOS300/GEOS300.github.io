@@ -1,31 +1,48 @@
 import os, shutil
+from distutils.dir_util import copy_tree
 import re
 
 In_Dir = 'Assignments/'
-Out_Dir = '../AssignmentCode/'
-print(In_Dir)
+Write_Dir = '../AssignmentCode/'
+Out_Dir = 'docs/'
 for file in os.listdir(In_Dir):
+    mv = 0
     if file.endswith(".html.md"):
         with open(f"{In_Dir}/{file}",'r',encoding='utf-8') as T:
-            text = T.read().replace('\n','~~~~~~')
+            text = T.read()
+            text = text.replace('\n','~~~~~~')
             A = re.findall(r'::: {.cell-output .cell-output-stdout}(.*?):::',text)
-            for i,a in enumerate(A):
-                text=text.replace(a,'\n')
-            text=text.replace('.r','r')
+            B = re.findall(r'::: {.cell-output .cell-output-stderr}(.*?)```(.*?)```',text)
+            C = re.findall(r'::: {.cell-output-display}(.*?):::',text)
+            for rem in [A,B,C]:
+                for i,a in enumerate(rem):
+                    if isinstance(a, tuple):
+                        for part in a:
+                            text=text.replace(part,'\n')
+                    else:
+                        text=text.replace(a,'\n')
+            text=text.replace('.r .cell-code','r')
             text=text.replace('::: {.cell}','\n')
             text=text.replace('::: {.cell-output .cell-output-stdout}','\n')
+            text=text.replace('::: {.cell-output .cell-output-stderr}','\n')
+            text=text.replace('::: {.cell-output-display}','\n')
             text=text.replace(':::','\n')
+            text=text.replace('```~~~~~~```','\n')
             text=text.replace('~~~~~~','\n')
             
-        with open(Out_Dir+file.split(".html.md")[0]+'.rmd','w',encoding='utf-8') as out:
+        with open(Write_Dir+file.split(".html.md")[0]+'.rmd','w',encoding='utf-8') as out:
             out.write(text)
+        os.remove(f"{In_Dir}/{file}")
         print(f'Converted {file} to RMD')
+        mv = 1
     elif file.endswith(".ipynb"):
-        shutil.copyfile(In_Dir+file, Out_Dir+file)
+        shutil.move(In_Dir+file, Write_Dir+file)
 
-    
+        mv = 1
         print(f'Moved {file}')
-
+    if mv == 1:
+        print('Moving ',Out_Dir+In_Dir+file.split('.')[0]+'_files')
+        copy_tree(Out_Dir+In_Dir+file.split('.')[0]+'_files', Write_Dir+file.split('.')[0]+'_files')
     
 
 # import pandas as pd
