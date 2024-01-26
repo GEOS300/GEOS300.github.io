@@ -1,4 +1,3 @@
-## Question 3
+### Question 3
 
-
-Using the equations from lecture, calculate the solar declination $\delta$, solar zenith angle $\Z$, and extraterrestrial irradiance $I_ex$ for solar noon (i.e., LAT = 12:00) on January 12th, 2024.
+The plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are.  Looking at the plot, what stands out to you?  Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see.  Do you see any issues in the data?  If so, what is a possible explanation?

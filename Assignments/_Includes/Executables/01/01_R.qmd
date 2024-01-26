@@ -2,12 +2,15 @@
 ```{r}
 #| warning: false
 
-Student.Number = 0
-
 # Import the data from github & parse the timestamp for each record
 data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'
 df <- read.csv(file = data_url)
+
+# We have to parse the timestamp explicitly to convert it to a "time aware" object
 df$TIMESTAMP <- as.POSIXct(df$TIMESTAMP,format = "%Y-%m-%d %H%M")
+# Using this we can get a extra variables (DOY & HOUR) that will be helpful later
+df$HOUR <- format(df$TIMESTAMP,format = "%H")
+df$DOY <- format(df$TIMESTAMP,format = "%j")
 
 # Calculate Albedo
 df$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1

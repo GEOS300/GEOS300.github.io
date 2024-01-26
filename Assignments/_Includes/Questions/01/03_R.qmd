@@ -1,5 +1,0 @@
-## Question 3
-
-The maximum $SW_\downarrow$ observed during this time period was `{r} Selection$SW_IN_1_1_1[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1)]` at `{r} Selection$TIMESTAMP[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1)]`.   Pacific Standard Time (PST).  The CA-DBB station is located at 49.129 $^{\circ}$ N -122.985 $^{\circ}$ W.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_ex$ for this observation period.  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate atmospheric extinction attenuation coefficient for this day.
-
-b. No calculate the extinction coefficient for  `{r} Selection$TIMESTAMP[(Selection$TIMESTAMP == as.POSIXct("2024-01-19 1300",format = "%Y-%m-%d %H%M"))]`, when the observed value of $SW_\downarrow$ was `{r} Selection$SW_IN_1_1_1[(Selection$TIMESTAMP == as.POSIXct("2024-01-19 1300",format = "%Y-%m-%d %H%M"))]`.  What explains the difference?

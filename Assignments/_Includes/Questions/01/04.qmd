@@ -1,3 +1,3 @@
-### Question 3 
+### Question 4
 
-Using the example above as a template, plot the 4 component radiation for your assigned day.  Additionally, calculate $R_n$ and plot it on your chart as a solid black line.
+The plot below shows mean daily albedo.  What explains sharp increase on the 17th?

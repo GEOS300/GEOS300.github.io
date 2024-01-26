@@ -1,15 +1,4 @@
 
-(@) Using your dataset, at which time of the day do you observe (a) the maximum of $Q^{\ast}$, (b) the minimum of $Q^{\ast}$, (c) the maximum of $K^{\ast}$, (d) the maximum of $L^{\ast}$ and (e) the minimum of $L^{\ast}$? Briefly comment on the situations that cause the extremes. [5]
-
-(@) Calculate the average net short-wave $K^{\ast}$, net long-wave $L^{\ast}$, and net all-wave $Q^{\ast}$ radiative flux densities in $\textrm{W}\,\textrm{m}^{-2}$ over the 24 hour cycle. Then determine the daily energy gain (+) or loss (-) by converting the average $\textrm{W}\,\textrm{m}^{-2}$ into daily totals (energy per square metre and day, expressed in $\textrm{MJ}\,\textrm{day}^{-1}\,\textrm{m}^{-2})$ $\dagger$. [3]
-
-(@) Calculate solar declination $\delta$ for your day [2].
-
-(@) Calculate the local apparent time (LAT) for sunrise and sunset. Hint: Set solar altitude to $\beta = 0^{\circ}$ and solve for the angle $h$. Then convert $h$ to an actual time. Note that LAT always ensures solar noon is at 12:00. [4]
-
-(@) Calculate the incoming solar irradiance at the top of the atmosphere (`extraterrestrial irradiance' $K_{Ex}$) above the site, for the given day at noon. Note, time in your data (and here) is given in Pacific Standard Time (PST, i.e. no daylight saving offset). [5].
-
-(@) What is the approximate bulk transmissivity ($\Psi_a$) of the total atmospheric column at this time? Comment upon the reasons for the magnitude of $\Psi_a$ you find. [4]
 
 (@) Estimate the approximate surface albedo of the grass surface for that day. Justify your calculation of the albedo. Do you observe any diurnal variation of the albedo? $\dagger$ [4]
 
@@ -22,8 +11,6 @@
 (@) Using measured $L_{\downarrow}$ and measured air temperature $T_a$, calculate the actual bulk emissivity of the atmosphere $\varepsilon_{a}$ at noon? [2]
 
 (@) Using the Prata (1996) equation and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated value of $L_{\downarrow}$ at the same time (noon)? Comment on reasons why the value of $\varepsilon_a$ determined in Question 11 and Prata (1996) may be different? [4]
-
-(@) Based on the traces of measured radiative flux densities over the course of the day, and your calculations up to this point, speculate on the weather and surface conditions during your particular day. Is there any evidence for clear skies, haze, high clouds or fog? Support your argumentation using your measurements. [3]
 
 (@) Graph a scatter plot of the measured incoming solar radiation ($K_{\downarrow}$) versus the net all-wave radiation ($Q^{\ast}$). If you only had values of $K_{\downarrow}$ available in the future does this relation provide a possible means of obtaining $Q^{\ast}$? When might it be least useful? Discuss. $\dagger$ [6]
 

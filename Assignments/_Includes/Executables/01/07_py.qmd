@@ -1,0 +1,9 @@
+
+
+```{python}
+# Create a scatter plot
+
+# fig,ax=plt.subplots()
+# Selection.plot(ax=ax,kind='scatter',x='TA_1_1_1',y='TS_1')
+# plt.suptitle(f'Student #: {Student_Number}')
+```

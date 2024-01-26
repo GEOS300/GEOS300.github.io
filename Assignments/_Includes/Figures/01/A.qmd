@@ -1,0 +1,36 @@
+:::: {.columns}
+
+@fig-BB1 shows some pictures of the site from different perspectives.  @fig-map shows an interactive web map with high resolution satellite imagery.  Clicking on "BB" in   will zoom to the CA-DBB station and show the site's "Flux Footprint Climatology", which is a concept we'll cover later in term.  For now, we'll stick to looking at some basic components of the site's energy balance.  Clicking the "BB" button again will toggle the footprint later on and off.  You can pan/zoom to get a feel for what the site looks like. 
+
+::: {#fig-BB1 layout-ncol=2}
+
+![Looking south from above the in winter](../Lectures/images/BB1_Radiation.jpg){#fig-BB1-RAD}
+
+![Looking south from the EC station](../Lectures/images/BB1_Flux_Sensors.jpg){#fig-BB1-EC}
+
+![Just after a fresh snowfall](../Lectures/images/BB_SnowDay2.JPG){#fig-BB1-Snow}
+
+![Looking east from the top of the station in late summer](../Lectures/images/BB_east.jpg){#fig-BB1-East}
+
+
+:::
+
+::: {#fig-map}
+
+<div style="overflow: hidden;
+  padding-top: 55%;
+  position: relative">
+<iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0"
+style="border: 0;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 75%;">
+</iframe>
+</div>
+Location of UBC-Micromet Eddy Covariance Stations
+:::
+
+::::
+

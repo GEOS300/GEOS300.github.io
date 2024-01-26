@@ -2,6 +2,6 @@
 
 ```{R}
 
-# Insert your code here
+# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block
 
 ```

@@ -1,0 +1,130 @@
+---
+title: "Assignment 1"
+subtitle: "GEOS 300, 2024"
+execute:
+  keep-md: true
+echo: true
+---
+
+[Python and R code templates be found here](https://github.com/GEOS300/Assignment01) to help get you started.
+
+{{< include../Assignments/_Includes/Instructions.qmd >}}
+
+## CA DBB Flux Station
+
+In this lab, assignment, you're going to look at data from the CA-DBB (aka "BB") Eddy Covariance (EC) Station located in Delta, BC.  On the [assignment data page](https://github.com/GEOS300/AssignmentData) you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station.  Reviewing the metadata is an important first step of any project.
+
+{{< include../Assignments/_Includes/Figures/01/A.qmd >}}
+
+---
+
+{{< include../Assignments/_Includes/Executables/Student_Info_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/Import_R.qmd >}}
+
+### Question 1 
+
+Below is an example showing the first few rows of the BB climate summary data.  What values do you see listed for Incoming and outgoing $SW$ in the first row of the table, are these values reasonable?  Why or why not?  
+
+* Make suer to specify the units in your answer. Check the metadata provided [here](https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md) to make sure you understand the variable names and units.
+
+
+{{< include../Assignments/_Includes/Executables/01/01_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 2 
+
+We're going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area.  The table below shows some descriptive statistics for key variables during this time period.  What was the range of air temperatures observed over this time period?  How does it compare to the range of soil temperatures observed?
+
+
+{{< include../Assignments/_Includes/Executables/01/02_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 3
+
+The plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are.  Looking at the plot, what stands out to you?  Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see.  Do you see any issues in the data?  If so, what is a possible explanation?
+
+{{< include../Assignments/_Includes/Executables/01/03_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 4
+
+The plot below shows mean daily albedo.  What explains sharp increase on the 17th?
+
+{{< include../Assignments/_Includes/Executables/01/04_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+## Question 5
+
+The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_ex$ for the center point of this observation period (12:45).  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
+
+**Note**: you can find the site's Lat/Lon and time zone info in the CA-DBB station metadata file.
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 6
+
+Now calculate $\Psi_a$ for 12:45 January 19; the observed value of $SW_\downarrow$ was between 12:30 and 13:00 was 58.375 W$^m{-2}$.  What explains the difference between these two days?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 7
+
+Using the examples above as a template, calculate $R_n$ over the cold-snap.  Make a scatter plot showing $R_n$ on the y-axis and $SW_\downarrow$ on the x-axis.  Describe the relationship you.
+
+
+{{< include../Assignments/_Includes/Executables/01/07_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 8
+
+Using the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions.  Change the selection period so that it spans July 12th to July 19th, 2023.  Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 9
+
+Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_ex$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
+
+{{< include../Assignments/_Includes/Executables/01/09_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 10
+
+Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in $\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}$. You can use the wavelength of yellow light ($\lambda 0 0.55 \mu m$) for your estimate.
+**Hint**: Consult examples in reading package for radiation geometry.
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 11
+
+Let's assume the surface emissivity at CA-DBB is $\epsilon = 0.95$.  Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 12
+
+Now use the same equation to estimate the "apparent" radiative sky temperature ($T_k$) from $LW_{\downarrow}$ for this timestamp.  "Apparent" means you should assume $\epsilon{a} = 1.0$. How would you interpret $T_k$?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+### Question 13
+
+Using measured $LW_{\downarrow}$ and measured air temperature $T_a$, calculate the actual bulk emissivity of the atmosphere $\varepsilon_{a}$ at noon? [2]
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+
+### Question 14
+
+Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LS_{\downarrow}$? How well do these approximations match with what we actually observed?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}

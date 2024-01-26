@@ -1,0 +1,8 @@
+
+
+```{r}
+# Code Tip: getting the time and value when a variable reaches it's maximum
+
+# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]
+
+```

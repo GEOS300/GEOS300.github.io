@@ -812,32 +812,72 @@
     ]
   },
   {
-    "objectID": "Assignments/index.html",
-    "href": "Assignments/index.html",
-    "title": "Assignments",
-    "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
-    "crumbs": [
-      "Assignments"
-    ]
-  },
-  {
-    "objectID": "Assignments/01_py.html",
-    "href": "Assignments/01_py.html",
+    "objectID": "AssignmentsR_out/01.html",
+    "href": "AssignmentsR_out/01.html",
     "title": "Assignment 1",
     "section": "",
-    "text": "In this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station Figure 1, located in Delta, BC. Clicking on “BB” in Figure 2 will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like. For now, we’ll stick to looking at some basic components of the site’s energy balance. In the data files (Climate_Summary_BB.csv & Climate_Summary_BB_Metadata.csv) you will find measurements multiple variables and their corresponding metadata.",
+    "text": "Python and R code templates be found here to help get you started."
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#instructions",
+    "href": "AssignmentsR_out/01.html#instructions",
+    "title": "Assignment 1",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units."
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "title": "Assignment 1",
+    "section": "CA DBB Flux Station",
+    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n            TIMESTAMP SW_IN_1_1_1 LW_IN_1_1_1 SW_OUT_1_1_1 LW_OUT_1_1_1\n1 2022-01-01 00:30:00  0.05977540    263.2279    1.3582480     271.2144\n2 2022-01-01 01:00:00  0.01990683    265.9375    1.1015637     274.9786\n3 2022-01-01 01:30:00  0.10298067    268.3632    0.6146293     279.2283\n4 2022-01-01 02:00:00  0.02578117    273.8807    0.3941725     281.6006\n5 2022-01-01 02:30:00  0.03268367    277.7110    0.3813828     283.5396\n6 2022-01-01 03:00:00  0.03338333    277.2797    0.3865185     284.4536\n           H       G_1  TA_1_1_1  TA_1_2_1     TS_1     TS_2     TS_3 RH_1_1_1\n1 -29.676018 -5.586875 -7.762711 -9.570630 3.630083 4.214648 7.489783 83.28255\n2         NA -5.553178 -7.200051 -9.533210 3.677612 4.251830 7.531122 82.64555\n3         NA -5.575220 -6.349798 -7.833451 3.669683 4.264247 7.550878 79.34940\n4         NA -5.574099 -6.297862 -7.050872 3.692943 4.280375 7.569431 79.83266\n5         NA -5.562795 -6.020581 -6.729948 3.708760 4.293371 7.578785 79.85045\n6  -6.500002 -5.563889 -5.811514 -6.359775 3.698611 4.284091 7.576676 79.45928\n  P_1_1_1 PA_1_1_1  WS_1_1_1  WD_1_1_1 VPD_1_1_1 HOUR DOY    Albedo\n1       0 102.3971 0.6597374 0.6597374 0.5728984   00 001 22.722525\n2       0 102.4034 1.4010231 1.4010231 0.6211866   01 001 55.335956\n3       0 102.4177 1.6921777 1.6921777 0.7891113   01 001  5.968395\n4       0 102.4485 1.8559053 1.8559053 0.7737166   02 001 15.289165\n5       0 102.4614 2.0136266 2.0136266 0.7896050   02 001 11.668912\n6       0 102.4637 2.0015748 2.0015748 0.8178825   03 001 11.578188\n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n     DOY                HOUR            SW_IN_1_1_1        LW_IN_1_1_1   \n Length:384         Length:384         Min.   :  0.0000   Min.   :161.6  \n Class :character   Class :character   1st Qu.:  0.0000   1st Qu.:215.1  \n Mode  :character   Mode  :character   Median :  0.0275   Median :249.9  \n                                       Mean   : 45.2556   Mean   :255.8  \n                                       3rd Qu.: 40.2896   3rd Qu.:308.0  \n                                       Max.   :369.3406   Max.   :330.5  \n  SW_OUT_1_1_1      LW_OUT_1_1_1      TA_1_1_1            TS_1      \n Min.   :  0.000   Min.   :269.1   Min.   :-13.297   Min.   :2.607  \n 1st Qu.:  1.267   1st Qu.:282.2   1st Qu.: -8.566   1st Qu.:3.086  \n Median :  2.698   Median :299.1   Median : -2.880   Median :3.555  \n Mean   : 14.706   Mean   :296.8   Mean   : -4.576   Mean   :3.597  \n 3rd Qu.: 18.668   3rd Qu.:310.9   3rd Qu.: -0.607   3rd Qu.:3.979  \n Max.   :114.190   Max.   :323.1   Max.   :  1.805   Max.   :4.984  \n    RH_1_1_1     \n Min.   : 37.67  \n 1st Qu.: 65.42  \n Median : 88.57  \n Mean   : 80.75  \n 3rd Qu.: 98.25  \n Max.   :100.00  \n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n\n\n\n\n\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n\n\n\n\n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#question-5",
+    "href": "AssignmentsR_out/01.html#question-5",
+    "title": "Assignment 1",
+    "section": "Question 5",
+    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for the center point of this observation period (12:45). Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n# Create a scatter plot\n\n# p &lt;- ggplot(Selection, aes(x=TA_1_1_1, y=TS_1)) + geom_point()\n# p + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_ex\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n# Code Tip: getting the time and value when a variable reaches it's maximum\n\n# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LS_{\\downarrow}\\)? How well do these approximations match with what we actually observed?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "Assignments/01.html",
+    "href": "Assignments/01.html",
+    "title": "Assignment 1",
+    "section": "",
+    "text": "Python and R code templates be found here to help get you started.",
     "crumbs": [
       "Assignments",
       "Assignment 1"
     ]
   },
   {
-    "objectID": "Assignments/01_py.html#question-3",
-    "href": "Assignments/01_py.html#question-3",
+    "objectID": "Assignments/01.html#instructions",
+    "href": "Assignments/01.html#instructions",
     "title": "Assignment 1",
-    "section": "Question 3",
-    "text": "Question 3\n\nThe maximum \\(SW_\\downarrow\\) observed during this time period was 369.34064 at DatetimeIndex([‘2024-01-13 13:00:00’], dtype=‘datetime64[ns]’, name=‘TIMESTAMP’, freq=None). Pacific Standard Time (PST). The CA-DBB station is located at 49.129 \\(^{\\circ}\\) N -122.985 \\(^{\\circ}\\) W. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for this observation period. Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate atmospheric extinction attenuation coefficient for this day.\nNow calculate the extinction coefficient for DatetimeIndex([‘2024-01-19 13:00:00’], dtype=‘datetime64[ns]’, name=‘TIMESTAMP’, freq=None), when the observed value of \\(SW_\\downarrow\\) was TIMESTAMP 2024-01-19 13:00:00 58.37548 Name: SW_IN_1_1_1, dtype: float64. What explains the difference?",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "Assignments/01.html#ca-dbb-flux-station",
+    "href": "Assignments/01.html#ca-dbb-flux-station",
+    "title": "Assignment 1",
+    "section": "CA DBB Flux Station",
+    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n\n\n\n\n\n\n\n\nSW_IN_1_1_1\nLW_IN_1_1_1\nSW_OUT_1_1_1\nLW_OUT_1_1_1\nH\nG_1\nTA_1_1_1\nTA_1_2_1\nTS_1\nTS_2\nTS_3\nRH_1_1_1\nP_1_1_1\nPA_1_1_1\nWS_1_1_1\nWD_1_1_1\nVPD_1_1_1\nHOUR\nDOY\n\n\nTIMESTAMP\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n2022-01-01 00:30:00\n0.059775\n263.22790\n1.358248\n271.21440\n-29.676018\n-5.586875\n-7.762711\n-9.570630\n3.630083\n4.214648\n7.489783\n83.282550\n0.0\n102.397125\n0.659737\n0.659737\n0.572898\n0\n1\n\n\n2022-01-01 01:00:00\n0.019907\n265.93750\n1.101564\n274.97858\nNaN\n-5.553178\n-7.200051\n-9.533210\n3.677612\n4.251830\n7.531122\n82.645550\n0.0\n102.403420\n1.401023\n1.401023\n0.621187\n1\n1\n\n\n2022-01-01 01:30:00\n0.102981\n268.36322\n0.614629\n279.22833\nNaN\n-5.575220\n-6.349798\n-7.833451\n3.669683\n4.264247\n7.550878\n79.349396\n0.0\n102.417690\n1.692178\n1.692178\n0.789111\n1\n1\n\n\n2022-01-01 02:00:00\n0.025781\n273.88068\n0.394172\n281.60062\nNaN\n-5.574099\n-6.297862\n-7.050872\n3.692943\n4.280375\n7.569431\n79.832660\n0.0\n102.448500\n1.855905\n1.855905\n0.773717\n2\n1\n\n\n2022-01-01 02:30:00\n0.032684\n277.71097\n0.381383\n283.53964\nNaN\n-5.562795\n-6.020581\n-6.729948\n3.708760\n4.293371\n7.578785\n79.850450\n0.0\n102.461420\n2.013627\n2.013627\n0.789605\n2\n1\n\n\n\n\n\n\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n\n\n\n\n\n\n\n\nDOY\nHOUR\nSW_IN_1_1_1\nLW_IN_1_1_1\nSW_OUT_1_1_1\nLW_OUT_1_1_1\nTA_1_1_1\nTS_1\nRH_1_1_1\n\n\n\n\ncount\n384.000\n384.000\n384.000\n384.000\n384.000\n384.000\n384.000\n384.000\n384.000\n\n\nmean\n15.500\n11.500\n45.256\n255.759\n14.706\n296.752\n-4.576\n3.597\n80.749\n\n\nstd\n2.294\n6.931\n89.789\n51.854\n23.028\n15.939\n4.571\n0.625\n19.244\n\n\nmin\n12.000\n0.000\n0.000\n161.566\n0.000\n269.093\n-13.297\n2.607\n37.666\n\n\n25%\n13.750\n5.750\n0.000\n215.101\n1.267\n282.230\n-8.566\n3.086\n65.421\n\n\n50%\n15.500\n11.500\n0.027\n249.904\n2.698\n299.117\n-2.880\n3.555\n88.566\n\n\n75%\n17.250\n17.250\n40.290\n308.048\n18.668\n310.924\n-0.607\n3.979\n98.252\n\n\nmax\n19.000\n23.000\n369.341\n330.495\n114.190\n323.107\n1.805\n4.984\n100.000\n\n\n\n\n\n\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n\n\n\n\n\n\n\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n\nText(0.5, 0.98, 'Student #: 123456789')",
+    "crumbs": [
+      "Assignments",
+      "Assignment 1"
+    ]
+  },
+  {
+    "objectID": "Assignments/01.html#question-5",
+    "href": "Assignments/01.html#question-5",
+    "title": "Assignment 1",
+    "section": "Question 5",
+    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for the center point of this observation period (12:45). Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_ex\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LS_{\\downarrow}\\)? How well do these approximations match with what we actually observed?",
     "crumbs": [
       "Assignments",
       "Assignment 1"
@@ -855,25 +895,13 @@
     ]
   },
   {
-    "objectID": "Assignments/01_R.html",
-    "href": "Assignments/01_R.html",
-    "title": "Assignment 1",
+    "objectID": "Assignments/index.html",
+    "href": "Assignments/index.html",
+    "title": "Assignments",
     "section": "",
-    "text": "In this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station Figure 1, located in Delta, BC. Clicking on “BB” in Figure 2 will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like. For now, we’ll stick to looking at some basic components of the site’s energy balance. In the data files (Climate_Summary_BB.csv & Climate_Summary_BB_Metadata.csv) you will find measurements multiple variables and their corresponding metadata.\n#|echo: True\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\n\n\nAttaching package: 'tidyr'\n\n\nThe following object is masked from 'package:reshape2':\n\n    smiths",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
     "crumbs": [
-      "Assignments",
-      "Assignment 1"
-    ]
-  },
-  {
-    "objectID": "Assignments/01_R.html#question-3",
-    "href": "Assignments/01_R.html#question-3",
-    "title": "Assignment 1",
-    "section": "Question 3",
-    "text": "Question 3\nThe maximum \\(SW_\\downarrow\\) observed during this time period was 369.34064 at 2024-01-13 13:00:00. Pacific Standard Time (PST). The CA-DBB station is located at 49.129 \\(^{\\circ}\\) N -122.985 \\(^{\\circ}\\) W. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for this observation period. Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate atmospheric extinction attenuation coefficient for this day.\n\nNo calculate the extinction coefficient for 2024-01-19 13:00:00, when the observed value of \\(SW_\\downarrow\\) was 58.37548. What explains the difference?\n\n\n# Insert your code here\n\n\n# Insert your code here",
-    "crumbs": [
-      "Assignments",
-      "Assignment 1"
+      "Assignments"
     ]
   },
   {
@@ -1727,11 +1755,22 @@
     ]
   },
   {
+    "objectID": "Resources.html#albedo",
+    "href": "Resources.html#albedo",
+    "title": "Programming Resources",
+    "section": "Albedo",
+    "text": "Albedo\n\\[\nalbedo = \\alpha_{SW} = \\frac{SW_{\\uparrow}}{SW_{\\downarrow}}\n\\tag{1}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
     "objectID": "Resources.html#le-bowen",
     "href": "Resources.html#le-bowen",
     "title": "Programming Resources",
     "section": "LE Bowen",
-    "text": "LE Bowen\n\\[\nLE = \\frac{R_n-G}{1+B}\n\\tag{1}\\]",
+    "text": "LE Bowen\n\\[\nLE = \\frac{R_n-G}{1+B}\n\\tag{2}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1742,7 +1781,7 @@
     "href": "Resources.html#h-bowen",
     "title": "Programming Resources",
     "section": "H Bowen",
-    "text": "H Bowen\n\\[\nH = \\frac{R_n-G}{1+B^{-1}}\n\\tag{2}\\]",
+    "text": "H Bowen\n\\[\nH = \\frac{R_n-G}{1+B^{-1}}\n\\tag{3}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1753,7 +1792,7 @@
     "href": "Resources.html#bowen-ratio",
     "title": "Programming Resources",
     "section": "Bowen Ratio",
-    "text": "Bowen Ratio\n\\[\nB = \\frac{H}{LE}\n\\tag{3}\\]",
+    "text": "Bowen Ratio\n\\[\nB = \\frac{H}{LE}\n\\tag{4}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1764,7 +1803,7 @@
     "href": "Resources.html#conservation-law-scalar-1d",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar 1D",
-    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{4}\\]",
+    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{5}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1775,7 +1814,7 @@
     "href": "Resources.html#conservation-law-scalar-homogeneous-2",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar Homogeneous 2",
-    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{5}\\]",
+    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{6}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1786,7 +1825,7 @@
     "href": "Resources.html#conservation-law-scalar-homogeneous",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar Homogeneous",
-    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{6}\\]",
+    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{7}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1797,7 +1836,7 @@
     "href": "Resources.html#conservation-law-scalar",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar",
-    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{7}\\]",
+    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{8}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1808,7 +1847,7 @@
     "href": "Resources.html#conservation-law-simplified",
     "title": "Programming Resources",
     "section": "Conservation Law Simplified",
-    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{8}\\]",
+    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{9}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1819,7 +1858,7 @@
     "href": "Resources.html#cosine-law-of-illumination",
     "title": "Programming Resources",
     "section": "Cosine Law of Illumination",
-    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{9}\\]",
+    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{10}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1830,7 +1869,7 @@
     "href": "Resources.html#energy-of-photon",
     "title": "Programming Resources",
     "section": "Energy of Photon",
-    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{10}\\]",
+    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{11}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1841,7 +1880,7 @@
     "href": "Resources.html#extraterrestrial-irradiance",
     "title": "Programming Resources",
     "section": "Extraterrestrial Irradiance",
-    "text": "Extraterrestrial Irradiance\n\\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\tag{11}\\]",
+    "text": "Extraterrestrial Irradiance\n\\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\tag{12}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1852,7 +1891,7 @@
     "href": "Resources.html#adjusted-constant",
     "title": "Programming Resources",
     "section": "Adjusted Constant",
-    "text": "Adjusted Constant\n\\[\n\\begin{eqnarray}(\\frac{R_av}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\\end{eqnarray}\n\\tag{12}\\]",
+    "text": "Adjusted Constant\n\\[\n\\begin{eqnarray}(\\frac{R_av}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\\end{eqnarray}\n\\tag{13}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1863,7 +1902,7 @@
     "href": "Resources.html#kelvin",
     "title": "Programming Resources",
     "section": "Kelvin",
-    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{13}\\]",
+    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{14}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1874,7 +1913,7 @@
     "href": "Resources.html#kirchhoffs-law",
     "title": "Programming Resources",
     "section": "Kirchhoffs Law",
-    "text": "Kirchhoffs Law\n\\[\na_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{14}\\]",
+    "text": "Kirchhoffs Law\n\\[\na_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{15}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1885,7 +1924,7 @@
     "href": "Resources.html#net-radiation-short",
     "title": "Programming Resources",
     "section": "Net Radiation Short",
-    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{15}\\]",
+    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{16}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1896,7 +1935,7 @@
     "href": "Resources.html#net-radiation",
     "title": "Programming Resources",
     "section": "Net Radiation",
-    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{16}\\]",
+    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{17}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1907,7 +1946,7 @@
     "href": "Resources.html#planks-law",
     "title": "Programming Resources",
     "section": "Planks Law",
-    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{17}\\]",
+    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{18}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1918,7 +1957,7 @@
     "href": "Resources.html#solar-declination",
     "title": "Programming Resources",
     "section": "Solar Declination",
-    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{18}\\]",
+    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{19}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1929,7 +1968,7 @@
     "href": "Resources.html#fractional-year",
     "title": "Programming Resources",
     "section": "Fractional Year",
-    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (\\rm{DOY}-1)\n\\tag{19}\\]",
+    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (\\rm{DOY}-1)\n\\tag{20}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1940,7 +1979,7 @@
     "href": "Resources.html#solar-zenith",
     "title": "Programming Resources",
     "section": "Solar Zenith",
-    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{20}\\]",
+    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{21}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1951,7 +1990,7 @@
     "href": "Resources.html#hour-angle",
     "title": "Programming Resources",
     "section": "Hour Angle",
-    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{21}\\]",
+    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{22}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1962,7 +2001,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body Adjusted",
-    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{22}\\]",
+    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{23}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1973,7 +2012,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body",
-    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{23}\\]",
+    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{24}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1984,7 +2023,7 @@
     "href": "Resources.html#stefan-boltzman-law",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law",
-    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{24}\\]",
+    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{25}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1995,7 +2034,7 @@
     "href": "Resources.html#surface-energy-balance-no-mass",
     "title": "Programming Resources",
     "section": "Surface Energy Balance No Mass",
-    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{25}\\]",
+    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{26}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2006,7 +2045,7 @@
     "href": "Resources.html#surface-energy-balance-storage",
     "title": "Programming Resources",
     "section": "Surface Energy Balance Storage",
-    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{26}\\]",
+    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{27}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2017,7 +2056,7 @@
     "href": "Resources.html#surface-energy-balance",
     "title": "Programming Resources",
     "section": "Surface Energy Balance",
-    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{27}\\]",
+    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{28}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2028,7 +2067,7 @@
     "href": "Resources.html#lmst",
     "title": "Programming Resources",
     "section": "LMST",
-    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{28}\\]",
+    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{29}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2039,7 +2078,7 @@
     "href": "Resources.html#lat",
     "title": "Programming Resources",
     "section": "LAT",
-    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{29}\\]",
+    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{30}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2050,7 +2089,7 @@
     "href": "Resources.html#delta-lat",
     "title": "Programming Resources",
     "section": "Delta LAT",
-    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{30}\\]",
+    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{31}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2061,7 +2100,7 @@
     "href": "Resources.html#weins-law",
     "title": "Programming Resources",
     "section": "Weins Law",
-    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{31}\\]",
+    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{32}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"

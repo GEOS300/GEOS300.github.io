@@ -1,0 +1,47 @@
+
+
+```{python}
+# Create a plot with two sub-plots
+# Plot the radiation components on the first sub-plot
+# Plot Ta,Ts, and RH on the second sub-plot
+fig,axes=plt.subplots(2,sharex=True)
+plt.suptitle(f'Student #: {Student_Number}')
+
+Selection.plot(ax=axes[0],
+              y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1'],
+              color=['blue','red','blue','red'],
+              style=['-','-','--','--'])
+axes[0].legend(['SW In','SW Out','LW In','LW Out'],ncol=4)
+
+# Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes
+axes[0].set_ylabel('Unit$_{subscript}^{superscript}$')
+axes[0].set_ylim([0,475])
+axes[0].set_title(f'Radiative Fluxes at CA-DBB Flux Station')
+axes[0].grid()
+
+# For this plot we're going to plot temperature on the left axes and RH on the right axes
+axes[1].plot()
+second_yaxes = axes[1].twinx()
+
+# A simple "hack" to get the element from second_yaxes (RH_1_1_1) to show up with the legend items for the main yaxis
+Selection['Dummy_Trace'] = np.nan
+Selection.plot(ax=axes[1],
+              y=['TA_1_1_1','TS_1','Dummy_Trace'],
+              color=['red','red','blue'],
+              style=['-','--',':'])
+axes[1].legend(['Ta 2m','Ts 0.05m','RH 2m'],ncol=2,loc=4)
+axes[1].set_ylabel('C$\degree$')
+axes[1].set_ylim([-15,10])
+
+Selection.plot(ax=second_yaxes,
+              y=['RH_1_1_1'],
+              color=['blue'],
+              style=[':'],
+              legend=False)
+second_yaxes.set_ylabel('%')
+
+axes[1].set_xlabel('Date')
+axes[1].set_title('Temperature and Humidity')
+axes[1].grid()
+
+```

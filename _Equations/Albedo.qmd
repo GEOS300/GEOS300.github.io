@@ -1,0 +1,4 @@
+
+$$
+albedo = \alpha_{SW} = \frac{SW_{\uparrow}}{SW_{\downarrow}}
+$${#eq-Albedo}

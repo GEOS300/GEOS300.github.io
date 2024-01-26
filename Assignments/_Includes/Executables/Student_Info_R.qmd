@@ -1,0 +1,9 @@
+
+
+```{r}
+#| include: false
+# Enter your information below
+Student.Name = 'June Skeeter'
+Student.Number = 123456789
+sprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)
+```

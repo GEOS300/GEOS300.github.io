@@ -1,6 +1,7 @@
 
 ### Question 1 
 
-Below is an example showing the first few rows of the BB climate summary data.  What value do you see listed for Incoming $SW$ in the first row of the table, is this value reasonable?  What is the value listed for Albedos, is this reasonable?  Why or why not? 
+Below is an example showing the first few rows of the BB climate summary data.  What values do you see listed for Incoming and outgoing $SW$ in the first row of the table, are these values reasonable?  Why or why not?  
 
 * Make suer to specify the units in your answer. Check the metadata provided [here](https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md) to make sure you understand the variable names and units.
+

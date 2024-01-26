@@ -1,0 +1,4 @@
+### Question 9
+
+Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  Use this information to calculate $I_ex$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.
+

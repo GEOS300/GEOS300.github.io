@@ -20,44 +20,10 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
-<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/quarto-nav/headroom.min.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
 <script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +66,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
@@ -184,7 +153,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/01_R.html">Assignment 1</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/01.html">Assignment 1</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -207,13 +176,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Assignments/01_py.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Assignment 1</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../Assignments/01_R.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Assignments/01.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Assignment 1</span></a>
   </div>
 </li>
@@ -228,7 +191,7 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/01_R.html">Assignment 1</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/01.html">Assignment 1</a></li></ol></nav>
 <div class="quarto-title">
 <h1 class="title">Assignment 1</h1>
 <p class="subtitle lead">GEOS 300, 2024</p>
@@ -248,8 +211,18 @@ window.Quarto = {
 </header>
 
 
-<p>In this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station <a href="#fig-BB1" class="quarto-xref">Figure&nbsp;1</a>, located in Delta, BC. Clicking on “BB” in <a href="#fig-map" class="quarto-xref">Figure&nbsp;2</a> will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like. For now, we’ll stick to looking at some basic components of the site’s energy balance. In the data files (Climate_Summary_BB.csv &amp; Climate_Summary_BB_Metadata.csv) you will find measurements multiple variables and their corresponding metadata.</p>
-<div id="fig-BB1" class="quarto-layout-panel">
+<p><a href="https://github.com/GEOS300/Assignment01">Python and R code templates be found here</a> to help get you started.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>It is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here <a href="https://github.com/GEOS300/AssignmentData/">here</a>. <strong>Note</strong> these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.</p>
+<p>Please upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File <span class="math inline">\(\gg\)</span> Download as <span class="math inline">\(\gg\)</span> HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. <strong>Do not attach a spreadsheet.</strong></p>
+<p><strong>Make Sure</strong> your student number is include on each plot you produce, and that each plot is using the correct units.</p>
+</section>
+<section id="ca-dbb-flux-station" class="level2">
+<h2 class="anchored" data-anchor-id="ca-dbb-flux-station">CA DBB Flux Station</h2>
+<p>In this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the <a href="https://github.com/GEOS300/AssignmentData">assignment data page</a> you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.</p>
+<div class="columns">
+<p><a href="#fig-BB1" class="quarto-xref">Figure&nbsp;1</a> shows some pictures of the site from different perspectives. <a href="#fig-map" class="quarto-xref">Figure&nbsp;2</a> shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.</p><div id="fig-BB1" class="quarto-layout-panel">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-BB1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div class="quarto-layout-row">
@@ -257,10 +230,10 @@ window.Quarto = {
 <div id="fig-BB1-RAD" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-BB1-RAD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://geos300.github.io/Lectures/images/BB1_Radiation.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+<img src="../Lectures/images/BB1_Radiation.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-RAD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-(a) Looking south from above the radiometer
+(a) Looking south from above the in winter
 </figcaption>
 </figure>
 </div>
@@ -269,10 +242,36 @@ window.Quarto = {
 <div id="fig-BB1-EC" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-BB1-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img src="https://geos300.github.io/Lectures/images/BB1_Flux_Sensors.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+<img src="../Lectures/images/BB1_Flux_Sensors.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (b) Looking south from the EC station
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-Snow" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-Snow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Lectures/images/BB_SnowDay2.JPG" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-Snow-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Just after a fresh snowfall
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-East" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-East-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Lectures/images/BB_east.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-East-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Looking east from the top of the station in late summer
 </figcaption>
 </figure>
 </div>
@@ -283,8 +282,7 @@ window.Quarto = {
 Figure&nbsp;1
 </figcaption>
 </figure>
-</div>
-<div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
+</div><div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <div style="overflow: hidden;
@@ -304,131 +302,383 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 </figcaption>
 </figure>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#|echo: True</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"reshape2"</span>)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"latex2exp"</span>)</span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"patchwork"</span>)</span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>
-Attaching package: 'tidyr'</code></pre>
 </div>
-<div class="cell-output cell-output-stderr">
-<pre><code>The following object is masked from 'package:reshape2':
-
-    smiths</code></pre>
-</div>
-</div>
+<hr>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>Below is an example showing the first few rows of the BB climate summary data. What value do you see listed for Incoming <span class="math inline">\(SW\)</span> in the first row of the table, is this value reasonable? What is the value listed for Albedos, is this reasonable? Why or why not?</p>
+<p>Below is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing <span class="math inline">\(SW\)</span> in the first row of the table, are these values reasonable? Why or why not?</p>
 <ul>
 <li>Make suer to specify the units in your answer. Check the metadata provided <a href="https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md">here</a> to make sure you understand the variable names and units.</li>
 </ul>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>Student.Number <span class="ot">=</span> <span class="dv">0</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'</span></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> data_url)</span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%Y-%m-%d %H%M"</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Albedo <span class="ot">=</span> df<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>df<span class="sc">$</span>SW_IN_1_1_1</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the table using head()</span></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            TIMESTAMP SW_IN_1_1_1 LW_IN_1_1_1 SW_OUT_1_1_1 LW_OUT_1_1_1
-1 2022-01-01 00:30:00  0.05977540    263.2279    1.3582480     271.2144
-2 2022-01-01 01:00:00  0.01990683    265.9375    1.1015637     274.9786
-3 2022-01-01 01:30:00  0.10298067    268.3632    0.6146293     279.2283
-4 2022-01-01 02:00:00  0.02578117    273.8807    0.3941725     281.6006
-5 2022-01-01 02:30:00  0.03268367    277.7110    0.3813828     283.5396
-6 2022-01-01 03:00:00  0.03338333    277.2797    0.3865185     284.4536
-           H       G_1  TA_1_1_1  TA_1_2_1     TS_1     TS_2     TS_3 RH_1_1_1
-1 -29.676018 -5.586875 -7.762711 -9.570630 3.630083 4.214648 7.489783 83.28255
-2         NA -5.553178 -7.200051 -9.533210 3.677612 4.251830 7.531122 82.64555
-3         NA -5.575220 -6.349798 -7.833451 3.669683 4.264247 7.550878 79.34940
-4         NA -5.574099 -6.297862 -7.050872 3.692943 4.280375 7.569431 79.83266
-5         NA -5.562795 -6.020581 -6.729948 3.708760 4.293371 7.578785 79.85045
-6  -6.500002 -5.563889 -5.811514 -6.359775 3.698611 4.284091 7.576676 79.45928
-  P_1_1_1 PA_1_1_1  WS_1_1_1  WD_1_1_1 VPD_1_1_1    Albedo
-1       0 102.3971 0.6597374 0.6597374 0.5728984 22.722525
-2       0 102.4034 1.4010231 1.4010231 0.6211866 55.335956
-3       0 102.4177 1.6921777 1.6921777 0.7891113  5.968395
-4       0 102.4485 1.8559053 1.8559053 0.7737166 15.289165
-5       0 102.4614 2.0136266 2.0136266 0.7896050 11.668912
-6       0 102.4637 2.0015748 2.0015748 0.8178825 11.578188</code></pre>
+<div id="f4116855" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-display" data-execution_count="3">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">SW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">SW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">H</th>
+<th data-quarto-table-cell-role="th">G_1</th>
+<th data-quarto-table-cell-role="th">TA_1_1_1</th>
+<th data-quarto-table-cell-role="th">TA_1_2_1</th>
+<th data-quarto-table-cell-role="th">TS_1</th>
+<th data-quarto-table-cell-role="th">TS_2</th>
+<th data-quarto-table-cell-role="th">TS_3</th>
+<th data-quarto-table-cell-role="th">RH_1_1_1</th>
+<th data-quarto-table-cell-role="th">P_1_1_1</th>
+<th data-quarto-table-cell-role="th">PA_1_1_1</th>
+<th data-quarto-table-cell-role="th">WS_1_1_1</th>
+<th data-quarto-table-cell-role="th">WD_1_1_1</th>
+<th data-quarto-table-cell-role="th">VPD_1_1_1</th>
+<th data-quarto-table-cell-role="th">HOUR</th>
+<th data-quarto-table-cell-role="th">DOY</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">TIMESTAMP</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 00:30:00</td>
+<td>0.059775</td>
+<td>263.22790</td>
+<td>1.358248</td>
+<td>271.21440</td>
+<td>-29.676018</td>
+<td>-5.586875</td>
+<td>-7.762711</td>
+<td>-9.570630</td>
+<td>3.630083</td>
+<td>4.214648</td>
+<td>7.489783</td>
+<td>83.282550</td>
+<td>0.0</td>
+<td>102.397125</td>
+<td>0.659737</td>
+<td>0.659737</td>
+<td>0.572898</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2022-01-01 01:00:00</td>
+<td>0.019907</td>
+<td>265.93750</td>
+<td>1.101564</td>
+<td>274.97858</td>
+<td>NaN</td>
+<td>-5.553178</td>
+<td>-7.200051</td>
+<td>-9.533210</td>
+<td>3.677612</td>
+<td>4.251830</td>
+<td>7.531122</td>
+<td>82.645550</td>
+<td>0.0</td>
+<td>102.403420</td>
+<td>1.401023</td>
+<td>1.401023</td>
+<td>0.621187</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 01:30:00</td>
+<td>0.102981</td>
+<td>268.36322</td>
+<td>0.614629</td>
+<td>279.22833</td>
+<td>NaN</td>
+<td>-5.575220</td>
+<td>-6.349798</td>
+<td>-7.833451</td>
+<td>3.669683</td>
+<td>4.264247</td>
+<td>7.550878</td>
+<td>79.349396</td>
+<td>0.0</td>
+<td>102.417690</td>
+<td>1.692178</td>
+<td>1.692178</td>
+<td>0.789111</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2022-01-01 02:00:00</td>
+<td>0.025781</td>
+<td>273.88068</td>
+<td>0.394172</td>
+<td>281.60062</td>
+<td>NaN</td>
+<td>-5.574099</td>
+<td>-6.297862</td>
+<td>-7.050872</td>
+<td>3.692943</td>
+<td>4.280375</td>
+<td>7.569431</td>
+<td>79.832660</td>
+<td>0.0</td>
+<td>102.448500</td>
+<td>1.855905</td>
+<td>1.855905</td>
+<td>0.773717</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 02:30:00</td>
+<td>0.032684</td>
+<td>277.71097</td>
+<td>0.381383</td>
+<td>283.53964</td>
+<td>NaN</td>
+<td>-5.562795</td>
+<td>-6.020581</td>
+<td>-6.729948</td>
+<td>3.708760</td>
+<td>4.293371</td>
+<td>7.578785</td>
+<td>79.850450</td>
+<td>0.0</td>
+<td>102.461420</td>
+<td>2.013627</td>
+<td>2.013627</td>
+<td>0.789605</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
 </div>
 </div>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>The plot below shows data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. Traces traces of the four radiation component, air &amp; soil temperature, and relative humidity are shown. Looking at the trace below - what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion. Do you see any issues in the data? If so, what is a possible explanation?</p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Start <span class="ot">=</span><span class="st">'2024-01-12 0000'</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>End <span class="ot">=</span><span class="st">'2024-01-20 0000'</span></span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Selection <span class="ot">&lt;-</span> df[<span class="fu">which</span>((df<span class="sc">$</span>TIMESTAMP <span class="sc">&gt;=</span> Start) <span class="sc">&amp;</span> (df<span class="sc">$</span>TIMESTAMP <span class="sc">&lt;=</span>End)),]</span>
-<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width=</span><span class="dv">8</span>, <span class="at">repr.plot.height=</span><span class="dv">10</span>)</span>
-<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>plot_radiation <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
-<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>)],</span>
-<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
-<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_radiation, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
-<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
-<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>,<span class="st">'blue'</span>)) <span class="sc">+</span></span>
-<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>,<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
-<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($Unit_{sub}^{sup}$)"</span>))<span class="sc">+</span></span>
-<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">425</span>)<span class="sc">+</span></span>
-<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Radiative Fluxes at CA-DBB Flux Station'</span>)</span>
-<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>plot_temp <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
-<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>)],</span>
-<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
-<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_temp, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
-<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
-<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>)) <span class="sc">+</span></span>
-<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
-<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($C\degree)"</span>))<span class="sc">+</span></span>
-<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">15</span>,<span class="dv">10</span>)<span class="sc">+</span></span>
-<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
-<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Selection, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> RH_1_1_1,<span class="at">lty =</span> <span class="st">'RH'</span>)) <span class="sc">+</span></span>
-<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">'blue'</span>) <span class="sc">+</span></span>
-<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'RH'</span>)<span class="sc">+</span></span>
-<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
-<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-36"><a href="#cb6-36" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb6-37"><a href="#cb6-37" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2 <span class="sc">/</span> p3 <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
+<p>We’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?</p>
+<div id="aab6c0ee" class="cell" data-execution_count="5">
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">DOY</th>
+<th data-quarto-table-cell-role="th">HOUR</th>
+<th data-quarto-table-cell-role="th">SW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">SW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">TA_1_1_1</th>
+<th data-quarto-table-cell-role="th">TS_1</th>
+<th data-quarto-table-cell-role="th">RH_1_1_1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>15.500</td>
+<td>11.500</td>
+<td>45.256</td>
+<td>255.759</td>
+<td>14.706</td>
+<td>296.752</td>
+<td>-4.576</td>
+<td>3.597</td>
+<td>80.749</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>2.294</td>
+<td>6.931</td>
+<td>89.789</td>
+<td>51.854</td>
+<td>23.028</td>
+<td>15.939</td>
+<td>4.571</td>
+<td>0.625</td>
+<td>19.244</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>12.000</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>161.566</td>
+<td>0.000</td>
+<td>269.093</td>
+<td>-13.297</td>
+<td>2.607</td>
+<td>37.666</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>13.750</td>
+<td>5.750</td>
+<td>0.000</td>
+<td>215.101</td>
+<td>1.267</td>
+<td>282.230</td>
+<td>-8.566</td>
+<td>3.086</td>
+<td>65.421</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>15.500</td>
+<td>11.500</td>
+<td>0.027</td>
+<td>249.904</td>
+<td>2.698</td>
+<td>299.117</td>
+<td>-2.880</td>
+<td>3.555</td>
+<td>88.566</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>17.250</td>
+<td>17.250</td>
+<td>40.290</td>
+<td>308.048</td>
+<td>18.668</td>
+<td>310.924</td>
+<td>-0.607</td>
+<td>3.979</td>
+<td>98.252</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>19.000</td>
+<td>23.000</td>
+<td>369.341</td>
+<td>330.495</td>
+<td>114.190</td>
+<td>323.107</td>
+<td>1.805</td>
+<td>4.984</td>
+<td>100.000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>The plot below shows traces of the four radiation component, air &amp; soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?</p>
+<div id="03de8d4b" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="01_R_files/figure-html/unnamed-chunk-3-1.png" class="img-fluid figure-img" width="672"></p>
+<p><img src="01_files/figure-html/cell-8-output-1.png" width="656" height="507" class="figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 </section>
-<section id="question-3" class="level2">
-<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>The maximum <span class="math inline">\(SW_\downarrow\)</span> observed during this time period was 369.34064 at 2024-01-13 13:00:00. Pacific Standard Time (PST). The CA-DBB station is located at 49.129 <span class="math inline">\(^{\circ}\)</span> N -122.985 <span class="math inline">\(^{\circ}\)</span> W. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_ex\)</span> for this observation period. Given the value of <span class="math inline">\(I_ex\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate atmospheric extinction attenuation coefficient for this day.</p>
-<ol start="2" type="a">
-<li>No calculate the extinction coefficient for 2024-01-19 13:00:00, when the observed value of <span class="math inline">\(SW_\downarrow\)</span> was 58.37548. What explains the difference?</li>
-</ol>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>The plot below shows mean daily albedo. What explains sharp increase on the 17th?</p>
+<div id="29ab0ead" class="cell" data-execution_count="9">
+<div class="cell-output cell-output-display" data-execution_count="9">
+<pre><code>Text(0.5, 0.98, 'Student #: 123456789')</code></pre>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code here</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="01_files/figure-html/cell-10-output-2.png" width="589" height="481" class="figure-img"></p>
+</figure>
 </div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>The maximum half-hourly <span class="math inline">\(SW_\downarrow\)</span> observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_ex\)</span> for the center point of this observation period (12:45). Given the value of <span class="math inline">\(I_ex\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of <span class="math inline">\(I_ex\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time?</p>
+<p><strong>Note</strong>: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.</p>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Now calculate <span class="math inline">\(\Psi_a\)</span> for 12:45 January 19; the observed value of <span class="math inline">\(SW_\downarrow\)</span> was between 12:30 and 13:00 was 58.375 W<span class="math inline">\(^m{-2}\)</span>. What explains the difference between these two days?</p>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Using the examples above as a template, calculate <span class="math inline">\(R_n\)</span> over the cold-snap. Make a scatter plot showing <span class="math inline">\(R_n\)</span> on the y-axis and <span class="math inline">\(SW_\downarrow\)</span> on the x-axis. Describe the relationship you.</p>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>Using the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.</p>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Find the timestamp of the observation interval when maximum <span class="math inline">\(SW_\downarrow\)</span> was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. <strong>Note</strong> our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate <span class="math inline">\(I_ex\)</span> and <span class="math inline">\(\Psi_a\)</span> for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily <span class="math inline">\(SW_\downarrow\)</span> differ?</p>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in <span class="math inline">\(\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}\)</span>. You can use the wavelength of yellow light (<span class="math inline">\(\lambda 0 0.55 \mu m\)</span>) for your estimate. <strong>Hint</strong>: Consult examples in reading package for radiation geometry.</p>
+</section>
+<section id="question-11" class="level3">
+<h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
+<p>Let’s assume the surface emissivity at CA-DBB is <span class="math inline">\(\epsilon = 0.95\)</span>. Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.</p>
+</section>
+<section id="question-12" class="level3">
+<h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
+<p>Now use the same equation to estimate the “apparent” radiative sky temperature (<span class="math inline">\(T_k\)</span>) from <span class="math inline">\(LW_{\downarrow}\)</span> for this timestamp. “Apparent” means you should assume <span class="math inline">\(\epsilon{a} = 1.0\)</span>. How would you interpret <span class="math inline">\(T_k\)</span>?</p>
+</section>
+<section id="question-13" class="level3">
+<h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
+<p>Using measured <span class="math inline">\(LW_{\downarrow}\)</span> and measured air temperature <span class="math inline">\(T_a\)</span>, calculate the actual bulk emissivity of the atmosphere <span class="math inline">\(\varepsilon_{a}\)</span> at noon? [2]</p>
+</section>
+<section id="question-14" class="level3">
+<h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<p>Using the Prata (1996) equation from lecture and measured <span class="math inline">\(T_a\)</span> and <span class="math inline">\(RH\)</span>, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of <span class="math inline">\(LS_{\downarrow}\)</span>? How well do these approximations match with what we actually observed?</p>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->

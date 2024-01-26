@@ -1,0 +1,8 @@
+
+
+```{python}
+# Code Tip: getting the time and value when a variable reaches it's maximum
+
+## Selection.loc[Selection['TA_1_1_1']==Selection['TA_1_1_1'].max(),'TA_1_1_1']
+
+```

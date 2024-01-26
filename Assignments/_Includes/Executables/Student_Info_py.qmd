@@ -1,0 +1,9 @@
+
+
+```{python}
+#| include: false
+# Enter your information below
+Student_Name = 'June Skeeter'
+Student_Number = 123456789
+print(f'GEOS 300 Assignment Submission for {Student_Name}: {Student_Number}')
+```
