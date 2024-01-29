@@ -1,0 +1,10 @@
+
+$$
+SW_\downarrow = I_ex \Psi_a^{m}
+$${#eq-Bulk-Transitivity}
+
+where 
+
+$$
+m = \frac{1}{\cos(Z)}
+$$

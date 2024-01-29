@@ -1,0 +1,6 @@
+
+$$
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+$${#eq-Radiation-Balance}
+
+where $\alpha_\lambda = \epsilon_\lambda$ as per Kirchhoff's Law

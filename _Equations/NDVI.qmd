@@ -1,0 +1,4 @@
+
+$$
+NDVI = \frac{NIR-Red}{NIR+Red}
+$${#eq-NDVI}

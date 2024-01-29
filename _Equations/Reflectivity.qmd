@@ -1,0 +1,8 @@
+
+$$
+\alpha_\lambda = \frac{\lambda_{reflected}}{\lambda_{incident}}
+$${#eq-Reflectivity}
+
+$$
+\alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
+$${#eq-Reflectance-Coefficient}

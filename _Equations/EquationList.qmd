@@ -23,6 +23,12 @@ $$
 B = \frac{H}{LE}
 $${#eq-Bowen-Ratio}
 
+## Bulk Transitivity
+
+$$
+SW_\downarrow = I_ex \Psi_a^{m}
+$${#eq-Bulk-Transitivity}
+
 ## Conservation Law Scalar 1D
 
 $$
@@ -89,6 +95,12 @@ $$
 a_{\lambda} = \epsilon_{\lambda}
 $${#eq-Kirchhoffs-Law}
 
+## NDVI
+
+$$
+NDVI = \frac{NIR-Red}{NIR+Red}
+$${#eq-NDVI}
+
 ## Net Radiation Short
 
 $$
@@ -106,6 +118,24 @@ $${#eq-Net-Radiation}
 $$
 E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
 $${#eq-Planks-Law}
+
+## Radiation Balance
+
+$$
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+$${#eq-Radiation-Balance}
+
+## Reflectivity
+
+$$
+\alpha_\lambda = \frac{\lambda_{reflected}}{\lambda_{incident}}
+$${#eq-Reflectivity}
+
+## Reflectance Coefficient
+
+$$
+\alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
+$${#eq-Reflectance-Coefficient}
 
 ## Solar Declination
 
