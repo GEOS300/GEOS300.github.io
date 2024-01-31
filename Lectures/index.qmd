@@ -29,7 +29,9 @@ Topics = [
 'Energy and Mass Balances',
 '**Snow Day**/No Class',
 'A Deeper Dive into Surface Energy Balances',
-'Radiation Geometry'
+'Radiation Geometry',
+'Shortwave Radiation',
+'Longwave Radiation'
 ]
 Readings = [
     '',
