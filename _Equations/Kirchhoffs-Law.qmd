@@ -1,4 +1,4 @@
 
 $$
-a_{\lambda} = \epsilon_{\lambda}
+\zeta_{\lambda} = \epsilon_{\lambda}
 $${#eq-Kirchhoffs-Law}

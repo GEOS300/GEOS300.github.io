@@ -1,7 +1,6 @@
 
 
 ```{r}
-#| include: false
 # Enter your information below
 Student.Name = 'June Skeeter'
 Student.Number = 123456789

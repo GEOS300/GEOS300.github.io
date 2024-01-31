@@ -1,0 +1,7 @@
+Surface,Long-wave Emissivity $\epsilon_{LW}$ 
+Soil ,0.90 – 0.98
+Grass,0.90 – 0.95
+Crops,0.90 – 0.99
+Forests ,0.97 – 0.99
+Water,0.92 – 0.97
+Iron,0.13 – 0.28

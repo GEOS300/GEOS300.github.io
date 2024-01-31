@@ -4,6 +4,7 @@ subtitle: "GEOS 300, 2024"
 execute:
   keep-md: true
 echo: true
+output: False
 ---
 
 [Python and R code templates be found here](https://github.com/GEOS300/Assignment01) to help get you started.

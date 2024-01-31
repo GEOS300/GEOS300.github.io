@@ -21,14 +21,14 @@ subtitle: Atmospheric Transmission & Surface Reflection
 
 
 
-## Today’s learning objectives
+## Today’s learning objectives {.smaller}
 
+Describe how radiation interacts with mass. 
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-* Describe how radiation interacts with mass. 
 * Understand how can we determine the transmission of short-wave radiation through the atmosphere.
 * Describe how we can quantify and model the short-wave spectral properties of a surface.
 * Explain how a surface’s reflectivity is affected by surface geometry.
@@ -49,6 +49,7 @@ subtitle: Atmospheric Transmission & Surface Reflection
 
 ## Mass-Radiation Interactions
 
+{{< include ../_Equations/Conservation-Equation-Radiation.qmd >}}
 
 ![Transmission ($\Psi_\lambda$), Reflection ($\alpha_\lambda$), Absorption ($\zeta_\lambda$), Emission ($\epsilon_\lambda$)](images/05_3_3.gif)
 
@@ -373,7 +374,7 @@ Assuming that $I_ex$ is 450 W m<sup>-2</sup>, $\Psi_a$ = 0.84, and Z = 57.3 $^\c
 I_ex = 450 #W m-2
 Psi_a = 0.84
 Z = 57.3 #deg
-Z_rad=Z*pi/180
+Z=Z*pi/180 # convert to radians
 ```
 
 ## Test your knowledge (iClicker)  {auto-animate=true}
@@ -385,7 +386,7 @@ Assuming that $I_ex$ is 450 W m<sup>-2</sup>, $\Psi_a$ = 0.84, and Z = 57.3$^\ci
 I_ex = 450 #W m-2
 Psi_a = 0.84
 Z = 57.3 #deg
-Z_rad=Z*pi/180
+Z=Z*pi/180 # convert to radians
 SW_down = I_ex*Psi_a^(1/cos(Z))
 sprintf('%s W m^-2',SW_down)
 ```
@@ -465,14 +466,14 @@ Spectral reflectivity $\alpha_\lambda$ relates to a single wavelength.  The refl
 
 
 
-![](images/06_4_5.jpg)
+![](images/05_6_4_5.jpg)
 
 
 :::
 
 ::: {.column width="50%"}
 
-![](images/06_5_9.gif)
+![](images/05_6_5_9.gif)
 
 
 :::
@@ -489,11 +490,11 @@ Water (in soil, vegetation or water bodies) absorbs radiation at near-IR wavelen
 
 :::
 
-## Reflectivity and Reflection Coefficient {.smaller}
+## Reflectivity and Reflection Coefficient
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="75%"}
 
 {{< include ../_Equations/Reflectivity.qmd >}}
 
@@ -501,13 +502,13 @@ Water (in soil, vegetation or water bodies) absorbs radiation at near-IR wavelen
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="25%"}
 
 
 
-![](images/06_5_9.gif)
+![](images/05_6_5_9.gif)
 
-![](images/06_5_4.gif)
+![](images/05_6_5_4.gif)
 
 :::
 
@@ -526,13 +527,13 @@ Water (in soil, vegetation or water bodies) absorbs radiation at near-IR wavelen
 What does the highlighted (green) area on the chart below represent?
 
 
-![](images/06_8_4.png)
+![](images/05_6_8_4.png)
 
 :::
 
 ::: {.column width="40%"}
 
-![](images/06_8_2.png)
+![](images/05_6_8_2.png)
 
 
 :::
@@ -557,7 +558,7 @@ The cellular structure tends to cause almost totally diffuse scattering. This re
 
 
 
-![](images/06_9_2.gif)
+![](images/05_6_9_2.gif)
 
 
 ::: {.notes}
@@ -575,14 +576,14 @@ A plant with more chlorophyll will reflect more near-infrared energy than an unh
 {{< include ../_Equations/NDVI.qmd >}}
 
 
-![](images/06_11_5.jpg)
+![](images/05_6_11_5.jpg)
 
 
 :::
 
 ::: {.column width="50%"}
 
-![](images/06_11_2.png)
+![](images/05_6_11_2.png)
 
 
 :::
@@ -599,7 +600,7 @@ NDVI itself thus varies between -1.0 and +1.0.
 ## NDVI as an indicator of drought
 
 
-![](images/06_13_3.jpg)
+![](images/05_6_13_3.jpg)
 
 
 
@@ -626,7 +627,7 @@ The albedo $\alpha$ can be simply measured as the fraction of incident solar rad
 ::: {.column width="50%"}
 
 
-![](images/06_14_4.png)
+![](images/05_6_14_4.png)
 
 
 
@@ -659,7 +660,7 @@ The albedo $\alpha$ can be simply measured as the fraction of incident solar rad
 ::: {.column width="50%"}
 
 
-![](images/06_14_4.png)
+![](images/05_6_14_4.png)
 
 
 
@@ -721,7 +722,7 @@ kable(Data, col.names = gsub("[.]", " ", names(Data)))
 ::: {.column width="50%"}
 
 
-![](images/06_18_3.png)
+![](images/05_6_18_3.png)
 
 
 
@@ -730,7 +731,7 @@ kable(Data, col.names = gsub("[.]", " ", names(Data)))
 ::: {.column width="50%"}
 
 
-![U = urban, S = suburban, R = rural (grass, crops)](images/06_18_4.png)
+![U = urban, S = suburban, R = rural (grass, crops)](images/05_6_18_4.png)
 
 
 :::
@@ -754,7 +755,7 @@ kable(Data, col.names = gsub("[.]", " ", names(Data)))
 
 ::: {.column width="40%"}
 
-![](images/06_19_2.gif)
+![](images/05_6_19_2.gif)
 
 
 :::
@@ -792,7 +793,7 @@ For most agricultural crops and natural vegetation less than 1 m in height the a
 
 ::: {.column width="50%"}
 
-![](images/06_20_3.png)
+![](images/05_6_20_3.png)
 
 
 :::
@@ -816,7 +817,7 @@ Hence the natural orientation of leaves and the depth of the canopy greatly enha
 ::: {.column width="25%"}
 
 
-![](images/06_21_0.gif)
+![](images/05_6_21_0.gif)
 
 
 :::
@@ -824,21 +825,21 @@ Hence the natural orientation of leaves and the depth of the canopy greatly enha
 ::: {.column width="25%"}
 
 
-![](images/06_21_4.gif)
+![](images/05_6_21_4.gif)
 
 :::
 
 ::: {.column width="25%"}
 
 
-![](images/06_21_5.gif)
+![](images/05_6_21_5.gif)
 
 
 :::
 
 ::: {.column width="25%"}
 
-![](images/06_21_8.png)
+![](images/05_6_21_8.png)
 
 
 :::
@@ -914,7 +915,7 @@ Lambertian reflection: The apparent brightness of a Lambertian surface to an obs
 ## Albedo as a Function of Solar Altitude
 
 
-![](images/06_28_2.png)
+![](images/05_6_28_2.png)
 
 
 ::: {.notes}
@@ -955,7 +956,7 @@ $$
 ::: {.column width="50%"}
 
 
-![](images/06_29_4.gif)
+![](images/05_6_29_4.gif)
 
 
 :::
@@ -981,7 +982,7 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 
 ::: {.column width="40%"}
 
-![](images/06_32_4.gif)
+![](images/05_6_32_4.gif)
 
 
 :::
@@ -994,7 +995,7 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 
 
 
-![](images/06_33_3.jpg)
+![](images/05_6_33_3.jpg)
 
 
 ## Albedo control
@@ -1007,14 +1008,14 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 
 
 
-![](images/06_34_0.png)
+![](images/05_6_34_0.png)
 
 :::
 
 ::: {.column width="50%"}
 
 
-![](images/06_34_3.png)
+![](images/05_6_34_3.png)
 
 :::
 
@@ -1024,7 +1025,7 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 
 ---
 
-![](images/06_35_3.jpg)
+![](images/05_6_35_3.jpg)
 
 ## Reflectivity and Geometry Control
 
@@ -1034,7 +1035,7 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 ::: {.column width="50%"}
 
 
-![](images/06_38_3.png)
+![](images/05_6_38_3.png)
 
 
 
@@ -1042,7 +1043,7 @@ There are mainly two ways to modify the short-wave radiative surface properties:
 
 ::: {.column width="50%"}
 
-![](images/06_36_3.jpg)
+![](images/05_6_36_3.jpg)
 
 
 :::

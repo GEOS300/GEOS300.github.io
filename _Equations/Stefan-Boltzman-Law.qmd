@@ -3,3 +3,4 @@ $$
 E_b = \sigma_b T^4
 $${#eq-Stefan-Boltzman-Law}
   
+where $\sigma = 5.67 * 10^-8$

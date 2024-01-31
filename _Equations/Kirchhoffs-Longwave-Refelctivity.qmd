@@ -1,0 +1,11 @@
+
+
+Most (solid) surfaces are opaque to long-wave (i.e., $\Psi_{LW} \approx 0$), so we can simplify our radiation conservation equation for $LW$:
+$$
+\zeta_{LW} + \alpha_{LW} = 1
+$${#eq-Longwave-Radiation-Balance}
+
+$$
+\alpha_{LW} = 1 - \epsilon_{LW}
+$${#eq-Longwave-Reflectivity}
+

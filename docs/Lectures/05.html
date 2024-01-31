@@ -398,12 +398,12 @@
 </div>
 
 </section>
-<section id="todays-learning-objectives" class="slide level2">
+<section id="todays-learning-objectives" class="slide level2 smaller">
 <h2>Today’s learning objectives</h2>
+<p>Describe how radiation interacts with mass.</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <ul>
-<li>Describe how radiation interacts with mass.</li>
 <li>Understand how can we determine the transmission of short-wave radiation through the atmosphere.</li>
 <li>Describe how we can quantify and model the short-wave spectral properties of a surface.</li>
 <li>Explain how a surface’s reflectivity is affected by surface geometry.</li>
@@ -416,6 +416,9 @@
 </section>
 <section id="mass-radiation-interactions" class="slide level2">
 <h2>Mass-Radiation Interactions</h2>
+<p><span id="eq-Conservation-Equation-Radiation"><span class="math display">\[
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+\qquad(1)\]</span></span></p>
 
 <img data-src="images/05_3_3.gif" class="r-stretch quarto-figure-center"><p class="caption">Transmission (<span class="math inline">\(\Psi_\lambda\)</span>), Reflection (<span class="math inline">\(\alpha_\lambda\)</span>), Absorption (<span class="math inline">\(\zeta_\lambda\)</span>), Emission (<span class="math inline">\(\epsilon_\lambda\)</span>)</p><aside class="notes">
 <p>Radiation of wavelength λ incident upon an object must either be transmitted through it or be reflected from its surface, or be absorbed. This is a statement of the conservation of energy.</p>
@@ -669,7 +672,7 @@
 <div class="column" style="width:60%;">
 <p><span id="eq-Bulk-Transitivity"><span class="math display">\[
 SW_\downarrow = I_ex \Psi_a^{m}
-\qquad(1)\]</span></span></p>
+\qquad(2)\]</span></span></p>
 <p>where</p>
 <p><span class="math display">\[
 m = \frac{1}{\cos(Z)}
@@ -702,7 +705,7 @@ m = \frac{1}{\cos(Z)}
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a></a>I_ex <span class="ot">=</span> <span class="dv">450</span> <span class="co">#W m-2</span></span>
 <span id="cb1-2" class="hljs-ln-code"><a></a>Psi_a <span class="ot">=</span> <span class="fl">0.84</span></span>
 <span id="cb1-3" class="hljs-ln-code"><a></a>Z <span class="ot">=</span> <span class="fl">57.3</span> <span class="co">#deg</span></span>
-<span id="cb1-4" class="hljs-ln-code"><a></a>Z_rad<span class="ot">=</span>Z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-4" class="hljs-ln-code"><a></a>Z<span class="ot">=</span>Z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span> <span class="co"># convert to radians</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="test-your-knowledge-iclicker-1" class="slide level2" data-auto-animate="true">
@@ -712,11 +715,11 @@ m = \frac{1}{\cos(Z)}
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a></a>I_ex <span class="ot">=</span> <span class="dv">450</span> <span class="co">#W m-2</span></span>
 <span id="cb2-2" class="hljs-ln-code"><a></a>Psi_a <span class="ot">=</span> <span class="fl">0.84</span></span>
 <span id="cb2-3" class="hljs-ln-code"><a></a>Z <span class="ot">=</span> <span class="fl">57.3</span> <span class="co">#deg</span></span>
-<span id="cb2-4" class="hljs-ln-code"><a></a>Z_rad<span class="ot">=</span>Z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span></span>
+<span id="cb2-4" class="hljs-ln-code"><a></a>Z<span class="ot">=</span>Z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span> <span class="co"># convert to radians</span></span>
 <span id="cb2-5" class="hljs-ln-code"><a></a>SW_down <span class="ot">=</span> I_ex<span class="sc">*</span>Psi_a<span class="sc">^</span>(<span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(Z))</span>
 <span id="cb2-6" class="hljs-ln-code"><a></a><span class="fu">sprintf</span>(<span class="st">'%s W m^-2'</span>,SW_down)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "354.483673974392 W m^-2"</code></pre>
+<pre><code>[1] "325.875226835139 W m^-2"</code></pre>
 </div>
 </div>
 </section>
@@ -780,9 +783,9 @@ m = \frac{1}{\cos(Z)}
 <p>Spectral reflectivity <span class="math inline">\(\alpha_\lambda\)</span> relates to a single wavelength. The reflection coefficient is the average reflectivity across a wavelength band weighted by Irradiance for that band <span class="math inline">\(\alpha_{\lambda_1 \rightarrow \lambda_2}\)</span></p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/06_4_5.jpg"></p>
+<p><img data-src="images/05_6_4_5.jpg"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_5_9.gif"></p>
+<p><img data-src="images/05_6_5_9.gif"></p>
 </div>
 </div>
 <aside class="notes">
@@ -799,22 +802,22 @@ m = \frac{1}{\cos(Z)}
           display:block!important;
       }</style></aside>
 </section>
-<section id="reflectivity-and-reflection-coefficient-1" class="slide level2 smaller">
+<section id="reflectivity-and-reflection-coefficient-1" class="slide level2">
 <h2>Reflectivity and Reflection Coefficient</h2>
 <div class="columns">
-<div class="column" style="width:60%;">
+<div class="column" style="width:75%;">
 <p><span id="eq-Reflectivity"><span class="math display">\[
 \alpha_\lambda = \frac{\lambda_{reflected}}{\lambda_{incident}}
-\qquad(2)\]</span></span></p>
+\qquad(3)\]</span></span></p>
 <p><span id="eq-Reflectance-Coefficient"><span class="math display">\[
 \alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
-\qquad(3)\]</span></span></p>
+\qquad(4)\]</span></span></p>
 <ul>
 <li>When <span class="math inline">\(\alpha_{\lambda_1 \rightarrow \lambda_2} = \alpha_{\lambda\ = 0.15 \mu m \rightarrow \lambda_2 = 3 \mu m}\)</span>; we call it surface albedo <span class="math inline">\(\alpha\)</span>.</li>
 </ul>
-</div><div class="column" style="width:40%;">
-<p><img data-src="images/06_5_9.gif"></p>
-<p><img data-src="images/06_5_4.gif"></p>
+</div><div class="column" style="width:25%;">
+<p><img data-src="images/05_6_5_9.gif"></p>
+<p><img data-src="images/05_6_5_4.gif"></p>
 </div>
 </div>
 </section>
@@ -823,9 +826,9 @@ m = \frac{1}{\cos(Z)}
 <div class="columns">
 <div class="column" style="width:60%;">
 <p>What does the highlighted (green) area on the chart below represent?</p>
-<p><img data-src="images/06_8_4.png"></p>
+<p><img data-src="images/05_6_8_4.png"></p>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/06_8_2.png"></p>
+<p><img data-src="images/05_6_8_2.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -846,7 +849,7 @@ m = \frac{1}{\cos(Z)}
 <section id="healthy-vs.-unhealthy-vegetation" class="slide level2">
 <h2>Healthy vs.&nbsp;Unhealthy Vegetation</h2>
 
-<img data-src="images/06_9_2.gif" class="r-stretch"><aside class="notes">
+<img data-src="images/05_6_9_2.gif" class="r-stretch"><aside class="notes">
 <p>A plant with more chlorophyll will reflect more near-infrared energy than an unhealthy plant.&nbsp;</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -866,10 +869,10 @@ m = \frac{1}{\cos(Z)}
 <div class="column" style="width:50%;">
 <p><span id="eq-NDVI"><span class="math display">\[
 NDVI = \frac{NIR-Red}{NIR+Red}
-\qquad(4)\]</span></span></p>
-<p><img data-src="images/06_11_5.jpg"></p>
+\qquad(5)\]</span></span></p>
+<p><img data-src="images/05_6_11_5.jpg"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_11_2.png"></p>
+<p><img data-src="images/05_6_11_2.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -889,7 +892,7 @@ NDVI = \frac{NIR-Red}{NIR+Red}
 <section id="ndvi-as-an-indicator-of-drought" class="slide level2">
 <h2>NDVI as an indicator of drought</h2>
 
-<img data-src="images/06_13_3.jpg" class="r-stretch"><aside class="notes">
+<img data-src="images/05_6_13_3.jpg" class="r-stretch"><aside class="notes">
 <p>The above image shows the NDVI anomaly in the U.S. for August 1993. In that year, heavy rain in the Northern Great Plains (North and South Dakota, Alberta, and Saskatchewan) led to flooding in the Missouri River. The resulting exceptionally lush vegetation appears as a positive anomaly (green). Concurrently, in the Eastern U.S., rainfall was very low, and the region exhibited a strong negative anomaly (dark red).</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
@@ -909,7 +912,7 @@ NDVI = \frac{NIR-Red}{NIR+Red}
 <div class="column" style="width:50%;">
 <p>The albedo <span class="math inline">\(\alpha\)</span> can be simply measured as the fraction of incident solar radiation reflected by a surface.</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_14_4.png"></p>
+<p><img data-src="images/05_6_14_4.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -932,7 +935,7 @@ NDVI = \frac{NIR-Red}{NIR+Red}
 <div class="column" style="width:50%;">
 <p>The albedo <span class="math inline">\(\alpha\)</span> can be simply measured as the fraction of incident solar radiation reflected by a surface.</p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_14_4.png"></p>
+<p><img data-src="images/05_6_14_4.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -1017,11 +1020,11 @@ Table&nbsp;1: CAPTION
 <h2>Shortwave Reflection Creates Energetic Differences</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/06_18_3.png"></p>
+<p><img data-src="images/05_6_18_3.png"></p>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/06_18_4.png"></p>
+<p><img data-src="images/05_6_18_4.png"></p>
 <figcaption>U = urban, S = suburban, R = rural (grass, crops)</figcaption>
 </figure>
 </div>
@@ -1037,7 +1040,7 @@ Table&nbsp;1: CAPTION
 <li>Individual leaves generally have higher reflectivity than a canopy of the same leaves</li>
 </ul>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/06_19_2.gif"></p>
+<p><img data-src="images/05_6_19_2.gif"></p>
 </div>
 </div>
 <aside class="notes">
@@ -1066,7 +1069,7 @@ Table&nbsp;1: CAPTION
 </ul></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_20_3.png"></p>
+<p><img data-src="images/05_6_20_3.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -1087,13 +1090,13 @@ Table&nbsp;1: CAPTION
 <h2>Albedo Depends on Leaf State and Canopy Height</h2>
 <div class="columns">
 <div class="column" style="width:25%;">
-<p><img data-src="images/06_21_0.gif"></p>
+<p><img data-src="images/05_6_21_0.gif"></p>
 </div><div class="column" style="width:25%;">
-<p><img data-src="images/06_21_4.gif"></p>
+<p><img data-src="images/05_6_21_4.gif"></p>
 </div><div class="column" style="width:25%;">
-<p><img data-src="images/06_21_5.gif"></p>
+<p><img data-src="images/05_6_21_5.gif"></p>
 </div><div class="column" style="width:25%;">
-<p><img data-src="images/06_21_8.png"></p>
+<p><img data-src="images/05_6_21_8.png"></p>
 </div>
 </div>
 <aside class="notes">
@@ -1160,7 +1163,7 @@ Table&nbsp;1: CAPTION
 <section id="albedo-as-a-function-of-solar-altitude" class="slide level2">
 <h2>Albedo as a Function of Solar Altitude</h2>
 
-<img data-src="images/06_28_2.png" class="r-stretch"><aside class="notes">
+<img data-src="images/05_6_28_2.png" class="r-stretch"><aside class="notes">
 <p>Early morning and evening albedos are higher, and when plotted versus the position of the Sun in the sky show a characteristic curve (Figure 3). higher probability that photons can leave the snowpack if they hit the surface at grazing angles. The diurnal variation of the albedo is much less with cloudy skies.</p>
 <p>Its role in explaining seasonal variations of albedo is obscured by changes in plant phenology, snow, etc. However, since the highest albedos occur at the times of low energy input the effect of this diurnal variation on the total radiation budget is small. This dependence upon the solar altitude also explains why tropical albedos are usually less than those for similar surfaces at higher latitudes, and accounts for the observation that the diurnal variation of the albedo is much less with cloudy skies.</p>
 <p>This-pair-share: to get a robust estimate of α, students can either take the value at noon, the median value of the entire day, or do an average for a subset around midday. Also acceptable is the use of the daily totals or sums, i.e.&nbsp;α = sumK ↑ /sumK ↓.</p>
@@ -1190,7 +1193,7 @@ Table&nbsp;1: CAPTION
 <li>Values in literature usually refer to the mid-day albedo, or albedo calculated from daily totals</li>
 </ul>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_29_4.gif"></p>
+<p><img data-src="images/05_6_29_4.gif"></p>
 </div>
 </div>
 </section>
@@ -1204,35 +1207,35 @@ Table&nbsp;1: CAPTION
 <li>Geometry control: Changing the microtopographic feature of a setting to increase or reduce absorption.</li>
 </ol>
 </div><div class="column" style="width:40%;">
-<p><img data-src="images/06_32_4.gif"></p>
+<p><img data-src="images/05_6_32_4.gif"></p>
 </div>
 </div>
 </section>
 <section class="slide level2">
 
 
-<img data-src="images/06_33_3.jpg" class="r-stretch"></section>
+<img data-src="images/05_6_33_3.jpg" class="r-stretch"></section>
 <section id="albedo-control" class="slide level2">
 <h2>Albedo control</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/06_34_0.png"></p>
+<p><img data-src="images/05_6_34_0.png"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_34_3.png"></p>
+<p><img data-src="images/05_6_34_3.png"></p>
 </div>
 </div>
 </section>
 <section class="slide level2">
 
 
-<img data-src="images/06_35_3.jpg" class="r-stretch"></section>
+<img data-src="images/05_6_35_3.jpg" class="r-stretch"></section>
 <section id="reflectivity-and-geometry-control" class="slide level2">
 <h2>Reflectivity and Geometry Control</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><img data-src="images/06_38_3.png"></p>
+<p><img data-src="images/05_6_38_3.png"></p>
 </div><div class="column" style="width:50%;">
-<p><img data-src="images/06_36_3.jpg"></p>
+<p><img data-src="images/05_6_36_3.jpg"></p>
 </div>
 </div>
 </section>

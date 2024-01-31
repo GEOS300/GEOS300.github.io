@@ -301,6 +301,22 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 </div>
 </div>
 <hr>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enter your information below</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Student.Name <span class="ot">=</span> <span class="st">'June Skeeter'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Student.Number <span class="ot">=</span> <span class="dv">123456789</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'GEOS 300 Assignment Submission for %s: %s'</span>,Student.Name,Student.Number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"reshape2"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"latex2exp"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"patchwork"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"plyr"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lubridate"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"zoo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
 <section id="question-1" class="level3">
 <h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
 <p>Below is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing <span class="math inline">\(SW\)</span> in the first row of the table, are these values reasonable? Why or why not?</p>
@@ -308,89 +324,43 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <li>Make suer to specify the units in your answer. Check the metadata provided <a href="https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md">here</a> to make sure you understand the variable names and units.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> data_url)</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We have to parse the timestamp explicitly to convert it to a "time aware" object</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%Y-%m-%d %H%M"</span>)</span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Using this we can get a extra variables (DOY &amp; HOUR) that will be helpful later</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>HOUR <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%H"</span>)</span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>DOY <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%j"</span>)</span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Albedo <span class="ot">=</span> df<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>df<span class="sc">$</span>SW_IN_1_1_1</span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the table using head()</span></span>
-<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>            TIMESTAMP SW_IN_1_1_1 LW_IN_1_1_1 SW_OUT_1_1_1 LW_OUT_1_1_1
-1 2022-01-01 00:30:00  0.05977540    263.2279    1.3582480     271.2144
-2 2022-01-01 01:00:00  0.01990683    265.9375    1.1015637     274.9786
-3 2022-01-01 01:30:00  0.10298067    268.3632    0.6146293     279.2283
-4 2022-01-01 02:00:00  0.02578117    273.8807    0.3941725     281.6006
-5 2022-01-01 02:30:00  0.03268367    277.7110    0.3813828     283.5396
-6 2022-01-01 03:00:00  0.03338333    277.2797    0.3865185     284.4536
-           H       G_1  TA_1_1_1  TA_1_2_1     TS_1     TS_2     TS_3 RH_1_1_1
-1 -29.676018 -5.586875 -7.762711 -9.570630 3.630083 4.214648 7.489783 83.28255
-2         NA -5.553178 -7.200051 -9.533210 3.677612 4.251830 7.531122 82.64555
-3         NA -5.575220 -6.349798 -7.833451 3.669683 4.264247 7.550878 79.34940
-4         NA -5.574099 -6.297862 -7.050872 3.692943 4.280375 7.569431 79.83266
-5         NA -5.562795 -6.020581 -6.729948 3.708760 4.293371 7.578785 79.85045
-6  -6.500002 -5.563889 -5.811514 -6.359775 3.698611 4.284091 7.576676 79.45928
-  P_1_1_1 PA_1_1_1  WS_1_1_1  WD_1_1_1 VPD_1_1_1 HOUR DOY    Albedo
-1       0 102.3971 0.6597374 0.6597374 0.5728984   00 001 22.722525
-2       0 102.4034 1.4010231 1.4010231 0.6211866   01 001 55.335956
-3       0 102.4177 1.6921777 1.6921777 0.7891113   01 001  5.968395
-4       0 102.4485 1.8559053 1.8559053 0.7737166   02 001 15.289165
-5       0 102.4614 2.0136266 2.0136266 0.7896050   02 001 11.668912
-6       0 102.4637 2.0015748 2.0015748 0.8178825   03 001 11.578188</code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> data_url)</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We have to parse the timestamp explicitly to convert it to a "time aware" object</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%Y-%m-%d %H%M"</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Using this we can get a extra variables (DOY &amp; HOUR) that will be helpful later</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>HOUR <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%H"</span>)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>DOY <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%j"</span>)</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Albedo <span class="ot">=</span> df<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>df<span class="sc">$</span>SW_IN_1_1_1</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the table using head()</span></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>We’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Start <span class="ot">=</span><span class="st">'2024-01-12 0000'</span></span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>End <span class="ot">=</span><span class="st">'2024-01-20 0000'</span></span>
-<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
-<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Query.Cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>)</span>
-<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
-<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="ot">&lt;-</span> df[<span class="fu">which</span>((df<span class="sc">$</span>TIMESTAMP <span class="sc">&gt;=</span> Start) <span class="sc">&amp;</span> (df<span class="sc">$</span>TIMESTAMP <span class="sc">&lt;</span>End)),</span>
-<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        Query.Cols]</span>
-<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data (excluding the timestamp)</span></span>
-<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">subset</span>(Selection,<span class="at">select =</span> <span class="sc">-</span>TIMESTAMP))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>     DOY                HOUR            SW_IN_1_1_1        LW_IN_1_1_1   
- Length:384         Length:384         Min.   :  0.0000   Min.   :161.6  
- Class :character   Class :character   1st Qu.:  0.0000   1st Qu.:215.1  
- Mode  :character   Mode  :character   Median :  0.0275   Median :249.9  
-                                       Mean   : 45.2556   Mean   :255.8  
-                                       3rd Qu.: 40.2896   3rd Qu.:308.0  
-                                       Max.   :369.3406   Max.   :330.5  
-  SW_OUT_1_1_1      LW_OUT_1_1_1      TA_1_1_1            TS_1      
- Min.   :  0.000   Min.   :269.1   Min.   :-13.297   Min.   :2.607  
- 1st Qu.:  1.267   1st Qu.:282.2   1st Qu.: -8.566   1st Qu.:3.086  
- Median :  2.698   Median :299.1   Median : -2.880   Median :3.555  
- Mean   : 14.706   Mean   :296.8   Mean   : -4.576   Mean   :3.597  
- 3rd Qu.: 18.668   3rd Qu.:310.9   3rd Qu.: -0.607   3rd Qu.:3.979  
- Max.   :114.190   Max.   :323.1   Max.   :  1.805   Max.   :4.984  
-    RH_1_1_1     
- Min.   : 37.67  
- 1st Qu.: 65.42  
- Median : 88.57  
- Mean   : 80.75  
- 3rd Qu.: 98.25  
- Max.   :100.00  </code></pre>
-</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Start <span class="ot">=</span><span class="st">'2024-01-12 0000'</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>End <span class="ot">=</span><span class="st">'2024-01-20 0000'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Query.Cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="ot">&lt;-</span> df[<span class="fu">which</span>((df<span class="sc">$</span>TIMESTAMP <span class="sc">&gt;=</span> Start) <span class="sc">&amp;</span> (df<span class="sc">$</span>TIMESTAMP <span class="sc">&lt;</span>End)),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        Query.Cols]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data (excluding the timestamp)</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">subset</span>(Selection,<span class="at">select =</span> <span class="sc">-</span>TIMESTAMP))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -435,13 +405,6 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2 <span class="sc">/</span> p3 <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="01_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width=</span><span class="dv">8</span>, <span class="at">repr.plot.height=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="cell">
@@ -468,13 +431,6 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'%'</span>)<span class="sc">+</span></span>
 <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Daily Albedo'</span>)</span>
 <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure class="figure">
-<p><img src="01_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
-</figure>
-</div>
-</div>
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>

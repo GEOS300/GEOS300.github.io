@@ -1,0 +1,382 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Longwave Radiation
+subtitle: Peak emissions band of the Earth-Climate System
+---
+
+{{< include _imports.qmd >}}
+
+## Learning Objectives {.smaller}
+
+
+* See how radiation laws apply to long-wave radiative exchange and how long-wave radiation can interact with surfaces.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Explain how we can calculate longwave outgoing radiation, and how it relates to surface emissivity.
+* Know how we can estimate / model longwave incoming radiation and the emissivity of the atmosphere.
+
+
+:::
+
+::: {.column width="50%"}
+
+![People in front of a heated building in winter as seen in the thermal infrared by a thermal camera (Source: A. Christen)](images/06_2_4.jpg)
+
+
+:::
+
+::::
+
+
+
+## What is ‘Longwave’ radiation?
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+![Short-wave (VIS) D. Scherer, Ecology Department, TU Berlin](images/06_3_0.png)
+
+:::
+
+::: {.column width="50%"}
+
+
+![Longwave (TIR) D. Scherer, Ecology Department, TU Berlin](images/06_3_12.png)
+
+
+:::
+
+::::
+
+
+
+## Measuring Long-wave Radiation {.smaller}
+
+
+Numerous instruments can measure long-wave radiation received in a particular field of view (FOV), within a particular band, and/or with a particular spatial resolution.
+
+
+:::: {.columns}
+
+::: {.column width="25%"}
+
+![Thermal camera](images/06_4_3.png)
+
+:::
+
+::: {.column width="35%"}
+
+![Pyrgeometer](images/06_4_5.jpg)
+
+:::
+
+::: {.column width="35%"}
+
+![Thermal satellite channel](images/06_4_9.jpg)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+A radiometer measures the long-wave radiance received in a particular field of view (FOV), within a particular band, and with a particular spatial resolution.
+In remote sensing, sensors are built to pick up those specific spectral bands.
+Near IR, Mid-IR, Far IR
+Demo here
+
+
+
+:::
+
+## Stefan-Boltzmann Law: Grey Body {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Natural objects (called grey bodies) are not full radiators. Their emittance is given by adapting the Stefan-Boltzman law:
+
+{{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
+
+* where $\epsilon$ is their surface emissivity. Emissivity is the ratio of the actual emission to that of a blackbody (i.e. $\epsilon$ = 1.0).
+* This law is the basis of remote sensing in the TIR
+
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: tbl-5_5
+#| tbl-cap: Long-wave emissivity coeficients ($\epsilon_{LW}$) for selected surfaces
+
+Data <- read.csv(file = 'Data/06_5_5_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+All bodies possessing energy (i.e. whose temperatures are above absolute zero, 0 K = −273.2◦C) emit radiation. 
+If a body at a given temperature emits the maximum possible amount of radiation per unit of its surface area in unit time then it is called a black body. Such a body has a surface emissivity ε equal to unity.
+If the body is not a full radiator.
+Emissivity = absorptivity (low emissivity = reflects much of the radiant thermal energy)
+The map shows the long-wave emittance and reflectance of the land and ocean surface 
+ Stefan–Boltzmann constant (sigma)
+
+:::
+
+---
+
+![Emittance (W m<sup>-2</sup>) of Vancouver seen from ASTER satellite Sept 3 2010 12:24 PDT](images/06_6_2.png)
+
+
+::: {.notes}
+
+Advanced Spaceborne Thermal Emission and Reflection Radiometer on the Terra satellite launched into Earth orbit by NASA in 1999
+The figure visualizes radiation measured between λ = 8μm and λ = 13μm by a satellite sensor 
+The map shows the long-wave emittance and reflectance of the land and ocean surface 
+
+
+:::
+
+## Atmospheric Window(s)
+
+![](images/06_7_1.jpg)
+
+
+::: {.notes}
+
+The satellite measures in this range because this is the atmospheric window in the long-wave part of the spectrum. In this range a cloudless atmosphere is quite transparent, as only a few trace gases absorb radiation. This allows us to see the surface, and not the intervening atmosphere. 
+
+
+:::
+
+## Kirchhoff’s law
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+{{< include ../_Equations/Kirchhoffs-Law.qmd >}}
+
+
+* Assuming no transmission the absorptivity of a body ($\zeta_\lambda$) equals its emissivity ($\epsilon_\lambda$) at a given wavelength.
+  + A good absorber is a good emitter
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/06_8_5.gif)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+For an arbitrary body emitting and absorbing thermal radiation in thermodynamic equilibrium, the emissivity is equal to the absorptivity.
+
+:::
+
+
+## Kirchhoff's Law (iClicker)
+
+Plants are good absorbers of $SW$ radiation, so why don't they emit just as much $SW$ as they absorb?
+
+* A: They aren't hot enough (Stefan-Boltzmann)
+* B: The do emit $SW$, we call this Albedo
+
+## Kirchhoff's Law 
+
+Kirchhoff’s law only applies if the wavelength considered is the same – do not mix them together.
+
+* Kirchhoff’s law only has relevance to long-wave exchange in climatology.  
+* The law does not apply to fluorescent objects, which can absorb energy at a given a wavelength and release it at another one.
+
+
+## Mass-Radiation Interactions
+
+{{< include ../_Equations/Conservation-Equation-Radiation.qmd >}}
+
+![Transmission ($\Psi_\lambda$), Reflection ($\alpha_\lambda$), Absorption ($\zeta_\lambda$), Emission ($\epsilon_\lambda$)](images/05_3_3.gif)
+
+
+## Long-wave Reflection
+            
+{{< include ../_Equations/Kirchhoffs-Longwave-Refelctivity.qmd >}}
+
+
+## Long-wave Reflection (iClicker) {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Which surface would you expect to have the highest $\alpha_{LW}$?
+
+* A Peat (organic soil)
+* B Wood
+* C Steel (Iron-carbon alloy)
+* D Wheat
+* E A Cow
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: tbl-5_2
+#| tbl-cap: Long-wave emissivity coeficients ($\epsilon_{LW}$) for selected surfaces
+
+Data <- read.csv(file = 'Data/06_5_5_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+:::
+
+::::
+
+## Long-wave Reflection
+
+![Glass transmits a substantial fraction of visible light, but is relatively opaque to $LW$](images/06_13_2.png)
+
+
+::: {.notes}
+
+Low-E, or low-emissivity, glass was created to minimize the amount of infrared and ultraviolet light that comes through your glass, without minimizing the amount of light that enters your home. 
+Low-E glass windows have a microscopically thin coating that is transparent and reflects heat.
+
+:::
+
+
+
+## Net Long-wave Flux Density
+
+The net long-wave radiation flux density ($LW^*$) at the surface is the difference between the input from the atmosphere above ($LW\downarrow$) and the output surface ($LW\uparrow$).
+
+{{< include ..\_Equations\Long-wave-Flux-Density.qmd >}}
+
+::: {.fragment}
+
+* Surface output includes **both** emissions from surface **and** reflected $LW\downarrow$
+  - Differs from $SW*= SW\downarrow - SW\uparrow$ 
+  - $SW\uparrow$ is **only** reflected $SW$, earth doesn't emit $SW$!
+
+:::
+
+
+## Long-Long-wave Flux Density
+
+
+![](images/06_14_3.png)
+
+
+
+
+
+## Net Long-wave Flux Density
+
+We can re-formulate the previous equation in terms of the Stefan-Boltzmann Law:
+
+{{< include ..\_Equations\Long-wave-Flux-Density-Stefan-Boltzman.qmd >}}
+
+* How is this equivalent to @eq-Long-wave-Flux-Density
+
+::: {.fragment}
+
+* Stefan-Boltzman gives us emissions from a surface of temperature $T_s$ with a long-wave emissivity of $\epsilon_{LW}$
+
+::: {.fragment}
+
+* $(1-\epsilon_{LW})$ gives us reflectivity 
+
+:::
+
+:::
+
+
+
+
+::: {.notes}
+
+Clouds, when present, are the major contributors to the incoming longwave radiation to the surface. They radiate like blackbodies (e ^ 1) at their respective cloud base temperatures. 
+In passing through the atmosphere, a large part of the terrestrial radiation is absorbed by atmospheric gases, such as water vapor, carbon dioxide, nitrogen oxides, methane, and ozone. In particular, water vapor and CO2 are primarily responsible for absorbing the terrestrial radiation and reducing its escape to the space (the so-called greenhouse effect). 
+The atmospheric gases and aerosols which absorb energy also radiate energy. 
+
+
+:::
+
+## Estimating Surface Emissivity
+
+We can compare the apparent surface temperature $T_r$, which assumes the surface is a black body:
+$$
+\sigma T_r^4 = \epsilon_{s} T_s^4 + (1-\epsilon_{s})LW\downarrow
+$${#eq-Apparent-Surface-Temperature}
+
+In reality, we have both emission and reflection.  We can re-arrange to isolate $T_s$
+$$
+T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW\downarrow}{\epsilon_{s}\sigma}]
+$${#eq-Surface-Temperature}
+
+then substitute $sigma T_k^4$ ($T_k$ = apparent sky temperature) and re-arrange again:
+$$
+\epsilon_{s} = \frac{T_r^4-T_k^4}{T_s^4-T_k^4}
+$${#eq-Surface-Emissivity}
+
+::: {.notes}
+
+Infrared thermometer with emissivity = 1
+
+
+:::
+
+## Sky Temperature
+
+
+$$
+LW_\downarrow = \epsilon{sky} \sigma T_{sky}^4 
+$${#eq-Sky-Temperature}
+
+Apparent sky temperature is calculated by setting $\epsilon{sky} = 1$
+$$
+LW_\downarrow = \sigma T_{k}^4 
+$${#eq-Apparent-Sky-Temperature}

@@ -782,7 +782,7 @@
     "href": "index.html#lectures",
     "title": "Syllabus",
     "section": "Lectures",
-    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\n\nParticipation\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.",
+    "text": "Lectures\nLectures will be held in-person on Monday & Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings here. Note: Recording is provided as a courtesy and the quality of recordings is not guaranteed.\n\nZoom recordings during the transit strike can be found here\n\n\nParticipation\nParticipation will be assessed using iClicker, click here to learn more about iClicker. You may only earn participation points in person, only during lecture.",
     "crumbs": [
       "Syllabus"
     ]
@@ -921,7 +921,7 @@
     "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
     "title": "Assignment 1",
     "section": "CA DBB Flux Station",
-    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n            TIMESTAMP SW_IN_1_1_1 LW_IN_1_1_1 SW_OUT_1_1_1 LW_OUT_1_1_1\n1 2022-01-01 00:30:00  0.05977540    263.2279    1.3582480     271.2144\n2 2022-01-01 01:00:00  0.01990683    265.9375    1.1015637     274.9786\n3 2022-01-01 01:30:00  0.10298067    268.3632    0.6146293     279.2283\n4 2022-01-01 02:00:00  0.02578117    273.8807    0.3941725     281.6006\n5 2022-01-01 02:30:00  0.03268367    277.7110    0.3813828     283.5396\n6 2022-01-01 03:00:00  0.03338333    277.2797    0.3865185     284.4536\n           H       G_1  TA_1_1_1  TA_1_2_1     TS_1     TS_2     TS_3 RH_1_1_1\n1 -29.676018 -5.586875 -7.762711 -9.570630 3.630083 4.214648 7.489783 83.28255\n2         NA -5.553178 -7.200051 -9.533210 3.677612 4.251830 7.531122 82.64555\n3         NA -5.575220 -6.349798 -7.833451 3.669683 4.264247 7.550878 79.34940\n4         NA -5.574099 -6.297862 -7.050872 3.692943 4.280375 7.569431 79.83266\n5         NA -5.562795 -6.020581 -6.729948 3.708760 4.293371 7.578785 79.85045\n6  -6.500002 -5.563889 -5.811514 -6.359775 3.698611 4.284091 7.576676 79.45928\n  P_1_1_1 PA_1_1_1  WS_1_1_1  WD_1_1_1 VPD_1_1_1 HOUR DOY    Albedo\n1       0 102.3971 0.6597374 0.6597374 0.5728984   00 001 22.722525\n2       0 102.4034 1.4010231 1.4010231 0.6211866   01 001 55.335956\n3       0 102.4177 1.6921777 1.6921777 0.7891113   01 001  5.968395\n4       0 102.4485 1.8559053 1.8559053 0.7737166   02 001 15.289165\n5       0 102.4614 2.0136266 2.0136266 0.7896050   02 001 11.668912\n6       0 102.4637 2.0015748 2.0015748 0.8178825   03 001 11.578188\n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n     DOY                HOUR            SW_IN_1_1_1        LW_IN_1_1_1   \n Length:384         Length:384         Min.   :  0.0000   Min.   :161.6  \n Class :character   Class :character   1st Qu.:  0.0000   1st Qu.:215.1  \n Mode  :character   Mode  :character   Median :  0.0275   Median :249.9  \n                                       Mean   : 45.2556   Mean   :255.8  \n                                       3rd Qu.: 40.2896   3rd Qu.:308.0  \n                                       Max.   :369.3406   Max.   :330.5  \n  SW_OUT_1_1_1      LW_OUT_1_1_1      TA_1_1_1            TS_1      \n Min.   :  0.000   Min.   :269.1   Min.   :-13.297   Min.   :2.607  \n 1st Qu.:  1.267   1st Qu.:282.2   1st Qu.: -8.566   1st Qu.:3.086  \n Median :  2.698   Median :299.1   Median : -2.880   Median :3.555  \n Mean   : 14.706   Mean   :296.8   Mean   : -4.576   Mean   :3.597  \n 3rd Qu.: 18.668   3rd Qu.:310.9   3rd Qu.: -0.607   3rd Qu.:3.979  \n Max.   :114.190   Max.   :323.1   Max.   :  1.805   Max.   :4.984  \n    RH_1_1_1     \n Min.   : 37.67  \n 1st Qu.: 65.42  \n Median : 88.57  \n Mean   : 80.75  \n 3rd Qu.: 98.25  \n Max.   :100.00  \n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n\n\n\n\n\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n\n\n\n\n\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/01.html#question-5",
@@ -1715,7 +1715,7 @@
     "href": "Lectures/05.html#todays-learning-objectives",
     "title": "Shortwave Radiation",
     "section": "Today’s learning objectives",
-    "text": "Today’s learning objectives\n\n\n\nDescribe how radiation interacts with mass.\nUnderstand how can we determine the transmission of short-wave radiation through the atmosphere.\nDescribe how we can quantify and model the short-wave spectral properties of a surface.\nExplain how a surface’s reflectivity is affected by surface geometry.\nUnderstand how the sun’s position relative to an object affects reflectivity.",
+    "text": "Today’s learning objectives\nDescribe how radiation interacts with mass.\n\n\n\nUnderstand how can we determine the transmission of short-wave radiation through the atmosphere.\nDescribe how we can quantify and model the short-wave spectral properties of a surface.\nExplain how a surface’s reflectivity is affected by surface geometry.\nUnderstand how the sun’s position relative to an object affects reflectivity.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1727,7 +1727,7 @@
     "href": "Lectures/05.html#mass-radiation-interactions",
     "title": "Shortwave Radiation",
     "section": "Mass-Radiation Interactions",
-    "text": "Mass-Radiation Interactions\n\nTransmission (\\(\\Psi_\\lambda\\)), Reflection (\\(\\alpha_\\lambda\\)), Absorption (\\(\\zeta_\\lambda\\)), Emission (\\(\\epsilon_\\lambda\\))\nRadiation of wavelength λ incident upon an object must either be transmitted through it or be reflected from its surface, or be absorbed. This is a statement of the conservation of energy.",
+    "text": "Mass-Radiation Interactions\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\qquad(1)\\]\n\nTransmission (\\(\\Psi_\\lambda\\)), Reflection (\\(\\alpha_\\lambda\\)), Absorption (\\(\\zeta_\\lambda\\)), Emission (\\(\\epsilon_\\lambda\\))\nRadiation of wavelength λ incident upon an object must either be transmitted through it or be reflected from its surface, or be absorbed. This is a statement of the conservation of energy.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1847,7 +1847,7 @@
     "href": "Lectures/05.html#calculation-of-sw_downarrow---slab-approach",
     "title": "Shortwave Radiation",
     "section": "Calculation of \\(SW_\\downarrow\\) - slab approach",
-    "text": "Calculation of \\(SW_\\downarrow\\) - slab approach\nBulk transmissivity of the atmosphere (\\(\\Psi_a\\)) depends on turbidity of the air (scattering + absorption) and path length trough the atmosphere.\n\n\n\\[\nSW_\\downarrow = I_ex \\Psi_a^{m}\n\\qquad(1)\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)}\n\\]\n\n\\(\\Psi_a\\)$ varies from about 0.9 (clean) to 0.6 (dirty, smog)\n\n\n\n\n\n\nm = 1/cos(Z); so the greater the solar zenith angle, the greater the optical air mass, and the more attenuated the radiation at the surface. To account for the effects of altitude values of m should be multiplied by the ratio of the station atmospheric pressure to that at standard sea-level (101.3 kPa). Start with https://ibis.geog.ubc.ca/courses/geob300/applets/latitude/index.html",
+    "text": "Calculation of \\(SW_\\downarrow\\) - slab approach\nBulk transmissivity of the atmosphere (\\(\\Psi_a\\)) depends on turbidity of the air (scattering + absorption) and path length trough the atmosphere.\n\n\n\\[\nSW_\\downarrow = I_ex \\Psi_a^{m}\n\\qquad(2)\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)}\n\\]\n\n\\(\\Psi_a\\)$ varies from about 0.9 (clean) to 0.6 (dirty, smog)\n\n\n\n\n\n\nm = 1/cos(Z); so the greater the solar zenith angle, the greater the optical air mass, and the more attenuated the radiation at the surface. To account for the effects of altitude values of m should be multiplied by the ratio of the station atmospheric pressure to that at standard sea-level (101.3 kPa). Start with https://ibis.geog.ubc.ca/courses/geob300/applets/latitude/index.html",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1859,7 +1859,7 @@
     "href": "Lectures/05.html#test-your-knowledge-iclicker",
     "title": "Shortwave Radiation",
     "section": "Test your knowledge (iClicker)",
-    "text": "Test your knowledge (iClicker)\nAssuming that \\(I_ex\\) is 450 W m-2, \\(\\Psi_a\\) = 0.84, and Z = 57.3 \\(^\\circ\\), what is \\(SW_\\downarrow\\)?\n\nI_ex = 450 #W m-2\nPsi_a = 0.84\nZ = 57.3 #deg\nZ_rad=Z*pi/180",
+    "text": "Test your knowledge (iClicker)\nAssuming that \\(I_ex\\) is 450 W m-2, \\(\\Psi_a\\) = 0.84, and Z = 57.3 \\(^\\circ\\), what is \\(SW_\\downarrow\\)?\n\nI_ex = 450 #W m-2\nPsi_a = 0.84\nZ = 57.3 #deg\nZ=Z*pi/180 # convert to radians",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1871,7 +1871,7 @@
     "href": "Lectures/05.html#test-your-knowledge-iclicker-1",
     "title": "Shortwave Radiation",
     "section": "Test your knowledge (iClicker)",
-    "text": "Test your knowledge (iClicker)\nAssuming that \\(I_ex\\) is 450 W m-2, \\(\\Psi_a\\) = 0.84, and Z = 57.3\\(^\\circ\\), what is \\(SW_\\downarrow\\)?\n\nI_ex = 450 #W m-2\nPsi_a = 0.84\nZ = 57.3 #deg\nZ_rad=Z*pi/180\nSW_down = I_ex*Psi_a^(1/cos(Z))\nsprintf('%s W m^-2',SW_down)\n\n[1] \"354.483673974392 W m^-2\"",
+    "text": "Test your knowledge (iClicker)\nAssuming that \\(I_ex\\) is 450 W m-2, \\(\\Psi_a\\) = 0.84, and Z = 57.3\\(^\\circ\\), what is \\(SW_\\downarrow\\)?\n\nI_ex = 450 #W m-2\nPsi_a = 0.84\nZ = 57.3 #deg\nZ=Z*pi/180 # convert to radians\nSW_down = I_ex*Psi_a^(1/cos(Z))\nsprintf('%s W m^-2',SW_down)\n\n[1] \"325.875226835139 W m^-2\"",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1955,7 +1955,7 @@
     "href": "Lectures/05.html#reflectivity-and-reflection-coefficient-1",
     "title": "Shortwave Radiation",
     "section": "Reflectivity and Reflection Coefficient",
-    "text": "Reflectivity and Reflection Coefficient\n\n\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\qquad(2)\\]\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\qquad(3)\\]\n\nWhen \\(\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\alpha_{\\lambda\\ = 0.15 \\mu m \\rightarrow \\lambda_2 = 3 \\mu m}\\); we call it surface albedo \\(\\alpha\\).",
+    "text": "Reflectivity and Reflection Coefficient\n\n\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\qquad(3)\\]\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\qquad(4)\\]\n\nWhen \\(\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\alpha_{\\lambda\\ = 0.15 \\mu m \\rightarrow \\lambda_2 = 3 \\mu m}\\); we call it surface albedo \\(\\alpha\\).",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1991,7 +1991,7 @@
     "href": "Lectures/05.html#normalized-difference-vegetation-index",
     "title": "Shortwave Radiation",
     "section": "Normalized Difference Vegetation Index",
-    "text": "Normalized Difference Vegetation Index\n\n\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\qquad(4)\\]\n\n\n\n\n\n\nNDVI itself thus varies between -1.0 and +1.0.",
+    "text": "Normalized Difference Vegetation Index\n\n\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\qquad(5)\\]\n\n\n\n\n\n\nNDVI itself thus varies between -1.0 and +1.0.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -2662,6 +2662,210 @@
     "crumbs": [
       "Study Questions",
       "Study Question Set 02"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#learning-objectives",
+    "href": "Lectures/06.html#learning-objectives",
+    "title": "Longwave Radiation",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSee how radiation laws apply to long-wave radiative exchange and how long-wave radiation can interact with surfaces.\n\n\n\n\nExplain how we can calculate longwave outgoing radiation, and how it relates to surface emissivity.\nKnow how we can estimate / model longwave incoming radiation and the emissivity of the atmosphere.\n\n\n\n\n\nPeople in front of a heated building in winter as seen in the thermal infrared by a thermal camera (Source: A. Christen)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#what-is-longwave-radiation",
+    "href": "Lectures/06.html#what-is-longwave-radiation",
+    "title": "Longwave Radiation",
+    "section": "What is ‘Longwave’ radiation?",
+    "text": "What is ‘Longwave’ radiation?\n\n\n\n\n\nShort-wave (VIS) D. Scherer, Ecology Department, TU Berlin\n\n\n\n\n\n\nLongwave (TIR) D. Scherer, Ecology Department, TU Berlin",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#measuring-long-wave-radiation",
+    "href": "Lectures/06.html#measuring-long-wave-radiation",
+    "title": "Longwave Radiation",
+    "section": "Measuring Long-wave Radiation",
+    "text": "Measuring Long-wave Radiation\nNumerous instruments can measure long-wave radiation received in a particular field of view (FOV), within a particular band, and/or with a particular spatial resolution.\n\n\n\n\n\nThermal camera\n\n\n\n\n\n\nPyrgeometer\n\n\n\n\n\n\nThermal satellite channel\n\n\n\n\n\nA radiometer measures the long-wave radiance received in a particular field of view (FOV), within a particular band, and with a particular spatial resolution. In remote sensing, sensors are built to pick up those specific spectral bands. Near IR, Mid-IR, Far IR Demo here",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#stefan-boltzmann-law-grey-body",
+    "href": "Lectures/06.html#stefan-boltzmann-law-grey-body",
+    "title": "Longwave Radiation",
+    "section": "Stefan-Boltzmann Law: Grey Body",
+    "text": "Stefan-Boltzmann Law: Grey Body\n\n\nNatural objects (called grey bodies) are not full radiators. Their emittance is given by adapting the Stefan-Boltzman law:\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\qquad(1)\\]\nwhere \\(\\sigma = 5.67 * 10^-8\\)\n\nwhere \\(\\epsilon\\) is their surface emissivity. Emissivity is the ratio of the actual emission to that of a blackbody (i.e. \\(\\epsilon\\) = 1.0).\nThis law is the basis of remote sensing in the TIR\n\n\n\n\n\n\nTable 1: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28\n\n\n\n\n\n\n\n\n\n\n\nAll bodies possessing energy (i.e. whose temperatures are above absolute zero, 0 K = −273.2◦C) emit radiation. If a body at a given temperature emits the maximum possible amount of radiation per unit of its surface area in unit time then it is called a black body. Such a body has a surface emissivity ε equal to unity. If the body is not a full radiator. Emissivity = absorptivity (low emissivity = reflects much of the radiant thermal energy) The map shows the long-wave emittance and reflectance of the land and ocean surface  Stefan–Boltzmann constant (sigma)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#atmospheric-windows",
+    "href": "Lectures/06.html#atmospheric-windows",
+    "title": "Longwave Radiation",
+    "section": "Atmospheric Window(s)",
+    "text": "Atmospheric Window(s)\n\n\nThe satellite measures in this range because this is the atmospheric window in the long-wave part of the spectrum. In this range a cloudless atmosphere is quite transparent, as only a few trace gases absorb radiation. This allows us to see the surface, and not the intervening atmosphere.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law",
+    "href": "Lectures/06.html#kirchhoffs-law",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s law",
+    "text": "Kirchhoff’s law\n\n\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\qquad(2)\\]\n\nAssuming no transmission the absorptivity of a body (\\(\\zeta_\\lambda\\)) equals its emissivity (\\(\\epsilon_\\lambda\\)) at a given wavelength.\n\nA good absorber is a good emitter\n\n\n\n\n\n\n\nFor an arbitrary body emitting and absorbing thermal radiation in thermodynamic equilibrium, the emissivity is equal to the absorptivity.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law-iclicker",
+    "href": "Lectures/06.html#kirchhoffs-law-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s Law (iClicker)",
+    "text": "Kirchhoff’s Law (iClicker)\nPlants are good absorbers of \\(SW\\) radiation, so why don’t they emit just as much \\(SW\\) as they absorb?\n\nA: They aren’t hot enough (Stefan-Boltzmann)\nB: The do emit \\(SW\\), we call this Albedo",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law-1",
+    "href": "Lectures/06.html#kirchhoffs-law-1",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s Law",
+    "text": "Kirchhoff’s Law\nKirchhoff’s law only applies if the wavelength considered is the same – do not mix them together.\n\nKirchhoff’s law only has relevance to long-wave exchange in climatology.\n\nThe law does not apply to fluorescent objects, which can absorb energy at a given a wavelength and release it at another one.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#mass-radiation-interactions",
+    "href": "Lectures/06.html#mass-radiation-interactions",
+    "title": "Longwave Radiation",
+    "section": "Mass-Radiation Interactions",
+    "text": "Mass-Radiation Interactions\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\qquad(3)\\]\n\nTransmission (\\(\\Psi_\\lambda\\)), Reflection (\\(\\alpha_\\lambda\\)), Absorption (\\(\\zeta_\\lambda\\)), Emission (\\(\\epsilon_\\lambda\\))",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection",
+    "href": "Lectures/06.html#long-wave-reflection",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection",
+    "text": "Long-wave Reflection\nMost (solid) surfaces are opaque to long-wave (i.e., \\(\\Psi_{LW} \\approx 0\\)), so we can simplify our radiation conservation equation for \\(LW\\): \\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\qquad(4)\\]\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\qquad(5)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection-iclicker",
+    "href": "Lectures/06.html#long-wave-reflection-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection (iClicker)",
+    "text": "Long-wave Reflection (iClicker)\n\n\nWhich surface would you expect to have the highest \\(\\alpha_{LW}\\)?\n\nA Peat (organic soil)\nB Wood\nC Steel (Iron-carbon alloy)\nD Wheat\nE A Cow\n\n\n\n\n\n\nTable 2: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection-1",
+    "href": "Lectures/06.html#long-wave-reflection-1",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection",
+    "text": "Long-wave Reflection\n\nGlass transmits a substantial fraction of visible light, but is relatively opaque to \\(LW\\)\nLow-E, or low-emissivity, glass was created to minimize the amount of infrared and ultraviolet light that comes through your glass, without minimizing the amount of light that enters your home. Low-E glass windows have a microscopically thin coating that is transparent and reflects heat.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#net-long-wave-flux-density",
+    "href": "Lectures/06.html#net-long-wave-flux-density",
+    "title": "Longwave Radiation",
+    "section": "Net Long-wave Flux Density",
+    "text": "Net Long-wave Flux Density\nThe net long-wave radiation flux density (\\(LW^*\\)) at the surface is the difference between the input from the atmosphere above (\\(LW\\downarrow\\)) and the output surface (\\(LW\\uparrow\\)).\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\qquad(6)\\]\n\n\nSurface output includes both emissions from surface and reflected \\(LW\\downarrow\\)\n\nDiffers from \\(SW*= SW\\downarrow - SW\\uparrow\\)\n\\(SW\\uparrow\\) is only reflected \\(SW\\), earth doesn’t emit \\(SW\\)!",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-long-wave-flux-density",
+    "href": "Lectures/06.html#long-long-wave-flux-density",
+    "title": "Longwave Radiation",
+    "section": "Long-Long-wave Flux Density",
+    "text": "Long-Long-wave Flux Density",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#net-long-wave-flux-density-1",
+    "href": "Lectures/06.html#net-long-wave-flux-density-1",
+    "title": "Longwave Radiation",
+    "section": "Net Long-wave Flux Density",
+    "text": "Net Long-wave Flux Density\nWe can re-formulate the previous equation in terms of the Stefan-Boltzmann Law:\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\qquad(7)\\]\n\nHow is this equivalent to Equation 6\n\n\n\nStefan-Boltzman gives us emissions from a surface of temperature \\(T_s\\) with a long-wave emissivity of \\(\\epsilon_{LW}\\)\n\n\n\n\\((1-\\epsilon_{LW})\\) gives us reflectivity\n\n\n\n\nClouds, when present, are the major contributors to the incoming longwave radiation to the surface. They radiate like blackbodies (e ^ 1) at their respective cloud base temperatures. In passing through the atmosphere, a large part of the terrestrial radiation is absorbed by atmospheric gases, such as water vapor, carbon dioxide, nitrogen oxides, methane, and ozone. In particular, water vapor and CO2 are primarily responsible for absorbing the terrestrial radiation and reducing its escape to the space (the so-called greenhouse effect). The atmospheric gases and aerosols which absorb energy also radiate energy.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#estimating-surface-emissivity",
+    "href": "Lectures/06.html#estimating-surface-emissivity",
+    "title": "Longwave Radiation",
+    "section": "Estimating Surface Emissivity",
+    "text": "Estimating Surface Emissivity\nWe can compare the apparent surface temperature \\(T_r\\), which assumes the surface is a black body: \\[\n\\sigma T_r^4 = \\epsilon_{s} T_s^4 + (1-\\epsilon_{s})LW\\downarrow\n\\qquad(8)\\]\nIn reality, we have both emission and reflection. We can re-arrange to isolate \\(T_s\\) \\[\nT_s = [\\frac{\\sigma T_r^4-(1-\\epsilon_{s})LW\\downarrow}{\\epsilon_{s}\\sigma}]\n\\qquad(9)\\]\nthen substitute \\(sigma T_k^4\\) (\\(T_k\\) = apparent sky temperature) and re-arrange again: \\[\n\\epsilon_{s} = \\frac{T_r^4-T_k^4}{T_s^4-T_k^4}\n\\qquad(10)\\]\n\nInfrared thermometer with emissivity = 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#sky-temperature",
+    "href": "Lectures/06.html#sky-temperature",
+    "title": "Longwave Radiation",
+    "section": "Sky Temperature",
+    "text": "Sky Temperature\n\\[\nLW_\\downarrow = \\epsilon{sky} \\sigma T_{sky}^4\n\\qquad(11)\\]\nApparent sky temperature is calculated by setting \\(\\epsilon{sky} = 1\\) \\[\nLW_\\downarrow = \\sigma T_{k}^4\n\\qquad(12)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
     ]
   }
 ]

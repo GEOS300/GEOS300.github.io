@@ -1,0 +1,4 @@
+
+$$
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+$${#eq-Conservation-Equation-Radiation}

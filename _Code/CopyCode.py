@@ -3,8 +3,8 @@ from distutils.dir_util import copy_tree
 import nbformat
 import re
 
-if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-    exit()
+# if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+#     exit()
 
 def R_rep(text):
     text = text.replace('\n','~~~~~~')
@@ -12,24 +12,32 @@ def R_rep(text):
     B = re.findall(r'::: {.cell-output .cell-output-stderr}(.*?)```(.*?)```',text)
     C = re.findall(r'::: {.cell-output-display}(.*?):::',text)
     D = re.findall(r':::: {.columns}(.*?)::::',text)
+    # E = re.findall(r':::: {.columns}(.*?)::::',text)
+    # for rem in [D,A,B,C]:
     for rem in [D,A,B,C]:
         for i,a in enumerate(rem):
             if isinstance(a, tuple):
                 for part in a:
-                    text=text.replace(part,'')
+                    print(part)
+                    text=text.replace(part,'\n')
             else:
                 text=text.replace(a,'')
+    text=text.replace(':::: {.columns}','')
+    text=text.replace('::::','')
+
     text=text.replace('.r .cell-code','r')
     text=text.replace('::: {.cell}','')
-    text=text.replace(':::: {.columns}','')
     text=text.replace('::: {.cell-output .cell-output-stdout}','')
     text=text.replace('::: {.cell-output .cell-output-stderr}','')
     text=text.replace('::: {.cell-output-display}','')
-    text=text.replace('::::','')
     text=text.replace(':::','')
-    text=text.replace('```~~~~~~```','\n')
+
+    text=text.replace('\n\n---\n\n','\n\n')
+    text=text.replace('```\n```','```\n\n')
     text=text.replace('~~~~~~','\n')
-    text=text.replace('#| include: false','')
+    for rep in ['execute:\n','keep-md: true\n','echo: true\n','output: False']:
+        text = text.replace(rep,'')
+
     text=text.replace('\n\n\n\n','\n\n')
     return (text)
 

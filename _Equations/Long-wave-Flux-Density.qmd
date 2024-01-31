@@ -1,0 +1,4 @@
+ 
+$$
+LW^* = LW\downarrow - LW\uparrow
+$${#eq-Long-wave-Flux-Density}

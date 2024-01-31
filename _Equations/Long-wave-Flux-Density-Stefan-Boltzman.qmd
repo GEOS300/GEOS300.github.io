@@ -1,0 +1,4 @@
+ 
+$$
+LW^* = LW\downarrow - \epsilon_{LW}\sigma_b T_s^4 -(1-\epsilon_{LW})LW\downarrow
+$${#eq-Long-wave-Flux-Density-Stefan-Boltzman}

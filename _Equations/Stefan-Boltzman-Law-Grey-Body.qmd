@@ -2,3 +2,5 @@
 $$
 E_g = \epsilon\sigma_b T^4
 $${#eq-Stefan-Boltzman-Law-Grey-Body}
+
+where $\sigma = 5.67 * 10^-8$

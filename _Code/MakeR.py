@@ -1,7 +1,7 @@
 import os
 
-if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-    exit()
+# if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+#     exit()
 
 
 In_Dir = 'Assignments/'
@@ -18,6 +18,7 @@ R_head = '''
 execute:
   keep-md: true
 echo: true
+output: False
 '''
 
 py_code = '_py.'

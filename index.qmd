@@ -130,6 +130,8 @@ kable(grades, col.names = gsub("[.]", " ", names(grades)))
 
 Lectures will be held in-person on {{< var keyInfo.lecture_time >}} in {{< var keyInfo.lecture_room >}}.  Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material.  You may find the recordings [here]({{< var keyInfo.recordings >}}).  **Note**: Recording is provided as a courtesy and the quality of recordings is not guaranteed.
 
+* Zoom recordings during the transit strike can be found [here](https://drive.google.com/drive/folders/1DouEbTpcuHyVOjtxLU5SuewrAzLedmV_?usp=sharing)
+
 ### Participation 
 
 Participation will be assessed using iClicker, [click here to learn more about iClicker]({{< var keyInfo.iclicker_info >}}).  You may only earn participation points in person, only during lecture.

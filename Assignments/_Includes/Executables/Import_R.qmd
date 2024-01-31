@@ -1,7 +1,6 @@
 
 
 ```{r}
-#| include: false
 library("ggplot2")
 library("reshape2")
 library("latex2exp")
