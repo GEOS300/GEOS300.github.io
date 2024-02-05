@@ -31,7 +31,8 @@ Topics = [
 'A Deeper Dive into Surface Energy Balances',
 'Radiation Geometry',
 'Shortwave Radiation',
-'Longwave Radiation'
+'Longwave Radiation',
+'Net-Radiation'
 ]
 Readings = [
     '',
@@ -40,6 +41,8 @@ Readings = [
     '',
     '',
     '[Additional Reading](../www/readings04_05.pdf)'
+    '',
+    '[Additional Reading](../www/readings07_08.pdf)'
 ]
 Study = ['',
         '',

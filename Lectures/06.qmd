@@ -345,16 +345,16 @@ The atmospheric gases and aerosols which absorb energy also radiate energy.
 
 :::
 
-## Estimating Surface Emissivity
+## Estimating Surface Emissivity {.smaller}
 
 We can compare the apparent surface temperature $T_r$, which assumes the surface is a black body:
 $$
-\sigma T_r^4 = \epsilon_{s} T_s^4 + (1-\epsilon_{s})LW\downarrow
+\sigma T_r^4 = \epsilon_{s} T_s^4 + (1-\epsilon_{s})LW_{\downarrow}
 $${#eq-Apparent-Surface-Temperature}
 
 In reality, we have both emission and reflection.  We can re-arrange to isolate $T_s$
 $$
-T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW\downarrow}{\epsilon_{s}\sigma}]
+T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW_{\downarrow}}{\epsilon_{s}\sigma}]
 $${#eq-Surface-Temperature}
 
 then substitute $sigma T_k^4$ ($T_k$ = apparent sky temperature) and re-arrange again:
@@ -373,10 +373,277 @@ Infrared thermometer with emissivity = 1
 
 
 $$
-LW_\downarrow = \epsilon{sky} \sigma T_{sky}^4 
+LW_\downarrow = \epsilon_{sky} \sigma T_{sky}^4 
 $${#eq-Sky-Temperature}
 
 Apparent sky temperature is calculated by setting $\epsilon{sky} = 1$
 $$
 LW_\downarrow = \sigma T_{k}^4 
 $${#eq-Apparent-Sky-Temperature}
+
+
+## Calculating $LW_\downarrow$ {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Screen level observations are typically available from regular climate stations for air temperature ($T_a$) and sometimes vapour pressure ($P_v$) but not $LW_\downarrow$ 
+* If we are interested in estimating $LW_\downarrow$ across full long-wave range (3 to 100 µm) we need a bulk value of $\epsilon_a$ for both cloudless and cloudy cases. 
+* Several equations are available to estimate $\epsilon_a$ from screen-level $T_a$ and $P_v$. 
+
+
+:::
+
+::: {.column width="50%"}
+
+![A standard Stevenson-screen sheltering sensors to measure air temperature and humidity (Photo: A. Christen)](images/StevensonScreen.png)
+
+
+:::
+
+::::
+
+
+
+## Calculating $LW_\downarrow$ - How to estimate $\epsilon_a$
+
+
+* Using $T_a$ and $P_v$ to estimate $\epsilon_a$ works because:
+  * $T_a$ and $P_v$ are the main controls that change in the atmosphere
+  * Variations in CO2, O3 and other greenhouse gases are small.
+  * $T_a$ and $P_v$ are largest and show their greatest variation near the ground. Approximately 50% of $LW_\downarrow$ originates from 0 to 100m.
+
+::: {.notes}
+
+Emissivity varies with temperature
+EQUATION FOR $P_v$
+
+
+:::
+
+## Calculating $LW_\downarrow$ (Prata 1996) {.smaller}
+
+
+{{< include ../_Equations/Prata.qmd >}}
+
+where you can calculate $P_v$ from RH as:
+
+{{< include ../_Equations/Relative-Humidity.qmd >}}
+
+and approximate $P_v^*$ using the Tetens equation:
+
+{{< include ../_Equations/Tetens.qmd >}}
+
+
+::: {.notes}
+
+Td =  temperature at which the air can no longer "hold" all of the water vapor which is mixed with it, and some of the water vapor must condense into liquid water. 
+All such empirical equations are specific to the place where they were developed. 
+Second, all such equations are daily averages that ignore the actual vertical temperature structure.
+Third, they assume perfectly clear skies, which may or may not be true. 
+Fourth, one approach uses measurements with all their associated errors. 
+Can get Sky emissivity from temperature and LWin
+
+
+
+:::
+
+
+## Calculating $LW_\downarrow$ (iClicker) {.smaller}
+
+At 15:00, February 2nd, $T_a = 9 ^\circ$ and $RH = 80%$, what was $LW_\downarrow$?
+
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+```{python}
+#| echo: True
+import numpy as np
+
+class get_epsilon_a():
+  def __init__(self,T_a,RH):
+    if T_a < 100:
+      self.T_a = T_a
+      self.T_ak = T_a+273.15
+    else:
+      self.T_ak=T_a
+      self.T_a=T_a-273.15
+    if RH>1:
+      self.RH=RH*.01
+    else:
+      self.RH=RH
+    self.Prata()
+
+  def Prata(self):
+    self.Pv_from_RH()
+    a = 1.2
+    b = 3
+    zeta = 46.5*(self.P_v/self.T_ak)
+    self.epsilon_a = 1-(1+zeta)*np.exp(-(a+b*zeta)**0.5)
+
+  def Pv_from_RH(self):
+    P_v_star = 6.112*np.exp(17.62*self.T_a/(243.12+self.T_a))
+    self.P_v = self.RH*P_v_star
+e = get_epsilon_a(9,80)
+e.epsilon_a
+```
+
+:::
+
+::: {.column width="20%"}
+
+- A 0.77
+- B 0.88
+- C 0.66
+- D 0.55
+- E 0.99
+
+:::
+
+::::
+
+## Effects of Temperature and Humidity (iClicker) {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="80%"}
+
+```{python}
+
+import matplotlib.pyplot as plt
+
+fig,ax=plt.subplots(1,2,sharey=True)
+RH=np.arange(10,100)
+TA=np.arange(-20,40)
+RH_e = np.array([get_epsilon_a(10,rh).epsilon_a for rh in RH]) 
+TA_e = np.array([get_epsilon_a(ta,80).epsilon_a for ta in TA]) 
+ax[0].plot(TA,TA_e)
+ax[0].set_title('A. $\epsilon_a$ vs $T_a$; RH = 80%')
+ax[0].set_xlabel('$^{\circ} C$')
+ax[0].set_ylabel('$\epsilon_a$')
+ax[0].grid()
+ax[1].plot(RH,RH_e)
+ax[1].set_title('B. $\epsilon_a$ vs RH; $T_a = 10^{\circ} C$')
+ax[1].set_xlabel('RH %')
+ax[1].grid()
+
+```
+
+:::
+
+::: {.column width="20%"}
+
+Which property has a stronger effect?
+
+* A $T_a$
+* B $RH$
+
+:::
+
+::::
+---
+
+
+
+![UBC Energy Balance Station “Westham Island” (Photo: A. Christen)](images/06_29_3.png)
+
+
+
+
+---
+
+![](images/06_30_0.jpg)
+
+
+::: {.notes}
+
+Measures global and diffuse radiation
+
+
+:::
+
+## Diurnal Course - Clear vs Cloudy Sky
+
+```{python}
+
+import pandas as pd
+
+# Import the data from github & parse the timestamp for each record
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'
+# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
+df = pd.read_csv(data_url,parse_dates=['TIMESTAMP'],index_col=['TIMESTAMP'])
+fig,ax=plt.subplots(1,2,sharey=True,sharex=True)
+# fig.autofmt_xdate(rotation=45)
+df['Hour'] = df.index.hour+df.index.minute/60
+wx = df.loc[((df.index.year==2022)&(df.index.month==12)&(df.index.day==24))]
+su = df.loc[((df.index.year==2023)&(df.index.month==8)&(df.index.day==21))]
+wx.plot(ax=ax[0],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1'],
+              color=['blue','red','blue','red'],
+              style=['-','-','--','--'])
+ax[0].set_title('December 24th, 2022')
+ax[0].legend(['SW In','SW Out','LW In','LW Out'],ncol=2)
+ax[0].set_ylabel('$W m^{-2}$')
+        
+ax[1].set_title('August 21st, 2023')
+su.plot(ax=ax[1],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1'],
+              color=['blue','red','blue','red'],
+              style=['-','-','--','--'],legend=False)
+
+```
+
+
+## Effect of Clouds on Longwave Irradiance {.smaller}
+
+
+![With a clear-sky, $LW_\downarrow$ originates from all layers of the atmosphere, because the atmosphere is partly transparent (‘atmospheric window’ open). With clouds $LW_\downarrow$ originates from the cloud base and the atmosphere below the cloud, because the cloud is opaque to long wave (‘atmospheric window’ closed).](images/06_34_2.png)
+
+
+
+
+
+## Monthly totals of $LW_\downarrow$ & $LW_\uparrow$ at CA-DBB {.smaller}
+
+```{python}
+
+Monthly = df.loc[df.index.year<=2024].resample('M').mean()[['LW_IN_1_1_1','LW_OUT_1_1_1']]
+
+Monthly = Monthly.groupby(Monthly.index.month).mean()*3600*24*1e-6
+fig,ax=plt.subplots()
+Monthly.plot(kind='bar',y=['LW_IN_1_1_1','LW_OUT_1_1_1'],ax=ax)
+ax.set_ylabel('$MJ m^{-2} d^{-1}$')
+
+```
+
+## ‘Fingerprint’ of $LW_\downarrow$ and $LW_\uparrow$ measured in Vancouver
+
+![](images/06_36_2.png)
+
+
+
+## Take Home Points
+
+
+:::: {.columns}
+
+::: {.column width="100%"}
+
+* Radiation laws apply the same way to the longwave part of the spectrum - but Kirchhoff’s law and the concept of emissivity become relevant.
+* The net-long wave radiation is driven by the difference in apparent sky and surface temperatures and hence clouds and thermal surface properties are controlling radiative exchange in the long-wave.
+
+
+
+
+
+:::
+
+::: {.column width="0%"}
+
+
+
+:::
+
+::::

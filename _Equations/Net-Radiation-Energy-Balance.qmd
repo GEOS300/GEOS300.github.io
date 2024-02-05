@@ -1,0 +1,11 @@
+
+$$
+SW^* = SW \downarrow (1 - \alpha)
+$${#eq-Absorbed-SW}
+$$
+LW^* = \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
+$${#eq-Net-Absorbed-Emitted-LW}
+$$
+R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
+$${#eq-Net-Radiation-Energy-Balance}
+

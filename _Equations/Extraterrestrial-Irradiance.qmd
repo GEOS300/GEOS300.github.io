@@ -3,10 +3,8 @@ $$
 I_ex=I_0(\frac{R_av}{R})^2\cos(Z)
 $${#eq-Extraterrestrial-Irradiance}
 
-where $I_0 \approx 1361 \rm{W m^{-2}}$, $\cos(Z)$ applies the cosine law of illumination, and $(\frac{R_av}{R})$ adjusts the solar constant Earth's elliptic orbit:  
+where $I_0 \approx 1361 W m^{-2}$, $\cos(Z)$ applies the cosine law of illumination, and $(\frac{R_av}{R})$ adjusts the solar constant Earth's elliptic orbit:  
 $$
-\begin{eqnarray}
-(\frac{R_av}{R})^2 = & 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
-                     &0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
-\end{eqnarray}
+(\frac{R_av}{R})^2 = 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+
+                     0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
 $${#eq-Adjusted-Constant}

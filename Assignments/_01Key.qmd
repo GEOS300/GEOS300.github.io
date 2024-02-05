@@ -1,0 +1,166 @@
+---
+title: "Assignment 1"
+subtitle: "GEOS 300, 2024"
+format: pdf
+---
+
+### Question 1 
+
+Below is an example showing the first few rows of the BB climate summary data.  What values do you see listed for Incoming and outgoing $SW$ in the first row of the table, are these values reasonable?  Why or why not?  
+
+* Make suer to specify the units in your answer. Check the metadata provided [here](https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md) to make sure you understand the variable names and units.
+
+#### Answer
+
+More or less what we'd expect, but $SW\downarrow$ shouldn't be less than $SW\uparrow$ - so it indicates some lack of precision with the sensor.  Units Wm-2
+
+
+### Question 2 
+
+We're going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area.  The table below shows some descriptive statistics for key variables during this time period.  What was the range of air temperatures observed over this time period?  How does it compare to the range of soil temperatures observed?
+
+#### Answer
+
+Give the range and discuss how $T_a$ is much more variable that $T_s$
+
+### Question 3
+
+The plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are.  Looking at the plot, what stands out to you?  Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see.  Do you see any issues in the data?  If so, what is a possible explanation?
+
+#### Answer
+
+Important to discuss how $LW$ in/out varies as a function of temperature and how $SW$ in/out is effected by cloud/snow.  Big issue on day of snowfall, radiometer is covered in snow. 
+
+
+### Question 4
+
+The plot below shows mean daily albedo.  What explains sharp increase on the 17th?
+
+#### Answer
+
+Snow
+
+## Question 5
+
+The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_ex$ for the center point of this observation period (12:45).  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
+
+**Note**: you can find the site's Lat/Lon and time zone info in the CA-DBB station metadata file.
+
+#### Answer
+
+Equations are in lecture [4](https://geos300.github.io/Lectures/04.html#/title-slide) & [5](https://geos300.github.io/Lectures/04.html#/title-slide) with examples for time calculations in study question [2](https://geos300.github.io/Study_Questions/02.html),
+
+Get the declination as follows:
+
+{{< include ../_Equations/Solar-Declination.qmd >}}
+
+And local Apparent time:
+
+{{< include ../_Equations/TimeEquations.qmd >}}
+
+And the zenith ($Z$) following:
+
+{{< include ../_Equations/Solar-Zenith.qmd >}}
+
+With the zenith an the fractional DOY, you can then get $I_ex$
+
+
+{{< include ../_Equations/Extraterrestrial-Irradiance.qmd >}}
+
+Use $Z$ and $I_ex$ to solve for $\Phi_a$
+
+{{< include ../_Equations/Bulk-Transmissivity.qmd >}}
+
+### Question 6
+
+Now calculate $\Psi_a$ for 12:45 January 19; the observed value of $SW_\downarrow$ was between 12:30 and 13:00 was 58.375 W$^m{-2}$.  What explains the difference between these two days?
+
+#### Answer
+
+Same procedures as above - difference is due to clouds - significantly more light is attenuated on the cloudy day - light is reflected back to space by clouds (some is also absorbed) be fore making it to ground level
+
+### Question 7
+
+Using the examples above as a template, calculate $R_n$ over the cold-snap.  Make a scatter plot showing $R_n$ on the y-axis and $SW_\downarrow$ on the x-axis.  Describe the relationship you.
+
+#### Answer
+
+{{< include ../_Equations/Net-Radiation.qmd >}}
+
+
+### Question 8
+
+Using the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions.  Change the selection period so that it spans July 12th to July 19th, 2023.  Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.
+
+
+#### Answer
+
+Looking for a discussion of the differences: warmer weather, more incoming $SW$ and more incoming/outgoing $LW$.  Make sure all axes limits are updated
+
+### Question 9
+
+Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_ex$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
+
+#### Answer
+
+Same procedures as question 5 - magnitude differs because of the solar declination change giving us a higher zenith.  Timing differs because $\Delta LAT$ changes between summer and winter.  Not because of DST because the sites don't use it.
+
+### Question 10
+
+Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in $\mu mol m^{-2}s^{-1}$. You can use the wavelength of yellow light ($\lambda 0 0.55 \mu m$) for your estimate.
+**Hint**: Consult examples in reading package for radiation geometry.
+
+#### Answer
+
+Solve for the frequency of yellow light: 
+
+{{< include ../_Equations/Frequency.qmd >}}
+
+Then the energy, where h=6.63∗10−34Js
+
+{{< include ../_Equations/Energy-of-Photon.qmd >}}
+
+### Question 11
+
+Let's assume the surface emissivity at CA-DBB is $\epsilon = 0.95$.  Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.
+
+#### Answer
+
+{{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
+
+
+### Question 12
+
+Now use the same equation to estimate the "apparent" radiative sky temperature ($T_k$) from $LW_{\downarrow}$ for this timestamp.  "Apparent" means you should assume $\epsilon{a} = 1.0$. How would you interpret $T_k$?
+
+#### Answer
+
+Same, but with $\epsilon{a} = 1.0$, its assuming the sky is a black body (not really).  This would be the temperature if the sky were a perfect absorber/emitter and not transparent to $LW$
+
+{{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
+
+
+#### Answer
+
+### Question 13
+
+Using measured $LW_{\downarrow}$ and measured air temperature $T_a$, calculate the actual bulk emissivity of the atmosphere $\varepsilon_{a}$ at noon? [2]
+
+#### Answer
+
+Plug $LW$ into $E_g$ and using $T_a$ solve for $\epsilon$
+
+{{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
+
+#### Answer
+
+
+### Question 14
+
+Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LS_{\downarrow}$? How well do these approximations match with what we actually observed?
+
+#### Answer
+
+The approximation below will get pretty close (within about a couple percent) for clear sky conditions.  Won't work as well with cloud cover.
+
+{{< include ../_Equations/Prata.qmd >}}

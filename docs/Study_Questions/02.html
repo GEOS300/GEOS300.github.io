@@ -230,15 +230,13 @@ Tip
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
 <p><span id="eq-Solar-Declination"><span class="math display">\[
-\begin{eqnarray}
-\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
-         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
-         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber
-\end{eqnarray}
+\delta = 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)
+         -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma)
+         -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma)
 \tag{1}\]</span></span></p>
 <p>where <span class="math inline">\(\gamma\)</span> is the fractional year and DOY is the day of the year:</p>
 <p><span id="eq-Fractional-Year"><span class="math display">\[
-\gamma = \frac{2 \pi }{365} (\rm{DOY}-1)
+\gamma = \frac{2 \pi }{365} (DOY-1)
 \tag{2}\]</span></span></p>
 <p><span class="math inline">\(\rm{DOY}\)</span> is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).</p>
 <p>Declination changes throughout the year, but for a given date it is the same for the whole planet. <span class="math inline">\(\delta\)</span> is <span class="math inline">\(0^{\circ}\)</span> during the vernal and autumnal equinox, and <span class="math inline">\(\delta\)</span> is <span class="math inline">\(\pm 23.5^{\circ}\)</span> (minimum / maximum) for the winter and summer solstices.</p>

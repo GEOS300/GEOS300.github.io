@@ -1,0 +1,4 @@
+
+$$
+v=\frac{c}{\lambda}
+$${#eq-Frequency}

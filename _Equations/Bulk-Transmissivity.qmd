@@ -1,6 +1,6 @@
 
 $$
-SW_\downarrow = I_ex \Psi_a^{m}
+SW_\downarrow = I_{ex} \Psi_a^{m}
 $${#eq-Bulk-Transitivity}
 
 where 

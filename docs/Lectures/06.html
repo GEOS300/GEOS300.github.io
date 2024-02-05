@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -723,13 +788,13 @@ LW^* = LW\downarrow - \epsilon_{LW}\sigma_b T_s^4 -(1-\epsilon_{LW})LW\downarrow
           display:block!important;
       }</style></aside>
 </section>
-<section id="estimating-surface-emissivity" class="slide level2">
+<section id="estimating-surface-emissivity" class="slide level2 smaller">
 <h2>Estimating Surface Emissivity</h2>
 <p>We can compare the apparent surface temperature <span class="math inline">\(T_r\)</span>, which assumes the surface is a black body: <span id="eq-Apparent-Surface-Temperature"><span class="math display">\[
-\sigma T_r^4 = \epsilon_{s} T_s^4 + (1-\epsilon_{s})LW\downarrow
+\sigma T_r^4 = \epsilon_{s} T_s^4 + (1-\epsilon_{s})LW_{\downarrow}
 \qquad(8)\]</span></span></p>
 <p>In reality, we have both emission and reflection. We can re-arrange to isolate <span class="math inline">\(T_s\)</span> <span id="eq-Surface-Temperature"><span class="math display">\[
-T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW\downarrow}{\epsilon_{s}\sigma}]
+T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW_{\downarrow}}{\epsilon_{s}\sigma}]
 \qquad(9)\]</span></span></p>
 <p>then substitute <span class="math inline">\(sigma T_k^4\)</span> (<span class="math inline">\(T_k\)</span> = apparent sky temperature) and re-arrange again: <span id="eq-Surface-Emissivity"><span class="math display">\[
 \epsilon_{s} = \frac{T_r^4-T_k^4}{T_s^4-T_k^4}
@@ -751,11 +816,204 @@ T_s = [\frac{\sigma T_r^4-(1-\epsilon_{s})LW\downarrow}{\epsilon_{s}\sigma}]
 <section id="sky-temperature" class="slide level2">
 <h2>Sky Temperature</h2>
 <p><span id="eq-Sky-Temperature"><span class="math display">\[
-LW_\downarrow = \epsilon{sky} \sigma T_{sky}^4
+LW_\downarrow = \epsilon_{sky} \sigma T_{sky}^4
 \qquad(11)\]</span></span></p>
 <p>Apparent sky temperature is calculated by setting <span class="math inline">\(\epsilon{sky} = 1\)</span> <span id="eq-Apparent-Sky-Temperature"><span class="math display">\[
 LW_\downarrow = \sigma T_{k}^4
 \qquad(12)\]</span></span></p>
+</section>
+<section id="calculating-lw_downarrow" class="slide level2 smaller">
+<h2>Calculating <span class="math inline">\(LW_\downarrow\)</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>Screen level observations are typically available from regular climate stations for air temperature (<span class="math inline">\(T_a\)</span>) and sometimes vapour pressure (<span class="math inline">\(P_v\)</span>) but not <span class="math inline">\(LW_\downarrow\)</span></li>
+<li>If we are interested in estimating <span class="math inline">\(LW_\downarrow\)</span> across full long-wave range (3 to 100 µm) we need a bulk value of <span class="math inline">\(\epsilon_a\)</span> for both cloudless and cloudy cases.</li>
+<li>Several equations are available to estimate <span class="math inline">\(\epsilon_a\)</span> from screen-level <span class="math inline">\(T_a\)</span> and <span class="math inline">\(P_v\)</span>.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/StevensonScreen.png"></p>
+<figcaption>A standard Stevenson-screen sheltering sensors to measure air temperature and humidity (Photo: A. Christen)</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="calculating-lw_downarrow---how-to-estimate-epsilon_a" class="slide level2">
+<h2>Calculating <span class="math inline">\(LW_\downarrow\)</span> - How to estimate <span class="math inline">\(\epsilon_a\)</span></h2>
+<ul>
+<li>Using <span class="math inline">\(T_a\)</span> and <span class="math inline">\(P_v\)</span> to estimate <span class="math inline">\(\epsilon_a\)</span> works because:
+<ul>
+<li><span class="math inline">\(T_a\)</span> and <span class="math inline">\(P_v\)</span> are the main controls that change in the atmosphere</li>
+<li>Variations in CO2, O3 and other greenhouse gases are small.</li>
+<li><span class="math inline">\(T_a\)</span> and <span class="math inline">\(P_v\)</span> are largest and show their greatest variation near the ground. Approximately 50% of <span class="math inline">\(LW_\downarrow\)</span> originates from 0 to 100m.</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>Emissivity varies with temperature EQUATION FOR <span class="math inline">\(P_v\)</span></p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="calculating-lw_downarrow-prata-1996" class="slide level2 smaller">
+<h2>Calculating <span class="math inline">\(LW_\downarrow\)</span> (Prata 1996)</h2>
+<p><span id="eq-Prata"><span class="math display">\[
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
+\qquad(13)\]</span></span></p>
+<p>where a = 1.2, b=3.0, and <span class="math inline">\(\zeta = 46.5\frac{P_v}{T_a}\)</span> with <span class="math inline">\(T_a\)</span> in Kelvin and <span class="math inline">\(P_v\)</span> in hPa.</p>
+<p>where you can calculate <span class="math inline">\(P_v\)</span> from RH as:</p>
+<p><span id="eq-Relative-Humidity"><span class="math display">\[
+RH=\frac{P_v}{P_v^*}
+\qquad(14)\]</span></span></p>
+<p>and approximate <span class="math inline">\(P_v^*\)</span> using the Tetens equation:</p>
+<p><span id="eq-Tetens"><span class="math display">\[
+P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
+\qquad(15)\]</span></span></p>
+<p><strong>Note</strong> that <span class="math inline">\(T_a\)</span> must be in <span class="math inline">\(C^\circ\)</span> for this approximation. It will give <span class="math inline">\(P_v^*\)</span> in hPa.</p>
+<aside class="notes">
+<p>Td = &nbsp;temperature at which the air can no longer “hold” all of the&nbsp;water vapor which is mixed with it, and some of the water vapor must&nbsp;condense&nbsp;into liquid water.&nbsp; All such empirical equations are specific to the place where they were developed. Second, all such equations are daily averages that ignore the actual vertical temperature structure. Third, they assume perfectly clear skies, which may or may not be true. Fourth, one approach uses measurements with all their associated errors. Can get Sky emissivity from temperature and LWin</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="calculating-lw_downarrow-iclicker" class="slide level2 smaller">
+<h2>Calculating <span class="math inline">\(LW_\downarrow\)</span> (iClicker)</h2>
+<p>At 15:00, February 2nd, <span class="math inline">\(T_a = 9 ^\circ\)</span> and <span class="math inline">\(RH = 80%\)</span>, what was <span class="math inline">\(LW_\downarrow\)</span>?</p>
+<div class="columns">
+<div class="column" style="width:80%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="kw">class</span> get_epsilon_a():</span>
+<span id="cb1-4"><a></a>  <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>,T_a,RH):</span>
+<span id="cb1-5"><a></a>    <span class="cf">if</span> T_a <span class="op">&lt;</span> <span class="dv">100</span>:</span>
+<span id="cb1-6"><a></a>      <span class="va">self</span>.T_a <span class="op">=</span> T_a</span>
+<span id="cb1-7"><a></a>      <span class="va">self</span>.T_ak <span class="op">=</span> T_a<span class="op">+</span><span class="fl">273.15</span></span>
+<span id="cb1-8"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb1-9"><a></a>      <span class="va">self</span>.T_ak<span class="op">=</span>T_a</span>
+<span id="cb1-10"><a></a>      <span class="va">self</span>.T_a<span class="op">=</span>T_a<span class="op">-</span><span class="fl">273.15</span></span>
+<span id="cb1-11"><a></a>    <span class="cf">if</span> RH<span class="op">&gt;</span><span class="dv">1</span>:</span>
+<span id="cb1-12"><a></a>      <span class="va">self</span>.RH<span class="op">=</span>RH<span class="op">*</span><span class="fl">.01</span></span>
+<span id="cb1-13"><a></a>    <span class="cf">else</span>:</span>
+<span id="cb1-14"><a></a>      <span class="va">self</span>.RH<span class="op">=</span>RH</span>
+<span id="cb1-15"><a></a>    <span class="va">self</span>.Prata()</span>
+<span id="cb1-16"><a></a></span>
+<span id="cb1-17"><a></a>  <span class="kw">def</span> Prata(<span class="va">self</span>):</span>
+<span id="cb1-18"><a></a>    <span class="va">self</span>.Pv_from_RH()</span>
+<span id="cb1-19"><a></a>    a <span class="op">=</span> <span class="fl">1.2</span></span>
+<span id="cb1-20"><a></a>    b <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-21"><a></a>    zeta <span class="op">=</span> <span class="fl">46.5</span><span class="op">*</span>(<span class="va">self</span>.P_v<span class="op">/</span><span class="va">self</span>.T_ak)</span>
+<span id="cb1-22"><a></a>    <span class="va">self</span>.epsilon_a <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>(<span class="dv">1</span><span class="op">+</span>zeta)<span class="op">*</span>np.exp(<span class="op">-</span>(a<span class="op">+</span>b<span class="op">*</span>zeta)<span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb1-23"><a></a></span>
+<span id="cb1-24"><a></a>  <span class="kw">def</span> Pv_from_RH(<span class="va">self</span>):</span>
+<span id="cb1-25"><a></a>    P_v_star <span class="op">=</span> <span class="fl">6.112</span><span class="op">*</span>np.exp(<span class="fl">17.62</span><span class="op">*</span><span class="va">self</span>.T_a<span class="op">/</span>(<span class="fl">243.12</span><span class="op">+</span><span class="va">self</span>.T_a))</span>
+<span id="cb1-26"><a></a>    <span class="va">self</span>.P_v <span class="op">=</span> <span class="va">self</span>.RH<span class="op">*</span>P_v_star</span>
+<span id="cb1-27"><a></a>e <span class="op">=</span> get_epsilon_a(<span class="dv">9</span>,<span class="dv">80</span>)</span>
+<span id="cb1-28"><a></a>e.epsilon_a</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>0.7709475025549156</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+<ul>
+<li>A 0.77</li>
+<li>B 0.88</li>
+<li>C 0.66</li>
+<li>D 0.55</li>
+<li>E 0.99</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="effects-of-temperature-and-humidity-iclicker" class="slide level2 smaller">
+<h2>Effects of Temperature and Humidity (iClicker)</h2>
+<div class="columns">
+<div class="column" style="width:80%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="06_files/figure-revealjs/unnamed-chunk-5-1.png" width="614"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:20%;">
+<p>Which property has a stronger effect?</p>
+<ul>
+<li>A <span class="math inline">\(T_a\)</span></li>
+<li>B <span class="math inline">\(RH\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section class="slide level2">
+
+
+<img data-src="images/06_29_3.png" class="r-stretch quarto-figure-center"><p class="caption">UBC Energy Balance Station “Westham Island” (Photo: A. Christen)</p></section>
+<section class="slide level2">
+
+
+<img data-src="images/06_30_0.jpg" class="r-stretch"><aside class="notes">
+<p>Measures global and diffuse radiation</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="diurnal-course---clear-vs-cloudy-sky" class="slide level2">
+<h2>Diurnal Course - Clear vs Cloudy Sky</h2>
+
+<img data-src="06_files/figure-revealjs/unnamed-chunk-6-3.png" width="960" class="r-stretch"></section>
+<section id="effect-of-clouds-on-longwave-irradiance" class="slide level2 smaller">
+<h2>Effect of Clouds on Longwave Irradiance</h2>
+
+<img data-src="images/06_34_2.png" class="r-stretch quarto-figure-center"><p class="caption">With a clear-sky, <span class="math inline">\(LW_\downarrow\)</span> originates from all layers of the atmosphere, because the atmosphere is partly transparent (‘atmospheric window’ open). With clouds <span class="math inline">\(LW_\downarrow\)</span> originates from the cloud base and the atmosphere below the cloud, because the cloud is opaque to long wave (‘atmospheric window’ closed).</p></section>
+<section id="monthly-totals-of-lw_downarrow-lw_uparrow-at-ca-dbb" class="slide level2 smaller">
+<h2>Monthly totals of <span class="math inline">\(LW_\downarrow\)</span> &amp; <span class="math inline">\(LW_\uparrow\)</span> at CA-DBB</h2>
+
+<img data-src="06_files/figure-revealjs/unnamed-chunk-7-5.png" width="960" class="r-stretch"></section>
+<section id="fingerprint-of-lw_downarrow-and-lw_uparrow-measured-in-vancouver" class="slide level2">
+<h2>‘Fingerprint’ of <span class="math inline">\(LW_\downarrow\)</span> and <span class="math inline">\(LW_\uparrow\)</span> measured in Vancouver</h2>
+
+<img data-src="images/06_36_2.png" class="r-stretch"></section>
+<section id="take-home-points" class="slide level2">
+<h2>Take Home Points</h2>
+<div class="columns">
+<div class="column" style="width:100%;">
+<ul>
+<li>Radiation laws apply the same way to the longwave part of the spectrum - but Kirchhoff’s law and the concept of emissivity become relevant.</li>
+<li>The net-long wave radiation is driven by the difference in apparent sky and surface temperatures and hence clouds and thermal surface properties are controlling radiative exchange in the long-wave.</li>
+</ul>
+</div><div class="column" style="width:0%;">
+
+</div>
+</div>
 
 
 </section>

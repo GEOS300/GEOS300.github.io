@@ -26,8 +26,14 @@ $${#eq-Bowen-Ratio}
 ## Bulk Transitivity
 
 $$
-SW_\downarrow = I_ex \Psi_a^{m}
+SW_\downarrow = I_{ex} \Psi_a^{m}
 $${#eq-Bulk-Transitivity}
+
+## Conservation Equation Radiation
+
+$$
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+$${#eq-Conservation-Equation-Radiation}
 
 ## Conservation Law Scalar 1D
 
@@ -80,8 +86,14 @@ $${#eq-Extraterrestrial-Irradiance}
 ## Adjusted Constant
 
 $$
-\begin{eqnarray}(\frac{R_av}{R})^2 = & 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
+(\frac{R_av}{R})^2 = 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+                     0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
 $${#eq-Adjusted-Constant}
+
+## Frequency
+
+$$
+v=\frac{c}{\lambda}
+$${#eq-Frequency}
 
 ## Kelvin
 
@@ -92,14 +104,56 @@ $${#eq-Kelvin}
 ## Kirchhoffs Law
 
 $$
-a_{\lambda} = \epsilon_{\lambda}
+\zeta_{\lambda} = \epsilon_{\lambda}
 $${#eq-Kirchhoffs-Law}
+
+## Longwave Radiation Balance
+
+$$
+\zeta_{LW} + \alpha_{LW} = 1
+$${#eq-Longwave-Radiation-Balance}
+
+## Longwave Reflectivity
+
+$$
+\alpha_{LW} = 1 - \epsilon_{LW}
+$${#eq-Longwave-Reflectivity}
+
+## Long wave Flux Density Stefan Boltzman
+
+$$
+LW^* = LW\downarrow - \epsilon_{LW}\sigma_b T_s^4 -(1-\epsilon_{LW})LW\downarrow
+$${#eq-Long-wave-Flux-Density-Stefan-Boltzman}
+
+## Long wave Flux Density
+
+$$
+LW^* = LW\downarrow - LW\uparrow
+$${#eq-Long-wave-Flux-Density}
 
 ## NDVI
 
 $$
 NDVI = \frac{NIR-Red}{NIR+Red}
 $${#eq-NDVI}
+
+## Absorbed SW
+
+$$
+SW^* = SW \downarrow (1 - \alpha)
+$${#eq-Absorbed-SW}
+
+## Net Absorbed Emitted LW
+
+$$
+LW^* = \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
+$${#eq-Net-Absorbed-Emitted-LW}
+
+## Net Radiation Energy Balance
+
+$$
+R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
+$${#eq-Net-Radiation-Energy-Balance}
 
 ## Net Radiation Short
 
@@ -119,11 +173,11 @@ $$
 E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
 $${#eq-Planks-Law}
 
-## Radiation Balance
+## Prata
 
 $$
-\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
-$${#eq-Radiation-Balance}
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
+$${#eq-Prata}
 
 ## Reflectivity
 
@@ -137,16 +191,22 @@ $$
 \alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
 $${#eq-Reflectance-Coefficient}
 
+## Relative Humidity
+
+$$
+RH=\frac{P_v}{P_v^*}
+$${#eq-Relative-Humidity}
+
 ## Solar Declination
 
 $$
-\begin{eqnarray}\delta = & 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\         & -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\         & -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber \end{eqnarray}
+\delta = 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)         -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma)         -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma)
 $${#eq-Solar-Declination}
 
 ## Fractional Year
 
 $$
-\gamma = \frac{2 \pi }{365} (\rm{DOY}-1) 
+\gamma = \frac{2 \pi }{365} (DOY-1) 
 $${#eq-Fractional-Year}
 
 ## Solar Zenith
@@ -197,6 +257,12 @@ $$
 R_n = H + LE + G + \Delta S
 $${#eq-Surface-Energy-Balance}
 
+## Tetens
+
+$$
+P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
+$${#eq-Tetens}
+
 ## LMST
 
 $$
@@ -212,7 +278,7 @@ $${#eq-LAT}
 ## Delta LAT
 
 $$
-\begin{eqnarray}\Delta LAT = & 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             & -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
+\Delta LAT =  229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma)               -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
 $${#eq-Delta-LAT}
 
 ## Weins Law

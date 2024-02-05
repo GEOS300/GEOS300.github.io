@@ -599,11 +599,12 @@ E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
 <p><span id="eq-Stefan-Boltzman-Law"><span class="math display">\[
 E_b = \sigma_b T^4
 \qquad(3)\]</span></span></p>
+<p>where <span class="math inline">\(\sigma = 5.67 * 10^-8\)</span></p>
 <p><span id="eq-Weins-Law"><span class="math display">\[
 \lambda_{max} = \frac{b}{T}
 \qquad(4)\]</span></span></p>
 <p><span id="eq-Kirchhoffs-Law"><span class="math display">\[
-a_{\lambda} = \epsilon_{\lambda}
+\zeta_{\lambda} = \epsilon_{\lambda}
 \qquad(5)\]</span></span></p>
 </div>
 </div>
@@ -657,15 +658,13 @@ a_{\lambda} = \epsilon_{\lambda}
 <li>The equation is complex due to the non-circular orbit of Earth</li>
 </ul>
 <p><span id="eq-Solar-Declination"><span class="math display">\[
-\begin{eqnarray}
-\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
-         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
-         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber
-\end{eqnarray}
+\delta = 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)
+         -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma)
+         -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma)
 \qquad(6)\]</span></span></p>
 <p>where <span class="math inline">\(\gamma\)</span> is the fractional year and DOY is the day of the year:</p>
 <p><span id="eq-Fractional-Year"><span class="math display">\[
-\gamma = \frac{2 \pi }{365} (\rm{DOY}-1)
+\gamma = \frac{2 \pi }{365} (DOY-1)
 \qquad(7)\]</span></span></p>
 <aside class="notes">
 <p>One radian is just under 57.3 degrees. Radians = 180/pi The&nbsp;declination angle, denoted by δ, varies seasonally due to the&nbsp;tilt&nbsp;of the Earth on its axis of rotation and the rotation of the Earth around the sun</p>
@@ -794,10 +793,8 @@ LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
 LAT = LMST-\Delta LAT
 \qquad(11)\]</span></span></p>
 <p>and <span class="math inline">\(\Delta LAT\)</span> is: <span id="eq-Delta-LAT"><span class="math display">\[
-\begin{eqnarray}
-\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\
-             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
-\end{eqnarray}
+\Delta LAT =  229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma)
+              -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
 \qquad(12)\]</span></span></p>
 </section>
 <section id="planetary-orbits-and-keplers-laws" class="slide level2">
@@ -1018,12 +1015,10 @@ R_s = R_p cos(Z)
 <p>The solar input at top of the atmosphere at any time and location hence is given as <span class="math inline">\(I_ex\)</span>: <span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
 I_ex=I_0(\frac{R_av}{R})^2\cos(Z)
 \qquad(14)\]</span></span></p>
-<p>where <span class="math inline">\(I_0 \approx 1361 \rm{W m^{-2}}\)</span>, <span class="math inline">\(\cos(Z)\)</span> applies the cosine law of illumination, and <span class="math inline">\((\frac{R_av}{R})\)</span> adjusts the solar constant Earth’s elliptic orbit:<br>
+<p>where <span class="math inline">\(I_0 \approx 1361 W m^{-2}\)</span>, <span class="math inline">\(\cos(Z)\)</span> applies the cosine law of illumination, and <span class="math inline">\((\frac{R_av}{R})\)</span> adjusts the solar constant Earth’s elliptic orbit:<br>
 <span id="eq-Adjusted-Constant"><span class="math display">\[
-\begin{eqnarray}
-(\frac{R_av}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
-                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
-\end{eqnarray}
+(\frac{R_av}{R})^2 = 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+
+                     0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
 \qquad(15)\]</span></span></p>
 </section>
 <section id="take-home-points" class="slide level2">

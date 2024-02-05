@@ -1,0 +1,219 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Net All-Wave Radiation
+subtitle: Combined effects of short- and long-wave radiation.
+---
+
+{{< include _imports.qmd >}}
+
+![Pyranometers and pyrgeometers are combined to measure all four components of the radiation balance (Photo: A. Christen)](images/07_1_0.jpg)
+
+
+
+
+
+## Learning Objectives
+
+Be able to formulate the net-effect of all radiative exchange processes for surfaces, 2d, and 3d objects.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Describe which surface and geometric properties control radiative exchange.
+* Interpret graphs/figures of net-radiative exchange over diurnal and annual scales.
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/07_4_3.jpg)
+
+
+:::
+
+::::
+
+
+## Net all-wave radiation ($R_n$)
+
+
+$R_n$ represents the amount of available energy at Earth's surface after all the radiation exchanges have taken place.
+
+* Negative: the surface is loosing energy to the the atmosphere/space
+* Positive: the surface is gaining energy from the the atmosphere/space
+
+{{< include ../_Equations/Net-Radiation.qmd >}}
+
+
+## Net all-wave radiation ($R_n$) (iClicker)
+
+Which properties are on an interval scale?
+
+* A $R_n$
+* B $SW_{\downarrow}$
+* C $LW_{\downarrow}$
+* D $LW_{\uparrow}$
+* E All of the above
+
+## Net all-wave radiation ($R_n$)
+
+$R_n$ is the flux density of **ALL** radiation. ie. the sum of component flux densities: 
+
+* It can be alternatively partitioned as the sum of net short-wave radiation ($SW^*$) and net long-wave radiation ($LW^*$):
+
+{{< include ../_Equations/Net-Radiation-Short.qmd >}}
+
+
+## Component Fluxes
+
+Recall that $SW$ is **not** emitted by Earth's surface, but $LW$ is! 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+![](images/4_5.png)
+
+:::
+
+::: {.column width="50%"}
+
+
+
+![](images/4_6.png)
+
+
+:::
+
+::::
+
+## The Surface Energy Balance
+
+We can define $R_n$ from the perspective of the Earth's surface in term's of it's energy balance.  How much energy is absorbed vs. how much is emitted?
+
+
+
+{{< include ../_Equations/Net-Radiation-Energy-Balance.qmd >}}
+
+
+
+$R_n$ is the main energy source driving near-surface climates. It can be positive (usually day) or negative (usually night).
+
+
+---
+
+
+![Surface radiation balance over grass on Westham Island, Delta, BC.  All values in GJ m<sup>-2</sup> yr<sup>-1</sup>](images/07_9_5.png)
+
+##
+
+```{python}
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# Import the data from github & parse the timestamp for each record
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'
+# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
+df = pd.read_csv(data_url,parse_dates=['TIMESTAMP'],index_col=['TIMESTAMP'])
+df['RN'] = df['SW_IN_1_1_1']-df['SW_OUT_1_1_1']+df['LW_IN_1_1_1']-df['LW_OUT_1_1_1']
+fig,ax=plt.subplots(1,2,sharey=True,sharex=True)
+# fig.autofmt_xdate(rotation=45)
+df['Hour'] = df.index.hour+df.index.minute/60
+wx = df.loc[((df.index.year==2022)&(df.index.month==12)&(df.index.day==22))]
+su = df.loc[((df.index.year==2023)&(df.index.month==8)&(df.index.day==21))]
+wx.plot(ax=ax[0],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1','RN'],
+              color=['blue','red','blue','red','k'],
+              style=['-','-','--','--','-'])
+ax[0].set_title('December 22th, 2022')
+ax[0].legend(['SW In','SW Out','LW In','LW Out','Rn'],ncol=2)
+ax[0].set_ylabel('$W m^{-2}$')
+
+su.plot(ax=ax[1],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1','RN'],
+              color=['blue','red','blue','red','k'],
+              style=['-','-','--','--','-'],legend=False)
+ax[1].set_title('August 21st, 2023')
+        
+```
+
+## The importance of surface properties
+
+
+$R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T_s^4$
+
+* Notice the surface properties that control the budget in addition to the input that is controlled by solar geometry and atmosphere.
+* The range of values is lessened by the fact that the effects of $\alpha$ and $T_s$ tend to partially offset each other.
+* Clouds reduces extremes because it decreases $SW_\downarrow$ and increases $LW_\downarrow$.
+
+
+
+## The importance of surface properties
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+![Grass $\alpha$ = 0.2](images/07_12_5.png){width="80%"}
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Parking lot $\alpha$ = 0.32](images/07_12_4.gif)
+
+
+
+
+
+:::
+
+::::
+
+
+
+## Annual $R_n$
+
+
+![](images/07_13_1.png)
+
+
+
+::: {.notes}
+
+Why is Q* negative in night?
+
+:::
+
+
+
+## Latitudinal Changes
+
+
+![](images/07_15_2.png)
+

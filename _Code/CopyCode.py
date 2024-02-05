@@ -3,8 +3,8 @@ from distutils.dir_util import copy_tree
 import nbformat
 import re
 
-# if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-#     exit()
+if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+    exit()
 
 def R_rep(text):
     text = text.replace('\n','~~~~~~')
@@ -18,7 +18,6 @@ def R_rep(text):
         for i,a in enumerate(rem):
             if isinstance(a, tuple):
                 for part in a:
-                    print(part)
                     text=text.replace(part,'\n')
             else:
                 text=text.replace(a,'')

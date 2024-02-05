@@ -1,0 +1,6 @@
+
+$$
+P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
+$${#eq-Tetens}
+
+**Note** that $T_a$ must be in $C^\circ$ for this approximation.  It will give $P_v^*$ in hPa.

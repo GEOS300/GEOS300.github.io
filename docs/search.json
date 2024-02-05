@@ -25,10 +25,334 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\n\n\n\n\n2024-02-05\n\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\nAdditional Reading\n\n\n\n2024-01-31\nLongwave Radiation\n\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#learning-objectives",
+    "href": "Lectures/06.html#learning-objectives",
+    "title": "Longwave Radiation",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nSee how radiation laws apply to long-wave radiative exchange and how long-wave radiation can interact with surfaces.\n\n\n\n\nExplain how we can calculate longwave outgoing radiation, and how it relates to surface emissivity.\nKnow how we can estimate / model longwave incoming radiation and the emissivity of the atmosphere.\n\n\n\n\n\nPeople in front of a heated building in winter as seen in the thermal infrared by a thermal camera (Source: A. Christen)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#what-is-longwave-radiation",
+    "href": "Lectures/06.html#what-is-longwave-radiation",
+    "title": "Longwave Radiation",
+    "section": "What is ‘Longwave’ radiation?",
+    "text": "What is ‘Longwave’ radiation?\n\n\n\n\n\nShort-wave (VIS) D. Scherer, Ecology Department, TU Berlin\n\n\n\n\n\n\nLongwave (TIR) D. Scherer, Ecology Department, TU Berlin",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#measuring-long-wave-radiation",
+    "href": "Lectures/06.html#measuring-long-wave-radiation",
+    "title": "Longwave Radiation",
+    "section": "Measuring Long-wave Radiation",
+    "text": "Measuring Long-wave Radiation\nNumerous instruments can measure long-wave radiation received in a particular field of view (FOV), within a particular band, and/or with a particular spatial resolution.\n\n\n\n\n\nThermal camera\n\n\n\n\n\n\nPyrgeometer\n\n\n\n\n\n\nThermal satellite channel\n\n\n\n\n\nA radiometer measures the long-wave radiance received in a particular field of view (FOV), within a particular band, and with a particular spatial resolution. In remote sensing, sensors are built to pick up those specific spectral bands. Near IR, Mid-IR, Far IR Demo here",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#stefan-boltzmann-law-grey-body",
+    "href": "Lectures/06.html#stefan-boltzmann-law-grey-body",
+    "title": "Longwave Radiation",
+    "section": "Stefan-Boltzmann Law: Grey Body",
+    "text": "Stefan-Boltzmann Law: Grey Body\n\n\nNatural objects (called grey bodies) are not full radiators. Their emittance is given by adapting the Stefan-Boltzman law:\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\qquad(1)\\]\nwhere \\(\\sigma = 5.67 * 10^-8\\)\n\nwhere \\(\\epsilon\\) is their surface emissivity. Emissivity is the ratio of the actual emission to that of a blackbody (i.e. \\(\\epsilon\\) = 1.0).\nThis law is the basis of remote sensing in the TIR\n\n\n\n\n\n\nTable 1: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28\n\n\n\n\n\n\n\n\n\n\n\nAll bodies possessing energy (i.e. whose temperatures are above absolute zero, 0 K = −273.2◦C) emit radiation. If a body at a given temperature emits the maximum possible amount of radiation per unit of its surface area in unit time then it is called a black body. Such a body has a surface emissivity ε equal to unity. If the body is not a full radiator. Emissivity = absorptivity (low emissivity = reflects much of the radiant thermal energy) The map shows the long-wave emittance and reflectance of the land and ocean surface  Stefan–Boltzmann constant (sigma)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#atmospheric-windows",
+    "href": "Lectures/06.html#atmospheric-windows",
+    "title": "Longwave Radiation",
+    "section": "Atmospheric Window(s)",
+    "text": "Atmospheric Window(s)\n\n\nThe satellite measures in this range because this is the atmospheric window in the long-wave part of the spectrum. In this range a cloudless atmosphere is quite transparent, as only a few trace gases absorb radiation. This allows us to see the surface, and not the intervening atmosphere.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law",
+    "href": "Lectures/06.html#kirchhoffs-law",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s law",
+    "text": "Kirchhoff’s law\n\n\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\qquad(2)\\]\n\nAssuming no transmission the absorptivity of a body (\\(\\zeta_\\lambda\\)) equals its emissivity (\\(\\epsilon_\\lambda\\)) at a given wavelength.\n\nA good absorber is a good emitter\n\n\n\n\n\n\n\nFor an arbitrary body emitting and absorbing thermal radiation in thermodynamic equilibrium, the emissivity is equal to the absorptivity.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law-iclicker",
+    "href": "Lectures/06.html#kirchhoffs-law-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s Law (iClicker)",
+    "text": "Kirchhoff’s Law (iClicker)\nPlants are good absorbers of \\(SW\\) radiation, so why don’t they emit just as much \\(SW\\) as they absorb?\n\nA: They aren’t hot enough (Stefan-Boltzmann)\nB: The do emit \\(SW\\), we call this Albedo",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#kirchhoffs-law-1",
+    "href": "Lectures/06.html#kirchhoffs-law-1",
+    "title": "Longwave Radiation",
+    "section": "Kirchhoff’s Law",
+    "text": "Kirchhoff’s Law\nKirchhoff’s law only applies if the wavelength considered is the same – do not mix them together.\n\nKirchhoff’s law only has relevance to long-wave exchange in climatology.\n\nThe law does not apply to fluorescent objects, which can absorb energy at a given a wavelength and release it at another one.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#mass-radiation-interactions",
+    "href": "Lectures/06.html#mass-radiation-interactions",
+    "title": "Longwave Radiation",
+    "section": "Mass-Radiation Interactions",
+    "text": "Mass-Radiation Interactions\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\qquad(3)\\]\n\nTransmission (\\(\\Psi_\\lambda\\)), Reflection (\\(\\alpha_\\lambda\\)), Absorption (\\(\\zeta_\\lambda\\)), Emission (\\(\\epsilon_\\lambda\\))",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection",
+    "href": "Lectures/06.html#long-wave-reflection",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection",
+    "text": "Long-wave Reflection\nMost (solid) surfaces are opaque to long-wave (i.e., \\(\\Psi_{LW} \\approx 0\\)), so we can simplify our radiation conservation equation for \\(LW\\): \\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\qquad(4)\\]\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\qquad(5)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection-iclicker",
+    "href": "Lectures/06.html#long-wave-reflection-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection (iClicker)",
+    "text": "Long-wave Reflection (iClicker)\n\n\nWhich surface would you expect to have the highest \\(\\alpha_{LW}\\)?\n\nA Peat (organic soil)\nB Wood\nC Steel (Iron-carbon alloy)\nD Wheat\nE A Cow\n\n\n\n\n\n\nTable 2: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-wave-reflection-1",
+    "href": "Lectures/06.html#long-wave-reflection-1",
+    "title": "Longwave Radiation",
+    "section": "Long-wave Reflection",
+    "text": "Long-wave Reflection\n\nGlass transmits a substantial fraction of visible light, but is relatively opaque to \\(LW\\)\nLow-E, or low-emissivity, glass was created to minimize the amount of infrared and ultraviolet light that comes through your glass, without minimizing the amount of light that enters your home. Low-E glass windows have a microscopically thin coating that is transparent and reflects heat.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#net-long-wave-flux-density",
+    "href": "Lectures/06.html#net-long-wave-flux-density",
+    "title": "Longwave Radiation",
+    "section": "Net Long-wave Flux Density",
+    "text": "Net Long-wave Flux Density\nThe net long-wave radiation flux density (\\(LW^*\\)) at the surface is the difference between the input from the atmosphere above (\\(LW\\downarrow\\)) and the output surface (\\(LW\\uparrow\\)).\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\qquad(6)\\]\n\n\nSurface output includes both emissions from surface and reflected \\(LW\\downarrow\\)\n\nDiffers from \\(SW*= SW\\downarrow - SW\\uparrow\\)\n\\(SW\\uparrow\\) is only reflected \\(SW\\), earth doesn’t emit \\(SW\\)!",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#long-long-wave-flux-density",
+    "href": "Lectures/06.html#long-long-wave-flux-density",
+    "title": "Longwave Radiation",
+    "section": "Long-Long-wave Flux Density",
+    "text": "Long-Long-wave Flux Density",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#net-long-wave-flux-density-1",
+    "href": "Lectures/06.html#net-long-wave-flux-density-1",
+    "title": "Longwave Radiation",
+    "section": "Net Long-wave Flux Density",
+    "text": "Net Long-wave Flux Density\nWe can re-formulate the previous equation in terms of the Stefan-Boltzmann Law:\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\qquad(7)\\]\n\nHow is this equivalent to Equation 6\n\n\n\nStefan-Boltzman gives us emissions from a surface of temperature \\(T_s\\) with a long-wave emissivity of \\(\\epsilon_{LW}\\)\n\n\n\n\\((1-\\epsilon_{LW})\\) gives us reflectivity\n\n\n\n\nClouds, when present, are the major contributors to the incoming longwave radiation to the surface. They radiate like blackbodies (e ^ 1) at their respective cloud base temperatures. In passing through the atmosphere, a large part of the terrestrial radiation is absorbed by atmospheric gases, such as water vapor, carbon dioxide, nitrogen oxides, methane, and ozone. In particular, water vapor and CO2 are primarily responsible for absorbing the terrestrial radiation and reducing its escape to the space (the so-called greenhouse effect). The atmospheric gases and aerosols which absorb energy also radiate energy.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#estimating-surface-emissivity",
+    "href": "Lectures/06.html#estimating-surface-emissivity",
+    "title": "Longwave Radiation",
+    "section": "Estimating Surface Emissivity",
+    "text": "Estimating Surface Emissivity\nWe can compare the apparent surface temperature \\(T_r\\), which assumes the surface is a black body: \\[\n\\sigma T_r^4 = \\epsilon_{s} T_s^4 + (1-\\epsilon_{s})LW_{\\downarrow}\n\\qquad(8)\\]\nIn reality, we have both emission and reflection. We can re-arrange to isolate \\(T_s\\) \\[\nT_s = [\\frac{\\sigma T_r^4-(1-\\epsilon_{s})LW_{\\downarrow}}{\\epsilon_{s}\\sigma}]\n\\qquad(9)\\]\nthen substitute \\(sigma T_k^4\\) (\\(T_k\\) = apparent sky temperature) and re-arrange again: \\[\n\\epsilon_{s} = \\frac{T_r^4-T_k^4}{T_s^4-T_k^4}\n\\qquad(10)\\]\n\nInfrared thermometer with emissivity = 1",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#sky-temperature",
+    "href": "Lectures/06.html#sky-temperature",
+    "title": "Longwave Radiation",
+    "section": "Sky Temperature",
+    "text": "Sky Temperature\n\\[\nLW_\\downarrow = \\epsilon_{sky} \\sigma T_{sky}^4\n\\qquad(11)\\]\nApparent sky temperature is calculated by setting \\(\\epsilon{sky} = 1\\) \\[\nLW_\\downarrow = \\sigma T_{k}^4\n\\qquad(12)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#calculating-lw_downarrow",
+    "href": "Lectures/06.html#calculating-lw_downarrow",
+    "title": "Longwave Radiation",
+    "section": "Calculating \\(LW_\\downarrow\\)",
+    "text": "Calculating \\(LW_\\downarrow\\)\n\n\n\nScreen level observations are typically available from regular climate stations for air temperature (\\(T_a\\)) and sometimes vapour pressure (\\(P_v\\)) but not \\(LW_\\downarrow\\)\nIf we are interested in estimating \\(LW_\\downarrow\\) across full long-wave range (3 to 100 µm) we need a bulk value of \\(\\epsilon_a\\) for both cloudless and cloudy cases.\nSeveral equations are available to estimate \\(\\epsilon_a\\) from screen-level \\(T_a\\) and \\(P_v\\).\n\n\n\n\n\nA standard Stevenson-screen sheltering sensors to measure air temperature and humidity (Photo: A. Christen)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#calculating-lw_downarrow---how-to-estimate-epsilon_a",
+    "href": "Lectures/06.html#calculating-lw_downarrow---how-to-estimate-epsilon_a",
+    "title": "Longwave Radiation",
+    "section": "Calculating \\(LW_\\downarrow\\) - How to estimate \\(\\epsilon_a\\)",
+    "text": "Calculating \\(LW_\\downarrow\\) - How to estimate \\(\\epsilon_a\\)\n\nUsing \\(T_a\\) and \\(P_v\\) to estimate \\(\\epsilon_a\\) works because:\n\n\\(T_a\\) and \\(P_v\\) are the main controls that change in the atmosphere\nVariations in CO2, O3 and other greenhouse gases are small.\n\\(T_a\\) and \\(P_v\\) are largest and show their greatest variation near the ground. Approximately 50% of \\(LW_\\downarrow\\) originates from 0 to 100m.\n\n\n\nEmissivity varies with temperature EQUATION FOR \\(P_v\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#calculating-lw_downarrow-prata-1996",
+    "href": "Lectures/06.html#calculating-lw_downarrow-prata-1996",
+    "title": "Longwave Radiation",
+    "section": "Calculating \\(LW_\\downarrow\\) (Prata 1996)",
+    "text": "Calculating \\(LW_\\downarrow\\) (Prata 1996)\n\\[\n\\epsilon_a = [1-(1+zeta)\\exp{-(a+b\\zeta)^0.5}]\n\\qquad(13)\\]\nwhere a = 1.2, b=3.0, and \\(\\zeta = 46.5\\frac{P_v}{T_a}\\) with \\(T_a\\) in Kelvin and \\(P_v\\) in hPa.\nwhere you can calculate \\(P_v\\) from RH as:\n\\[\nRH=\\frac{P_v}{P_v^*}\n\\qquad(14)\\]\nand approximate \\(P_v^*\\) using the Tetens equation:\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\qquad(15)\\]\nNote that \\(T_a\\) must be in \\(C^\\circ\\) for this approximation. It will give \\(P_v^*\\) in hPa.\n\nTd =  temperature at which the air can no longer “hold” all of the water vapor which is mixed with it, and some of the water vapor must condense into liquid water.  All such empirical equations are specific to the place where they were developed. Second, all such equations are daily averages that ignore the actual vertical temperature structure. Third, they assume perfectly clear skies, which may or may not be true. Fourth, one approach uses measurements with all their associated errors. Can get Sky emissivity from temperature and LWin",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#calculating-lw_downarrow-iclicker",
+    "href": "Lectures/06.html#calculating-lw_downarrow-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Calculating \\(LW_\\downarrow\\) (iClicker)",
+    "text": "Calculating \\(LW_\\downarrow\\) (iClicker)\nAt 15:00, February 2nd, \\(T_a = 9 ^\\circ\\) and \\(RH = 80%\\), what was \\(LW_\\downarrow\\)?\n\n\n\nimport numpy as np\n\nclass get_epsilon_a():\n  def __init__(self,T_a,RH):\n    if T_a &lt; 100:\n      self.T_a = T_a\n      self.T_ak = T_a+273.15\n    else:\n      self.T_ak=T_a\n      self.T_a=T_a-273.15\n    if RH&gt;1:\n      self.RH=RH*.01\n    else:\n      self.RH=RH\n    self.Prata()\n\n  def Prata(self):\n    self.Pv_from_RH()\n    a = 1.2\n    b = 3\n    zeta = 46.5*(self.P_v/self.T_ak)\n    self.epsilon_a = 1-(1+zeta)*np.exp(-(a+b*zeta)**0.5)\n\n  def Pv_from_RH(self):\n    P_v_star = 6.112*np.exp(17.62*self.T_a/(243.12+self.T_a))\n    self.P_v = self.RH*P_v_star\ne = get_epsilon_a(9,80)\ne.epsilon_a\n\n0.7709475025549156\n\n\n\n\nA 0.77\nB 0.88\nC 0.66\nD 0.55\nE 0.99",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#effects-of-temperature-and-humidity-iclicker",
+    "href": "Lectures/06.html#effects-of-temperature-and-humidity-iclicker",
+    "title": "Longwave Radiation",
+    "section": "Effects of Temperature and Humidity (iClicker)",
+    "text": "Effects of Temperature and Humidity (iClicker)\n\n\n\n\n\n\n\n\n\n\n\n\nWhich property has a stronger effect?\n\nA \\(T_a\\)\nB \\(RH\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#diurnal-course---clear-vs-cloudy-sky",
+    "href": "Lectures/06.html#diurnal-course---clear-vs-cloudy-sky",
+    "title": "Longwave Radiation",
+    "section": "Diurnal Course - Clear vs Cloudy Sky",
+    "text": "Diurnal Course - Clear vs Cloudy Sky",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#effect-of-clouds-on-longwave-irradiance",
+    "href": "Lectures/06.html#effect-of-clouds-on-longwave-irradiance",
+    "title": "Longwave Radiation",
+    "section": "Effect of Clouds on Longwave Irradiance",
+    "text": "Effect of Clouds on Longwave Irradiance\n\nWith a clear-sky, \\(LW_\\downarrow\\) originates from all layers of the atmosphere, because the atmosphere is partly transparent (‘atmospheric window’ open). With clouds \\(LW_\\downarrow\\) originates from the cloud base and the atmosphere below the cloud, because the cloud is opaque to long wave (‘atmospheric window’ closed).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#monthly-totals-of-lw_downarrow-lw_uparrow-at-ca-dbb",
+    "href": "Lectures/06.html#monthly-totals-of-lw_downarrow-lw_uparrow-at-ca-dbb",
+    "title": "Longwave Radiation",
+    "section": "Monthly totals of \\(LW_\\downarrow\\) & \\(LW_\\uparrow\\) at CA-DBB",
+    "text": "Monthly totals of \\(LW_\\downarrow\\) & \\(LW_\\uparrow\\) at CA-DBB",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#fingerprint-of-lw_downarrow-and-lw_uparrow-measured-in-vancouver",
+    "href": "Lectures/06.html#fingerprint-of-lw_downarrow-and-lw_uparrow-measured-in-vancouver",
+    "title": "Longwave Radiation",
+    "section": "‘Fingerprint’ of \\(LW_\\downarrow\\) and \\(LW_\\uparrow\\) measured in Vancouver",
+    "text": "‘Fingerprint’ of \\(LW_\\downarrow\\) and \\(LW_\\uparrow\\) measured in Vancouver",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/06.html#take-home-points",
+    "href": "Lectures/06.html#take-home-points",
+    "title": "Longwave Radiation",
+    "section": "Take Home Points",
+    "text": "Take Home Points\n\n\n\nRadiation laws apply the same way to the longwave part of the spectrum - but Kirchhoff’s law and the concept of emissivity become relevant.\nThe net-long wave radiation is driven by the difference in apparent sky and surface temperatures and hence clouds and thermal surface properties are controlling radiative exchange in the long-wave.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Longwave Radiation"
     ]
   },
   {
@@ -108,7 +432,7 @@
     "href": "Lectures/04.html#radiation-properties-and-laws-1",
     "title": "Radiation Geometry",
     "section": "Radiation Properties and Laws",
-    "text": "Radiation Properties and Laws\n\n\n\nEnergy of a photon1\nPlank’s law2\nStefan Boltzmann law3\nWien’s Law4\nKirchhoff’s Law5\n\n\n\\[\ne = hv\n\\qquad(1)\\]\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\qquad(2)\\]\n\\[\nE_b = \\sigma_b T^4\n\\qquad(3)\\]\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\qquad(4)\\]\n\\[\na_{\\lambda} = \\epsilon_{\\lambda}\n\\qquad(5)\\]",
+    "text": "Radiation Properties and Laws\n\n\n\nEnergy of a photon1\nPlank’s law2\nStefan Boltzmann law3\nWien’s Law4\nKirchhoff’s Law5\n\n\n\\[\ne = hv\n\\qquad(1)\\]\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\qquad(2)\\]\n\\[\nE_b = \\sigma_b T^4\n\\qquad(3)\\]\nwhere \\(\\sigma = 5.67 * 10^-8\\)\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\qquad(4)\\]\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\qquad(5)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -144,7 +468,7 @@
     "href": "Lectures/04.html#calculating-solar-declination",
     "title": "Radiation Geometry",
     "section": "Calculating Solar Declination",
-    "text": "Calculating Solar Declination\n\\(\\delta\\) only depends upon day of year, which gives returns \\(\\delta\\) in radians\n\nThe equation is complex due to the non-circular orbit of Earth\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\qquad(6)\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (\\rm{DOY}-1)\n\\qquad(7)\\]\n\nOne radian is just under 57.3 degrees. Radians = 180/pi The declination angle, denoted by δ, varies seasonally due to the tilt of the Earth on its axis of rotation and the rotation of the Earth around the sun\nNOTE: Simple approximation has angle in radians (2pi) whereas answers to study questions has it in degrees (360).",
+    "text": "Calculating Solar Declination\n\\(\\delta\\) only depends upon day of year, which gives returns \\(\\delta\\) in radians\n\nThe equation is complex due to the non-circular orbit of Earth\n\n\\[\n\\delta = 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)\n         -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma)\n         -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma)\n\\qquad(6)\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\qquad(7)\\]\n\nOne radian is just under 57.3 degrees. Radians = 180/pi The declination angle, denoted by δ, varies seasonally due to the tilt of the Earth on its axis of rotation and the rotation of the Earth around the sun\nNOTE: Simple approximation has angle in radians (2pi) whereas answers to study questions has it in degrees (360).",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -228,7 +552,7 @@
     "href": "Lectures/04.html#so-many-times-1",
     "title": "Radiation Geometry",
     "section": "So Many Times",
-    "text": "So Many Times\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\qquad(10)\\]\nwhere \\(\\lambda\\) is longitude, \\(TZ\\) is time in LST (e.g., PST = UTC-8) in hours, and \\(TZ_{m}\\) is the central meridian for a given time zone (e.g., PST = 120 \\(^{\\circ}\\)). You can then calculate the local apparent time LAT as:\n\\[\nLAT = LMST-\\Delta LAT\n\\qquad(11)\\]\nand \\(\\Delta LAT\\) is: \\[\n\\begin{eqnarray}\n\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\\n             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\n\\end{eqnarray}\n\\qquad(12)\\]",
+    "text": "So Many Times\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\qquad(10)\\]\nwhere \\(\\lambda\\) is longitude, \\(TZ\\) is time in LST (e.g., PST = UTC-8) in hours, and \\(TZ_{m}\\) is the central meridian for a given time zone (e.g., PST = 120 \\(^{\\circ}\\)). You can then calculate the local apparent time LAT as:\n\\[\nLAT = LMST-\\Delta LAT\n\\qquad(11)\\]\nand \\(\\Delta LAT\\) is: \\[\n\\Delta LAT =  229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma)\n              -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\n\\qquad(12)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -324,7 +648,7 @@
     "href": "Lectures/04.html#extraterrestrial-irradiance",
     "title": "Radiation Geometry",
     "section": "Extraterrestrial Irradiance",
-    "text": "Extraterrestrial Irradiance\nThe solar input at top of the atmosphere at any time and location hence is given as \\(I_ex\\): \\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\qquad(14)\\]\nwhere \\(I_0 \\approx 1361 \\rm{W m^{-2}}\\), \\(\\cos(Z)\\) applies the cosine law of illumination, and \\((\\frac{R_av}{R})\\) adjusts the solar constant Earth’s elliptic orbit:\n\\[\n\\begin{eqnarray}\n(\\frac{R_av}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\\n                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\n\\end{eqnarray}\n\\qquad(15)\\]",
+    "text": "Extraterrestrial Irradiance\nThe solar input at top of the atmosphere at any time and location hence is given as \\(I_ex\\): \\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\qquad(14)\\]\nwhere \\(I_0 \\approx 1361 W m^{-2}\\), \\(\\cos(Z)\\) applies the cosine law of illumination, and \\((\\frac{R_av}{R})\\) adjusts the solar constant Earth’s elliptic orbit:\n\\[\n(\\frac{R_av}{R})^2 = 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\n                     0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\n\\qquad(15)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1847,7 +2171,7 @@
     "href": "Lectures/05.html#calculation-of-sw_downarrow---slab-approach",
     "title": "Shortwave Radiation",
     "section": "Calculation of \\(SW_\\downarrow\\) - slab approach",
-    "text": "Calculation of \\(SW_\\downarrow\\) - slab approach\nBulk transmissivity of the atmosphere (\\(\\Psi_a\\)) depends on turbidity of the air (scattering + absorption) and path length trough the atmosphere.\n\n\n\\[\nSW_\\downarrow = I_ex \\Psi_a^{m}\n\\qquad(2)\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)}\n\\]\n\n\\(\\Psi_a\\)$ varies from about 0.9 (clean) to 0.6 (dirty, smog)\n\n\n\n\n\n\nm = 1/cos(Z); so the greater the solar zenith angle, the greater the optical air mass, and the more attenuated the radiation at the surface. To account for the effects of altitude values of m should be multiplied by the ratio of the station atmospheric pressure to that at standard sea-level (101.3 kPa). Start with https://ibis.geog.ubc.ca/courses/geob300/applets/latitude/index.html",
+    "text": "Calculation of \\(SW_\\downarrow\\) - slab approach\nBulk transmissivity of the atmosphere (\\(\\Psi_a\\)) depends on turbidity of the air (scattering + absorption) and path length trough the atmosphere.\n\n\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\qquad(2)\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)}\n\\]\n\n\\(\\Psi_a\\)$ varies from about 0.9 (clean) to 0.6 (dirty, smog)\n\n\n\n\n\n\nm = 1/cos(Z); so the greater the solar zenith angle, the greater the optical air mass, and the more attenuated the radiation at the surface. To account for the effects of altitude values of m should be multiplied by the ratio of the station atmospheric pressure to that at standard sea-level (101.3 kPa). Start with https://ibis.geog.ubc.ca/courses/geob300/applets/latitude/index.html",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -2203,6 +2527,126 @@
     ]
   },
   {
+    "objectID": "Lectures/07.html#learning-objectives",
+    "href": "Lectures/07.html#learning-objectives",
+    "title": "Net All-Wave Radiation",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\nBe able to formulate the net-effect of all radiative exchange processes for surfaces, 2d, and 3d objects.\n\n\n\nDescribe which surface and geometric properties control radiative exchange.\nInterpret graphs/figures of net-radiative exchange over diurnal and annual scales.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#net-all-wave-radiation-r_n",
+    "href": "Lectures/07.html#net-all-wave-radiation-r_n",
+    "title": "Net All-Wave Radiation",
+    "section": "Net all-wave radiation (\\(R_n\\))",
+    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) represents the amount of available energy at Earth’s surface after all the radiation exchanges have taken place.\n\nNegative: the surface is loosing energy to the the atmosphere/space\nPositive: the surface is gaining energy from the the atmosphere/space\n\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\qquad(1)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#net-all-wave-radiation-r_n-iclicker",
+    "href": "Lectures/07.html#net-all-wave-radiation-r_n-iclicker",
+    "title": "Net All-Wave Radiation",
+    "section": "Net all-wave radiation (\\(R_n\\)) (iClicker)",
+    "text": "Net all-wave radiation (\\(R_n\\)) (iClicker)\nWhich properties are on an interval scale?\n\nA \\(R_n\\)\nB \\(SW_{\\downarrow}\\)\nC \\(LW_{\\downarrow}\\)\nD \\(LW_{\\uparrow}\\)\nE All of the above",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#net-all-wave-radiation-r_n-1",
+    "href": "Lectures/07.html#net-all-wave-radiation-r_n-1",
+    "title": "Net All-Wave Radiation",
+    "section": "Net all-wave radiation (\\(R_n\\))",
+    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) is the flux density of ALL radiation. ie. the sum of component flux densities:\n\nIt can be alternatively partitioned as the sum of net short-wave radiation (\\(SW^*\\)) and net long-wave radiation (\\(LW^*\\)):\n\n\\[\nR_n = SW^* + LW^*\n\\qquad(2)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#component-fluxes",
+    "href": "Lectures/07.html#component-fluxes",
+    "title": "Net All-Wave Radiation",
+    "section": "Component Fluxes",
+    "text": "Component Fluxes\nRecall that \\(SW\\) is not emitted by Earth’s surface, but \\(LW\\) is!",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#the-surface-energy-balance",
+    "href": "Lectures/07.html#the-surface-energy-balance",
+    "title": "Net All-Wave Radiation",
+    "section": "The Surface Energy Balance",
+    "text": "The Surface Energy Balance\nWe can define \\(R_n\\) from the perspective of the Earth’s surface in term’s of it’s energy balance. How much energy is absorbed vs. how much is emitted?\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\qquad(3)\\] \\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\qquad(4)\\] \\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\qquad(5)\\]\n\\(R_n\\) is the main energy source driving near-surface climates. It can be positive (usually day) or negative (usually night).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#the-importance-of-surface-properties",
+    "href": "Lectures/07.html#the-importance-of-surface-properties",
+    "title": "Net All-Wave Radiation",
+    "section": "The importance of surface properties",
+    "text": "The importance of surface properties\n\\(R_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\\)\n\nNotice the surface properties that control the budget in addition to the input that is controlled by solar geometry and atmosphere.\nThe range of values is lessened by the fact that the effects of \\(\\alpha\\) and \\(T_s\\) tend to partially offset each other.\nClouds reduces extremes because it decreases \\(SW_\\downarrow\\) and increases \\(LW_\\downarrow\\).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#the-importance-of-surface-properties-1",
+    "href": "Lectures/07.html#the-importance-of-surface-properties-1",
+    "title": "Net All-Wave Radiation",
+    "section": "The importance of surface properties",
+    "text": "The importance of surface properties\n\n\n\n\n\nGrass \\(\\alpha\\) = 0.2\n\n\n\n\n\n\nParking lot \\(\\alpha\\) = 0.32",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#annual-r_n",
+    "href": "Lectures/07.html#annual-r_n",
+    "title": "Net All-Wave Radiation",
+    "section": "Annual \\(R_n\\)",
+    "text": "Annual \\(R_n\\)\n\n\nWhy is Q* negative in night?",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#latitudinal-changes",
+    "href": "Lectures/07.html#latitudinal-changes",
+    "title": "Net All-Wave Radiation",
+    "section": "Latitudinal Changes",
+    "text": "Latitudinal Changes",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
     "objectID": "Resources.html",
     "href": "Resources.html",
     "title": "Programming Resources",
@@ -2295,7 +2739,18 @@
     "href": "Resources.html#bulk-transitivity",
     "title": "Programming Resources",
     "section": "Bulk Transitivity",
-    "text": "Bulk Transitivity\n\\[\nSW_\\downarrow = I_ex \\Psi_a^{m}\n\\tag{5}\\]",
+    "text": "Bulk Transitivity\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{5}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-equation-radiation",
+    "href": "Resources.html#conservation-equation-radiation",
+    "title": "Programming Resources",
+    "section": "Conservation Equation Radiation",
+    "text": "Conservation Equation Radiation\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{6}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2306,7 +2761,7 @@
     "href": "Resources.html#conservation-law-scalar-1d",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar 1D",
-    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{6}\\]",
+    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{7}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2317,7 +2772,7 @@
     "href": "Resources.html#conservation-law-scalar-homogeneous-2",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar Homogeneous 2",
-    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{7}\\]",
+    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{8}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2328,7 +2783,7 @@
     "href": "Resources.html#conservation-law-scalar-homogeneous",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar Homogeneous",
-    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{8}\\]",
+    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{9}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2339,7 +2794,7 @@
     "href": "Resources.html#conservation-law-scalar",
     "title": "Programming Resources",
     "section": "Conservation Law Scalar",
-    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{9}\\]",
+    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{10}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2350,7 +2805,7 @@
     "href": "Resources.html#conservation-law-simplified",
     "title": "Programming Resources",
     "section": "Conservation Law Simplified",
-    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{10}\\]",
+    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{11}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2361,7 +2816,7 @@
     "href": "Resources.html#cosine-law-of-illumination",
     "title": "Programming Resources",
     "section": "Cosine Law of Illumination",
-    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{11}\\]",
+    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{12}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2372,7 +2827,7 @@
     "href": "Resources.html#energy-of-photon",
     "title": "Programming Resources",
     "section": "Energy of Photon",
-    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{12}\\]",
+    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{13}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2383,7 +2838,7 @@
     "href": "Resources.html#extraterrestrial-irradiance",
     "title": "Programming Resources",
     "section": "Extraterrestrial Irradiance",
-    "text": "Extraterrestrial Irradiance\n\\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\tag{13}\\]",
+    "text": "Extraterrestrial Irradiance\n\\[\nI_ex=I_0(\\frac{R_av}{R})^2\\cos(Z)\n\\tag{14}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2394,7 +2849,18 @@
     "href": "Resources.html#adjusted-constant",
     "title": "Programming Resources",
     "section": "Adjusted Constant",
-    "text": "Adjusted Constant\n\\[\n\\begin{eqnarray}(\\frac{R_av}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\\end{eqnarray}\n\\tag{14}\\]",
+    "text": "Adjusted Constant\n\\[\n(\\frac{R_av}{R})^2 = 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+                     0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\n\\tag{15}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#frequency",
+    "href": "Resources.html#frequency",
+    "title": "Programming Resources",
+    "section": "Frequency",
+    "text": "Frequency\n\\[\nv=\\frac{c}{\\lambda}\n\\tag{16}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2405,7 +2871,7 @@
     "href": "Resources.html#kelvin",
     "title": "Programming Resources",
     "section": "Kelvin",
-    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{15}\\]",
+    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{17}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2416,7 +2882,51 @@
     "href": "Resources.html#kirchhoffs-law",
     "title": "Programming Resources",
     "section": "Kirchhoffs Law",
-    "text": "Kirchhoffs Law\n\\[\na_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{16}\\]",
+    "text": "Kirchhoffs Law\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{18}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#longwave-radiation-balance",
+    "href": "Resources.html#longwave-radiation-balance",
+    "title": "Programming Resources",
+    "section": "Longwave Radiation Balance",
+    "text": "Longwave Radiation Balance\n\\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\tag{19}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#longwave-reflectivity",
+    "href": "Resources.html#longwave-reflectivity",
+    "title": "Programming Resources",
+    "section": "Longwave Reflectivity",
+    "text": "Longwave Reflectivity\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\tag{20}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#long-wave-flux-density-stefan-boltzman",
+    "href": "Resources.html#long-wave-flux-density-stefan-boltzman",
+    "title": "Programming Resources",
+    "section": "Long wave Flux Density Stefan Boltzman",
+    "text": "Long wave Flux Density Stefan Boltzman\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\tag{21}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#long-wave-flux-density",
+    "href": "Resources.html#long-wave-flux-density",
+    "title": "Programming Resources",
+    "section": "Long wave Flux Density",
+    "text": "Long wave Flux Density\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\tag{22}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2427,7 +2937,40 @@
     "href": "Resources.html#ndvi",
     "title": "Programming Resources",
     "section": "NDVI",
-    "text": "NDVI\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\tag{17}\\]",
+    "text": "NDVI\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\tag{23}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#absorbed-sw",
+    "href": "Resources.html#absorbed-sw",
+    "title": "Programming Resources",
+    "section": "Absorbed SW",
+    "text": "Absorbed SW\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\tag{24}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-absorbed-emitted-lw",
+    "href": "Resources.html#net-absorbed-emitted-lw",
+    "title": "Programming Resources",
+    "section": "Net Absorbed Emitted LW",
+    "text": "Net Absorbed Emitted LW\n\\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{25}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-radiation-energy-balance",
+    "href": "Resources.html#net-radiation-energy-balance",
+    "title": "Programming Resources",
+    "section": "Net Radiation Energy Balance",
+    "text": "Net Radiation Energy Balance\n\\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{26}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2438,7 +2981,7 @@
     "href": "Resources.html#net-radiation-short",
     "title": "Programming Resources",
     "section": "Net Radiation Short",
-    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{18}\\]",
+    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{27}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2449,7 +2992,7 @@
     "href": "Resources.html#net-radiation",
     "title": "Programming Resources",
     "section": "Net Radiation",
-    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{19}\\]",
+    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{28}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2460,18 +3003,18 @@
     "href": "Resources.html#planks-law",
     "title": "Programming Resources",
     "section": "Planks Law",
-    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{20}\\]",
+    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{29}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
     ]
   },
   {
-    "objectID": "Resources.html#radiation-balance",
-    "href": "Resources.html#radiation-balance",
+    "objectID": "Resources.html#prata",
+    "href": "Resources.html#prata",
     "title": "Programming Resources",
-    "section": "Radiation Balance",
-    "text": "Radiation Balance\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{21}\\]",
+    "section": "Prata",
+    "text": "Prata\n\\[\n\\epsilon_a = [1-(1+zeta)\\exp{-(a+b\\zeta)^0.5}]\n\\tag{30}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2482,7 +3025,7 @@
     "href": "Resources.html#reflectivity",
     "title": "Programming Resources",
     "section": "Reflectivity",
-    "text": "Reflectivity\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\tag{22}\\]",
+    "text": "Reflectivity\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\tag{31}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2493,7 +3036,18 @@
     "href": "Resources.html#reflectance-coefficient",
     "title": "Programming Resources",
     "section": "Reflectance Coefficient",
-    "text": "Reflectance Coefficient\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\tag{23}\\]",
+    "text": "Reflectance Coefficient\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\tag{32}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#relative-humidity",
+    "href": "Resources.html#relative-humidity",
+    "title": "Programming Resources",
+    "section": "Relative Humidity",
+    "text": "Relative Humidity\n\\[\nRH=\\frac{P_v}{P_v^*}\n\\tag{33}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2504,7 +3058,7 @@
     "href": "Resources.html#solar-declination",
     "title": "Programming Resources",
     "section": "Solar Declination",
-    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{24}\\]",
+    "text": "Solar Declination\n\\[\n\\delta = 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)         -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma)         -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma)\n\\tag{34}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2515,7 +3069,7 @@
     "href": "Resources.html#fractional-year",
     "title": "Programming Resources",
     "section": "Fractional Year",
-    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (\\rm{DOY}-1)\n\\tag{25}\\]",
+    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{35}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2526,7 +3080,7 @@
     "href": "Resources.html#solar-zenith",
     "title": "Programming Resources",
     "section": "Solar Zenith",
-    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{26}\\]",
+    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{36}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2537,7 +3091,7 @@
     "href": "Resources.html#hour-angle",
     "title": "Programming Resources",
     "section": "Hour Angle",
-    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{27}\\]",
+    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{37}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2548,7 +3102,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body Adjusted",
-    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{28}\\]",
+    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{38}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2559,7 +3113,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body",
-    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{29}\\]",
+    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{39}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2570,7 +3124,7 @@
     "href": "Resources.html#stefan-boltzman-law",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law",
-    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{30}\\]",
+    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{40}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2581,7 +3135,7 @@
     "href": "Resources.html#surface-energy-balance-no-mass",
     "title": "Programming Resources",
     "section": "Surface Energy Balance No Mass",
-    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{31}\\]",
+    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{41}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2592,7 +3146,7 @@
     "href": "Resources.html#surface-energy-balance-storage",
     "title": "Programming Resources",
     "section": "Surface Energy Balance Storage",
-    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{32}\\]",
+    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{42}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2603,7 +3157,18 @@
     "href": "Resources.html#surface-energy-balance",
     "title": "Programming Resources",
     "section": "Surface Energy Balance",
-    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{33}\\]",
+    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{43}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#tetens",
+    "href": "Resources.html#tetens",
+    "title": "Programming Resources",
+    "section": "Tetens",
+    "text": "Tetens\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\tag{44}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2614,7 +3179,7 @@
     "href": "Resources.html#lmst",
     "title": "Programming Resources",
     "section": "LMST",
-    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{34}\\]",
+    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{45}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2625,7 +3190,7 @@
     "href": "Resources.html#lat",
     "title": "Programming Resources",
     "section": "LAT",
-    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{35}\\]",
+    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{46}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2636,7 +3201,7 @@
     "href": "Resources.html#delta-lat",
     "title": "Programming Resources",
     "section": "Delta LAT",
-    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{36}\\]",
+    "text": "Delta LAT\n\\[\n\\Delta LAT =  229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma)               -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\n\\tag{47}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2647,7 +3212,7 @@
     "href": "Resources.html#weins-law",
     "title": "Programming Resources",
     "section": "Weins Law",
-    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{37}\\]",
+    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{48}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -2658,214 +3223,10 @@
     "href": "Study_Questions/02.html",
     "title": "Study Question Set 02",
     "section": "",
-    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (\\rm{DOY}-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nhe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
+    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\delta = 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)\n         -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma)\n         -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma)\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nhe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
     "crumbs": [
       "Study Questions",
       "Study Question Set 02"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#learning-objectives",
-    "href": "Lectures/06.html#learning-objectives",
-    "title": "Longwave Radiation",
-    "section": "Learning Objectives",
-    "text": "Learning Objectives\n\nSee how radiation laws apply to long-wave radiative exchange and how long-wave radiation can interact with surfaces.\n\n\n\n\nExplain how we can calculate longwave outgoing radiation, and how it relates to surface emissivity.\nKnow how we can estimate / model longwave incoming radiation and the emissivity of the atmosphere.\n\n\n\n\n\nPeople in front of a heated building in winter as seen in the thermal infrared by a thermal camera (Source: A. Christen)",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#what-is-longwave-radiation",
-    "href": "Lectures/06.html#what-is-longwave-radiation",
-    "title": "Longwave Radiation",
-    "section": "What is ‘Longwave’ radiation?",
-    "text": "What is ‘Longwave’ radiation?\n\n\n\n\n\nShort-wave (VIS) D. Scherer, Ecology Department, TU Berlin\n\n\n\n\n\n\nLongwave (TIR) D. Scherer, Ecology Department, TU Berlin",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#measuring-long-wave-radiation",
-    "href": "Lectures/06.html#measuring-long-wave-radiation",
-    "title": "Longwave Radiation",
-    "section": "Measuring Long-wave Radiation",
-    "text": "Measuring Long-wave Radiation\nNumerous instruments can measure long-wave radiation received in a particular field of view (FOV), within a particular band, and/or with a particular spatial resolution.\n\n\n\n\n\nThermal camera\n\n\n\n\n\n\nPyrgeometer\n\n\n\n\n\n\nThermal satellite channel\n\n\n\n\n\nA radiometer measures the long-wave radiance received in a particular field of view (FOV), within a particular band, and with a particular spatial resolution. In remote sensing, sensors are built to pick up those specific spectral bands. Near IR, Mid-IR, Far IR Demo here",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#stefan-boltzmann-law-grey-body",
-    "href": "Lectures/06.html#stefan-boltzmann-law-grey-body",
-    "title": "Longwave Radiation",
-    "section": "Stefan-Boltzmann Law: Grey Body",
-    "text": "Stefan-Boltzmann Law: Grey Body\n\n\nNatural objects (called grey bodies) are not full radiators. Their emittance is given by adapting the Stefan-Boltzman law:\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\qquad(1)\\]\nwhere \\(\\sigma = 5.67 * 10^-8\\)\n\nwhere \\(\\epsilon\\) is their surface emissivity. Emissivity is the ratio of the actual emission to that of a blackbody (i.e. \\(\\epsilon\\) = 1.0).\nThis law is the basis of remote sensing in the TIR\n\n\n\n\n\n\nTable 1: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28\n\n\n\n\n\n\n\n\n\n\n\nAll bodies possessing energy (i.e. whose temperatures are above absolute zero, 0 K = −273.2◦C) emit radiation. If a body at a given temperature emits the maximum possible amount of radiation per unit of its surface area in unit time then it is called a black body. Such a body has a surface emissivity ε equal to unity. If the body is not a full radiator. Emissivity = absorptivity (low emissivity = reflects much of the radiant thermal energy) The map shows the long-wave emittance and reflectance of the land and ocean surface  Stefan–Boltzmann constant (sigma)",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#atmospheric-windows",
-    "href": "Lectures/06.html#atmospheric-windows",
-    "title": "Longwave Radiation",
-    "section": "Atmospheric Window(s)",
-    "text": "Atmospheric Window(s)\n\n\nThe satellite measures in this range because this is the atmospheric window in the long-wave part of the spectrum. In this range a cloudless atmosphere is quite transparent, as only a few trace gases absorb radiation. This allows us to see the surface, and not the intervening atmosphere.",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#kirchhoffs-law",
-    "href": "Lectures/06.html#kirchhoffs-law",
-    "title": "Longwave Radiation",
-    "section": "Kirchhoff’s law",
-    "text": "Kirchhoff’s law\n\n\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\qquad(2)\\]\n\nAssuming no transmission the absorptivity of a body (\\(\\zeta_\\lambda\\)) equals its emissivity (\\(\\epsilon_\\lambda\\)) at a given wavelength.\n\nA good absorber is a good emitter\n\n\n\n\n\n\n\nFor an arbitrary body emitting and absorbing thermal radiation in thermodynamic equilibrium, the emissivity is equal to the absorptivity.",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#kirchhoffs-law-iclicker",
-    "href": "Lectures/06.html#kirchhoffs-law-iclicker",
-    "title": "Longwave Radiation",
-    "section": "Kirchhoff’s Law (iClicker)",
-    "text": "Kirchhoff’s Law (iClicker)\nPlants are good absorbers of \\(SW\\) radiation, so why don’t they emit just as much \\(SW\\) as they absorb?\n\nA: They aren’t hot enough (Stefan-Boltzmann)\nB: The do emit \\(SW\\), we call this Albedo",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#kirchhoffs-law-1",
-    "href": "Lectures/06.html#kirchhoffs-law-1",
-    "title": "Longwave Radiation",
-    "section": "Kirchhoff’s Law",
-    "text": "Kirchhoff’s Law\nKirchhoff’s law only applies if the wavelength considered is the same – do not mix them together.\n\nKirchhoff’s law only has relevance to long-wave exchange in climatology.\n\nThe law does not apply to fluorescent objects, which can absorb energy at a given a wavelength and release it at another one.",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#mass-radiation-interactions",
-    "href": "Lectures/06.html#mass-radiation-interactions",
-    "title": "Longwave Radiation",
-    "section": "Mass-Radiation Interactions",
-    "text": "Mass-Radiation Interactions\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\qquad(3)\\]\n\nTransmission (\\(\\Psi_\\lambda\\)), Reflection (\\(\\alpha_\\lambda\\)), Absorption (\\(\\zeta_\\lambda\\)), Emission (\\(\\epsilon_\\lambda\\))",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#long-wave-reflection",
-    "href": "Lectures/06.html#long-wave-reflection",
-    "title": "Longwave Radiation",
-    "section": "Long-wave Reflection",
-    "text": "Long-wave Reflection\nMost (solid) surfaces are opaque to long-wave (i.e., \\(\\Psi_{LW} \\approx 0\\)), so we can simplify our radiation conservation equation for \\(LW\\): \\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\qquad(4)\\]\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\qquad(5)\\]",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#long-wave-reflection-iclicker",
-    "href": "Lectures/06.html#long-wave-reflection-iclicker",
-    "title": "Longwave Radiation",
-    "section": "Long-wave Reflection (iClicker)",
-    "text": "Long-wave Reflection (iClicker)\n\n\nWhich surface would you expect to have the highest \\(\\alpha_{LW}\\)?\n\nA Peat (organic soil)\nB Wood\nC Steel (Iron-carbon alloy)\nD Wheat\nE A Cow\n\n\n\n\n\n\nTable 2: Long-wave emissivity coeficients (\\(\\epsilon_{LW}\\)) for selected surfaces\n\n\n\n\n\n\nSurface\nLong wave Emissivity epsilon_ LW\n\n\n\n\nSoil\n0.90 – 0.98\n\n\nGrass\n0.90 – 0.95\n\n\nCrops\n0.90 – 0.99\n\n\nForests\n0.97 – 0.99\n\n\nWater\n0.92 – 0.97\n\n\nIron\n0.13 – 0.28",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#long-wave-reflection-1",
-    "href": "Lectures/06.html#long-wave-reflection-1",
-    "title": "Longwave Radiation",
-    "section": "Long-wave Reflection",
-    "text": "Long-wave Reflection\n\nGlass transmits a substantial fraction of visible light, but is relatively opaque to \\(LW\\)\nLow-E, or low-emissivity, glass was created to minimize the amount of infrared and ultraviolet light that comes through your glass, without minimizing the amount of light that enters your home. Low-E glass windows have a microscopically thin coating that is transparent and reflects heat.",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#net-long-wave-flux-density",
-    "href": "Lectures/06.html#net-long-wave-flux-density",
-    "title": "Longwave Radiation",
-    "section": "Net Long-wave Flux Density",
-    "text": "Net Long-wave Flux Density\nThe net long-wave radiation flux density (\\(LW^*\\)) at the surface is the difference between the input from the atmosphere above (\\(LW\\downarrow\\)) and the output surface (\\(LW\\uparrow\\)).\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\qquad(6)\\]\n\n\nSurface output includes both emissions from surface and reflected \\(LW\\downarrow\\)\n\nDiffers from \\(SW*= SW\\downarrow - SW\\uparrow\\)\n\\(SW\\uparrow\\) is only reflected \\(SW\\), earth doesn’t emit \\(SW\\)!",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#long-long-wave-flux-density",
-    "href": "Lectures/06.html#long-long-wave-flux-density",
-    "title": "Longwave Radiation",
-    "section": "Long-Long-wave Flux Density",
-    "text": "Long-Long-wave Flux Density",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#net-long-wave-flux-density-1",
-    "href": "Lectures/06.html#net-long-wave-flux-density-1",
-    "title": "Longwave Radiation",
-    "section": "Net Long-wave Flux Density",
-    "text": "Net Long-wave Flux Density\nWe can re-formulate the previous equation in terms of the Stefan-Boltzmann Law:\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\qquad(7)\\]\n\nHow is this equivalent to Equation 6\n\n\n\nStefan-Boltzman gives us emissions from a surface of temperature \\(T_s\\) with a long-wave emissivity of \\(\\epsilon_{LW}\\)\n\n\n\n\\((1-\\epsilon_{LW})\\) gives us reflectivity\n\n\n\n\nClouds, when present, are the major contributors to the incoming longwave radiation to the surface. They radiate like blackbodies (e ^ 1) at their respective cloud base temperatures. In passing through the atmosphere, a large part of the terrestrial radiation is absorbed by atmospheric gases, such as water vapor, carbon dioxide, nitrogen oxides, methane, and ozone. In particular, water vapor and CO2 are primarily responsible for absorbing the terrestrial radiation and reducing its escape to the space (the so-called greenhouse effect). The atmospheric gases and aerosols which absorb energy also radiate energy.",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#estimating-surface-emissivity",
-    "href": "Lectures/06.html#estimating-surface-emissivity",
-    "title": "Longwave Radiation",
-    "section": "Estimating Surface Emissivity",
-    "text": "Estimating Surface Emissivity\nWe can compare the apparent surface temperature \\(T_r\\), which assumes the surface is a black body: \\[\n\\sigma T_r^4 = \\epsilon_{s} T_s^4 + (1-\\epsilon_{s})LW\\downarrow\n\\qquad(8)\\]\nIn reality, we have both emission and reflection. We can re-arrange to isolate \\(T_s\\) \\[\nT_s = [\\frac{\\sigma T_r^4-(1-\\epsilon_{s})LW\\downarrow}{\\epsilon_{s}\\sigma}]\n\\qquad(9)\\]\nthen substitute \\(sigma T_k^4\\) (\\(T_k\\) = apparent sky temperature) and re-arrange again: \\[\n\\epsilon_{s} = \\frac{T_r^4-T_k^4}{T_s^4-T_k^4}\n\\qquad(10)\\]\n\nInfrared thermometer with emissivity = 1",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
-    ]
-  },
-  {
-    "objectID": "Lectures/06.html#sky-temperature",
-    "href": "Lectures/06.html#sky-temperature",
-    "title": "Longwave Radiation",
-    "section": "Sky Temperature",
-    "text": "Sky Temperature\n\\[\nLW_\\downarrow = \\epsilon{sky} \\sigma T_{sky}^4\n\\qquad(11)\\]\nApparent sky temperature is calculated by setting \\(\\epsilon{sky} = 1\\) \\[\nLW_\\downarrow = \\sigma T_{k}^4\n\\qquad(12)\\]",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Longwave Radiation"
     ]
   }
 ]
