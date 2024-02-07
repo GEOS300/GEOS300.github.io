@@ -425,7 +425,7 @@ Table&nbsp;1: These are list of symbols that will be used to represent key varia
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(E_b\)</span></td>
 <td style="text-align: left;">Black-body emissivity</td>
-<td style="text-align: left;">An idealized estimate of radiative flux density based on an object’s temperature assuming its a black-body see <a href="#eq-Stefan-Boltzman-Law" class="quarto-xref">Equation&nbsp;40</a></td>
+<td style="text-align: left;">An idealized estimate of radiative flux density based on an object’s temperature assuming its a black-body see <a href="#eq-Stefan-Boltzman-Law" class="quarto-xref">Equation&nbsp;41</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\epsilon\)</span></td>
@@ -435,7 +435,7 @@ Table&nbsp;1: These are list of symbols that will be used to represent key varia
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(E_g\)</span></td>
 <td style="text-align: left;">Grey-body emissivity</td>
-<td style="text-align: left;">An adjustment to <span class="math inline">\(E_b\)</span> which accounts for the object’s emissivity <span class="math inline">\(\epsilon\)</span> see <a href="#eq-Stefan-Boltzman-Law-Grey-Body" class="quarto-xref">Equation&nbsp;39</a> &amp; see <a href="#eq-Stefan-Boltzman-Law-Grey-Body-Adjusted" class="quarto-xref">Equation&nbsp;38</a></td>
+<td style="text-align: left;">An adjustment to <span class="math inline">\(E_b\)</span> which accounts for the object’s emissivity <span class="math inline">\(\epsilon\)</span> see <a href="#eq-Stefan-Boltzman-Law-Grey-Body" class="quarto-xref">Equation&nbsp;40</a> &amp; see <a href="#eq-Stefan-Boltzman-Law-Grey-Body-Adjusted" class="quarto-xref">Equation&nbsp;39</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\mu\)</span></td>
@@ -577,9 +577,9 @@ H = \frac{R_n-G}{1+B^{-1}}
 B = \frac{H}{LE}
 \tag{4}\]</span></span></p>
 </section>
-<section id="bulk-transitivity" class="level2">
-<h2 class="anchored" data-anchor-id="bulk-transitivity">Bulk Transitivity</h2>
-<p><span id="eq-Bulk-Transitivity"><span class="math display">\[
+<section id="bulk-transmissivity" class="level2">
+<h2 class="anchored" data-anchor-id="bulk-transmissivity">Bulk Transmissivity</h2>
+<p><span id="eq-Bulk-Transmissivity"><span class="math display">\[
 SW_\downarrow = I_{ex} \Psi_a^{m}
 \tag{5}\]</span></span></p>
 </section>
@@ -634,13 +634,13 @@ e = hv
 <section id="extraterrestrial-irradiance" class="level2">
 <h2 class="anchored" data-anchor-id="extraterrestrial-irradiance">Extraterrestrial Irradiance</h2>
 <p><span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
-I_ex=I_0(\frac{R_av}{R})^2\cos(Z)
+I_{ex}=I_0(\frac{R_av}{R})^2\cos(Z)
 \tag{14}\]</span></span></p>
 </section>
 <section id="adjusted-constant" class="level2">
 <h2 class="anchored" data-anchor-id="adjusted-constant">Adjusted Constant</h2>
 <p><span id="eq-Adjusted-Constant"><span class="math display">\[
-(\frac{R_av}{R})^2 = 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+                     0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
+\begin{eqnarray}(\frac{R_av}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
 \tag{15}\]</span></span></p>
 </section>
 <section id="frequency" class="level2">
@@ -733,113 +733,119 @@ E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
 \epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
 \tag{30}\]</span></span></p>
 </section>
+<section id="radiation-balance-air.qmd" class="level2">
+<h2 class="anchored" data-anchor-id="radiation-balance-air.qmd">Radiation Balance Air.qmd</h2>
+<p><span id="eq-Radiation-Balance-Air.qmd"><span class="math display">\[
+\Delta R_{n(\Delta z)}=R_{n(z+\Delta z)}-R_{n(z)}=C_a(\frac{\Delta T_a}{\Delta t})_R \Delta z
+\tag{31}\]</span></span></p>
+</section>
 <section id="reflectivity" class="level2">
 <h2 class="anchored" data-anchor-id="reflectivity">Reflectivity</h2>
 <p><span id="eq-Reflectivity"><span class="math display">\[
 \alpha_\lambda = \frac{\lambda_{reflected}}{\lambda_{incident}}
-\tag{31}\]</span></span></p>
+\tag{32}\]</span></span></p>
 </section>
 <section id="reflectance-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="reflectance-coefficient">Reflectance Coefficient</h2>
 <p><span id="eq-Reflectance-Coefficient"><span class="math display">\[
 \alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
-\tag{32}\]</span></span></p>
+\tag{33}\]</span></span></p>
 </section>
 <section id="relative-humidity" class="level2">
 <h2 class="anchored" data-anchor-id="relative-humidity">Relative Humidity</h2>
 <p><span id="eq-Relative-Humidity"><span class="math display">\[
 RH=\frac{P_v}{P_v^*}
-\tag{33}\]</span></span></p>
+\tag{34}\]</span></span></p>
 </section>
 <section id="solar-declination" class="level2">
 <h2 class="anchored" data-anchor-id="solar-declination">Solar Declination</h2>
 <p><span id="eq-Solar-Declination"><span class="math display">\[
-\delta = 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)         -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma)         -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma)
-\tag{34}\]</span></span></p>
+\begin{eqnarray}\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber \end{eqnarray}
+\tag{35}\]</span></span></p>
 </section>
 <section id="fractional-year" class="level2">
 <h2 class="anchored" data-anchor-id="fractional-year">Fractional Year</h2>
 <p><span id="eq-Fractional-Year"><span class="math display">\[
 \gamma = \frac{2 \pi }{365} (DOY-1)
-\tag{35}\]</span></span></p>
+\tag{36}\]</span></span></p>
 </section>
 <section id="solar-zenith" class="level2">
 <h2 class="anchored" data-anchor-id="solar-zenith">Solar Zenith</h2>
 <p><span id="eq-Solar-Zenith"><span class="math display">\[
 \cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
-\tag{36}\]</span></span></p>
+\tag{37}\]</span></span></p>
 </section>
 <section id="hour-angle" class="level2">
 <h2 class="anchored" data-anchor-id="hour-angle">Hour Angle</h2>
 <p><span id="eq-Hour-Angle"><span class="math display">\[
 h = 15^{\circ}(12-LAT)
-\tag{37}\]</span></span></p>
+\tag{38}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law-grey-body-adjusted" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body-adjusted">Stefan Boltzman Law Grey Body Adjusted</h2>
 <p><span id="eq-Stefan-Boltzman-Law-Grey-Body-Adjusted"><span class="math display">\[
 E_g = \epsilon\sigma_b T^4 + (1-\epsilon) * (SW\downarrow+LW\downarrow)
-\tag{38}\]</span></span></p>
+\tag{39}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law-grey-body" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body">Stefan Boltzman Law Grey Body</h2>
 <p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
 E_g = \epsilon\sigma_b T^4
-\tag{39}\]</span></span></p>
+\tag{40}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law">Stefan Boltzman Law</h2>
 <p><span id="eq-Stefan-Boltzman-Law"><span class="math display">\[
 E_b = \sigma_b T^4
-\tag{40}\]</span></span></p>
+\tag{41}\]</span></span></p>
 </section>
 <section id="surface-energy-balance-no-mass" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance-no-mass">Surface Energy Balance No Mass</h2>
 <p><span id="eq-Surface-Energy-Balance-No-Mass"><span class="math display">\[
 \color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G}
-\tag{41}\]</span></span></p>
+\tag{42}\]</span></span></p>
 </section>
 <section id="surface-energy-balance-storage" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance-storage">Surface Energy Balance Storage</h2>
 <p><span id="eq-Surface-Energy-Balance-Storage"><span class="math display">\[
 \color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G} + \color{green}{\Delta S}
-\tag{42}\]</span></span></p>
+\tag{43}\]</span></span></p>
 </section>
 <section id="surface-energy-balance" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance">Surface Energy Balance</h2>
 <p><span id="eq-Surface-Energy-Balance"><span class="math display">\[
 R_n = H + LE + G + \Delta S
-\tag{43}\]</span></span></p>
+\tag{44}\]</span></span></p>
 </section>
 <section id="tetens" class="level2">
 <h2 class="anchored" data-anchor-id="tetens">Tetens</h2>
 <p><span id="eq-Tetens"><span class="math display">\[
 P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
-\tag{44}\]</span></span></p>
+\tag{45}\]</span></span></p>
 </section>
 <section id="lmst" class="level2">
 <h2 class="anchored" data-anchor-id="lmst">LMST</h2>
 <p><span id="eq-LMST"><span class="math display">\[
 LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
-\tag{45}\]</span></span></p>
+\tag{46}\]</span></span></p>
 </section>
 <section id="lat" class="level2">
 <h2 class="anchored" data-anchor-id="lat">LAT</h2>
 <p><span id="eq-LAT"><span class="math display">\[
 LAT = LMST-\Delta LAT
-\tag{46}\]</span></span></p>
+\tag{47}\]</span></span></p>
 </section>
 <section id="delta-lat" class="level2">
 <h2 class="anchored" data-anchor-id="delta-lat">Delta LAT</h2>
 <p><span id="eq-Delta-LAT"><span class="math display">\[
-\Delta LAT =  229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma)               -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
-\tag{47}\]</span></span></p>
+\begin{eqnarray}\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
+\tag{48}\]</span></span></p>
 </section>
 <section id="weins-law" class="level2">
 <h2 class="anchored" data-anchor-id="weins-law">Weins Law</h2>
 <p><span id="eq-Weins-Law"><span class="math display">\[
 \lambda_{max} = \frac{b}{T}
-\tag{48}\]</span></span></p>
+\tag{49}\]</span></span></p>
 
 
 </section>
