@@ -719,6 +719,24 @@ R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T_
 <h2>Radiative Cooling of the Atmosphere</h2>
 <p>At the equator: if mean daily <span class="math inline">\(R_n\)</span> at the ground surface (0 m) m over is 125 W m<sup>-2</sup> and mean <span class="math inline">\(R_n\)</span> at the tropopause (17,000 m) is -100 W m<sup>-2</sup>, how much radiative cooling would we expect over the depth of the troposphere?</p>
 <div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a></a>Ca <span class="op">=</span> <span class="dv">1210</span> <span class="co"># J m-3 K-1</span></span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a>z1 <span class="op">=</span> <span class="dv">1</span> <span class="co">#m.a.g.l</span></span>
+<span id="cb4-5"><a></a>z2 <span class="op">=</span> <span class="dv">17000</span> <span class="co">#m.a.g.l</span></span>
+<span id="cb4-6"><a></a>Delta_z <span class="op">=</span> z2<span class="op">-</span>z1</span>
+<span id="cb4-7"><a></a></span>
+<span id="cb4-8"><a></a>Rn_z1 <span class="op">=</span> <span class="dv">125</span> <span class="co">#Wm-2</span></span>
+<span id="cb4-9"><a></a>Rn_z2 <span class="op">=</span> <span class="op">-</span><span class="dv">100</span> <span class="co">#Wm-2</span></span>
+<span id="cb4-10"><a></a></span>
+<span id="cb4-11"><a></a>t1 <span class="op">=</span> <span class="dv">0</span> <span class="co"># 12:00 A.M. (midnight)</span></span>
+<span id="cb4-12"><a></a>t2 <span class="op">=</span> <span class="dv">24</span> <span class="co"># 12:00 A.M. (midnight *the next day*)</span></span>
+<span id="cb4-13"><a></a>Delta_t <span class="op">=</span> (t2<span class="op">-</span>t1)<span class="op">*</span><span class="dv">3600</span> <span class="co"># Convert to seconds: 1 W = 1 J s-1</span></span>
+<span id="cb4-14"><a></a></span>
+<span id="cb4-15"><a></a>Delta_Rn <span class="op">=</span> Rn_z2 <span class="op">-</span> Rn_z1</span>
+<span id="cb4-16"><a></a>Delta_Ta <span class="op">=</span> Delta_Rn<span class="op">/</span>(Ca<span class="op">*</span>Delta_z)<span class="op">*</span>Delta_t</span>
+<span id="cb4-17"><a></a></span>
+<span id="cb4-18"><a></a><span class="bu">print</span>(<span class="ss">f"The net temperature change attributable to radiative cooling is </span><span class="sc">{</span>np<span class="sc">.</span><span class="bu">round</span>(Delta_Ta,<span class="dv">2</span>)<span class="sc">}</span><span class="ss"> K"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>The net temperature change attributable to radiative cooling is -0.95 K</code></pre>
 </div>

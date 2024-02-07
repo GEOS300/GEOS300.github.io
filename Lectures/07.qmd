@@ -406,6 +406,7 @@ print(f"The net temperature change attributable to radiative heating is {Delta_T
 At the equator: if mean daily $R_n$ at the ground surface (0 m) m over is 125 W m<sup>-2</sup> and mean $R_n$ at the tropopause (17,000 m) is -100 W m<sup>-2</sup>, how much radiative cooling would we expect over the depth of the troposphere?
 
 ```{python}
+#| echo: true
 import numpy as np
 Ca = 1210 # J m-3 K-1
 
