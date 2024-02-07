@@ -1,10 +1,10 @@
 
 $$
 SW_\downarrow = I_{ex} \Psi_a^{m}
-$${#eq-Bulk-Transitivity}
+$${#eq-Bulk-Transmissivity}
 
 where 
 
 $$
-m = \frac{1}{\cos(Z)}
+m = \frac{1}{\cos(Z)} = \frac{1}{\sin(\beta)}
 $$

@@ -1,0 +1,4 @@
+
+$$
+\Delta R_{n(\Delta z)}=R_{n(z+\Delta z)}-R_{n(z)}=C_a(\frac{\Delta T_a}{\Delta t})_R \Delta z
+$${#eq-Radiation-Balance-Air.qmd}

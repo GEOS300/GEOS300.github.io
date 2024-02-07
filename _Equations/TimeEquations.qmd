@@ -11,7 +11,9 @@ $${#eq-LAT}
 
 and $\Delta LAT$ is:
 $$
-\Delta LAT =  229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) 
-              -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
+\begin{eqnarray}
+\Delta LAT = & 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\
+             & -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
+\end{eqnarray}
 $${#eq-Delta-LAT}
 

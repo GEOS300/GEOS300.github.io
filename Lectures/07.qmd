@@ -22,9 +22,6 @@ subtitle: Combined effects of short- and long-wave radiation.
 ![Pyranometers and pyrgeometers are combined to measure all four components of the radiation balance (Photo: A. Christen)](images/07_1_0.jpg)
 
 
-
-
-
 ## Learning Objectives
 
 Be able to formulate the net-effect of all radiative exchange processes for surfaces, 2d, and 3d objects.
@@ -39,9 +36,6 @@ Be able to formulate the net-effect of all radiative exchange processes for surf
 :::
 
 ::: {.column width="50%"}
-
-
-
 
 ![](images/07_4_3.jpg)
 
@@ -182,13 +176,7 @@ $R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T
 
 ::: {.column width="50%"}
 
-
-
-
 ![Parking lot $\alpha$ = 0.32](images/07_12_4.gif)
-
-
-
 
 
 :::
@@ -211,9 +199,280 @@ Why is Q* negative in night?
 :::
 
 
-
 ## Latitudinal Changes
 
 
 ![](images/07_15_2.png)
+
+
+
+## View factors {.smaller}
+
+The sky view factor ($\Psi_{sky}$) from an object  is significant in quantifying long-wave exchange in complex configurations:
+
+* A View factor refers to the fraction of radiation leaving one object that is intercepted by another object.
+  + Fraction of an object’s hemispherical view occupied by other objects.
+
+![](images/07_16_3.png)
+
+
+
+::: {.notes}
+
+Radiation heat transfer between surfaces depends on the orientation of the surfaces relative to each other as well as their radiation properties and temperatures. 
+View factor (or shape factor) is a purely geometrical parameter that accounts for the effects of orientation on radiation between surfaces. 
+The view factor ranges between zero and one.
+The SVF is a measure of how much sky is visible at a given location and can be used to easily describe the 3-dimensional form of the built environment as a 2-dimensional metric.
+Due to the fact that only a smaller part of the sky is seen from the surface (because of the horizontal and vertical unevenness of the surface elements), the outgoing long-wave radiation loss here is more restricted than in rural areas. 
+Therefore, theoretically it is considered to be one of the major agents of the UHI phenomenon. 
+The UHI intensity (∆T) for a given urban location is defined as the difference between the air or surface temperatures of that urban site and those of a carefully selected nearby non-urban (reference) site or those of a mean of non-urban sites 
+
+:::
+
+## Examples of sky view factors 
+
+
+![Middel et al. (2018) Urban Climate](images/07_17_2.jpg)
+
+
+
+## Differences Across Major Cities
+
+
+![Middel et al. (2018) Urban Climate](images/07_18_5.jpg)
+
+## Net radiation of two-sided object
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+A leaf is a 2-sided object so the simple incoming ($\downarrow$) and outgoing ($\uparrow$) consideration for the ground is insufficient
+
+ - Has to be done on both sides, top (t) and bottom (b)
+ - Transmission also relevants
+
+
+
+:::
+
+::: {.column width="50%"}
+
+![T.R. Oke (1987): 'Boundary Layer Climates' 2nd Edition](images/07_30_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Short- and long-wave fluxes have to be referred to one or other side or as a total outcome or average for the whole leaf. Further, transmission must be taken into account as well as multiple reflections involving surrounding objects.
+Similarly, for any 3-dimensional object like an animal, buildings, trees, etc. spherical geometry comes into play.
+
+
+:::
+
+## Radiation Balance of a Layer of Air
+
+For a column of air with heat capacity $C_a = 1210 J m^{-3} K^{-1}$
+
+{{< include ../_Equations/Radiation-Balance-Air.qmd >}}
+
+* The subscript R is to indicate $(\frac{\Delta T_a}{\Delta t})_R$ is only the radiative part of cooling/heating
+  - Other components include convergence or divergence of sensible or latent heat flux densities.
+
+::: {.notes}
+
+-Heat Capacity = ratio of the amount of heat energy transferred to an object to the resulting increase in its temperature
+
+:::
+
+## Radiation Balance of a Layer of Air
+
+![](images/07_32_3.gif){width="125%"}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Radiative flux convergence:** if $\Delta R_n>0$, $\frac{\Delta T_a}{\Delta t}$ is a heating rate
+
+:::
+
+::: {.column width="50%"}
+
+**Radiative flux divergence:** if $\Delta R_n<0$, $\frac{\Delta T_a}{\Delta t}$ is a cooling rate
+
+:::
+
+::::
+
+
+## Radiation Balance of a Layer of Air {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+
+* For thin layers of air (<50 m) during the day it is usually assumed that radiative flux divergence is negligible and can be ignored, e.g. we place a radiometer at any height in the surface layer and it gives a reasonable approximation of the surface value.
+* Under these conditions it is assumed that air temperature changes are solely due to sensible heat flux density changes with height.
+  + Latent heat flux density changes are important when fog is forming.
+
+
+:::
+
+::: {.column width="35%"}
+
+![Experimental set-up to measure the radiative flux divergence at UBC Totem Field.](images/07_33_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Convection is the main transport process, but unless fog is actively forming (releasing latent heat) only QH is relevant for changing Ta. 
+If inputs of sensible heat exceed losses for an air layer, warming takes place (turbulent flux convergence). If losses of sensible heat exceed gains then the layer cools (turbulent flux divergence). 
+:::
+
+
+## Radiation Balance of a Layer of Air (iClicker) {.smaller  auto-animate=true}
+
+If mean $R_n$ at 1 m between 12:00 and 12:30 is 150 W m<sup>-2</sup> and $R_n$ at 100 m over the same period is 151 W m<sup>-2</sup>, what is the net temperature of the air column over this time period **that is attributable to the radiative heating/cooling**?  *Round you answer to the nearest Kelvin.*
+
+```{python}
+#| echo: true
+Ca = 1210 # J m-3 K-1
+
+z1 = 1 #m.a.g.l
+z2 = 100 #m.a.g.l
+Delta_z = z2-z1
+
+Rn_z1 = 150 #Wm-2
+Rn_z2 = 151 #Wm-2
+
+t1 = 12 # 12:00 P.M.
+t2 = 12.5 # 12:30 P.M.
+Delta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1
+
+Delta_Rn = Rn_z2 - Rn_z1
+Delta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t
+```
+
+## Radiation Balance of a Layer of Air (iClicker) {.smaller auto-animate=true}
+
+If mean $R_n$ at 1 m between 12:00 and 12:30 is 150 W m<sup>-2</sup> and $R_n$ at 100 m over the same period is 151 W m<sup>-2</sup>, what is the net temperature of the air column over this time period **that is attributable to the radiative heating/cooling**?  *Round you answer to the nearest Kelvin.*
+
+```{python}
+#| echo: true
+Ca = 1210 # J m-3 K-1
+
+z1 = 1 #m.a.g.l
+z2 = 100 #m.a.g.l
+Delta_z = z2-z1
+
+Rn_z1 = 150 #Wm-2
+Rn_z2 = 151 #Wm-2
+
+t1 = 12 # 12:00 P.M.
+t2 = 12.5 # 12:30 P.M.
+Delta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1
+
+Delta_Rn = Rn_z2 - Rn_z1
+Delta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t
+
+print(f"The net temperature change attributable to radiative heating is {Delta_Ta} K, which rounds to 0 K")
+```
+
+
+
+
+
+## Latitudinal Changes
+
+
+![](images/07_34_2.png)
+
+## Radiative Cooling of the Atmosphere {.smaller}
+
+At the equator: if mean daily $R_n$ at the ground surface (0 m) m over is 125 W m<sup>-2</sup> and mean $R_n$ at the tropopause (17,000 m) is -100 W m<sup>-2</sup>, how much radiative cooling would we expect over the depth of the troposphere?
+
+```{python}
+import numpy as np
+Ca = 1210 # J m-3 K-1
+
+z1 = 1 #m.a.g.l
+z2 = 17000 #m.a.g.l
+Delta_z = z2-z1
+
+Rn_z1 = 125 #Wm-2
+Rn_z2 = -100 #Wm-2
+
+t1 = 0 # 12:00 A.M. (midnight)
+t2 = 24 # 12:00 A.M. (midnight *the next day*)
+Delta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1
+
+Delta_Rn = Rn_z2 - Rn_z1
+Delta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t
+
+print(f"The net temperature change attributable to radiative cooling is {np.round(Delta_Ta,2)} K")
+
+```
+
+## Radiative Cooling of the Atmosphere (iClicker)
+
+How is it possible that the troposphere at the equator is experiencing 1 K of radiative cooling per day, why 
+hasn't everything at the equator frozen?
+
+* A Sensible and latent heat flux from the surface provide a "constant" source of thermal energy to replenish the losses
+* B The atmosphere at the equator also experiences 1 K of radiative warming per day to cancel out the losses.
+* C Radiative cooling is a form of latent heat exchange and therefore does not change the sensible temperature of the atmosphere
+
+## Radiative Exchange of 3-D Objects {.smaller}
+
+Similarly, for any 3-D object like an animal, buildings, trees, etc. spherical geometry comes into play.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![Artificial deer in the UBC Mechanical Engineering wind tunnel with infrared thermometers (Photo: A. Black, UBC)](images/07_35_5.png){width="80%"}
+
+:::
+
+::: {.column width="50%"}
+
+![A Greenhouse will modify the radiative exchange between plants and their surrounding (Photo: A. Christen, UBC)](images/07_35_7.jpg){width="80%"}
+
+:::
+
+::::
+
+
+
+## Radiative Exchange of a Human Body
+
+![](images/07_36_2.png){width="60%"}
+
+
+
+---
+
+
+![](images/07_37_3.png)
+
+
+## Take Home Points
+
+* Surface properties in the net all-wave budget tend to partially offset each other - in particular albedo and surface temperature.
+* Temporal and spatial differences in net all-wave radiation are controlled by the distribution of short-wave irradiance, atmospheric conditions (clouds) and surface properties.
+* Net all-wave radiative exchange of two-sided and 3D objects needs to consider distributions of radiative fluxes surrounding the object.
 

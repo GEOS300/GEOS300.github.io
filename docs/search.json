@@ -25,7 +25,7 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\nAdditional Reading\n\n\n\n2024-01-31\nLongwave Radiation\n\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\n\n\n\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\n\n\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
@@ -384,7 +384,7 @@
     "href": "Lectures/04.html#earths-climate-system-energy-inputs",
     "title": "Radiation Geometry",
     "section": "Earth’s Climate System: Energy Inputs",
-    "text": "Earth’s Climate System: Energy Inputs\n\n\n\n\nTable 1: Average heat flux density from external sources at Earth’s surface\n\n\n\n\n\n\nSurface\nAverage Energy Flux\n\n\n\n\nSolar electromagnetic radiation\n241.5 W m-2\n\n\nEnergetic particles (sun and space)\n0.001 W m-2\n\n\nGeothermal\n0.06 W m-2\n\n\nAnthropogenic (fossil fuels, nuclear energy)\n0.02 W m-2\n\n\n\n\n\n\n\n\n\nWhat drives our climate system and provides energy for all life on Earth.",
+    "text": "Earth’s Climate System: Energy Inputs\n\nData &lt;- read.csv(file = 'Data/04_3_3_Table.csv',sep=',')\n\nkable(Data, col.names = gsub(\"[.]\", \" \", names(Data)))\n\n\n\nTable 1: Average heat flux density from external sources at Earth’s surface\n\n\n\n\n\n\nSurface\nAverage Energy Flux\n\n\n\n\nSolar electromagnetic radiation\n241.5 W m-2\n\n\nEnergetic particles (sun and space)\n0.001 W m-2\n\n\nGeothermal\n0.06 W m-2\n\n\nAnthropogenic (fossil fuels, nuclear energy)\n0.02 W m-2\n\n\n\n\n\n\n\n\n\nWhat drives our climate system and provides energy for all life on Earth.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -576,7 +576,7 @@
     "href": "Lectures/04.html#local-apparent-time",
     "title": "Radiation Geometry",
     "section": "Local Apparent Time",
-    "text": "Local Apparent Time\n\n\nTimezone not provided, estimating for -127.5, 50\n\n\n(0.0, 366.0)",
+    "text": "Local Apparent Time\n\nimport os\nfrom TzFuncs import TzFuncs\n\ntz = TzFuncs(lat_lon=[50,-127.5])\n\nTimezone not provided, estimating for -127.5, 50\n\nDates = pd.date_range('2024-01-01 12:00','2024-12-31 12:00')\ntz.convert(Dates)\nplt.figure()\nplt.plot(tz.Delta_LAT)\nplt.plot(tz.Delta_LAT*0,color='k')\nplt.grid()\nplt.ylabel('$\\Delta LAT (Minutes)$')\nplt.xlabel('DOY')\nplt.xlim([0,366])\n\n(0.0, 366.0)\n\nplt.title('Offset Between LAT and LMST')",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -1126,7 +1126,7 @@
     "href": "index.html#examinations",
     "title": "Syllabus",
     "section": "Examinations",
-    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and and completed asynchronously. The midterm will be Wednesday on March 13th. The final exam will be completed during the examination period. I will give further details closer to the date of the exams.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
+    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and and completed asynchronously. The midterm will be Wednesday on March 13th. The final exam will be completed April Wednesday April 24th. I will give further details closer to the date of the exams.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
     "crumbs": [
       "Syllabus"
     ]
@@ -1166,7 +1166,7 @@
     "href": "Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-09\n2024-03-01\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
     "crumbs": [
       "Assignments"
     ]
@@ -2543,7 +2543,7 @@
     "href": "Lectures/07.html#net-all-wave-radiation-r_n",
     "title": "Net All-Wave Radiation",
     "section": "Net all-wave radiation (\\(R_n\\))",
-    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) represents the amount of available energy at Earth’s surface after all the radiation exchanges have taken place.\n\nNegative: the surface is loosing energy to the the atmosphere/space\nPositive: the surface is gaining energy from the the atmosphere/space\n\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\qquad(1)\\]",
+    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) represents the amount of available energy at Earth’s surface after all the radiation exchanges have taken place.\n\nNegative: the surface is loosing energy to the the atmosphere/space\nPositive: the surface is gaining energy from the the atmosphere/space\n\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{1}\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -2567,7 +2567,7 @@
     "href": "Lectures/07.html#net-all-wave-radiation-r_n-1",
     "title": "Net All-Wave Radiation",
     "section": "Net all-wave radiation (\\(R_n\\))",
-    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) is the flux density of ALL radiation. ie. the sum of component flux densities:\n\nIt can be alternatively partitioned as the sum of net short-wave radiation (\\(SW^*\\)) and net long-wave radiation (\\(LW^*\\)):\n\n\\[\nR_n = SW^* + LW^*\n\\qquad(2)\\]",
+    "text": "Net all-wave radiation (\\(R_n\\))\n\\(R_n\\) is the flux density of ALL radiation. ie. the sum of component flux densities:\n\nIt can be alternatively partitioned as the sum of net short-wave radiation (\\(SW^*\\)) and net long-wave radiation (\\(LW^*\\)):\n\n\\[\nR_n = SW^* + LW^*\n\\tag{2}\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -2591,7 +2591,7 @@
     "href": "Lectures/07.html#the-surface-energy-balance",
     "title": "Net All-Wave Radiation",
     "section": "The Surface Energy Balance",
-    "text": "The Surface Energy Balance\nWe can define \\(R_n\\) from the perspective of the Earth’s surface in term’s of it’s energy balance. How much energy is absorbed vs. how much is emitted?\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\qquad(3)\\] \\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\qquad(4)\\] \\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\qquad(5)\\]\n\\(R_n\\) is the main energy source driving near-surface climates. It can be positive (usually day) or negative (usually night).",
+    "text": "The Surface Energy Balance\nWe can define \\(R_n\\) from the perspective of the Earth’s surface in term’s of it’s energy balance. How much energy is absorbed vs. how much is emitted?\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\tag{3}\\] \\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{4}\\] \\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{5}\\]\n\\(R_n\\) is the main energy source driving near-surface climates. It can be positive (usually day) or negative (usually night).\n\n\n\n\nSurface radiation balance over grass on Westham Island, Delta, BC. All values in GJ m-2 yr-1",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -3223,10 +3223,297 @@
     "href": "Study_Questions/02.html",
     "title": "Study Question Set 02",
     "section": "",
-    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\delta = 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)\n         -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma)\n         -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma)\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nhe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
+    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
     "crumbs": [
       "Study Questions",
       "Study Question Set 02"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#view-factors",
+    "href": "Lectures/07.html#view-factors",
+    "title": "Net All-Wave Radiation",
+    "section": "View factors",
+    "text": "View factors\nThe sky view factor (\\(\\Psi_{sky}\\)) from an object is significant in quantifying long-wave exchange in complex configurations:\n\nA View factor refers to the fraction of radiation leaving one object that is intercepted by another object.\n\nFraction of an object’s hemispherical view occupied by other objects.\n\n\n\n\nRadiation heat transfer between surfaces depends on the orientation of the surfaces relative to each other as well as their radiation properties and temperatures. View factor (or shape factor) is a purely geometrical parameter that accounts for the effects of orientation on radiation between surfaces. The view factor ranges between zero and one. The SVF is a measure of how much sky is visible at a given location and can be used to easily describe the 3-dimensional form of the built environment as a 2-dimensional metric. Due to the fact that only a smaller part of the sky is seen from the surface (because of the horizontal and vertical unevenness of the surface elements), the outgoing long-wave radiation loss here is more restricted than in rural areas. Therefore, theoretically it is considered to be one of the major agents of the UHI phenomenon. The UHI intensity (∆T) for a given urban location is defined as the difference between the air or surface temperatures of that urban site and those of a carefully selected nearby non-urban (reference) site or those of a mean of non-urban sites",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#examples-of-sky-view-factors",
+    "href": "Lectures/07.html#examples-of-sky-view-factors",
+    "title": "Net All-Wave Radiation",
+    "section": "Examples of sky view factors",
+    "text": "Examples of sky view factors\n\n\n\nMiddel et al. (2018) Urban Climate",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#differences-across-major-cities",
+    "href": "Lectures/07.html#differences-across-major-cities",
+    "title": "Net All-Wave Radiation",
+    "section": "Differences Across Major Cities",
+    "text": "Differences Across Major Cities\n\n\n\nMiddel et al. (2018) Urban Climate",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#net-radiation-of-two-sided-object",
+    "href": "Lectures/07.html#net-radiation-of-two-sided-object",
+    "title": "Net All-Wave Radiation",
+    "section": "Net radiation of two-sided object",
+    "text": "Net radiation of two-sided object\n\n\nA leaf is a 2-sided object so the simple incoming (\\(\\downarrow\\)) and outgoing (\\(\\uparrow\\)) consideration for the ground is insufficient\n\nHas to be done on both sides, top (t) and bottom (b)\nTransmission also relevants\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition\n\n\n\n\n\nShort- and long-wave fluxes have to be referred to one or other side or as a total outcome or average for the whole leaf. Further, transmission must be taken into account as well as multiple reflections involving surrounding objects. Similarly, for any 3-dimensional object like an animal, buildings, trees, etc. spherical geometry comes into play.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air",
+    "text": "Radiation Balance of a Layer of Air\nFor a column of air with heat capacity \\(C_a = 1210 J m^{-3} K^{-1}\\)\n\\[\n\\Delta R_{n(\\Delta z)}=R_{n(z+\\Delta z)}-R_{n(z)}=C_a(\\frac{\\Delta T_a}{\\Delta t})_R \\Delta z\n\\tag{6}\\]\n\nThe subscript R is to indicate \\((\\frac{\\Delta T_a}{\\Delta t})_R\\) is only the radiative part of cooling/heating\n\nOther components include convergence or divergence of sensible or latent heat flux densities.\n\n\n\n-Heat Capacity = ratio of the amount of heat energy transferred to an object to the resulting increase in its temperature",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-1",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-1",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air",
+    "text": "Radiation Balance of a Layer of Air\n\n\n\nRadiative flux convergence: if \\(\\Delta R_n&gt;0\\), \\(\\frac{\\Delta T_a}{\\Delta t}\\) is a heating rate\n\nRadiative flux divergence: if \\(\\Delta R_n&lt;0\\), \\(\\frac{\\Delta T_a}{\\Delta t}\\) is a cooling rate",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiative-flux-divergence-in-the-surface-layer",
+    "href": "Lectures/07.html#radiative-flux-divergence-in-the-surface-layer",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiative flux divergence in the surface layer",
+    "text": "Radiative flux divergence in the surface layer\n\n\n\nFor thin layers of air, especially during the day it is usually assumed that radiative flux divergence is negligible and can be ignored, e.g. we place a radiometer at any height in the surface layer (lowest ~50m) and it gives a reasonable approximation of the surface value.\nUnder these conditions it is assumed that air temperature changes are solely due to sensible heat flux density changes with height.\n\nLatent heat flux density changes are important when fog is forming.\n\n\n\n\n\n\nExperimental set-up to measure the radiative flux divergence at UBC Totem Field.\n\n\n\n\n\nConvection is the main transport process, but unless fog is actively forming (releasing latent heat) only QH is relevant for changing Ta. If inputs of sensible heat exceed losses for an air layer, warming takes place (turbulent flux convergence). If losses of sensible heat exceed gains then the layer cools (turbulent flux divergence).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#latitudinal-changes-1",
+    "href": "Lectures/07.html#latitudinal-changes-1",
+    "title": "Net All-Wave Radiation",
+    "section": "Latitudinal Changes",
+    "text": "Latitudinal Changes",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#net-radiation-of-3-dimensional-objects-and-environments",
+    "href": "Lectures/07.html#net-radiation-of-3-dimensional-objects-and-environments",
+    "title": "Net All-Wave Radiation",
+    "section": "Net radiation of 3-dimensional objects and environments",
+    "text": "Net radiation of 3-dimensional objects and environments\nSimilarly, for any 3-dimensional object like an animal, buildings, trees, etc. spherical geometry comes into play.\n\n\n\n\n\nArtificial deer in the UBC Mechanical Engineering wind tunnel with infrared thermometers (Photo: A. Black, UBC)\n\n\n\n\n\n\nA Greenhouse will modify the radiative exchange between plants and their surrounding (Photo: A. Christen, UBC)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiative-exchange-of-a-human-body",
+    "href": "Lectures/07.html#radiative-exchange-of-a-human-body",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiative Exchange of a Human Body",
+    "text": "Radiative Exchange of a Human Body",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#take-home-points",
+    "href": "Lectures/07.html#take-home-points",
+    "title": "Net All-Wave Radiation",
+    "section": "Take Home Points",
+    "text": "Take Home Points\n\nSurface properties in the net all-wave budget tend to partially offset each other - in particular albedo and surface temperature.\nTemporal and spatial differences in net all-wave radiation are controlled by the distribution of short-wave irradiance, atmospheric conditions (clouds) and surface properties.\nNet all-wave radiative exchange of two-sided and 3D objects needs to consider distributions of radiative fluxes surrounding the object.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-2",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-2",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air",
+    "text": "Radiation Balance of a Layer of Air\n\n\n\nFor thin layers of air (&lt;50 m) during the day it is usually assumed that radiative flux divergence is negligible and can be ignored, e.g. we place a radiometer at any height in the surface layer and it gives a reasonable approximation of the surface value.\nUnder these conditions it is assumed that air temperature changes are solely due to sensible heat flux density changes with height.\n\nLatent heat flux density changes are important when fog is forming.\n\n\n\n\n\n\nExperimental set-up to measure the radiative flux divergence at UBC Totem Field.\n\n\n\n\n\nConvection is the main transport process, but unless fog is actively forming (releasing latent heat) only QH is relevant for changing Ta. If inputs of sensible heat exceed losses for an air layer, warming takes place (turbulent flux convergence). If losses of sensible heat exceed gains then the layer cools (turbulent flux divergence).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#r_n-of-3-d-objects",
+    "href": "Lectures/07.html#r_n-of-3-d-objects",
+    "title": "Net All-Wave Radiation",
+    "section": "\\(R_n\\) of 3-D Objects",
+    "text": "\\(R_n\\) of 3-D Objects\nSimilarly, for any 3-dimensional object like an animal, buildings, trees, etc. spherical geometry comes into play.\n\n\n\n\n\nArtificial deer in the UBC Mechanical Engineering wind tunnel with infrared thermometers (Photo: A. Black, UBC)\n\n\n\n\n\n\nA Greenhouse will modify the radiative exchange between plants and their surrounding (Photo: A. Christen, UBC)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiative-exchange-of-3-d-objects",
+    "href": "Lectures/07.html#radiative-exchange-of-3-d-objects",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiative Exchange of 3-D Objects",
+    "text": "Radiative Exchange of 3-D Objects\nSimilarly, for any 3-D object like an animal, buildings, trees, etc. spherical geometry comes into play.\n\n\n\n\n\nArtificial deer in the UBC Mechanical Engineering wind tunnel with infrared thermometers (Photo: A. Black, UBC)\n\n\n\n\n\n\nA Greenhouse will modify the radiative exchange between plants and their surrounding (Photo: A. Christen, UBC)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-3",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-3",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air",
+    "text": "Radiation Balance of a Layer of Air\n\n\n\nFor thin layers of air (&lt;50 m) during the day it is usually assumed that radiative flux divergence is negligible and can be ignored, e.g. we place a radiometer at any height in the surface layer and it gives a reasonable approximation of the surface value.\nUnder these conditions it is assumed that air temperature changes are solely due to sensible heat flux density changes with height.\n\nLatent heat flux density changes are important when fog is forming.\n\n\n\n\n\n\nExperimental set-up to measure the radiative flux divergence at UBC Totem Field.\n\n\n\n\n\nConvection is the main transport process, but unless fog is actively forming (releasing latent heat) only QH is relevant for changing Ta. If inputs of sensible heat exceed losses for an air layer, warming takes place (turbulent flux convergence). If losses of sensible heat exceed gains then the layer cools (turbulent flux divergence).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker-.smaller-auto-animatetrue",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker-.smaller-auto-animatetrue",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air (iClicker) {.smaller auto-animate=true}}",
+    "text": "Radiation Balance of a Layer of Air (iClicker) {.smaller auto-animate=true}}\nIf mean \\(R_n\\) at 10 m between 12:00 and 12:30 is 150 W m-2 and \\(R_n\\) at 100 m over the same period is 151 W m-2, what is the net temperature of the air column over this time period that is attributable to the radiative heating/cooling? Round you answer to the nearest Kelvin.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air (iClicker)",
+    "text": "Radiation Balance of a Layer of Air (iClicker)\nIf mean \\(R_n\\) at 1 m between 12:00 and 12:30 is 150 W m-2 and \\(R_n\\) at 100 m over the same period is 151 W m-2, what is the net temperature of the air column over this time period that is attributable to the radiative heating/cooling? Round you answer to the nearest Kelvin.\n\nCa = 1210 # J m-3 K-1\n\nz1 = 1 #m.a.g.l\nz2 = 100 #m.a.g.l\nDelta_z = z2-z1\n\nRn_z1 = 150 #Wm-2\nRn_z2 = 151 #Wm-2\n\nt1 = 12 # 12:00 P.M.\nt2 = 12.5 # 12:30 P.M.\nDelta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1\n\nDelta_Rn = Rn_z2 - Rn_z1\nDelta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker-1",
+    "href": "Lectures/07.html#radiation-balance-of-a-layer-of-air-iclicker-1",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiation Balance of a Layer of Air (iClicker)",
+    "text": "Radiation Balance of a Layer of Air (iClicker)\nIf mean \\(R_n\\) at 1 m between 12:00 and 12:30 is 150 W m-2 and \\(R_n\\) at 100 m over the same period is 151 W m-2, what is the net temperature of the air column over this time period that is attributable to the radiative heating/cooling? Round you answer to the nearest Kelvin.\n\nCa = 1210 # J m-3 K-1\n\nz1 = 1 #m.a.g.l\nz2 = 100 #m.a.g.l\nDelta_z = z2-z1\n\nRn_z1 = 150 #Wm-2\nRn_z2 = 151 #Wm-2\n\nt1 = 12 # 12:00 P.M.\nt2 = 12.5 # 12:30 P.M.\nDelta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1\n\nDelta_Rn = Rn_z2 - Rn_z1\nDelta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t\n\nprint(f\"The net temperature change attributable to radiative heating is {Delta_Ta} K, which rounds to 0 K\")\n\nThe net temperature change attributable to radiative heating is 0.015026296018031555 K, which rounds to 0 K",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/04.html",
+    "href": "Lectures/04.html",
+    "title": "Radiation Geometry",
+    "section": "",
+    "text": "Processes of absorption, reflection and scattering of radiation through the atmosphere determine the available short-wave radiation reaching Earth’s surface.\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nAddress survey concerns",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation Geometry"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html",
+    "href": "Lectures/07.html",
+    "title": "Net All-Wave Radiation",
+    "section": "",
+    "text": "Pyranometers and pyrgeometers are combined to measure all four components of the radiation balance (Photo: A. Christen)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#section",
+    "href": "Lectures/07.html#section",
+    "title": "Net All-Wave Radiation",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\n# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data\ndf = pd.read_csv(data_url,parse_dates=['TIMESTAMP'],index_col=['TIMESTAMP'])\ndf['RN'] = df['SW_IN_1_1_1']-df['SW_OUT_1_1_1']+df['LW_IN_1_1_1']-df['LW_OUT_1_1_1']\nfig,ax=plt.subplots(1,2,sharey=True,sharex=True)\n# fig.autofmt_xdate(rotation=45)\ndf['Hour'] = df.index.hour+df.index.minute/60\nwx = df.loc[((df.index.year==2022)&(df.index.month==12)&(df.index.day==22))]\nsu = df.loc[((df.index.year==2023)&(df.index.month==8)&(df.index.day==21))]\nwx.plot(ax=ax[0],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1','RN'],\n              color=['blue','red','blue','red','k'],\n              style=['-','-','--','--','-'])\nax[0].set_title('December 22th, 2022')\nax[0].legend(['SW In','SW Out','LW In','LW Out','Rn'],ncol=2)\nax[0].set_ylabel('$W m^{-2}$')\n\nsu.plot(ax=ax[1],x='Hour',y=['SW_IN_1_1_1','SW_OUT_1_1_1','LW_IN_1_1_1','LW_OUT_1_1_1','RN'],\n              color=['blue','red','blue','red','k'],\n              style=['-','-','--','--','-'],legend=False)\nax[1].set_title('August 21st, 2023')",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiative-cooling-of-the-atmosphere",
+    "href": "Lectures/07.html#radiative-cooling-of-the-atmosphere",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiative Cooling of the Atmosphere",
+    "text": "Radiative Cooling of the Atmosphere\nAt the equator: if mean daily \\(R_n\\) at the ground surface (0 m) m over is 125 W m-2 and mean \\(R_n\\) at the tropopause (17,000 m) is -100 W m-2, how much radiative cooling would we expect over the depth of the troposphere?\n\nimport numpy as np\nCa = 1210 # J m-3 K-1\n\nz1 = 1 #m.a.g.l\nz2 = 17000 #m.a.g.l\nDelta_z = z2-z1\n\nRn_z1 = 125 #Wm-2\nRn_z2 = -100 #Wm-2\n\nt1 = 0 # 12:00 A.M. (midnight)\nt2 = 24 # 12:00 A.M. (midnight *the next day*)\nDelta_t = (t2-t1)*3600 # Convert to seconds: 1 W = 1 J s-1\n\nDelta_Rn = Rn_z2 - Rn_z1\nDelta_Ta = Delta_Rn/(Ca*Delta_z)*Delta_t\n\nprint(f\"The net temperature change attributable to radiative cooling is {np.round(Delta_Ta,2)} K\")\n\nThe net temperature change attributable to radiative cooling is -0.95 K",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Lectures/07.html#radiative-cooling-of-the-atmosphere-iclicker",
+    "href": "Lectures/07.html#radiative-cooling-of-the-atmosphere-iclicker",
+    "title": "Net All-Wave Radiation",
+    "section": "Radiative Cooling of the Atmosphere (iClicker)",
+    "text": "Radiative Cooling of the Atmosphere (iClicker)\nHow is it possible that the troposphere at the equator is experiencing 1 K of radiative cooling per day, why hasn’t everything at the equator frozen?\n\nA Sensible and latent heat flux from the surface provide a “constant” source of thermal energy to replenish the losses\nB The atmosphere at the equator also experiences 1 K of radiative warming per day to cancel out the losses.\nC Radiative cooling is a form of latent heat exchange and therefore does not change the sensible temperature of the atmosphere",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Net All-Wave Radiation"
+    ]
+  },
+  {
+    "objectID": "Study_Questions/03.html",
+    "href": "Study_Questions/03.html",
+    "title": "Study Question Set 03",
+    "section": "",
+    "text": "The highest yearly total \\(I_{ex}\\) (extraterrestrial irradiance) is found at the Equator (\\(\\theta = 0^{\\circ}\\)) with \\(13.2\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\) and the lowest yearly total \\(I_{ex}\\) is at the Poles \\(\\theta = 90^{\\circ}\\), with \\(5.5\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\). What are the implications of this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis means that there is an energy gradient from the Equator to the Poles that creates a global circulation exchanging energy from low to high latitudes (ocean currents, general atmospheric circulation)\n\n\n\n\nThe highest daily total \\(I_{ex}\\) is found at the poles with \\(47\\) \\(\\,\\rm{MJ}\\,\\rm{m}^{-2}\\,\\) \\(\\rm{day}^{-1}\\) during the summer solstice. Why?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis is because the solar irradiance reaches the poles during the full 24h cycle.\n\n\n\n\nFor Vancouver, the highest instantaneous \\(I_{ex} \\approx 1190\\,\\rm{W}\\,\\rm{m}^{-2}\\) is found on the day of the summer solstice (Jun 22) at 12 LAT. When is the lowest value?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe lowest daily maximum would be on the winter solstice. But the annual minimum is (\\(0\\,\\rm{W}\\,\\rm{m}^{-2}\\)), which occurs during every nighttime period.\n\n\n\n\nUsing the radiation conservation equation we know that radiation of wavelength \\(\\lambda\\) incident upon a substance must either be transmitted through it, be reflected from its surface, or be absorbed. If a body is opaque and has an absorptivity coefficient for of 0.75 for \\(\\lambda=0.55 \\mu m\\): A. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.55 \\mu m\\), and B. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.65 \\mu m\\)&gt;\n\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{1}\\]\n\n\n\n\n\n\nTip\n\n\n\n\n\nA. If the body is opaque, then \\(\\Psi_{\\lambda} = 0\\) and: \\[\n\\begin{eqnarray}\n\\alpha_{\\lambda} + \\zeta_{\\lambda} &=& 1 \\nonumber \\\\\n\\alpha_{\\lambda} &=& 1 - \\zeta_{\\lambda}\n\\end{eqnarray}\n\\]\nso the reflectivity is \\(\\alpha_{\\lambda} = 1 - 0.75 = \\underline{0.25}\\).\nB. There isn’t enough information to answer the questions - the conservation equation applies per wavelength. It would be a reasonable assumption that the reflectivity at \\(\\lambda = 0.65 \\mu m\\) is similar to \\(\\lambda = 0.55 \\mu m\\) if you don’t have any further information, but there is no guarantee they are the same.\n\n\n\n\nIf incident PAR (Photosynthetically Active Radiation) is \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\) and plant canopy has the following characteristics: \\(\\Psi_{PAR}\\) = 0.08 and \\(\\alpha_{PAR}\\) = 0.11. How many mols of PAR will 1 m-2 the plant canopy absorb in one hour?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nWe use Equation 1 and solve for absorptivity: \\[\\begin{eqnarray}\n\\zeta_{\\rm{PAR}} = 1 - (\\Psi_{\\rm{PAR}} + \\alpha_{\\rm{PAR}})\n\\label{E3}\n\\end{eqnarray}\\] This results in \\(\\zeta_{\\rm{PAR}} = 1 - (0.08 + 0.11) = 0.81\\). Hence, the fraction of the incident radiation of \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}\\) that is absorbed is 81%: \\[\\begin{eqnarray*}\n0.81 \\times 800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} = \\underline{648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}} \\\\\n\\end{eqnarray*}\\]\nThere are 3600 seconds in an hour and 1,000,000 \\(\\mu mol\\) per mol, so assuming PAR doesn’t change over this period:\n\\[\n648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} * 3600 \\frac{s}{h} * \\frac{1 mol}{1000000 \\mu mol} = 2.3328\\, mol\\, \\rm{m}^{-2}\n\\]\n\n\n\n\nIf \\(I_{ex} = 562\\,\\rm{W}\\,\\rm{m}^{-2}\\), \\(SW_\\downarrow = 298\\,\\rm{W}\\,\\rm{m}^{-2}\\) and the sun angle \\(\\beta = 23.74^{\\circ}\\), determine the bulk transmissivity of atmosphere:\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{2}\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)} = \\frac{1}{\\sin(\\beta)}\n\\]\nwe use \\(\\beta = 23.74^{\\circ}\\) and \\(\\sin \\beta = 0.403\\) from Study Question Set 4, Question 4 and get \\(m\\) = 2.481. We insert this in Equation 2:\n\\[\\begin{eqnarray}\n\\Psi_a &=& \\left( \\frac{298\\,\\rm{W}\\,\\rm{m}^{-2}}{562\\,\\rm{W}\\,\\rm{m}^{-2}} \\right) ^{\\frac{1}{2.481}} = \\underline{0.77}\n\\end{eqnarray}\\]\n\n\n\n\nWe use \\(\\Psi_a = 0.77\\) from determine \\(SW\\downarrow\\) at the surface if \\(I_{ex} = 439 \\,\\rm{W}\\,\\rm{m}^{-2}\\) and the zenith angle \\(Z = 71.6^{\\circ}\\):\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nFollowing Equation 2:\n\\[\\begin{eqnarray}\nK_{\\downarrow} &=& 439 \\,\\rm{W}\\,\\rm{m}^{-2} \\times 0.77^{3.17} = \\underline{191 \\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray}\\]",
+    "crumbs": [
+      "Study Questions",
+      "Study Question Set 03"
     ]
   }
 ]

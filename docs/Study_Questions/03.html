@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microscale Weather and Climate - Syllabus</title>
+<title>Microscale Weather and Climate - Study Question Set 03</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,22 +23,22 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -67,6 +67,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -77,7 +106,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title">Microscale Weather and Climate</span>
     </a>
   </div>
@@ -88,19 +117,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">Syllabus</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Lectures/index.html"> 
+    <a class="nav-link" href="../Lectures/index.html"> 
 <span class="menu-text">Lectures</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Assignments/index.html"> 
+    <a class="nav-link" href="../Assignments/index.html"> 
 <span class="menu-text">Assignments</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./Study_Questions/index.html"> 
+    <a class="nav-link active" href="../Study_Questions/index.html" aria-current="page"> 
 <span class="menu-text">Study Questions</span></a>
   </li>  
 </ul>
@@ -121,7 +150,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html">Syllabus</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/03.html">Study Question Set 03</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -133,24 +162,35 @@ ul.task-list li input[type="checkbox"] {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../Study_Questions/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Questions</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Syllabus</span></a>
+  <a href="../Study_Questions/01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Question Set 01</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./acknowledgement.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Territorial Acknowledgement</span></a>
+  <a href="../Study_Questions/02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Study Question Set 02</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
+          <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./Resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Programming Resources</span></a>
+  <a href="../Study_Questions/03.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Study Question Set 03</span></a>
   </div>
 </li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
@@ -160,9 +200,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/03.html">Study Question Set 03</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Syllabus</h1>
+<h1 class="title">Study Question Set 03</h1>
+<p class="subtitle lead">Radiation</p>
 </div>
 
 
@@ -179,197 +220,173 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>GEOS 300</strong>: 2023 W2</p>
-<p>with Dr.&nbsp;June skeeter</p>
-<p>The course syllabus is intended to give an overview of what you can expect over the term and outline the course policies. It is a living document and may be updated as the semester progresses.</p>
-<section id="about-the-course" class="level1">
-<h1>About the Course</h1>
-<div class="columns">
-<div class="column" style="width:65%;">
-<p>In this course we’ll focus on the interactions between the surface, vegetation and atmosphere, and the physical processes governing the transfer of heat, mass and momentum. Through this course you’ll also be exposed to the basic instrumentation and methods used in today’s monitoring and modeling of microscale climate and surface-atmosphere exchange. While this course examines the behavior of the atmosphere close to the surface, what we cover in this class implications for processes occurring at the scale of a single leaf to the entire planet!</p>
-</div><div class="column" style="width:5%;">
-
-</div><div class="column" style="width:30%;">
-<p><img src="images/Illisarvik.png" class="img-fluid"></p>
+<ol class="example" type="1">
+<li>The highest yearly total <span class="math inline">\(I_{ex}\)</span> (extraterrestrial irradiance) is found at the Equator (<span class="math inline">\(\theta = 0^{\circ}\)</span>) with <span class="math inline">\(13.2\,\rm{GJ}\,\rm{m}^{-2}\,\rm{year}^{-1}\)</span> and the lowest yearly total <span class="math inline">\(I_{ex}\)</span> is at the Poles <span class="math inline">\(\theta = 90^{\circ}\)</span>, with <span class="math inline">\(5.5\,\rm{GJ}\,\rm{m}^{-2}\,\rm{year}^{-1}\)</span>. What are the implications of this?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This means that there is an energy gradient from the Equator to the Poles that creates a global circulation exchanging energy from low to high latitudes (ocean currents, general atmospheric circulation)</p>
 </div>
 </div>
-</section>
-<section id="key-information" class="level1">
-<h1>Key Information</h1>
-<section id="your-instructor" class="level2">
-<h2 class="anchored" data-anchor-id="your-instructor">Your Instructor</h2>
-<p><strong>Dr.&nbsp;June skeeter</strong></p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/June.jpg" class="img-fluid" style="width:85.0%"></p>
-</div><div class="column" style="width:70%;">
-<p><strong>Pronouns:</strong> They/Them/Theirs</p>
-<p><strong>Email:</strong> june.skeeter@ubc.ca</p>
-<p><strong>Office Hours:</strong> Mondays 11:00-11:45 Room 127, Geography Bldg. Alternative times available by appointment.</p>
-<p><strong>Bio:</strong> My name is June. I am a geographer, researcher, and educator who has been living as an uninvited guest on unceded Coast Salish Territory since 2015. I received a PhD in geography from UBC in 2022 and am now working for the UBC Micrometeorology group. I study greenhouse gas exchange in wetland ecosystems and associated feedback mechanisms that influence the earth’s climate system. My principal aims this semester are to give you a broad overview to the dynamics governing of weather and climate and to provide you with a supportive learning environment.</p>
+</div>
+<ol start="2" class="example" type="1">
+<li>The highest daily total <span class="math inline">\(I_{ex}\)</span> is found at the poles with <span class="math inline">\(47\)</span> <span class="math inline">\(\,\rm{MJ}\,\rm{m}^{-2}\,\)</span> <span class="math inline">\(\rm{day}^{-1}\)</span> during the summer solstice. Why?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>This is because the solar irradiance reaches the poles during the full 24h cycle.</p>
 </div>
 </div>
-</section>
-<section id="your-ta" class="level2">
-<h2 class="anchored" data-anchor-id="your-ta">Your TA</h2>
-<p><strong>Zoe</strong></p>
-<div class="columns">
-<div class="column" style="width:30%;">
-<p><img src="images/Zoe.jpg" class="img-fluid"></p>
-</div><div class="column" style="width:2%;">
-
-</div><div class="column" style="width:68%;">
-<p><strong>Pronouns:</strong> She/Her/Hers</p>
-<p><strong>Email:</strong> hehanzha@student.ubc.ca</p>
-<p><strong>Office:</strong> Geography room 207</p>
-<p><strong>Bio:</strong> I received a BSc in Environmental Science from the University of British Columbia in 2022. My undergraduate thesis research investigated the impacts of fire on greenhouse gas (GHG) fluxes (CO2, CH4, and N2O) within different burned zones of a bog. The methodology incorporated chamber measurements and gas chromatography for the analysis. Currently, as a second-year MSc student, I am examining the impacts of seedling removal — a post-fire management practice — on the GHG fluxes (CO2 and CH4) within the 2016 burned zone of the Burns Bog, Delta, BC. This research utilizes a smart chamber with a portable analyzer. Additionally, I am interested in quantifying the net carbon exchange at the ecosystem scale using eddy covariance techniques and understanding carbon dynamics across varying ecosystem types.</p>
+</div>
+<ol start="3" class="example" type="1">
+<li>For Vancouver, the highest instantaneous <span class="math inline">\(I_{ex} \approx 1190\,\rm{W}\,\rm{m}^{-2}\)</span> is found on the day of the summer solstice (Jun 22) at 12 LAT. When is the lowest value?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The lowest <em>daily maximum</em> would be on the winter solstice. But the annual minimum is (<span class="math inline">\(0\,\rm{W}\,\rm{m}^{-2}\)</span>), which occurs during every nighttime period.</p>
 </div>
 </div>
-</section>
-<section id="learning-outcomes" class="level2">
-<h2 class="anchored" data-anchor-id="learning-outcomes">Learning Outcomes</h2>
-<ul>
-<li>Understand the physical and biological processes that determine the microclimate of a surface.</li>
-<li>Explain how microclimates vary in time &amp; space (vertically and horizontally).</li>
-<li>Describe important surface characteristics that affect surface radiation and energy budget and surface microclimates.</li>
-<li>Describe interactions between the biosphere and the atmosphere, and understand how surface-atmosphere feedbacks respond to environmental change.</li>
-<li>Understand the basics of turbulence, dispersion and local wind systems in the atmospheric boundary layer and how they are controlled by surface processes.</li>
-<li>Know the principles of basic instrumentation, methods and data-analysis (including the use of the R programming language) used for today’s monitoring and modelling of weather and climate in the atmospheric boundary layer.</li>
-<li>Analyze and interpret data from measurement systems that are used to monitor near-surface climate and surface radiation and energy balances.</li>
-<li>Provide examples how the principles of biometeorology have practical application to society.</li>
-</ul>
-</section>
-<section id="evaluation" class="level2">
-<h2 class="anchored" data-anchor-id="evaluation">Evaluation</h2>
-<div class="cell">
-<div id="tbl-grades" class="cell quarto-float anchored">
-<figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Components of your final grade
-</figcaption>
-<div aria-describedby="tbl-grades-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output-display">
-<table class="do-not-create-environment cell table table-sm table-striped small">
-<thead>
-<tr class="header">
-<th style="text-align: left;">Points Distribution</th>
-<th style="text-align: left;">Percent of Final Grade</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td style="text-align: left;">Lecture Participation</td>
-<td style="text-align: left;">5%</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Study Questions</td>
-<td style="text-align: left;">5%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Assignments</td>
-<td style="text-align: left;">40%</td>
-</tr>
-<tr class="even">
-<td style="text-align: left;">Mid-term exam</td>
-<td style="text-align: left;">20%</td>
-</tr>
-<tr class="odd">
-<td style="text-align: left;">Final exam</td>
-<td style="text-align: left;">30%</td>
-</tr>
-</tbody>
-</table>
+</div>
+<ol start="4" class="example" type="1">
+<li>Using the radiation conservation equation we know that radiation of wavelength <span class="math inline">\(\lambda\)</span> incident upon a substance must either be <em>transmitted</em> through it, be <em>reflected</em> from its surface, or be <em>absorbed</em>. If a body is opaque and has an absorptivity coefficient for of 0.75 for <span class="math inline">\(\lambda=0.55 \mu m\)</span>: A. what is <span class="math inline">\(\alpha_\lambda\)</span> for <span class="math inline">\(\lambda=0.55 \mu m\)</span>, and B. what is <span class="math inline">\(\alpha_\lambda\)</span> for <span class="math inline">\(\lambda=0.65 \mu m\)</span>&gt;</li>
+</ol>
+<p><span id="eq-Conservation-Equation-Radiation"><span class="math display">\[
+\zeta_\lambda + \Psi_\lambda + \alpha_\lambda = 1
+\tag{1}\]</span></span></p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>A. If the body is opaque, then <span class="math inline">\(\Psi_{\lambda} = 0\)</span> and: <span class="math display">\[
+\begin{eqnarray}
+\alpha_{\lambda} + \zeta_{\lambda} &amp;=&amp; 1 \nonumber \\
+\alpha_{\lambda} &amp;=&amp; 1 - \zeta_{\lambda}
+\end{eqnarray}
+\]</span></p>
+<p>so the reflectivity is <span class="math inline">\(\alpha_{\lambda} = 1 - 0.75 = \underline{0.25}\)</span>.</p>
+<p>B. There isn’t enough information to answer the questions - the conservation equation applies per wavelength. It would be a reasonable assumption that the reflectivity at <span class="math inline">\(\lambda = 0.65 \mu m\)</span> is similar to <span class="math inline">\(\lambda = 0.55 \mu m\)</span> if you don’t have any further information, but there is no guarantee they are the same.</p>
 </div>
 </div>
-</figure>
+</div>
+<ol start="5" class="example" type="1">
+<li>If incident PAR (Photosynthetically Active Radiation) is <span class="math inline">\(800\,\mu \rm{mol}\,\rm{s}^{-1}\)</span> and plant canopy has the following characteristics: <span class="math inline">\(\Psi_{PAR}\)</span> = 0.08 and <span class="math inline">\(\alpha_{PAR}\)</span> = 0.11. How many mols of PAR will 1 m<sup>-2</sup> the plant canopy absorb in one hour?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-5" class="callout-5-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>We use <a href="#eq-Conservation-Equation-Radiation" class="quarto-xref">Equation&nbsp;1</a> and solve for absorptivity: <span class="math display">\[\begin{eqnarray}
+\zeta_{\rm{PAR}} = 1 - (\Psi_{\rm{PAR}} + \alpha_{\rm{PAR}})
+\label{E3}
+\end{eqnarray}\]</span> This results in <span class="math inline">\(\zeta_{\rm{PAR}} = 1 - (0.08 + 0.11) = 0.81\)</span>. Hence, the fraction of the incident radiation of <span class="math inline">\(800\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2}\)</span> that is absorbed is 81%: <span class="math display">\[\begin{eqnarray*}
+0.81 \times 800\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2} = \underline{648\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2}} \\
+\end{eqnarray*}\]</span></p>
+<p>There are 3600 seconds in an hour and 1,000,000 <span class="math inline">\(\mu mol\)</span> per mol, so assuming PAR doesn’t change over this period:</p>
+<p><span class="math display">\[
+648\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2} * 3600 \frac{s}{h} * \frac{1 mol}{1000000 \mu mol} = 2.3328\, mol\, \rm{m}^{-2}
+\]</span></p>
 </div>
 </div>
-</section>
-<section id="lectures" class="level2">
-<h2 class="anchored" data-anchor-id="lectures">Lectures</h2>
-<p>Lectures will be held in-person on Monday &amp; Wednesday, 14:00 - 15:30 in Geography Building, Room 101. Lectures will not be live streamed, but they will be recoded for those who are unable to attend or wish to review the material. You may find the recordings <a href="https://ubc.ca.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=046ea647-526b-42cd-bfd8-b0ed012399db">here</a>. <strong>Note</strong>: Recording is provided as a courtesy and the quality of recordings is not guaranteed.</p>
-<ul>
-<li>Zoom recordings during the transit strike can be found <a href="https://drive.google.com/drive/folders/1DouEbTpcuHyVOjtxLU5SuewrAzLedmV_?usp=sharing">here</a></li>
-</ul>
-<section id="participation" class="level3">
-<h3 class="anchored" data-anchor-id="participation">Participation</h3>
-<p>Participation will be assessed using iClicker, <a href="https://lthub.ubc.ca/guides/iclicker-cloud-student-guide/">click here to learn more about iClicker</a>. You may only earn participation points in person, only during lecture.</p>
-</section>
-</section>
-<section id="assignments" class="level2">
-<h2 class="anchored" data-anchor-id="assignments">Assignments</h2>
-<p>Assignments will most easily be completed using a programming language such as R, Python, etc. Programming is not mandatory, equations can be evaluated by hand or in excel, but I will provide support and resources to help you learn.</p>
-<ul>
-<li>All assignments are required to be labelled with course number, student number, student name and assignment number.</li>
-<li>Assignments will be posted on on Canvas on and must be turned in by 11:50 pm the day of the due date.
-<ul>
-<li>Late assignments will be penalized by 10% per day past on the due date and will not be accepted once grades have been returned</li>
-</ul></li>
-<li>Collaboration is encouraged. However, you should think about the problems yourself before discussing them with others.
-<ul>
-<li>Write-ups must be done independently.</li>
-<li>It is OK for other people to explain their solutions to you, but you must not copy their solutions as your own.</li>
-</ul></li>
-</ul>
-</section>
-<section id="examinations" class="level2">
-<h2 class="anchored" data-anchor-id="examinations">Examinations</h2>
-<p>Exams will make up the half of your overall grade. Exams will be open book, and and completed <strong>asynchronously</strong>. The midterm will be Wednesday on March 13th. The final exam will be completed April Wednesday April 24th. I will give further details closer to the date of the exams.</p>
-<section id="study-questions" class="level3">
-<h3 class="anchored" data-anchor-id="study-questions">Study Questions</h3>
-<p>Self-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.</p>
-</section>
-</section>
-</section>
-<section id="course-policies" class="level1">
-<h1>Course Policies</h1>
-<p>My aim for this semester is to provide a flexible and supportive learning environment while respecting the boundaries of myself and your TAs. These course policies are intended to establish a framework for navigating the course.</p>
-<section id="participation-absences" class="level2">
-<h2 class="anchored" data-anchor-id="participation-absences">Participation &amp; Absences</h2>
-<p>If you are sick (with COVID or otherwise), please stay home to protect others and take care of yourself. Lectures are recorded so you can catch up on the material you miss.</p>
-<ul>
-<li>Participation points are only available during the lecture session. Makeup points will not be offered, but I will normalize participation grades to negate the effect of two absences.</li>
-</ul>
-</section>
-<section id="accommodations" class="level2">
-<h2 class="anchored" data-anchor-id="accommodations">Accommodations</h2>
-<p>Please contact the <a href="https://students.ubc.ca/about-student-services/centre-for-accessibility">Center for Accessibility</a> if you require accommodations for a disability. Once you are registered please make me aware of any necessary accommodations by email in a timely manner.</p>
-<ul>
-<li>If you require an accommodation please contact me by email: june.skeeter@ubc.ca</li>
-</ul>
-</section>
-<section id="academic-concessions" class="level2">
-<h2 class="anchored" data-anchor-id="academic-concessions">Academic Concessions</h2>
-<p>If you experience extenuating circumstances that prevent you completing course work, you may be elidible for an <a href="https://www.arts.ubc.ca/degree-planning/academic-performance/academic-concession/">Academic Concession</a>.</p>
-<ul>
-<li>I can make accommodations on a case by case basis, but it is your responsibility to communicate your needs in a timely fashion (i.e.&nbsp;<strong>before</strong> a due date).</li>
-<li>Please email me promptly (june.skeeter@ubc.ca) so that we can work together to figure out an accommodation for your situation.
-<ul>
-<li>You are not obligated to explain your personal circumstances to me to justify the concession, my intent is to be accommodating. However, you must to communicate any need for a concession in a timely manner. If you require multiple concessions I may refer you to <a href="https://www.arts.ubc.ca/student-support/academic-support/academic-advising/">Arts Advising</a>.</li>
-</ul></li>
-</ul>
-</section>
-</section>
-<section id="academic-integrity" class="level1">
-<h1>Academic Integrity</h1>
-<p>The academic enterprise is founded on honesty, civility, and integrity. As members of this enterprise, all students are expected to know, understand, and follow the codes of conduct regarding academic integrity. At the most basic level, this means submitting only original work done by you and acknowledging all sources of information or ideas and attributing them to others as required. This also means you should not cheat, copy, or mislead others about what is your work. Violations of academic integrity (i.e., misconduct) lead to the breakdown of the academic enterprise, and therefore serious consequences arise and harsh sanctions are imposed.</p>
-<p>Plagiarism and cheating will be taken very seriously. The first incident of plagiarism/copying/cheating will result in a zero for the assignment. Further incidents will be reported to the President’s Advisory Committee on Student Discipline in addition to a zero. A more detailed description of academic integrity, including the University’s policies and procedures, may be found <a href="https://learningcommons.ubc.ca/academic-integrity/Links">here</a></p>
-<p>Though you may work together with your classmates on the assignments and help each other, ALL STUDENTS MUST SUBMIT THEIR OWN ORIGINAL WORK. This means that your maps must be your own, and your answers must be in your own words. Failure to submit your own work can result in failing the assignment or worse, so please be careful. See the Academic Integrity section of the Syllabus for more information.</p>
-</section>
-<section id="strategies-for-success" class="level1">
-<h1>Strategies for Success</h1>
-<p><strong>Be proactive!</strong></p>
-<ul>
-<li>Keep track of deadlines &amp; note the late submission policies
-<ul>
-<li>Timely communication is important! If you have an issue, please bring it to my attention.</li>
-<li>Partial credit is better than no credit. If you can’t finish a lab before the deadline - just submit what you’ve got done already.</li>
-</ul></li>
-<li>Drop by office hours &amp; ask questions!</li>
-</ul>
+</div>
+<ol start="6" class="example" type="1">
+<li>If <span class="math inline">\(I_{ex} = 562\,\rm{W}\,\rm{m}^{-2}\)</span>, <span class="math inline">\(SW_\downarrow = 298\,\rm{W}\,\rm{m}^{-2}\)</span> and the sun angle <span class="math inline">\(\beta = 23.74^{\circ}\)</span>, determine the bulk transmissivity of atmosphere:</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span id="eq-Bulk-Transmissivity"><span class="math display">\[
+SW_\downarrow = I_{ex} \Psi_a^{m}
+\tag{2}\]</span></span></p>
+<p>where</p>
+<p><span class="math display">\[
+m = \frac{1}{\cos(Z)} = \frac{1}{\sin(\beta)}
+\]</span></p>
+<p>we use <span class="math inline">\(\beta = 23.74^{\circ}\)</span> and <span class="math inline">\(\sin \beta = 0.403\)</span> from Study Question Set 4, Question 4 and get <span class="math inline">\(m\)</span> = 2.481. We insert this in <a href="#eq-Bulk-Transmissivity" class="quarto-xref">Equation&nbsp;2</a>:</p>
+<p><span class="math display">\[\begin{eqnarray}
+\Psi_a &amp;=&amp; \left( \frac{298\,\rm{W}\,\rm{m}^{-2}}{562\,\rm{W}\,\rm{m}^{-2}} \right) ^{\frac{1}{2.481}} = \underline{0.77}
+\end{eqnarray}\]</span></p>
+</div>
+</div>
+</div>
+<ol start="7" class="example" type="1">
+<li>We use <span class="math inline">\(\Psi_a = 0.77\)</span> from determine <span class="math inline">\(SW\downarrow\)</span> at the surface if <span class="math inline">\(I_{ex} = 439 \,\rm{W}\,\rm{m}^{-2}\)</span> and the zenith angle <span class="math inline">\(Z = 71.6^{\circ}\)</span>:</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Following <a href="#eq-Bulk-Transmissivity" class="quarto-xref">Equation&nbsp;2</a>:</p>
+<p><span class="math display">\[\begin{eqnarray}
+K_{\downarrow} &amp;=&amp; 439 \,\rm{W}\,\rm{m}^{-2} \times 0.77^{3.17} = \underline{191 \,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray}\]</span></p>
+</div>
+</div>
+</div>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

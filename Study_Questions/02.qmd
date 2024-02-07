@@ -69,7 +69,7 @@ where $\gamma$ is again the fractional year in radians (see question 1) which is
 
 ::: {.callout-tip collapse="true"}
 
-he solar altitude $\beta$ can then be calculated by
+The solar altitude $\beta$ can then be calculated by
 \begin{eqnarray*}
 \sin \beta = \sin \phi \sin \delta + \cos \phi \cos \delta \cos h
 \end{eqnarray*}

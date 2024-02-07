@@ -1,0 +1,30 @@
+Symbol,Name,Definition
+$T$,Temperature,Quantitatification of the heat present in an object (in K unless specified otherwise)
+$T_d$,Dew-point temperature,@fig-saturation-vapor-density
+$T_w$,Wet-bulb temperature,The temperature read by a ventilated thermometer covered in water at ambient temperature
+$RH$,Relative Humidity,The % of absolute humidity relative to the maximum possible humidity at $T$
+$U$,Wind speed,Velocity of air movement across (or along) a pressure gradient
+$P_a$,Air pressure,Force applied perpendicular to the surface of an object
+$\lambda$,Wavelength,The distance between the crest of of two waves (of elector magnetic radiation).
+$SW$,Short wave radiation,Electromagnetic radiation with $\lambda$ less than and 3 $\mu m$. Includes ultraviolet; visible; and near-infrared radiation.
+$LW$,Long wave radiation,Electromagnetic radiation with $\lambda$ greater than 3 $\mu m$. Includes thermal radiation (sensible heat).
+$R_n$,Net Radiation,The sum of all incoming ($\downarrow$) and outgoing ($\uparrow$) radiation (both $SW$ and $LW$).
+$\zeta$,Absorptivity,Radiation that is absorbed by an object; adding energy to the object and increasing its temperature.
+$\Psi$,Transmissivity coefficient,Radiation that passes through an object.
+$\Psi_{sky}$,Sky view coefficient,Portion of hemispheric view of the sky blocked by other objects.
+$\alpha$,Reflectivity,Radiation that is reflected by a object.
+$P_v$,Vapor pressure,Partial pressure exerted by water vapor in the atmosphere; can be calculated using @eq-Ideal-Gas-Law-Vapor-Density
+$P_v^*$,Saturation vapor pressure at T,Maximum possible vapor pressure for a parcel of air at $T$; use @eq-Buck-Equation or @fig-saturation-vapor-pressure
+$\rho_v$,Vapor density,@eq-Ideal-Gas-Law-Vapor-Density or @eq-Vapor-Density-Psychrometer
+$\rho_v^*$,Saturation vapor density at $T$,@fig-saturation-vapor-density
+$\rho_{vw}^*$,Saturation vapor density at $T_w$,@fig-saturation-vapor-density
+$VDD$,Vapor density defect,@eq-Vapor-Density-Deficit
+$VPD$,Vapor pressure defect,@eq-Vapor-Pressure-Deficit
+$\theta$,Solar Zenith,Angle between the sun and the vertical direction - to calculate the zenith at solar noon see @eq-Solar-Zenith-at-Noon
+$\theta$,Volumetric Fraction,Fraction of a soil volume occupied by a given substance
+$E_b$,Black-body emissivity," An idealized estimate of radiative flux density based on an object's temperature assuming its a black-body see @eq-Stefan-Boltzman-Law"
+$\epsilon$,emissivity,The ratio of energy emitted from a surface to that which would be emitted by a black-body emitter at the same temperature
+$E_g$,Grey-body emissivity," An adjustment to $E_b$ which accounts for the object's emissivity $\epsilon$ see @eq-Stefan-Boltzman-Law-Grey-Body & see @eq-Stefan-Boltzman-Law-Grey-Body-Adjusted"
+$\mu$,Attenuation coefficient in Beers Law," the proportion of radiation that is not transmitted through a substance - not to be confused with the prefix $\mu$ meaning ""micro"""
+$z$,Vertical position,Relative to Earth's surface (height or depth) unless otherwise specified
+ELR,Environmental Lapse Rate,Observed change in air temperature with height

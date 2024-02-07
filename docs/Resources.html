@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -245,6 +279,273 @@ window.Quarto = {
 <li><p>I won’t require you to use GitHub for anything in the course, I will always provide ways to access materials that do not require an account or knowledge of the platform.</p></li>
 <li><p>You can find a bit more info about it <a href="https://ubc-micromet.github.io/Documentation/UsingGit.html">here</a>.</p></li>
 </ul>
+</section>
+<section id="important-constants-and-symbols" class="level1">
+<h1>Important Constants and Symbols</h1>
+<div class="cell" data-tbl-colwidths="[25,35,40]">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Sy <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'_Data/Symbols.csv'</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(Sy[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-symbols" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-symbols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: These are list of symbols that will be used to represent key variables used in this course. <strong>Note:</strong> some symbols may refer to multiple things, it up to you to determine which, based on context.
+</figcaption>
+<div aria-describedby="tbl-symbols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 35%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(T\)</span></td>
+<td style="text-align: left;">Temperature</td>
+<td style="text-align: left;">Quantitatification of the heat present in an object (in K unless specified otherwise)</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(T_d\)</span></td>
+<td style="text-align: left;">Dew-point temperature</td>
+<td style="text-align: left;"><strong>?@fig-saturation-vapor-density</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(T_w\)</span></td>
+<td style="text-align: left;">Wet-bulb temperature</td>
+<td style="text-align: left;">The temperature read by a ventilated thermometer covered in water at ambient temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(RH\)</span></td>
+<td style="text-align: left;">Relative Humidity</td>
+<td style="text-align: left;">The % of absolute humidity relative to the maximum possible humidity at <span class="math inline">\(T\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(U\)</span></td>
+<td style="text-align: left;">Wind speed</td>
+<td style="text-align: left;">Velocity of air movement across (or along) a pressure gradient</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(P_a\)</span></td>
+<td style="text-align: left;">Air pressure</td>
+<td style="text-align: left;">Force applied perpendicular to the surface of an object</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\lambda\)</span></td>
+<td style="text-align: left;">Wavelength</td>
+<td style="text-align: left;">The distance between the crest of of two waves (of elector magnetic radiation).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(SW\)</span></td>
+<td style="text-align: left;">Short wave radiation</td>
+<td style="text-align: left;">Electromagnetic radiation with <span class="math inline">\(\lambda\)</span> less than and 3 <span class="math inline">\(\mu m\)</span>. Includes ultraviolet; visible; and near-infrared radiation.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(LW\)</span></td>
+<td style="text-align: left;">Long wave radiation</td>
+<td style="text-align: left;">Electromagnetic radiation with <span class="math inline">\(\lambda\)</span> greater than 3 <span class="math inline">\(\mu m\)</span>. Includes thermal radiation (sensible heat).</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(R_n\)</span></td>
+<td style="text-align: left;">Net Radiation</td>
+<td style="text-align: left;">The sum of all incoming (<span class="math inline">\(\downarrow\)</span>) and outgoing (<span class="math inline">\(\uparrow\)</span>) radiation (both <span class="math inline">\(SW\)</span> and <span class="math inline">\(LW\)</span>).</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\zeta\)</span></td>
+<td style="text-align: left;">Absorptivity</td>
+<td style="text-align: left;">Radiation that is absorbed by an object; adding energy to the object and increasing its temperature.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\Psi\)</span></td>
+<td style="text-align: left;">Transmissivity coefficient</td>
+<td style="text-align: left;">Radiation that passes through an object.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Psi_{sky}\)</span></td>
+<td style="text-align: left;">Sky view coefficient</td>
+<td style="text-align: left;">Portion of hemispheric view of the sky blocked by other objects.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\alpha\)</span></td>
+<td style="text-align: left;">Reflectivity</td>
+<td style="text-align: left;">Radiation that is reflected by a object.</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(P_v\)</span></td>
+<td style="text-align: left;">Vapor pressure</td>
+<td style="text-align: left;">Partial pressure exerted by water vapor in the atmosphere; can be calculated using <strong>?@eq-Ideal-Gas-Law-Vapor-Density</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(P_v^*\)</span></td>
+<td style="text-align: left;">Saturation vapor pressure at T</td>
+<td style="text-align: left;">Maximum possible vapor pressure for a parcel of air at <span class="math inline">\(T\)</span>; use <strong>?@eq-Buck-Equation</strong> or <strong>?@fig-saturation-vapor-pressure</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\rho_v\)</span></td>
+<td style="text-align: left;">Vapor density</td>
+<td style="text-align: left;"><strong>?@eq-Ideal-Gas-Law-Vapor-Density</strong> or <strong>?@eq-Vapor-Density-Psychrometer</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\rho_v^*\)</span></td>
+<td style="text-align: left;">Saturation vapor density at <span class="math inline">\(T\)</span></td>
+<td style="text-align: left;"><strong>?@fig-saturation-vapor-density</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\rho_{vw}^*\)</span></td>
+<td style="text-align: left;">Saturation vapor density at <span class="math inline">\(T_w\)</span></td>
+<td style="text-align: left;"><strong>?@fig-saturation-vapor-density</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(VDD\)</span></td>
+<td style="text-align: left;">Vapor density defect</td>
+<td style="text-align: left;"><strong>?@eq-Vapor-Density-Deficit</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(VPD\)</span></td>
+<td style="text-align: left;">Vapor pressure defect</td>
+<td style="text-align: left;"><strong>?@eq-Vapor-Pressure-Deficit</strong></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\theta\)</span></td>
+<td style="text-align: left;">Solar Zenith</td>
+<td style="text-align: left;">Angle between the sun and the vertical direction - to calculate the zenith at solar noon see <strong>?@eq-Solar-Zenith-at-Noon</strong></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\theta\)</span></td>
+<td style="text-align: left;">Volumetric Fraction</td>
+<td style="text-align: left;">Fraction of a soil volume occupied by a given substance</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(E_b\)</span></td>
+<td style="text-align: left;">Black-body emissivity</td>
+<td style="text-align: left;">An idealized estimate of radiative flux density based on an object’s temperature assuming its a black-body see <a href="#eq-Stefan-Boltzman-Law" class="quarto-xref">Equation&nbsp;40</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\epsilon\)</span></td>
+<td style="text-align: left;">emissivity</td>
+<td style="text-align: left;">The ratio of energy emitted from a surface to that which would be emitted by a black-body emitter at the same temperature</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(E_g\)</span></td>
+<td style="text-align: left;">Grey-body emissivity</td>
+<td style="text-align: left;">An adjustment to <span class="math inline">\(E_b\)</span> which accounts for the object’s emissivity <span class="math inline">\(\epsilon\)</span> see <a href="#eq-Stefan-Boltzman-Law-Grey-Body" class="quarto-xref">Equation&nbsp;39</a> &amp; see <a href="#eq-Stefan-Boltzman-Law-Grey-Body-Adjusted" class="quarto-xref">Equation&nbsp;38</a></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\mu\)</span></td>
+<td style="text-align: left;">Attenuation coefficient in Beers Law</td>
+<td style="text-align: left;">the proportion of radiation that is not transmitted through a substance - not to be confused with the prefix <span class="math inline">\(\mu\)</span> meaning “micro”</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(z\)</span></td>
+<td style="text-align: left;">Vertical position</td>
+<td style="text-align: left;">Relative to Earth’s surface (height or depth) unless otherwise specified</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">ELR</td>
+<td style="text-align: left;">Environmental Lapse Rate</td>
+<td style="text-align: left;">Observed change in air temperature with height</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell" data-tbl-colwidths="[25,35,40]">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Sy <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'_Data/Constants.csv'</span>, <span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(Sy[,<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="tbl-constants" class="cell quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-constants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: Values and units of important constants used in this.
+</figcaption>
+<div aria-describedby="tbl-constants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="cell table table-sm table-striped small">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 35%">
+<col style="width: 40%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(C\)</span></td>
+<td style="text-align: left;">Heat capacity of air (at 20 <span class="math inline">\(^{\circ}\)</span> C)</td>
+<td style="text-align: left;">1210 J m<span class="math inline">\(^{-3}\)</span> K<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(R\)</span></td>
+<td style="text-align: left;">Ideal gas constant</td>
+<td style="text-align: left;">8.31446261815324 x 10 <span class="math inline">\(^{-3}\)</span> kPa m <span class="math inline">\(^3\)</span> g <span class="math inline">\(^{-1}\)</span> K <span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\gamma\)</span></td>
+<td style="text-align: left;">Psychrometric constant (at 20 <span class="math inline">\(^{\circ}\)</span> C)</td>
+<td style="text-align: left;">0.495 g m <span class="math inline">\(^{-3}\)</span> K <span class="math inline">\({^-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\sigma_b\)</span></td>
+<td style="text-align: left;">Stefan-Boltzman constant</td>
+<td style="text-align: left;">5.67 x 10 <span class="math inline">\(^{-8}\)</span> W m<span class="math inline">\(^{-2}\)</span> K<span class="math inline">\(^{-4}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(c\)</span></td>
+<td style="text-align: left;">Speed of Light</td>
+<td style="text-align: left;">299792458 m s<span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(h\)</span></td>
+<td style="text-align: left;">Planks constant</td>
+<td style="text-align: left;">6.62607015*10 <span class="math inline">\(^{-34}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(b\)</span></td>
+<td style="text-align: left;">Wein’s displacement constant</td>
+<td style="text-align: left;">2898 <span class="math inline">\(\mu m K\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(I_o\)</span></td>
+<td style="text-align: left;">Solar constant</td>
+<td style="text-align: left;">1361<span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(M_{H_2O}\)</span></td>
+<td style="text-align: left;">Molar mass of water</td>
+<td style="text-align: left;">18.01528 g mol <span class="math inline">\(^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">DALR</td>
+<td style="text-align: left;">Dry Adiabatic Lapse Rate</td>
+<td style="text-align: left;">-0.01 <span class="math inline">\(K m^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">SALR</td>
+<td style="text-align: left;">Saturated Adiabatic Lapse Rate</td>
+<td style="text-align: left;">The rate is variable as a function of <span class="math inline">\(T\)</span> and <span class="math inline">\(P\)</span> but we can assume a constant rate of -0.005 <span class="math inline">\(K m^{-1}\)</span> to get a reasonable approximation</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
 </section>
 <section id="list-of-equations" class="level1">
 <h1>List of Equations</h1>

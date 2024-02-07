@@ -411,7 +411,7 @@ Add (subtract) 4 min to LST for each degree of longitude east (west) of the stan
 {{< include ../_Equations/TimeEquations.qmd >}}
 
 
-## Planetary Orbits and Kepler’s Laws
+## Planetary Orbits and Kepler’s Laws {.smaller}
 
 :::: {.columns}
 

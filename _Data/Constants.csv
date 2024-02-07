@@ -1,0 +1,12 @@
+Symbol,Name,Definition,Lab
+$C$,Heat capacity of air (at 20 $^{\circ}$ C),1210 J m$^{-3}$ K$^{-1}$,
+$R$,Ideal gas constant,8.31446261815324 x 10 $^{-3}$ kPa m $^3$ g $^{-1}$ K $^{-1}$,3
+$\gamma$,Psychrometric constant (at 20 $^{\circ}$ C),0.495 g m $^{-3}$ K ${^-1}$,3
+$\sigma_b$,Stefan-Boltzman constant,5.67 x 10 $^{-8}$ W m$^{-2}$ K$^{-4}$,2
+$c$,Speed of Light,299792458 m s$^{-1}$,
+$h$,Planks constant,6.62607015*10 $^{-34}$,
+$b$,Wein's displacement constant,2898 $\mu m K$,
+$I_o$,Solar constant,1361$W m^{-2}$,2
+$M_{H_2O}$,Molar mass of water,18.01528 g mol $^{-1}$,3
+DALR,Dry Adiabatic Lapse Rate,-0.01 $K m^{-1}$,4
+SALR,Saturated Adiabatic Lapse Rate,The rate is variable as a function of $T$ and $P$ but we can assume a constant rate of -0.005 $K m^{-1}$ to get a reasonable approximation,4

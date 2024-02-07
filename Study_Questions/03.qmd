@@ -1,0 +1,98 @@
+---
+title: Study Question Set 03
+subtitle: Radiation
+---
+
+
+
+(@) The highest yearly total $I_{ex}$ (extraterrestrial irradiance) is found at the Equator ($\theta = 0^{\circ}$) with $13.2\,\rm{GJ}\,\rm{m}^{-2}\,\rm{year}^{-1}$ and the lowest yearly total $I_{ex}$ is at the Poles $\theta = 90^{\circ}$, with $5.5\,\rm{GJ}\,\rm{m}^{-2}\,\rm{year}^{-1}$.  What are the implications of this?
+
+::: {.callout-tip collapse="true"}
+
+This means that there is an energy gradient from the Equator to the Poles that creates a global circulation exchanging energy from low to high latitudes (ocean currents, general atmospheric circulation)
+
+:::
+
+(@) The highest daily total $I_{ex}$ is found at the poles with $47$ $\,\rm{MJ}\,\rm{m}^{-2}\,$ $\rm{day}^{-1}$ during the summer solstice. Why?
+
+::: {.callout-tip collapse="true"}
+
+This is because the solar irradiance reaches the poles during the full 24h cycle.
+
+:::
+
+(@) For Vancouver, the highest instantaneous $I_{ex} \approx 1190\,\rm{W}\,\rm{m}^{-2}$ is found on the day of the summer solstice (Jun 22) at 12 LAT. When is the lowest value?
+
+::: {.callout-tip collapse="true"}
+
+The lowest *daily maximum* would be on the winter solstice.  But the annual minimum is ($0\,\rm{W}\,\rm{m}^{-2}$), which occurs during every nighttime period.
+
+:::
+
+(@) Using the radiation conservation equation we know that radiation of wavelength $\lambda$ incident upon a substance must either be *transmitted* through it, be *reflected* from its surface, or be *absorbed*.  If a body is opaque and has an absorptivity coefficient for of 0.75 for $\lambda=0.55 \mu m$: A. what is  $\alpha_\lambda$ for $\lambda=0.55 \mu m$, and B. what is  $\alpha_\lambda$ for $\lambda=0.65 \mu m$>
+
+{{< include ../_Equations/Conservation-Equation-Radiation.qmd >}}
+
+::: {.callout-tip collapse="true"}
+
+A. If the body is opaque, then $\Psi_{\lambda} = 0$ and:
+$$ 
+\begin{eqnarray}
+\alpha_{\lambda} + \zeta_{\lambda} &=& 1 \nonumber \\
+\alpha_{\lambda} &=& 1 - \zeta_{\lambda}
+\end{eqnarray}
+$$ 
+
+so the reflectivity is $\alpha_{\lambda} = 1 - 0.75 = \underline{0.25}$.
+
+B. There isn't enough information to answer the questions - the conservation equation applies per wavelength.  It would be a reasonable assumption that the reflectivity at $\lambda = 0.65 \mu m$ is similar to $\lambda = 0.55 \mu m$ if you don't have any further information, but there is no guarantee they are the same.
+
+:::
+
+(@) If incident PAR (Photosynthetically Active Radiation) is $800\,\mu \rm{mol}\,\rm{s}^{-1}$ and plant canopy has the following characteristics: $\Psi_{PAR}$ = 0.08 and $\alpha_{PAR}$ = 0.11.  How many mols of PAR will 1 m<sup>-2</sup> the plant canopy absorb in one hour?
+
+::: {.callout-tip collapse="true"}
+
+We use @eq-Conservation-Equation-Radiation and solve for absorptivity:
+\begin{eqnarray}
+\zeta_{\rm{PAR}} = 1 - (\Psi_{\rm{PAR}} + \alpha_{\rm{PAR}})
+\label{E3}
+\end{eqnarray}
+This results in $\zeta_{\rm{PAR}} = 1 - (0.08 + 0.11) = 0.81$. Hence, the fraction of the incident radiation of $800\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2}$ that is absorbed is 81\%:
+\begin{eqnarray*}
+0.81 \times 800\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2} = \underline{648\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2}} \\
+\end{eqnarray*}
+
+There are 3600 seconds in an hour and 1,000,000 $\mu mol$ per mol, so assuming PAR doesn't change over this period:
+
+$$
+648\,\mu \rm{mol}\,\rm{s}^{-1}\,\rm{m}^{-2} * 3600 \frac{s}{h} * \frac{1 mol}{1000000 \mu mol} = 2.3328\, mol\, \rm{m}^{-2}
+$$
+
+:::
+
+(@) If $I_{ex} = 562\,\rm{W}\,\rm{m}^{-2}$, $SW_\downarrow = 298\,\rm{W}\,\rm{m}^{-2}$ and the sun angle $\beta = 23.74^{\circ}$, determine the bulk transmissivity of atmosphere:
+
+::: {.callout-tip collapse="true"}
+
+{{< include ../_Equations/Bulk-Transmissivity.qmd >}}
+
+we use $\beta = 23.74^{\circ}$ and $\sin \beta = 0.403$ from Study Question Set 4, Question 4 and get $m$ = 2.481. We insert this in @eq-Bulk-Transmissivity:
+
+\begin{eqnarray}
+\Psi_a &=& \left( \frac{298\,\rm{W}\,\rm{m}^{-2}}{562\,\rm{W}\,\rm{m}^{-2}} \right) ^{\frac{1}{2.481}} = \underline{0.77}
+\end{eqnarray}
+
+:::
+
+(@) We use  $\Psi_a = 0.77$ from determine $SW\downarrow$ at the surface if $I_{ex} = 439 \,\rm{W}\,\rm{m}^{-2}$ and the zenith angle $Z = 71.6^{\circ}$:
+
+::: {.callout-tip collapse="true"}
+
+Following @eq-Bulk-Transmissivity:
+
+\begin{eqnarray}
+K_{\downarrow} &=& 439 \,\rm{W}\,\rm{m}^{-2} \times 0.77^{3.17} = \underline{191 \,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray}
+
+:::

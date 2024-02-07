@@ -1,8 +1,10 @@
 
 $$
-\delta = 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)
-         -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma)
-         -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma)
+\begin{eqnarray}
+\delta = & 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
+         & -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
+         & -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber 
+\end{eqnarray}
 $${#eq-Solar-Declination}
 
 where $\gamma$ is the fractional year and DOY is the day of the year:
