@@ -816,7 +816,7 @@
     "href": "Lectures/08.html#compound-substances",
     "title": "Soil Thermal Properties",
     "section": "Compound substances",
-    "text": "Compound substances\nThe heat capacity of a mixture of substances such as soil can be calculated if the heat capacity and volume fraction of each component are known. In the case of soil:\n\\[\nC_{soil}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\qquad(4)\\]",
+    "text": "Compound substances\nThe heat capacity of a mixture of substances such as soil can be calculated if the heat capacity and volume fraction of each component are known. In the case of soil:\n\\[\nC_{s}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\qquad(4)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -864,7 +864,7 @@
     "href": "Lectures/08.html#soil-heat-flux",
     "title": "Soil Thermal Properties",
     "section": "Soil Heat Flux",
-    "text": "Soil Heat Flux\nThe flux of heat energy through a given sil layer (\\(\\frac{H_g}{z}\\)) is a product of the layers heat capacity \\(C_z\\) and it’s rate of temperature change with time (\\(\\frac{\\Delta T_s}{t}\\)):\n\\[\n\\frac{H_g}{z} = C_{s_z} \\frac{\\Delta T_{s_z}}{\\Delta t}\n\\qquad(5)\\]\n\nWhy do we need to consider \\(H_{g_z}\\) on a per-layer (\\(z\\)) basis?",
+    "text": "Soil Heat Flux\nThe flux of heat energy through a given sil layer (\\(\\frac{H_g}{z}\\)) is a product of the layers heat capacity \\(C_z\\) and it’s rate of temperature change with time (\\(\\frac{\\Delta T_s}{t}\\)):\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s_z}}{\\Delta t}\n\\qquad(5)\\]\n\nWhy do we need to consider \\(H_{g_z}\\) on a per-layer (\\(z\\)) basis?",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -888,7 +888,7 @@
     "href": "Lectures/08.html#heat-flux-divergence",
     "title": "Soil Thermal Properties",
     "section": "Heat Flux Divergence",
-    "text": "Heat Flux Divergence\nAlternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:\n\\[\n\\frac{H_g}{z} = C_{s_z} \\frac{\\Delta T_{s_z}}{\\Delta t}\n\\qquad(6)\\]",
+    "text": "Heat Flux Divergence\nAlternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s_z}}{\\Delta t}\n\\qquad(6)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
