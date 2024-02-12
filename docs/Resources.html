@@ -425,7 +425,7 @@ Table&nbsp;1: These are list of symbols that will be used to represent key varia
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(E_b\)</span></td>
 <td style="text-align: left;">Black-body emissivity</td>
-<td style="text-align: left;">An idealized estimate of radiative flux density based on an object’s temperature assuming its a black-body see <a href="#eq-Stefan-Boltzman-Law" class="quarto-xref">Equation&nbsp;41</a></td>
+<td style="text-align: left;">An idealized estimate of radiative flux density based on an object’s temperature assuming its a black-body see <a href="#eq-Stefan-Boltzman-Law" class="quarto-xref">Equation&nbsp;48</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\epsilon\)</span></td>
@@ -435,7 +435,7 @@ Table&nbsp;1: These are list of symbols that will be used to represent key varia
 <tr class="even">
 <td style="text-align: left;"><span class="math inline">\(E_g\)</span></td>
 <td style="text-align: left;">Grey-body emissivity</td>
-<td style="text-align: left;">An adjustment to <span class="math inline">\(E_b\)</span> which accounts for the object’s emissivity <span class="math inline">\(\epsilon\)</span> see <a href="#eq-Stefan-Boltzman-Law-Grey-Body" class="quarto-xref">Equation&nbsp;40</a> &amp; see <a href="#eq-Stefan-Boltzman-Law-Grey-Body-Adjusted" class="quarto-xref">Equation&nbsp;39</a></td>
+<td style="text-align: left;">An adjustment to <span class="math inline">\(E_b\)</span> which accounts for the object’s emissivity <span class="math inline">\(\epsilon\)</span> see <a href="#eq-Stefan-Boltzman-Law-Grey-Body" class="quarto-xref">Equation&nbsp;47</a> &amp; see <a href="#eq-Stefan-Boltzman-Law-Grey-Body-Adjusted" class="quarto-xref">Equation&nbsp;46</a></td>
 </tr>
 <tr class="odd">
 <td style="text-align: left;"><span class="math inline">\(\mu\)</span></td>
@@ -643,209 +643,257 @@ I_{ex}=I_0(\frac{R_av}{R})^2\cos(Z)
 \begin{eqnarray}(\frac{R_av}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
 \tag{15}\]</span></span></p>
 </section>
+<section id="fouriers-law" class="level2">
+<h2 class="anchored" data-anchor-id="fouriers-law">Fouriers Law</h2>
+<p><span id="eq-Fouriers-Law"><span class="math display">\[
+H_G = -k \frac{T_2 - T_1}{z_2 - z_1}
+\tag{16}\]</span></span></p>
+</section>
 <section id="frequency" class="level2">
 <h2 class="anchored" data-anchor-id="frequency">Frequency</h2>
 <p><span id="eq-Frequency"><span class="math display">\[
 v=\frac{c}{\lambda}
-\tag{16}\]</span></span></p>
+\tag{17}\]</span></span></p>
+</section>
+<section id="heat-capacity-soil" class="level2">
+<h2 class="anchored" data-anchor-id="heat-capacity-soil">Heat Capacity Soil</h2>
+<p><span id="eq-Heat-Capacity-Soil"><span class="math display">\[
+C_{soil}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
+\tag{18}\]</span></span></p>
 </section>
 <section id="kelvin" class="level2">
 <h2 class="anchored" data-anchor-id="kelvin">Kelvin</h2>
 <p><span id="eq-Kelvin"><span class="math display">\[
 T(K) = T(\deg C) + 273.15
-\tag{17}\]</span></span></p>
+\tag{19}\]</span></span></p>
 </section>
 <section id="kirchhoffs-law" class="level2">
 <h2 class="anchored" data-anchor-id="kirchhoffs-law">Kirchhoffs Law</h2>
 <p><span id="eq-Kirchhoffs-Law"><span class="math display">\[
 \zeta_{\lambda} = \epsilon_{\lambda}
-\tag{18}\]</span></span></p>
+\tag{20}\]</span></span></p>
 </section>
 <section id="longwave-radiation-balance" class="level2">
 <h2 class="anchored" data-anchor-id="longwave-radiation-balance">Longwave Radiation Balance</h2>
 <p><span id="eq-Longwave-Radiation-Balance"><span class="math display">\[
 \zeta_{LW} + \alpha_{LW} = 1
-\tag{19}\]</span></span></p>
+\tag{21}\]</span></span></p>
 </section>
 <section id="longwave-reflectivity" class="level2">
 <h2 class="anchored" data-anchor-id="longwave-reflectivity">Longwave Reflectivity</h2>
 <p><span id="eq-Longwave-Reflectivity"><span class="math display">\[
 \alpha_{LW} = 1 - \epsilon_{LW}
-\tag{20}\]</span></span></p>
+\tag{22}\]</span></span></p>
 </section>
 <section id="long-wave-flux-density-stefan-boltzman" class="level2">
 <h2 class="anchored" data-anchor-id="long-wave-flux-density-stefan-boltzman">Long wave Flux Density Stefan Boltzman</h2>
 <p><span id="eq-Long-wave-Flux-Density-Stefan-Boltzman"><span class="math display">\[
 LW^* = LW\downarrow - \epsilon_{LW}\sigma_b T_s^4 -(1-\epsilon_{LW})LW\downarrow
-\tag{21}\]</span></span></p>
+\tag{23}\]</span></span></p>
 </section>
 <section id="long-wave-flux-density" class="level2">
 <h2 class="anchored" data-anchor-id="long-wave-flux-density">Long wave Flux Density</h2>
 <p><span id="eq-Long-wave-Flux-Density"><span class="math display">\[
 LW^* = LW\downarrow - LW\uparrow
-\tag{22}\]</span></span></p>
+\tag{24}\]</span></span></p>
 </section>
 <section id="ndvi" class="level2">
 <h2 class="anchored" data-anchor-id="ndvi">NDVI</h2>
 <p><span id="eq-NDVI"><span class="math display">\[
 NDVI = \frac{NIR-Red}{NIR+Red}
-\tag{23}\]</span></span></p>
+\tag{25}\]</span></span></p>
 </section>
 <section id="absorbed-sw" class="level2">
 <h2 class="anchored" data-anchor-id="absorbed-sw">Absorbed SW</h2>
 <p><span id="eq-Absorbed-SW"><span class="math display">\[
 SW^* = SW \downarrow (1 - \alpha)
-\tag{24}\]</span></span></p>
+\tag{26}\]</span></span></p>
 </section>
 <section id="net-absorbed-emitted-lw" class="level2">
 <h2 class="anchored" data-anchor-id="net-absorbed-emitted-lw">Net Absorbed Emitted LW</h2>
 <p><span id="eq-Net-Absorbed-Emitted-LW"><span class="math display">\[
 LW^* = \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
-\tag{25}\]</span></span></p>
+\tag{27}\]</span></span></p>
 </section>
 <section id="net-radiation-energy-balance" class="level2">
 <h2 class="anchored" data-anchor-id="net-radiation-energy-balance">Net Radiation Energy Balance</h2>
 <p><span id="eq-Net-Radiation-Energy-Balance"><span class="math display">\[
 R_n = SW \downarrow (1 - \alpha) + \epsilon LW \downarrow - \epsilon \sigma_b T_s^4
-\tag{26}\]</span></span></p>
+\tag{28}\]</span></span></p>
 </section>
 <section id="net-radiation-short" class="level2">
 <h2 class="anchored" data-anchor-id="net-radiation-short">Net Radiation Short</h2>
 <p><span id="eq-Net-Radiation-Short"><span class="math display">\[
 R_n = SW^* + LW^*
-\tag{27}\]</span></span></p>
+\tag{29}\]</span></span></p>
 </section>
 <section id="net-radiation" class="level2">
 <h2 class="anchored" data-anchor-id="net-radiation">Net Radiation</h2>
 <p><span id="eq-Net-Radiation"><span class="math display">\[
 R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
-\tag{28}\]</span></span></p>
+\tag{30}\]</span></span></p>
 </section>
 <section id="planks-law" class="level2">
 <h2 class="anchored" data-anchor-id="planks-law">Planks Law</h2>
 <p><span id="eq-Planks-Law"><span class="math display">\[
 E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
-\tag{29}\]</span></span></p>
+\tag{31}\]</span></span></p>
 </section>
 <section id="prata" class="level2">
 <h2 class="anchored" data-anchor-id="prata">Prata</h2>
 <p><span id="eq-Prata"><span class="math display">\[
 \epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
-\tag{30}\]</span></span></p>
+\tag{32}\]</span></span></p>
 </section>
 <section id="radiation-balance-air.qmd" class="level2">
 <h2 class="anchored" data-anchor-id="radiation-balance-air.qmd">Radiation Balance Air.qmd</h2>
 <p><span id="eq-Radiation-Balance-Air.qmd"><span class="math display">\[
 \Delta R_{n(\Delta z)}=R_{n(z+\Delta z)}-R_{n(z)}=C_a(\frac{\Delta T_a}{\Delta t})_R \Delta z
-\tag{31}\]</span></span></p>
+\tag{33}\]</span></span></p>
 </section>
 <section id="reflectivity" class="level2">
 <h2 class="anchored" data-anchor-id="reflectivity">Reflectivity</h2>
 <p><span id="eq-Reflectivity"><span class="math display">\[
 \alpha_\lambda = \frac{\lambda_{reflected}}{\lambda_{incident}}
-\tag{32}\]</span></span></p>
+\tag{34}\]</span></span></p>
 </section>
 <section id="reflectance-coefficient" class="level2">
 <h2 class="anchored" data-anchor-id="reflectance-coefficient">Reflectance Coefficient</h2>
 <p><span id="eq-Reflectance-Coefficient"><span class="math display">\[
 \alpha_{\lambda_1 \rightarrow \lambda_2} = \frac{\int_{\lambda_1}^{\lambda_2}\alpha_\lambda I_\lambda d_\lambda}{\int_{\lambda_1}^{\lambda_2}I_\lambda d_\lambda}
-\tag{33}\]</span></span></p>
+\tag{35}\]</span></span></p>
 </section>
 <section id="relative-humidity" class="level2">
 <h2 class="anchored" data-anchor-id="relative-humidity">Relative Humidity</h2>
 <p><span id="eq-Relative-Humidity"><span class="math display">\[
 RH=\frac{P_v}{P_v^*}
-\tag{34}\]</span></span></p>
+\tag{36}\]</span></span></p>
+</section>
+<section id="soil-heat-flux-divergence" class="level2">
+<h2 class="anchored" data-anchor-id="soil-heat-flux-divergence">Soil Heat Flux Divergence</h2>
+<p><span id="eq-Soil-Heat-Flux-Divergence"><span class="math display">\[
+\frac{\Delta T_s}{\Delta t} =  \frac{1}{C_s}\frac{\Delta H_g}{\Delta z}
+\tag{37}\]</span></span></p>
+</section>
+<section id="soil-heat-flux" class="level2">
+<h2 class="anchored" data-anchor-id="soil-heat-flux">Soil Heat Flux</h2>
+<p><span id="eq-Soil-Heat-Flux"><span class="math display">\[
+\frac{H_g}{z} = C_{s_z} \frac{\Delta T_{s_z}}{\Delta t}
+\tag{38}\]</span></span></p>
+</section>
+<section id="soil-volume-fractions" class="level2">
+<h2 class="anchored" data-anchor-id="soil-volume-fractions">Soil Volume Fractions</h2>
+<p><span id="eq-Soil-Volume-Fractions"><span class="math display">\[
+\theta_a+\theta_w+\theta_g = 1
+\tag{39}\]</span></span></p>
+</section>
+<section id="soil-volume-fractions-1" class="level2">
+<h2 class="anchored" data-anchor-id="soil-volume-fractions-1">Soil Volume Fractions</h2>
+<p><span id="eq-Soil-Volume-Fractions"><span class="math display">\[
+\theta_P = \theta_a + \theta_w = 1 - \theta_g
+\tag{40}\]</span></span></p>
+</section>
+<section id="organic-mineral" class="level2">
+<h2 class="anchored" data-anchor-id="organic-mineral">Organic Mineral</h2>
+<p><span id="eq-Organic-Mineral"><span class="math display">\[
+\theta_g = \theta_m + \theta_o
+\tag{41}\]</span></span></p>
 </section>
 <section id="solar-declination" class="level2">
 <h2 class="anchored" data-anchor-id="solar-declination">Solar Declination</h2>
 <p><span id="eq-Solar-Declination"><span class="math display">\[
 \begin{eqnarray}\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber \end{eqnarray}
-\tag{35}\]</span></span></p>
+\tag{42}\]</span></span></p>
 </section>
 <section id="fractional-year" class="level2">
 <h2 class="anchored" data-anchor-id="fractional-year">Fractional Year</h2>
 <p><span id="eq-Fractional-Year"><span class="math display">\[
 \gamma = \frac{2 \pi }{365} (DOY-1)
-\tag{36}\]</span></span></p>
+\tag{43}\]</span></span></p>
 </section>
 <section id="solar-zenith" class="level2">
 <h2 class="anchored" data-anchor-id="solar-zenith">Solar Zenith</h2>
 <p><span id="eq-Solar-Zenith"><span class="math display">\[
 \cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
-\tag{37}\]</span></span></p>
+\tag{44}\]</span></span></p>
 </section>
 <section id="hour-angle" class="level2">
 <h2 class="anchored" data-anchor-id="hour-angle">Hour Angle</h2>
 <p><span id="eq-Hour-Angle"><span class="math display">\[
 h = 15^{\circ}(12-LAT)
-\tag{38}\]</span></span></p>
+\tag{45}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law-grey-body-adjusted" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body-adjusted">Stefan Boltzman Law Grey Body Adjusted</h2>
 <p><span id="eq-Stefan-Boltzman-Law-Grey-Body-Adjusted"><span class="math display">\[
 E_g = \epsilon\sigma_b T^4 + (1-\epsilon) * (SW\downarrow+LW\downarrow)
-\tag{39}\]</span></span></p>
+\tag{46}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law-grey-body" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law-grey-body">Stefan Boltzman Law Grey Body</h2>
 <p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
 E_g = \epsilon\sigma_b T^4
-\tag{40}\]</span></span></p>
+\tag{47}\]</span></span></p>
 </section>
 <section id="stefan-boltzman-law" class="level2">
 <h2 class="anchored" data-anchor-id="stefan-boltzman-law">Stefan Boltzman Law</h2>
 <p><span id="eq-Stefan-Boltzman-Law"><span class="math display">\[
 E_b = \sigma_b T^4
-\tag{41}\]</span></span></p>
+\tag{48}\]</span></span></p>
 </section>
 <section id="surface-energy-balance-no-mass" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance-no-mass">Surface Energy Balance No Mass</h2>
 <p><span id="eq-Surface-Energy-Balance-No-Mass"><span class="math display">\[
 \color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G}
-\tag{42}\]</span></span></p>
+\tag{49}\]</span></span></p>
 </section>
 <section id="surface-energy-balance-storage" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance-storage">Surface Energy Balance Storage</h2>
 <p><span id="eq-Surface-Energy-Balance-Storage"><span class="math display">\[
 \color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{purple}{G} + \color{green}{\Delta S}
-\tag{43}\]</span></span></p>
+\tag{50}\]</span></span></p>
 </section>
 <section id="surface-energy-balance" class="level2">
 <h2 class="anchored" data-anchor-id="surface-energy-balance">Surface Energy Balance</h2>
 <p><span id="eq-Surface-Energy-Balance"><span class="math display">\[
 R_n = H + LE + G + \Delta S
-\tag{44}\]</span></span></p>
+\tag{51}\]</span></span></p>
 </section>
 <section id="tetens" class="level2">
 <h2 class="anchored" data-anchor-id="tetens">Tetens</h2>
 <p><span id="eq-Tetens"><span class="math display">\[
 P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
-\tag{45}\]</span></span></p>
+\tag{52}\]</span></span></p>
+</section>
+<section id="thermal-diffusivity" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-diffusivity">Thermal Diffusivity</h2>
+<p><span id="eq-Thermal-Diffusivity"><span class="math display">\[
+K = \frac{k}{C}
+\tag{53}\]</span></span></p>
 </section>
 <section id="lmst" class="level2">
 <h2 class="anchored" data-anchor-id="lmst">LMST</h2>
 <p><span id="eq-LMST"><span class="math display">\[
 LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
-\tag{46}\]</span></span></p>
+\tag{54}\]</span></span></p>
 </section>
 <section id="lat" class="level2">
 <h2 class="anchored" data-anchor-id="lat">LAT</h2>
 <p><span id="eq-LAT"><span class="math display">\[
 LAT = LMST-\Delta LAT
-\tag{47}\]</span></span></p>
+\tag{55}\]</span></span></p>
 </section>
 <section id="delta-lat" class="level2">
 <h2 class="anchored" data-anchor-id="delta-lat">Delta LAT</h2>
 <p><span id="eq-Delta-LAT"><span class="math display">\[
 \begin{eqnarray}\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
-\tag{48}\]</span></span></p>
+\tag{56}\]</span></span></p>
 </section>
 <section id="weins-law" class="level2">
 <h2 class="anchored" data-anchor-id="weins-law">Weins Law</h2>
 <p><span id="eq-Weins-Law"><span class="math display">\[
 \lambda_{max} = \frac{b}{T}
-\tag{49}\]</span></span></p>
+\tag{57}\]</span></span></p>
 
 
 </section>

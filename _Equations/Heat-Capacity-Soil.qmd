@@ -1,0 +1,4 @@
+
+$$
+C_{soil}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
+$${#eq-Heat-Capacity-Soil}

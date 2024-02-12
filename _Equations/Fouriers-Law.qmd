@@ -1,0 +1,4 @@
+ 
+$$
+H_G = -k \frac{T_2 - T_1}{z_2 - z_1}
+$${#eq-Fouriers-Law}

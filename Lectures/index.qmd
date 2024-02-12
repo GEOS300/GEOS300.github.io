@@ -33,7 +33,8 @@ Topics = [
 'Shortwave Radiation',
 'Longwave Radiation',
 'Net-Radiation',
-'Finishing our Discussion of Radiation'
+'Finishing our Discussion of Radiation',
+'Thermal Properties of Soil'
 ]
 Readings = [
     '',
@@ -41,10 +42,12 @@ Readings = [
     '',
     '',
     '',
-    '[Additional Reading](../www/readings04_05.pdf)'
+    '[Additional Reading](../www/readings04_05.pdf)',
+    '',
+    '[Additional Reading](../www/readings07_08.pdf)',
     '',
     '',
-    '[Additional Reading](../www/readings07_08.pdf)'
+    '[Additional Reading](../www/readings10_12.pdf)'
 ]
 Study = ['',
         '',
@@ -56,6 +59,7 @@ Study = ['',
         '',
         '',
         '[03](../Study_Questions/03.html)',
+        '',
         ]
 
 for i,row in Lectures.iterrows():

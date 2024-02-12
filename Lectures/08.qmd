@@ -1,0 +1,615 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Soil Thermal Properties
+---
+
+{{< include _imports.qmd >}}
+
+## Today’s learning objectives
+
+
+* Provide examples of why processes in the ground are of interest to climatologists.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+* Discuss key properties that describe the thermal behavior of the surfaces in the climate system.
+* Explain how the key properties relate to heat conduction in soils.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/08_2_3.jpg)
+
+
+:::
+
+::::
+
+
+
+## Discussion (iClicker)
+
+Why might climatologists be interested in studying soil thermal properties and subsurface processes? 
+
+## Agriculture
+
+![Soil temperatures directly impact germination and growth of plants](images/08_4_0.jpg)
+
+
+## Thermokarst
+
+![Melting ground ice, Tuktoyaktuk coastlands, 2017](images/Thermokarst.JPG)
+
+
+## Carbon Storage
+
+![Soils can act as a carbon sinks or sources](images/Me_at_Illisarvik.jpg)
+
+
+
+
+
+## Role of Soil in the Climate System
+
+The "active" layer of surface extends down to a relatively shallow depth.
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+* The properties this layer make $\Delta S$ of sensible heat and water significant over diurnal and annual scales.
+* Soils act as a ‘battery’ of both energy and mass relevant effecting the atmosphere.
+
+
+:::
+
+::: {.column width="45%"}
+
+
+
+
+![](images/08_8_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Because the active surface is the site of greatest energy absorption by day and depletion by night, it is also where the greatest thermal response is found. 
+The effects diminish with distance away from the interface down into the substrate. 
+The surface energy balance causes a temperature wave that establishes a temperature gradient ∂T/∂z and a sensible heat flux QG directed downwards by day and upwards at night. The size of both, ∂T/∂z and QG, diminish with distance away from the interface giving a changing vertical distribution (profile) of substrate temperatures 
+Soil temperatures vary less rapidly than air temperatures, and since radiative and convective exchanges are virtually absent in the soil, most of the activity takes place from molecule to molecule. 
+
+
+:::
+
+
+
+
+## Thermal Inertia
+
+**Specific heat $c$**: the quantity of heat required to raise the temperature of a **unit mass** of a material by 1 K. 
+
+* Given in J kg<sup>-1</sup> K<sup>-1</sup>.
+
+
+**Heat capacity $C$** is the quantity of heat required to raise the temperature of a **unit volume** of a material by 1 K. 
+
+* Given in J m<sup>-3</sup> K<sup>-1</sup>.
+
+
+::: {.notes}
+
+The actual rate mean temperature change of a soil layer over time ∆T /∆t is proportional to the amount of heat currently absorbed by the layer (∆Q) but it also depends on the thermal properties of the soil. 
+Let’s discuss some key SOIL THERMAL PROPERTIES 
+
+
+
+:::
+
+
+
+
+## $C$ and $c$ of soil materials {.smaller}
+```{r}
+#| label: tbl-10_2
+#| tbl-cap: Heat caqacity and specific heat of selected substances
+
+Data <- read.csv(file = 'Data/08_10_2_Table.csv',sep=',',check.names = FALSE)
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)), escape = FALSE)
+
+```
+
+::: {.notes}
+
+Heat capacity (C) relates to the ability of a substance to store heat and expresses the temperature change produced as a result of gaining or losing heat 
+Where it is clear that, compared to most other materials, water requires a large heat input to effect a given change in temperature whereas air requires very little. 
+C = c*density
+The value of C for a soil can be calculated by evaluating the fractions of soil solid, water and air. 
+
+
+:::
+
+
+
+
+## Volume Fractions and Porosity {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+{{< include ../_Equations/Soil-Volume-Fractions.qmd >}}
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/VolumetricFraction.gif)
+
+
+:::
+
+::::
+
+
+## Volume Fractions and Porosity
+
+Given a sample of know volume and mass, we can determine the fractional composition by:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* Oven-drying soil samples to get $\theta_w$
+* Burning the dried sample in a furnace to get $\theta_o$
+* The residual will give us $\theta_m$
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/VolumetricFraction.gif)
+
+
+:::
+
+::::
+
+
+
+
+## Compound substances
+
+The heat capacity of a mixture of substances such as soil can be calculated if the heat capacity and volume fraction of each component are known. In the case of soil:
+
+{{< include ../_Equations/Heat-Capacity-Soil.qmd >}}
+
+
+
+## Which example would have the lowest heat capacity? {.smaller}
+
+
+::: {#fig-iclicker layout-ncol=3}
+
+
+![a.](images/08_15_0.jpg)
+
+
+
+![b.](images/08_15_2.jpg)
+
+
+
+![c.](images/08_15_3.jpg)
+
+Three photos of the same location under different conditions.
+
+:::
+
+
+
+::: {.notes}
+
+For example, a wet soil (high C) has a ‘conservative’ thermal climate (it responds sluggishly to heat input or output). Conversely a dry soil (low C) is ‘flashy’ becoming relatively hot by day and cold by night.
+
+:::
+
+
+## Heat capacity vs. Soil Moisture {.smaller}
+
+
+
+```{python}
+#| echo: true
+import numpy as np
+import matplotlib.pyplot as plt
+
+def get_C(theta_m,theta_o,theta_w):
+    C_w,C_m,C_o,C_a = 4.18, 2.1,2.5,0.0012 # MJ m-3 K-1
+    theta_a = 1-(theta_m+theta_o+theta_w)
+    theta_a[np.where(theta_a<0)]=np.nan # <<<<<< What does this line do?
+    C = C_m*theta_m + C_o*theta_o + C_w*theta_w + C_a*theta_a
+    return(C)
+
+theta_w = np.linspace(0,1,25)
+C_mineral = get_C(.5,0,theta_w)
+C_mixed = get_C(.35,.2,theta_w)
+C_organic = get_C(0,.1,theta_w)
+```
+
+What does line 7 in the above codeblock do?
+
+* A: limits $C$ to plausible values because volumetric fractions cannot be negative
+* B: limits $C$ to plausible values because volumetric fractions cannot sum to more than one
+
+::: {.notes}
+
+Slope = heat capacity of water
+Offset = related to porosity
+
+:::
+
+
+
+
+## Heat capacity and soil water content
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* What is the slope of the line?
+* What explains the offset between the lines?  
+
+ 
+
+
+
+:::
+
+::: {.column width="50%"}
+```{python}
+theta_w = np.linspace(0,1,25)
+plt.figure(figsize=(6,6))
+plt.plot(theta_w,get_C(.5,0,theta_w),color='black',label='Mineral Soil')
+plt.plot(theta_w,get_C(.35,.2,theta_w),color='blue',label='Mixed Soil')
+plt.plot(theta_w,get_C(0,.1,theta_w),color='green',label='Organic Soil')
+plt.ylabel(r'MJ m$^{-3}$ K$^{-1}$',fontsize=12)
+plt.xlabel(r'$\theta_w$ %',fontsize=12)
+plt.grid()
+plt.legend(fontsize=12)
+```
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Slope = heat capacity of water
+Offset = related to porosity
+
+:::
+
+
+## Soil Heat Flux
+
+The flux of heat energy through a given sil layer ($\frac{H_g}{z}$) is a product of the layers heat capacity $C_z$ and it's rate of temperature change with time ($\frac{\Delta T_s}{t}$):
+
+
+{{< include ../_Equations/Soil-Heat-Flux.qmd >}}
+
+* Why do we need to consider $H_{g_z}$ on a per-layer ($z$) basis?
+
+
+## Soil Heat Flux (iClikcer)
+
+```{R}
+#| echo: False
+C_s_g = 2 #MJ m-3 K-1
+Delta_T = 1 #K
+Delta_t = 3600 #s (1 hour)
+z = 0.01 #m (1 cm)
+
+H_g_z = C_s_g*Delta_T/Delta_t*z
+```
+
+Evaluating the above code give a value of: `r sprintf('%.3f W m<sup>-2</sup>',H_g_z)`  Does this appear correcnt?
+
+* A True
+* B False
+
+## Heat Flux Divergence
+
+Alternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:
+
+{{< include ../_Equations/Soil-Heat-Flux.qmd >}}
+
+![](images/FluxDivergence.png)
+
+
+## Fourier's Law
+
+Gives us the flux density of conducted heat (e.g., soil heat flux $H_g$) as a function of the temperature gradient and the thermal conductivity ($k$) in W m<sup>-1</sup> K<sup>-1</sup>
+
+{{< include ../_Equations/Fouriers-Law.qmd >}}
+
+
+![](images/Fouriers_law.png)
+
+
+## Fourier's Law
+
+What is the difference between @eq-Fouriers-Law and @eq-Soil-Heat-Flux?
+
+## Thermal Conductivity $k$ {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+A metric, given in W m<sup>-1</sup> K<sup>-1</sup>, that indicates how well heat conducts **through** an object.  Influenecd by **conectivity**, homogeneity, and density of the object.
+
+* Mineral matter is a good conductor
+* Water is intermediate
+* Air is very poor
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+```{r}
+#| label: tbl-24_3
+#| tbl-cap: Thermal conductivity of selected substances
+
+Data <- read.csv(file = 'Data/08_24_3_Table.csv',sep=',',check.names = FALSE)
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Unfortunately k is not a simple constant for a given soil. It varies both with depth and with time. 
+However if we restrict ourselves to bulk averages k depends upon the conductivity of the soil particles, the soil porosity, and the soil moisture content. 
+Of these the soil moisture content is the only short-term variable for a given soil. 
+
+
+
+:::
+
+
+
+
+## $k$ vs. $\theta_w$
+
+
+:::: {.columns}
+
+::: {.column width="85%"}
+
+A non-linear relation exists between $k$ and soil water content ($\theta_w$)
+
+
+* Adding water to dry soil (a) initially causes k to increase rapidly – rapid increase in area of contacts between soil particles resulting from water film.
+* As more water (b) is added, k increases less rapidly – area of contacts increases more slowly per unit of water added (i.e. diminishing returns).
+
+
+
+
+:::
+
+::: {.column width="15%"}
+
+
+
+
+![](images/08_26_2.png)
+
+
+
+![](images/08_26_3.png)
+
+
+
+![](images/08_26_4.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+First, coating the soil particles increases the thermal contact between grains. 
+Second, since the soil pore space is finite the addition of pore water must expel a similar amount of pore air. This means replacing soil air with a substance whose conductivity is more than an order of magnitude greater. 
+
+
+:::
+
+
+
+## $k$ vs. $\theta_w$
+
+```{python}
+#| fig-cap: Thermal diffusivity $k$ of soil vs. volumetric water content $\theta_w$
+#| label: conductivity
+
+theta_w = np.linspace(0,1,25)
+
+k_mineral = theta_w**0.35* 2.25 + 0.27
+k_organic = theta_w**0.75* .95 + 0.06
+
+k_mineral[np.where(theta_w>.5)]=np.nan
+k_organic[np.where(theta_w>.85)]=np.nan
+
+fig,ax=plt.subplots(figsize=(9,6))
+ax.plot(theta_w,k_mineral,label='Mineral',color='black')
+ax.plot(theta_w,k_organic,label='Organic',color='green')
+ax.grid()
+ax.legend()
+ax.set_xlabel(r'$\theta_w$')
+ax.set_ylabel(r'$W m^{-1} K|^{-1}$')
+```
+
+
+
+::: {.notes}
+
+Mineral matter is a good conductor
+OM has lower thermal conductivity
+
+
+
+:::
+
+
+
+
+## Thermal diffusivity $K$
+
+
+Thermal diffusivity **K** – indicates how quickly soil at depth will warm or cool in response to heating or cooling at the surface. It tells us how fast a temperature wave will diffuse or travel downward into a soil.  
+
+* It's units are m<sup>2</sup> s<sup>-1</sup> and it is defined as:
+
+
+{{< include ../_Equations/Thermal-Diffusivity.qmd >}}
+
+
+
+
+
+
+::: {.notes}
+
+It controls the speed at which temperature waves move and the depth of thermal influence of the active surface 
+Analogous to the rate of spread of the ripple area after a stone is thrown into a pool.
+Shows that thermal influences are directly proportional to the ability to conduct heat (k) but inversely proportional to the amount of heat necessary to effect temperature change (C). 
+Thermal diffusivity may be viewed as a measure of the time required for temperature changes to travel. 
+
+
+:::
+
+
+
+
+## Why the curious shape?
+
+```{python}
+#| fig-cap: Thermal diffusivity $k$ of soil vs. volumetric water content $\theta_w$
+#| label: diffusivity
+fig,ax=plt.subplots(figsize=(9,6))
+ax.plot(theta_w,k_mineral/get_C(.45,0.05,theta_w),label='Mineral',color='black')
+ax.plot(theta_w,k_organic/get_C(0.05,.1,theta_w),label='Organic',color='green')
+ax.legend()
+ax.grid()
+ax.set_xlabel(r'$\theta_w$')
+ax.set_ylabel(r'$m^2 s^{-1}$')
+
+```
+
+
+::: {.notes}
+
+Peat = much lower thermal conductivity & lower heat capacity; also thermal conductivity had a less pronounced response to increase VWC.
+Soils with high diffusivities allow rapid penetration of surface temperature changes and permit these effects to involve a thick layer. 
+For the same heat input the temperature regimes of soils with high diffusivity are less extreme than for soils with low diffusivities. 
+By day the surface heating is used to warm a thick layer of soil, and at night the surface cooling can be partially offset by drawing upon heat from a similarly thick stratum. 
+Soils with poor diffusivities concentrate their thermal exchanges only in the upper-most layer, and consequently experience relatively extreme diurnal temperature fluctuations. 
+Therefore, in general a wet clay has a conservative thermal climate, whereas an almost dry peat is extreme.
+
+
+
+
+
+:::
+
+
+
+
+## Summarzign Thermal Properties {.smaller}
+
+
+How rapidly does a volume warm when a certain amount of energy is supplied? 
+
+* Heat Capacity **$C$**
+
+How well does heat conduct from one depth to another for a given temperature gradient? 
+
+* Thermal conductivity **$k$**
+
+How rapidly does a soil warm at depth if energy is available at the surface?: 
+
+* Thermal diffusivity **$K$**
+
+::: {.notes}
+
+-Heat capacity (C)
+-Thermal conductivity (k)
+-Thermal diffusivity (kappa): The thermal diffusivity of the soil is its ability to diffuse thermal influences 
+
+
+:::
+
+
+
+
+
+## Take home points
+
+* Soils are important for storage of heat and water in the climate system.
+* Two basic thermal properties regulate the exchange - Heat capacity Cs and thermal conductivity k. From those we can derive thermal diffusivity κ = k / Cs.
+* The water content of the soil is significantly altering both C (linearly) and k (non-linearly).
+

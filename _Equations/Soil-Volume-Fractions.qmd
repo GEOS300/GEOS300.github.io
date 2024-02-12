@@ -1,0 +1,15 @@
+ 
+$$
+\theta_a+\theta_w+\theta_g = 1
+$${#eq-Soil-Volume-Fractions}
+
+Where $\theta_a$, $\theta_w$, and $\theta_g$ are fractional volumetric contents of soil grains, water, and air respectively.  We can then define porosity $\theta_P$ as:
+$$
+\theta_P = \theta_a + \theta_w = 1 - \theta_g
+$${#eq-Soil-Volume-Fractions}
+
+It is also helpful to further partition soil into mineral $\theta_m$ and organic $\theta_o$ fractions:
+
+$$
+\theta_g = \theta_m + \theta_o
+$${#eq-Organic-Mineral}
