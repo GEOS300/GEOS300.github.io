@@ -1,4 +1,4 @@
  
 $$
-\frac{H_g}{z} = C_{s} \frac{\Delta T_{s_z}}{\Delta t}
+\frac{H_g}{z} = C_{s} \frac{\Delta T_{s}}{\Delta t}
 $${#eq-Soil-Heat-Flux}
