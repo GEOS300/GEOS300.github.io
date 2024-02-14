@@ -1,0 +1,6 @@
+
+
+```{python}
+# This command can give you the sum of a record
+# df['R_n'].sum()
+```

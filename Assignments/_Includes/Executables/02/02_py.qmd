@@ -1,0 +1,14 @@
+
+
+```{python}
+
+
+fig,ax=plt.subplots()
+plt.suptitle(f'Student #: {Student_Number}')
+df[['R_n','H_filled','H_g']].plot(ax=ax,
+              color=['black','red','blue'],
+              style=['-',':','--'])
+ax.legend(['Net Radiation','Sensible Heat Flux','Soil Heat Flux'])
+ax.set_ylabel('W m-2 s-1')
+ax.set_xlabel('Time')
+```

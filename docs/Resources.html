@@ -646,7 +646,7 @@ I_{ex}=I_0(\frac{R_av}{R})^2\cos(Z)
 <section id="fouriers-law" class="level2">
 <h2 class="anchored" data-anchor-id="fouriers-law">Fouriers Law</h2>
 <p><span id="eq-Fouriers-Law"><span class="math display">\[
-H_G = -k \frac{T_2 - T_1}{z_2 - z_1}
+H_G = -k \small\frac{T_2 - T_1}{z_2 - z_1}
 \tag{16}\]</span></span></p>
 </section>
 <section id="frequency" class="level2">
@@ -658,7 +658,7 @@ v=\frac{c}{\lambda}
 <section id="heat-capacity-soil" class="level2">
 <h2 class="anchored" data-anchor-id="heat-capacity-soil">Heat Capacity Soil</h2>
 <p><span id="eq-Heat-Capacity-Soil"><span class="math display">\[
-C_{soil}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
+C_{s}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
 \tag{18}\]</span></span></p>
 </section>
 <section id="kelvin" class="level2">
@@ -772,13 +772,13 @@ RH=\frac{P_v}{P_v^*}
 <section id="soil-heat-flux-divergence" class="level2">
 <h2 class="anchored" data-anchor-id="soil-heat-flux-divergence">Soil Heat Flux Divergence</h2>
 <p><span id="eq-Soil-Heat-Flux-Divergence"><span class="math display">\[
-\frac{\Delta T_s}{\Delta t} =  \frac{1}{C_s}\frac{\Delta H_g}{\Delta z}
+\small\frac{\Delta T_s}{\Delta t} =  \small\frac{1}{C_s}\small\frac{\Delta H_g}{\Delta z}
 \tag{37}\]</span></span></p>
 </section>
 <section id="soil-heat-flux" class="level2">
 <h2 class="anchored" data-anchor-id="soil-heat-flux">Soil Heat Flux</h2>
 <p><span id="eq-Soil-Heat-Flux"><span class="math display">\[
-\frac{H_g}{z} = C_{s_z} \frac{\Delta T_{s_z}}{\Delta t}
+\frac{H_g}{z} = C_{s} \frac{\Delta T_{s}}{\Delta t}
 \tag{38}\]</span></span></p>
 </section>
 <section id="soil-volume-fractions" class="level2">
@@ -865,35 +865,47 @@ R_n = H + LE + G + \Delta S
 P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
 \tag{52}\]</span></span></p>
 </section>
+<section id="thermal-admittance-v-temperature" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-admittance-v-temperature">Thermal Admittance v Temperature</h2>
+<p><span id="eq-Thermal-Admittance-v-Temperature"><span class="math display">\[
+\Delta T_s = \frac{\Delta H_g}{\mu}
+\tag{53}\]</span></span></p>
+</section>
+<section id="thermal-admittance" class="level2">
+<h2 class="anchored" data-anchor-id="thermal-admittance">Thermal Admittance</h2>
+<p><span id="eq-Thermal-Admittance"><span class="math display">\[
+\mu = \sqrt{k C}
+\tag{54}\]</span></span></p>
+</section>
 <section id="thermal-diffusivity" class="level2">
 <h2 class="anchored" data-anchor-id="thermal-diffusivity">Thermal Diffusivity</h2>
 <p><span id="eq-Thermal-Diffusivity"><span class="math display">\[
 K = \frac{k}{C}
-\tag{53}\]</span></span></p>
+\tag{55}\]</span></span></p>
 </section>
 <section id="lmst" class="level2">
 <h2 class="anchored" data-anchor-id="lmst">LMST</h2>
 <p><span id="eq-LMST"><span class="math display">\[
 LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
-\tag{54}\]</span></span></p>
+\tag{56}\]</span></span></p>
 </section>
 <section id="lat" class="level2">
 <h2 class="anchored" data-anchor-id="lat">LAT</h2>
 <p><span id="eq-LAT"><span class="math display">\[
 LAT = LMST-\Delta LAT
-\tag{55}\]</span></span></p>
+\tag{57}\]</span></span></p>
 </section>
 <section id="delta-lat" class="level2">
 <h2 class="anchored" data-anchor-id="delta-lat">Delta LAT</h2>
 <p><span id="eq-Delta-LAT"><span class="math display">\[
 \begin{eqnarray}\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
-\tag{56}\]</span></span></p>
+\tag{58}\]</span></span></p>
 </section>
 <section id="weins-law" class="level2">
 <h2 class="anchored" data-anchor-id="weins-law">Weins Law</h2>
 <p><span id="eq-Weins-Law"><span class="math display">\[
 \lambda_{max} = \frac{b}{T}
-\tag{57}\]</span></span></p>
+\tag{59}\]</span></span></p>
 
 
 </section>

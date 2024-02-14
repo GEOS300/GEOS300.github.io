@@ -1,0 +1,7 @@
+
+
+```{python}
+# A command to get rows of a dataframe based on their position and columns based on their names
+# 0 is the first row (python counts up from 0) and -1 is the position of the last row
+df.iloc[[0,-1],][['T_1','T_2','T_3','T_4']]
+```

@@ -1,0 +1,5 @@
+
+```{r}
+# This command can give you the sum of a record
+# sum(df$R_n)
+```

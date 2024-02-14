@@ -1,0 +1,10 @@
+
+```{r}
+# A command to get rows of a dataframe based on their position and columns based on their names
+# 1 is the first row and nrow(df) is the position of the last row
+First_and_Last <- df[c(1,nrow(df)),c('T_1','T_4')]
+print(First_and_Last)
+
+# A command to calculate the difference between adjacent values in each column
+print(diff(as.matrix(First_and_Last)))
+```

@@ -92,7 +92,7 @@ $${#eq-Adjusted-Constant}
 ## Fouriers Law
 
 $$
-H_G = -k \frac{T_2 - T_1}{z_2 - z_1}
+H_G = -k \small\frac{T_2 - T_1}{z_2 - z_1}
 $${#eq-Fouriers-Law}
 
 ## Frequency
@@ -104,7 +104,7 @@ $${#eq-Frequency}
 ## Heat Capacity Soil
 
 $$
-C_{soil}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
+C_{s}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
 $${#eq-Heat-Capacity-Soil}
 
 ## Kelvin
@@ -218,13 +218,13 @@ $${#eq-Relative-Humidity}
 ## Soil Heat Flux Divergence
 
 $$
-\frac{\Delta T_s}{\Delta t} =  \frac{1}{C_s}\frac{\Delta H_g}{\Delta z}
+\small\frac{\Delta T_s}{\Delta t} =  \small\frac{1}{C_s}\small\frac{\Delta H_g}{\Delta z}
 $${#eq-Soil-Heat-Flux-Divergence}
 
 ## Soil Heat Flux
 
 $$
-\frac{H_g}{z} = C_{s_z} \frac{\Delta T_{s_z}}{\Delta t}
+\frac{H_g}{z} = C_{s} \frac{\Delta T_{s}}{\Delta t}
 $${#eq-Soil-Heat-Flux}
 
 ## Soil Volume Fractions
@@ -310,6 +310,18 @@ $${#eq-Surface-Energy-Balance}
 $$
 P_v^* = 6.112\exp{17.62\frac{T_a}{243.12+T_a}}
 $${#eq-Tetens}
+
+## Thermal Admittance v Temperature
+
+$$
+\Delta T_s = \frac{\Delta H_g}{\mu}
+$${#eq-Thermal-Admittance-v-Temperature}
+
+## Thermal Admittance
+
+$$
+\mu = \sqrt{k C}
+$${#eq-Thermal-Admittance}
 
 ## Thermal Diffusivity
 

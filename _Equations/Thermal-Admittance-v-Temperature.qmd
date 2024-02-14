@@ -1,0 +1,5 @@
+ 
+$$
+\Delta T_s = \frac{\Delta H_g}{\mu}
+$${#eq-Thermal-Admittance-v-Temperature}
+

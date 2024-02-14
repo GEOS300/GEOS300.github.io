@@ -1,0 +1,5 @@
+ 
+$$
+\mu = \sqrt{k C}
+$${#eq-Thermal-Admittance}
+

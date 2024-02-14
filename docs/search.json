@@ -234,7 +234,7 @@
     "href": "Resources.html#fouriers-law",
     "title": "Programming Resources",
     "section": "Fouriers Law",
-    "text": "Fouriers Law\n\\[\nH_G = -k \\frac{T_2 - T_1}{z_2 - z_1}\n\\tag{16}\\]",
+    "text": "Fouriers Law\n\\[\nH_G = -k \\small\\frac{T_2 - T_1}{z_2 - z_1}\n\\tag{16}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -256,7 +256,7 @@
     "href": "Resources.html#heat-capacity-soil",
     "title": "Programming Resources",
     "section": "Heat Capacity Soil",
-    "text": "Heat Capacity Soil\n\\[\nC_{soil}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\tag{18}\\]",
+    "text": "Heat Capacity Soil\n\\[\nC_{s}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\tag{18}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -465,7 +465,7 @@
     "href": "Resources.html#soil-heat-flux-divergence",
     "title": "Programming Resources",
     "section": "Soil Heat Flux Divergence",
-    "text": "Soil Heat Flux Divergence\n\\[\n\\frac{\\Delta T_s}{\\Delta t} =  \\frac{1}{C_s}\\frac{\\Delta H_g}{\\Delta z}\n\\tag{37}\\]",
+    "text": "Soil Heat Flux Divergence\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  \\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\tag{37}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -476,7 +476,7 @@
     "href": "Resources.html#soil-heat-flux",
     "title": "Programming Resources",
     "section": "Soil Heat Flux",
-    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s_z} \\frac{\\Delta T_{s_z}}{\\Delta t}\n\\tag{38}\\]",
+    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\tag{38}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -637,11 +637,33 @@
     ]
   },
   {
+    "objectID": "Resources.html#thermal-admittance-v-temperature",
+    "href": "Resources.html#thermal-admittance-v-temperature",
+    "title": "Programming Resources",
+    "section": "Thermal Admittance v Temperature",
+    "text": "Thermal Admittance v Temperature\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\tag{53}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#thermal-admittance",
+    "href": "Resources.html#thermal-admittance",
+    "title": "Programming Resources",
+    "section": "Thermal Admittance",
+    "text": "Thermal Admittance\n\\[\n\\mu = \\sqrt{k C}\n\\tag{54}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
     "objectID": "Resources.html#thermal-diffusivity",
     "href": "Resources.html#thermal-diffusivity",
     "title": "Programming Resources",
     "section": "Thermal Diffusivity",
-    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{53}\\]",
+    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{55}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -652,7 +674,7 @@
     "href": "Resources.html#lmst",
     "title": "Programming Resources",
     "section": "LMST",
-    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{54}\\]",
+    "text": "LMST\n\\[\nLMST = (TZ) - (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{56}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -663,7 +685,7 @@
     "href": "Resources.html#lat",
     "title": "Programming Resources",
     "section": "LAT",
-    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{55}\\]",
+    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{57}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -674,7 +696,7 @@
     "href": "Resources.html#delta-lat",
     "title": "Programming Resources",
     "section": "Delta LAT",
-    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{56}\\]",
+    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{58}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -685,7 +707,7 @@
     "href": "Resources.html#weins-law",
     "title": "Programming Resources",
     "section": "Weins Law",
-    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{57}\\]",
+    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{59}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -780,7 +802,7 @@
     "href": "Lectures/08.html#c-and-c-of-soil-materials",
     "title": "Soil Thermal Properties",
     "section": "\\(C\\) and \\(c\\) of soil materials",
-    "text": "\\(C\\) and \\(c\\) of soil materials\n\n\n\n\nTable 1: Heat caqacity and specific heat of selected substances\n\n\n\n\n\n\n\n\n\n\n\n\nMaterial\nHeat capacity C MJ kg-1 K-1\nSpecific heat c kJ kg-1 K-1\nDensity ρ Mg m-3\n\n\n\n\nAir\n0.0012\n1.01\n0.0012\n\n\nWater (liquid)\n4.1800\n4.18\n1.0000\n\n\nIce\n1.9000\n2.10\n0.9000\n\n\nMineral soil\n2.1000\n0.80\n2.6500\n\n\nOrganic soil\n2.5000\n1.90\n1.3000\n\n\nRock\n2.0000\n0.80\n2.7000\n\n\n\n\n\n\n\n\n\nHeat capacity (C) relates to the ability of a substance to store heat and expresses the temperature change produced as a result of gaining or losing heat Where it is clear that, compared to most other materials, water requires a large heat input to effect a given change in temperature whereas air requires very little. C = c*density The value of C for a soil can be calculated by evaluating the fractions of soil solid, water and air.",
+    "text": "\\(C\\) and \\(c\\) of soil materials\n\n\n\n\nTable 1: Heat caqacity and specific heat of selected substances\n\n\n\n\n\n\n\n\n\n\n\n\nMaterial\nHeat capacity C MJ m-3 K-1\nSpecific heat c kJ kg-1 K-1\nDensity ρ Mg m-3\n\n\n\n\nAir\n0.0012\n1.01\n0.0012\n\n\nWater (liquid)\n4.1800\n4.18\n1.0000\n\n\nIce\n1.9000\n2.10\n0.9000\n\n\nMineral soil\n2.1000\n0.80\n2.6500\n\n\nOrganic soil\n2.5000\n1.90\n1.3000\n\n\nRock\n2.0000\n0.80\n2.7000\n\n\n\n\n\n\n\n\n\nHeat capacity (C) relates to the ability of a substance to store heat and expresses the temperature change produced as a result of gaining or losing heat Where it is clear that, compared to most other materials, water requires a large heat input to effect a given change in temperature whereas air requires very little. C = c*density The value of C for a soil can be calculated by evaluating the fractions of soil solid, water and air.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -805,6 +827,18 @@
     "title": "Soil Thermal Properties",
     "section": "Volume Fractions and Porosity",
     "text": "Volume Fractions and Porosity\nGiven a sample of know volume and mass, we can determine the fractional composition by:\n\n\n\nOven-drying soil samples to get \\(\\theta_w\\)\nBurning the dried sample in a furnace to get \\(\\theta_o\\)\nThe residual will give us \\(\\theta_m\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#bulk-density",
+    "href": "Lectures/08.html#bulk-density",
+    "title": "Soil Thermal Properties",
+    "section": "Bulk Density",
+    "text": "Bulk Density\nGiven a “wet” soil sample of know volume (\\(V\\)) and mass (\\(M\\)), we can calculate it’s “wet bulk density” \\(\\rho_w = \\frac{M}{V}\\).\n\nUpon drying the sample, we can re-weigh the sample to get it’s dry mass (\\(M_{dry}\\)), i.e., the mass of all the soil grains.\n\nW can then get its “dry bulk density” \\(\\small\\rho_{dry} = \\frac{M_{dry}}{V}\\), where \\(V\\) is fixed to the original value.\nPorosity will be inversely related to \\(\\rho_{dry}\\)\n\nHigher \\(\\rho_{dry}\\) means lower \\(\\theta_P\\) and vice versa.\n\n\nUpon firing the sample, you can get the mass fractions of mineral \\(M_m\\) and organic \\(M_o\\) to determine the % organic content",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -852,7 +886,7 @@
     "href": "Lectures/08.html#heat-capacity-and-soil-water-content",
     "title": "Soil Thermal Properties",
     "section": "Heat capacity and soil water content",
-    "text": "Heat capacity and soil water content\n\n\n\nWhat is the slope of the line?\nWhat explains the offset between the lines?\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSlope = heat capacity of water Offset = related to porosity",
+    "text": "Heat capacity and soil water content\n\n\n\nWhat is the slope of the line?\nWhat explains the offset between the lines?\n\n\ntheta_w = np.linspace(0,1,25)\nplt.figure(figsize=(6,6))\nplt.plot(theta_w,get_C(.5,0,theta_w),color='black',label='Mineral Soil')\nplt.plot(theta_w,get_C(.35,.2,theta_w),color='blue',label='Mixed Soil')\nplt.plot(theta_w,get_C(0,.1,theta_w),color='green',label='Organic Soil')\nplt.ylabel(r'MJ m$^{-3}$ K$^{-1}$',fontsize=12)\nplt.xlabel(r'$\\theta_w$ %',fontsize=12)\nplt.grid()\nplt.legend(fontsize=12)\n\n\n\n\n\n\n\nRelationship between C and VWC, try the code out yourself to explore the relationship further\n\n\n\n\n\n\n\nSlope = heat capacity of water Offset = related to porosity",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -864,7 +898,7 @@
     "href": "Lectures/08.html#soil-heat-flux",
     "title": "Soil Thermal Properties",
     "section": "Soil Heat Flux",
-    "text": "Soil Heat Flux\nThe flux of heat energy through a given sil layer (\\(\\frac{H_g}{z}\\)) is a product of the layers heat capacity \\(C_z\\) and it’s rate of temperature change with time (\\(\\frac{\\Delta T_s}{t}\\)):\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\qquad(5)\\]\n\nWhy do we need to consider \\(H_{g_z}\\) on a per-layer (\\(z\\)) basis?",
+    "text": "Soil Heat Flux\nThe flux of heat energy through a given soil layer (\\(\\frac{H_g}{z}\\)) is a product of the layers heat capacity \\(C\\) and it’s rate of temperature change with time (\\(\\frac{\\Delta T_s}{t}\\)):\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\qquad(5)\\]\n\nWhy do we need to consider \\(H_{g}\\) on a per-layer (\\(z\\)) basis?",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -876,7 +910,7 @@
     "href": "Lectures/08.html#soil-heat-flux-iclikcer",
     "title": "Soil Thermal Properties",
     "section": "Soil Heat Flux (iClikcer)",
-    "text": "Soil Heat Flux (iClikcer)\nEvaluating the above code give a value of: 0.000 W m-2 Does this appear correcnt?\n\nA True\nB False",
+    "text": "Soil Heat Flux (iClikcer)\n\nC_s_g = 2 #MJ m-3 K-1\nDelta_T = 1 #K\nDelta_t = 3600 #s (1 hour)\nz = 0.01 #m (1 cm)\n\nH_g_z = C_s_g*Delta_T/Delta_t*z\n\nEvaluating the above code give a value of: 0.000 W m-2 Does this appear correct?\n\nA True\nB False",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -888,7 +922,7 @@
     "href": "Lectures/08.html#heat-flux-divergence",
     "title": "Soil Thermal Properties",
     "section": "Heat Flux Divergence",
-    "text": "Heat Flux Divergence\nAlternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\qquad(6)\\]",
+    "text": "Heat Flux Divergence\nAlternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  \\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\qquad(6)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -900,7 +934,7 @@
     "href": "Lectures/08.html#fouriers-law",
     "title": "Soil Thermal Properties",
     "section": "Fourier’s Law",
-    "text": "Fourier’s Law\nGives us the flux density of conducted heat (e.g., soil heat flux \\(H_g\\)) as a function of the temperature gradient and the thermal conductivity (\\(k\\)) in W m-1 K-1\n\\[\nH_G = -k \\frac{T_2 - T_1}{z_2 - z_1}\n\\qquad(7)\\]",
+    "text": "Fourier’s Law\nGives us the flux density of conducted heat (e.g., soil heat flux \\(H_g\\)) as a function of the temperature gradient and the thermal conductivity (\\(k\\)) in W m-1 K-1\n\\[\nH_G = -k \\small\\frac{T_2 - T_1}{z_2 - z_1}\n\\qquad(7)\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -912,7 +946,7 @@
     "href": "Lectures/08.html#fouriers-law-1",
     "title": "Soil Thermal Properties",
     "section": "Fourier’s Law",
-    "text": "Fourier’s Law\nWhat is the difference between Equation 7 and Equation 6?",
+    "text": "Fourier’s Law\nWhat is the difference between Equation 7 and Equation 5?",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -980,11 +1014,179 @@
     ]
   },
   {
+    "objectID": "Lectures/08.html#measuring-soil-heat-flux",
+    "href": "Lectures/08.html#measuring-soil-heat-flux",
+    "title": "Soil Thermal Properties",
+    "section": "Measuring Soil Heat Flux",
+    "text": "Measuring Soil Heat Flux\nTheoretically, soil heat flux could be simply measured using a vertical array of thermocouples using Fourier’s law.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#measuring-soil-heat-flux-1",
+    "href": "Lectures/08.html#measuring-soil-heat-flux-1",
+    "title": "Soil Thermal Properties",
+    "section": "Measuring Soil Heat Flux",
+    "text": "Measuring Soil Heat Flux\nPractically, the problem is the variably \\(k\\) with water content. Requires continuous measurements of soil volumetric water content \\(\\theta_w\\).\n\n\\(\\theta_w\\) can be measured precisely in a lab using the gravimetric method or approximated in the field using time domain refractometry (TDR)\n\nTDR is an indirect measure based on the travel time of a high frequency electromagnetic pulse through the soil",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#measuring-soil-heat-flux-2",
+    "href": "Lectures/08.html#measuring-soil-heat-flux-2",
+    "title": "Soil Thermal Properties",
+    "section": "Measuring Soil Heat Flux",
+    "text": "Measuring Soil Heat Flux\nSoil heat flux plates provide a more direct measure of \\(H_g\\).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#measuring-soil-heat-flux-3",
+    "href": "Lectures/08.html#measuring-soil-heat-flux-3",
+    "title": "Soil Thermal Properties",
+    "section": "Measuring Soil Heat Flux",
+    "text": "Measuring Soil Heat Flux\nSoil heat flux plates provide a more direct measure of \\(H_g\\). The can also be used to estimate the heat capacity \\(C\\) and thermal conductivity \\(k\\) of a soil in the field following Equation 5 and Equation 7 respectively.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#estimating-c",
+    "href": "Lectures/08.html#estimating-c",
+    "title": "Soil Thermal Properties",
+    "section": "Estimating \\(C\\)",
+    "text": "Estimating \\(C\\)\n\\(T_s\\) at 5 and 10 cm at 12:00 are 4.18 and 1.98 \\(^{\\circ}C\\) respectively; 1 hour later they are 4.83 and 2.45 \\(^{\\circ}C\\) respectively. Mean \\(H_g\\) over the interval is 18.035 \\(W m^{-2}C\\). Approximate \\(C\\)\n\nT_1 = (4.18+1.98)/2 # Average temperature (deg C) between 5cm and 10cm at 12:00\nT_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00\nH_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval \n\nDelta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval\nC_s = H_g/.05/Delta_T * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ\n\nsprintf('C = %.2f MJ m-3 K-1',C_s)\n\n[1] \"C = 0.00 MJ m-3 K-1\"",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#estimating-k-iclicker",
+    "href": "Lectures/08.html#estimating-k-iclicker",
+    "title": "Soil Thermal Properties",
+    "section": "Estimating \\(k\\) (iClicker)",
+    "text": "Estimating \\(k\\) (iClicker)\nAt 12:00 \\(T_s\\) at 5 and 10 cm are 4 and 5 \\(^{\\circ}C\\) respectively and “instantaneous” \\(H_g\\) is 15 \\(W m^{-2}C\\). Approximate \\(k\\)\n\nT_1 = 4 #C\nz_1 = 5 #cm\nT_2 = 2 #C\nz_2 = 10 #cm\nH_g = 15 #Wm-2\n\n# Rearrange Fourier's Law\nk = -(z_1-z_2)/(T_2-T_1)*H_g\n\nsprintf('k = %.2f W m-1 K-1',k)\n\n[1] \"k = -37.50 W m-1 K-1\"\n\n\nWhat’s the issue here?\n\nA Looks correct\nB Didn’t convert from K to C\nC Didn’t convert from cm to m",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#soil-thermal-admittance-mu",
+    "href": "Lectures/08.html#soil-thermal-admittance-mu",
+    "title": "Soil Thermal Properties",
+    "section": "Soil Thermal Admittance \\(\\mu\\)",
+    "text": "Soil Thermal Admittance \\(\\mu\\)\nThe ability of the soil surface to accept or release heat following a change in soil heat flux (\\(H_G\\)). How well it can “soak it up” without changing temperature much. It is given by:\n\\[\n\\mu = \\sqrt{k C}\n\\qquad(9)\\]\n\n\\(\\mu\\) is the soil thermal admittance; \\(k\\) is the thermal conductivity and \\(C\\) is the heat capacity\n\nNote the similarities to thermal diffusivity Equation 8\nUnits: J m-2 K-1 s-1/2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#thermal-admittance-and-surface-temperature",
+    "href": "Lectures/08.html#thermal-admittance-and-surface-temperature",
+    "title": "Soil Thermal Properties",
+    "section": "Thermal Admittance and Surface Temperature ",
+    "text": "Thermal Admittance and Surface Temperature \nFor a change in soil heat flux (i.e., \\(\\Delta H_G\\)), the change in surface temperature (\\(\\Delta T_s\\)) is inversely proportional to \\(\\mu\\) \n\n\n\nFor the same energy added:\n\nSoil with a low \\(\\mu\\) warms and cools more rapidly\nSoil with a high \\(\\mu\\) warms and cools more slowly\n\n\n\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\qquad(10)\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#mu-vs-theta_w",
+    "href": "Lectures/08.html#mu-vs-theta_w",
+    "title": "Soil Thermal Properties",
+    "section": "\\(\\mu\\) vs \\(\\theta_w\\)",
+    "text": "\\(\\mu\\) vs \\(\\theta_w\\)\n\nThermal admittance \\(\\mu\\) of soil vs. volumetric water content \\(\\theta_w\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#surface-temperature-vs-theta_w",
+    "href": "Lectures/08.html#surface-temperature-vs-theta_w",
+    "title": "Soil Thermal Properties",
+    "section": "Surface temperature vs \\(\\theta_w\\)",
+    "text": "Surface temperature vs \\(\\theta_w\\)\n\nSurface temperature change vs. volumetric water content \\(\\theta_w\\) over a night with 0.5 MJ radiative cooling",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#surface-temperature-vs-theta_w-iclicker",
+    "href": "Lectures/08.html#surface-temperature-vs-theta_w-iclicker",
+    "title": "Soil Thermal Properties",
+    "section": "Surface temperature vs \\(\\theta_w\\) (iClicker)",
+    "text": "Surface temperature vs \\(\\theta_w\\) (iClicker)\nGiven the plot on the previous slide, at any equivalent value of \\(\\theta_w\\), which soil would better prevent frost damage on a calm clear night?\n\nA Organic\nB Mineral",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#temperature-waves",
+    "href": "Lectures/08.html#temperature-waves",
+    "title": "Soil Thermal Properties",
+    "section": "Temperature Waves",
+    "text": "Temperature Waves\nThe variation of temperature with depth can be thought of as waves moving down through the soil in response to radiation “forcing” at the surface.\n\nThere are annual waves, diurnal waves, and waves with shorter periods due to clouds\nIn typical mineral soils:\n\nAnnual waves penetrate to ~ 10 m\nDiurnal waves to ~ 50 cm\nCloud waves to ~ 5 cm",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#annual-waves",
+    "href": "Lectures/08.html#annual-waves",
+    "title": "Soil Thermal Properties",
+    "section": "Annual Waves",
+    "text": "Annual Waves\n\n\n\n\nMean soil temperatures by month in Burns Bog",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
+    "objectID": "Lectures/08.html#shorter-timescale-waves",
+    "href": "Lectures/08.html#shorter-timescale-waves",
+    "title": "Soil Thermal Properties",
+    "section": "Shorter Timescale Waves",
+    "text": "Shorter Timescale Waves\n\n\n\n\nSoil temperatures in Burns Bog, June 2023",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Soil Thermal Properties"
+    ]
+  },
+  {
     "objectID": "Lectures/08.html#summarzign-thermal-properties",
     "href": "Lectures/08.html#summarzign-thermal-properties",
     "title": "Soil Thermal Properties",
     "section": "Summarzign Thermal Properties",
-    "text": "Summarzign Thermal Properties\nHow rapidly does a volume warm when a certain amount of energy is supplied?\n\nHeat Capacity \\(C\\)\n\nHow well does heat conduct from one depth to another for a given temperature gradient?\n\nThermal conductivity \\(k\\)\n\nHow rapidly does a soil warm at depth if energy is available at the surface?:\n\nThermal diffusivity \\(K\\)\n\n\n-Heat capacity (C) -Thermal conductivity (k) -Thermal diffusivity (kappa): The thermal diffusivity of the soil is its ability to diffuse thermal influences",
+    "text": "Summarzign Thermal Properties\nHow rapidly does a volume warm when a certain amount of energy is supplied?\n\nHeat Capacity \\(C\\)\n\nHow well does heat conduct from one depth to another for a given temperature gradient?\n\nThermal conductivity \\(k\\)\n\nHow rapidly does a soil warm at depth if energy is available at the surface?\n\nThermal diffusivity \\(K\\)\n\n\n-Heat capacity (C) -Thermal conductivity (k) -Thermal diffusivity (kappa): The thermal diffusivity of the soil is its ability to diffuse thermal influences",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -2134,13 +2336,240 @@
     ]
   },
   {
-    "objectID": "Assignments/index.html",
-    "href": "Assignments/index.html",
-    "title": "Assignments",
+    "objectID": "AssignmentsR_out/01.html",
+    "href": "AssignmentsR_out/01.html",
+    "title": "Assignment 1",
     "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "text": "Python and R code templates be found here to help get you started."
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#instructions",
+    "href": "AssignmentsR_out/01.html#instructions",
+    "title": "Assignment 1",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units."
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "title": "Assignment 1",
+    "section": "CA DBB Flux Station",
+    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html#question-5",
+    "href": "AssignmentsR_out/01.html#question-5",
+    "title": "Assignment 1",
+    "section": "Question 5",
+    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for the center point of this observation period (12:45). Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n# Create a scatter plot\n\n# p &lt;- ggplot(Selection, aes(x=TA_1_1_1, y=TS_1)) + geom_point()\n# p + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_ex\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n# Code Tip: getting the time and value when a variable reaches it's maximum\n\n# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LS_{\\downarrow}\\)? How well do these approximations match with what we actually observed?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "Assignments/02.html",
+    "href": "Assignments/02.html",
+    "title": "Assignment 2",
+    "section": "",
+    "text": "Python and R code templates be found here to help get you started.",
     "crumbs": [
-      "Assignments"
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#instructions",
+    "href": "Assignments/02.html#instructions",
+    "title": "Assignment 2",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#westham-island-energy-balance",
+    "href": "Assignments/02.html#westham-island-energy-balance",
+    "title": "Assignment 2",
+    "section": "Westham Island Energy Balance",
+    "text": "Westham Island Energy Balance\nYou have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (Table 1). Refer to the metadata for a description of the data with variable names, units, and sensor depths. You can see this lecture slide for a photo of the station.\nThe soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is \\(P=0.57\\), bulk density of the dry soil is \\(\\rho_{dry} = 1.13\\) Mg m\\(^{-3}\\). The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.\n\n\n\nTable 1: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format. The filename for your date will follow this format: YYYYMMDD.txt. e.g., 20240214.txt would be the file for February 14th, 2023. If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYMMDD)\n\n\n\n\n0\n20090614\n\n\n1\n20090630\n\n\n2\n20090701\n\n\n3\n20090702\n\n\n4\n20090711\n\n\n5\n20090716\n\n\n6\n20090721\n\n\n7\n20090729\n\n\n8\n20090730\n\n\n9\n20090802\n\n\n\n\n\n\n\n\n\nData imported and gap-filled successfully.\n\n\n\n\n\n\n\n\n\nT_1\nT_2\nT_3\nT_4\nH_g\nWVC\nR_n\nH\nH_filled\n\n\nTIME(PST)\n\n\n\n\n\n\n\n\n\n\n\n\n\n2009-03-24 00:15:00\n0.844\n1.110\n1.383\n1.313\n-1.88\n0.366\n-1.2\nNaN\n-40.7\n\n\n2009-03-24 00:30:00\n0.822\n1.112\n1.372\n1.307\n-1.86\n0.367\n-1.5\n-40.7\n-40.7\n\n\n2009-03-24 00:45:00\n0.817\n1.089\n1.358\n1.316\n-1.89\n0.367\n-2.1\nNaN\n-28.5\n\n\n2009-03-24 01:00:00\n0.797\n1.093\n1.381\n1.330\n-1.98\n0.367\n-2.1\n-16.3\n-16.3\n\n\n2009-03-24 01:15:00\n0.788\n1.060\n1.382\n1.333\n-2.12\n0.368\n-1.8\nNaN\n-6.2",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-1",
+    "href": "Assignments/02.html#question-1",
+    "title": "Assignment 2",
+    "section": "Question 1",
+    "text": "Question 1\nRun the code block above, making sure you’ve edited the file name so that it corresponds to your assigned date (Table 1). Then in the space below, calculate descriptive statistics for the all the variables in the dataset. Comment on the mean value and the range (max-min) of the four soil temperature variables. Hint you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-2",
+    "href": "Assignments/02.html#question-2",
+    "title": "Assignment 2",
+    "section": "Question 2",
+    "text": "Question 2\nFirst we’ll make a plot of net radiation (\\(R_n\\)), sensible heat flux (\\(H\\)), and ground heat flux (\\(H_g\\)). Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.\n\n\nText(0.5, 0, 'Time')",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-3",
+    "href": "Assignments/02.html#question-3",
+    "title": "Assignment 2",
+    "section": "Question 3",
+    "text": "Question 3\nUsing the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period. Describe the patterns you see here: discuss how the soil changes with depth and through time over this day.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-4",
+    "href": "Assignments/02.html#question-4",
+    "title": "Assignment 2",
+    "section": "Question 4",
+    "text": "Question 4\nThe code block below will give the first and last record in the dataset. You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e. the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.\n\n\n\n\n\n\n\n\n\nT_1\nT_2\nT_3\nT_4\n\n\nTIME(PST)\n\n\n\n\n\n\n\n\n2009-03-24 00:15:00\n0.844\n1.110\n1.383\n1.313\n\n\n2009-03-25 00:00:00\n2.114\n2.516\n2.351\n1.317",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-5",
+    "href": "Assignments/02.html#question-5",
+    "title": "Assignment 2",
+    "section": "Question 5",
+    "text": "Question 5\nUsing daily average soil temperature for each of the four depths (\\(T_1\\) to \\(T_4\\)), determine the direction (away from or towards the ground surface) of the daily total \\(H_g\\) in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-6",
+    "href": "Assignments/02.html#question-6",
+    "title": "Assignment 2",
+    "section": "Question 6",
+    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(2\\).\n\n\n\n\n\n\n\n\n\nT_1\nT_2\nT_3\nT_4\n\n\nTIME(PST)\n\n\n\n\n\n\n\n\n2009-03-24 00:15:00\n0.844\n1.110\n1.383\n1.313\n\n\n2009-03-25 00:00:00\n2.114\n2.516\n2.351\n1.317",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-7",
+    "href": "Assignments/02.html#question-7",
+    "title": "Assignment 2",
+    "section": "Question 7",
+    "text": "Question 7\nFind a method to estimate the thermal conductivity of the soil \\(k\\) at noon that day. Is \\(k\\) constant throughout the day?",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-8",
+    "href": "Assignments/02.html#question-8",
+    "title": "Assignment 2",
+    "section": "Question 8",
+    "text": "Question 8\nFind a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated \\(k\\) in the question above, calculate the soil’s heat capacity \\(C\\) assuming sinusoidal soil temperature waves.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-9",
+    "href": "Assignments/02.html#question-9",
+    "title": "Assignment 2",
+    "section": "Question 9",
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in Question 5? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-10",
+    "href": "Assignments/02.html#question-10",
+    "title": "Assignment 2",
+    "section": "Question 10",
+    "text": "Question 10\nWith \\(C\\) from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5% of the amplitude of the sinusoidal surface temperature wave.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-11",
+    "href": "Assignments/02.html#question-11",
+    "title": "Assignment 2",
+    "section": "Question 11",
+    "text": "Question 11\nThe soil heat flux density \\(H_g\\) is not measured at the surface, but rather at 7.5 cm depth. Using \\(\\Delta T_1 / \\Delta t\\) as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface \\(H_{g(0)}\\) at 10:00 and at 19:00.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-12",
+    "href": "Assignments/02.html#question-12",
+    "title": "Assignment 2",
+    "section": "Question 12",
+    "text": "Question 12\nWhat fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig. 4 in the reading package (Lectures 11-13) to support your answer.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-13",
+    "href": "Assignments/02.html#question-13",
+    "title": "Assignment 2",
+    "section": "Question 13",
+    "text": "Question 13\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-14",
+    "href": "Assignments/02.html#question-14",
+    "title": "Assignment 2",
+    "section": "Question 14",
+    "text": "Question 14\nPredict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences?",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-15",
+    "href": "Assignments/02.html#question-15",
+    "title": "Assignment 2",
+    "section": "Question 15",
+    "text": "Question 15\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
+    ]
+  },
+  {
+    "objectID": "Assignments/02.html#question-16",
+    "href": "Assignments/02.html#question-16",
+    "title": "Assignment 2",
+    "section": "Question 16",
+    "text": "Question 16\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 2"
     ]
   },
   {
@@ -2199,32 +2628,147 @@
     ]
   },
   {
-    "objectID": "AssignmentsR_out/01.html",
-    "href": "AssignmentsR_out/01.html",
-    "title": "Assignment 1",
+    "objectID": "Assignments/index.html",
+    "href": "Assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-01\n2024-03-22\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "crumbs": [
+      "Assignments"
+    ]
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html",
+    "href": "AssignmentsR_out/02.html",
+    "title": "Assignment 2",
     "section": "",
     "text": "Python and R code templates be found here to help get you started."
   },
   {
-    "objectID": "AssignmentsR_out/01.html#instructions",
-    "href": "AssignmentsR_out/01.html#instructions",
-    "title": "Assignment 1",
+    "objectID": "AssignmentsR_out/02.html#instructions",
+    "href": "AssignmentsR_out/02.html#instructions",
+    "title": "Assignment 2",
     "section": "Instructions",
     "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units."
   },
   {
-    "objectID": "AssignmentsR_out/01.html#ca-dbb-flux-station",
-    "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
-    "title": "Assignment 1",
-    "section": "CA DBB Flux Station",
-    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "objectID": "AssignmentsR_out/02.html#westham-island-energy-balance",
+    "href": "AssignmentsR_out/02.html#westham-island-energy-balance",
+    "title": "Assignment 2",
+    "section": "Westham Island Energy Balance",
+    "text": "Westham Island Energy Balance\nYou have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (Table 1). Refer to the metadata for a description of the data with variable names, units, and sensor depths. You can see this lecture slide for a photo of the station.\nThe soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is \\(P=0.57\\), bulk density of the dry soil is \\(\\rho_{dry} = 1.13\\) Mg m\\(^{-3}\\). The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.\n\n\n\nTable 1: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format. The filename for your date will follow this format: YYYYMMDD.txt. e.g., 20240214.txt would be the file for February 14th, 2023. If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYMMDD)\n\n\n\n\n0\n20090614\n\n\n1\n20090630\n\n\n2\n20090701\n\n\n3\n20090702\n\n\n4\n20090711\n\n\n5\n20090716\n\n\n6\n20090721\n\n\n7\n20090729\n\n\n8\n20090730\n\n\n9\n20090802\n\n\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\n# Import the data from github & parse the timestamp for each record\n## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'\ndf &lt;- read.csv(file = data_url,na.strings=\"-9999\")\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIME.PST.,format = \"%Y/%m/%d %H:%M\")\n\n# All sub-surface data were collected at the same frequency (15-minute intervals).  \n# However, H data were only available at 30-minute resolution.  \n# So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   \n# Use linear interpolation to estimate missing H values where available\ndf$H_filled = na.approx(df$H,na.rm=FALSE)\n# Backfill where linear interpolation didn't work (the first observation)\ndf$H_filled = na.locf(df$H_filled,fromLast=TRUE)\n\nprint('Data imported and gap-filled successfully.')\n\nhead(df)"
   },
   {
-    "objectID": "AssignmentsR_out/01.html#question-5",
-    "href": "AssignmentsR_out/01.html#question-5",
-    "title": "Assignment 1",
+    "objectID": "AssignmentsR_out/02.html#question-1",
+    "href": "AssignmentsR_out/02.html#question-1",
+    "title": "Assignment 2",
+    "section": "Question 1",
+    "text": "Question 1\nRun the code block above, making sure you’ve edited the file name so that it corresponds to your assigned date (Table 1). Then in the space below, calculate descriptive statistics for the all the variables in the dataset. Comment on the mean value and the range (max-min) of the four soil temperature variables. Hint you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-2",
+    "href": "AssignmentsR_out/02.html#question-2",
+    "title": "Assignment 2",
+    "section": "Question 2",
+    "text": "Question 2\nFirst we’ll make a plot of net radiation (\\(R_n\\)), sensible heat flux (\\(H\\)), and ground heat flux (\\(H_g\\)). Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.\n\nplot_energy_fluxes &lt;- melt(\n  df[,c('TIME.PST.','R_n','H_filled','H_g')],\n  id=\"TIME.PST.\")\n\np1 &lt;- ggplot(plot_energy_fluxes, aes(x = TIME.PST., y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'),values = c('black','red','blue')) +\n  scale_linetype_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'), values = c(\"solid\",\"dotted\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = \"W m-2 s-1\",x='Time')\n\np1 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-3",
+    "href": "AssignmentsR_out/02.html#question-3",
+    "title": "Assignment 2",
+    "section": "Question 3",
+    "text": "Question 3\nUsing the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period. Describe the patterns you see here: discuss how the soil changes with depth and through time over this day.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-4",
+    "href": "AssignmentsR_out/02.html#question-4",
+    "title": "Assignment 2",
+    "section": "Question 4",
+    "text": "Question 4\nThe code block below will give the first and last record in the dataset. You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e. the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-5",
+    "href": "AssignmentsR_out/02.html#question-5",
+    "title": "Assignment 2",
     "section": "Question 5",
-    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_ex\\) for the center point of this observation period (12:45). Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_ex\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n# Create a scatter plot\n\n# p &lt;- ggplot(Selection, aes(x=TA_1_1_1, y=TS_1)) + geom_point()\n# p + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_ex\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n# Code Tip: getting the time and value when a variable reaches it's maximum\n\n# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LS_{\\downarrow}\\)? How well do these approximations match with what we actually observed?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 5\nUsing daily average soil temperature for each of the four depths (\\(T_1\\) to \\(T_4\\)), determine the direction (away from or towards the ground surface) of the daily total \\(H_g\\) in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-6",
+    "href": "AssignmentsR_out/02.html#question-6",
+    "title": "Assignment 2",
+    "section": "Question 6",
+    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(2\\).\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-7",
+    "href": "AssignmentsR_out/02.html#question-7",
+    "title": "Assignment 2",
+    "section": "Question 7",
+    "text": "Question 7\nFind a method to estimate the thermal conductivity of the soil \\(k\\) at noon that day. Is \\(k\\) constant throughout the day?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-8",
+    "href": "AssignmentsR_out/02.html#question-8",
+    "title": "Assignment 2",
+    "section": "Question 8",
+    "text": "Question 8\nFind a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated \\(k\\) in the question above, calculate the soil’s heat capacity \\(C\\) assuming sinusoidal soil temperature waves.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-9",
+    "href": "AssignmentsR_out/02.html#question-9",
+    "title": "Assignment 2",
+    "section": "Question 9",
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in Question 5? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-10",
+    "href": "AssignmentsR_out/02.html#question-10",
+    "title": "Assignment 2",
+    "section": "Question 10",
+    "text": "Question 10\nWith \\(C\\) from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5% of the amplitude of the sinusoidal surface temperature wave.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-11",
+    "href": "AssignmentsR_out/02.html#question-11",
+    "title": "Assignment 2",
+    "section": "Question 11",
+    "text": "Question 11\nThe soil heat flux density \\(H_g\\) is not measured at the surface, but rather at 7.5 cm depth. Using \\(\\Delta T_1 / \\Delta t\\) as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface \\(H_{g(0)}\\) at 10:00 and at 19:00.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-12",
+    "href": "AssignmentsR_out/02.html#question-12",
+    "title": "Assignment 2",
+    "section": "Question 12",
+    "text": "Question 12\nWhat fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig. 4 in the reading package (Lectures 11-13) to support your answer.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-13",
+    "href": "AssignmentsR_out/02.html#question-13",
+    "title": "Assignment 2",
+    "section": "Question 13",
+    "text": "Question 13\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-14",
+    "href": "AssignmentsR_out/02.html#question-14",
+    "title": "Assignment 2",
+    "section": "Question 14",
+    "text": "Question 14\nPredict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-15",
+    "href": "AssignmentsR_out/02.html#question-15",
+    "title": "Assignment 2",
+    "section": "Question 15",
+    "text": "Question 15\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-16",
+    "href": "AssignmentsR_out/02.html#question-16",
+    "title": "Assignment 2",
+    "section": "Question 16",
+    "text": "Question 16\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "Lectures/01.html#learning-objectives",
@@ -3803,7 +4347,7 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\n\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"

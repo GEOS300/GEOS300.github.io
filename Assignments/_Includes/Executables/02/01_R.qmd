@@ -1,0 +1,23 @@
+
+```{r}
+#| warning: false
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'
+df <- read.csv(file = data_url,na.strings="-9999")
+
+# We have to parse the timestamp explicitly to convert it to a "time aware" object
+df$TIMESTAMP <- as.POSIXct(df$TIME.PST.,format = "%Y/%m/%d %H:%M")
+
+# All sub-surface data were collected at the same frequency (15-minute intervals).  
+# However, H data were only available at 30-minute resolution.  
+# So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   
+# Use linear interpolation to estimate missing H values where available
+df$H_filled = na.approx(df$H,na.rm=FALSE)
+# Backfill where linear interpolation didn't work (the first observation)
+df$H_filled = na.locf(df$H_filled,fromLast=TRUE)
+
+print('Data imported and gap-filled successfully.')
+
+head(df)
+```

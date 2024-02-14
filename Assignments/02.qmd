@@ -1,0 +1,147 @@
+---
+title: "Assignment 2"
+subtitle: "GEOS 300, 2024"
+jupyter: python3
+execute:
+  keep-ipynb: true
+echo: false
+---
+
+[Python and R code templates be found here](https://github.com/GEOS300/Assignment02) to help get you started.
+
+{{< include _Includes/Instructions.qmd >}}
+
+## Westham Island Energy Balance 
+
+You have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (@tbl-dates).  Refer to the [metadata](https://github.com/GEOS300/AssignmentData/blob/main/WesthamIslandSoilData/Metadata.txt) for a description of the data with variable names, units, and sensor depths.  You can see this [lecture slide](https://geos300.github.io/Lectures/06.html#/24) for a photo of the station.  
+
+The soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is $P=0.57$, bulk density of the dry soil is $\rho_{dry} = 1.13$ Mg m$^{-3}$. The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.
+
+Last digit of student number | date (YYYMMDD)
+-----------------------------|-----
+0|20090614
+1|20090630
+2|20090701
+3|20090702
+4|20090711
+5|20090716
+6|20090721
+7|20090729
+8|20090730
+9|20090802
+
+: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format.  The filename for your date will follow this format: YYYYMMDD.txt.  e.g., 20240214.txt would be the file for February 14th, 2023.  If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files [here](https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData). {#tbl-dates}
+
+
+---
+
+{{< include _Includes/Executables/Student_Info_py.qmd >}}
+
+{{< include _Includes/Executables/Import_py.qmd >}}
+
+{{< include _Includes/Executables/02/01_py.qmd >}}
+
+## Question 1
+
+Run the code block above, making sure you've edited the file name so that it corresponds to **your assigned date** (@tbl-dates).  Then in the space below, calculate descriptive statistics for the all the variables in the dataset.  Comment on the mean value and the range (max-min) of the four soil temperature variables.  **Hint** you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+
+## Question 2
+
+First we'll make a plot of net radiation ($R_n$), sensible heat flux ($H$), and ground heat flux ($H_g$).  Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.
+
+{{< include _Includes/Executables/02/02_py.qmd >}}
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 3
+
+Using the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period.  Describe the patterns you see here: discuss how the soil changes with depth and through time over this day. 
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 4
+
+The code block below will give the first and last record in the dataset.  You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e. the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.
+
+{{< include _Includes/Executables/02/04_py.qmd >}}
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 5
+
+Using daily average soil temperature for each of the four depths ($T_1$ to $T_4$), determine the direction (away from or towards the ground surface) of the daily total $H_g$ in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 6
+
+Calculate the daily total of $H_g$ at 7.5 cm depth in $\textrm{MJ}\, \textrm{m}^{-2}\, \textrm{day}^{-1}$ using the measured values from the soil heat flux plate. Compare the direction of $H_g$ to the direction of the heat flux obtained for the 5 -10 cm layer in question $2$.
+
+{{< include _Includes/Executables/02/04_py.qmd >}}
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+
+## Question 7
+
+Find a method to estimate the thermal conductivity of the soil $k$ at noon that day. Is $k$ constant throughout the day?
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 8
+
+Find a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated $k$ in the question above, calculate the soil's heat capacity $C$ assuming sinusoidal soil temperature waves.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 9
+
+Calculate the heat capacity $C$ of the soil using the lab analysis results (see introduction text) and measured soil water content $\theta_w$. Does your value obtained agree with $C$ calculated based on the phase-shift in Question 5? Why or why not?  **Note** For subsequent calculations, use the value of $C$ from your answer to **this question**, and not $C$ from your answer to the previous question.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 10
+
+With $C$ from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5\% of the amplitude of the sinusoidal surface temperature wave.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 11
+
+The soil heat flux density $H_g$ is not measured at the surface, but rather at 7.5 cm depth. Using $\Delta T_1 / \Delta t$ as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface $H_{g(0)}$ at 10:00 and at 19:00.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 12
+
+What fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig.\ 4 in the reading package (Lectures 11-13) to support your answer.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+
+## Question 13
+
+Draw a graph of $R_n$ ($x$-axis) against $H_g$ ($y$-axis). Might we use $R_n$ to predict $H_g$ at 7.5 cm depth? What do we call this curve's characteristic? Explain the physical reason for the curve's shape. 
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 14
+
+Predict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences? 
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 15
+
+Calculate the thermal admittance of the atmosphere $\mu_a$ at noon.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
+
+## Question 16
+
+The Bowen ratio $\beta$ describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e.\ $\beta = H/LE$. Calculate $\beta$ from the available data for noon that day. Neglect the energy use for photosynthesis.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}

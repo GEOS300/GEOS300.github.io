@@ -1,0 +1,22 @@
+
+
+```{python}
+
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'
+# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
+df = pd.read_csv(data_url,parse_dates=['TIME(PST)'],index_col=['TIME(PST)'],na_values=-9999)
+
+# All sub-surface data were collected at the same frequency (15-minute intervals).  
+# However, H data were only available at 30-minute resolution.  
+# So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   
+# Use linear interpolation to estimate missing H values where possible.
+df['H_filled'] = df['H'].interpolate()
+# Backfill where linear interpolation doesn't work (the first observation)
+df['H_filled'] = df['H_filled'].bfill()
+
+print('Data imported and gap-filled successfully.')
+
+df.head()
+```

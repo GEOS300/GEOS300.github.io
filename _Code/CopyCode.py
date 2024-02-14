@@ -3,8 +3,8 @@ from distutils.dir_util import copy_tree
 import nbformat
 import re
 
-if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-    exit()
+# if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+#     exit()
 
 def R_rep(text):
     text = text.replace('\n','~~~~~~')
@@ -74,14 +74,13 @@ for In_Dir in ['Assignments/','AssignmentsR_out/']:
                 fn = file.split(".html.md")[0]
             with open(Write_Out+fn+'.Rmd','w',encoding='utf-8') as out:
                 out.write(text)
-            # os.remove(f"{In_Dir}/{file}")
+            os.remove(f"{In_Dir}/{file}")
             print(f'Converted {file} to RMD')
             mv = 1
         elif file.endswith(".ipynb"):
             nb_Rep(In_Dir+file, Write_Out+file)
-            # shutil.move(In_Dir+file, Write_Out+file)
+            shutil.move(In_Dir+file, Write_Out+file)
 
-            # os.remove(f"{In_Dir}/{file}")
             mv = 1
             print(f'Moved {file}')
             

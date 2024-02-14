@@ -214,6 +214,17 @@ Given a sample of know volume and mass, we can determine the fractional composit
 ::::
 
 
+## Bulk Density {.smaller}
+
+Given a "wet" soil sample of know volume ($V$) and mass ($M$), we can calculate it's "wet bulk density" $\rho_w = \frac{M}{V}$.
+
+* Upon drying the sample, we can re-weigh the sample to get it's dry mass ($M_{dry}$), i.e., the mass of all the soil grains.
+  + W can then get its "dry bulk density" $\small\rho_{dry} = \frac{M_{dry}}{V}$, where $V$ is fixed to the original value.
+  + Porosity will be inversely related to $\rho_{dry}$
+    - Higher $\rho_{dry}$ means lower $\theta_P$ and vice versa.
+* Upon firing the sample, you can get the mass fractions of mineral $M_m$ and organic $M_o$ to determine the % organic content
+
+
 
 
 ## Compound substances
@@ -290,7 +301,7 @@ Offset = related to porosity
 
 
 
-## Heat capacity and soil water content
+## Heat capacity and soil water content {.smaller}
 
 
 :::: {.columns}
@@ -300,14 +311,28 @@ Offset = related to porosity
 * What is the slope of the line?
 * What explains the offset between the lines?  
 
- 
 
+
+```{python}
+#| eval: false
+#| echo: true
+theta_w = np.linspace(0,1,25)
+plt.figure(figsize=(6,6))
+plt.plot(theta_w,get_C(.5,0,theta_w),color='black',label='Mineral Soil')
+plt.plot(theta_w,get_C(.35,.2,theta_w),color='blue',label='Mixed Soil')
+plt.plot(theta_w,get_C(0,.1,theta_w),color='green',label='Organic Soil')
+plt.ylabel(r'MJ m$^{-3}$ K$^{-1}$',fontsize=12)
+plt.xlabel(r'$\theta_w$ %',fontsize=12)
+plt.grid()
+plt.legend(fontsize=12)
+```
 
 
 :::
 
 ::: {.column width="50%"}
 ```{python}
+#| fig-cap: "Relationship between C and VWC, [try](https://ubc.syzygy.ca/) the code out yourself to explore the relationship further"
 theta_w = np.linspace(0,1,25)
 plt.figure(figsize=(6,6))
 plt.plot(theta_w,get_C(.5,0,theta_w),color='black',label='Mineral Soil')
@@ -334,18 +359,18 @@ Offset = related to porosity
 
 ## Soil Heat Flux
 
-The flux of heat energy through a given sil layer ($\frac{H_g}{z}$) is a product of the layers heat capacity $C_z$ and it's rate of temperature change with time ($\frac{\Delta T_s}{t}$):
+The flux of heat energy through a given soil layer ($\frac{H_g}{z}$) is a product of the layers heat capacity $C$ and it's rate of temperature change with time ($\frac{\Delta T_s}{t}$):
 
 
 {{< include ../_Equations/Soil-Heat-Flux.qmd >}}
 
-* Why do we need to consider $H_{g_z}$ on a per-layer ($z$) basis?
+* Why do we need to consider $H_{g}$ on a per-layer ($z$) basis?
 
 
 ## Soil Heat Flux (iClikcer)
 
 ```{R}
-#| echo: False
+#| echo: True
 C_s_g = 2 #MJ m-3 K-1
 Delta_T = 1 #K
 Delta_t = 3600 #s (1 hour)
@@ -354,7 +379,7 @@ z = 0.01 #m (1 cm)
 H_g_z = C_s_g*Delta_T/Delta_t*z
 ```
 
-Evaluating the above code give a value of: `r sprintf('%.3f W m<sup>-2</sup>',H_g_z)`  Does this appear correcnt?
+Evaluating the above code give a value of: `r sprintf('%.3f W m<sup>-2</sup>',H_g_z)`  Does this appear correct?
 
 * A True
 * B False
@@ -363,7 +388,7 @@ Evaluating the above code give a value of: `r sprintf('%.3f W m<sup>-2</sup>',H_
 
 Alternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:
 
-{{< include ../_Equations/Soil-Heat-Flux.qmd >}}
+{{< include ../_Equations/Soil-Heat-Flux-Divergence.qmd >}}
 
 ![](images/FluxDivergence.png)
 
@@ -427,7 +452,6 @@ Of these the soil moisture content is the only short-term variable for a given s
 
 
 :::
-
 
 
 
@@ -571,10 +595,301 @@ Soils with poor diffusivities concentrate their thermal exchanges only in the up
 Therefore, in general a wet clay has a conservative thermal climate, whereas an almost dry peat is extreme.
 
 
+:::
+
+## Measuring Soil Heat Flux
+
+Theoretically, soil heat flux could be simply measured using a vertical array of thermocouples using Fourier’s law.
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/Fouriers_law.png)
 
 
 
 :::
+
+::: {.column width="50%"}
+
+
+![](images/Thermocouple_Array.png)
+
+
+:::
+
+::::
+
+
+
+## Measuring Soil Heat Flux {.smaller}
+
+Practically, the problem is the variably $k$ with water content. Requires continuous measurements of soil volumetric water content $\theta_w$.
+
+* $\theta_w$ can be measured precisely in a lab using the gravimetric method or approximated in the field using time domain refractometry (TDR) 
+  + TDR is an indirect measure based on the travel time of a high frequency electromagnetic pulse through the soil
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/TDR.jpg)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/TDR2.jpg)
+
+
+:::
+
+::::
+
+
+## Measuring Soil Heat Flux {.smaller}
+
+Soil heat flux plates provide a more direct measure of $H_g$.
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/HFP.jpg)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+![](images/HFP2.gif)
+
+
+:::
+
+::::
+
+
+## Measuring Soil Heat Flux {.smaller}
+
+Soil heat flux plates provide a more direct measure of $H_g$.  The can also be used to estimate the heat capacity $C$ and thermal conductivity $k$ of a soil in the field following @eq-Soil-Heat-Flux and @eq-Fouriers-Law respectively.
+
+## Estimating $C$ {.smaller}
+
+$T_s$ at 5 and 10 cm at 12:00 are 4.18 and 1.98 $^{\circ}C$ respectively; 1 hour later they are 4.83 and 2.45 $^{\circ}C$ respectively.  Mean $H_g$ over the interval is 18.035 $W m^{-2}C$.  Approximate $C$
+
+```{R}
+#| echo: true
+T_1 = (4.18+1.98)/2 # Average temperature (deg C) between 5cm and 10cm at 12:00
+T_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00
+H_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval 
+
+Delta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval
+C_s = H_g/.05/Delta_T * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ
+
+sprintf('C = %.2f MJ m-3 K-1',C_s)
+```
+
+
+
+
+## Estimating $k$ (iClicker) {.smaller}
+
+At 12:00 $T_s$ at 5 and 10 cm are 4 and 5 $^{\circ}C$ respectively and "instantaneous" $H_g$ is 15 $W m^{-2}C$.  Approximate $k$
+
+
+```{R}
+#| echo: true
+T_1 = 4 #C
+z_1 = 5 #cm
+T_2 = 2 #C
+z_2 = 10 #cm
+H_g = 15 #Wm-2
+
+# Rearrange Fourier's Law
+k = -(z_1-z_2)/(T_2-T_1)*H_g
+
+sprintf('k = %.2f W m-1 K-1',k)
+
+```
+
+What's the issue here?
+
+* A Looks correct
+* B Didn't convert from K to C
+* C Didn't convert from cm to m
+
+
+
+## Soil Thermal Admittance $\mu$
+
+The ability of the soil surface to accept or release heat following a change in soil heat flux ($H_G$). How well it can “soak it up” without changing temperature much. It is given by:
+
+{{< include ../_Equations/Thermal-Admittance.qmd >}}
+
+* $\mu$ is the soil thermal admittance; $k$ is the thermal conductivity and $C$ is the heat capacity
+  + Note the similarities to thermal diffusivity @eq-Thermal-Diffusivity
+  + Units: J m<sup>-2</sup> K<sup>-1</sup> s<sup>-1/2</sup>
+
+
+## Thermal Admittance and Surface Temperature 
+
+For a change in soil heat flux (i.e., $\Delta H_G$), the change in surface temperature ($\Delta T_s$) is inversely proportional to $\mu$ 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* For the same energy added:
+  + Soil with a low $\mu$ warms and cools more rapidly
+  + Soil with a high $\mu$ warms and cools more slowly
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+{{< include ../_Equations/Thermal-Admittance-v-Temperature.qmd >}}
+
+
+:::
+
+::::
+
+
+
+## $\mu$ vs $\theta_w$
+
+```{python}
+#| fig-cap: Thermal admittance $\mu$ of soil vs. volumetric water content $\theta_w$
+#| label: admittance
+fig,ax=plt.subplots(figsize=(9,6))
+ax.plot(theta_w,(k_mineral*get_C(.45,0.05,theta_w))**.5,label='Mineral',color='black')
+ax.plot(theta_w,(k_organic*get_C(0.05,.1,theta_w))**.5,label='Organic',color='green')
+ax.legend()
+ax.grid()
+ax.set_xlabel(r'$\theta_w$')
+ax.set_ylabel(r'$m^2 s^{-1}$')
+
+```
+
+
+## Surface temperature vs $\theta_w$
+
+```{python}
+#| fig-cap: Surface temperature change vs. volumetric water content $\theta_w$ over a night with 0.5 MJ radiative cooling
+#| label: temp
+fig,ax=plt.subplots(figsize=(9,6))
+ax.plot(theta_w,-5e5/(k_mineral*get_C(.45,0.05,theta_w))**.5,label='Mineral',color='black')
+ax.plot(theta_w,-5e5/(k_organic*get_C(0.05,.1,theta_w))**.5,label='Organic',color='green')
+ax.legend()
+ax.grid()
+ax.set_ylabel(r'$\Delta_{T_s} K$')
+ax.set_xlabel(r'$\theta_w$')
+
+```
+
+## Surface temperature vs $\theta_w$ (iClicker)
+
+Given the plot on the previous slide, at any equivalent value of $\theta_w$, which soil would better prevent frost damage on a calm clear night?
+
+* A Organic
+* B Mineral
+
+
+## Temperature Waves
+
+The variation of temperature with depth can be thought of as waves moving down through the soil in response to radiation “forcing” at the surface.
+
+* There are annual waves, diurnal waves, and waves with shorter periods due to clouds
+* In typical mineral soils:
+  * Annual waves penetrate to ~ 10 m
+  * Diurnal waves to ~ 50 cm
+  * Cloud waves to ~ 5 cm
+
+
+## Annual Waves {.smaller}
+
+```{r}
+#| label: Monthly
+#| fig-cap: Mean soil temperatures by month in Burns Bog
+
+Data <- read.csv(file = 'Data/MonthlyTS.csv',sep=',', check.names = FALSE)
+
+Data[['TimeStamp']] <- as.POSIXct(Data[['TIMESTAMP']],format = "%Y-%m-%d")
+
+fig <- plot_ly(data=Data)
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_1, name = '5 cm',type = "scatter", mode = "lines+markers")
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_2, name = '10 cm',type = "scatter", mode = "lines+markers")
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_3, name = '50 cm',type = "scatter", mode = "lines+markers")
+
+
+fig <- fig %>% layout(
+  xaxis = list(
+    title = "Date"
+  ),
+  yaxis = list(
+    title = "Soil Temperature &deg; C"
+  ),
+  margin = Margin_m,
+  legend = list(x = 0.05, y = 1, orientation = 'h')
+)
+
+fig
+
+```
+
+
+
+## Shorter Timescale Waves {.smaller}
+
+```{r}
+#| label: Daily
+#| fig-cap: Soil temperatures in Burns Bog, June 2023
+
+Data <- read.csv(file = 'Data/DiurnalTS.csv',sep=',', check.names = FALSE)
+
+Data[['TimeStamp']] <- as.POSIXct(Data[['TIMESTAMP']],format = "%Y-%m-%d %H:%M:%S")
+
+fig <- plot_ly(data=Data)
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_1, name = '5 cm',type = "scatter", mode = "lines+markers")
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_2, name = '10 cm',type = "scatter", mode = "lines+markers")
+
+fig <- fig %>% add_trace(x = ~TimeStamp, y = ~TS_3, name = '50 cm',type = "scatter", mode = "lines+markers")
+
+
+fig <- fig %>% layout(
+  xaxis = list(
+    title = "Date"
+  ),
+  yaxis = list(
+    title = "Soil Temperature &deg; C"
+  ),
+  margin = Margin_m,
+  legend = list(x = 0.05, y = 1, orientation = 'h')
+)
+
+fig
+
+```
+
+
 
 
 
@@ -590,7 +905,7 @@ How well does heat conduct from one depth to another for a given temperature gra
 
 * Thermal conductivity **$k$**
 
-How rapidly does a soil warm at depth if energy is available at the surface?: 
+How rapidly does a soil warm at depth if energy is available at the surface?
 
 * Thermal diffusivity **$K$**
 

@@ -34,7 +34,8 @@ Topics = [
 'Longwave Radiation',
 'Net-Radiation',
 'Finishing our Discussion of Radiation',
-'Thermal Properties of Soil'
+'Thermal Properties of Soil',
+'Finishing our Discussion on Thermal Properties of Soil'
 ]
 Readings = [
     '',

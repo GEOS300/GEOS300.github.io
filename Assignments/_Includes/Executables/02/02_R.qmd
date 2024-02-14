@@ -1,0 +1,20 @@
+
+```{r}
+#| warning: false
+
+plot_energy_fluxes <- melt(
+  df[,c('TIME.PST.','R_n','H_filled','H_g')],
+  id="TIME.PST.")
+
+p1 <- ggplot(plot_energy_fluxes, aes(x = TIME.PST., y = value, group = variable)) +
+  geom_line(aes(color = variable,linetype = variable)) +
+  scale_color_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'),values = c('black','red','blue')) +
+  scale_linetype_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'), values = c("solid","dotted","dashed"))+
+  
+  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes
+  labs(y = "W m-2 s-1",x='Time')
+
+p1 + plot_annotation(sprintf('Student # %i',Student.Number))
+
+options(repr.plot.width=8, repr.plot.height=10)
+```
