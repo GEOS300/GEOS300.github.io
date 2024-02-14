@@ -795,7 +795,7 @@ ax.plot(theta_w,-5e5/(k_mineral*get_C(.45,0.05,theta_w))**.5,label='Mineral',col
 ax.plot(theta_w,-5e5/(k_organic*get_C(0.05,.1,theta_w))**.5,label='Organic',color='green')
 ax.legend()
 ax.grid()
-ax.set_ylabel(r'$\Delta_{T_s} K$')
+ax.set_ylabel(r'$\Delta T_s K$')
 ax.set_xlabel(r'$\theta_w$')
 
 ```
