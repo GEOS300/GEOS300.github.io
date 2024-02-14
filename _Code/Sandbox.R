@@ -67,3 +67,13 @@ p1 + plot_annotation(sprintf('Student # %i',Student.Number))
 
 
 df[,c('TIME.PST.','R_n','H_filled','H_g')]
+
+
+T_1 = (4.18+1.98)/2 # Average temperature (deg C) between 5cm and 10cm at 12:00
+T_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00
+H_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval 
+
+Delta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval
+C_s = H_g/.05/Delta_T_delta_t * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ
+
+sprintf('C = %.2f MJ m-3 K-1',C_s)

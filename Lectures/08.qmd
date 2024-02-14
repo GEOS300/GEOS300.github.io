@@ -693,7 +693,7 @@ T_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00
 H_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval 
 
 Delta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval
-C_s = H_g/.05/Delta_T * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ
+C_s = H_g/.05/Delta_T_delta_t * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ
 
 sprintf('C = %.2f MJ m-3 K-1',C_s)
 ```
@@ -780,7 +780,7 @@ ax.plot(theta_w,(k_organic*get_C(0.05,.1,theta_w))**.5,label='Organic',color='gr
 ax.legend()
 ax.grid()
 ax.set_xlabel(r'$\theta_w$')
-ax.set_ylabel(r'$m^2 s^{-1}$')
+ax.set_ylabel(r'$J m^{-2} K^{-1} s^{-1/2}$')
 
 ```
 

@@ -1066,7 +1066,7 @@
     "href": "Lectures/08.html#estimating-c",
     "title": "Soil Thermal Properties",
     "section": "Estimating \\(C\\)",
-    "text": "Estimating \\(C\\)\n\\(T_s\\) at 5 and 10 cm at 12:00 are 4.18 and 1.98 \\(^{\\circ}C\\) respectively; 1 hour later they are 4.83 and 2.45 \\(^{\\circ}C\\) respectively. Mean \\(H_g\\) over the interval is 18.035 \\(W m^{-2}C\\). Approximate \\(C\\)\n\nT_1 = (4.18+1.98)/2 # Average temperature (deg C) between 5cm and 10cm at 12:00\nT_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00\nH_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval \n\nDelta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval\nC_s = H_g/.05/Delta_T * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ\n\nsprintf('C = %.2f MJ m-3 K-1',C_s)\n\n[1] \"C = 0.00 MJ m-3 K-1\"",
+    "text": "Estimating \\(C\\)\n\\(T_s\\) at 5 and 10 cm at 12:00 are 4.18 and 1.98 \\(^{\\circ}C\\) respectively; 1 hour later they are 4.83 and 2.45 \\(^{\\circ}C\\) respectively. Mean \\(H_g\\) over the interval is 18.035 \\(W m^{-2}C\\). Approximate \\(C\\)\n\nT_1 = (4.18+1.98)/2 # Average temperature (deg C) between 5cm and 10cm at 12:00\nT_2 = (4.83+2.45)/2 # Average temperature (deg C) between 5cm and 10cm at 13:00\nH_g = 18.035 # Average soi heat flux (W m-2) at 7.5 cm over the interval \n\nDelta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval\nC_s = H_g/.05/Delta_T_delta_t * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ\n\nsprintf('C = %.2f MJ m-3 K-1',C_s)\n\n[1] \"C = 2.32 MJ m-3 K-1\"",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
