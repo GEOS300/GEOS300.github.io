@@ -2478,7 +2478,7 @@
     "href": "Assignments/02.html#question-8",
     "title": "Assignment 2",
     "section": "Question 8",
-    "text": "Question 8\nFind a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated \\(k\\) in the question above, calculate the soil’s heat capacity \\(C\\) assuming sinusoidal soil temperature waves.",
+    "text": "Question 8\nFind a method to estimate soil’s heat capacity \\(C\\) using the change in mid-day soil temperatures over a two-hour period. Use the near-surface observations for you calculations (5 and 10 cm). Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods. This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2489,7 +2489,7 @@
     "href": "Assignments/02.html#question-9",
     "title": "Assignment 2",
     "section": "Question 9",
-    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in Question 5? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.",
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2522,7 +2522,7 @@
     "href": "Assignments/02.html#question-12",
     "title": "Assignment 2",
     "section": "Question 12",
-    "text": "Question 12\nWhat fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig. 4 in the reading package (Lectures 11-13) to support your answer.",
+    "text": "Question 12\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2533,7 +2533,7 @@
     "href": "Assignments/02.html#question-13",
     "title": "Assignment 2",
     "section": "Question 13",
-    "text": "Question 13\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.",
+    "text": "Question 13\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2544,29 +2544,7 @@
     "href": "Assignments/02.html#question-14",
     "title": "Assignment 2",
     "section": "Question 14",
-    "text": "Question 14\nPredict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences?",
-    "crumbs": [
-      "Assignments",
-      "Assignment 2"
-    ]
-  },
-  {
-    "objectID": "Assignments/02.html#question-15",
-    "href": "Assignments/02.html#question-15",
-    "title": "Assignment 2",
-    "section": "Question 15",
-    "text": "Question 15\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.",
-    "crumbs": [
-      "Assignments",
-      "Assignment 2"
-    ]
-  },
-  {
-    "objectID": "Assignments/02.html#question-16",
-    "href": "Assignments/02.html#question-16",
-    "title": "Assignment 2",
-    "section": "Question 16",
-    "text": "Question 16\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.",
+    "text": "Question 14\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2712,14 +2690,14 @@
     "href": "AssignmentsR_out/02.html#question-8",
     "title": "Assignment 2",
     "section": "Question 8",
-    "text": "Question 8\nFind a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated \\(k\\) in the question above, calculate the soil’s heat capacity \\(C\\) assuming sinusoidal soil temperature waves.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 8\nFind a method to estimate soil’s heat capacity \\(C\\) using the change in mid-day soil temperatures over a two-hour period. Use the near-surface observations for you calculations (5 and 10 cm). Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods. This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-9",
     "href": "AssignmentsR_out/02.html#question-9",
     "title": "Assignment 2",
     "section": "Question 9",
-    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in Question 5? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-10",
@@ -2740,35 +2718,21 @@
     "href": "AssignmentsR_out/02.html#question-12",
     "title": "Assignment 2",
     "section": "Question 12",
-    "text": "Question 12\nWhat fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig. 4 in the reading package (Lectures 11-13) to support your answer.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 12\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-13",
     "href": "AssignmentsR_out/02.html#question-13",
     "title": "Assignment 2",
     "section": "Question 13",
-    "text": "Question 13\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 13\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-14",
     "href": "AssignmentsR_out/02.html#question-14",
     "title": "Assignment 2",
     "section": "Question 14",
-    "text": "Question 14\nPredict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-15",
-    "href": "AssignmentsR_out/02.html#question-15",
-    "title": "Assignment 2",
-    "section": "Question 15",
-    "text": "Question 15\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-16",
-    "href": "AssignmentsR_out/02.html#question-16",
-    "title": "Assignment 2",
-    "section": "Question 16",
-    "text": "Question 16\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 14\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "Lectures/01.html#learning-objectives",

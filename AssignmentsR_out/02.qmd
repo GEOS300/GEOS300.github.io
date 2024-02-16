@@ -93,13 +93,13 @@ Find a method to estimate the thermal conductivity of the soil $k$ at noon that 
 
 ## Question 8
 
-Find a method to estimate the phase-shift between the temperature wave at 5 cm and 10 cm depth. Using the phase-shift and your estimated $k$ in the question above, calculate the soil's heat capacity $C$ assuming sinusoidal soil temperature waves.
+Find a method to estimate soil's heat capacity $C$ using the change in mid-day soil temperatures over a two-hour period.  Use the near-surface observations for you calculations (5 and 10 cm).  Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods.  This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
 ## Question 9
 
-Calculate the heat capacity $C$ of the soil using the lab analysis results (see introduction text) and measured soil water content $\theta_w$. Does your value obtained agree with $C$ calculated based on the phase-shift in Question 5? Why or why not?  **Note** For subsequent calculations, use the value of $C$ from your answer to **this question**, and not $C$ from your answer to the previous question.
+Calculate the heat capacity $C$ of the soil using the lab analysis results (see introduction text) and measured soil water content $\theta_w$. Does your value obtained agree with $C$ calculated based on the phase-shift in the question above? Why or why not?  **Note** For subsequent calculations, use the value of $C$ from your answer to **this question**, and not $C$ from your answer to the previous question.
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
@@ -117,30 +117,17 @@ The soil heat flux density $H_g$ is not measured at the surface, but rather at 7
 
 ## Question 12
 
-What fraction of the soil water content at 5 cm is available to plants during that day. Use a graphical interpretation of Fig.\ 4 in the reading package (Lectures 11-13) to support your answer.
-
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
-
-
-## Question 13
-
 Draw a graph of $R_n$ ($x$-axis) against $H_g$ ($y$-axis). Might we use $R_n$ to predict $H_g$ at 7.5 cm depth? What do we call this curve's characteristic? Explain the physical reason for the curve's shape. 
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
-## Question 14
-
-Predict the time of the maximum temperature at 20 and 50 cm based on the timing of the maximum at 5 cm. Do the times predicted agree with the observed maxima? What could explain any differences? 
-
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
-
-## Question 15
+## Question 13
 
 Calculate the thermal admittance of the atmosphere $\mu_a$ at noon.
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
-## Question 16
+## Question 14
 
 The Bowen ratio $\beta$ describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e.\ $\beta = H/LE$. Calculate $\beta$ from the available data for noon that day. Neglect the energy use for photosynthesis.
 
