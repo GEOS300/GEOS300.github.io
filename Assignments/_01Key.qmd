@@ -25,7 +25,7 @@ Below is an example showing the first few rows of the BB climate summary data.  
 
 #### Answer
 
-More or less what we'd expect, but $SW\downarrow$ shouldn't be less than $SW\uparrow$, which indicates some lack of precision with the sensor.  Units $W m^{-2}$.
+More or less what we'd expect, but $SW_\downarrow$ shouldn't be less than $SW_\uparrow$, both should be ~0 zero, so indicates some lack of precision with the sensor (or perhaps a human made light source on site?)  Units $W m^{-2}$.
 
 
 ### Question 2 
@@ -47,7 +47,7 @@ The plot below shows traces of the four radiation component, air & soil temperat
 
 #### Answer
 
-Important to discuss how $LW$ varies as a function of temperature [$\downarrow$ (sky/clouds); $\uparrow$ (ground)] and how $SW_\downarrow$ & $SW_\uparrow$ are effected by cloud/snow.  Big issue on day of snowfall, radiometer is covered in snow; $SW_\downarrow$ should not be larger than $SW_uparrow$
+Important to discuss how $LW$ varies as a function of temperature [$\downarrow$ (sky/clouds); $\uparrow$ (ground)] and how $SW_\downarrow$ & $SW_\uparrow$ are effected by cloud/snow.  Big issue on day of snowfall, radiometer is covered in snow; $SW_\downarrow$ should not be larger than $SW_\uparrow$
 
 
 ### Question 4
@@ -114,7 +114,7 @@ First, must calculate $R_n$ following:
 
 {{< include ../_Equations/Net-Radiation.qmd >}}
 
-The relationship between the two: $SW_downarrow$ is a significant driver of $R_n$, whien it is positive, it has a near strong increasing effect on $R_n$ (but the slope modified by albedo).  However, the effects of $LW$ are also present in the $R_n$ signal, so it is not a simple linear relationship.
+The relationship between the two: $SW_\downarrow$ is a significant driver of $R_n$, whien it is positive, it has a strong increasing effect on $R_n$ (but the slope modified by albedo).  However, the effects of $LW$ are also present in the $R_n$ signal, so it is not a simple linear relationship with $SW*$
 
 {{< include _Includes/Executables/01/07_A_py.qmd >}}
 
@@ -127,7 +127,7 @@ Using the examples above as a template, create a new selection to see how typica
 
 Should reproduce **All** graphs and tables above so that there can be a well rounded comparison. **For plots:** make sure all axes limits are updated properly.  Key discussion points:
 
-* Warmer weather (both $T_a$ and $T_s$).  While $T_a$ is still higher and more variable than $T_s$, it is important to note that $T_s$ in summer has a wider range than in winter (*not expected for full credit* why? > lower soil moisture + no snow cover)
+* Warmer weather (both $T_a$ and $T_s$).  While $T_a$ is still higher and more variable than $T_s$, it is important to note that $T_s$ in summer has a similar range as in winter.
     + Should also mention data gap in $T_s$ for full credit.
 
 * More incoming $SW$ due to lower zenith angle and longer days.  Less variable due to less cloud cover.  Primarily clear sky conditions in summer
@@ -161,7 +161,7 @@ Same procedures as question 5 for calculations.  Key discussion points:
 * The timing of the maximum differs because:
     1. $\Delta LAT$ changes through the year.  Not because of DST; as the sites don't use it. Local apparent time  
     2. Part of it is "randomness" due to cloud conditions 
-        + explanation not needed for full credit: the 17th had some patchy cloud cover as indicated by the jumpiness of the SW trace on this day.  If there are clouds blocking the solar beam's path to the radiometer but some large reflective clouds to the north, some "excess" $SW$ reelected off the cloud can hit the radiometer and boost $SW_downarrow$ a bit.
+        + explanation not needed for full credit: the 17th had some patchy cloud cover as indicated by the jumpiness of the SW trace on this day.  If there are clouds blocking the solar beam's path to the radiometer but some large reflective clouds to the north, some "excess" $SW$ reelected off the cloud can hit the radiometer and boost $SW_\downarrow$ a bit.
 
 {{< include _Includes/Executables/01/09_A_py.qmd >}}
 

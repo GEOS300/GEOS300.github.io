@@ -1,17 +1,17 @@
-Componenet,Points,Comments
-Clarity,5,"1/2 Document is readable and answers are clearly indicated, 1/2 Properly labeled with name and student number at top and student number on charts (at least on most, okay if missing on 1 or 2)."
-Question 1,2,"1/2 for correct units, 1/2 for discussion"
-Question 2,2,"1/4 for correct units, 3/4 for discussion"
-Question 3,5,"1/2 for producing chart (with updated unit label), 1/2 for discussion"
-Question 4,2,"1/8 for producing chart, 7/8 for discussion"
-Question 5,8,"1/2 for correct answers & units, 1/2 for correct application of equations"
-Question 6,9,"1/3 for correct answers & units, 1/3 for correct application of equations, 1/3 for discussion"
-Question 7,9,"1/3 for alculating Rn, 1/3 for making chart, 1/3 for discussion"
-Question 8,18,"1/2 for correctly recreating all graphs/tables, with proper units and updated axis imits, 1/2 for discussion"
-Question 9,10,"1/4 for correct answer and units, 3/4 for discussion"
-Question 10,8,"1/2 for correct number of photons, 1/2 for converting to umol m-2 s-1"
-Question 11,4,"1/2 for proper equation, 1/2 correct answer and units"
-Question 12,4,"1/2 for proper equatio, answer and units, 1/2 for discussion"
-Question 13,6,"1/2 for proper equation, 1/2 correct answer and units"
-Question 14,8,"1/2 for proper calculation, correct answer and units 1/2 for discussion"
-Total,100,
+Componenet,Points Possible,Points given,Comments
+Clarity,5,5,
+Question 1,2,1.75,
+Question 2,2,2,
+Question 3,5,5,
+Question 4,2,2,
+Question 5,8,4,"Outputs are close, but a number are incorrect because observation time was incorrectly defined, and LMST was calculated incorrectly"
+Question 6,9,6,"Same issues as above, discussion is correct though"
+Question 7,9,6,See discussion in key
+Question 8,18,,"1/2 for correctly recreating all graphs/tables, with proper units and updated axis imits, 1/2 for discussion"
+Question 9,10,,"1/4 for correct answer and units, 3/4 for discussion"
+Question 10,8,,"1/2 for correct number of photons, 1/2 for converting to umol m-2 s-1"
+Question 11,4,,"1/2 for proper equation, 1/2 correct answer and units"
+Question 12,5,,"1/2 for proper equatio, answer and units, 1/2 for discussion"
+Question 13,5,,"1/2 for proper equation, 1/2 correct answer and units"
+Question 14,8,,"1/2 for proper calculation, correct answer and units 1/2 for discussion"
+Total,100,31.75,
