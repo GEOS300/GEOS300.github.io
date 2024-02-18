@@ -61,7 +61,7 @@ The plot below shows mean daily albedo.  What explains sharp increase on the 17t
 
 ## Question 5
 
-The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_ex$ for the center point of this observation period (12:45).  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
+The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_{ex}$ for the center point of this observation period (12:45).  Given the value of $I_{ex}$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_{ex}$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
 
 **Note**: you can find the site's Lat/Lon and time zone info in the CA-DBB station metadata file.
 
@@ -92,7 +92,7 @@ Using the examples above as a template, create a new selection to see how typica
 
 ### Question 9
 
-Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_ex$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
+Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_{ex}$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
 
 {{< include _Includes/Executables/01/09_py.qmd >}}
 
@@ -100,7 +100,7 @@ Find the timestamp of the observation interval when maximum $SW_\downarrow$ was 
 
 ### Question 10
 
-Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in $\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}$. You can use the wavelength of yellow light ($\lambda 0 0.55 \mu m$) for your estimate.
+Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in $\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}$. You can use the wavelength of yellow light ($\lambda 0.55 \mu m$) for your estimate.
 **Hint**: Consult examples in reading package for radiation geometry.
 
 {{< include _Includes/Executables/empty_code_py.qmd >}}
@@ -126,6 +126,6 @@ Using measured $LW_{\downarrow}$ and measured air temperature $T_a$, calculate t
 
 ### Question 14
 
-Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LS_{\downarrow}$? How well do these approximations match with what we actually observed?
+Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LW_{\downarrow}$? How well do these approximations match with what we actually observed?
 
 {{< include _Includes/Executables/empty_code_py.qmd >}}

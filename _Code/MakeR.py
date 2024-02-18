@@ -14,6 +14,13 @@ execute:
 echo: false
 '''
 
+py_head_key = '''
+jupyter: python3
+execute:
+  keep-ipynb: true
+echo: true
+'''
+
 R_head = '''
 execute:
   keep-md: true
@@ -30,7 +37,7 @@ for file in os.listdir(In_Dir):
         with open(f"{In_Dir}/{file}",'r',encoding='utf-8') as T:
 
             text = T.read().replace(py_head,R_head)
-            print(text[:100])
+            text = text.replace(py_head_key,R_head)
             text = text.replace(py_code,R_code)
             text = text.replace(' _Includes','../Assignments/_Includes')
             

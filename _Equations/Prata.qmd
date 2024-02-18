@@ -1,6 +1,6 @@
 
 $$
-\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
 $${#eq-Prata}
 
 where a = 1.2, b=3.0, and $\zeta = 46.5\frac{P_v}{T_a}$ with $T_a$ in Kelvin and $P_v$ in hPa.

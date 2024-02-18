@@ -13,9 +13,9 @@ DailyAlbedo = Selection.resample('D').mean()
 DailyAlbedo.index = DailyAlbedo.index.dayofyear
 
 fig,ax=plt.subplots()
+plt.suptitle(f'Student #: {Student_Number}')
 DailyAlbedo.plot.bar(ax=ax,y='Albedo',color='blue')
 ax.set_ylabel('%')
 ax.set_title('Daily Albedo')
-plt.suptitle(f'Student #: {Student_Number}')
-
+ax.grid()
 ```

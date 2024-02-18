@@ -1,9 +1,9 @@
 
 $$
-LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
+LMST = (TZ) + (\lambda-TZ_{m})\frac{4}{60}
 $${#eq-LMST}
 
-where $\lambda$ is longitude, $TZ$ is time in LST (e.g., PST = UTC-8) **in hours**, and $TZ_{m}$ is the central meridian for a given time zone (e.g., PST = 120 $^{\circ}$).  You can then calculate the local apparent time LAT as:
+where $\lambda$ is longitude, $TZ$ is time in LST (e.g., PST = UTC-8) **in hours**, and $TZ_{m}$ is the central meridian for a given time zone (e.g., PST = -120 $^{\circ}$).  You can then calculate the local apparent time LAT as:
 
 $$
 LAT = LMST-\Delta LAT

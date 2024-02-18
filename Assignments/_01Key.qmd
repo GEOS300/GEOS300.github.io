@@ -1,8 +1,19 @@
 ---
 title: "Assignment 1"
 subtitle: "GEOS 300, 2024"
-format: pdf
+jupyter: python3
+execute:
+  keep-ipynb: true
+echo: true
 ---
+
+---
+
+{{< include _Includes/Executables/Student_Info_py.qmd >}}
+
+{{< include _Includes/Executables/Import_py.qmd >}}
+
+{{< include _Includes/Executables/01/rubric_py.qmd >}}
 
 ### Question 1 
 
@@ -10,41 +21,51 @@ Below is an example showing the first few rows of the BB climate summary data.  
 
 * Make suer to specify the units in your answer. Check the metadata provided [here](https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md) to make sure you understand the variable names and units.
 
+{{< include _Includes/Executables/01/01_py.qmd >}}
+
 #### Answer
 
-More or less what we'd expect, but $SW\downarrow$ shouldn't be less than $SW\uparrow$ - so it indicates some lack of precision with the sensor.  Units Wm-2
+More or less what we'd expect, but $SW\downarrow$ shouldn't be less than $SW\uparrow$, which indicates some lack of precision with the sensor.  Units $W m^{-2}$.
 
 
 ### Question 2 
 
 We're going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area.  The table below shows some descriptive statistics for key variables during this time period.  What was the range of air temperatures observed over this time period?  How does it compare to the range of soil temperatures observed?
 
+
+{{< include _Includes/Executables/01/02_py.qmd >}}
+
 #### Answer
 
-Give the range and discuss how $T_a$ is much more variable that $T_s$
+The key point here is that $T_a$ has a much wider range (~15 $^{\circ} C$) compared to $T_s$ (~2.3 $^{\circ} C$) and that while $T_a$ was well bellow 0 $^{\circ} C$ for most of the period, $T_s$ didn't even drop below 2.5 $^{\circ} C$.
 
 ### Question 3
 
 The plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are.  Looking at the plot, what stands out to you?  Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see.  Do you see any issues in the data?  If so, what is a possible explanation?
 
+{{< include _Includes/Executables/01/03_A_py.qmd >}}
+
 #### Answer
 
-Important to discuss how $LW$ in/out varies as a function of temperature and how $SW$ in/out is effected by cloud/snow.  Big issue on day of snowfall, radiometer is covered in snow. 
+Important to discuss how $LW$ varies as a function of temperature [$\downarrow$ (sky/clouds); $\uparrow$ (ground)] and how $SW_\downarrow$ & $SW_\uparrow$ are effected by cloud/snow.  Big issue on day of snowfall, radiometer is covered in snow; $SW_\downarrow$ should not be larger than $SW_uparrow$
 
 
 ### Question 4
 
 The plot below shows mean daily albedo.  What explains sharp increase on the 17th?
 
+{{< include _Includes/Executables/01/04_py.qmd >}}
+
 #### Answer
 
-Snow
+Fresh snow has a much higher albedo than either vegetated surfaces.  The significant snowfall event (30 cm) was more than enough to cover all the vegetation.
 
 ## Question 5
 
-The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_ex$ for the center point of this observation period (12:45).  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_ex$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
+The maximum half-hourly $SW_\downarrow$ observed during this time period occurred between 12:30 and 13:00 on January 13th.  Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination $\delta$, solar zenith angle $Z$, and extraterrestrial irradiance $I_{ex}$ for the center point of this observation period (12:45).  Given the value of $I_{ex}$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  Given the value of $I_{ex}$, compared to observed $SW_\downarrow$, what is the approximate bulk transmissivity ($\Psi_a$) coefficient of the atmosphere over CA-DBB at this point in time?  
 
 **Note**: you can find the site's Lat/Lon and time zone info in the CA-DBB station metadata file.
+
 
 #### Answer
 
@@ -62,14 +83,16 @@ And the zenith ($Z$) following:
 
 {{< include ../_Equations/Solar-Zenith.qmd >}}
 
-With the zenith an the fractional DOY, you can then get $I_ex$
+With the zenith an the fractional DOY, you can then get $I_{ex}$
 
 
 {{< include ../_Equations/Extraterrestrial-Irradiance.qmd >}}
 
-Use $Z$ and $I_ex$ to solve for $\Phi_a$
+Use $Z$ and $I_{ex}$ to solve for $\Phi_a$
 
 {{< include ../_Equations/Bulk-Transmissivity.qmd >}}
+
+{{< include _Includes/Executables/01/05_A_py.qmd >}}
 
 ### Question 6
 
@@ -77,7 +100,9 @@ Now calculate $\Psi_a$ for 12:45 January 19; the observed value of $SW_\downarro
 
 #### Answer
 
-Same procedures as above - difference is due to clouds - significantly more light is attenuated on the cloudy day - light is reflected back to space by clouds (some is also absorbed) be fore making it to ground level
+Same procedures as above, the key cause of the difference cloud cover.  Significantly more light is attenuated on the cloudy day, that light is reflected back to space by clouds (some is also absorbed) before making it to ground level.
+
+{{< include _Includes/Executables/01/06_A_py.qmd >}}
 
 ### Question 7
 
@@ -85,8 +110,13 @@ Using the examples above as a template, calculate $R_n$ over the cold-snap.  Mak
 
 #### Answer
 
+First, must calculate $R_n$ following:
+
 {{< include ../_Equations/Net-Radiation.qmd >}}
 
+The relationship between the two: $SW_downarrow$ is a significant driver of $R_n$, whien it is positive, it has a near strong increasing effect on $R_n$ (but the slope modified by albedo).  However, the effects of $LW$ are also present in the $R_n$ signal, so it is not a simple linear relationship.
+
+{{< include _Includes/Executables/01/07_A_py.qmd >}}
 
 ### Question 8
 
@@ -95,15 +125,45 @@ Using the examples above as a template, create a new selection to see how typica
 
 #### Answer
 
-Looking for a discussion of the differences: warmer weather, more incoming $SW$ and more incoming/outgoing $LW$.  Make sure all axes limits are updated
+Should reproduce **All** graphs and tables above so that there can be a well rounded comparison. **For plots:** make sure all axes limits are updated properly.  Key discussion points:
+
+* Warmer weather (both $T_a$ and $T_s$).  While $T_a$ is still higher and more variable than $T_s$, it is important to note that $T_s$ in summer has a wider range than in winter (*not expected for full credit* why? > lower soil moisture + no snow cover)
+    + Should also mention data gap in $T_s$ for full credit.
+
+* More incoming $SW$ due to lower zenith angle and longer days.  Less variable due to less cloud cover.  Primarily clear sky conditions in summer
+* More incoming/outgoing $LW$ due to higher temps of both ground and sky.  Less variable due to less cloud cover.  Primarily clear sky conditions in summer
+* Albedo is lower due to lack of snow **and** green vegetation.
+* $R_n$ vs $SW_\downarrow$ is more direct because of lack of snow and reduced variability in $LW$
+* $RH$ is "lower" at times, but does not indicate drier atmosphere, because warm air can hold more water vapor
+
+
+
+{{< include _Includes/Executables/01/08_1_py.qmd >}}
+
+{{< include _Includes/Executables/01/08_2_py.qmd >}}
+
+{{< include _Includes/Executables/01/08_3_py.qmd >}}
+
+{{< include _Includes/Executables/01/08_4_py.qmd >}}
 
 ### Question 9
 
-Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_ex$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
+Find the timestamp of the observation interval when maximum $SW_\downarrow$ was observed for the mid-summer period.  You will use observations from this timestamp to answer each of the questions below.  **Note** our sites do not use daylight savings, so the UTC offset is fixed all year.  Use this information to calculate $I_{ex}$ and $\Psi_a$ for the mid-point of this observation period.  Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024.  How does the magnitude differ and why does the relative timing of the maximum daily $SW_\downarrow$ differ?
 
 #### Answer
 
-Same procedures as question 5 - magnitude differs because of the solar declination change giving us a higher zenith.  Timing differs because $\Delta LAT$ changes between summer and winter.  Not because of DST because the sites don't use it.
+Same procedures as question 5 for calculations.  Key discussion points:
+
+* The magnitude of $I_{ex}$ differs because of the solar declination $\delta$ change giving us a lower zenith angle $z$ and therefore more concentrated solar beam (closer to $I_0$), despite the fact that the earth is slightly farther from the sun during the northern hemisphere summer.  
+
+* $Psi_a$ is higher because the atmosphere has higher moisture content in the summer along with higher particulate matter content (this was discussion point from lecture).  This is interesting, because although the path length is much shorter in for this observation period than in winter, overall attenuation of the solar beam during this timestamp (~19%) exceeded that at 12:45 January 13th (~15%).  This highlights the impacts of air quality and water vapor content.
+
+* The timing of the maximum differs because:
+    1. $\Delta LAT$ changes through the year.  Not because of DST; as the sites don't use it. Local apparent time  
+    2. Part of it is "randomness" due to cloud conditions 
+        + explanation not needed for full credit: the 17th had some patchy cloud cover as indicated by the jumpiness of the SW trace on this day.  If there are clouds blocking the solar beam's path to the radiometer but some large reflective clouds to the north, some "excess" $SW$ reelected off the cloud can hit the radiometer and boost $SW_downarrow$ a bit.
+
+{{< include _Includes/Executables/01/09_A_py.qmd >}}
 
 ### Question 10
 
@@ -120,6 +180,10 @@ Then the energy, where h=6.63∗10−34Js
 
 {{< include ../_Equations/Energy-of-Photon.qmd >}}
 
+Then scale by 42% to estimate PAR and get total number of photons.  Finally convert to umol with Avogadro's number.
+
+{{< include _Includes/Executables/01/10_A_py.qmd >}}
+
 ### Question 11
 
 Let's assume the surface emissivity at CA-DBB is $\epsilon = 0.95$.  Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.
@@ -128,6 +192,8 @@ Let's assume the surface emissivity at CA-DBB is $\epsilon = 0.95$.  Using this 
 
 {{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
 
+{{< include _Includes/Executables/01/11_A_py.qmd >}}
+
 
 ### Question 12
 
@@ -135,12 +201,10 @@ Now use the same equation to estimate the "apparent" radiative sky temperature (
 
 #### Answer
 
-Same, but with $\epsilon{a} = 1.0$, its assuming the sky is a black body (not really).  This would be the temperature if the sky were a perfect absorber/emitter and not transparent to $LW$
-
-{{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
+Same calculations as above, but with $\epsilon{a} = 1.0$.  This is assuming the sky is a black body (not really).  This would be the temperature if the sky were a perfect absorber/emitter and not transparent to $LW$.
 
 
-#### Answer
+{{< include _Includes/Executables/01/12_A_py.qmd >}}
 
 ### Question 13
 
@@ -152,15 +216,24 @@ Plug $LW$ into $E_g$ and using $T_a$ solve for $\epsilon$
 
 {{< include ../_Equations/Stefan-Boltzman-Law-Grey-Body.qmd >}}
 
-#### Answer
+
+{{< include _Includes/Executables/01/13_A_py.qmd >}}
+
 
 
 ### Question 14
 
-Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LS_{\downarrow}$? How well do these approximations match with what we actually observed?
+Using the Prata (1996) equation from lecture and measured $T_a$ and $RH$, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of $LW_{\downarrow}$? How well do these approximations match with what we actually observed?
 
 #### Answer
 
-The approximation below will get pretty close (within about a couple percent) for clear sky conditions.  Won't work as well with cloud cover.
+The approximation below will get pretty close (within about a couple percent) for clear sky conditions.  Won't work as well with cloud cover.  Calculate Parata (1996) as:
 
 {{< include ../_Equations/Prata.qmd >}}
+
+where you can use the Tetens equation to get $P_v^*$
+
+{{< include ../_Equations/Prata.qmd >}}
+
+{{< include _Includes/Executables/01/14_A_py.qmd >}}
+

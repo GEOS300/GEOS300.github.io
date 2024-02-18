@@ -78,6 +78,8 @@ for In_Dir in ['Assignments/','AssignmentsR_out/']:
             print(f'Converted {file} to RMD')
             mv = 1
         elif file.endswith(".ipynb"):
+            if os.path.isdir(Write_Out)== False:
+                os.mkdir(Write_Out)
             nb_Rep(In_Dir+file, Write_Out+file)
             shutil.move(In_Dir+file, Write_Out+file)
 

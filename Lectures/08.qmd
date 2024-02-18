@@ -136,6 +136,7 @@ Let’s discuss some key SOIL THERMAL PROPERTIES
 
 
 ## $C$ and $c$ of soil materials {.smaller}
+
 ```{r}
 #| label: tbl-10_2
 #| tbl-cap: Heat caqacity and specific heat of selected substances

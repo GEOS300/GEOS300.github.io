@@ -77,3 +77,94 @@ Delta_T_delta_t=(T_2-T_1)/3600 # Change in temperature over the 3600 s interval
 C_s = H_g/.05/Delta_T_delta_t * 1e-6 # Rearrange Fourier's Law and solve, and convert from J to MJ
 
 sprintf('C = %.2f MJ m-3 K-1',C_s)
+
+
+DOY = 13
+latitude = 49.12940598 # degrees
+longitude = -122.9849319 # degrees
+central_meridian_PST = -120 # degrees
+I_0 = 1361 # Wm-2
+
+gamma = 2*pi /365*(DOY-1) 
+sprintf('gamma = %f',gamma)
+delta = 0.006918 - 0.399912 *cos(gamma)+0.070257 *sin(gamma)-0.006758* cos(2*gamma) + 0.000907*sin(2*gamma)-0.002697*cos(3*gamma)+0.00148 *sin(3*gamma)
+sprintf('delta = %f in radians, or %f in degrees works too',delta,delta*180/pi)
+
+LMST = 12.75+(longitude-central_meridian_PST)*4/60
+sprintf('LMST = %f in hours',LMST)
+sprintf('**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.')
+LMST_error = 12.75-(longitude-central_meridian_PST)*4/60
+sprintf('Following the incorrect equation would yield: %f accept this, along with calculations of LAT, h, and z based on it',LMST_error)
+
+Delta_LAT = 229.18*(0.000075+0.001868*cos(gamma)-0.032077*sin(gamma)
+             -0.014615*cos(2*gamma)-0.040849*sin(2*gamma))
+sprintf('Delta_LAT = ',Delta_LAT,' in minutes')
+
+LAT = LMST-Delta_LAT/60
+sprintf('LAT %f',LAT)
+LAT_error=LMST_error-Delta_LAT/60
+sprintf('**Note**: %f'' is also acceptable as per above',LAT_error)
+
+h = 15*(12-LAT)
+sprintf('hour-angle = %f in degrees',h)
+h_error = 15*(12-LAT_error)
+sprintf('**Note**: %f is also acceptable as per above',h_error)
+
+cos_z = sin(latitude*pi/180)*sin(delta)+cos(latitude*pi/180)*cos(delta)*cos(h*pi/180)
+z = acos(cos_z)*180/pi
+sprintf('zenith angle = %f in degrees',z)
+cos_z_error = sin(latitude*pi/180)*sin(delta)+cos(latitude*pi/180)*cos(delta)*cos(h_error*pi/180)
+z_error = acos(cos_z_error)*180/pi
+sprintf('**Note** %f s also acceptable as per above < the error has a minor impact on the final answer.',z_error)
+
+R_av_Rsq = 1.00011+0.034221*cos(gamma)+0.001280*sin(gamma)+\
+            0.000819*cos(2*gamma)+0.000077*sin(2*gamma)
+I_ex=I_0*R_av_Rsq*cos(z*pi/180)
+sprintf('Extraterrestrial Irradiance = %f W m-2',I_ex)
+I_ex_error=I_0*R_av_Rsq*cos(z_error*pi/180)
+sprintf('**Note** %f is also acceptable as per above < the error has a minor impact on the answer.',I_ex_error)
+
+m = 1/cos(z*pi/180)
+m_error = 1/cos(z_error*pi/180)
+
+SW_in = Selection['SW_IN_1_1_1'].max()
+Psi_a = (SW_in/I_ex)**(1/m)
+sprintf('Bulk transimissivity = %f',Psi_a)
+Psi_a_error = (SW_in/I_ex)**(1/m_error)
+sprintf('**Note** %f is also acceptable as per above < the error has a minor impact on the answer.',Psi_a_error)
+
+
+
+# Import the data from github & parse the timestamp for each record
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'
+df <- read.csv(file = data_url)
+
+# We have to parse the timestamp explicitly to convert it to a "time aware" object
+df$TIMESTAMP <- as.POSIXct(df$TIMESTAMP,format = "%Y-%m-%d %H%M")
+# Using this we can get a extra variables (DOY & HOUR) that will be helpful later
+df$HOUR <- format(df$TIMESTAMP,format = "%H")
+df$DOY <- format(df$TIMESTAMP,format = "%j")
+
+# Calculate Albedo
+df$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1
+
+Start ='2024-01-12 0000'
+End ='2024-01-20 0000'
+
+# Select a subset of the variables
+Query.Cols <- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')
+
+# Run the query and save it to a new dataframe called "Selection"
+Selection <- df[which((df$TIMESTAMP >= Start) & (df$TIMESTAMP <End)),
+        Query.Cols]
+
+Max_SW_Obs <- Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]
+
+# Must divide minutes by 60 and subtract 15/60 to get fractional hour of mid-point
+Time <- as.numeric(format(Max_SW_Obs$TIMESTAMP, "%H")) +
+               as.numeric(format(Max_SW_Obs$TIMESTAMP, "%M"))/60 -15/60
+
+Time
+
+DOY = as.numeric(Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('DOY')])
+DOY
