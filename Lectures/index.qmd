@@ -35,7 +35,10 @@ Topics = [
 'Net-Radiation',
 'Finishing our Discussion of Radiation',
 'Thermal Properties of Soil',
-'Finishing our Discussion on Thermal Properties of Soil'
+'Finishing our Discussion on Thermal Properties of Soil',
+'',
+'',
+'Modelling Sub-Surface Temperatures',
 ]
 Readings = [
     '',
@@ -60,6 +63,7 @@ Study = ['',
         '',
         '',
         '[03](../Study_Questions/03.html)',
+        '',
         '',
         '',
         '',

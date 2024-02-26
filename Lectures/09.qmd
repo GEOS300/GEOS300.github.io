@@ -378,7 +378,7 @@ Larger P, lower the angular frequency; higher P, greater than angular frequency
 
 
 
-## Calculate the Angular Frequency (iClicker)
+## Calculate the Angular Frequency (iClicker) {.smaller}
 
 
 :::: {.columns}
@@ -427,10 +427,6 @@ omega_2d = 4*pi/P
 :::
 
 ::::
-
-Diurnal:
-
-![](images/09_23_2.png)
 
 
 ## Analytical solution for sinusoidal forcing. 
@@ -525,7 +521,7 @@ Note, the wave decays exponentially with depth, and the decay is less in soils w
 :::
 
 
-## Phase Shift - Max and Min Soil Temperatures
+## Phase Shift - Max and Min Soil Temperatures {.smaller}
 
 Term 2 of the 1-D analytical solution (@eq-Phase-Shifted-Sinusoidal-Temperature-Wave) gives the phase shift equation for features such as maximum and minimum soil temperatures, which occurs at 0.5 π and 1.5 π, i.e.:
 
@@ -572,7 +568,7 @@ delta_tm = (0.05-0)*(1/(2*omega_d*K))**0.5
 
 * A `r delta_tm`
 * B `r T`
-* c `r sprintf('%d:%d',floor(T),floor((T%%1)*100))`
+* c `r sprintf('%.0f:%.0f',floor(T),(T%%1)*60)`
 
 
 
@@ -598,7 +594,7 @@ Breakout groups
 * Soil inhomogeneities in the horizontal and vertical.
 
 
-## Modification and Control of Soil Climates
+## Modification and Control of Soil Climates {.smaller}
 
 
 Relatively little can be done economically to modify the external forcing (shade is an exception). But the nature of the soil can be manipulated.

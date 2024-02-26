@@ -36,7 +36,7 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n04\n\n\n2024-02-26\n\n\n\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04\n\n\n2024-02-28\n\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
@@ -1785,7 +1785,7 @@
     "href": "Assignments/02.html#question-6",
     "title": "Assignment 2",
     "section": "Question 6",
-    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(2\\).\n\n\n\n\n\n\n\n\n\nT_1\nT_2\nT_3\nT_4\n\n\nTIME(PST)\n\n\n\n\n\n\n\n\n2009-03-24 00:15:00\n0.844\n1.110\n1.383\n1.313\n\n\n2009-03-25 00:00:00\n2.114\n2.516\n2.351\n1.317",
+    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(5\\).\n\n\n\n\n\n\n\n\n\nT_1\nT_2\nT_3\nT_4\n\n\nTIME(PST)\n\n\n\n\n\n\n\n\n2009-03-24 00:15:00\n0.844\n1.110\n1.383\n1.313\n\n\n2009-03-25 00:00:00\n2.114\n2.516\n2.351\n1.317",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -1818,7 +1818,7 @@
     "href": "Assignments/02.html#question-9",
     "title": "Assignment 2",
     "section": "Question 9",
-    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.",
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.",
     "crumbs": [
       "Assignments",
       "Assignment 2"
@@ -2005,7 +2005,7 @@
     "href": "AssignmentsR_out/02.html#question-6",
     "title": "Assignment 2",
     "section": "Question 6",
-    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(2\\).\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(5\\).\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-7",
@@ -2026,7 +2026,7 @@
     "href": "AssignmentsR_out/02.html#question-9",
     "title": "Assignment 2",
     "section": "Question 9",
-    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based on the phase-shift in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/02.html#question-10",
@@ -3856,7 +3856,7 @@
     "href": "Lectures/09.html#calculate-the-angular-frequency-iclicker",
     "title": "Modelling Sub-Surface Temperatures",
     "section": "Calculate the Angular Frequency (iClicker)",
-    "text": "Calculate the Angular Frequency (iClicker)\n\n\nAnnual \\(\\omega_a\\)\n\n# Number of seconds in a year\nP = 60 * 60 * 24 * 365.24 \n# Solve\nomega_a = 2*pi/P\nsprintf('Angular Frequncy of a year %0.3e s-1',omega_a)\n\n[1] \"Angular Frequncy of a year 1.991e-07 s-1\"\n\n\n\nDaily \\(\\omega_d\\)\nWhich value give the closest approximation of \\(\\omega_d\\)?\n\nA 3.636e-05 s-1\nB 1.454e-04 s-1\nC 7.272e-05 s-1\nD 1.991e-07 s-1\n\n\n\nDiurnal:",
+    "text": "Calculate the Angular Frequency (iClicker)\n\n\nAnnual \\(\\omega_a\\)\n\n# Number of seconds in a year\nP = 60 * 60 * 24 * 365.24 \n# Solve\nomega_a = 2*pi/P\nsprintf('Angular Frequncy of a year %0.3e s-1',omega_a)\n\n[1] \"Angular Frequncy of a year 1.991e-07 s-1\"\n\n\n\nDaily \\(\\omega_d\\)\nWhich value give the closest approximation of \\(\\omega_d\\)?\n\nA 3.636e-05 s-1\nB 1.454e-04 s-1\nC 7.272e-05 s-1\nD 1.991e-07 s-1",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -3928,7 +3928,7 @@
     "href": "Lectures/09.html#phase-shift-iclicker",
     "title": "Modelling Sub-Surface Temperatures",
     "section": "Phase Shift (iClicker)",
-    "text": "Phase Shift (iClicker)\nWhen will soil temperature reaches its maximum at 5 cm if the maximum surface temperature is measured at 13:00? Assume a thermal diffusivity K = 5.0×10−7 m1 s−1.\n\nA 5863.2301428\nB 14.628675\nc 14:62\n\n\nBreakout groups",
+    "text": "Phase Shift (iClicker)\nWhen will soil temperature reaches its maximum at 5 cm if the maximum surface temperature is measured at 13:00? Assume a thermal diffusivity K = 5.0×10−7 m1 s−1.\n\nA 5863.2301428\nB 14.628675\nc 14:38\n\n\nBreakout groups",
     "crumbs": [
       "Lectures",
       "Lecture Slides",

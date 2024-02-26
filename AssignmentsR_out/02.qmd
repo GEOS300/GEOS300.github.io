@@ -78,7 +78,7 @@ Using daily average soil temperature for each of the four depths ($T_1$ to $T_4$
 
 ## Question 6
 
-Calculate the daily total of $H_g$ at 7.5 cm depth in $\textrm{MJ}\, \textrm{m}^{-2}\, \textrm{day}^{-1}$ using the measured values from the soil heat flux plate. Compare the direction of $H_g$ to the direction of the heat flux obtained for the 5 -10 cm layer in question $2$.
+Calculate the daily total of $H_g$ at 7.5 cm depth in $\textrm{MJ}\, \textrm{m}^{-2}\, \textrm{day}^{-1}$ using the measured values from the soil heat flux plate. Compare the direction of $H_g$ to the direction of the heat flux obtained for the 5 -10 cm layer in question $5$.
 
 {{< include../Assignments/_Includes/Executables/02/04_R.qmd >}}
 
@@ -99,7 +99,7 @@ Find a method to estimate soil's heat capacity $C$ using the change in mid-day s
 
 ## Question 9
 
-Calculate the heat capacity $C$ of the soil using the lab analysis results (see introduction text) and measured soil water content $\theta_w$. Does your value obtained agree with $C$ calculated based on the phase-shift in the question above? Why or why not?  **Note** For subsequent calculations, use the value of $C$ from your answer to **this question**, and not $C$ from your answer to the previous question.
+Calculate the heat capacity $C$ of the soil using the lab analysis results (see introduction text) and measured soil water content $\theta_w$. Does your value obtained agree with $C$ calculated based in the question above? Why or why not?  **Note** For subsequent calculations, use the value of $C$ from your answer to **this question**, and not $C$ from your answer to the previous question.
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
