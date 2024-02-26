@@ -1,0 +1,17 @@
+
+
+```{R}
+# Set a time window and query the dataframe
+Start ='2023-07-12 0000'
+End ='2023-07-20 0000'
+
+# Select a subset of the variables
+Query.Cols <- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')
+
+# Run the query and save it to a new dataframe called "Selection"
+Selection <- df[which((df$TIMESTAMP >= Start) & (df$TIMESTAMP <End)),
+        Query.Cols]
+
+# Generate some descriptive statistics for the data (excluding the timestamp)
+summary(subset(Selection,select = -TIMESTAMP))
+```

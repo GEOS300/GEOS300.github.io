@@ -1,0 +1,21 @@
+
+
+```{python}
+# Create a single plot bar showing mean daily albedo
+
+# Calculate Albedo
+Selection['Albedo'] = Selection['SW_OUT_1_1_1']/Selection['SW_IN_1_1_1']
+# Filter out implausible values
+Selection.loc[Selection['SW_OUT_1_1_1']>Selection['SW_IN_1_1_1'],'Albedo']=np.nan
+
+# Resample to get mean daily Albedo, ignoring the NaN values
+DailyAlbedo = Selection.resample('D').mean()
+DailyAlbedo.index = DailyAlbedo.index.dayofyear
+
+fig,ax=plt.subplots()
+plt.suptitle(f'Student #: {Student_Number}')
+DailyAlbedo.plot.bar(ax=ax,y='Albedo',color='blue')
+ax.set_ylabel('%')
+ax.set_title('Daily Albedo')
+ax.grid()
+```

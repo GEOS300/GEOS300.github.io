@@ -71,6 +71,12 @@ $$
 R_s = R_p cos(Z)
 $${#eq-Cosine-Law-of-Illumination}
 
+## Damping Depth
+
+$$
+D = \sqrt{\small\frac{2K}{\omega}} = \sqrt{\small\frac{KP}{\pi}}
+$${#eq-Damping-Depth}
+
 ## Energy of Photon
 
 $$
@@ -80,13 +86,13 @@ $${#eq-Energy-of-Photon}
 ## Extraterrestrial Irradiance
 
 $$
-I_{ex}=I_0(\frac{R_av}{R})^2\cos(Z)
+I_{ex}=I_0(\frac{R_{av}}{R})^2\cos(Z)
 $${#eq-Extraterrestrial-Irradiance}
 
 ## Adjusted Constant
 
 $$
-\begin{eqnarray}(\frac{R_av}{R})^2 = & 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
+\begin{eqnarray}(\frac{R_{av}}{R})^2 = & 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\                     &0.000819\cos(2\gamma)+0.000077\sin(2\gamma)\end{eqnarray}
 $${#eq-Adjusted-Constant}
 
 ## Fouriers Law
@@ -106,6 +112,12 @@ $${#eq-Frequency}
 $$
 C_{s}=C_{m}\theta_{m}+C_{o}\theta_{o}+C_{w}\theta_{w}+C_{a}\theta_{a}
 $${#eq-Heat-Capacity-Soil}
+
+## Heat Sharing
+
+$$
+\frac{H_g}{H} = \frac{\mu_g}{\mu_a}
+$${#eq-Heat-Sharing}
 
 ## Kelvin
 
@@ -179,6 +191,12 @@ $$
 R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
 $${#eq-Net-Radiation}
 
+## Phase Shifted Sinusoidal Temperature Wave
+
+$$
+T_{(z,t)}=\overline{T_o}+\Delta T_o e^{-z(\small\frac{\omega}{2K})^{1/2}} \sin(\omega t - (\small\frac{\omega}{2K})^{1/2}z)
+$${#eq-Phase-Shifted-Sinusoidal-Temperature-Wave}
+
 ## Planks Law
 
 $$
@@ -188,7 +206,7 @@ $${#eq-Planks-Law}
 ## Prata
 
 $$
-\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^0.5}]
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
 $${#eq-Prata}
 
 ## Radiation Balance Air.qmd
@@ -214,6 +232,12 @@ $${#eq-Reflectance-Coefficient}
 $$
 RH=\frac{P_v}{P_v^*}
 $${#eq-Relative-Humidity}
+
+## Sinusoidal Temperature Wave
+
+$$
+T_{(o,t)}=\overline{T_o}+\Delta T_o \sin(\omega t)
+$${#eq-Sinusoidal-Temperature-Wave}
 
 ## Soil Heat Flux Divergence
 
@@ -332,7 +356,7 @@ $${#eq-Thermal-Diffusivity}
 ## LMST
 
 $$
-LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
+LMST = (TZ) + (\lambda-TZ_{m})\frac{4}{60}
 $${#eq-LMST}
 
 ## LAT

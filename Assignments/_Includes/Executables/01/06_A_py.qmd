@@ -1,0 +1,61 @@
+
+
+```{python}
+DOY = 19 # January 19th
+TIME = 12.75 # Fractional hours
+latitude = 49.12940598 # degrees
+longitude = -122.9849319 # degrees
+central_meridian_PST = -120 # degrees
+I_0 = 1361 # Wm-2
+SW_in = 58.375 # Observed SW incoming # W m-2
+
+gamma = 2*np.pi /365*(DOY-1) 
+print('gamma = ',gamma)
+delta = 0.006918 - 0.399912 *np.cos(gamma)+0.070257 *np.sin(gamma)  \
+         -0.006758* np.cos(2*gamma) + 0.000907*np.sin(2*gamma)  \
+         -0.002697*np.cos(3*gamma)+0.00148 *np.sin(3*gamma)
+print('delta = ',delta,'in radians, or ',delta*180/np.pi,' in degrees works too\n')
+
+LMST = TIME+(longitude-central_meridian_PST)*4/60
+print('LMST = ',LMST,' in hours')
+print('**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.')
+LMST_error = TIME-(longitude-central_meridian_PST)*4/60
+print('Following the incorrect equation would yield: ',LMST_error, ' accept this, along with calculations of LAT, h, and z based on it')
+
+Delta_LAT = 229.18*(0.000075+0.001868*np.cos(gamma)-0.032077*np.sin(gamma) \
+             -0.014615*np.cos(2*gamma)-0.040849*np.sin(2*gamma))
+print('Delta_LAT = ',Delta_LAT,' in minutes')
+
+LAT = LMST-Delta_LAT/60
+print('LAT',LAT)
+LAT_error=LMST_error-Delta_LAT/60
+print('**Note**: ',LAT_error,' is also acceptable as per above\n')
+
+h = 15*(12-LAT)
+print('hour-angle = ',h,' in degrees')
+h_error = 15*(12-LAT_error)
+print('**Note**: ',h_error,' is also acceptable as per above\n')
+
+cos_z = np.sin(latitude*np.pi/180)*np.sin(delta)+np.cos(latitude*np.pi/180)*np.cos(delta)*np.cos(h*np.pi/180)
+z = np.arccos(cos_z)*180/np.pi
+print('zenith angle = ',z,' in degrees')
+cos_z_error = np.sin(latitude*np.pi/180)*np.sin(delta)+np.cos(latitude*np.pi/180)*np.cos(delta)*np.cos(h_error*np.pi/180)
+z_error = np.arccos(cos_z_error)*180/np.pi
+print('**Note** ',z_error,'is also acceptable as per above < the error has a minor impact on the answer.\n')
+
+R_av_Rsq = 1.00011+0.034221*np.cos(gamma)+0.001280*np.sin(gamma)+\
+            0.000819*np.cos(2*gamma)+0.000077*np.sin(2*gamma)
+I_ex=I_0*R_av_Rsq*np.cos(z*np.pi/180)
+print('Extraterrestrial Irradiance = ',I_ex, 'W m-2')
+I_ex_error=I_0*R_av_Rsq*np.cos(z_error*np.pi/180)
+print('**Note** ',I_ex_error,'is also acceptable as per above < the error has a minor impact on the answer.\n')
+
+m = 1/np.cos(z*np.pi/180)
+m_error = 1/np.cos(z_error*np.pi/180)
+
+Psi_a = (SW_in/I_ex)**(1/m)
+print('Bulk transimissivity = ',Psi_a)
+Psi_a_error = (SW_in/I_ex)**(1/m_error)
+print('**Note** ',Psi_a_error,'is also acceptable as per above < the error has a minor impact on the answer.\n')
+
+```

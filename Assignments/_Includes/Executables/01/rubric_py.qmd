@@ -1,0 +1,8 @@
+
+```{python}
+#| label: Key
+#| tbl-cap: Rubric for Assignment 1
+Data = pd.read_csv('https://raw.githubusercontent.com/GEOS300/GEOS300.github.io/main/Assignments/Rubrics/01.csv',index_col=False)
+Data
+
+```

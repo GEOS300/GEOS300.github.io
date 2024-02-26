@@ -1,0 +1,15 @@
+
+
+```{python}
+# Create a scatter plot
+
+Selection['R_n'] = Selection['SW_IN_1_1_1']-Selection['SW_OUT_1_1_1']+Selection['LW_IN_1_1_1']-Selection['LW_OUT_1_1_1']
+
+fig,ax=plt.subplots()
+plt.suptitle(f'Student #: {Student_Number}')
+Selection.plot(ax=ax,kind='scatter',x='R_n',y='SW_IN_1_1_1')
+ax.set_ylabel('Rn W m$^{-2}$')
+ax.set_xlabel('SW in W m$^{-2}$')
+ax.set_title('Net Radiation vs. Short-wave Irradiance')
+ax.grid()
+```

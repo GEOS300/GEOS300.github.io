@@ -1,0 +1,1862 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.533">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Assignment 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="_01Key_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/quarto.js"></script>
+<script src="_01Key_files/libs/quarto-html/popper.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_01Key_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_01Key_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_01Key_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_01Key_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_01Key_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 1</h1>
+<p class="subtitle lead">GEOS 300, 2024</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<div id="17b73e98" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime <span class="im">as</span> dt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Data <span class="op">=</span> pd.read_csv(<span class="st">'https://raw.githubusercontent.com/GEOS300/GEOS300.github.io/main/Assignments/Rubrics/01.csv'</span>,index_col<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Data</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="key" class="cell-output cell-output-display" data-execution_count="23">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<caption>Rubric for Assignment 1 {#cell-Key}</caption>
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Componenet</th>
+<th data-quarto-table-cell-role="th">Points</th>
+<th data-quarto-table-cell-role="th">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>Clarity</td>
+<td>5</td>
+<td>1/2 Document is readable and answers are clear...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>Question 1</td>
+<td>2</td>
+<td>1/2 for correct units, 1/2 for discussion</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>Question 2</td>
+<td>2</td>
+<td>1/4 for correct units, 3/4 for discussion</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>Question 3</td>
+<td>5</td>
+<td>1/2 for producing chart (with updated unit lab...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>Question 4</td>
+<td>2</td>
+<td>1/8 for producing chart, 7/8 for discussion</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">5</td>
+<td>Question 5</td>
+<td>8</td>
+<td>1/2 for correct answers &amp; units, 1/2 for corre...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">6</td>
+<td>Question 6</td>
+<td>9</td>
+<td>1/3 for correct answers &amp; units, 1/3 for corre...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">7</td>
+<td>Question 7</td>
+<td>9</td>
+<td>1/3 for alculating Rn, 1/3 for making chart, 1...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">8</td>
+<td>Question 8</td>
+<td>18</td>
+<td>1/2 for correctly recreating all graphs/tables...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">9</td>
+<td>Question 9</td>
+<td>10</td>
+<td>1/4 for correct answer and units, 3/4 for disc...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">10</td>
+<td>Question 10</td>
+<td>8</td>
+<td>1/2 for correct number of photons, 1/2 for con...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">11</td>
+<td>Question 11</td>
+<td>4</td>
+<td>1/2 for proper equation, 1/2 correct answer an...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">12</td>
+<td>Question 12</td>
+<td>4</td>
+<td>1/2 for proper equatio, answer and units, 1/2 ...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">13</td>
+<td>Question 13</td>
+<td>6</td>
+<td>1/2 for proper equation, 1/2 correct answer an...</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">14</td>
+<td>Question 14</td>
+<td>8</td>
+<td>1/2 for proper calculation, correct answer and...</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">15</td>
+<td>Total</td>
+<td>100</td>
+<td>NaN</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Below is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing <span class="math inline">\(SW\)</span> in the first row of the table, are these values reasonable? Why or why not?</p>
+<ul>
+<li>Make suer to specify the units in your answer. Check the metadata provided <a href="https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md">here</a> to make sure you understand the variable names and units.</li>
+</ul>
+<div id="16f4334e" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>data_url<span class="op">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(data_url,parse_dates<span class="op">=</span>[<span class="st">'TIMESTAMP'</span>],index_col<span class="op">=</span>[<span class="st">'TIMESTAMP'</span>])</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Using this we can get a extra variables (DOY &amp; HOUR) that will be helpful later</span></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'HOUR'</span>] <span class="op">=</span> df.index.hour</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'DOY'</span>] <span class="op">=</span> df.index.dayofyear</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the table using .head()</span></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="24">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">SW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">SW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">H</th>
+<th data-quarto-table-cell-role="th">G_1</th>
+<th data-quarto-table-cell-role="th">TA_1_1_1</th>
+<th data-quarto-table-cell-role="th">TA_1_2_1</th>
+<th data-quarto-table-cell-role="th">TS_1</th>
+<th data-quarto-table-cell-role="th">TS_2</th>
+<th data-quarto-table-cell-role="th">TS_3</th>
+<th data-quarto-table-cell-role="th">RH_1_1_1</th>
+<th data-quarto-table-cell-role="th">P_1_1_1</th>
+<th data-quarto-table-cell-role="th">PA_1_1_1</th>
+<th data-quarto-table-cell-role="th">WS_1_1_1</th>
+<th data-quarto-table-cell-role="th">WD_1_1_1</th>
+<th data-quarto-table-cell-role="th">VPD_1_1_1</th>
+<th data-quarto-table-cell-role="th">HOUR</th>
+<th data-quarto-table-cell-role="th">DOY</th>
+</tr>
+<tr class="odd">
+<th data-quarto-table-cell-role="th">TIMESTAMP</th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 00:30:00</td>
+<td>0.059775</td>
+<td>263.22790</td>
+<td>1.358248</td>
+<td>271.21440</td>
+<td>-29.676018</td>
+<td>-5.586875</td>
+<td>-7.762711</td>
+<td>-9.570630</td>
+<td>3.630083</td>
+<td>4.214648</td>
+<td>7.489783</td>
+<td>83.282550</td>
+<td>0.0</td>
+<td>102.397125</td>
+<td>0.659737</td>
+<td>0.659737</td>
+<td>0.572898</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2022-01-01 01:00:00</td>
+<td>0.019907</td>
+<td>265.93750</td>
+<td>1.101564</td>
+<td>274.97858</td>
+<td>NaN</td>
+<td>-5.553178</td>
+<td>-7.200051</td>
+<td>-9.533210</td>
+<td>3.677612</td>
+<td>4.251830</td>
+<td>7.531122</td>
+<td>82.645550</td>
+<td>0.0</td>
+<td>102.403420</td>
+<td>1.401023</td>
+<td>1.401023</td>
+<td>0.621187</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 01:30:00</td>
+<td>0.102981</td>
+<td>268.36322</td>
+<td>0.614629</td>
+<td>279.22833</td>
+<td>NaN</td>
+<td>-5.575220</td>
+<td>-6.349798</td>
+<td>-7.833451</td>
+<td>3.669683</td>
+<td>4.264247</td>
+<td>7.550878</td>
+<td>79.349396</td>
+<td>0.0</td>
+<td>102.417690</td>
+<td>1.692178</td>
+<td>1.692178</td>
+<td>0.789111</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">2022-01-01 02:00:00</td>
+<td>0.025781</td>
+<td>273.88068</td>
+<td>0.394172</td>
+<td>281.60062</td>
+<td>NaN</td>
+<td>-5.574099</td>
+<td>-6.297862</td>
+<td>-7.050872</td>
+<td>3.692943</td>
+<td>4.280375</td>
+<td>7.569431</td>
+<td>79.832660</td>
+<td>0.0</td>
+<td>102.448500</td>
+<td>1.855905</td>
+<td>1.855905</td>
+<td>0.773717</td>
+<td>2</td>
+<td>1</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2022-01-01 02:30:00</td>
+<td>0.032684</td>
+<td>277.71097</td>
+<td>0.381383</td>
+<td>283.53964</td>
+<td>NaN</td>
+<td>-5.562795</td>
+<td>-6.020581</td>
+<td>-6.729948</td>
+<td>3.708760</td>
+<td>4.293371</td>
+<td>7.578785</td>
+<td>79.850450</td>
+<td>0.0</td>
+<td>102.461420</td>
+<td>2.013627</td>
+<td>2.013627</td>
+<td>0.789605</td>
+<td>2</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="answer" class="level4">
+<h4 class="anchored" data-anchor-id="answer">Answer</h4>
+<p>More or less what we’d expect, but <span class="math inline">\(SW_\downarrow\)</span> shouldn’t be less than <span class="math inline">\(SW_\uparrow\)</span>, both should be ~0 zero, so indicates some lack of precision with the sensor (or perhaps a human made light source on site?) Units <span class="math inline">\(W m^{-2}\)</span>.</p>
+</section>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>We’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?</p>
+<div id="9b109373" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>Start <span class="op">=</span> dt.strptime(<span class="st">'2024-01-12 0000'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H%M'</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>End <span class="op">=</span> dt.strptime(<span class="st">'2024-01-20 0000'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H%M'</span>)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>Query_Cols <span class="op">=</span> [<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>]</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="op">=</span> df.loc[((df.index<span class="op">&gt;=</span>Start)<span class="op">&amp;</span>(df.index<span class="op">&lt;</span>End)),Query_Cols].copy()</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>Selection.describe().<span class="bu">round</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="25">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">DOY</th>
+<th data-quarto-table-cell-role="th">HOUR</th>
+<th data-quarto-table-cell-role="th">SW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">SW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">TA_1_1_1</th>
+<th data-quarto-table-cell-role="th">TS_1</th>
+<th data-quarto-table-cell-role="th">RH_1_1_1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>15.500</td>
+<td>11.500</td>
+<td>45.256</td>
+<td>255.759</td>
+<td>14.706</td>
+<td>296.752</td>
+<td>-4.576</td>
+<td>3.597</td>
+<td>80.749</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>2.294</td>
+<td>6.931</td>
+<td>89.789</td>
+<td>51.854</td>
+<td>23.028</td>
+<td>15.939</td>
+<td>4.571</td>
+<td>0.625</td>
+<td>19.244</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>12.000</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>161.566</td>
+<td>0.000</td>
+<td>269.093</td>
+<td>-13.297</td>
+<td>2.607</td>
+<td>37.666</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>13.750</td>
+<td>5.750</td>
+<td>0.000</td>
+<td>215.101</td>
+<td>1.267</td>
+<td>282.230</td>
+<td>-8.566</td>
+<td>3.086</td>
+<td>65.421</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>15.500</td>
+<td>11.500</td>
+<td>0.027</td>
+<td>249.904</td>
+<td>2.698</td>
+<td>299.117</td>
+<td>-2.880</td>
+<td>3.555</td>
+<td>88.566</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>17.250</td>
+<td>17.250</td>
+<td>40.290</td>
+<td>308.048</td>
+<td>18.668</td>
+<td>310.924</td>
+<td>-0.607</td>
+<td>3.979</td>
+<td>98.252</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>19.000</td>
+<td>23.000</td>
+<td>369.341</td>
+<td>330.495</td>
+<td>114.190</td>
+<td>323.107</td>
+<td>1.805</td>
+<td>4.984</td>
+<td>100.000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="answer-1" class="level4">
+<h4 class="anchored" data-anchor-id="answer-1">Answer</h4>
+<p>The key point here is that <span class="math inline">\(T_a\)</span> has a much wider range (~15 <span class="math inline">\(^{\circ} C\)</span>) compared to <span class="math inline">\(T_s\)</span> (~2.3 <span class="math inline">\(^{\circ} C\)</span>) and that while <span class="math inline">\(T_a\)</span> was well bellow 0 <span class="math inline">\(^{\circ} C\)</span> for most of the period, <span class="math inline">\(T_s\)</span> didn’t even drop below 2.5 <span class="math inline">\(^{\circ} C\)</span>.</p>
+</section>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>The plot below shows traces of the four radiation component, air &amp; soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?</p>
+<div id="904e4d6e" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a plot with two sub-plots</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the radiation components on the first sub-plot</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Ta,Ts, and RH on the second sub-plot</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>fig,axes<span class="op">=</span>plt.subplots(<span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>axes[<span class="dv">0</span>],</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'LW_OUT_1_1_1'</span>],</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'blue'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>,<span class="st">'red'</span>],</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">'-'</span>,<span class="st">'-'</span>,<span class="st">'--'</span>,<span class="st">'--'</span>])</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend([<span class="st">'SW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW In'</span>,<span class="st">'LW Out'</span>],ncol<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">'W m$^{-2}$'</span>)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylim([<span class="dv">0</span>,<span class="dv">475</span>])</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="ss">f'Radiative Fluxes at CA-DBB Flux Station'</span>)</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a><span class="co"># For this plot we're going to plot temperature on the left axes and RH on the right axes</span></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot()</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>second_yaxes <span class="op">=</span> axes[<span class="dv">1</span>].twinx()</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple "hack" to get the element from second_yaxes (RH_1_1_1) to show up with the legend items for the main yaxis</span></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'Dummy_Trace'</span>] <span class="op">=</span> np.nan</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>axes[<span class="dv">1</span>],</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'Dummy_Trace'</span>],</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'red'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>],</span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">'-'</span>,<span class="st">'--'</span>,<span class="st">':'</span>])</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend([<span class="st">'Ta 2m'</span>,<span class="st">'Ts 0.05m'</span>,<span class="st">'RH 2m'</span>],ncol<span class="op">=</span><span class="dv">2</span>,loc<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">'C$\degree$'</span>)</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylim([<span class="op">-</span><span class="dv">15</span>,<span class="dv">10</span>])</span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>second_yaxes,</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'RH_1_1_1'</span>],</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'blue'</span>],</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">':'</span>],</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>              legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>second_yaxes.set_ylabel(<span class="st">'%'</span>)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">'Date'</span>)</span>
+<span id="cb5-41"><a href="#cb5-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb5-42"><a href="#cb5-42" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-7-output-1.png" width="649" height="507" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="answer-2" class="level4">
+<h4 class="anchored" data-anchor-id="answer-2">Answer</h4>
+<p>Important to discuss how <span class="math inline">\(LW\)</span> varies as a function of temperature [<span class="math inline">\(\downarrow\)</span> (sky/clouds); <span class="math inline">\(\uparrow\)</span> (ground)] and how <span class="math inline">\(SW_\downarrow\)</span> &amp; <span class="math inline">\(SW_\uparrow\)</span> are effected by cloud/snow. Big issue on day of snowfall, radiometer is covered in snow; <span class="math inline">\(SW_\downarrow\)</span> should not be larger than <span class="math inline">\(SW_\uparrow\)</span></p>
+</section>
+</section>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>The plot below shows mean daily albedo. What explains sharp increase on the 17th?</p>
+<div id="b7baa37a" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a single plot bar showing mean daily albedo</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'Albedo'</span>] <span class="op">=</span> Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">/</span>Selection[<span class="st">'SW_IN_1_1_1'</span>]</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out implausible values</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>Selection.loc[Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">&gt;</span>Selection[<span class="st">'SW_IN_1_1_1'</span>],<span class="st">'Albedo'</span>]<span class="op">=</span>np.nan</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Resample to get mean daily Albedo, ignoring the NaN values</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>DailyAlbedo <span class="op">=</span> Selection.resample(<span class="st">'D'</span>).mean()</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>DailyAlbedo.index <span class="op">=</span> DailyAlbedo.index.dayofyear</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>fig,ax<span class="op">=</span>plt.subplots()</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>DailyAlbedo.plot.bar(ax<span class="op">=</span>ax,y<span class="op">=</span><span class="st">'Albedo'</span>,color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'%'</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Daily Albedo'</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>ax.grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-8-output-1.png" width="589" height="481" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="answer-3" class="level4">
+<h4 class="anchored" data-anchor-id="answer-3">Answer</h4>
+<p>Fresh snow has a much higher albedo than either vegetated surfaces. The significant snowfall event (30 cm) was more than enough to cover all the vegetation.</p>
+</section>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>The maximum half-hourly <span class="math inline">\(SW_\downarrow\)</span> observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_{ex}\)</span> for the center point of this observation period (12:45). Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time?</p>
+<p><strong>Note</strong>: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.</p>
+<section id="answer-4" class="level4">
+<h4 class="anchored" data-anchor-id="answer-4">Answer</h4>
+<p>Equations are in lecture <a href="https://geos300.github.io/Lectures/04.html#/title-slide">4</a> &amp; <a href="https://geos300.github.io/Lectures/04.html#/title-slide">5</a> with examples for time calculations in study question <a href="https://geos300.github.io/Study_Questions/02.html">2</a>,</p>
+<p>Get the declination as follows:</p>
+<p><span id="eq-Solar-Declination"><span class="math display">\[
+\begin{eqnarray}
+\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
+         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
+         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber
+\end{eqnarray}
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\gamma\)</span> is the fractional year and DOY is the day of the year:</p>
+<p><span id="eq-Fractional-Year"><span class="math display">\[
+\gamma = \frac{2 \pi }{365} (DOY-1)
+\tag{2}\]</span></span></p>
+<p>And local Apparent time:</p>
+<p><span id="eq-LMST"><span class="math display">\[
+LMST = (TZ) + (\lambda-TZ_{m})\frac{4}{60}
+\tag{3}\]</span></span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is longitude, <span class="math inline">\(TZ\)</span> is time in LST (e.g., PST = UTC-8) <strong>in hours</strong>, and <span class="math inline">\(TZ_{m}\)</span> is the central meridian for a given time zone (e.g., PST = -120 <span class="math inline">\(^{\circ}\)</span>). You can then calculate the local apparent time LAT as:</p>
+<p><span id="eq-LAT"><span class="math display">\[
+LAT = LMST-\Delta LAT
+\tag{4}\]</span></span></p>
+<p>and <span class="math inline">\(\Delta LAT\)</span> is: <span id="eq-Delta-LAT"><span class="math display">\[
+\begin{eqnarray}
+\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\
+             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
+\end{eqnarray}
+\tag{5}\]</span></span></p>
+<p>And the zenith (<span class="math inline">\(Z\)</span>) following:</p>
+<p><span id="eq-Solar-Zenith"><span class="math display">\[
+\cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
+\tag{6}\]</span></span></p>
+<p>where the hour angle (h) is a function of local apparent time (LAT):</p>
+<p><span id="eq-Hour-Angle"><span class="math display">\[
+h = 15^{\circ}(12-LAT)
+\tag{7}\]</span></span></p>
+<p>With the zenith an the fractional DOY, you can then get <span class="math inline">\(I_{ex}\)</span></p>
+<p>The solar input at top of the atmosphere at any time and location hence is given as <span class="math inline">\(I_ex\)</span>: <span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
+I_{ex}=I_0(\frac{R_{av}}{R})^2\cos(Z)
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(I_0 \approx 1361 W m^{-2}\)</span>, <span class="math inline">\(\cos(Z)\)</span> applies the cosine law of illumination, and <span class="math inline">\((\frac{R_av}{R})\)</span> adjusts the solar constant Earth’s elliptic orbit:<br>
+<span id="eq-Adjusted-Constant"><span class="math display">\[
+\begin{eqnarray}
+(\frac{R_{av}}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
+                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
+\end{eqnarray}
+\tag{9}\]</span></span></p>
+<p>Use <span class="math inline">\(Z\)</span> and <span class="math inline">\(I_{ex}\)</span> to solve for <span class="math inline">\(\Phi_a\)</span></p>
+<p><span id="eq-Bulk-Transmissivity"><span class="math display">\[
+SW_\downarrow = I_{ex} \Psi_a^{m}
+\tag{10}\]</span></span></p>
+<p>where</p>
+<p><span class="math display">\[
+m = \frac{1}{\cos(Z)} = \frac{1}{\sin(\beta)}
+\]</span></p>
+<div id="3f5e5c18" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>DOY <span class="op">=</span> <span class="dv">13</span> <span class="co"># January 13th</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>TIME <span class="op">=</span> <span class="fl">12.75</span> <span class="co"># Fractional hours</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>latitude <span class="op">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>longitude <span class="op">=</span> <span class="op">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="op">=</span> <span class="op">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>I_0 <span class="op">=</span> <span class="dv">1361</span> <span class="co"># Wm-2</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>()<span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi <span class="op">/</span><span class="dv">365</span><span class="op">*</span>(DOY<span class="op">-</span><span class="dv">1</span>) </span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'gamma = '</span>,gamma)</span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.006918</span> <span class="op">-</span> <span class="fl">0.399912</span> <span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.070257</span> <span class="op">*</span>np.sin(gamma)  <span class="op">\</span></span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.006758</span><span class="op">*</span> np.cos(<span class="dv">2</span><span class="op">*</span>gamma) <span class="op">+</span> <span class="fl">0.000907</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)  <span class="op">\</span></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.002697</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.00148</span> <span class="op">*</span>np.sin(<span class="dv">3</span><span class="op">*</span>gamma)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'delta = '</span>,delta,<span class="st">'in radians, or '</span>,delta<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi,<span class="st">' in degrees works too</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>LMST <span class="op">=</span> TIME<span class="op">+</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LMST = '</span>,LMST,<span class="st">' in hours'</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="op">=</span> TIME<span class="op">-</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Following the incorrect equation would yield: '</span>,LMST_error, <span class="st">' accept this, along with calculations of LAT, h, and z based on it'</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="op">=</span> <span class="fl">229.18</span><span class="op">*</span>(<span class="fl">0.000075</span><span class="op">+</span><span class="fl">0.001868</span><span class="op">*</span>np.cos(gamma)<span class="op">-</span><span class="fl">0.032077</span><span class="op">*</span>np.sin(gamma) <span class="op">\</span></span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>             <span class="op">-</span><span class="fl">0.014615</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">-</span><span class="fl">0.040849</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>LAT <span class="op">=</span> LMST<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LAT'</span>,LAT)</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="op">=</span>LMST_error<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb7-29"><a href="#cb7-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,LAT_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb7-30"><a href="#cb7-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-31"><a href="#cb7-31" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT)</span>
+<span id="cb7-32"><a href="#cb7-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hour-angle = '</span>,h,<span class="st">' in degrees'</span>)</span>
+<span id="cb7-33"><a href="#cb7-33" aria-hidden="true" tabindex="-1"></a>h_error <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT_error)</span>
+<span id="cb7-34"><a href="#cb7-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,h_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb7-35"><a href="#cb7-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-36"><a href="#cb7-36" aria-hidden="true" tabindex="-1"></a>cos_z <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-37"><a href="#cb7-37" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.arccos(cos_z)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb7-38"><a href="#cb7-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'zenith angle = '</span>,z,<span class="st">' in degrees'</span>)</span>
+<span id="cb7-39"><a href="#cb7-39" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-40"><a href="#cb7-40" aria-hidden="true" tabindex="-1"></a>z_error <span class="op">=</span> np.arccos(cos_z_error)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb7-41"><a href="#cb7-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,z_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb7-42"><a href="#cb7-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-43"><a href="#cb7-43" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="op">=</span> <span class="fl">1.00011</span><span class="op">+</span><span class="fl">0.034221</span><span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.001280</span><span class="op">*</span>np.sin(gamma)<span class="op">+\</span></span>
+<span id="cb7-44"><a href="#cb7-44" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.000819</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.000077</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)</span>
+<span id="cb7-45"><a href="#cb7-45" aria-hidden="true" tabindex="-1"></a>I_ex<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-46"><a href="#cb7-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Extraterrestrial Irradiance = '</span>,I_ex, <span class="st">'W m-2'</span>)</span>
+<span id="cb7-47"><a href="#cb7-47" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-48"><a href="#cb7-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,I_ex_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb7-49"><a href="#cb7-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-50"><a href="#cb7-50" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-51"><a href="#cb7-51" aria-hidden="true" tabindex="-1"></a>m_error <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb7-52"><a href="#cb7-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-53"><a href="#cb7-53" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m)</span>
+<span id="cb7-54"><a href="#cb7-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Bulk transimissivity = '</span>,Psi_a)</span>
+<span id="cb7-55"><a href="#cb7-55" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m_error)</span>
+<span id="cb7-56"><a href="#cb7-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,Psi_a_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>gamma =  0.20657047585247953
+delta =  -0.37724303517583996 in radians, or  -21.614433766280886  in degrees works too
+
+LMST =  12.55100454  in hours
+**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.
+Following the incorrect equation would yield:  12.94899546  accept this, along with calculations of LAT, h, and z based on it
+Delta_LAT =  -7.897907200098055  in minutes
+LAT 12.6826363266683
+**Note**:  13.080627246668302  is also acceptable as per above
+
+hour-angle =  -10.2395449000245  in degrees
+**Note**:  -16.209408700024525  is also acceptable as per above
+
+zenith angle =  71.33083441425887  in degrees
+**Note**  72.20517626473348 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Extraterrestrial Irradiance =  450.75477348124923 W m-2
+**Note**  430.34511353711304 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Bulk transimissivity =  0.9382246449793787
+**Note**  0.9409374440932289 is also acceptable as per above &lt; the error has a minor impact on the answer.
+</code></pre>
+</div>
+</div>
+</section>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Now calculate <span class="math inline">\(\Psi_a\)</span> for 12:45 January 19; the observed value of <span class="math inline">\(SW_\downarrow\)</span> was between 12:30 and 13:00 was 58.375 W<span class="math inline">\(^m{-2}\)</span>. What explains the difference between these two days?</p>
+<section id="answer-5" class="level4">
+<h4 class="anchored" data-anchor-id="answer-5">Answer</h4>
+<p>Same procedures as above, the key cause of the difference cloud cover. Significantly more light is attenuated on the cloudy day, that light is reflected back to space by clouds (some is also absorbed) before making it to ground level.</p>
+<div id="49d1e969" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>DOY <span class="op">=</span> <span class="dv">19</span> <span class="co"># January 19th</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>TIME <span class="op">=</span> <span class="fl">12.75</span> <span class="co"># Fractional hours</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>latitude <span class="op">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>longitude <span class="op">=</span> <span class="op">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="op">=</span> <span class="op">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>I_0 <span class="op">=</span> <span class="dv">1361</span> <span class="co"># Wm-2</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> <span class="fl">58.375</span> <span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi <span class="op">/</span><span class="dv">365</span><span class="op">*</span>(DOY<span class="op">-</span><span class="dv">1</span>) </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'gamma = '</span>,gamma)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.006918</span> <span class="op">-</span> <span class="fl">0.399912</span> <span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.070257</span> <span class="op">*</span>np.sin(gamma)  <span class="op">\</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.006758</span><span class="op">*</span> np.cos(<span class="dv">2</span><span class="op">*</span>gamma) <span class="op">+</span> <span class="fl">0.000907</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)  <span class="op">\</span></span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.002697</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.00148</span> <span class="op">*</span>np.sin(<span class="dv">3</span><span class="op">*</span>gamma)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'delta = '</span>,delta,<span class="st">'in radians, or '</span>,delta<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi,<span class="st">' in degrees works too</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>LMST <span class="op">=</span> TIME<span class="op">+</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LMST = '</span>,LMST,<span class="st">' in hours'</span>)</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="op">=</span> TIME<span class="op">-</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Following the incorrect equation would yield: '</span>,LMST_error, <span class="st">' accept this, along with calculations of LAT, h, and z based on it'</span>)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="op">=</span> <span class="fl">229.18</span><span class="op">*</span>(<span class="fl">0.000075</span><span class="op">+</span><span class="fl">0.001868</span><span class="op">*</span>np.cos(gamma)<span class="op">-</span><span class="fl">0.032077</span><span class="op">*</span>np.sin(gamma) <span class="op">\</span></span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>             <span class="op">-</span><span class="fl">0.014615</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">-</span><span class="fl">0.040849</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma))</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>LAT <span class="op">=</span> LMST<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LAT'</span>,LAT)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="op">=</span>LMST_error<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,LAT_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hour-angle = '</span>,h,<span class="st">' in degrees'</span>)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a>h_error <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT_error)</span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,h_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a>cos_z <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.arccos(cos_z)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'zenith angle = '</span>,z,<span class="st">' in degrees'</span>)</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a>z_error <span class="op">=</span> np.arccos(cos_z_error)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,z_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="op">=</span> <span class="fl">1.00011</span><span class="op">+</span><span class="fl">0.034221</span><span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.001280</span><span class="op">*</span>np.sin(gamma)<span class="op">+\</span></span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.000819</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.000077</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a>I_ex<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Extraterrestrial Irradiance = '</span>,I_ex, <span class="st">'W m-2'</span>)</span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,I_ex_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a>m_error <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m)</span>
+<span id="cb9-54"><a href="#cb9-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Bulk transimissivity = '</span>,Psi_a)</span>
+<span id="cb9-55"><a href="#cb9-55" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m_error)</span>
+<span id="cb9-56"><a href="#cb9-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,Psi_a_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>gamma =  0.3098557137787193
+delta =  -0.35792818775237806 in radians, or  -20.507774526977382  in degrees works too
+
+LMST =  12.55100454  in hours
+**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.
+Following the incorrect equation would yield:  12.94899546  accept this, along with calculations of LAT, h, and z based on it
+Delta_LAT =  -9.980631058029838  in minutes
+LAT 12.717348390967164
+**Note**:  13.115339310967165  is also acceptable as per above
+
+hour-angle =  -10.760225864507458  in degrees
+**Note**:  -16.73008966450748  is also acceptable as per above
+
+zenith angle =  70.29438713363702  in degrees
+**Note**  71.21479106776923 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Extraterrestrial Irradiance =  474.42479382871187 W m-2
+**Note**  453.08588607201614 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Bulk transimissivity =  0.4933776314395113
+**Note**  0.5093071563010647 is also acceptable as per above &lt; the error has a minor impact on the answer.
+</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Using the examples above as a template, calculate <span class="math inline">\(R_n\)</span> over the cold-snap. Make a scatter plot showing <span class="math inline">\(R_n\)</span> on the y-axis and <span class="math inline">\(SW_\downarrow\)</span> on the x-axis. Describe the relationship you.</p>
+<section id="answer-6" class="level4">
+<h4 class="anchored" data-anchor-id="answer-6">Answer</h4>
+<p>First, must calculate <span class="math inline">\(R_n\)</span> following:</p>
+<p><span id="eq-Net-Radiation"><span class="math display">\[
+R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
+\tag{11}\]</span></span></p>
+<p>The relationship between the two: <span class="math inline">\(SW_\downarrow\)</span> is a significant driver of <span class="math inline">\(R_n\)</span>, whien it is positive, it has a strong increasing effect on <span class="math inline">\(R_n\)</span> (but the slope modified by albedo). However, the effects of <span class="math inline">\(LW\)</span> are also present in the <span class="math inline">\(R_n\)</span> signal, so it is not a simple linear relationship with <span class="math inline">\(SW*\)</span></p>
+<div id="513b6881" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'R_n'</span>] <span class="op">=</span> Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">-</span>Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">+</span>Selection[<span class="st">'LW_IN_1_1_1'</span>]<span class="op">-</span>Selection[<span class="st">'LW_OUT_1_1_1'</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>fig,ax<span class="op">=</span>plt.subplots()</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>ax,kind<span class="op">=</span><span class="st">'scatter'</span>,y<span class="op">=</span><span class="st">'R_n'</span>,x<span class="op">=</span><span class="st">'SW_IN_1_1_1'</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Rn W m$^{-2}$'</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'SW in W m$^{-2}$'</span>)</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Net Radiation vs. Short-wave Irradiance'</span>)</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>ax.grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-11-output-1.png" width="605" height="479" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>Using the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.</p>
+<section id="answer-7" class="level4">
+<h4 class="anchored" data-anchor-id="answer-7">Answer</h4>
+<p>Should reproduce <strong>All</strong> graphs and tables above so that there can be a well rounded comparison. <strong>For plots:</strong> make sure all axes limits are updated properly. Key discussion points:</p>
+<ul>
+<li>Warmer weather (both <span class="math inline">\(T_a\)</span> and <span class="math inline">\(T_s\)</span>). While <span class="math inline">\(T_a\)</span> is still higher and more variable than <span class="math inline">\(T_s\)</span>, it is important to note that <span class="math inline">\(T_s\)</span> in summer has a similar range as in winter.
+<ul>
+<li>Should also mention data gap in <span class="math inline">\(T_s\)</span> for full credit.</li>
+</ul></li>
+<li>More incoming <span class="math inline">\(SW\)</span> due to lower zenith angle and longer days. Less variable due to less cloud cover. Primarily clear sky conditions in summer</li>
+<li>More incoming/outgoing <span class="math inline">\(LW\)</span> due to higher temps of both ground and sky. Less variable due to less cloud cover. Primarily clear sky conditions in summer</li>
+<li>Albedo is lower due to lack of snow <strong>and</strong> green vegetation.</li>
+<li><span class="math inline">\(R_n\)</span> vs <span class="math inline">\(SW_\downarrow\)</span> is more direct because of lack of snow and reduced variability in <span class="math inline">\(LW\)</span></li>
+<li><span class="math inline">\(RH\)</span> is “lower” at times, but does not indicate drier atmosphere, because warm air can hold more water vapor</li>
+</ul>
+<div id="40d17cbc" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Start <span class="op">=</span> dt.strptime(<span class="st">'2023-07-12 0000'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H%M'</span>)</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>End <span class="op">=</span> dt.strptime(<span class="st">'2023-07-20 0000'</span>, <span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st"> %H%M'</span>)</span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Query_Cols <span class="op">=</span> [<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="op">=</span> df.loc[((df.index<span class="op">&gt;=</span>Start)<span class="op">&amp;</span>(df.index<span class="op">&lt;</span>End)),Query_Cols].copy()</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>                    </span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data</span></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>Selection.describe().<span class="bu">round</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="31">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">DOY</th>
+<th data-quarto-table-cell-role="th">HOUR</th>
+<th data-quarto-table-cell-role="th">SW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_IN_1_1_1</th>
+<th data-quarto-table-cell-role="th">SW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">LW_OUT_1_1_1</th>
+<th data-quarto-table-cell-role="th">TA_1_1_1</th>
+<th data-quarto-table-cell-role="th">TS_1</th>
+<th data-quarto-table-cell-role="th">RH_1_1_1</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">count</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>384.000</td>
+<td>273.000</td>
+<td>384.000</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">mean</td>
+<td>196.500</td>
+<td>11.500</td>
+<td>312.663</td>
+<td>348.073</td>
+<td>41.283</td>
+<td>421.506</td>
+<td>18.706</td>
+<td>16.706</td>
+<td>77.331</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">std</td>
+<td>2.294</td>
+<td>6.931</td>
+<td>330.573</td>
+<td>16.929</td>
+<td>38.350</td>
+<td>48.090</td>
+<td>5.291</td>
+<td>0.418</td>
+<td>16.846</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">min</td>
+<td>193.000</td>
+<td>0.000</td>
+<td>0.000</td>
+<td>312.911</td>
+<td>0.312</td>
+<td>346.052</td>
+<td>8.609</td>
+<td>15.035</td>
+<td>43.112</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">25%</td>
+<td>194.750</td>
+<td>5.750</td>
+<td>0.000</td>
+<td>336.154</td>
+<td>1.992</td>
+<td>375.950</td>
+<td>14.508</td>
+<td>16.343</td>
+<td>62.581</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">50%</td>
+<td>196.500</td>
+<td>11.500</td>
+<td>195.154</td>
+<td>347.398</td>
+<td>33.877</td>
+<td>417.112</td>
+<td>18.843</td>
+<td>16.734</td>
+<td>79.089</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">75%</td>
+<td>198.250</td>
+<td>17.250</td>
+<td>642.375</td>
+<td>358.918</td>
+<td>80.291</td>
+<td>462.301</td>
+<td>23.250</td>
+<td>16.998</td>
+<td>93.278</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">max</td>
+<td>200.000</td>
+<td>23.000</td>
+<td>926.505</td>
+<td>389.893</td>
+<td>113.806</td>
+<td>512.630</td>
+<td>30.224</td>
+<td>17.694</td>
+<td>100.000</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<div id="a5f3b4aa" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a plot with two sub-plots</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the radiation components on the first sub-plot</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Ta,Ts, and RH on the second sub-plot</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>fig,axes<span class="op">=</span>plt.subplots(<span class="dv">2</span>,sharex<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>axes[<span class="dv">0</span>],</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'LW_OUT_1_1_1'</span>],</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'blue'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>,<span class="st">'red'</span>],</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">'-'</span>,<span class="st">'-'</span>,<span class="st">'--'</span>,<span class="st">'--'</span>])</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].legend([<span class="st">'SW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW In'</span>,<span class="st">'LW Out'</span>],ncol<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylabel(<span class="st">'W m$^{-2}$'</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_ylim([<span class="dv">0</span>,<span class="dv">1200</span>])</span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].set_title(<span class="ss">f'Radiative Fluxes at CA-DBB Flux Station'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">0</span>].grid()</span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a><span class="co"># For this plot we're going to plot temperature on the left axes and RH on the right axes</span></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].plot()</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>second_yaxes <span class="op">=</span> axes[<span class="dv">1</span>].twinx()</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="co"># A simple "hack" to get the element from second_yaxes (RH_1_1_1) to show up with the legend items for the main yaxis</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'Dummy_Trace'</span>] <span class="op">=</span> np.nan</span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>axes[<span class="dv">1</span>],</span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'Dummy_Trace'</span>],</span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'red'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>],</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">'-'</span>,<span class="st">'--'</span>,<span class="st">':'</span>])</span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].legend([<span class="st">'Ta 2m'</span>,<span class="st">'Ts 0.05m'</span>,<span class="st">'RH 2m'</span>],ncol<span class="op">=</span><span class="dv">2</span>,loc<span class="op">=</span><span class="dv">4</span>)</span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylabel(<span class="st">'C$\degree$'</span>)</span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_ylim([<span class="dv">5</span>,<span class="dv">30</span>])</span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>second_yaxes,</span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a>              y<span class="op">=</span>[<span class="st">'RH_1_1_1'</span>],</span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>              color<span class="op">=</span>[<span class="st">'blue'</span>],</span>
+<span id="cb13-36"><a href="#cb13-36" aria-hidden="true" tabindex="-1"></a>              style<span class="op">=</span>[<span class="st">':'</span>],</span>
+<span id="cb13-37"><a href="#cb13-37" aria-hidden="true" tabindex="-1"></a>              legend<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb13-38"><a href="#cb13-38" aria-hidden="true" tabindex="-1"></a>second_yaxes.set_ylabel(<span class="st">'%'</span>)</span>
+<span id="cb13-39"><a href="#cb13-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-40"><a href="#cb13-40" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_xlabel(<span class="st">'Date'</span>)</span>
+<span id="cb13-41"><a href="#cb13-41" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].set_title(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb13-42"><a href="#cb13-42" aria-hidden="true" tabindex="-1"></a>axes[<span class="dv">1</span>].grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-13-output-1.png" width="656" height="507" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="2c2dcf78" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a single plot bar showing mean daily albedo</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'Albedo'</span>] <span class="op">=</span> Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">/</span>Selection[<span class="st">'SW_IN_1_1_1'</span>]</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out implausible values</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>Selection.loc[Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">&gt;</span>Selection[<span class="st">'SW_IN_1_1_1'</span>],<span class="st">'Albedo'</span>]<span class="op">=</span>np.nan</span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Resample to get mean daily Albedo, ignoring the NaN values</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>DailyAlbedo <span class="op">=</span> Selection.resample(<span class="st">'D'</span>).mean()</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>DailyAlbedo.index <span class="op">=</span> DailyAlbedo.index.dayofyear</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>fig,ax<span class="op">=</span>plt.subplots()</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>DailyAlbedo.plot.bar(ax<span class="op">=</span>ax,y<span class="op">=</span><span class="st">'Albedo'</span>,color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'%'</span>)</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Daily Albedo'</span>)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a>ax.grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-14-output-1.png" width="606" height="490" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+<div id="1f5b886f" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a scatter plot</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>Selection[<span class="st">'R_n'</span>] <span class="op">=</span> Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">-</span>Selection[<span class="st">'SW_OUT_1_1_1'</span>]<span class="op">+</span>Selection[<span class="st">'LW_IN_1_1_1'</span>]<span class="op">-</span>Selection[<span class="st">'LW_OUT_1_1_1'</span>]</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>fig,ax<span class="op">=</span>plt.subplots()</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="ss">f'Student #: </span><span class="sc">{</span>Student_Number<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>Selection.plot(ax<span class="op">=</span>ax,kind<span class="op">=</span><span class="st">'scatter'</span>,x<span class="op">=</span><span class="st">'R_n'</span>,y<span class="op">=</span><span class="st">'SW_IN_1_1_1'</span>)</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>ax.set_ylabel(<span class="st">'Rn W m$^{-2}$'</span>)</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a>ax.set_xlabel(<span class="st">'SW in W m$^{-2}$'</span>)</span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>ax.set_title(<span class="st">'Net Radiation vs. Short-wave Irradiance'</span>)</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a>ax.grid()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="_01Key_files/figure-html/cell-15-output-1.png" width="594" height="479" class="figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Find the timestamp of the observation interval when maximum <span class="math inline">\(SW_\downarrow\)</span> was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. <strong>Note</strong> our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate <span class="math inline">\(I_{ex}\)</span> and <span class="math inline">\(\Psi_a\)</span> for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily <span class="math inline">\(SW_\downarrow\)</span> differ?</p>
+<section id="answer-8" class="level4">
+<h4 class="anchored" data-anchor-id="answer-8">Answer</h4>
+<p>Same procedures as question 5 for calculations. Key discussion points:</p>
+<ul>
+<li><p>The magnitude of <span class="math inline">\(I_{ex}\)</span> differs because of the solar declination <span class="math inline">\(\delta\)</span> change giving us a lower zenith angle <span class="math inline">\(z\)</span> and therefore more concentrated solar beam (closer to <span class="math inline">\(I_0\)</span>), despite the fact that the earth is slightly farther from the sun during the northern hemisphere summer.</p></li>
+<li><p><span class="math inline">\(Psi_a\)</span> is higher because the atmosphere has higher moisture content in the summer along with higher particulate matter content (this was discussion point from lecture). This is interesting, because although the path length is much shorter in for this observation period than in winter, overall attenuation of the solar beam during this timestamp (~19%) exceeded that at 12:45 January 13th (~15%). This highlights the impacts of air quality and water vapor content.</p></li>
+<li><p>The timing of the maximum differs because:</p>
+<ol type="1">
+<li><span class="math inline">\(\Delta LAT\)</span> changes through the year. Not because of DST; as the sites don’t use it. Local apparent time<br>
+</li>
+<li>Part of it is “randomness” due to cloud conditions
+<ul>
+<li>explanation not needed for full credit: the 17th had some patchy cloud cover as indicated by the jumpiness of the SW trace on this day. If there are clouds blocking the solar beam’s path to the radiometer but some large reflective clouds to the north, some “excess” <span class="math inline">\(SW\)</span> reelected off the cloud can hit the radiometer and boost <span class="math inline">\(SW_\downarrow\)</span> a bit.</li>
+</ul></li>
+</ol></li>
+</ul>
+<div id="584c5316" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>()<span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Maximum SW = '</span>,SW_in,<span class="st">'W m-2'</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>Max_SW_Obs <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'SW_IN_1_1_1'</span>]</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>Max_SW_TIMESTAMP <span class="op">=</span> Max_SW_Obs.index[<span class="dv">0</span>]</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Timestamp of the maximum SW observation ='</span>, Max_SW_TIMESTAMP)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Must divide minutes by 60 and subtract 15/60 to get fractional hour of mid-point</span></span>
+<span id="cb16-9"><a href="#cb16-9" aria-hidden="true" tabindex="-1"></a>Time <span class="op">=</span> Max_SW_TIMESTAMP.hour<span class="op">+</span>Max_SW_TIMESTAMP.minute<span class="op">/</span><span class="dv">60</span><span class="op">-</span><span class="dv">15</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb16-10"><a href="#cb16-10" aria-hidden="true" tabindex="-1"></a>DOY <span class="op">=</span> Max_SW_TIMESTAMP.dayofyear</span>
+<span id="cb16-11"><a href="#cb16-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-12"><a href="#cb16-12" aria-hidden="true" tabindex="-1"></a>latitude <span class="op">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb16-13"><a href="#cb16-13" aria-hidden="true" tabindex="-1"></a>longitude <span class="op">=</span> <span class="op">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb16-14"><a href="#cb16-14" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="op">=</span> <span class="op">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb16-15"><a href="#cb16-15" aria-hidden="true" tabindex="-1"></a>I_0 <span class="op">=</span> <span class="dv">1361</span> <span class="co"># Wm-2</span></span>
+<span id="cb16-16"><a href="#cb16-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-17"><a href="#cb16-17" aria-hidden="true" tabindex="-1"></a>gamma <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi <span class="op">/</span><span class="dv">365</span><span class="op">*</span>(DOY<span class="op">-</span><span class="dv">1</span>) </span>
+<span id="cb16-18"><a href="#cb16-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'gamma = '</span>,gamma)</span>
+<span id="cb16-19"><a href="#cb16-19" aria-hidden="true" tabindex="-1"></a>delta <span class="op">=</span> <span class="fl">0.006918</span> <span class="op">-</span> <span class="fl">0.399912</span> <span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.070257</span> <span class="op">*</span>np.sin(gamma)  <span class="op">\</span></span>
+<span id="cb16-20"><a href="#cb16-20" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.006758</span><span class="op">*</span> np.cos(<span class="dv">2</span><span class="op">*</span>gamma) <span class="op">+</span> <span class="fl">0.000907</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)  <span class="op">\</span></span>
+<span id="cb16-21"><a href="#cb16-21" aria-hidden="true" tabindex="-1"></a>         <span class="op">-</span><span class="fl">0.002697</span><span class="op">*</span>np.cos(<span class="dv">3</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.00148</span> <span class="op">*</span>np.sin(<span class="dv">3</span><span class="op">*</span>gamma)</span>
+<span id="cb16-22"><a href="#cb16-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'delta = '</span>,delta,<span class="st">'in radians, or '</span>,delta<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi,<span class="st">' in degrees works too</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-23"><a href="#cb16-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-24"><a href="#cb16-24" aria-hidden="true" tabindex="-1"></a>LMST <span class="op">=</span> TIME<span class="op">+</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb16-25"><a href="#cb16-25" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LMST = '</span>,LMST,<span class="st">' in hours'</span>)</span>
+<span id="cb16-26"><a href="#cb16-26" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb16-27"><a href="#cb16-27" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="op">=</span> TIME<span class="op">-</span>(longitude<span class="op">-</span>central_meridian_PST)<span class="op">*</span><span class="dv">4</span><span class="op">/</span><span class="dv">60</span></span>
+<span id="cb16-28"><a href="#cb16-28" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Following the incorrect equation would yield: '</span>,LMST_error, <span class="st">' accept this, along with calculations of LAT, h, and z based on it'</span>)</span>
+<span id="cb16-29"><a href="#cb16-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-30"><a href="#cb16-30" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="op">=</span> <span class="fl">229.18</span><span class="op">*</span>(<span class="fl">0.000075</span><span class="op">+</span><span class="fl">0.001868</span><span class="op">*</span>np.cos(gamma)<span class="op">-</span><span class="fl">0.032077</span><span class="op">*</span>np.sin(gamma) <span class="op">\</span></span>
+<span id="cb16-31"><a href="#cb16-31" aria-hidden="true" tabindex="-1"></a>             <span class="op">-</span><span class="fl">0.014615</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">-</span><span class="fl">0.040849</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma))</span>
+<span id="cb16-32"><a href="#cb16-32" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb16-33"><a href="#cb16-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-34"><a href="#cb16-34" aria-hidden="true" tabindex="-1"></a>LAT <span class="op">=</span> LMST<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb16-35"><a href="#cb16-35" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'LAT'</span>,LAT)</span>
+<span id="cb16-36"><a href="#cb16-36" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="op">=</span>LMST_error<span class="op">-</span>Delta_LAT<span class="op">/</span><span class="dv">60</span></span>
+<span id="cb16-37"><a href="#cb16-37" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,LAT_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-38"><a href="#cb16-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-39"><a href="#cb16-39" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT)</span>
+<span id="cb16-40"><a href="#cb16-40" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'hour-angle = '</span>,h,<span class="st">' in degrees'</span>)</span>
+<span id="cb16-41"><a href="#cb16-41" aria-hidden="true" tabindex="-1"></a>h_error <span class="op">=</span> <span class="dv">15</span><span class="op">*</span>(<span class="dv">12</span><span class="op">-</span>LAT_error)</span>
+<span id="cb16-42"><a href="#cb16-42" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note**: '</span>,h_error,<span class="st">' is also acceptable as per above</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-43"><a href="#cb16-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-44"><a href="#cb16-44" aria-hidden="true" tabindex="-1"></a>cos_z <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-45"><a href="#cb16-45" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> np.arccos(cos_z)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb16-46"><a href="#cb16-46" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'zenith angle = '</span>,z,<span class="st">' in degrees'</span>)</span>
+<span id="cb16-47"><a href="#cb16-47" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="op">=</span> np.sin(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.sin(delta)<span class="op">+</span>np.cos(latitude<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)<span class="op">*</span>np.cos(delta)<span class="op">*</span>np.cos(h_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-48"><a href="#cb16-48" aria-hidden="true" tabindex="-1"></a>z_error <span class="op">=</span> np.arccos(cos_z_error)<span class="op">*</span><span class="dv">180</span><span class="op">/</span>np.pi</span>
+<span id="cb16-49"><a href="#cb16-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,z_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-50"><a href="#cb16-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-51"><a href="#cb16-51" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="op">=</span> <span class="fl">1.00011</span><span class="op">+</span><span class="fl">0.034221</span><span class="op">*</span>np.cos(gamma)<span class="op">+</span><span class="fl">0.001280</span><span class="op">*</span>np.sin(gamma)<span class="op">+\</span></span>
+<span id="cb16-52"><a href="#cb16-52" aria-hidden="true" tabindex="-1"></a>            <span class="fl">0.000819</span><span class="op">*</span>np.cos(<span class="dv">2</span><span class="op">*</span>gamma)<span class="op">+</span><span class="fl">0.000077</span><span class="op">*</span>np.sin(<span class="dv">2</span><span class="op">*</span>gamma)</span>
+<span id="cb16-53"><a href="#cb16-53" aria-hidden="true" tabindex="-1"></a>I_ex<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-54"><a href="#cb16-54" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Extraterrestrial Irradiance = '</span>,I_ex, <span class="st">'W m-2'</span>)</span>
+<span id="cb16-55"><a href="#cb16-55" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="op">=</span>I_0<span class="op">*</span>R_av_Rsq<span class="op">*</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-56"><a href="#cb16-56" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,I_ex_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span>
+<span id="cb16-57"><a href="#cb16-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-58"><a href="#cb16-58" aria-hidden="true" tabindex="-1"></a>m <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-59"><a href="#cb16-59" aria-hidden="true" tabindex="-1"></a>m_error <span class="op">=</span> <span class="dv">1</span><span class="op">/</span>np.cos(z_error<span class="op">*</span>np.pi<span class="op">/</span><span class="dv">180</span>)</span>
+<span id="cb16-60"><a href="#cb16-60" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-61"><a href="#cb16-61" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m)</span>
+<span id="cb16-62"><a href="#cb16-62" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Bulk transimissivity = '</span>,Psi_a)</span>
+<span id="cb16-63"><a href="#cb16-63" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="op">=</span> (SW_in<span class="op">/</span>I_ex)<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span>m_error)</span>
+<span id="cb16-64"><a href="#cb16-64" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'**Note** '</span>,Psi_a_error,<span class="st">'is also acceptable as per above &lt; the error has a minor impact on the answer.</span><span class="ch">\n</span><span class="st">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Maximum SW =  926.5046 W m-2
+Timestamp of the maximum SW observation = 2023-07-17 12:00:00
+gamma =  3.3911986452448724
+delta =  0.37255056929674196 in radians, or  21.345575275899428  in degrees works too
+
+LMST =  12.55100454  in hours
+**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.
+Following the incorrect equation would yield:  12.94899546  accept this, along with calculations of LAT, h, and z based on it
+Delta_LAT =  -6.004187159692647  in minutes
+LAT 12.651074325994877
+**Note**:  13.049065245994878  is also acceptable as per above
+
+hour-angle =  -9.766114889923152  in degrees
+**Note**:  -15.735978689923176  is also acceptable as per above
+
+zenith angle =  28.85065498996935  in degrees
+**Note**  30.472711883005655 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Extraterrestrial Irradiance =  1153.1988359991537 W m-2
+**Note**  1134.753516870298 is also acceptable as per above &lt; the error has a minor impact on the answer.
+
+Bulk transimissivity =  0.8255469393547858
+**Note**  0.8280822584548999 is also acceptable as per above &lt; the error has a minor impact on the answer.
+</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in <span class="math inline">\(\mu mol m^{-2}s^{-1}\)</span>. You can use the wavelength of yellow light (<span class="math inline">\(\lambda 0 0.55 \mu m\)</span>) for your estimate. <strong>Hint</strong>: Consult examples in reading package for radiation geometry.</p>
+<section id="answer-9" class="level4">
+<h4 class="anchored" data-anchor-id="answer-9">Answer</h4>
+<p>Solve for the frequency of yellow light:</p>
+<p><span id="eq-Frequency"><span class="math display">\[
+v=\frac{c}{\lambda}
+\tag{12}\]</span></span></p>
+<p>Then the energy, where h=6.63∗10−34Js</p>
+<p><span id="eq-Energy-of-Photon"><span class="math display">\[
+e = hv
+\tag{13}\]</span></span></p>
+<p>Then scale by 42% to estimate PAR and get total number of photons. Finally convert to umol with Avogadro’s number.</p>
+<div id="5d6e0711" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">299792458</span> <span class="co"># Speed_of_light m s-1</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>h <span class="op">=</span> <span class="fl">6.63e-34</span> <span class="co"># planks constant J s-1</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Lambda <span class="op">=</span> <span class="fl">0.55</span> <span class="co"># Yellow light wavelength um </span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>photons_per_mol <span class="op">=</span> <span class="fl">6.022e23</span> <span class="co"># Avogadro number</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> c<span class="op">/</span>(Lambda<span class="op">*</span><span class="fl">1e-6</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Frequency of yellow light '</span>,v,<span class="st">' in Hz'</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>e <span class="op">=</span> h<span class="op">*</span>v</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Energy associated with a single photon of yellow light '</span>,e, <span class="st">'J'</span>)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming all PAR is yellow light (unrealistic, but what was instructed for simplicity):</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>SW_par <span class="op">=</span> SW_in<span class="op">*</span><span class="fl">0.42</span> <span class="co"># W m-2</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert PAR (energy in W m-2) to PPFD (total number of photons)</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>SW_ppfd_N <span class="op">=</span> SW_par<span class="op">/</span>e</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Phonons of "yellow" light '</span>,SW_ppfd_N)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert from N to umol</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>SW_ppfd <span class="op">=</span> SW_ppfd_N<span class="op">/</span>photons_per_mol<span class="op">*</span><span class="fl">1e6</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'PPFD of "yellow" light '</span>,SW_ppfd, <span class="st">' umol m-2 s-1'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Frequency of yellow light  545077196363636.3  in Hz
+Energy associated with a single photon of yellow light  3.6138618118909086e-19 J
+Phonons of "yellow" light  1.0767759041577507e+21
+PPFD of "yellow" light  1788.0702493486392  umol m-2 s-1</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-11" class="level3">
+<h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
+<p>Let’s assume the surface emissivity at CA-DBB is <span class="math inline">\(\epsilon = 0.95\)</span>. Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.</p>
+<section id="answer-10" class="level4">
+<h4 class="anchored" data-anchor-id="answer-10">Answer</h4>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4
+\tag{14}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma = 5.67 * 10^-8\)</span></p>
+<div id="3e257077" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> <span class="fl">0.95</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>LW_out <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'LW_OUT_1_1_1'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> (LW_out<span class="op">/</span>(sigma<span class="op">*</span>epsilon))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The surface temperature is approxiamtely '</span>,T,<span class="st">' K, which is '</span>,T<span class="op">-</span><span class="fl">273.15</span>,<span class="st">' C (listing only one is fine as long as UNITS are correct)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The surface temperature is approxiamtely  305.40911576148943  K, which is  32.259115761489454  C (listing only one is fine as long as UNITS are correct)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-12" class="level3">
+<h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
+<p>Now use the same equation to estimate the “apparent” radiative sky temperature (<span class="math inline">\(T_k\)</span>) from <span class="math inline">\(LW_{\downarrow}\)</span> for this timestamp. “Apparent” means you should assume <span class="math inline">\(\epsilon{a} = 1.0\)</span>. How would you interpret <span class="math inline">\(T_k\)</span>?</p>
+<section id="answer-11" class="level4">
+<h4 class="anchored" data-anchor-id="answer-11">Answer</h4>
+<p>Same calculations as above, but with <span class="math inline">\(\epsilon{a} = 1.0\)</span>. This is assuming the sky is a black body (not really). This would be the temperature if the sky were a perfect absorber/emitter and not transparent to <span class="math inline">\(LW\)</span>.</p>
+<div id="70497078" class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>LW_in <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'LW_IN_1_1_1'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>T <span class="op">=</span> (LW_in<span class="op">/</span>(sigma<span class="op">*</span>epsilon))<span class="op">**</span>(<span class="dv">1</span><span class="op">/</span><span class="dv">4</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The surface temperature is approxiamtely '</span>,T,<span class="st">' K, which is '</span>,T<span class="op">-</span><span class="fl">273.15</span>,<span class="st">' C (listing only one is fine as long as UNITS are correct)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The surface temperature is approxiamtely  282.4055201232261  K, which is  9.25552012322612  C (listing only one is fine as long as UNITS are correct)</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-13" class="level3">
+<h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
+<p>Using measured <span class="math inline">\(LW_{\downarrow}\)</span> and measured air temperature <span class="math inline">\(T_a\)</span>, calculate the actual bulk emissivity of the atmosphere <span class="math inline">\(\varepsilon_{a}\)</span> at noon? [2]</p>
+<section id="answer-12" class="level4">
+<h4 class="anchored" data-anchor-id="answer-12">Answer</h4>
+<p>Plug <span class="math inline">\(LW\)</span> into <span class="math inline">\(E_g\)</span> and using <span class="math inline">\(T_a\)</span> solve for <span class="math inline">\(\epsilon\)</span></p>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4
+\tag{15}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma = 5.67 * 10^-8\)</span></p>
+<div id="ffcb3cfa" class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="op">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>LW_in <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'LW_IN_1_1_1'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>Ta <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'TA_1_1_1'</span>].values[<span class="dv">0</span>]<span class="op">+</span><span class="fl">273.15</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> LW_in<span class="op">/</span>(sigma<span class="op">*</span>Ta<span class="op">**</span><span class="dv">4</span>)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The bulk emissivity of the atmosphere is approximately '</span>,epsilon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>The bulk emissivity of the atmosphere is approximately  0.842260009693558</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="question-14" class="level3">
+<h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<p>Using the Prata (1996) equation from lecture and measured <span class="math inline">\(T_a\)</span> and <span class="math inline">\(RH\)</span>, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of <span class="math inline">\(LW_{\downarrow}\)</span>? How well do these approximations match with what we actually observed?</p>
+<section id="answer-13" class="level4">
+<h4 class="anchored" data-anchor-id="answer-13">Answer</h4>
+<p>The approximation below will get pretty close (within about a couple percent) for clear sky conditions. Won’t work as well with cloud cover. Calculate Parata (1996) as:</p>
+<p><span id="eq-Prata"><span class="math display">\[
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
+\tag{16}\]</span></span></p>
+<p>where a = 1.2, b=3.0, and <span class="math inline">\(\zeta = 46.5\frac{P_v}{T_a}\)</span> with <span class="math inline">\(T_a\)</span> in Kelvin and <span class="math inline">\(P_v\)</span> in hPa.</p>
+<p>where you can use the Tetens equation to get <span class="math inline">\(P_v^*\)</span></p>
+<p><span id="eq-Prata"><span class="math display">\[
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
+\tag{17}\]</span></span></p>
+<p>where a = 1.2, b=3.0, and <span class="math inline">\(\zeta = 46.5\frac{P_v}{T_a}\)</span> with <span class="math inline">\(T_a\)</span> in Kelvin and <span class="math inline">\(P_v\)</span> in hPa.</p>
+<div id="538743c9" class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a>Ta <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'TA_1_1_1'</span>].values[<span class="dv">0</span>]<span class="op">+</span><span class="fl">273.15</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>Ta_c <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'TA_1_1_1'</span>].values[<span class="dv">0</span>]</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>RH <span class="op">=</span> Selection.loc[Selection[<span class="st">'SW_IN_1_1_1'</span>]<span class="op">==</span>Selection[<span class="st">'SW_IN_1_1_1'</span>].<span class="bu">max</span>(),<span class="st">'RH_1_1_1'</span>].values[<span class="dv">0</span>]<span class="op">*</span><span class="fl">.01</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Use Tetens to get saturation vapor pressure</span></span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>Pv_star <span class="op">=</span> <span class="fl">6.112</span><span class="op">*</span>np.exp(<span class="fl">17.62</span><span class="op">*</span>Ta_c<span class="op">/</span>(<span class="fl">243.12</span><span class="op">+</span>Ta_c))</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Get vapor pressure for RH</span></span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>Pv <span class="op">=</span> RH<span class="op">*</span>Pv_star</span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Vapor pressure is '</span>,Pv,<span class="st">' hpa'</span>)</span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply Parata equation</span></span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="fl">1.2</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">3.0</span></span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>zeta <span class="op">=</span> <span class="fl">46.5</span><span class="op">*</span>(Pv<span class="op">/</span>Ta)</span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>epsilon_a <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>(<span class="dv">1</span><span class="op">+</span>zeta)<span class="op">*</span>np.exp(<span class="op">-</span>(a<span class="op">+</span>b<span class="op">*</span>zeta)<span class="op">**</span><span class="fl">0.5</span>)</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The estimated value of epsillon is '</span>,epsilon_a)</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>LW_in_est <span class="op">=</span>  epsilon_a<span class="op">*</span>sigma<span class="op">*</span>(Ta)<span class="op">**</span><span class="dv">4</span></span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'The estimated value of LW_in is '</span>,LW_in_est, <span class="st">' W m-2, which is quite close to the observed value of '</span>,LW_in,<span class="st">' W m-2'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Vapor pressure is  18.21103581865695  hpa
+The estimated value of epsillon is  0.8312626547745733
+The estimated value of LW_in is  355.93268759054916  W m-2, which is quite close to the observed value of  360.64157  W m-2</code></pre>
+</div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

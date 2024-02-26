@@ -1,0 +1,16 @@
+
+
+```{python}
+# Set a time window and query the dataframe
+Start = dt.strptime('2023-07-12 0000', '%Y-%m-%d %H%M')
+End = dt.strptime('2023-07-20 0000', '%Y-%m-%d %H%M')
+
+# Select a subset of the variables
+Query_Cols = ['DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1']
+
+# Run the query and save it to a new dataframe called "Selection"
+Selection = df.loc[((df.index>=Start)&(df.index<End)),Query_Cols].copy()
+                    
+# Generate some descriptive statistics for the data
+Selection.describe().round(3)
+```

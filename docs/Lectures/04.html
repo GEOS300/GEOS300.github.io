@@ -788,9 +788,9 @@ h = 15^{\circ}(12-LAT)
 <section id="so-many-times-1" class="slide level2 smaller">
 <h2>So Many Times</h2>
 <p><span id="eq-LMST"><span class="math display">\[
-LMST = (TZ) - (\lambda-TZ_{m})\frac{4}{60}
+LMST = (TZ) + (\lambda-TZ_{m})\frac{4}{60}
 \qquad(10)\]</span></span></p>
-<p>where <span class="math inline">\(\lambda\)</span> is longitude, <span class="math inline">\(TZ\)</span> is time in LST (e.g., PST = UTC-8) <strong>in hours</strong>, and <span class="math inline">\(TZ_{m}\)</span> is the central meridian for a given time zone (e.g., PST = 120 <span class="math inline">\(^{\circ}\)</span>). You can then calculate the local apparent time LAT as:</p>
+<p>where <span class="math inline">\(\lambda\)</span> is longitude, <span class="math inline">\(TZ\)</span> is time in LST (e.g., PST = UTC-8) <strong>in hours</strong>, and <span class="math inline">\(TZ_{m}\)</span> is the central meridian for a given time zone (e.g., PST = -120 <span class="math inline">\(^{\circ}\)</span>). You can then calculate the local apparent time LAT as:</p>
 <p><span id="eq-LAT"><span class="math display">\[
 LAT = LMST-\Delta LAT
 \qquad(11)\]</span></span></p>
@@ -1017,12 +1017,12 @@ R_s = R_p cos(Z)
 <section id="extraterrestrial-irradiance" class="slide level2">
 <h2>Extraterrestrial Irradiance</h2>
 <p>The solar input at top of the atmosphere at any time and location hence is given as <span class="math inline">\(I_ex\)</span>: <span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
-I_{ex}=I_0(\frac{R_av}{R})^2\cos(Z)
+I_{ex}=I_0(\frac{R_{av}}{R})^2\cos(Z)
 \qquad(14)\]</span></span></p>
 <p>where <span class="math inline">\(I_0 \approx 1361 W m^{-2}\)</span>, <span class="math inline">\(\cos(Z)\)</span> applies the cosine law of illumination, and <span class="math inline">\((\frac{R_av}{R})\)</span> adjusts the solar constant Earth’s elliptic orbit:<br>
 <span id="eq-Adjusted-Constant"><span class="math display">\[
 \begin{eqnarray}
-(\frac{R_av}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
+(\frac{R_{av}}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
                      &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
 \end{eqnarray}
 \qquad(15)\]</span></span></p>

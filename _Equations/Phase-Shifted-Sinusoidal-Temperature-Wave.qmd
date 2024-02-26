@@ -1,0 +1,4 @@
+ 
+$$
+T_{(z,t)}=\overline{T_o}+\Delta T_o e^{-z(\small\frac{\omega}{2K})^{1/2}} \sin(\omega t - (\small\frac{\omega}{2K})^{1/2}z)
+$${#eq-Phase-Shifted-Sinusoidal-Temperature-Wave}

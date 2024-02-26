@@ -168,3 +168,11 @@ Time
 
 DOY = as.numeric(Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('DOY')])
 DOY
+
+
+12.5 %% 1
+
+floor(12.4)
+
+T<- 14.35
+sprintf('%d:%d',floor(T),floor((T%%1)*100))

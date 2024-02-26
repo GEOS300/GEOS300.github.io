@@ -1,0 +1,5 @@
+
+
+```{R}
+summary(subset(df,select = -TIMESTAMP))
+```

@@ -1,0 +1,27 @@
+
+
+```{python}
+Ta = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'TA_1_1_1'].values[0]+273.15
+Ta_c = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'TA_1_1_1'].values[0]
+RH = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'RH_1_1_1'].values[0]*.01
+
+# Use Tetens to get saturation vapor pressure
+Pv_star = 6.112*np.exp(17.62*Ta_c/(243.12+Ta_c))
+# Get vapor pressure for RH
+Pv = RH*Pv_star
+print('Vapor pressure is ',Pv,' hpa')
+
+# Apply Parata equation
+a = 1.2
+b = 3.0
+zeta = 46.5*(Pv/Ta)
+epsilon_a = 1-(1+zeta)*np.exp(-(a+b*zeta)**0.5)
+
+print('The estimated value of epsillon is ',epsilon_a)
+
+LW_in_est =  epsilon_a*sigma*(Ta)**4
+
+print('The estimated value of LW_in is ',LW_in_est, ' W m-2, which is quite close to the observed value of ',LW_in,' W m-2')
+
+
+```

@@ -1,0 +1,59 @@
+
+
+```{R}
+DOY = 13 # January 13th
+TIME = 12.75 # Fractional hours
+latitude = 49.12940598 # degrees
+longitude = -122.9849319 # degrees
+central_meridian_PST = -120 # degrees
+I_0 = 1361 # W m-2
+SW_in = 58.375 # Observed SW incoming # W m-2
+
+gamma = 2*pi /365*(DOY-1) 
+sprintf('gamma = %f',gamma)
+delta = 0.006918 - 0.399912 *cos(gamma)+0.070257 *sin(gamma)-0.006758* cos(2*gamma) + 0.000907*sin(2*gamma)-0.002697*cos(3*gamma)+0.00148 *sin(3*gamma)
+sprintf('delta = %f in radians, or %f in degrees works too',delta,delta*180/pi)
+
+LMST = TIME+(longitude-central_meridian_PST)*4/60
+sprintf('LMST = %f in hours',LMST)
+sprintf('**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.')
+LMST_error = TIME-(longitude-central_meridian_PST)*4/60
+sprintf('Following the incorrect equation would yield: %f accept this, along with calculations of LAT, h, and z based on it',LMST_error)
+
+Delta_LAT = 229.18*(0.000075+0.001868*cos(gamma)-0.032077*sin(gamma)
+             -0.014615*cos(2*gamma)-0.040849*sin(2*gamma))
+sprintf('Delta_LAT = ',Delta_LAT,' in minutes')
+
+LAT = LMST-Delta_LAT/60
+sprintf('LAT %f',LAT)
+LAT_error=LMST_error-Delta_LAT/60
+sprintf('**Note**: %f is also acceptable as per above',LAT_error)
+
+h = 15*(12-LAT)
+sprintf('hour-angle = %f in degrees',h)
+h_error = 15*(12-LAT_error)
+sprintf('**Note**: %f is also acceptable as per above',h_error)
+
+cos_z = sin(latitude*pi/180)*sin(delta)+cos(latitude*pi/180)*cos(delta)*cos(h*pi/180)
+z = acos(cos_z)*180/pi
+sprintf('zenith angle = %f in degrees',z)
+cos_z_error = sin(latitude*pi/180)*sin(delta)+cos(latitude*pi/180)*cos(delta)*cos(h_error*pi/180)
+z_error = acos(cos_z_error)*180/pi
+sprintf('**Note** %f s also acceptable as per above < the error has a minor impact on the final answer.',z_error)
+
+R_av_Rsq = 1.00011+0.034221*cos(gamma)+0.001280*sin(gamma)+0.000819*cos(2*gamma)+0.000077*sin(2*gamma)
+I_ex=I_0*R_av_Rsq*cos(z*pi/180)
+sprintf('Extraterrestrial Irradiance = %f W m-2',I_ex)
+I_ex_error=I_0*R_av_Rsq*cos(z_error*pi/180)
+sprintf('**Note** %f is also acceptable as per above < the error has a minor impact on the answer.',I_ex_error)
+
+m = 1/cos(z*pi/180)
+m_error = 1/cos(z_error*pi/180)
+
+Psi_a = (SW_in/I_ex)**(1/m)
+sprintf('Bulk transimissivity = %f',Psi_a)
+Psi_a_error = (SW_in/I_ex)**(1/m_error)
+sprintf('**Note** %f is also acceptable as per above < the error has a minor impact on the answer.',Psi_a_error)
+
+
+```

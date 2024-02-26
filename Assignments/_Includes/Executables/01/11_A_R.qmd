@@ -1,0 +1,11 @@
+
+
+```{R}
+sigma = 5.67e-8
+epsilon = 0.95
+LW_out = Selection[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1), c('LW_OUT_1_1_1')]
+
+T = (LW_out/(sigma*epsilon))**(1/4)
+
+sprintf('The surface temperature is approxiamtely %f K, which is %f C (listing only one is fine as long as UNITS are correct)',T,T-273.15)
+```

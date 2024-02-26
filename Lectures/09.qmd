@@ -1,0 +1,701 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Modelling Sub-Surface Temperatures
+---
+
+{{< include _imports.qmd >}}
+
+
+
+
+## Modelling Sub-Surface Temperatures
+
+![High Arctic Landscape on Fosheim Peninsula, Ellesmere Island - a rapidly warming Arctic causes permafrost thawing and mass movements (Photo: A. Cassidy)](images/09_1_7.jpg)
+
+
+
+
+
+## Learning Objectives
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Describe how can we predict soil temperature using a selected solution to the heat conduction equation.
+* Explain how soil temperature waves move in soils.
+
+:::
+
+::: {.column width="50%"}
+
+![Photo: A. Cassidy](images/09_2_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The course of soil temperature at a particular depth Tz with time is very regular in comparison with almost any other atmospheric element. 
+
+
+:::
+
+
+
+
+## Learning Objectives
+
+* How do substrate temperatures change on diurnal and annual scales?
+* Can we predict timing and amplitude of soil temperature waves using a selected solution to the heat conduction equation.
+* How can we alter substrates to control soil thermal climates (agriculture, design)?
+
+
+
+::: {.notes}
+
+A rapidly warming Arctic causes permafrost thawing and mass movements (thaw slump)
+Undisturbed areas
+Permafrost scar
+Newly exposed areas
+Other examples – agriculture, modeling the global C cycle, global biogeochemical cycles - lots of reasons we would want to be able to understand and predict soil T.
+
+
+
+:::
+
+
+
+
+## Year-long thaw-slump temperatures
+
+![](images/09_4_3.png)
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+
+![](images/09_4_4.png)
+
+:::
+
+::: {.column width="50%"}
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+A rapidly warming Arctic causes permafrost thawing and mass movements (thaw slump)
+Undisturbed areas
+Permafrost scar
+Newly exposed areas
+Other examples – agriculture, modeling the global C cycle, global biogeochemical cycles - lots of reasons we would want to be able to understand and predict soil T.
+
+
+:::
+
+
+
+---
+
+
+![[Source](https://insideclimatenews.org/news/19022019/arctic-bogs-permafrost-thaw-methane-climate-change-feedback-loop)](images/09_5_0.png)
+
+
+
+
+## Sub-Surface Temperature Profile
+
+
+
+![Idealized soil temperature profile in summer](images/09_7_2.png)
+
+
+
+::: {.notes}
+
+The course of soil temperature at a particular depth Tz with time is very regular in comparison with almost any other atmospheric element. 
+What direction is our soil heat flux?
+Geothermal gradient is the rate of increasing temperature with respect to increasing depth in the Earth's interior. The Earth's internal heat comes from a combination of residual heat from planetary accretion, heat produced through radioactive decay, latent heat from core crystallization, and possibly heat from other sources.
+
+
+:::
+
+
+
+
+## Sub-Surface Temperature (iClicker)
+
+What direction is the soil heat flux (QG) at the surface?
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* A Downward (+)
+
+ 
+* B Upward (-)
+
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/09_7_2.png)
+
+
+:::
+
+::::
+
+
+## Sub-Surface Temperature Profile
+
+
+![Idealized soil temperature profile in winter](images/09_8_0.png)
+
+
+
+## Sub-Surface Temperature Profile
+
+
+![](images/09_9_2.png)
+
+
+::: {.notes}
+
+the annual wave may penetrate to about 14 m 
+
+
+:::
+
+
+
+
+
+## Sub-Surface Temperature Profile
+
+
+
+![](images/09_10_0.png)
+
+
+::: {.notes}
+
+The temperature at this depth is sometimes used as a surrogate for the average annual air temperature of the site. 
+
+
+:::
+
+
+## Permafrost Temperature Profile
+
+
+![](images/09_11_0.png)
+
+
+## Permafrost Temperature Profile
+
+
+![](images/09_12_0.png)
+
+
+## Permafrost Temperature Profile
+
+![](images/09_13_2.png)
+
+
+
+## Sub-Surface Temperature Variability
+
+![Westham Island, 2cm depth](images/09_14_2.png)
+
+
+## Sub-Surface Temperature Variability
+
+
+![Westham Island, 10cm depth](images/09_15_2.png)
+
+
+::: {.notes}
+
+ amplitude decreases exponentially.
+ phase shift (time lag) increases linearly.
+
+
+:::
+
+
+## Sub-Surface Temperature Variability
+
+
+![Westham Island, 20cm depth](images/09_16_2.png)
+
+
+::: {.notes}
+
+ amplitude decreases exponentially.
+ phase shift (time lag) increases linearly.
+
+
+:::
+
+
+
+## Sub-Surface Temperature Variability
+
+
+![Westham Island, 50cm depth](images/09_17_2.png)
+
+
+
+::: {.notes}
+
+ amplitude decreases exponentially.
+ phase shift (time lag) increases linearly.
+
+
+:::
+
+
+## Soil Temperature Waves {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+Surface wave moves down in response to radiative forcing at different periods $P$
+
+* annual (1 year) to ~14 m
+* daily (1 day) to ~0.75 m
+* cloud passage (~15 min) to ~0.1 m
+
+Wave amplitude and phase shift (time lag) with depth:
+
+* amplitude decreases **exponentially**
+* phase shift increases **linearly**
+
+
+
+:::
+
+::: {.column width="30%"}
+
+
+![](images/09_20_4.gif)
+
+
+![](images/09_20_3.gif)
+
+
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Draw temperature profile with depth
+
+:::
+
+
+
+## Soil Temperature Waves {.smaller}
+
+
+The daily and annual periodic forcing by the sun creates a surface temperature ($T_o$) wave, which propagates into the soil below. If we make the following assumptions:
+
+1. The thermal diffusivity κ = k/C is uniform
+2. Cycles are sinusoidal (better for year than day)
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+
+Then then $T_o$ at time $t$ (in seconds) over period $P$ can be approximated as:
+
+{{< include ../_Equations/Sinusoidal-Temperature-Wave.qmd >}}
+
+where $\overline{T_o}$ is the mean surface temperature over $P$, $\Delta T_o$ is the wave amplitude ($\small\frac{1}{2}$ range of $T_o$), and the angular frequency of oscillation is $\omega = 2\pi / P$.
+
+
+
+:::
+
+::: {.column width="35%"}
+
+![](images/09_21_10.gif)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+kappa = It tells us how fast a temperature wave will diffuse or travel downward into a soil
+Trigonometry
+sinusoidal daily course
+the angular frequency = scalar measure of rotation rate
+Larger P, lower the angular frequency; higher P, greater than angular frequency 
+
+:::
+
+
+
+
+## Calculate the Angular Frequency (iClicker)
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+**Annual** $\omega_a$
+
+```{R}
+#| echo: True
+
+# Number of seconds in a year
+P = 60 * 60 * 24 * 365.24 
+# Solve
+omega_a = 2*pi/P
+sprintf('Angular Frequncy of a year %0.3e s-1',omega_a)
+```
+
+
+
+:::
+
+::: {.column width="50%"}
+
+**Daily** $\omega_d$
+
+Which value give the closest approximation of $\omega_d$?
+
+```{R}
+#| echo: False
+
+# Number of seconds in a year
+P = 60 * 60 * 24
+# Solve
+omega_d = 2*pi/P
+omega_halfd = pi/P
+omega_2d = 4*pi/P
+```
+
+* A `r sprintf('%0.3e s-1',omega_halfd)`
+* B `r sprintf('%0.3e s-1',omega_2d)`
+* C `r sprintf('%0.3e s-1',omega_d)`
+* D `r sprintf('%0.3e s-1',omega_a)`
+
+
+:::
+
+::::
+
+Diurnal:
+
+![](images/09_23_2.png)
+
+
+## Analytical solution for sinusoidal forcing. 
+
+
+![Checkout this [resource](https://sknox01.github.io/GEOS300/applets/stwave/) to see some animated plots.](images/09_24_2.gif)
+
+
+
+::: {.notes}
+
+A solution of Fourier’s heat conduction.
+file:///Volumes/sknox01/Teaching/GEOB300/Website/geob300/applets/stwave/index.html
+
+:::
+
+
+## A Solution of Fourier’s Heat Conduction {.smaller}
+ 
+With the surface temperature wave equation as the boundary condition, we can find an analytic solution to the Fourier heat conduction equation in 1-D:
+
+
+{{< include ../_Equations/Phase-Shifted-Sinusoidal-Temperature-Wave.qmd >}}
+
+* **exponential term**: Wave amplitude at depth z relative to the surface temperature wave
+* **sine function**: Phase shift of the wave at depth z
+
+*Note*: the wave decays exponentially with depth, and the decay is less in soils with large κ, or if the period is longer.
+
+
+::: {.notes}
+
+Boundary conditions (b.c.) are constraints necessary for the solution of a boundary value problem. They are a set of additional constraints.
+Omega = angular frequency
+thermal diffusivity = how fast a temperature wave will diffuse or travel downward into a soil
+
+
+:::
+
+
+
+## Damping Depth {.smaller}
+
+
+The inverse of the exponential term defines a useful feature, the **damping depth** ($D$).
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+* It is the depth at which the surface temperature wave is reduced to $e^{-1}$ (37%) of its value at z = 0.
+* At 3D it drops below 5%, and 4.6 D below 1%.
+
+
+{{< include ../_Equations/Damping-Depth.qmd >}}
+
+
+
+:::
+
+::: {.column width="40%"}
+
+
+![The red line is the surface temperature range $2\DeltaT_o$.  Blue is the temperature range at depth $D$; $0.37 2\DeltaT_o$](images/09_27_1.gif)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+In most soils the daily surface temperature wave is only discernible to a depth of about 0.75 m. In soils with low κ values it is even less, indicating that flux convergence has extinguished QG in a thin near-surface layer. 
+thermal diffusivity = how how fast a temperature wave will diffuse or travel downward into a soil
+
+:::
+
+
+## Example - Effect of Organic Cover
+
+
+![](images/09_27_2.gif)
+
+
+::: {.notes}
+
+thermal diffusivity = how fast a temperature wave will diffuse or travel downward into a soil
+Note, the wave decays exponentially with depth, and the decay is less in soils with large κ, or if the period is longer.
+
+
+:::
+
+
+## Phase Shift - Max and Min Soil Temperatures
+
+Term 2 of the 1-D analytical solution (@eq-Phase-Shifted-Sinusoidal-Temperature-Wave) gives the phase shift equation for features such as maximum and minimum soil temperatures, which occurs at 0.5 π and 1.5 π, i.e.:
+
+* $\sin(\omega t - (\small\frac{\omega}{2K})^{1/2}z) = \pm 1$
+
+Solving for $t$ gives:
+
+$\Delta t_m = t_{m_2} - t_{m_1} = (z_2 - z_1)(\small\frac{1}{2\omega K})^{1/2}$
+
+
+$\Delta t_m$ is the phase shift; $t_{m_1}$ and $t_{m_2}$ are times at which maximum or minimum soil temperatures occur at $z_1$ and $z_2$ respectively.
+
+
+
+
+
+
+::: {.notes}
+
+The time lag (phase shift) for the wave crest (maximum) and trough (minimum) to reach lower depths is given by 
+where t1 and t2 are the times at which the wave crest or trough reaches depths z1 and z2. 
+
+
+
+:::
+
+
+
+
+## Phase Shift (iClicker)
+
+When will soil temperature reaches its maximum at 5 cm if the maximum surface temperature is measured at 13:00? Assume a thermal diffusivity K = 5.0×10−7 m<sup>1</sup> s<sup>−1</sup>.
+
+```{R}
+# Calculate phase shift for one day
+z1 = 0.0 #soil surface
+z2 = 0.1 #any depth(e.g., 10 cm)
+K = 5e-7 #thermal conductivity
+
+delta_tm = (0.05-0)*(1/(2*omega_d*K))**0.5
+```
+
+`r T <- 13.0+delta_tm/3600`
+
+* A `r delta_tm`
+* B `r T`
+* c `r sprintf('%d:%d',floor(T),floor((T%%1)*100))`
+
+
+
+
+::: {.notes}
+
+Breakout groups
+
+:::
+
+
+
+
+## Phase shift (Implications) {.smaller}
+
+
+* The phase shift at a certain depth is least in soils with large κs. 
+* These idealized patterns are disrupted by:
+* Variable cloud cover.
+* Rain (percolation gives wetting front).
+* Freezing/melting (latent heat effects).
+* Snow cover (insulates).
+* Soil inhomogeneities in the horizontal and vertical.
+
+
+## Modification and Control of Soil Climates
+
+
+Relatively little can be done economically to modify the external forcing (shade is an exception). But the nature of the soil can be manipulated.
+
+:::: {.columns}
+
+::: {.column width=60%"}
+
+
+*  **Albedo** - surface dressing with dark or light-cultured materials.
+*  **Ridge and furrows** - control surface geometry to maximize or minimize K* and L* and surface moisture state.
+*  **Moisture** - wetting or drainage can greatly alter thermal properties.
+*  **Compaction / cultivation** - control of air content and its role in thermal properties.
+
+
+:::
+
+::: {.column width="40%"}
+
+
+
+
+![Ridge and Furrow Geometry](images/09_33_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The furrow and ridge geometry enhances the irradiance of solar radiation on the sloped sides 
+The furrow and ridge geometry enhances shortwave absorption by decreasing the system albedo (multiple reflection) 
+The furrow and ridge geometry reduces long-wave loss by L∗ due to a reduced sky view factor 
+
+
+
+:::
+
+## Modification and Control of Soil Climates
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+*  Stripping surface cover - remove organic layer, snow cover, vegetation cover.
+*  Mulches - introduce layer of insulation (straw, leaves, husks, foam)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Photo: A. Christen](images/09_34_4.jpg)
+
+
+
+![Photo: A. Christen](images/09_34_5.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Reasons for applying mulch include conservation of soil moisture, improving fertility and health of the soil, reducing weed growth and enhancing the visual appeal of the area.
+Some research has been done using different colors of mulch to affect crop growth. 
+
+:::
+
+
+## Heat Sharing
+
+The partitioning of total ‘sensible’ heat flux between the soil ($H_g$) and the atmosphere ($H$).
+
+{{< include ../_Equations/Heat-Sharing.qmd >}}
+
+* Soil and atmosphere share in accepting heat during daytime and releasing heat at night.  $\mu_g$ and $\mu_a$ are the soil and atmospheric thermal admittance respectively.
+
+  + $\mu_a$ increases with wind speed and convection (mixing).
+
+## Take home points
+
+* We observe temperature waves with annual, diurnal and even short-term (cloud-passage) periods.
+* In a uniform soil, the wave amplitude decays exponentially, whereas the phase-shift is linear with depth.
+* The damping depth is a commonly used term to quantify the depth to which 37% of the surface amplitude reaches down.
+
+
+::: {.notes}
+
+Heat conduction equation
+
+:::
+

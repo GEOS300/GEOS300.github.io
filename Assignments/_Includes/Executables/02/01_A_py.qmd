@@ -1,0 +1,6 @@
+
+
+```{python}
+df.describe()
+# summary(subset(Selection,select = -TIMESTAMP))
+```

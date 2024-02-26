@@ -1,0 +1,21 @@
+
+
+```{R}
+# Create a single plot bar showing mean daily albedo
+
+# Calculate Albedo
+Selection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1
+
+# Filter out implausible values
+Selection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1>Selection$SW_IN_1_1_1 , NaN )
+
+# Resample to get mean daily Albedo, ignoring the NaN values
+DailyAlbedo<-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))
+
+p <- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +
+  geom_bar(stat="identity", color="black", fill="blue")+
+  labs(y = '%')+
+  ggtitle('Daily Albedo')
+p + plot_annotation(sprintf('Student # %i',Student.Number))
+
+```

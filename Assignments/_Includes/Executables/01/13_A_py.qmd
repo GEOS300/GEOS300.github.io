@@ -1,0 +1,11 @@
+
+
+```{python}
+sigma = 5.67e-8
+
+LW_in = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'LW_IN_1_1_1'].values[0]
+Ta = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'TA_1_1_1'].values[0]+273.15
+epsilon = LW_in/(sigma*Ta**4)
+
+print('The bulk emissivity of the atmosphere is approximately ',epsilon)
+```

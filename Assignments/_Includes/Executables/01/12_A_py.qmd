@@ -1,0 +1,11 @@
+
+
+```{python}
+sigma = 5.67e-8
+epsilon = 1
+
+LW_in = Selection.loc[Selection['SW_IN_1_1_1']==Selection['SW_IN_1_1_1'].max(),'LW_IN_1_1_1'].values[0]
+T = (LW_in/(sigma*epsilon))**(1/4)
+
+print('The surface temperature is approxiamtely ',T,' K, which is ',T-273.15,' C (listing only one is fine as long as UNITS are correct)')
+```

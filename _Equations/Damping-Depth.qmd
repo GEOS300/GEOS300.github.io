@@ -1,0 +1,4 @@
+
+$$
+D = \sqrt{\small\frac{2K}{\omega}} = \sqrt{\small\frac{KP}{\pi}}
+$${#eq-Damping-Depth}

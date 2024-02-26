@@ -1,0 +1,42 @@
+
+
+```{R}
+# Create a plot with three sub-plots
+# Plot the radiation components on the first sub-plot
+# Plot Ta and Ts on the second sub-plot, and RH on the third
+plot_radiation <- melt(
+  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],
+  id="TIMESTAMP")
+
+p1 <- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +
+  geom_line(aes(color = variable,linetype = variable)) +
+  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +
+  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c("solid","dashed","solid","dashed"))+
+  
+  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes
+  labs(y = TeX(r"($W m^{-2}$)"))+
+  ylim(0,425)+
+  ggtitle('Radiative Fluxes at CA-DBB Flux Station')
+
+plot_temp <- melt(
+  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],
+  id="TIMESTAMP")
+p2 <- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +
+  geom_line(aes(color = variable,linetype = variable)) +
+  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +
+  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c("solid","dashed"))+
+  labs(y = TeX(r"($C\degree)"))+
+  ylim(-15,10)+
+  ggtitle('Temperature and Humidity')
+
+p3 <- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +
+  geom_line(color='blue') +
+  labs(y = 'RH')+
+  ggtitle('Temperature and Humidity')
+
+
+p1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))
+
+options(repr.plot.width=8, repr.plot.height=10)
+
+```

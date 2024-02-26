@@ -1,0 +1,4 @@
+ 
+$$
+T_{(o,t)}=\overline{T_o}+\Delta T_o \sin(\omega t)
+$${#eq-Sinusoidal-Temperature-Wave}

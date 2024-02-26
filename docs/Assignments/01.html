@@ -316,7 +316,7 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <ul>
 <li>Make suer to specify the units in your answer. Check the metadata provided <a href="https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md">here</a> to make sure you understand the variable names and units.</li>
 </ul>
-<div id="d6ff12bc" class="cell" data-execution_count="3">
+<div id="e0fba91f" class="cell" data-execution_count="3">
 <div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
@@ -489,7 +489,7 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <section id="question-2" class="level3">
 <h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
 <p>We’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?</p>
-<div id="5dc8af3d" class="cell" data-execution_count="5">
+<div id="b5b0f330" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
@@ -616,7 +616,7 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <section id="question-3" class="level3">
 <h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
 <p>The plot below shows traces of the four radiation component, air &amp; soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?</p>
-<div id="55ee411c" class="cell" data-execution_count="7">
+<div id="94498c55" class="cell" data-execution_count="7">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
@@ -629,14 +629,11 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 <section id="question-4" class="level3">
 <h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
 <p>The plot below shows mean daily albedo. What explains sharp increase on the 17th?</p>
-<div id="4b79cf66" class="cell" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>Text(0.5, 0.98, 'Student #: 123456789')</code></pre>
-</div>
+<div id="4edd69fb" class="cell" data-execution_count="9">
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="01_files/figure-html/cell-10-output-2.png" width="589" height="481" class="figure-img"></p>
+<p><img src="01_files/figure-html/cell-10-output-1.png" width="589" height="481" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -645,7 +642,7 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>The maximum half-hourly <span class="math inline">\(SW_\downarrow\)</span> observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_ex\)</span> for the center point of this observation period (12:45). Given the value of <span class="math inline">\(I_ex\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of <span class="math inline">\(I_ex\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time?</p>
+<p>The maximum half-hourly <span class="math inline">\(SW_\downarrow\)</span> observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_{ex}\)</span> for the center point of this observation period (12:45). Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time?</p>
 <p><strong>Note</strong>: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.</p>
 <section id="question-6" class="level3">
 <h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
@@ -661,11 +658,11 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 </section>
 <section id="question-9" class="level3">
 <h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
-<p>Find the timestamp of the observation interval when maximum <span class="math inline">\(SW_\downarrow\)</span> was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. <strong>Note</strong> our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate <span class="math inline">\(I_ex\)</span> and <span class="math inline">\(\Psi_a\)</span> for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily <span class="math inline">\(SW_\downarrow\)</span> differ?</p>
+<p>Find the timestamp of the observation interval when maximum <span class="math inline">\(SW_\downarrow\)</span> was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. <strong>Note</strong> our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate <span class="math inline">\(I_{ex}\)</span> and <span class="math inline">\(\Psi_a\)</span> for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily <span class="math inline">\(SW_\downarrow\)</span> differ?</p>
 </section>
 <section id="question-10" class="level3">
 <h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
-<p>Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in <span class="math inline">\(\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}\)</span>. You can use the wavelength of yellow light (<span class="math inline">\(\lambda 0 0.55 \mu m\)</span>) for your estimate. <strong>Hint</strong>: Consult examples in reading package for radiation geometry.</p>
+<p>Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in <span class="math inline">\(\mu \rm{mol}\, \rm{m}^{-2}\,\rm{s}^{-1}\)</span>. You can use the wavelength of yellow light (<span class="math inline">\(\lambda 0.55 \mu m\)</span>) for your estimate. <strong>Hint</strong>: Consult examples in reading package for radiation geometry.</p>
 </section>
 <section id="question-11" class="level3">
 <h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
@@ -681,7 +678,7 @@ Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
 </section>
 <section id="question-14" class="level3">
 <h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
-<p>Using the Prata (1996) equation from lecture and measured <span class="math inline">\(T_a\)</span> and <span class="math inline">\(RH\)</span>, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of <span class="math inline">\(LS_{\downarrow}\)</span>? How well do these approximations match with what we actually observed?</p>
+<p>Using the Prata (1996) equation from lecture and measured <span class="math inline">\(T_a\)</span> and <span class="math inline">\(RH\)</span>, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of <span class="math inline">\(LW_{\downarrow}\)</span>? How well do these approximations match with what we actually observed?</p>
 
 
 </section>

@@ -1,0 +1,26 @@
+
+
+```{python}
+c = 299792458 # Speed_of_light m s-1
+h = 6.63e-34 # planks constant J s-1
+Lambda = 0.55 # Yellow light wavelength um 
+photons_per_mol = 6.022e23 # Avogadro number
+
+v = c/(Lambda*1e-6)
+print('Frequency of yellow light ',v,' in Hz')
+
+e = h*v
+print('Energy associated with a single photon of yellow light ',e, 'J')
+
+# Assuming all PAR is yellow light (unrealistic, but what was instructed for simplicity):
+SW_par = SW_in*0.42 # W m-2
+
+# Convert PAR (energy in W m-2) to PPFD (total number of photons)
+SW_ppfd_N = SW_par/e
+print('Phonons of "yellow" light ',SW_ppfd_N)
+# Convert from N to umol
+SW_ppfd = SW_ppfd_N/photons_per_mol*1e6
+
+print('PPFD of "yellow" light ',SW_ppfd, ' umol m-2 s-1')
+
+```

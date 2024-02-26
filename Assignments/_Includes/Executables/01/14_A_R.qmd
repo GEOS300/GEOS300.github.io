@@ -1,0 +1,30 @@
+
+
+```{R}
+sigma = 5.67e-8
+epsilon = 1
+LW_in = Selection[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1), c('LW_IN_1_1_1')]
+Ta = Selection[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1), c('TA_1_1_1')]
+Ta_c = Selection[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1), c('TA_1_1_1')]+273.15
+
+RH = Selection[Selection$SW_IN_1_1_1==max(Selection$SW_IN_1_1_1), c('RH_1_1_1')]*.01
+
+# Use Tetens to get saturation vapor pressure
+Pv_star = 6.112*exp(17.62*Ta_c/(243.12+Ta_c))
+# Get vapor pressure for RH
+Pv = RH*Pv_star
+sprintf('Vapor pressure is %f  hpa',Pv)
+
+# Apply Parata equation
+a = 1.2
+b = 3.0
+zeta = 46.5*(Pv/Ta)
+epsilon_a = 1-(1+zeta)*exp(-(a+b*zeta)**0.5)
+
+sprintf('The bulk emissivity of the atmosphere is approximately %f',epsilon_a)
+
+LW_in_est =  epsilon_a*sigma*(Ta)**4
+
+sprintf('The estimated value of LW_in is %f W m-2, which is quite close to the observed value of %f W m-2',LW_in_est,LW_in)
+
+```

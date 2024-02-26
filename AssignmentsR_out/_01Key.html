@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.533">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Assignment 1</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="_01Key_files/libs/clipboard/clipboard.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/quarto.js"></script>
+<script src="_01Key_files/libs/quarto-html/popper.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="_01Key_files/libs/quarto-html/anchor.min.js"></script>
+<link href="_01Key_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="_01Key_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="_01Key_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="_01Key_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="_01Key_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Assignment 1</h1>
+<p class="subtitle lead">GEOS 300, 2024</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<hr>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enter your information below</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Student.Name <span class="ot">=</span> <span class="st">'June Skeeter'</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Student.Number <span class="ot">=</span> <span class="dv">123456789</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'GEOS 300 Assignment Submission for %s: %s'</span>,Student.Name,Student.Number)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"ggplot2"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"reshape2"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"latex2exp"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"patchwork"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"tidyr"</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"knitr"</span>)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"plyr"</span>)</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"lubridate"</span>)</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(<span class="st">"zoo"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-tbl-cap="Rubric for Assignment 1">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> <span class="st">'https://raw.githubusercontent.com/GEOS300/GEOS300.github.io/main/Assignments/Rubrics/01.csv'</span>,<span class="at">sep=</span><span class="st">','</span>,<span class="at">check.names =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(Data, <span class="at">col.names =</span> <span class="fu">gsub</span>(<span class="st">"[.]"</span>, <span class="st">" "</span>, <span class="fu">names</span>(Data)), <span class="at">escape =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="question-1" class="level3">
+<h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
+<p>Below is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing <span class="math inline">\(SW\)</span> in the first row of the table, are these values reasonable? Why or why not?</p>
+<ul>
+<li>Make suer to specify the units in your answer. Check the metadata provided <a href="https://github.com/GEOS300/AssignmentData/blob/main/Climate_Summary_BB_Metadata.md">here</a> to make sure you understand the variable names and units.</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> data_url)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># We have to parse the timestamp explicitly to convert it to a "time aware" object</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%Y-%m-%d %H%M"</span>)</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Using this we can get a extra variables (DOY &amp; HOUR) that will be helpful later</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>HOUR <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%H"</span>)</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>DOY <span class="ot">&lt;-</span> <span class="fu">format</span>(df<span class="sc">$</span>TIMESTAMP,<span class="at">format =</span> <span class="st">"%j"</span>)</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>Albedo <span class="ot">=</span> df<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>df<span class="sc">$</span>SW_IN_1_1_1</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Preview the table using head()</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="answer" class="level4">
+<h4 class="anchored" data-anchor-id="answer">Answer</h4>
+<p>More or less what we’d expect, but <span class="math inline">\(SW\downarrow\)</span> shouldn’t be less than <span class="math inline">\(SW\uparrow\)</span>, which indicates some lack of precision with the sensor. Units <span class="math inline">\(W m^{-2}\)</span>.</p>
+</section>
+</section>
+<section id="question-2" class="level3">
+<h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
+<p>We’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Start <span class="ot">=</span><span class="st">'2024-01-12 0000'</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>End <span class="ot">=</span><span class="st">'2024-01-20 0000'</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>Query.Cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="ot">&lt;-</span> df[<span class="fu">which</span>((df<span class="sc">$</span>TIMESTAMP <span class="sc">&gt;=</span> Start) <span class="sc">&amp;</span> (df<span class="sc">$</span>TIMESTAMP <span class="sc">&lt;</span>End)),</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        Query.Cols]</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data (excluding the timestamp)</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">subset</span>(Selection,<span class="at">select =</span> <span class="sc">-</span>TIMESTAMP))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="answer-1" class="level4">
+<h4 class="anchored" data-anchor-id="answer-1">Answer</h4>
+<p>The key point here is that <span class="math inline">\(T_a\)</span> has a much wider range (~15 <span class="math inline">\(^{\circ} C\)</span>) compared to <span class="math inline">\(T_s\)</span> (~2.3 <span class="math inline">\(^{\circ} C\)</span>) and that while <span class="math inline">\(T_a\)</span> was well bellow 0 <span class="math inline">\(^{\circ} C\)</span> for most of the period, <span class="math inline">\(T_s\)</span> didn’t even drop below 2.5 <span class="math inline">\(^{\circ} C\)</span>.</p>
+</section>
+</section>
+<section id="question-3" class="level3">
+<h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+<p>The plot below shows traces of the four radiation component, air &amp; soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a plot with three sub-plots</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the radiation components on the first sub-plot</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Ta and Ts on the second sub-plot, and RH on the third</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>plot_radiation <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>)],</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_radiation, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>,<span class="st">'blue'</span>)) <span class="sc">+</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>,<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($W m^{-2}$)"</span>))<span class="sc">+</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">425</span>)<span class="sc">+</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Radiative Fluxes at CA-DBB Flux Station'</span>)</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>plot_temp <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>)],</span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_temp, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>)) <span class="sc">+</span></span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($C\degree)"</span>))<span class="sc">+</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="sc">-</span><span class="dv">15</span>,<span class="dv">10</span>)<span class="sc">+</span></span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Selection, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> RH_1_1_1,<span class="at">lty =</span> <span class="st">'RH'</span>)) <span class="sc">+</span></span>
+<span id="cb6-30"><a href="#cb6-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">'blue'</span>) <span class="sc">+</span></span>
+<span id="cb6-31"><a href="#cb6-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'RH'</span>)<span class="sc">+</span></span>
+<span id="cb6-32"><a href="#cb6-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb6-33"><a href="#cb6-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-34"><a href="#cb6-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-35"><a href="#cb6-35" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2 <span class="sc">/</span> p3 <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width=</span><span class="dv">8</span>, <span class="at">repr.plot.height=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="answer-2" class="level4">
+<h4 class="anchored" data-anchor-id="answer-2">Answer</h4>
+<p>Important to discuss how <span class="math inline">\(LW\)</span> varies as a function of temperature [<span class="math inline">\(\downarrow\)</span> (sky/clouds); <span class="math inline">\(\uparrow\)</span> (ground)] and how <span class="math inline">\(SW_\downarrow\)</span> &amp; <span class="math inline">\(SW_\uparrow\)</span> are effected by cloud/snow. Big issue on day of snowfall, radiometer is covered in snow; <span class="math inline">\(SW_\downarrow\)</span> should not be larger than <span class="math inline">\(SW_uparrow\)</span></p>
+</section>
+</section>
+<section id="question-4" class="level3">
+<h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+<p>The plot below shows mean daily albedo. What explains sharp increase on the 17th?</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a single plot bar showing mean daily albedo</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>Albedo <span class="ot">=</span> Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>Selection<span class="sc">$</span>SW_IN_1_1_1</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out implausible values</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>Albedo <span class="ot">=</span> <span class="fu">replace</span>(Selection<span class="sc">$</span>Albedo, Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">&gt;</span>Selection<span class="sc">$</span>SW_IN_1_1_1 , <span class="cn">NaN</span> )</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Resample to get mean daily Albedo, ignoring the NaN values</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>DailyAlbedo<span class="ot">&lt;-</span><span class="fu">ddply</span>(Selection,.(DOY),summarise, <span class="at">Albedo=</span><span class="fu">mean</span>(Albedo,<span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>DailyAlbedo, <span class="fu">aes</span>(<span class="at">x=</span>DOY, <span class="at">y=</span>Albedo)) <span class="sc">+</span></span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">color=</span><span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'%'</span>)<span class="sc">+</span></span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Daily Albedo'</span>)</span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="answer-3" class="level4">
+<h4 class="anchored" data-anchor-id="answer-3">Answer</h4>
+<p>Fresh snow has a much higher albedo than either vegetated surfaces. The significant snowfall event (30 cm) was more than enough to cover all the vegetation.</p>
+</section>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>The maximum half-hourly <span class="math inline">\(SW_\downarrow\)</span> observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination <span class="math inline">\(\delta\)</span>, solar zenith angle <span class="math inline">\(Z\)</span>, and extraterrestrial irradiance <span class="math inline">\(I_{ex}\)</span> for the center point of this observation period (12:45). Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of <span class="math inline">\(I_{ex}\)</span>, compared to observed <span class="math inline">\(SW_\downarrow\)</span>, what is the approximate bulk transmissivity (<span class="math inline">\(\Psi_a\)</span>) coefficient of the atmosphere over CA-DBB at this point in time?</p>
+<p><strong>Note</strong>: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.</p>
+<section id="answer-4" class="level4">
+<h4 class="anchored" data-anchor-id="answer-4">Answer</h4>
+<p>Equations are in lecture <a href="https://geos300.github.io/Lectures/04.html#/title-slide">4</a> &amp; <a href="https://geos300.github.io/Lectures/04.html#/title-slide">5</a> with examples for time calculations in study question <a href="https://geos300.github.io/Study_Questions/02.html">2</a>,</p>
+<p>Get the declination as follows:</p>
+<p><span id="eq-Solar-Declination"><span class="math display">\[
+\begin{eqnarray}
+\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
+         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
+         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber
+\end{eqnarray}
+\tag{1}\]</span></span></p>
+<p>where <span class="math inline">\(\gamma\)</span> is the fractional year and DOY is the day of the year:</p>
+<p><span id="eq-Fractional-Year"><span class="math display">\[
+\gamma = \frac{2 \pi }{365} (DOY-1)
+\tag{2}\]</span></span></p>
+<p>And local Apparent time:</p>
+<p><span id="eq-LMST"><span class="math display">\[
+LMST = (TZ) + (\lambda-TZ_{m})\frac{4}{60}
+\tag{3}\]</span></span></p>
+<p>where <span class="math inline">\(\lambda\)</span> is longitude, <span class="math inline">\(TZ\)</span> is time in LST (e.g., PST = UTC-8) <strong>in hours</strong>, and <span class="math inline">\(TZ_{m}\)</span> is the central meridian for a given time zone (e.g., PST = -120 <span class="math inline">\(^{\circ}\)</span>). You can then calculate the local apparent time LAT as:</p>
+<p><span id="eq-LAT"><span class="math display">\[
+LAT = LMST-\Delta LAT
+\tag{4}\]</span></span></p>
+<p>and <span class="math inline">\(\Delta LAT\)</span> is: <span id="eq-Delta-LAT"><span class="math display">\[
+\begin{eqnarray}
+\Delta LAT = &amp; 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\
+             &amp; -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]
+\end{eqnarray}
+\tag{5}\]</span></span></p>
+<p>And the zenith (<span class="math inline">\(Z\)</span>) following:</p>
+<p><span id="eq-Solar-Zenith"><span class="math display">\[
+\cos(Z) = \sin(\beta) = \sin(\Phi)\sin(\delta)+\cos(\Phi)\cos(\delta)\cos(h)
+\tag{6}\]</span></span></p>
+<p>where the hour angle (h) is a function of local apparent time (LAT):</p>
+<p><span id="eq-Hour-Angle"><span class="math display">\[
+h = 15^{\circ}(12-LAT)
+\tag{7}\]</span></span></p>
+<p>With the zenith an the fractional DOY, you can then get <span class="math inline">\(I_{ex}\)</span></p>
+<p>The solar input at top of the atmosphere at any time and location hence is given as <span class="math inline">\(I_ex\)</span>: <span id="eq-Extraterrestrial-Irradiance"><span class="math display">\[
+I_{ex}=I_0(\frac{R_{av}}{R})^2\cos(Z)
+\tag{8}\]</span></span></p>
+<p>where <span class="math inline">\(I_0 \approx 1361 W m^{-2}\)</span>, <span class="math inline">\(\cos(Z)\)</span> applies the cosine law of illumination, and <span class="math inline">\((\frac{R_av}{R})\)</span> adjusts the solar constant Earth’s elliptic orbit:<br>
+<span id="eq-Adjusted-Constant"><span class="math display">\[
+\begin{eqnarray}
+(\frac{R_{av}}{R})^2 = &amp; 1.00011+0.034221\cos(\gamma)+0.001280\sin(\gamma)+\\
+                     &amp;0.000819\cos(2\gamma)+0.000077\sin(2\gamma)
+\end{eqnarray}
+\tag{9}\]</span></span></p>
+<p>Use <span class="math inline">\(Z\)</span> and <span class="math inline">\(I_{ex}\)</span> to solve for <span class="math inline">\(\Phi_a\)</span></p>
+<p><span id="eq-Bulk-Transmissivity"><span class="math display">\[
+SW_\downarrow = I_{ex} \Psi_a^{m}
+\tag{10}\]</span></span></p>
+<p>where</p>
+<p><span class="math display">\[
+m = \frac{1}{\cos(Z)} = \frac{1}{\sin(\beta)}
+\]</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>DOY <span class="ot">=</span> <span class="dv">13</span> <span class="co"># January 13th</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>TIME <span class="ot">=</span> <span class="fl">12.75</span> <span class="co"># Fractional hours</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>latitude <span class="ot">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>longitude <span class="ot">=</span> <span class="sc">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="ot">=</span> <span class="sc">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>I_0 <span class="ot">=</span> <span class="dv">1361</span> <span class="co"># W m-2</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="ot">=</span> <span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1) <span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">=</span> <span class="dv">2</span><span class="sc">*</span>pi <span class="sc">/</span><span class="dv">365</span><span class="sc">*</span>(DOY<span class="dv">-1</span>) </span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'gamma = %f'</span>,gamma)</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>delta <span class="ot">=</span> <span class="fl">0.006918</span> <span class="sc">-</span> <span class="fl">0.399912</span> <span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.070257</span> <span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">-</span><span class="fl">0.006758</span><span class="sc">*</span> <span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma) <span class="sc">+</span> <span class="fl">0.000907</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.002697</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.00148</span> <span class="sc">*</span><span class="fu">sin</span>(<span class="dv">3</span><span class="sc">*</span>gamma)</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'delta = %f in radians, or %f in degrees works too'</span>,delta,delta<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi)</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>LMST <span class="ot">=</span> TIME<span class="sc">+</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LMST = %f in hours'</span>,LMST)</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="ot">=</span> TIME<span class="sc">-</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Following the incorrect equation would yield: %f accept this, along with calculations of LAT, h, and z based on it'</span>,LMST_error)</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="ot">=</span> <span class="fl">229.18</span><span class="sc">*</span>(<span class="fl">0.000075+0.001868</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">-</span><span class="fl">0.032077</span><span class="sc">*</span><span class="fu">sin</span>(gamma)</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>             <span class="sc">-</span><span class="fl">0.014615</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.040849</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma))</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>LAT <span class="ot">=</span> LMST<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LAT %f'</span>,LAT)</span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="ot">=</span>LMST_error<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,LAT_error)</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT)</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'hour-angle = %f in degrees'</span>,h)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>h_error <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT_error)</span>
+<span id="cb9-32"><a href="#cb9-32" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,h_error)</span>
+<span id="cb9-33"><a href="#cb9-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-34"><a href="#cb9-34" aria-hidden="true" tabindex="-1"></a>cos_z <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-35"><a href="#cb9-35" aria-hidden="true" tabindex="-1"></a>z <span class="ot">=</span> <span class="fu">acos</span>(cos_z)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb9-36"><a href="#cb9-36" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'zenith angle = %f in degrees'</span>,z)</span>
+<span id="cb9-37"><a href="#cb9-37" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-38"><a href="#cb9-38" aria-hidden="true" tabindex="-1"></a>z_error <span class="ot">=</span> <span class="fu">acos</span>(cos_z_error)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb9-39"><a href="#cb9-39" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f s also acceptable as per above &lt; the error has a minor impact on the final answer.'</span>,z_error)</span>
+<span id="cb9-40"><a href="#cb9-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-41"><a href="#cb9-41" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="ot">=</span> <span class="fl">1.00011+0.034221</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.001280</span><span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">+</span><span class="fl">0.000819</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.000077</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)</span>
+<span id="cb9-42"><a href="#cb9-42" aria-hidden="true" tabindex="-1"></a>I_ex<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-43"><a href="#cb9-43" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Extraterrestrial Irradiance = %f W m-2'</span>,I_ex)</span>
+<span id="cb9-44"><a href="#cb9-44" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-45"><a href="#cb9-45" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,I_ex_error)</span>
+<span id="cb9-46"><a href="#cb9-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-47"><a href="#cb9-47" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-48"><a href="#cb9-48" aria-hidden="true" tabindex="-1"></a>m_error <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb9-49"><a href="#cb9-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-50"><a href="#cb9-50" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m)</span>
+<span id="cb9-51"><a href="#cb9-51" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Bulk transimissivity = %f'</span>,Psi_a)</span>
+<span id="cb9-52"><a href="#cb9-52" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m_error)</span>
+<span id="cb9-53"><a href="#cb9-53" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,Psi_a_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="question-6" class="level3">
+<h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+<p>Now calculate <span class="math inline">\(\Psi_a\)</span> for 12:45 January 19; the observed value of <span class="math inline">\(SW_\downarrow\)</span> was between 12:30 and 13:00 was 58.375 W<span class="math inline">\(^m{-2}\)</span>. What explains the difference between these two days?</p>
+<section id="answer-5" class="level4">
+<h4 class="anchored" data-anchor-id="answer-5">Answer</h4>
+<p>Same procedures as above, the key cause of the difference cloud cover. Significantly more light is attenuated on the cloudy day, that light is reflected back to space by clouds (some is also absorbed) before making it to ground level.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>DOY <span class="ot">=</span> <span class="dv">13</span> <span class="co"># January 13th</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>TIME <span class="ot">=</span> <span class="fl">12.75</span> <span class="co"># Fractional hours</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>latitude <span class="ot">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>longitude <span class="ot">=</span> <span class="sc">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="ot">=</span> <span class="sc">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>I_0 <span class="ot">=</span> <span class="dv">1361</span> <span class="co"># W m-2</span></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="ot">=</span> <span class="fl">58.375</span> <span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">=</span> <span class="dv">2</span><span class="sc">*</span>pi <span class="sc">/</span><span class="dv">365</span><span class="sc">*</span>(DOY<span class="dv">-1</span>) </span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'gamma = %f'</span>,gamma)</span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>delta <span class="ot">=</span> <span class="fl">0.006918</span> <span class="sc">-</span> <span class="fl">0.399912</span> <span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.070257</span> <span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">-</span><span class="fl">0.006758</span><span class="sc">*</span> <span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma) <span class="sc">+</span> <span class="fl">0.000907</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.002697</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.00148</span> <span class="sc">*</span><span class="fu">sin</span>(<span class="dv">3</span><span class="sc">*</span>gamma)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'delta = %f in radians, or %f in degrees works too'</span>,delta,delta<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a>LMST <span class="ot">=</span> TIME<span class="sc">+</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LMST = %f in hours'</span>,LMST)</span>
+<span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="ot">=</span> TIME<span class="sc">-</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Following the incorrect equation would yield: %f accept this, along with calculations of LAT, h, and z based on it'</span>,LMST_error)</span>
+<span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-20"><a href="#cb10-20" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="ot">=</span> <span class="fl">229.18</span><span class="sc">*</span>(<span class="fl">0.000075+0.001868</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">-</span><span class="fl">0.032077</span><span class="sc">*</span><span class="fu">sin</span>(gamma)</span>
+<span id="cb10-21"><a href="#cb10-21" aria-hidden="true" tabindex="-1"></a>             <span class="sc">-</span><span class="fl">0.014615</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.040849</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma))</span>
+<span id="cb10-22"><a href="#cb10-22" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb10-23"><a href="#cb10-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-24"><a href="#cb10-24" aria-hidden="true" tabindex="-1"></a>LAT <span class="ot">=</span> LMST<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb10-25"><a href="#cb10-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LAT %f'</span>,LAT)</span>
+<span id="cb10-26"><a href="#cb10-26" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="ot">=</span>LMST_error<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb10-27"><a href="#cb10-27" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,LAT_error)</span>
+<span id="cb10-28"><a href="#cb10-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-29"><a href="#cb10-29" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT)</span>
+<span id="cb10-30"><a href="#cb10-30" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'hour-angle = %f in degrees'</span>,h)</span>
+<span id="cb10-31"><a href="#cb10-31" aria-hidden="true" tabindex="-1"></a>h_error <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT_error)</span>
+<span id="cb10-32"><a href="#cb10-32" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,h_error)</span>
+<span id="cb10-33"><a href="#cb10-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-34"><a href="#cb10-34" aria-hidden="true" tabindex="-1"></a>cos_z <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-35"><a href="#cb10-35" aria-hidden="true" tabindex="-1"></a>z <span class="ot">=</span> <span class="fu">acos</span>(cos_z)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb10-36"><a href="#cb10-36" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'zenith angle = %f in degrees'</span>,z)</span>
+<span id="cb10-37"><a href="#cb10-37" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-38"><a href="#cb10-38" aria-hidden="true" tabindex="-1"></a>z_error <span class="ot">=</span> <span class="fu">acos</span>(cos_z_error)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb10-39"><a href="#cb10-39" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f s also acceptable as per above &lt; the error has a minor impact on the final answer.'</span>,z_error)</span>
+<span id="cb10-40"><a href="#cb10-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-41"><a href="#cb10-41" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="ot">=</span> <span class="fl">1.00011+0.034221</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.001280</span><span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">+</span><span class="fl">0.000819</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.000077</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)</span>
+<span id="cb10-42"><a href="#cb10-42" aria-hidden="true" tabindex="-1"></a>I_ex<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-43"><a href="#cb10-43" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Extraterrestrial Irradiance = %f W m-2'</span>,I_ex)</span>
+<span id="cb10-44"><a href="#cb10-44" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-45"><a href="#cb10-45" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,I_ex_error)</span>
+<span id="cb10-46"><a href="#cb10-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-47"><a href="#cb10-47" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-48"><a href="#cb10-48" aria-hidden="true" tabindex="-1"></a>m_error <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb10-49"><a href="#cb10-49" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-50"><a href="#cb10-50" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m)</span>
+<span id="cb10-51"><a href="#cb10-51" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Bulk transimissivity = %f'</span>,Psi_a)</span>
+<span id="cb10-52"><a href="#cb10-52" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m_error)</span>
+<span id="cb10-53"><a href="#cb10-53" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,Psi_a_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-7" class="level3">
+<h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+<p>Using the examples above as a template, calculate <span class="math inline">\(R_n\)</span> over the cold-snap. Make a scatter plot showing <span class="math inline">\(R_n\)</span> on the y-axis and <span class="math inline">\(SW_\downarrow\)</span> on the x-axis. Describe the relationship you.</p>
+<section id="answer-6" class="level4">
+<h4 class="anchored" data-anchor-id="answer-6">Answer</h4>
+<p>First, must calculate <span class="math inline">\(R_n\)</span> following:</p>
+<p><span id="eq-Net-Radiation"><span class="math display">\[
+R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
+\tag{11}\]</span></span></p>
+<p>The relationship between the two: <span class="math inline">\(SW_downarrow\)</span> is a significant driver of <span class="math inline">\(R_n\)</span>, whien it is positive, it has a near strong increasing effect on <span class="math inline">\(R_n\)</span> (but the slope modified by albedo). However, the effects of <span class="math inline">\(LW\)</span> are also present in the <span class="math inline">\(R_n\)</span> signal, so it is not a simple linear relationship.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>R_n <span class="ot">=</span> Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">-</span>Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">+</span>Selection<span class="sc">$</span>LW_IN_1_1_1<span class="sc">-</span>Selection<span class="sc">$</span>LW_OUT_1_1_1</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Selection, <span class="fu">aes</span>(<span class="at">x=</span>SW_IN_1_1_1, <span class="at">y=</span>R_n)) <span class="sc">+</span> <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'W m-2'</span>,<span class="at">x=</span><span class="st">'W m-2'</span>)<span class="sc">+</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Net Radiation vs. Short-wave Irradiance'</span>)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-8" class="level3">
+<h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+<p>Using the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.</p>
+<section id="answer-7" class="level4">
+<h4 class="anchored" data-anchor-id="answer-7">Answer</h4>
+<p>Should reproduce <strong>All</strong> graphs and tables above so that there can be a well rounded comparison. <strong>For plots:</strong> make sure all axes limits are updated properly. Key discussion points:</p>
+<ul>
+<li>Warmer weather (both <span class="math inline">\(T_a\)</span> and <span class="math inline">\(T_s\)</span>). While <span class="math inline">\(T_a\)</span> is still higher and more variable than <span class="math inline">\(T_s\)</span>, it is important to note that <span class="math inline">\(T_s\)</span> in summer has a wider range than in winter (<em>not expected for full credit</em> why? &gt; lower soil moisture + no snow cover)
+<ul>
+<li>Should also mention data gap in <span class="math inline">\(T_s\)</span> for full credit.</li>
+</ul></li>
+<li>More incoming <span class="math inline">\(SW\)</span> due to lower zenith angle and longer days. Less variable due to less cloud cover. Primarily clear sky conditions in summer</li>
+<li>More incoming/outgoing <span class="math inline">\(LW\)</span> due to higher temps of both ground and sky. Less variable due to less cloud cover. Primarily clear sky conditions in summer</li>
+<li>Albedo is lower due to lack of snow <strong>and</strong> green vegetation.</li>
+<li><span class="math inline">\(R_n\)</span> vs <span class="math inline">\(SW_\downarrow\)</span> is more direct because of lack of snow and reduced variability in <span class="math inline">\(LW\)</span></li>
+<li><span class="math inline">\(RH\)</span> is “lower” at times, but does not indicate drier atmosphere, because warm air can hold more water vapor</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set a time window and query the dataframe</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>Start <span class="ot">=</span><span class="st">'2023-07-12 0000'</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>End <span class="ot">=</span><span class="st">'2023-07-20 0000'</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Select a subset of the variables</span></span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>Query.Cols <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'DOY'</span>,<span class="st">'HOUR'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>,<span class="st">'RH_1_1_1'</span>)</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run the query and save it to a new dataframe called "Selection"</span></span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>Selection <span class="ot">&lt;-</span> df[<span class="fu">which</span>((df<span class="sc">$</span>TIMESTAMP <span class="sc">&gt;=</span> Start) <span class="sc">&amp;</span> (df<span class="sc">$</span>TIMESTAMP <span class="sc">&lt;</span>End)),</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>        Query.Cols]</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Generate some descriptive statistics for the data (excluding the timestamp)</span></span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">subset</span>(Selection,<span class="at">select =</span> <span class="sc">-</span>TIMESTAMP))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a plot with three sub-plots</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the radiation components on the first sub-plot</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot Ta and Ts on the second sub-plot, and RH on the third</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>plot_radiation <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'LW_IN_1_1_1'</span>,<span class="st">'SW_OUT_1_1_1'</span>, <span class="st">'LW_OUT_1_1_1'</span>)],</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_radiation, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>,<span class="st">'blue'</span>)) <span class="sc">+</span></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'SW In'</span>,<span class="st">'LW In'</span>,<span class="st">'SW Out'</span>,<span class="st">'LW Out'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>,<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes</span></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($W m^{-2}$)"</span>))<span class="sc">+</span></span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">0</span>,<span class="dv">1200</span>)<span class="sc">+</span></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Radiative Fluxes at CA-DBB Flux Station'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>plot_temp <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>  Selection[,<span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'TA_1_1_1'</span>,<span class="st">'TS_1'</span>)],</span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIMESTAMP"</span>)</span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>p2 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_temp, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'red'</span>,<span class="st">'red'</span>)) <span class="sc">+</span></span>
+<span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'T_a 2m'</span>,<span class="st">'T_s 0.05m'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
+<span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="fu">TeX</span>(r<span class="st">"($C\degree)"</span>))<span class="sc">+</span></span>
+<span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ylim</span>(<span class="dv">5</span>,<span class="dv">30</span>)<span class="sc">+</span></span>
+<span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>p3 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Selection, <span class="fu">aes</span>(<span class="at">x =</span> TIMESTAMP, <span class="at">y =</span> RH_1_1_1,<span class="at">lty =</span> <span class="st">'RH'</span>)) <span class="sc">+</span></span>
+<span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color=</span><span class="st">'blue'</span>) <span class="sc">+</span></span>
+<span id="cb13-31"><a href="#cb13-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'RH'</span>)<span class="sc">+</span></span>
+<span id="cb13-32"><a href="#cb13-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Temperature and Humidity'</span>)</span>
+<span id="cb13-33"><a href="#cb13-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-34"><a href="#cb13-34" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-35"><a href="#cb13-35" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">/</span> p2 <span class="sc">/</span> p3 <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width=</span><span class="dv">8</span>, <span class="at">repr.plot.height=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a single plot bar showing mean daily albedo</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate Albedo</span></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>Albedo <span class="ot">=</span> Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">/</span>Selection<span class="sc">$</span>SW_IN_1_1_1</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter out implausible values</span></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>Albedo <span class="ot">=</span> <span class="fu">replace</span>(Selection<span class="sc">$</span>Albedo, Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">&gt;</span>Selection<span class="sc">$</span>SW_IN_1_1_1 , <span class="cn">NaN</span> )</span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Resample to get mean daily Albedo, ignoring the NaN values</span></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a>DailyAlbedo<span class="ot">&lt;-</span><span class="fu">ddply</span>(Selection,.(DOY),summarise, <span class="at">Albedo=</span><span class="fu">mean</span>(Albedo,<span class="at">na.rm=</span><span class="cn">TRUE</span>))</span>
+<span id="cb15-11"><a href="#cb15-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-12"><a href="#cb15-12" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(<span class="at">data=</span>DailyAlbedo, <span class="fu">aes</span>(<span class="at">x=</span>DOY, <span class="at">y=</span>Albedo)) <span class="sc">+</span></span>
+<span id="cb15-13"><a href="#cb15-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>(<span class="at">stat=</span><span class="st">"identity"</span>, <span class="at">color=</span><span class="st">"black"</span>, <span class="at">fill=</span><span class="st">"blue"</span>)<span class="sc">+</span></span>
+<span id="cb15-14"><a href="#cb15-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'%'</span>)<span class="sc">+</span></span>
+<span id="cb15-15"><a href="#cb15-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Daily Albedo'</span>)</span>
+<span id="cb15-16"><a href="#cb15-16" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a>Selection<span class="sc">$</span>R_n <span class="ot">=</span> Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">-</span>Selection<span class="sc">$</span>SW_OUT_1_1_1<span class="sc">+</span>Selection<span class="sc">$</span>LW_IN_1_1_1<span class="sc">-</span>Selection<span class="sc">$</span>LW_OUT_1_1_1</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>p <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(Selection, <span class="fu">aes</span>(<span class="at">x=</span>SW_IN_1_1_1, <span class="at">y=</span>R_n)) <span class="sc">+</span> <span class="fu">geom_point</span>()<span class="sc">+</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">'W m-2'</span>,<span class="at">x=</span><span class="st">'W m-2'</span>)<span class="sc">+</span></span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">ggtitle</span>(<span class="st">'Net Radiation vs. Short-wave Irradiance'</span>)</span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>p <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-9" class="level3">
+<h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+<p>Find the timestamp of the observation interval when maximum <span class="math inline">\(SW_\downarrow\)</span> was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. <strong>Note</strong> our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate <span class="math inline">\(I_{ex}\)</span> and <span class="math inline">\(\Psi_a\)</span> for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily <span class="math inline">\(SW_\downarrow\)</span> differ?</p>
+<section id="answer-8" class="level4">
+<h4 class="anchored" data-anchor-id="answer-8">Answer</h4>
+<p>Same procedures as question 5 for calculations. Key discussion points:</p>
+<ul>
+<li><p>The magnitude of <span class="math inline">\(I_{ex}\)</span> differs because of the solar declination <span class="math inline">\(\delta\)</span> change giving us a lower zenith angle <span class="math inline">\(z\)</span> and therefore more concentrated solar beam (closer to <span class="math inline">\(I_0\)</span>), despite the fact that the earth is slightly farther from the sun during the northern hemisphere summer.</p></li>
+<li><p><span class="math inline">\(Psi_a\)</span> is higher because the atmosphere has higher moisture content in the summer along with higher particulate matter content (this was discussion point from lecture). This is interesting, because although the path length is much shorter in for this observation period than in winter, overall attenuation of the solar beam during this timestamp (~19%) exceeded that at 12:45 January 13th (~15%). This highlights the impacts of air quality and water vapor content.</p></li>
+<li><p>The timing of the maximum differs because:</p>
+<ol type="1">
+<li><span class="math inline">\(\Delta LAT\)</span> changes through the year. Not because of DST; as the sites don’t use it. Local apparent time<br>
+</li>
+<li>Part of it is “randomness” due to cloud conditions
+<ul>
+<li>explanation not needed for full credit: the 17th had some patchy cloud cover as indicated by the jumpiness of the SW trace on this day. If there are clouds blocking the solar beam’s path to the radiometer but some large reflective clouds to the north, some “excess” <span class="math inline">\(SW\)</span> reelected off the cloud can hit the radiometer and boost <span class="math inline">\(SW_downarrow\)</span> a bit.</li>
+</ul></li>
+</ol></li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>Max_SW_Obs <span class="ot">&lt;-</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'TIMESTAMP'</span>,<span class="st">'SW_IN_1_1_1'</span>,<span class="st">'DOY'</span>)]</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Timestamp of the maximum SW observation ='</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Max_SW_Obs<span class="sc">$</span>TIMESTAMP)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>SW_in <span class="ot">=</span> <span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1) <span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Maximum SW = %f W m-2'</span>,SW_in)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Must divide minutes by 60 and subtract 15/60 to get fractional hour of mid-point</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>Time <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(<span class="fu">format</span>(Max_SW_Obs<span class="sc">$</span>TIMESTAMP, <span class="st">"%H"</span>)) <span class="sc">+</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>               <span class="fu">as.numeric</span>(<span class="fu">format</span>(Max_SW_Obs<span class="sc">$</span>TIMESTAMP, <span class="st">"%M"</span>))<span class="sc">/</span><span class="dv">60</span> <span class="sc">-</span><span class="dv">15</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>DOY <span class="ot">=</span> <span class="fu">as.numeric</span>(Max_SW_Obs<span class="sc">$</span>DOY)</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>latitude <span class="ot">=</span> <span class="fl">49.12940598</span> <span class="co"># degrees</span></span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>longitude <span class="ot">=</span> <span class="sc">-</span><span class="fl">122.9849319</span> <span class="co"># degrees</span></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a>central_meridian_PST <span class="ot">=</span> <span class="sc">-</span><span class="dv">120</span> <span class="co"># degrees</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>I_0 <span class="ot">=</span> <span class="dv">1361</span> <span class="co"># W m-2</span></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>SW_in <span class="ot">=</span> <span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1) <span class="co"># Observed SW incoming # W m-2</span></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>gamma <span class="ot">=</span> <span class="dv">2</span><span class="sc">*</span>pi <span class="sc">/</span><span class="dv">365</span><span class="sc">*</span>(DOY<span class="dv">-1</span>) </span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'gamma = %f'</span>,gamma)</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>delta <span class="ot">=</span> <span class="fl">0.006918</span> <span class="sc">-</span> <span class="fl">0.399912</span> <span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.070257</span> <span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">-</span><span class="fl">0.006758</span><span class="sc">*</span> <span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma) <span class="sc">+</span> <span class="fl">0.000907</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.002697</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">3</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.00148</span> <span class="sc">*</span><span class="fu">sin</span>(<span class="dv">3</span><span class="sc">*</span>gamma)</span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'delta = %f in radians, or %f in degrees works too'</span>,delta,delta<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi)</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>LMST <span class="ot">=</span> TIME<span class="sc">+</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LMST = %f in hours'</span>,LMST)</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: their was an error in the LMST equation in the lecture slide, which has since been corrected.'</span>)</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>LMST_error <span class="ot">=</span> TIME<span class="sc">-</span>(longitude<span class="sc">-</span>central_meridian_PST)<span class="sc">*</span><span class="dv">4</span><span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Following the incorrect equation would yield: %f accept this, along with calculations of LAT, h, and z based on it'</span>,LMST_error)</span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>Delta_LAT <span class="ot">=</span> <span class="fl">229.18</span><span class="sc">*</span>(<span class="fl">0.000075+0.001868</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">-</span><span class="fl">0.032077</span><span class="sc">*</span><span class="fu">sin</span>(gamma)</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a>             <span class="sc">-</span><span class="fl">0.014615</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">-</span><span class="fl">0.040849</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma))</span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Delta_LAT = '</span>,Delta_LAT,<span class="st">' in minutes'</span>)</span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a>LAT <span class="ot">=</span> LMST<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'LAT %f'</span>,LAT)</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>LAT_error<span class="ot">=</span>LMST_error<span class="sc">-</span>Delta_LAT<span class="sc">/</span><span class="dv">60</span></span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,LAT_error)</span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT)</span>
+<span id="cb17-42"><a href="#cb17-42" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'hour-angle = %f in degrees'</span>,h)</span>
+<span id="cb17-43"><a href="#cb17-43" aria-hidden="true" tabindex="-1"></a>h_error <span class="ot">=</span> <span class="dv">15</span><span class="sc">*</span>(<span class="dv">12</span><span class="sc">-</span>LAT_error)</span>
+<span id="cb17-44"><a href="#cb17-44" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note**: %f is also acceptable as per above'</span>,h_error)</span>
+<span id="cb17-45"><a href="#cb17-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-46"><a href="#cb17-46" aria-hidden="true" tabindex="-1"></a>cos_z <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-47"><a href="#cb17-47" aria-hidden="true" tabindex="-1"></a>z <span class="ot">=</span> <span class="fu">acos</span>(cos_z)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb17-48"><a href="#cb17-48" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'zenith angle = %f in degrees'</span>,z)</span>
+<span id="cb17-49"><a href="#cb17-49" aria-hidden="true" tabindex="-1"></a>cos_z_error <span class="ot">=</span> <span class="fu">sin</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">sin</span>(delta)<span class="sc">+</span><span class="fu">cos</span>(latitude<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)<span class="sc">*</span><span class="fu">cos</span>(delta)<span class="sc">*</span><span class="fu">cos</span>(h_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-50"><a href="#cb17-50" aria-hidden="true" tabindex="-1"></a>z_error <span class="ot">=</span> <span class="fu">acos</span>(cos_z_error)<span class="sc">*</span><span class="dv">180</span><span class="sc">/</span>pi</span>
+<span id="cb17-51"><a href="#cb17-51" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f s also acceptable as per above &lt; the error has a minor impact on the final answer.'</span>,z_error)</span>
+<span id="cb17-52"><a href="#cb17-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-53"><a href="#cb17-53" aria-hidden="true" tabindex="-1"></a>R_av_Rsq <span class="ot">=</span> <span class="fl">1.00011+0.034221</span><span class="sc">*</span><span class="fu">cos</span>(gamma)<span class="sc">+</span><span class="fl">0.001280</span><span class="sc">*</span><span class="fu">sin</span>(gamma)<span class="sc">+</span><span class="fl">0.000819</span><span class="sc">*</span><span class="fu">cos</span>(<span class="dv">2</span><span class="sc">*</span>gamma)<span class="sc">+</span><span class="fl">0.000077</span><span class="sc">*</span><span class="fu">sin</span>(<span class="dv">2</span><span class="sc">*</span>gamma)</span>
+<span id="cb17-54"><a href="#cb17-54" aria-hidden="true" tabindex="-1"></a>I_ex<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-55"><a href="#cb17-55" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Extraterrestrial Irradiance = %f W m-2'</span>,I_ex)</span>
+<span id="cb17-56"><a href="#cb17-56" aria-hidden="true" tabindex="-1"></a>I_ex_error<span class="ot">=</span>I_0<span class="sc">*</span>R_av_Rsq<span class="sc">*</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-57"><a href="#cb17-57" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,I_ex_error)</span>
+<span id="cb17-58"><a href="#cb17-58" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-59"><a href="#cb17-59" aria-hidden="true" tabindex="-1"></a>m <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-60"><a href="#cb17-60" aria-hidden="true" tabindex="-1"></a>m_error <span class="ot">=</span> <span class="dv">1</span><span class="sc">/</span><span class="fu">cos</span>(z_error<span class="sc">*</span>pi<span class="sc">/</span><span class="dv">180</span>)</span>
+<span id="cb17-61"><a href="#cb17-61" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-62"><a href="#cb17-62" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m)</span>
+<span id="cb17-63"><a href="#cb17-63" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Bulk transimissivity = %f'</span>,Psi_a)</span>
+<span id="cb17-64"><a href="#cb17-64" aria-hidden="true" tabindex="-1"></a>Psi_a_error <span class="ot">=</span> (SW_in<span class="sc">/</span>I_ex)<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span>m_error)</span>
+<span id="cb17-65"><a href="#cb17-65" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'**Note** %f is also acceptable as per above &lt; the error has a minor impact on the answer.'</span>,Psi_a_error)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-10" class="level3">
+<h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+<p>Approximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in <span class="math inline">\(\mu mol m^{-2}s^{-1}\)</span>. You can use the wavelength of yellow light (<span class="math inline">\(\lambda 0 0.55 \mu m\)</span>) for your estimate. <strong>Hint</strong>: Consult examples in reading package for radiation geometry.</p>
+<section id="answer-9" class="level4">
+<h4 class="anchored" data-anchor-id="answer-9">Answer</h4>
+<p>Solve for the frequency of yellow light:</p>
+<p><span id="eq-Frequency"><span class="math display">\[
+v=\frac{c}{\lambda}
+\tag{12}\]</span></span></p>
+<p>Then the energy, where h=6.63∗10−34Js</p>
+<p><span id="eq-Energy-of-Photon"><span class="math display">\[
+e = hv
+\tag{13}\]</span></span></p>
+<p>Then scale by 42% to estimate PAR and get total number of photons. Finally convert to umol with Avogadro’s number.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a>c <span class="ot">=</span> <span class="dv">299792458</span> <span class="co"># Speed_of_light m s-1</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>h <span class="ot">=</span> <span class="fl">6.63e-34</span> <span class="co"># planks constant J s-1</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>Lambda <span class="ot">=</span> <span class="fl">0.55</span> <span class="co"># Yellow light wavelength um </span></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>photons_per_mol <span class="ot">=</span> <span class="fl">6.022e23</span> <span class="co"># Avogadro number</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>v <span class="ot">=</span> c<span class="sc">/</span>(Lambda<span class="sc">*</span><span class="fl">1e-6</span>)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Frequency of yellow light %f in Hz'</span>,v)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>e <span class="ot">=</span> h<span class="sc">*</span>v</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Energy associated with a single photon of yellow light %f J'</span>,e)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Assuming all PAR is yellow light (unrealistic, but what was instructed for simplicity):</span></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>SW_par <span class="ot">=</span> SW_in<span class="sc">*</span><span class="fl">0.42</span> <span class="co"># W m-2</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert PAR (energy in W m-2) to PPFD (total number of photons)</span></span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>SW_ppfd_N <span class="ot">=</span> SW_par<span class="sc">/</span>e</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Phonons of "yellow" light %f'</span>,SW_ppfd_N)</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert from N to umol</span></span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>SW_ppfd <span class="ot">=</span> SW_ppfd_N<span class="sc">/</span>photons_per_mol<span class="sc">*</span><span class="fl">1e6</span></span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'PPFD of "yellow" light %f umol m-2 s-1'</span>,SW_ppfd)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-11" class="level3">
+<h3 class="anchored" data-anchor-id="question-11">Question 11</h3>
+<p>Let’s assume the surface emissivity at CA-DBB is <span class="math inline">\(\epsilon = 0.95\)</span>. Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.</p>
+<section id="answer-10" class="level4">
+<h4 class="anchored" data-anchor-id="answer-10">Answer</h4>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4
+\tag{14}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma = 5.67 * 10^-8\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="ot">=</span> <span class="fl">0.95</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>LW_out <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'LW_OUT_1_1_1'</span>)]</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>T <span class="ot">=</span> (LW_out<span class="sc">/</span>(sigma<span class="sc">*</span>epsilon))<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'The surface temperature is approxiamtely %f K, which is %f C (listing only one is fine as long as UNITS are correct)'</span>,T,T<span class="fl">-273.15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-12" class="level3">
+<h3 class="anchored" data-anchor-id="question-12">Question 12</h3>
+<p>Now use the same equation to estimate the “apparent” radiative sky temperature (<span class="math inline">\(T_k\)</span>) from <span class="math inline">\(LW_{\downarrow}\)</span> for this timestamp. “Apparent” means you should assume <span class="math inline">\(\epsilon{a} = 1.0\)</span>. How would you interpret <span class="math inline">\(T_k\)</span>?</p>
+<section id="answer-11" class="level4">
+<h4 class="anchored" data-anchor-id="answer-11">Answer</h4>
+<p>Same calculations as above, but with <span class="math inline">\(\epsilon{a} = 1.0\)</span>. This is assuming the sky is a black body (not really). This would be the temperature if the sky were a perfect absorber/emitter and not transparent to <span class="math inline">\(LW\)</span>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>LW_in <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'LW_IN_1_1_1'</span>)]</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>T <span class="ot">=</span> (LW_in<span class="sc">/</span>(sigma<span class="sc">*</span>epsilon))<span class="sc">**</span>(<span class="dv">1</span><span class="sc">/</span><span class="dv">4</span>)</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'The surface temperature is approxiamtely %f K, which is %f C (listing only one is fine as long as UNITS are correct)'</span>,T,T<span class="fl">-273.15</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-13" class="level3">
+<h3 class="anchored" data-anchor-id="question-13">Question 13</h3>
+<p>Using measured <span class="math inline">\(LW_{\downarrow}\)</span> and measured air temperature <span class="math inline">\(T_a\)</span>, calculate the actual bulk emissivity of the atmosphere <span class="math inline">\(\varepsilon_{a}\)</span> at noon? [2]</p>
+<section id="answer-12" class="level4">
+<h4 class="anchored" data-anchor-id="answer-12">Answer</h4>
+<p>Plug <span class="math inline">\(LW\)</span> into <span class="math inline">\(E_g\)</span> and using <span class="math inline">\(T_a\)</span> solve for <span class="math inline">\(\epsilon\)</span></p>
+<p><span id="eq-Stefan-Boltzman-Law-Grey-Body"><span class="math display">\[
+E_g = \epsilon\sigma_b T^4
+\tag{15}\]</span></span></p>
+<p>where <span class="math inline">\(\sigma = 5.67 * 10^-8\)</span></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>LW_in <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'LW_IN_1_1_1'</span>)]</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>Ta <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'TA_1_1_1'</span>)]</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>epsilon <span class="ot">=</span> LW_in<span class="sc">/</span>(sigma<span class="sc">*</span>Ta<span class="sc">**</span><span class="dv">4</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'The bulk emissivity of the atmosphere is approximately %f'</span>,epsilon)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="question-14" class="level3">
+<h3 class="anchored" data-anchor-id="question-14">Question 14</h3>
+<p>Using the Prata (1996) equation from lecture and measured <span class="math inline">\(T_a\)</span> and <span class="math inline">\(RH\)</span>, what is the calculated apparent emissivity of the atmosphere and the calculated estimate of <span class="math inline">\(LW_{\downarrow}\)</span>? How well do these approximations match with what we actually observed?</p>
+<section id="answer-13" class="level4">
+<h4 class="anchored" data-anchor-id="answer-13">Answer</h4>
+<p>The approximation below will get pretty close (within about a couple percent) for clear sky conditions. Won’t work as well with cloud cover. Calculate Parata (1996) as:</p>
+<p><span id="eq-Prata"><span class="math display">\[
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
+\tag{16}\]</span></span></p>
+<p>where a = 1.2, b=3.0, and <span class="math inline">\(\zeta = 46.5\frac{P_v}{T_a}\)</span> with <span class="math inline">\(T_a\)</span> in Kelvin and <span class="math inline">\(P_v\)</span> in hPa.</p>
+<p>where you can use the Tetens equation to get <span class="math inline">\(P_v^*\)</span></p>
+<p><span id="eq-Prata"><span class="math display">\[
+\epsilon_a = [1-(1+zeta)\exp{-(a+b\zeta)^{0.5}}]
+\tag{17}\]</span></span></p>
+<p>where a = 1.2, b=3.0, and <span class="math inline">\(\zeta = 46.5\frac{P_v}{T_a}\)</span> with <span class="math inline">\(T_a\)</span> in Kelvin and <span class="math inline">\(P_v\)</span> in hPa.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a>sigma <span class="ot">=</span> <span class="fl">5.67e-8</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>epsilon <span class="ot">=</span> <span class="dv">1</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>LW_in <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'LW_IN_1_1_1'</span>)]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>Ta <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'TA_1_1_1'</span>)]</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>Ta_c <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'TA_1_1_1'</span>)]<span class="sc">+</span><span class="fl">273.15</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>RH <span class="ot">=</span> Selection[Selection<span class="sc">$</span>SW_IN_1_1_1<span class="sc">==</span><span class="fu">max</span>(Selection<span class="sc">$</span>SW_IN_1_1_1), <span class="fu">c</span>(<span class="st">'RH_1_1_1'</span>)]<span class="sc">*</span>.<span class="dv">01</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Use Tetens to get saturation vapor pressure</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>Pv_star <span class="ot">=</span> <span class="fl">6.112</span><span class="sc">*</span><span class="fu">exp</span>(<span class="fl">17.62</span><span class="sc">*</span>Ta_c<span class="sc">/</span>(<span class="fl">243.12</span><span class="sc">+</span>Ta_c))</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Get vapor pressure for RH</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>Pv <span class="ot">=</span> RH<span class="sc">*</span>Pv_star</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'Vapor pressure is %f  hpa'</span>,Pv)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Apply Parata equation</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>a <span class="ot">=</span> <span class="fl">1.2</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>b <span class="ot">=</span> <span class="fl">3.0</span></span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>zeta <span class="ot">=</span> <span class="fl">46.5</span><span class="sc">*</span>(Pv<span class="sc">/</span>Ta)</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>epsilon_a <span class="ot">=</span> <span class="dv">1</span><span class="sc">-</span>(<span class="dv">1</span><span class="sc">+</span>zeta)<span class="sc">*</span><span class="fu">exp</span>(<span class="sc">-</span>(a<span class="sc">+</span>b<span class="sc">*</span>zeta)<span class="sc">**</span><span class="fl">0.5</span>)</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'The bulk emissivity of the atmosphere is approximately %f'</span>,epsilon_a)</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>LW_in_est <span class="ot">=</span>  epsilon_a<span class="sc">*</span>sigma<span class="sc">*</span>(Ta)<span class="sc">**</span><span class="dv">4</span></span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a><span class="fu">sprintf</span>(<span class="st">'The estimated value of LW_in is %f W m-2, which is quite close to the observed value of %f W m-2'</span>,LW_in_est,LW_in)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+</section>
+
+</main>
+<!-- /main column -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

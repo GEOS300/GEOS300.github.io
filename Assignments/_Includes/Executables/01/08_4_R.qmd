@@ -1,0 +1,12 @@
+
+
+```{R}
+Selection$R_n = Selection$SW_IN_1_1_1-Selection$SW_OUT_1_1_1+Selection$LW_IN_1_1_1-Selection$LW_OUT_1_1_1
+
+
+p <- ggplot(Selection, aes(x=SW_IN_1_1_1, y=R_n)) + geom_point()+
+  labs(y = 'W m-2',x='W m-2')+
+  ggtitle('Net Radiation vs. Short-wave Irradiance')
+
+p + plot_annotation(sprintf('Student # %i',Student.Number))
+```

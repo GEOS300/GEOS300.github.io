@@ -1,0 +1,4 @@
+
+$$
+\frac{H_g}{H} = \frac{\mu_g}{\mu_a}
+$${#eq-Heat-Sharing}
