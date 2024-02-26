@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microscale Weather and Climate - Study Question Set 02</title>
+<title>Microscale Weather and Climate - Study Question Set 04</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -150,7 +150,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/02.html">Study Question Set 02</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/04.html">Study Question Set 04</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -179,7 +179,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Study_Questions/02.html" class="sidebar-item-text sidebar-link active">
+  <a href="../Study_Questions/02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Study Question Set 02</span></a>
   </div>
 </li>
@@ -191,7 +191,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Study_Questions/04.html" class="sidebar-item-text sidebar-link">
+  <a href="../Study_Questions/04.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Study Question Set 04</span></a>
   </div>
 </li>
@@ -206,10 +206,10 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/02.html">Study Question Set 02</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Study_Questions/index.html">Study Questions</a></li><li class="breadcrumb-item"><a href="../Study_Questions/04.html">Study Question Set 04</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Study Question Set 02</h1>
-<p class="subtitle lead">Solar Geometry</p>
+<h1 class="title">Study Question Set 04</h1>
+<p class="subtitle lead">Ground Heat Flux</p>
 </div>
 
 
@@ -227,7 +227,7 @@ window.Quarto = {
 
 
 <ol class="example" type="1">
-<li>Calculate Earth’s declination <span class="math inline">\(\delta\)</span> for the following dates: January 1, March 22, June 21, and December 31.</li>
+<li>The specific heat of water is <span class="math inline">\(c_p = 4.18 kJ kg^{-1} K^{-1}\)</span>. Calculate the heat capacity <span class="math inline">\(C\)</span> of water.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
@@ -241,26 +241,12 @@ Tip
 </div>
 <div id="callout-1" class="callout-1-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p><span id="eq-Solar-Declination"><span class="math display">\[
-\begin{eqnarray}
-\delta = &amp; 0.006918 - 0.399912 \cos( \gamma)+0.070257 \sin( \gamma)  \\
-         &amp; -0.006758 \cos(2 \gamma) + 0.000907\sin(2\gamma) \nonumber \\
-         &amp; -0.002697\cos(3\gamma)+0.00148 \sin(3\gamma) \nonumber
-\end{eqnarray}
-\tag{1}\]</span></span></p>
-<p>where <span class="math inline">\(\gamma\)</span> is the fractional year and DOY is the day of the year:</p>
-<p><span id="eq-Fractional-Year"><span class="math display">\[
-\gamma = \frac{2 \pi }{365} (DOY-1)
-\tag{2}\]</span></span></p>
-<p><span class="math inline">\(\rm{DOY}\)</span> is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).</p>
-<p>Declination changes throughout the year, but for a given date it is the same for the whole planet. <span class="math inline">\(\delta\)</span> is <span class="math inline">\(0^{\circ}\)</span> during the vernal and autumnal equinox, and <span class="math inline">\(\delta\)</span> is <span class="math inline">\(\pm 23.5^{\circ}\)</span> (minimum / maximum) for the winter and summer solstices.</p>
-<p>Inserting <span class="math inline">\(\gamma\)</span> into formula <a href="#eq-Solar-Declination" class="quarto-xref">Equation&nbsp;1</a> returns declinations of <span class="math inline">\(\delta = -23.1^{\circ}\)</span> on January 1, <span class="math inline">\(0.39^{\circ}\)</span> on March 22, <span class="math inline">\(23.5^{\circ}\)</span> on June 21, and <span class="math inline">\(-23.1^{\circ}\)</span> on December 31, respectively. Note that formula <a href="#eq-Solar-Declination" class="quarto-xref">Equation&nbsp;1</a> returns <span class="math inline">\(\delta\)</span> in radians, so you have to multiply the result form Eq. by <span class="math inline">\(\frac{360}{2 \pi}\)</span> to get degrees.</p>
-<p>Inserting <span class="math inline">\(\emph{DOY}\)</span> into formula (<a href="#eq-Fractional-Year" class="quarto-xref">Equation&nbsp;2</a>) returns declinations of <span class="math inline">\(\delta = -23.0^{\circ}\)</span> on January 1, <span class="math inline">\(-0.1^{\circ}\)</span> on March 22, <span class="math inline">\(23.4^{\circ}\)</span> on June 21, and <span class="math inline">\(-23.1^{\circ}\)</span> on December 31, respectively, which is slightly different from the calculation above. This is because formula (<span class="math inline">\(\ref{E3}\)</span>) is . It assumes a circular orbit of Earth around the Sun.</p>
+<p><span class="math inline">\(C = \rho c_p\)</span>, where <span class="math inline">\(\rho\)</span> is the density of the material. For water we know that <span class="math inline">\(\rho = 1 \times 10^3\, \rm{kg}\, \rm{m}^{-3}\)</span> (i.e.&nbsp;<span class="math inline">\(1\,\rm{kg} = 1 \ell = 10 \times 10 \times 10\, \rm{cm}\)</span>), therefore <span class="math inline">\(4.180 \times 10^{3}\, \rm{J}\, \rm{kg}^{-1}\)</span> K<span class="math inline">\(^{-1}\)</span> <span class="math inline">\(\times\)</span> <span class="math inline">\(10^3\, \rm{kg} \, \rm{m}^{-3}\)</span> = .</p>
 </div>
 </div>
 </div>
 <ol start="2" class="example" type="1">
-<li>Calculate the <strong>Local Mean Solar Time</strong> (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.</li>
+<li>Calculate the heat capacity <span class="math inline">\(C\)</span> of a dry mineral soil with a porosity of 55%. Use values from the table in <a href="../Lectures/08.htmll#/c-and-c-of-soil-materials">Lecture</a>.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
@@ -274,19 +260,20 @@ Tip
 </div>
 <div id="callout-2" class="callout-2-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>Local mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.</p>
-<p>Port Hardy’s longitude is <span class="math inline">\(127^{\circ}30^{\prime}\)</span>W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at <span class="math inline">\(120^{\circ}\textrm{W} (=8 \times 15^{\circ})\)</span>. The offset between PST and LMST is, in minutes:</p>
-<p><span class="math display">\[
-\begin{eqnarray}
-\textrm{PST} - \textrm{LST} = 4\,\textrm{min}/^{\circ} \times (120-127.5) = -30  \textrm{min}
-\end{eqnarray}
+<p><span class="math inline">\(P\)</span> = 55% for a dry soil means <span class="math inline">\(\theta_a = 0.55\)</span> and <span class="math inline">\(\theta_{m} = 1 - \theta_a = 0.45\)</span>: <span class="math display">\[
+\begin{eqnarray*}
+C &amp;=&amp; \theta_m\,C_m + \theta_a\,C_a \\
+&amp;\approx&amp; \theta_m\,C_m \\
+&amp;=&amp; 0.45 \times 2.1 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+&amp;=&amp; \underline{0.945\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*}
 \]</span></p>
-<p>At 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.</p>
+<p>Subscripts <span class="math inline">\(a\)</span> and <span class="math inline">\(m\)</span> refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (<span class="math inline">\(\theta_a\,C_a = 0.45 \times 0.0012 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} = 0.00066 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\)</span>) and can be neglected.</p>
 </div>
 </div>
 </div>
 <ol start="3" class="example" type="1">
-<li>Calculate the <strong>Local Apparent Time</strong> (LAT) for the same location and times.</li>
+<li>Calculate the heat capacity <span class="math inline">\(C\)</span> for the same soil if it is completely saturated.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
@@ -300,20 +287,21 @@ Tip
 </div>
 <div id="callout-3" class="callout-3-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:</p>
+<p><span class="math inline">\(P\)</span> = 55% for the saturated case means <span class="math inline">\(\theta_w = 0.55\)</span> and <span class="math inline">\(\theta_{m} = 1 - \theta_w = 0.45\)</span>:</p>
 <p><span class="math display">\[
-\begin{eqnarray}
-\Delta T_{\rm{LAT}} = \textrm{LMST} - \textrm{LAT}  = &amp;&amp; 229.18 \times (0.000075 \\ &amp;&amp;+ 0.001868 \cos \gamma
-                - 0.032077 \sin \gamma \\
-               &amp;&amp;- 0.014615 \cos(2\gamma) - 0.040849 \sin(2 \gamma)
-\end{eqnarray}
+\begin{eqnarray*}
+C &amp;=&amp; \theta_m\,C_m + \theta_w\,C_w \\
+&amp;=&amp; 0.45 \times 2.1 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} + 0.55 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+&amp;=&amp; 0.945\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} + 2.299\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+&amp;=&amp; \underline{3.24\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*}
 \]</span></p>
-<p>where <span class="math inline">\(\gamma\)</span> is again the fractional year in radians (see question 1) which is <span class="math inline">\(\gamma = 0.775\)</span> for February 15, and <span class="math inline">\(\gamma = 3.48\)</span> for July 22. The offset <span class="math inline">\(\Delta T_{\rm{LAT}} = \textrm{LMST} - \textrm{LAT}\)</span> is -14.3 min for February 15 and -6.41 min for July 22. Hence, <span class="math inline">\(\rm{LAT} = \rm{LMST} - \Delta T_{\rm{LAT}}\)</span>, is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.</p>
+<p>Subscripts <span class="math inline">\(a\)</span> and <span class="math inline">\(m\)</span> refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (<span class="math inline">\(\theta_a\,C_a = 0.45 \times 0.0012 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} = 0.00066 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\)</span>) and can be neglected.</p>
 </div>
 </div>
 </div>
 <ol start="4" class="example" type="1">
-<li>Calculate the solar altitude angle <span class="math inline">\(\beta\)</span> for the same location and those two times.</li>
+<li>Calculate the heat capacity <span class="math inline">\(C\)</span> of a partly saturated soil with <span class="math inline">\(P = 50\%\)</span>, <span class="math inline">\(\theta_a = 0.30\)</span> and an organic to mineral ratio of 1.5. Again, use the table in <a href="../Lectures/08.htmll#/c-and-c-of-soil-materials">Lecture</a>.</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
@@ -327,25 +315,21 @@ Tip
 </div>
 <div id="callout-4" class="callout-4-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The solar altitude <span class="math inline">\(\beta\)</span> can then be calculated by <span class="math display">\[\begin{eqnarray*}
-\sin \beta = \sin \phi \sin \delta + \cos \phi \cos \delta \cos h
-\end{eqnarray*}\]</span> <span class="math inline">\(\phi\)</span> is the latitude (<span class="math inline">\(50^{\circ}72^{\prime}\)</span>N for Port Hardy), <span class="math inline">\(\delta\)</span> is the declination (see above), and <span class="math inline">\(h\)</span> is the hour angle: <span class="math display">\[\begin{eqnarray*}
-h = 15^{\circ} (12 - \textrm{LAT})
-\end{eqnarray*}\]</span> where LAT is the local apparent time (see above) in hours of the day, i.e.&nbsp;$h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and <span class="math inline">\(h = 15^{\circ} (12 - 6.36) = +84.6^{\circ}\)</span> for July 22.</p>
-<p>For February 15: <span class="math display">\[\begin{eqnarray*}
-\sin \beta &amp;=&amp; \sin (50.72^{\circ}) \sin (-12.8^{\circ}) + \cos (50.72^{\circ})  \cos (-12.8^{\circ}) \cos (-21.6^{\circ}) \\ &amp;=&amp; 0.403 \\
-\beta &amp;=&amp; 23.74^{\circ}
-\end{eqnarray*}\]</span></p>
-<p>For July, 22: <span class="math display">\[\begin{eqnarray*}
-\sin \beta &amp;=&amp; \sin (50.72^{\circ}) \sin (20.39^{\circ}) + \cos (50.72^{\circ})  \cos (20.39^{\circ}) \cos (84.6^{\circ}) \\&amp;=&amp; 0.325 \\
-\beta &amp;=&amp; 18.99^{\circ}
-\end{eqnarray*}\]</span></p>
-<p>Please make sure you transform all degrees to radians if your calculator is set to radians.</p>
+<p><span class="math inline">\(P = 50\%\)</span> and <span class="math inline">\(\theta_a = 0.30\)</span> means <span class="math inline">\(\theta_{w} = P - \theta_a = 0.20\)</span>. An organic to mineral ratio of 1.5 (3/2) means <span class="math inline">\((1-P) = 0.5\)</span> is made up of 0.3 <span class="math inline">\(\theta_{o}\)</span> and 0.2 <span class="math inline">\(\theta_{m}\)</span>:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+C &amp;=&amp; \theta_m\,C_m + \theta_o\,C_o + \theta_w\,C_w \\
+&amp;=&amp; 0.3 \times 2.{5}\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}
++ 0.2 \times 2.{1} \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+&amp;&amp; + 0.2 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+&amp;=&amp; \underline{{2.0}\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*}
+\]</span></p>
 </div>
 </div>
 </div>
 <ol start="5" class="example" type="1">
-<li>Calculate the extraterrestrial short-wave irradiance <span class="math inline">\(SW_{Ex}\)</span> for the same location and those two times.</li>
+<li>If you increase the soil volumetric water content <span class="math inline">\(\theta_w\)</span> of any soil by 0.1, how does the heat capacity <span class="math inline">\(C\)</span> of the soil change?</li>
 </ol>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-5-contents" aria-controls="callout-5" aria-expanded="false" aria-label="Toggle callout">
@@ -359,21 +343,279 @@ Tip
 </div>
 <div id="callout-5" class="callout-5-contents callout-collapse collapse">
 <div class="callout-body-container callout-body">
-<p>The extraterrestrial short-wave irradiance <span class="math inline">\(SW_{Ex}\)</span> is related through the cosine law of illumination to the solar constant and the solar altitude <span class="math inline">\(\beta\)</span>:</p>
+<p><span class="math inline">\(\Delta \theta_w = 0.1\)</span>:</p>
 <p><span class="math display">\[
 \begin{eqnarray*}
-SW_{Ex} = I_0  \left( \frac{R_{av}}{R} \right)^2 \sin \beta
+\Delta C &amp;=&amp; \Delta \theta_w\,C_w \\
+&amp;=&amp; 0.1 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+&amp;=&amp; \underline{0.418\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
 \end{eqnarray*}
 \]</span></p>
-<p><span class="math inline">\(I_0\)</span> is the solar constant (1366.5 W m<span class="math inline">\(^{-2}\)</span>) and the term <span class="math inline">\(\left( \frac{R_{av}}{R} \right)^2\)</span> accounts for the non-circular orbit (changing distance over course of a year). <span class="math inline">\(\gamma\)</span> is the fractional year as defined above.</p>
+<p><span class="math inline">\(C\)</span> of the soil will increase by <span class="math inline">\(0.418\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\)</span>.</p>
+</div>
+</div>
+</div>
+<ol start="6" class="example" type="1">
+<li>Assume we have a soil with <span class="math inline">\(C = 2\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\)</span> and we measure a soil heat flux density <span class="math inline">\(Q_G\)</span> of <span class="math inline">\(+100\,\rm{W}\,\rm{m}^{-2}\)</span> all going to the first 10 cm of the soil, how fast would the layer 0-10 cm heat up?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-6-contents" aria-controls="callout-6" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-6" class="callout-6-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The warming rate of a material is defined by:</p>
 <p><span class="math display">\[
 \begin{eqnarray*}
-\left( \frac{R_{av}}{R} \right)^2 &amp;=&amp; 1.00011 + 0.034221 \cos(\gamma) + 0.001280  \sin(\gamma) \\
-&amp;&amp; + 0.000719  \cos(2 \gamma) + 0.000077  \sin( \gamma)
+\frac{\Delta T}{\Delta t} = \frac{1}{C}\, \frac{\Delta Q_G}{\Delta z}
 \end{eqnarray*}
 \]</span></p>
-<p>The term <span class="math inline">\(\left( \frac{R_{av}}{R} \right)^2\)</span> is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).</p>
-<p><span class="math inline">\(SW_{Ex}\)</span> = <span class="math inline">\(1366.5 \times 1.02 \times \sin(23.74^{\circ})\)</span> = 562 W m<span class="math inline">\(^{-2}\)</span> on February 15, 08:00 PST and <span class="math inline">\(SW_{Ex}\)</span> = <span class="math inline">\(1366 \times 0.97 \times \sin(18.99^{\circ})\)</span> = 431 W m<span class="math inline">\(^{-2}\)</span>. Again, make sure you transform the solar altitude to radians if your calculator is set to radians.</p>
+<p><span class="math inline">\(Q_G\)</span> at 0 cm depth (surface) is <span class="math inline">\(+100\,\rm{W}\,\rm{m}^{-3}\)</span>, <span class="math inline">\(Q_G\)</span> at 10 cm must be zero because there is no energy distributed to lower layers, i.e.&nbsp;only topmost 10 cm experience heating, hence <span class="math inline">\(\Delta Q_G = 100\,\rm{W}\,\rm{m}^{-2} - 0\,\rm{W}\,\rm{m}^{-2} = 100\,\rm{W}\,\rm{m}^{-2}\)</span> (same as <span class="math inline">\(\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-2}\)</span>):</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+\frac{\Delta T}{\Delta t} = \frac{100\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-2}}{2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \times 0.1 \rm{m}} = 0.0005 \,\rm{K}\,\rm{s}^{-1} =  \underline{1.8 \,\rm{K}\,\rm{h}^{-1}}.
+\end{eqnarray*}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="7" class="example" type="1">
+<li>Write Fourier’s law and explain it briefly.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-7-contents" aria-controls="callout-7" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-7" class="callout-7-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Fourier’s Law: <span class="math inline">\(Q_{G} = -k\,\Delta T/\Delta z = -k(T_{2}-T_{1})/(z_{2}-z_{1})\)</span>. It states that the flow rate of heat conducted through a solid material (or still fluid) is proportional to the temperature gradient.</p>
+</div>
+</div>
+</div>
+<ol start="8" class="example" type="1">
+<li>In a dry and uniform mineral soil with a porosity of 55%, we measure soil temperatures <span class="math inline">\(T_1\)</span> at 2 cm and <span class="math inline">\(T_2\)</span> at 6 cm. <span class="math inline">\(T_1 = 20 \rm{^{\circ}C}\)</span>, <span class="math inline">\(T_2 = 18.5 \rm{^{\circ}C}\)</span>. Calculate the soil heat flux density <span class="math inline">\(Q_G\)</span> assuming a thermal conductivity of <span class="math inline">\(k = 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-8-contents" aria-controls="callout-8" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-8" class="callout-8-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Use Fourier’s Law:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+Q_G = - k\, \frac{\Delta T}{\Delta z}
+\end{eqnarray*}
+\]</span></p>
+<p>You insert the thermal conductivity of <span class="math inline">\(k = 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\)</span>:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+Q_G &amp;=&amp; - 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\, \frac{20\rm{^{\circ}C}-18.5\rm{^{\circ}C}}{0.02\,\rm{m} - 0.06\,\rm{m}} \\
+&amp;=&amp; - 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\, \frac{1.5\rm{K}}{-0.04\,\rm{m}} \\
+&amp;=&amp; \underline{10.1\,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray*}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="9" class="example" type="1">
+<li>At 5 cm depth we measure a soil heat flux density <span class="math inline">\(Q_G = 20 \,\rm{W}\,\rm{m}^{-2}\)</span> and simultaneously a temperature gradient of -0.5 K<span class="math inline">\(\,\rm{cm}^{-1}\)</span>. Calculate the thermal conductivity <span class="math inline">\(k\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-9-contents" aria-controls="callout-9" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-9" class="callout-9-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Again we use Fourier’s Law, but rearranged:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+- Q_G \frac{\Delta z}{\Delta T} = k
+\end{eqnarray*}
+\]</span></p>
+<p>We can directly plug-in the inverse of the gradient <span class="math inline">\(\Delta T/\Delta z = -0.5\, \rm{K}\,\rm{cm}^{-1}\)</span> into <span class="math inline">\(\Delta z/\Delta T\)</span>: <span class="math display">\[
+\begin{eqnarray*}
+k &amp;=&amp;  -20\,\rm{W}\,\rm{m}^{-2} \times -0.02\, \rm{K}\,\rm{m}^{-1} \\
+&amp;=&amp; \underline{\textcolor{red}{+} 0.4\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}}
+\end{eqnarray*}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="10" class="example" type="1">
+<li>For a soil with a specific heat <span class="math inline">\(c_p =\)</span> 1.8 kJ kg<span class="math inline">\(^{-1}\)</span> K<span class="math inline">\(^{-1}\)</span>, a density <span class="math inline">\(\rho =\)</span> 1.4 Mg m<span class="math inline">\(^{-3}\)</span>, and a thermal conductivity <span class="math inline">\(k = 0.4\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\)</span>, calculate the thermal diffusivity <span class="math inline">\(K\)</span>.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-10-contents" aria-controls="callout-10" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-10" class="callout-10-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The thermal diffusivity <span class="math inline">\(K\)</span> tells us how quickly temperature waves propagate down into the soil, and <span class="math inline">\(K\)</span> is defined by:</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+K &amp;=&amp; \frac{k}{C} = \frac{k}{\rho\,c_p} \\
+&amp;=&amp; \frac{0.4\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-1}\,\rm{K}^{-1}}{1.4\times 10^{3}\, \rm{kg}\, \rm{m}^{-3}\,1.8 \times 10^{3}\,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}} \\
+&amp;=&amp; \underline{0.16 \times 10^{-6}\,\rm{m}^{2}\,\rm{s}^{-1}}
+\end{eqnarray*}
+\]</span></p>
+<p>Note the fine - but important - difference between the symbol <span class="math inline">\(k\)</span> for thermal conductivity (Latin k’) and the symbol <span class="math inline">\(K\)</span> for thermal diffusivity.</p>
+</div>
+</div>
+</div>
+<ol start="11" class="example" type="1">
+<li>Calculate the thermal admittance <span class="math inline">\(\mu\)</span> for the same soil.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-11-contents" aria-controls="callout-11" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-11" class="callout-11-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>The thermal admittance <span class="math inline">\(\mu\)</span> is strictly speaking a surface property. It defines how well a surface can accept or release heat.</p>
+<p><span class="math display">\[
+\begin{eqnarray*}
+\mu &amp;=&amp; \sqrt{k\,C} = \sqrt{k\,\rho\, c_p} \\
+&amp;=&amp; \sqrt{0.4\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-1}\,\rm{K}^{-1} \times 1.4 \times 10^{3}\, \rm{kg}\, \rm{m}^{-3} \times 1.8 \times 10^{3}\,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}} \\
+&amp;=&amp; \sqrt{1.008 \times 10^{6}  \,\rm{J}^{2} \,\rm{m}^{-4} \,\rm{K}^{-2}  \,\rm{s}^{-1}} \\
+&amp;=&amp; \underline{1004 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}}
+\end{eqnarray*}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="12" class="example" type="1">
+<li>Assume we know a soil’s dry fraction of organic material ($f_o = $25%), and its bulk density (_s = 1.4 <span class="math inline">\(\,\rm{Mg}\,\rm{m}^{-3}\)</span>). What is the mass of organic (<span class="math inline">\(M_o\)</span> ) and mineral material (<span class="math inline">\(M_m\)</span>) contained in one cubic metre of this soil?</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-12-contents" aria-controls="callout-12" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-12" class="callout-12-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><span class="math inline">\(M_m\)</span> and <span class="math inline">\(M_o\)</span> is the mass of mineral and organic material, respectively, in one <span class="math inline">\(\rm{m}^{3}\)</span> of soil.</p>
+<p>The total mass of the dry soil <span class="math inline">\(M\)</span> in one cubic-metre is given by the bulk density (_s = 1.4 <span class="math inline">\(\rm{Mg}\,\rm{m}^{-3}\)</span>):</p>
+<p><span class="math display">\[
+M = M_m + M_o = \rho_s \times 1\, \rm{m}^3 = 1.4\,\rm{Mg}\,\rm{m}^{-3} \times 1\, \rm{m}^3 = 1.4\,\rm{Mg}
+\]</span></p>
+<p><span class="math inline">\(f_o\)</span> is the organic mass fraction (given: <span class="math inline">\(f_o = 0.25\)</span>) which is the mass of organic material to the total mass</p>
+<p><span class="math display">\[
+f_o =  \frac{M_o}{M}  = \frac{M_o}{M_o + M_m} = 0.25
+\]</span></p>
+<p>solving for <span class="math inline">\(M_m\)</span> and <span class="math inline">\(M_o\)</span>:</p>
+<p><span class="math display">\[
+M_m = M \times (1 - f_o) = 1.4\,\rm{Mg} \times (1 - 0.25) = 1.4\,\rm{Mg} \times) 0.75 = 1.05 \,\rm{Mg}
+\]</span></p>
+<p><span class="math display">\[
+M_o = M \times f_o = 1.4\,\rm{Mg} \times 0.25 = 0.35\,\rm{Mg}
+\]</span></p>
+</div>
+</div>
+</div>
+<ol start="13" class="example" type="1">
+<li>Using the values of specific heat for organic (<span class="math inline">\(c_o\)</span>) and mineral (<span class="math inline">\(c_m\)</span>) given in the table of Lecture 10, slide 5, calculate the composite heat capacity (<span class="math inline">\(C_s\)</span>) for the dry soil in Question 12.</li>
+</ol>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-13-contents" aria-controls="callout-13" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Tip
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-13" class="callout-13-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>Using the mass of organic and mineral material contained in one cubic metre (determined in Question 12), we can formulate the densities of organic (<span class="math inline">\(\rho_o\)</span>) and mineral material (<span class="math inline">\(\rho_m\)</span>) in the same soil:</p>
+<p><span class="math display">\[
+\rho_o = \frac{M_o}{1\rm{m}^{3} \times \theta_o}
+\]</span></p>
+<p><span class="math display">\[
+\rho_m = \frac{M_m}{1\rm{m}^{3} \times \theta_m}
+\]</span></p>
+<p>Where <span class="math inline">\((1\rm{m}^{3} \times \theta_o)\)</span> is the volume of organic material in one cubic metre, and <span class="math inline">\((1\rm{m}^{3} \theta_m)\)</span> is the volume of mineral material in one cubic metre.</p>
+<p>Lecture 10, slide 5 provides <span class="math inline">\(c_m = 0.8 \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}\)</span> and <span class="math inline">\(c_o = 1.9 \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}\)</span>. Using <span class="math inline">\(C = \rho c\)</span> allows us to then determine the heat capacity of organic (<span class="math inline">\(C_o\)</span>) and mineral material (<span class="math inline">\(C_m\)</span>) in this soil:</p>
+<p><span class="math display">\[
+C_o = \rho_o \,c_o
+\]</span></p>
+<p><span class="math display">\[
+C_m = \rho_m \,c_m
+\]</span></p>
+<p>The composite heat capacity of the dry soil (<span class="math inline">\(C_s\)</span>) is the sum of the compound heat capacities weighted by the respective volume fractions:</p>
+<p><span class="math display">\[
+C_s = \theta_o C_o  + \theta_m C_m
+\]</span></p>
+<p>replacing <span class="math inline">\(C_o\)</span> by <span class="math inline">\(\rho_o \,c_o\)</span> (and same for <span class="math inline">\(C_m\)</span>) then gives:</p>
+<p><span class="math display">\[
+C_s = \theta_o \rho_o \,c_o  + \theta_m \rho_m \,c_m
+\]</span></p>
+<p>replacing <span class="math inline">\(\rho_o\)</span> by <span class="math inline">\(\frac{M_o}{1\rm{m}^{3} \theta_o}\)</span> (and same for <span class="math inline">\(\rho_m\)</span>) then gives:</p>
+<p><span class="math display">\[
+C_s = \theta_o \frac{M_o}{1\rm{m}^{3} \theta_o} \,c_o  + \theta_m \frac{M_m}{1\rm{m}^{3}  \theta_m} \,c_m
+\]</span></p>
+<p>Note that then <span class="math inline">\(\theta_o\)</span> and <span class="math inline">\(\theta_m\)</span> cancel out:</p>
+<p><span class="math display">\[
+C_s =  \frac{M_o}{1\rm{m}^{3}} \,c_o  + \frac{M_m}{1\rm{m}^{3}} \,c_m
+\]</span></p>
+<p>Inserting the values:</p>
+<p><span class="math display">\[
+C_s =  \frac{ 0.35\,\rm{Mg}}{1\rm{m}^{3}} \, 1.9\, \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}  + \frac{1.05 \,\rm{Mg}}{1\rm{m}^{3}} \,0.8 \, \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1} =
+\]</span></p>
+<p><span class="math display">\[
+0.665 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1} + 0.84 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1} = 1.505 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1}
+\]</span></p>
+<p>We learn from this exercise that generally we can rewrite the composite heat capacity of a soil (<span class="math inline">\(C_s\)</span>) from using heat capacities of compound substances and volume fractions:</p>
+<p><span class="math display">\[
+C_s = \theta_o C_o  + \theta_m C_m + ...
+\]</span></p>
+<p>to using specific heat and known mass (<span class="math inline">\(M_o\)</span>, <span class="math inline">\(M_m\)</span>, etc.) of the compound substances in a soil volume <span class="math inline">\(V_s\)</span>:</p>
+<p><span class="math display">\[
+C_s = \frac{M_o}{V_s} \,c_o  + \frac{M_o}{V_s} \,c_m + ...
+\]</span></p>
+<p>where <span class="math inline">\(V_s\)</span> is the volume of the soil, and <span class="math inline">\(M_o\)</span> and <span class="math inline">\(M_m\)</span> is the mass of organic and mineral material in the same volume <span class="math inline">\(V_s\)</span>. This has the advantage of avoiding assuming any specific denisty of organic and mineral material, which is difficult to determine practically.</p>
 </div>
 </div>
 </div>

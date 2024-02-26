@@ -1,0 +1,318 @@
+---
+title: Study Question Set 04
+subtitle: Ground Heat Flux
+---
+
+
+(@) The specific heat of water is $c_p = 4.18 kJ kg^{-1} K^{-1}$. Calculate the heat capacity $C$ of water.
+
+::: {.callout-tip collapse="true"}
+
+$C = \rho c_p$, where $\rho$ is the density of the material. For water we know that $\rho = 1 \times 10^3\, \rm{kg}\, \rm{m}^{-3}$ (i.e.\ $1\,\rm{kg} = 1 \ell = 10 \times 10 \times 10\, \rm{cm}$), therefore $4.180 \times 10^{3}\, \rm{J}\, \rm{kg}^{-1}$ K$^{-1}$ $\times$ $10^3\, \rm{kg} \, \rm{m}^{-3}$ = \underline{$4.180 \times 10^{6}\, \rm{J}\, \rm{m}^{-3}$ K$^{-1}$}.
+
+:::
+
+
+(@) Calculate the heat capacity $C$ of a dry mineral soil with a porosity of 55%. Use values from the table in [Lecture](../Lectures/08.htmll#/c-and-c-of-soil-materials).
+
+::: {.callout-tip collapse="true"}
+
+$P$ = 55\% for a dry soil means $\theta_a = 0.55$ and $\theta_{m} = 1 - \theta_a = 0.45$:
+$$
+\begin{eqnarray*} 
+C &=& \theta_m\,C_m + \theta_a\,C_a \\
+ &\approx& \theta_m\,C_m \\
+ &=& 0.45 \times 2.1 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+ &=& \underline{0.945\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*} 
+$$
+
+Subscripts $a$ and $m$ refer to air and mineral matter, respectively. Note, the second term is small compared to the first one ($\theta_a\,C_a = 0.45 \times 0.0012 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} = 0.00066 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}$) and can be neglected.
+
+:::
+
+(@) Calculate the heat capacity $C$ for the same soil if it is completely saturated.
+
+::: {.callout-tip collapse="true"}
+
+$P$ = 55\% for the saturated case means $\theta_w = 0.55$ and $\theta_{m} = 1 - \theta_w = 0.45$:
+
+$$
+\begin{eqnarray*} 
+C &=& \theta_m\,C_m + \theta_w\,C_w \\
+ &=& 0.45 \times 2.1 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} + 0.55 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+ &=& 0.945\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} + 2.299\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+ &=& \underline{3.24\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*} 
+$$
+
+Subscripts $a$ and $m$ refer to air and mineral matter, respectively. Note, the second term is small compared to the first one ($\theta_a\,C_a = 0.45 \times 0.0012 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} = 0.00066 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}$) and can be neglected.
+
+:::
+
+(@) Calculate the heat capacity $C$ of a partly saturated soil with $P = 50\%$, $\theta_a = 0.30$ and an organic to mineral ratio of 1.5. Again, use the table in [Lecture](../Lectures/08.htmll#/c-and-c-of-soil-materials).
+
+
+::: {.callout-tip collapse="true"}
+
+$P = 50\%$ and $\theta_a = 0.30$ means $\theta_{w} = P - \theta_a = 0.20$. An organic to mineral ratio of 1.5 (3/2) means $(1-P) = 0.5$ is made up of 0.3 $\theta_{o}$ and 0.2 $\theta_{m}$:
+
+$$
+\begin{eqnarray*} 
+C &=& \theta_m\,C_m + \theta_o\,C_o + \theta_w\,C_w \\
+ &=& 0.3 \times 2.{5}\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} 
+ + 0.2 \times 2.{1} \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \\
+ && + 0.2 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+ &=& \underline{{2.0}\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*} 
+$$
+
+:::
+
+(@) If you increase the soil volumetric water content $\theta_w$ of any soil by 0.1, how does the heat capacity $C$ of the soil change?
+
+::: {.callout-tip collapse="true"}
+
+$\Delta \theta_w = 0.1$:
+
+$$
+\begin{eqnarray*} 
+\Delta C &=& \Delta \theta_w\,C_w \\
+ &=& 0.1 \times 4.18 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}  \\
+ &=& \underline{0.418\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}}
+\end{eqnarray*} 
+$$
+
+$C$ of the soil will increase by $0.418\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}$.
+
+:::
+
+(@) Assume we have a soil with $C = 2\,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}$ and we measure a soil heat flux density $Q_G$ of $+100\,\rm{W}\,\rm{m}^{-2}$ all going to the first 10 cm of the soil, how fast would the layer 0-10 cm heat up?
+
+::: {.callout-tip collapse="true"}
+
+The warming rate of a material is defined by:
+
+$$
+\begin{eqnarray*} 
+\frac{\Delta T}{\Delta t} = \frac{1}{C}\, \frac{\Delta Q_G}{\Delta z}
+\end{eqnarray*} 
+$$
+
+$Q_G$ at 0 cm depth (surface) is $+100\,\rm{W}\,\rm{m}^{-3}$, $Q_G$ at 10 cm must be zero because there is no energy distributed to lower layers, i.e.\ only topmost 10 cm experience heating, hence $\Delta Q_G = 100\,\rm{W}\,\rm{m}^{-2} - 0\,\rm{W}\,\rm{m}^{-2} = 100\,\rm{W}\,\rm{m}^{-2}$ (same as $\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-2}$):
+
+$$
+\begin{eqnarray*} 
+\frac{\Delta T}{\Delta t} = \frac{100\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-2}}{2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1} \times 0.1 \rm{m}} = 0.0005 \,\rm{K}\,\rm{s}^{-1} =  \underline{1.8 \,\rm{K}\,\rm{h}^{-1}}.
+\end{eqnarray*} 
+$$
+
+:::
+
+
+(@) Write Fourier's law and explain it briefly.
+
+::: {.callout-tip collapse="true"}
+
+Fourier's Law: $Q_{G} = -k\,\Delta T/\Delta z = -k(T_{2}-T_{1})/(z_{2}-z_{1})$. It states that the flow rate of heat conducted through a solid material (or still fluid) is proportional to the temperature gradient.
+
+:::
+
+(@) In a dry and uniform mineral soil with a porosity of 55\%, we measure soil temperatures $T_1$ at 2 cm and $T_2$ at 6 cm. $T_1 = 20 \rm{^{\circ}C}$, $T_2 = 18.5 \rm{^{\circ}C}$. Calculate the soil heat flux density $Q_G$ assuming a thermal conductivity of $k = 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}$.
+
+
+::: {.callout-tip collapse="true"}
+
+Use Fourier's Law:
+
+$$
+\begin{eqnarray*} 
+Q_G = - k\, \frac{\Delta T}{\Delta z}
+\end{eqnarray*} 
+$$
+
+You insert the thermal conductivity of $k = 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}$:
+
+$$
+\begin{eqnarray*} 
+Q_G &=& - 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\, \frac{20\rm{^{\circ}C}-18.5\rm{^{\circ}C}}{0.02\,\rm{m} - 0.06\,\rm{m}} \\
+&=& - 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}\, \frac{1.5\rm{K}}{-0.04\,\rm{m}} \\
+&=& \underline{10.1\,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray*} 
+$$
+
+:::
+
+
+(@) At 5 cm depth we measure a soil heat flux density $Q_G = 20 \,\rm{W}\,\rm{m}^{-2}$ and simultaneously a temperature gradient of -0.5 K$\,\rm{cm}^{-1}$. Calculate the thermal conductivity $k$.
+
+
+::: {.callout-tip collapse="true"}
+
+Again we use Fourier's Law, but rearranged:
+
+$$ 
+\begin{eqnarray*} 
+- Q_G \frac{\Delta z}{\Delta T} = k 
+\end{eqnarray*} 
+$$
+
+We can directly plug-in the inverse of the gradient $\Delta T/\Delta z = -0.5\, \rm{K}\,\rm{cm}^{-1}$ into $\Delta z/\Delta T$:
+$$
+\begin{eqnarray*} 
+k &=&  -20\,\rm{W}\,\rm{m}^{-2} \times -0.02\, \rm{K}\,\rm{m}^{-1} \\
+&=& \underline{\textcolor{red}{+} 0.4\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}}
+\end{eqnarray*} 
+$$
+
+:::
+
+
+(@) For a soil with a specific heat $c_p =$ 1.8 kJ kg$^{-1}$ K$^{-1}$, a density $\rho =$ 1.4 Mg m$^{-3}$, and a thermal conductivity $k = 0.4\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}$, calculate the thermal diffusivity $K$.
+
+
+::: {.callout-tip collapse="true"}
+
+The thermal diffusivity $K$ tells us how quickly temperature waves propagate down into the soil, and $K$ is defined by:
+
+$$
+\begin{eqnarray*} 
+K &=& \frac{k}{C} = \frac{k}{\rho\,c_p} \\
+&=& \frac{0.4\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-1}\,\rm{K}^{-1}}{1.4\times 10^{3}\, \rm{kg}\, \rm{m}^{-3}\,1.8 \times 10^{3}\,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}} \\
+&=& \underline{0.16 \times 10^{-6}\,\rm{m}^{2}\,\rm{s}^{-1}}
+\end{eqnarray*} 
+$$
+
+Note the fine - but important - difference between the symbol $k$ for thermal conductivity (Latin k') and the symbol $K$ for thermal diffusivity.
+
+:::
+
+
+(@) Calculate the thermal admittance $\mu$ for the same soil.
+
+
+::: {.callout-tip collapse="true"}
+
+The thermal admittance $\mu$ is strictly speaking a surface property. It defines how well a surface can accept or release heat.
+
+$$
+\begin{eqnarray*} 
+\mu &=& \sqrt{k\,C} = \sqrt{k\,\rho\, c_p} \\
+&=& \sqrt{0.4\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-1}\,\rm{K}^{-1} \times 1.4 \times 10^{3}\, \rm{kg}\, \rm{m}^{-3} \times 1.8 \times 10^{3}\,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}} \\
+&=& \sqrt{1.008 \times 10^{6}  \,\rm{J}^{2} \,\rm{m}^{-4} \,\rm{K}^{-2}  \,\rm{s}^{-1}} \\
+&=& \underline{1004 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}}
+\end{eqnarray*} 
+$$
+
+:::
+
+
+(@) Assume we know a soil's dry \underline{mass} fraction of organic material ($f_o = $25\%), and its bulk density (\rho_s = 1.4 $\,\rm{Mg}\,\rm{m}^{-3}$). What is the mass of organic ($M_o$ ) and mineral material ($M_m$) contained in one cubic metre of this soil?
+
+
+::: {.callout-tip collapse="true"}
+
+$M_m$ and $M_o$ is the mass of mineral and organic material, respectively, in one $\rm{m}^{3}$ of soil. 
+
+The total mass of the dry soil $M$ in one cubic-metre is given by the bulk density (\rho_s = 1.4 $\rm{Mg}\,\rm{m}^{-3}$):
+
+$$
+M = M_m + M_o = \rho_s \times 1\, \rm{m}^3 = 1.4\,\rm{Mg}\,\rm{m}^{-3} \times 1\, \rm{m}^3 = 1.4\,\rm{Mg} 
+$$ 
+
+$f_o$ is the organic mass fraction (given: $f_o = 0.25$) which is the mass of organic material to the total mass
+
+$$
+f_o =  \frac{M_o}{M}  = \frac{M_o}{M_o + M_m} = 0.25
+$$
+
+solving for $M_m$ and $M_o$:
+
+$$
+M_m = M \times (1 - f_o) = 1.4\,\rm{Mg} \times (1 - 0.25) = 1.4\,\rm{Mg} \times) 0.75 = 1.05 \,\rm{Mg} 
+$$
+
+$$
+M_o = M \times f_o = 1.4\,\rm{Mg} \times 0.25 = 0.35\,\rm{Mg}
+$$
+
+:::
+
+
+(@) Using the values of specific heat for organic ($c_o$) and mineral ($c_m$) given in the table of Lecture 10, slide 5, calculate the composite heat capacity ($C_s$) for the dry soil in Question 12.
+
+
+::: {.callout-tip collapse="true"}
+Using the mass of organic and mineral material contained in one cubic metre (determined in Question 12), we can formulate the densities of organic ($\rho_o$) and mineral material ($\rho_m$) in the same soil:  
+
+$$ 
+\rho_o = \frac{M_o}{1\rm{m}^{3} \times \theta_o} 
+$$
+
+$$ 
+\rho_m = \frac{M_m}{1\rm{m}^{3} \times \theta_m}
+$$
+
+Where $(1\rm{m}^{3} \times \theta_o)$ is the volume of organic material in one cubic metre, and $(1\rm{m}^{3} \theta_m)$ is the volume of mineral material in one cubic metre.
+
+Lecture 10, slide 5 provides $c_m = 0.8 \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}$ and  $c_o = 1.9 \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}$. Using $C = \rho c$ allows us to then determine the heat capacity of organic ($C_o$) and mineral material ($C_m$) in this soil:
+
+$$ 
+C_o = \rho_o \,c_o
+$$
+
+$$ 
+C_m = \rho_m \,c_m
+$$
+
+The composite heat capacity of the dry soil ($C_s$) is the sum of the compound heat capacities weighted by the respective volume fractions:
+
+$$ 
+C_s = \theta_o C_o  + \theta_m C_m
+$$
+
+replacing $C_o$ by $\rho_o \,c_o$ (and same for $C_m$) then gives:
+
+$$ 
+C_s = \theta_o \rho_o \,c_o  + \theta_m \rho_m \,c_m
+$$
+
+replacing $\rho_o$ by $\frac{M_o}{1\rm{m}^{3} \theta_o}$ (and same for $\rho_m$) then gives:
+
+$$ 
+C_s = \theta_o \frac{M_o}{1\rm{m}^{3} \theta_o} \,c_o  + \theta_m \frac{M_m}{1\rm{m}^{3}  \theta_m} \,c_m
+$$
+
+Note that then $\theta_o$ and $\theta_m$ cancel out:
+
+$$ 
+C_s =  \frac{M_o}{1\rm{m}^{3}} \,c_o  + \frac{M_m}{1\rm{m}^{3}} \,c_m
+$$
+
+Inserting the values:
+
+$$ 
+C_s =  \frac{ 0.35\,\rm{Mg}}{1\rm{m}^{3}} \, 1.9\, \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1}  + \frac{1.05 \,\rm{Mg}}{1\rm{m}^{3}} \,0.8 \, \rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1} = 
+$$
+
+$$
+0.665 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1} + 0.84 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1} = 1.505 \, \rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1}
+$$
+
+We learn from this exercise that generally we can rewrite the composite heat capacity of a soil ($C_s$) from using heat capacities of compound substances and volume fractions:
+
+$$ 
+C_s = \theta_o C_o  + \theta_m C_m + ...
+$$
+
+to using specific heat and known mass ($M_o$, $M_m$, etc.) of the compound substances in a soil volume $V_s$:
+
+$$ 
+C_s = \frac{M_o}{V_s} \,c_o  + \frac{M_o}{V_s} \,c_m + ...
+$$
+
+where $V_s$ is the volume of the soil, and $M_o$ and $M_m$ is the mass of organic and mineral material in the same volume $V_s$. This has the advantage of avoiding assuming any specific denisty of organic and mineral material, which is difficult to determine practically.
+
+
+:::
+
