@@ -5,6 +5,12 @@ $$
 albedo = \alpha_{SW} = \frac{SW_{\uparrow}}{SW_{\downarrow}}
 $${#eq-Albedo}
 
+## Beers Law
+
+$$
+R_z = R_0 e^{-z\mu}
+$${#eq-Beers-Law}
+
 ## LE Bowen
 
 $$
@@ -310,6 +316,12 @@ $${#eq-Stefan-Boltzman-Law-Grey-Body}
 $$
 E_b = \sigma_b T^4
 $${#eq-Stefan-Boltzman-Law}
+
+## Surface Energy Balance Ice
+
+$$
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{green}{\Delta S} + \color{grey}{\Delta M}
+$${#eq-Surface-Energy-Balance-Ice}
 
 ## Surface Energy Balance No Mass
 

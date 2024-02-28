@@ -490,7 +490,7 @@ The inverse of the exponential term defines a useful feature, the **damping dept
 ::: {.column width="40%"}
 
 
-![The red line is the surface temperature range $2\DeltaT_o$.  Blue is the temperature range at depth $D$; $0.37 2\DeltaT_o$](images/09_27_1.gif)
+![The red line is the surface temperature range $2 \Delta T_o$.  Blue is the temperature range at depth $D$; $0.37 2 \Delta T_o$](images/09_27_1.gif)
 
 
 :::
@@ -553,7 +553,7 @@ where t1 and t2 are the times at which the wave crest or trough reaches depths z
 
 ## Phase Shift (iClicker)
 
-When will soil temperature reaches its maximum at 5 cm if the maximum surface temperature is measured at 13:00? Assume a thermal diffusivity K = 5.0×10−7 m<sup>1</sup> s<sup>−1</sup>.
+When will soil temperature reaches its maximum at 5 cm if the maximum surface temperature is measured at 13:00? Assume a thermal diffusivity K = 5.0×10−7 m<sup>2</sup> s<sup>−1</sup>.
 
 ```{R}
 # Calculate phase shift for one day

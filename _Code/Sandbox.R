@@ -176,3 +176,12 @@ floor(12.4)
 
 T<- 14.35
 sprintf('%d:%d',floor(T),floor((T%%1)*100))
+
+
+
+
+# Number of seconds in a year
+P = 60 * 60 * 24 
+# Solve
+omega_a = 2*pi/P
+sprintf('Angular Frequncy of a year %0.3e s-1',omega_a)
