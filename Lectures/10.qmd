@@ -1,0 +1,948 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Radiation and heat transfer in water, snow and ice
+subtitle: What makes liquid and water surfaces so different?
+---
+
+{{< include _imports.qmd >}}
+
+
+
+
+---
+
+
+
+![CA-DBB station after a significant snowfall event](images/BB_SnowDay.JPG)
+
+
+
+## Today’s learning objectives
+
+
+Explain what makes snow and water different compared to most other surface-atmosphere interfaces.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+* Describe the transmission, absorption and reflection of radiation in water and snow.
+* Describe how we can define the energy budget of a snow-pack or water body.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Snowmelt at Wedgemont Lake, BC](images/WedgemontLake.jpg)
+
+
+:::
+
+::::
+
+
+
+## Properties of snow and water surfaces?
+
+
+
+![](images/WedgemontGlacier.jpg)
+
+
+::: {.notes}
+
+Radiatively, snow and ice surfaces are very much more complex than the surfaces we have considered previously. 
+One of the most important differences is that snow and ice both allow some transmission of shortwave radiation. 
+Therefore radiation absorption occurs within a volume rather than at a plane. 
+Albedo!
+
+
+:::
+
+
+
+
+## Thermal Properties of Water {.smaller}
+
+```{python}
+#| echo: false
+#| label: fig-Thermal-Props
+#| fig-cap: For a given amount of energy input (J), higher heat capacity means a **volume** of a substance will warm more slowly; higher thermal admittance means a **surface** will warm less
+
+import pandas as pd
+import matplotlib.pyplot as plt
+
+df = pd.DataFrame(index=['Snow (fresh)','Snow (old)','Ice','Water'],
+                  data={
+                      'Heat Capacity':[0.21,0.84,1.93,4.18],
+                      'Thermal Admittance':[130,595,2080,1545]
+                  })
+
+fig,ax=plt.subplots(1,2,figsize=(8,5),sharey=True)
+df.plot(kind='barh',y='Heat Capacity',ax=ax[0],legend=False,facecolor='b',edgecolor='k')
+df.plot(kind='barh',y='Thermal Admittance',ax=ax[1],legend=False,facecolor='r',edgecolor='k')
+ax[0].set_title('Heat Capacity')
+ax[0].set_xlabel(r'$MJ m^{-3} K^{-1}$')
+ax[0].grid(axis='x')
+ax[1].set_title('Thermal Admittance')
+ax[1].set_xlabel(r'$J m^{-2} K^{-1} K^{-1/2}$')
+ax[1].grid(axis='x')
+
+```
+
+
+::: {.notes}
+
+Thermal admittance: the ability of a surface to accept or release heat since it expresses the temperature change produced by a given heat flux change.
+Vary across these different phases of water
+
+:::
+
+
+
+
+## Treating Snow and Water as Volume Interfaces {.smaller}
+
+In contrast to opaque land surfaces, land-atmosphere interfaces of liquid and solid water transmit radiation into lower layers.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* This means we must know the transmission (and absorption, reflection and emission) of radiation in those media in order to predict energy exchange.  
+* As a consequence, we must treat water, snow and ice ‘surfaces’ as 3D-volume interfaces. 
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Transmission of short-wave radiation through a glacier (Photo: USGS Webpage)](images/10_5_4.png)
+
+
+:::
+
+::::
+
+
+
+## Beer’s Law {.smaller}
+
+Describes the reduction in flux density of a parallel beam of monochromatic (single wavelength) radiation through a homogeneous medium. 
+
+:::: {.columns}
+
+::: {.column width="70%"}
+
+{{< include ../_Equations/Beers-Law.qmd >}}
+
+* **Assuming** that absorptivity (and hence transmissivity) are constant:
+  * Radiative flux density decays exponentially with depth
+    * $\mu$ is the attenuation coefficient, *not* thermal admittance
+
+
+:::
+
+::: {.column width="30%"}
+
+
+![](images/Beer.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Beer’s Law and strictly is applicable only to the transmission of individual wavelengths in a homogeneous medium, but it has been used with success for fairly wide wave-bands (especially the shortwave) in meteorological applications. 
+
+
+:::
+
+
+## Attenuation Coefficient
+
+The constant of proportionality $\mu$ is called attenuation coefficient (m<sub>-1</sub>). It depends on:
+
+* Wavelength
+* Nature of the medium
+* Impurities (i.e. algae, plankton, chemicals)
+
+
+::: {.notes}
+
+Coefficient $\mu$ depends on the nature of the transmitting medium, and the wavelength of the radiation. It is greater for snow than for ice and hence the depth of penetration is greater in ice. The depth of shortwave penetration can be as great as 1 m in snow, and 10 m in ice. The exponential form of the depletion means that absorption is greatest near the surface and tails off at lower depths. 
+
+
+:::
+
+
+
+## Attenuation Coefficient (iClicker)
+
+Which line (A or B) has a higher attenuation coefficient?
+
+
+```{python}
+#| label: fig-Beers-Law1
+#| fig-cap: Beam attenuation as a function of z and $\mu$
+import numpy as np
+def Beers_Law (R_0,z,mu):
+    R_z = R_0*np.exp(-mu*z)
+    return(R_z)
+
+z = np.linspace(0,1)
+R_0 = 1
+
+fig,ax=plt.subplots()
+for mu,c,ls in zip([0.5,1.0],
+            ['A','B'],
+            ['-','-.']):
+    R_z = Beers_Law(R_0,z,mu)
+    ax.plot(z,R_z,linestyle=ls,color='k',
+            label=f'{c}')
+ax.legend()
+ax.set_xlabel('Distance (m)')
+ax.set_ylabel('% of $R_o$')
+```
+
+
+::: {.notes}
+
+Coefficient $\mu$ depends on the nature of the transmitting medium, and the wavelength of the radiation. It is greater for snow than for ice and hence the depth of penetration is greater in ice. The depth of shortwave penetration can be as great as 1 m in snow, and 10 m in ice. The exponential form of the depletion means that absorption is greatest near the surface and tails off at lower depths. 
+
+
+:::
+
+## Why is water blue?
+
+Not only an overall reduction of the radiative flux density but also a shift in the maximum wavelength towards blue.  
+
+* $\mu$ of water depends strongly on wavelength $\lambda$.  Absorption is very high in near infrared (NIR, 0.7 to 3 $\mu m$), and lowers in the visible range (0.4 to 0.7 $\mu m$).  
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](images/10_14_9.gif)
+
+:::
+
+::: {.column width="50%"}
+
+![](images/10_13_4.png)
+
+:::
+
+::::
+
+
+
+## Attenuation in Water
+
+
+```{python}
+#| label: fig-Beers-Law2
+#| fig-cap: Beam attenuation as a function of depth in liquid water for selected wavelenghts of visible light
+import numpy as np
+def Beers_Law (R_0,X,mu):
+    R_x = R_0*np.exp(-mu*X)
+    return(R_x)
+
+z = np.linspace(0,100)
+R_0 = 100 # W m-2
+
+fig,ax=plt.subplots()
+for mu,c in zip([0.05,0.1,0.75],
+            ['blue','green','red']):
+    R_z = Beers_Law(R_0,z,mu)
+    ax.plot(R_z,-z,color=c,
+            label=f'{c}: $\mu$ = {mu}')
+ax.set_ylabel('Depth (m)')
+ax.set_xlabel('W m-2')
+ax.legend()
+```
+
+
+::: {.notes}
+
+Coefficient $\mu$ depends on the nature of the transmitting medium, and the wavelength of the radiation. It is greater for snow than for ice and hence the depth of penetration is greater in ice. The depth of shortwave penetration can be as great as 1 m in snow, and 10 m in ice. The exponential form of the depletion means that absorption is greatest near the surface and tails off at lower depths. 
+. 
+
+
+
+:::
+
+
+
+
+
+## Liquid vs. Solid
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* The liquid and solid state of water have very similar attenuation coefficients k, except for the region between 1350-1750 nm. 
+
+* We can use Beer’s law to describe the decay of radiation with depth z in water bodies, snow or ice for different wavelengths.
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/10_15_8.gif)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+And decreasing transmissivity the NIR. In the TIR the spectral transmissivity of ice and water diverge above λ >10 $\mu m$.
+
+:::
+
+
+
+
+---
+
+![Exhaust plume from Amundsen-Scott South Pole Station stratifies into the very stable layer (Photo: J. Dana Hrube)](images/10_16_3.png)
+
+
+## Spectral Transmittance of Ice: Effect of Impurities
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+![Warren et al (2006)](images/10_17_2.jpg)
+
+:::
+
+::: {.column width="50%"}
+
+Ice has high transmissivity in the UV-A and blueish visible wavelengths and decreasing transmissivity in the red part of the visible spectrum.
+
+
+
+
+
+
+![Measuring transmission (Photo: Website U of Washington / Atmos Sci)](images/10_17_7.gif)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+
+
+:::
+
+
+
+## How Does this Effect the Surface Energy Balance?
+
+
+
+![Photo: A. Christen](images/10_18_3.jpg)
+
+
+::: {.notes}
+
+Albedo & reflectance
+
+:::
+
+
+
+## The Radiation Balance of Snow and Ice: Reflectance
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+
+* One of the most important characteristics of snow and ice is their high albedo
+
+![[Source](https://i0.wp.com/oceanbites.org/wp-content/uploads/2014/12/albedo_2.jpg)](images/10_19_3.jpg)
+
+
+:::
+
+::: {.column width="35%"}
+
+
+![](images/10_19_2.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+One of the most important characteristics of snow and ice is their high albedo  overall low energy status. 
+The introduction of even a thin snow cover over the landscape has dramatic effects. In a matter of a few hours a natural landscape can experience a change in albedo from approximately 0.25 to perhaps 0.80. Thereafter α declines as the snow pack ages (becomes compacted, and soiled), but with a fresh snow-fall it rapidly increases again. 
+The wavelength dependence of the albedo of snow helps to explain the ease with which human skin becomes sunburnt, especially on sunny days on snow covered mountains. 
+
+Human skin is very sensitive to ultra-violet (UV) radiation, with peak sensitivity at about 0.3 $\mu m$. The potential for sunburn stretches from 0.295 to 0.330 $\mu m$. The lower limit is governed by the almost total absorption of these wavelengths by ozone in the high atmosphere (Reading Package Lectures 3-4, Figure 5, Panel b). With a fresh snow cover the receipt of potentially burning ultra-violet radiation by exposed skin is almost doubled, because in addition to that received from the incoming beam there is a very significant proportion received after surface reflection (due to the high value of αλ at these short wavelengths). The upward flux is responsible for sunburn on earlobes, throat and within nostrils, areas which are sensitive and normally in shade. 
+
+
+
+:::
+
+
+
+## Radiation Balance of Snow and Ice: Antarctica
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+![](images/10_20_2.jpg)
+
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+
+
+![](images/10_20_3.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Surface: The internal transmission of radiation through snow and ice gives problems in formulating the surface balance and in observation. For example, measurements of reflected shortwave from an instrument mounted above the surface include both surface and sub-surface reflection. The albedo calculated from such measurements is therefore a volume not a surface value. 
+LW: However, although their emissivity ε is high the absolute magnitude of L↑ is usually relatively small because the surface temperature T0 is low. Since clouds are also close to being full radiators the net longwave exchange (L∗) between a fresh snowpack and a complete overcast is simply a function of their respective temperatures. Should the cloudbase be warmer than the snow surface there will actually be a positive L∗ budget at the snow surface. With clear skies L∗ is almost always negative, as is true of most other surfaces. 
+Net allwave radiation. In general it may be said that the daytime net radiation surplus (Q∗) of snow and ice is small by comparison with most other natural surfaces. This is directly attributable to the high surface albedo. In the case of the Antarctic early summer budget shown in Figure 1 the surface albedo is 0.80. This results in so little shortwave radiation absorption that when it is combined with a net longwave loss, that is quite similar to other environments, the midday net all-wave radiation is less than 10% of the incoming solar radiation K↓. In- deed even though the daylength at this high latitude is about 21 h, the total daily net radiation is negative (approximately −1.0 MJ m−2 d−1). 
+
+Variation of the radiation budget components over snow at Mizuho Station, Antarctica (70◦S), on 13 November 1979 (after Yamanouchi et al., 1981). 
+
+
+
+:::
+
+
+
+## Net-radiation in snow and ice
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* We can calculate net radiation $R_n(z)$ for each depth layer.
+* In snow, long-wave radiation is relatively quickly absorbed, but short-wave radiation is less reduced with depth. Also long-wave emission to the atmosphere is limited to a shallow layer.
+* During daytime, net radiation $R_n(z)$ in a certain layer is the sum of short-wave $SW^*_z$ and long wave $LW^*_z$ in this layer.
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/Snow_Ice_Balance.png)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The radiative input (both short- and longwave) to the pack from above is absorbed in general accord with Beer’s Law (equation 8.2). The longwave portion is relatively quickly absorbed, but shortwave penetrates to much greater depths. The radiative loss consists of shortwave reflection, and that longwave emission able to escape to the atmosphere. The strong absorptivity of snow in the infrared only allows this loss to occur from a thin surface layer. 
+Therefore the net radiation at any depth (Q∗z , the differ- ence between these gains and losses) shows a maximum absorption just below the surface during the day. 
+This level, and not the snow surface, is the site of maximum heating, and therefore has the highest temperature. 
+
+:::
+
+
+
+## Snow Temperature Profiles {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Due to the difference in radiative absorption of the long-wave and the short-wave radiation, daytime net radiation $R_n$ is greatest just below the surface, creating a subsurface temperature maximum.
+* If $R_n$ dominates the melting process, this subsurface layer shows first snow-melting → ‘loose’ or ‘hollow’ character of a melting snow pack.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![T.R. Oke (1987): 'Boundary Layer Climates' 2nd Edition.](images/10_22_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+If Q∗ dominates the melt at a site it is therefore most effective below the surface and this accounts for the ‘loose’ or ‘hollow’ character of the surface of a melting snowpack. 
+At night with only longwave radiative exchange the active surface is at, or very near, the actual surface. The lowest nocturnal temperatures occur at the snow surface, and the daytime sub-surface temperature maximum migrates downward by conduction. 
+
+
+
+:::
+
+
+
+
+---
+
+![Photo: Joe Shea (UBC Geography)](images/10_23_3.jpg)
+
+
+::: {.notes}
+
+What are some other considerations?
+The energy balance of snow is complicated not only by the penetration of shortwave radiation into the pack but also by internal water movement, and phase changes. 
+
+
+:::
+
+
+
+
+## The energy balance of snow and ice
+
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+Beside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
+
+![](images/10_24_5.jpg)
+
+
+:::
+
+::: {.column width="25%"}
+
+
+
+
+![Photo: A. Christen](images/10_25_5.jpg)
+
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The energy balance of snow is complicated not only by the penetration of shortwave radiation into the pack but also by internal water movement, and phase changes. 
+
+
+
+:::
+
+
+
+## The energy balance of snow and ice
+
+
+:::: {.columns}
+
+::: {.column width="75%"}
+
+
+Beside the 3-d framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
+
+* Phase changes of water are accounted by a special term in the energy balance, $\Delta M$, which is the energy flux density put into (or released by) the latent heat of fusion of ice (Lf = 0.334 MJ kg<sup>-1</sup> at 0ºC)
+
+{{< include ../_Equations/Surface-Energy-Balance-Ice.qmd >}}
+
+:::
+
+::: {.column width="25%"}
+
+
+
+![](images/10_25_5.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The net heat storage term (∆QS) then represents the convergence or divergence of sensible heat fluxes within the volume. This term includes internal energy gains or losses due to variations of radiation, and heat conduction. 
+Phase changes of water in the snow or ice volume are accounted for by ∆QM which is the latent heat storage change due to melting or freezing. 
+In the case of rain percolation, this represents an additional heat source for the pack. For example, if rainwater percolating through the pack freezes it will release latent heat of fusion which is available to warm the surrounding snow. 
+
+
+
+
+:::
+
+
+
+
+---
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+‘Cold’ snow pack
+
+
+The state of a snow pack
+
+* TS well below 0ºC.Only solid state of water.
+* No water available for LE or $\Delta M$.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/10_27_4.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+A better approach is to consider a volume balance and to treat all fluxes as equivalent flows through the sides of the volume. 
+Cold snowpacks. Let us consider the case of a ‘cold’ snowpack typical of high latitudes in winter with little or no solar input. Under these conditions LE and ∆QM (latent heat storage change) are likely to be negligible because there is no liquid water for evaporation, little atmospheric vapour for condensation or sublimation, and both the precipitation and the contents of the snowpack all remain in the solid phase. 
+Similarly heat conduction within the snow will be very small because of the very low conductivity of snow and the lack of any solar heating, so ∆QS and QG are also negligible 
+
+
+
+
+:::
+
+
+
+## The State of a Snow Pack
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+**‘Cold’ snow pack**
+
+
+
+![TS well below 0ºC. Only solid state of water. No water available for LE or $\Delta M$.](images/10_27_4.jpg)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+**‘Wet’ snow pack**
+
+
+
+
+![TS at 0ºC and often isothermal. Both solid and liquid state of water makes LE or $\Delta M$ important. $H_r$ is the heat input by rain (i.e. TR > TS)](images/10_27_5.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+‘Wet’ snowpacks. A wet snowpack during the melt period the surface temperature will be held very close to 0◦C but the air temperature may be above freezing. Precipitation may then be as rain and the energy balance (Figure 2b) becomes: 
+Here$H_r$ heat supplied by rain if its temperature is greater than that of the snow. In some mid-latitude locations$H_r$ can be a significant energy source for melt, especially where the area is open to storms originating over warm oceans. 
+During active melting both radiation (Q∗) and convection (QH + LE) act as energy sources (Figure 2b) to support the change of phase (ice to water). The temperature of the snow changes very little in this process; therefore the large change of energy storage is due to latent rather than sensible heat uptake, i.e. ∆QM (latent heat storage change) rather than ∆QS. 
+
+The role of LE in the case of ‘wet’ snow is interesting. The surface vapour pressure of a melting ice or snow surface is of course the saturation value (e∗) at 0◦C which equals 611 Pa (See Oke, 1987, Table A3.2, p. 394). In absolute terms this is a low value and it is very common to find the warmer air above the surface has a greater vapour pressure. In that case an air-to- surface vapour pressure gradient exists, so that any turbulence contributes a downwards flux of moisture, and condensation on the surface. Since at 0◦C the latent heat of vaporization (Lv) released upon condensation is 7.5 times larger than the latent heat of fusion (Lf ) required for melting water, for every 1 g of water condensed sufficient energy is supplied to melt a further 7.5 g. Under these conditions LE is an important energy source. 
+Of course should the air be drier than 611 Pa the vapour gradient would be the reverse, evaporation would occur 
+
+
+:::
+
+
+
+## Energy balance of a melting snow volume
+
+
+
+![](images/10_28_3.png)
+
+
+
+::: {.notes}
+
+An example of the energy balance of a melting snow cover from the Canadian Prairies in Spring is given in Figure 3. 
+The primary source of energy for the melt in this case is the net radiation. There is a small input of sensible heat by turbulent transfer throughout the day. This is because the air-mass was slightly warmer than the snow surface. 
+Prior to noon the heat input to the pack is almost entirely put into storage, ∆QS. This is used to raise the snow temperature from its overnight value to the freezing point and then to change the proportions of ice and water in the pack. The melt peaks in the afternoon period and then declines as the pack cools again. The decline is retarded somewhat by the release of latent heat of fusion (Lf ) as the upper layers re-freeze.
+
+
+In Figure 3 heat conduction into the soil is not large enough to warrant inclusion. 
+
+
+:::
+
+
+
+
+## Albedo of a water surface
+
+
+
+![](images/10_29_4.jpg)
+
+
+
+::: {.notes}
+
+The thermal and dynamic properties of water bodies (oceans, seas, lakes, etc.) makes them very important stores and transporters of energy and mass. 
+This means that heat transfer within water is possible not only by conduction and radiation, but also by convection and advection.
+Shortwave radiation can be transmitted within water, and its variation with depth is well approximated by Beers law (equation 8.2), with the attenuation coefficient dependent upon both the nature of the water and the wavelength of the radiation. 
+In most water bodies shortwave radiation is restricted to the uppermost 10 m, but in some very clear tropical waters it has been observed to reach 700 to 1000 m 
+
+
+:::
+
+
+
+## Albedo of a water surface
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Albedo of liquid water strongly depends on the angle at which the direct solar beam hits the water surface. 
+
+![](images/Angle.jpg)
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![T.R. Oke (1987): 'Boundary Layer Climates' 2nd Edition.](images/10_30_5.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The albedo (α) of a water surface, like that of snow, is not constant. In particular it depends upon the angle at which the direct beam (S) strikes the surface. With cloudless skies and the Sun at least 30◦ above the horizon, water is one of the most effective absorbing surfaces (α in the range 0.03 to 0.10), but at lower solar altitudes its reflectivity increases sharply. 
+When the Sun is close to the horizon near sunrise and sunset the reflection is mirror-like, and this accounts for the dazzling effect at these times. Under cloudy skies the diffuse solar radiation (D) forms a larger proportion of the incoming solar radiation (K↓), and the effect of solar altitude is considerably dampened.
+
+:::
+
+
+
+## Specular and Diffuse Reflection
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+![Specular: beam reflected at same angle (like mirror)](images/Specular.png)
+
+:::
+
+::: {.column width="50%"}
+
+![Diffuse: beam diffused isotropically (Lambertian)](images/Diffuse.png)
+
+:::
+
+::::
+
+
+
+## Influence of waves on albedo
+
+
+![](images/Waves.png)
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The altitude dependence is also modified by the roughness of the water surface. 
+With a roughened surface (waves) and high solar altitudes there is a greater probability that the incident beam will hit a sloping rather than a horizontal surface, thereby tending to increase α; whereas at low altitudes instead of grazing the surface the beam is likely to encounter a wave slope at a local angle which is more conducive to absorption, thereby decreasing α in comparison with smooth water. In all cases the albedo includes reflection from within the water as well as from the surface. 
+
+
+:::
+
+
+
+
+## The radiation balance of an open water surface
+
+
+![](images/10_34_3.jpg)
+
+
+
+::: {.notes}
+
+Radiation absorption is strong
+
+:::
+
+
+
+## The energy balance of an open water surface
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+* Open water surfaces (rivers, lakes, oceans) have the unique feature compared to land surfaces, that turbulent exchange is important on both sides, the atmosphere and the hydrosphere.
+* Similar to air, turbulent exchange is much more efficient than molecular heat conduction in water. 
+* Further advective energy flux densities (ΔQA) are almost all the time significant.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![T.R. Oke (1987): 'Boundary Layer Climates' 2nd Edition.](images/10_35_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+This means that heat transfer within water is possible not only by conduction and radiation, but also by convection and advection.
+Where ∆QS change of heat storage in the layer, ∆QA net horizontal heat transfer due to water currents. 
+Radiation absorption by a water body is strong and it should be noted that for large portions of the daytime more of this energy is being used to heat the water (∆QS ). At night this energy store becomes the source of energy which sustains an upward flow of heat to the atmosphere throughout the period. Any water body therefore acts as a major heat sink by day, and a major heat source at night. 
+On an annual basis for large water bodies ∆QS can be assumed negligible (i.e. zero net heat storage). The energy balances of the major oceans are then as given in Table 3.1 which strikingly illustrates the dominant role played by evaporation (LE ) as an energy sink for a water body. On an annual basis approximately 90% of Q∗ is used to evaporate water, and this leads to characteristically small Bowen ratio (β) values of approximately 0.10. 
+
+
+
+
+:::
+
+## Take home points
+
+
+:::: {.columns}
+
+::: {.column width="100%"}
+
+* Beer’s law describes the transmission of radiation through a medium (snow, water) at a given wavelength. attenuation Coefficient $\mu$ for water is changing from low (VIS, blue) to high (NIR).
+* Radiation balance of a snow pack volume can cause $R_n$ maximum below surface, and hence subsurface temperature maximum that causes melting and ‘hollow’ snow pack.
+* The energy balance for a snow-pack or ice volume needs to consider the latent heat of fusion. Depending on snow/ice temperature we distinguish between dry ‘cold’ and melting ‘warm’ snowpacks.
+
+
+
+
+
+:::
+
+::: {.column width="0%"}
+
+
+
+:::
+
+::::

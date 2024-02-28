@@ -1,0 +1,4 @@
+
+$$
+\color{orange}{R_n} = \color{red}{H} + \color{blue}{LE} + \color{green}{\Delta S} + \color{grey}{\Delta M}
+$${#eq-Surface-Energy-Balance-Ice}

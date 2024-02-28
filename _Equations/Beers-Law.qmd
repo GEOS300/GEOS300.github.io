@@ -1,0 +1,4 @@
+
+$$
+R_z = R_0 e^{-z\mu}
+$${#eq-Beers-Law}
