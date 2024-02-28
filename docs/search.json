@@ -4108,7 +4108,7 @@
     "href": "Lectures/10.html#liquid-vs.-solid",
     "title": "Radiation and heat transfer in water, snow and ice",
     "section": "Liquid vs. Solid",
-    "text": "Liquid vs. Solid\n\n\n\nThe liquid and solid state of water have very similar attenuation coefficients k, except for the region between 1350-1750 nm.\nWe can use Beer’s law to describe the decay of radiation with depth z in water bodies, snow or ice for different wavelengths.\n\n\n\n\n\n\nAnd decreasing transmissivity the NIR. In the TIR the spectral transmissivity of ice and water diverge above λ &gt;10 \\(\\mu m\\).",
+    "text": "Liquid vs. Solid\nThe liquid and solid state of water have similar attenuation coefficients (with some exceptions).\n\n\n\nWe can use Beer’s law to describe the decay of radiation with depth z in water bodies, snow or ice for different wavelengths.\n\n\n\n\n\n\nAnd decreasing transmissivity the NIR. In the TIR the spectral transmissivity of ice and water diverge above λ &gt;10 \\(\\mu m\\).",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -4192,7 +4192,7 @@
     "href": "Lectures/10.html#the-energy-balance-of-snow-and-ice",
     "title": "Radiation and heat transfer in water, snow and ice",
     "section": "The energy balance of snow and ice",
-    "text": "The energy balance of snow and ice\n\n\nBeside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes.\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nThe energy balance of snow is complicated not only by the penetration of shortwave radiation into the pack but also by internal water movement, and phase changes.",
+    "text": "The energy balance of snow and ice\nBeside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes.\n\n\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nThe energy balance of snow is complicated not only by the penetration of shortwave radiation into the pack but also by internal water movement, and phase changes.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -4204,7 +4204,7 @@
     "href": "Lectures/10.html#the-energy-balance-of-snow-and-ice-1",
     "title": "Radiation and heat transfer in water, snow and ice",
     "section": "The energy balance of snow and ice",
-    "text": "The energy balance of snow and ice\n\n\nBeside the 3-d framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes.\n\nPhase changes of water are accounted by a special term in the energy balance, \\(\\Delta M\\), which is the energy flux density put into (or released by) the latent heat of fusion of ice (Lf = 0.334 MJ kg-1 at 0ºC)\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\qquad(2)\\]\n\n\n\n\n\nThe net heat storage term (∆QS) then represents the convergence or divergence of sensible heat fluxes within the volume. This term includes internal energy gains or losses due to variations of radiation, and heat conduction. Phase changes of water in the snow or ice volume are accounted for by ∆QM which is the latent heat storage change due to melting or freezing. In the case of rain percolation, this represents an additional heat source for the pack. For example, if rainwater percolating through the pack freezes it will release latent heat of fusion which is available to warm the surrounding snow.",
+    "text": "The energy balance of snow and ice\nBeside the 3-d framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes.\n\n\n\nPhase changes of water are accounted by a special term in the energy balance, \\(\\Delta M\\); the energy flux density associated with latent heat of fusion (freezing/melting)\n\nLf = 0.334 MJ kg-1 at 0ºC\n\n\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\qquad(2)\\]\n\n\n\n\n\nThe net heat storage term (∆QS) then represents the convergence or divergence of sensible heat fluxes within the volume. This term includes internal energy gains or losses due to variations of radiation, and heat conduction. Phase changes of water in the snow or ice volume are accounted for by ∆QM which is the latent heat storage change due to melting or freezing. In the case of rain percolation, this represents an additional heat source for the pack. For example, if rainwater percolating through the pack freezes it will release latent heat of fusion which is available to warm the surrounding snow.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -4252,7 +4252,7 @@
     "href": "Lectures/10.html#albedo-of-a-water-surface-1",
     "title": "Radiation and heat transfer in water, snow and ice",
     "section": "Albedo of a water surface",
-    "text": "Albedo of a water surface\n\n\nAlbedo of liquid water strongly depends on the angle at which the direct solar beam hits the water surface.\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nThe albedo (α) of a water surface, like that of snow, is not constant. In particular it depends upon the angle at which the direct beam (S) strikes the surface. With cloudless skies and the Sun at least 30◦ above the horizon, water is one of the most effective absorbing surfaces (α in the range 0.03 to 0.10), but at lower solar altitudes its reflectivity increases sharply. When the Sun is close to the horizon near sunrise and sunset the reflection is mirror-like, and this accounts for the dazzling effect at these times. Under cloudy skies the diffuse solar radiation (D) forms a larger proportion of the incoming solar radiation (K↓), and the effect of solar altitude is considerably dampened.",
+    "text": "Albedo of a water surface\n\n\n\n\n\nAlbedo of liquid water strongly depends on the angle at which the direct solar beam hits the water surface.\n\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nThe albedo (α) of a water surface, like that of snow, is not constant. In particular it depends upon the angle at which the direct beam (S) strikes the surface. With cloudless skies and the Sun at least 30◦ above the horizon, water is one of the most effective absorbing surfaces (α in the range 0.03 to 0.10), but at lower solar altitudes its reflectivity increases sharply. When the Sun is close to the horizon near sunrise and sunset the reflection is mirror-like, and this accounts for the dazzling effect at these times. Under cloudy skies the diffuse solar radiation (D) forms a larger proportion of the incoming solar radiation (K↓), and the effect of solar altitude is considerably dampened.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -4276,7 +4276,7 @@
     "href": "Lectures/10.html#influence-of-waves-on-albedo",
     "title": "Radiation and heat transfer in water, snow and ice",
     "section": "Influence of waves on albedo",
-    "text": "Influence of waves on albedo\n\n:::\n::::\n\nThe altitude dependence is also modified by the roughness of the water surface. With a roughened surface (waves) and high solar altitudes there is a greater probability that the incident beam will hit a sloping rather than a horizontal surface, thereby tending to increase α; whereas at low altitudes instead of grazing the surface the beam is likely to encounter a wave slope at a local angle which is more conducive to absorption, thereby decreasing α in comparison with smooth water. In all cases the albedo includes reflection from within the water as well as from the surface.",
+    "text": "Influence of waves on albedo\n\n\nThe altitude dependence is also modified by the roughness of the water surface. With a roughened surface (waves) and high solar altitudes there is a greater probability that the incident beam will hit a sloping rather than a horizontal surface, thereby tending to increase α; whereas at low altitudes instead of grazing the surface the beam is likely to encounter a wave slope at a local angle which is more conducive to absorption, thereby decreasing α in comparison with smooth water. In all cases the albedo includes reflection from within the water as well as from the surface.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -5098,6 +5098,66 @@
     "crumbs": [
       "Study Questions",
       "Study Question Set 04"
+    ]
+  },
+  {
+    "objectID": "Lectures/10.html#spectral-transmittance-of-ice",
+    "href": "Lectures/10.html#spectral-transmittance-of-ice",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Spectral Transmittance of Ice",
+    "text": "Spectral Transmittance of Ice\n\n\n\n\n\nEffect of Impurities: Warren et al (2006)\n\n\n\nIce has high transmissivity in the UV-A and blue visible wavelengths and decreasing transmissivity in the red part of the visible spectrum.\n\n\n\nMeasuring transmission (Photo: Website U of Washington / Atmos Sci)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
+    ]
+  },
+  {
+    "objectID": "Lectures/10.html#radiation-balance-of-snow-and-ice",
+    "href": "Lectures/10.html#radiation-balance-of-snow-and-ice",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Radiation Balance of Snow and Ice",
+    "text": "Radiation Balance of Snow and Ice\nOne of the most important characteristics of snow and ice is their high albedo\n\n\n\n\n\nSource\n\n\n\n\n\n\n\nOne of the most important characteristics of snow and ice is their high albedo  overall low energy status. The introduction of even a thin snow cover over the landscape has dramatic effects. In a matter of a few hours a natural landscape can experience a change in albedo from approximately 0.25 to perhaps 0.80. Thereafter α declines as the snow pack ages (becomes compacted, and soiled), but with a fresh snow-fall it rapidly increases again. The wavelength dependence of the albedo of snow helps to explain the ease with which human skin becomes sunburnt, especially on sunny days on snow covered mountains.\nHuman skin is very sensitive to ultra-violet (UV) radiation, with peak sensitivity at about 0.3 \\(\\mu m\\). The potential for sunburn stretches from 0.295 to 0.330 \\(\\mu m\\). The lower limit is governed by the almost total absorption of these wavelengths by ozone in the high atmosphere (Reading Package Lectures 3-4, Figure 5, Panel b). With a fresh snow cover the receipt of potentially burning ultra-violet radiation by exposed skin is almost doubled, because in addition to that received from the incoming beam there is a very significant proportion received after surface reflection (due to the high value of αλ at these short wavelengths). The upward flux is responsible for sunburn on earlobes, throat and within nostrils, areas which are sensitive and normally in shade.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
+    ]
+  },
+  {
+    "objectID": "Lectures/10.html#energy-balance-melting-snow",
+    "href": "Lectures/10.html#energy-balance-melting-snow",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Energy Balance Melting Snow",
+    "text": "Energy Balance Melting Snow\n\n\nAn example of the energy balance of a melting snow cover from the Canadian Prairies in Spring is given in Figure 3. The primary source of energy for the melt in this case is the net radiation. There is a small input of sensible heat by turbulent transfer throughout the day. This is because the air-mass was slightly warmer than the snow surface. Prior to noon the heat input to the pack is almost entirely put into storage, ∆QS. This is used to raise the snow temperature from its overnight value to the freezing point and then to change the proportions of ice and water in the pack. The melt peaks in the afternoon period and then declines as the pack cools again. The decline is retarded somewhat by the release of latent heat of fusion (Lf ) as the upper layers re-freeze.\nIn Figure 3 heat conduction into the soil is not large enough to warrant inclusion.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
+    ]
+  },
+  {
+    "objectID": "Lectures/10.html#radiation-balance-of-open-water",
+    "href": "Lectures/10.html#radiation-balance-of-open-water",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Radiation Balance of Open Water",
+    "text": "Radiation Balance of Open Water\n\n\nRadiation absorption is strong",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
+    ]
+  },
+  {
+    "objectID": "Lectures/10.html#radiation-balance-of-open-water-1",
+    "href": "Lectures/10.html#radiation-balance-of-open-water-1",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Radiation Balance of Open Water",
+    "text": "Radiation Balance of Open Water\nOpen water surfaces (rivers, lakes, oceans) have the unique feature compared to land surfaces, that turbulent exchange is important on both sides, the atmosphere and the hydrosphere.\n\n\n\nSimilar to air, turbulent exchange is much more efficient than molecular heat conduction in water.\nFurther advective energy flux densities (ΔQA) are almost all the time significant.\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nThis means that heat transfer within water is possible not only by conduction and radiation, but also by convection and advection. Where ∆QS change of heat storage in the layer, ∆QA net horizontal heat transfer due to water currents. Radiation absorption by a water body is strong and it should be noted that for large portions of the daytime more of this energy is being used to heat the water (∆QS ). At night this energy store becomes the source of energy which sustains an upward flow of heat to the atmosphere throughout the period. Any water body therefore acts as a major heat sink by day, and a major heat source at night. On an annual basis for large water bodies ∆QS can be assumed negligible (i.e. zero net heat storage). The energy balances of the major oceans are then as given in Table 3.1 which strikingly illustrates the dominant role played by evaporation (LE ) as an energy sink for a water body. On an annual basis approximately 90% of Q∗ is used to evaporate water, and this leads to characteristically small Bowen ratio (β) values of approximately 0.10.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
     ]
   }
 ]

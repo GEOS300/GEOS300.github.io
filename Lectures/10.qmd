@@ -238,7 +238,7 @@ Coefficient $\mu$ depends on the nature of the transmitting medium, and the wave
 
 :::
 
-## Why is water blue?
+## Why is water blue? {.smaller}
 
 Not only an overall reduction of the radiative flux density but also a shift in the maximum wavelength towards blue.  
 
@@ -303,13 +303,14 @@ Coefficient $\mu$ depends on the nature of the transmitting medium, and the wave
 
 ## Liquid vs. Solid
 
+The liquid and solid state of water have similar attenuation coefficients (with some exceptions).
+
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
 
-* The liquid and solid state of water have very similar attenuation coefficients k, except for the region between 1350-1750 nm. 
 
 * We can use Beer’s law to describe the decay of radiation with depth z in water bodies, snow or ice for different wavelengths.
 
@@ -344,7 +345,7 @@ And decreasing transmissivity the NIR. In the TIR the spectral transmissivity of
 ![Exhaust plume from Amundsen-Scott South Pole Station stratifies into the very stable layer (Photo: J. Dana Hrube)](images/10_16_3.png)
 
 
-## Spectral Transmittance of Ice: Effect of Impurities
+## Spectral Transmittance of Ice {.smaller}
 
 
 :::: {.columns}
@@ -352,20 +353,20 @@ And decreasing transmissivity the NIR. In the TIR the spectral transmissivity of
 ::: {.column width="50%"}
 
 
-![Warren et al (2006)](images/10_17_2.jpg)
+![Effect of Impurities: Warren et al (2006)](images/10_17_7.gif)
 
 :::
 
 ::: {.column width="50%"}
 
-Ice has high transmissivity in the UV-A and blueish visible wavelengths and decreasing transmissivity in the red part of the visible spectrum.
+Ice has high transmissivity in the UV-A and blue visible wavelengths and decreasing transmissivity in the red part of the visible spectrum.
 
 
 
 
 
 
-![Measuring transmission (Photo: Website U of Washington / Atmos Sci)](images/10_17_7.gif)
+![Measuring transmission (Photo: Website U of Washington / Atmos Sci)](images/10_17_2.jpg)
 
 
 :::
@@ -396,14 +397,15 @@ Albedo & reflectance
 
 
 
-## The Radiation Balance of Snow and Ice: Reflectance
+## Radiation Balance of Snow and Ice
+
+
+One of the most important characteristics of snow and ice is their high albedo
 
 :::: {.columns}
 
 ::: {.column width="65%"}
 
-
-* One of the most important characteristics of snow and ice is their high albedo
 
 ![[Source](https://i0.wp.com/oceanbites.org/wp-content/uploads/2014/12/albedo_2.jpg)](images/10_19_3.jpg)
 
@@ -480,7 +482,7 @@ Variation of the radiation budget components over snow at Mizuho Station, Antarc
 
 
 
-## Net-radiation in snow and ice
+## Net-radiation in snow and ice {.smaller}
 
 
 :::: {.columns}
@@ -568,19 +570,18 @@ The energy balance of snow is complicated not only by the penetration of shortwa
 
 ## The energy balance of snow and ice
 
+Beside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
 
 :::: {.columns}
 
-::: {.column width="75%"}
-
-Beside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
+::: {.column width="60%"}
 
 ![](images/10_24_5.jpg)
 
 
 :::
 
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 
 
@@ -605,23 +606,25 @@ The energy balance of snow is complicated not only by the penetration of shortwa
 
 
 
-## The energy balance of snow and ice
+## The energy balance of snow and ice {.smaller}
+
+Beside the 3-d framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
 
 
 :::: {.columns}
 
-::: {.column width="75%"}
+::: {.column width="65%"}
 
 
-Beside the 3-d framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
 
-* Phase changes of water are accounted by a special term in the energy balance, $\Delta M$, which is the energy flux density put into (or released by) the latent heat of fusion of ice (Lf = 0.334 MJ kg<sup>-1</sup> at 0ºC)
+* Phase changes of water are accounted by a special term in the energy balance, $\Delta M$; the energy flux density associated with latent heat of fusion (freezing/melting)
+    + Lf = 0.334 MJ kg<sup>-1</sup> at 0ºC
 
 {{< include ../_Equations/Surface-Energy-Balance-Ice.qmd >}}
 
 :::
 
-::: {.column width="25%"}
+::: {.column width="40%"}
 
 
 
@@ -645,50 +648,6 @@ In the case of rain percolation, this represents an additional heat source for t
 :::
 
 
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-‘Cold’ snow pack
-
-
-The state of a snow pack
-
-* TS well below 0ºC.Only solid state of water.
-* No water available for LE or $\Delta M$.
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/10_27_4.jpg)
-
-
-:::
-
-::::
-
-
-::: {.notes}
-
-A better approach is to consider a volume balance and to treat all fluxes as equivalent flows through the sides of the volume. 
-Cold snowpacks. Let us consider the case of a ‘cold’ snowpack typical of high latitudes in winter with little or no solar input. Under these conditions LE and ∆QM (latent heat storage change) are likely to be negligible because there is no liquid water for evaporation, little atmospheric vapour for condensation or sublimation, and both the precipitation and the contents of the snowpack all remain in the solid phase. 
-Similarly heat conduction within the snow will be very small because of the very low conductivity of snow and the lack of any solar heating, so ∆QS and QG are also negligible 
-
-
-
-
-:::
 
 
 
@@ -740,7 +699,7 @@ Of course should the air be drier than 611 Pa the vapour gradient would be the r
 
 
 
-## Energy balance of a melting snow volume
+## Energy Balance Melting Snow
 
 
 
@@ -791,9 +750,7 @@ In most water bodies shortwave radiation is restricted to the uppermost 10 m, bu
 ::: {.column width="50%"}
 
 
-Albedo of liquid water strongly depends on the angle at which the direct solar beam hits the water surface. 
-
-![](images/Angle.jpg)
+![Albedo of liquid water strongly depends on the angle at which the direct solar beam hits the water surface.](images/Angle.jpg)
 
 
 :::
@@ -851,11 +808,6 @@ When the Sun is close to the horizon near sunrise and sunset the reflection is m
 
 
 
-:::
-
-::::
-
-
 ::: {.notes}
 
 The altitude dependence is also modified by the roughness of the water surface. 
@@ -867,7 +819,7 @@ With a roughened surface (waves) and high solar altitudes there is a greater pro
 
 
 
-## The radiation balance of an open water surface
+## Radiation Balance of Open Water
 
 
 ![](images/10_34_3.jpg)
@@ -882,15 +834,14 @@ Radiation absorption is strong
 
 
 
-## The energy balance of an open water surface
+## Radiation Balance of Open Water {.smaller}
+
+Open water surfaces (rivers, lakes, oceans) have the unique feature compared to land surfaces, that turbulent exchange is important on both sides, the atmosphere and the hydrosphere.
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-
-
-* Open water surfaces (rivers, lakes, oceans) have the unique feature compared to land surfaces, that turbulent exchange is important on both sides, the atmosphere and the hydrosphere.
 * Similar to air, turbulent exchange is much more efficient than molecular heat conduction in water. 
 * Further advective energy flux densities (ΔQA) are almost all the time significant.
 
@@ -922,7 +873,7 @@ On an annual basis for large water bodies ∆QS can be assumed negligible (i.e. 
 
 :::
 
-## Take home points
+## Take home points {.smaller}
 
 
 :::: {.columns}
