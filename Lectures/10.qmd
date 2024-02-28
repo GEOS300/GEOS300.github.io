@@ -568,20 +568,20 @@ The energy balance of snow is complicated not only by the penetration of shortwa
 
 
 
-## The energy balance of snow and ice
+## The energy balance of snow and ice {.smaller}
 
 Beside the 3D framework, also the phase changes of water play an important role in the energy balance of a snow and ice volumes. 
 
 :::: {.columns}
 
-::: {.column width="60%"}
+::: {.column width="50%"}
 
 ![](images/10_24_5.jpg)
 
 
 :::
 
-::: {.column width="40%"}
+::: {.column width="50%"}
 
 
 
@@ -613,7 +613,7 @@ Beside the 3-d framework, also the phase changes of water play an important role
 
 :::: {.columns}
 
-::: {.column width="65%"}
+::: {.column width="60%"}
 
 
 
@@ -657,7 +657,7 @@ In the case of rain percolation, this represents an additional heat source for t
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="55%"}
 
 
 **‘Cold’ snow pack**
@@ -669,7 +669,7 @@ In the case of rain percolation, this represents an additional heat source for t
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="45%"}
 
 
 **‘Wet’ snow pack**
@@ -799,6 +799,16 @@ When the Sun is close to the horizon near sunrise and sunset the reflection is m
 
 ::::
 
+
+
+## Albedo of a Water (iClicker)
+
+A smooth water surface will under clear (cloud-free) skies will have the highest albedo at:
+
+* Noon
+* Sunset
+* Midnight
+* All of the above
 
 
 ## Influence of waves on albedo
