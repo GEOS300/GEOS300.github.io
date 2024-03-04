@@ -1,0 +1,4 @@
+
+$$
+\tau = \mu\small\frac{\delta u}{\delta z}
+$${#eq-Shear-Stress}

@@ -10,36 +10,1131 @@
     ]
   },
   {
-    "objectID": "Study_Questions/03.html",
-    "href": "Study_Questions/03.html",
-    "title": "Study Question Set 03",
+    "objectID": "Study_Questions/04.html",
+    "href": "Study_Questions/04.html",
+    "title": "Study Question Set 04",
     "section": "",
-    "text": "The highest yearly total \\(I_{ex}\\) (extraterrestrial irradiance) is found at the Equator (\\(\\theta = 0^{\\circ}\\)) with \\(13.2\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\) and the lowest yearly total \\(I_{ex}\\) is at the Poles \\(\\theta = 90^{\\circ}\\), with \\(5.5\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\). What are the implications of this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis means that there is an energy gradient from the Equator to the Poles that creates a global circulation exchanging energy from low to high latitudes (ocean currents, general atmospheric circulation)\n\n\n\n\nThe highest daily total \\(I_{ex}\\) is found at the poles with \\(47\\) \\(\\,\\rm{MJ}\\,\\rm{m}^{-2}\\,\\) \\(\\rm{day}^{-1}\\) during the summer solstice. Why?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis is because the solar irradiance reaches the poles during the full 24h cycle.\n\n\n\n\nFor Vancouver, the highest instantaneous \\(I_{ex} \\approx 1190\\,\\rm{W}\\,\\rm{m}^{-2}\\) is found on the day of the summer solstice (Jun 22) at 12 LAT. When is the lowest value?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe lowest daily maximum would be on the winter solstice. But the annual minimum is (\\(0\\,\\rm{W}\\,\\rm{m}^{-2}\\)), which occurs during every nighttime period.\n\n\n\n\nUsing the radiation conservation equation we know that radiation of wavelength \\(\\lambda\\) incident upon a substance must either be transmitted through it, be reflected from its surface, or be absorbed. If a body is opaque and has an absorptivity coefficient for of 0.75 for \\(\\lambda=0.55 \\mu m\\): A. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.55 \\mu m\\), and B. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.65 \\mu m\\)&gt;\n\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{1}\\]\n\n\n\n\n\n\nTip\n\n\n\n\n\nA. If the body is opaque, then \\(\\Psi_{\\lambda} = 0\\) and: \\[\n\\begin{eqnarray}\n\\alpha_{\\lambda} + \\zeta_{\\lambda} &=& 1 \\nonumber \\\\\n\\alpha_{\\lambda} &=& 1 - \\zeta_{\\lambda}\n\\end{eqnarray}\n\\]\nso the reflectivity is \\(\\alpha_{\\lambda} = 1 - 0.75 = \\underline{0.25}\\).\nB. There isn’t enough information to answer the questions - the conservation equation applies per wavelength. It would be a reasonable assumption that the reflectivity at \\(\\lambda = 0.65 \\mu m\\) is similar to \\(\\lambda = 0.55 \\mu m\\) if you don’t have any further information, but there is no guarantee they are the same.\n\n\n\n\nIf incident PAR (Photosynthetically Active Radiation) is \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\) and plant canopy has the following characteristics: \\(\\Psi_{PAR}\\) = 0.08 and \\(\\alpha_{PAR}\\) = 0.11. How many mols of PAR will 1 m-2 the plant canopy absorb in one hour?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nWe use Equation 1 and solve for absorptivity: \\[\\begin{eqnarray}\n\\zeta_{\\rm{PAR}} = 1 - (\\Psi_{\\rm{PAR}} + \\alpha_{\\rm{PAR}})\n\\label{E3}\n\\end{eqnarray}\\] This results in \\(\\zeta_{\\rm{PAR}} = 1 - (0.08 + 0.11) = 0.81\\). Hence, the fraction of the incident radiation of \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}\\) that is absorbed is 81%: \\[\\begin{eqnarray*}\n0.81 \\times 800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} = \\underline{648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}} \\\\\n\\end{eqnarray*}\\]\nThere are 3600 seconds in an hour and 1,000,000 \\(\\mu mol\\) per mol, so assuming PAR doesn’t change over this period:\n\\[\n648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} * 3600 \\frac{s}{h} * \\frac{1 mol}{1000000 \\mu mol} = 2.3328\\, mol\\, \\rm{m}^{-2}\n\\]\n\n\n\n\nIf \\(I_{ex} = 562\\,\\rm{W}\\,\\rm{m}^{-2}\\), \\(SW_\\downarrow = 298\\,\\rm{W}\\,\\rm{m}^{-2}\\) and the sun angle \\(\\beta = 23.74^{\\circ}\\), determine the bulk transmissivity of atmosphere:\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{2}\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)} = \\frac{1}{\\sin(\\beta)}\n\\]\nwe use \\(\\beta = 23.74^{\\circ}\\) and \\(\\sin \\beta = 0.403\\) from Study Question Set 4, Question 4 and get \\(m\\) = 2.481. We insert this in Equation 2:\n\\[\\begin{eqnarray}\n\\Psi_a &=& \\left( \\frac{298\\,\\rm{W}\\,\\rm{m}^{-2}}{562\\,\\rm{W}\\,\\rm{m}^{-2}} \\right) ^{\\frac{1}{2.481}} = \\underline{0.77}\n\\end{eqnarray}\\]\n\n\n\n\nWe use \\(\\Psi_a = 0.77\\) from determine \\(SW\\downarrow\\) at the surface if \\(I_{ex} = 439 \\,\\rm{W}\\,\\rm{m}^{-2}\\) and the zenith angle \\(Z = 71.6^{\\circ}\\):\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nFollowing Equation 2:\n\\[\\begin{eqnarray}\nK_{\\downarrow} &=& 439 \\,\\rm{W}\\,\\rm{m}^{-2} \\times 0.77^{3.17} = \\underline{191 \\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray}\\]",
+    "text": "The specific heat of water is \\(c_p = 4.18 kJ kg^{-1} K^{-1}\\). Calculate the heat capacity \\(C\\) of water.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(C = \\rho c_p\\), where \\(\\rho\\) is the density of the material. For water we know that \\(\\rho = 1 \\times 10^3\\, \\rm{kg}\\, \\rm{m}^{-3}\\) (i.e. \\(1\\,\\rm{kg} = 1 \\ell = 10 \\times 10 \\times 10\\, \\rm{cm}\\)), therefore \\(4.180 \\times 10^{3}\\, \\rm{J}\\, \\rm{kg}^{-1}\\) K\\(^{-1}\\) \\(\\times\\) \\(10^3\\, \\rm{kg} \\, \\rm{m}^{-3}\\) = .\n\n\n\n\nCalculate the heat capacity \\(C\\) of a dry mineral soil with a porosity of 55%. Use values from the table in Lecture.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P\\) = 55% for a dry soil means \\(\\theta_a = 0.55\\) and \\(\\theta_{m} = 1 - \\theta_a = 0.45\\): \\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_a\\,C_a \\\\\n&\\approx& \\theta_m\\,C_m \\\\\n&=& 0.45 \\times 2.1 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&=& \\underline{0.945\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\nSubscripts \\(a\\) and \\(m\\) refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (\\(\\theta_a\\,C_a = 0.45 \\times 0.0012 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 0.00066 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\)) and can be neglected.\n\n\n\n\nCalculate the heat capacity \\(C\\) for the same soil if it is completely saturated.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P\\) = 55% for the saturated case means \\(\\theta_w = 0.55\\) and \\(\\theta_{m} = 1 - \\theta_w = 0.45\\):\n\\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_w\\,C_w \\\\\n&=& 0.45 \\times 2.1 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 0.55 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& 0.945\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 2.299\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&=& \\underline{3.24\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\nSubscripts \\(a\\) and \\(m\\) refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (\\(\\theta_a\\,C_a = 0.45 \\times 0.0012 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 0.00066 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\)) and can be neglected.\n\n\n\n\nCalculate the heat capacity \\(C\\) of a partly saturated soil with \\(P = 50\\%\\), \\(\\theta_a = 0.30\\) and an organic to mineral ratio of 1.5. Again, use the table in Lecture.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P = 50\\%\\) and \\(\\theta_a = 0.30\\) means \\(\\theta_{w} = P - \\theta_a = 0.20\\). An organic to mineral ratio of 1.5 (3/2) means \\((1-P) = 0.5\\) is made up of 0.3 \\(\\theta_{o}\\) and 0.2 \\(\\theta_{m}\\):\n\\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_o\\,C_o + \\theta_w\\,C_w \\\\\n&=& 0.3 \\times 2.{5}\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\n+ 0.2 \\times 2.{1} \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&& + 0.2 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& \\underline{{2.0}\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nIf you increase the soil volumetric water content \\(\\theta_w\\) of any soil by 0.1, how does the heat capacity \\(C\\) of the soil change?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(\\Delta \\theta_w = 0.1\\):\n\\[\n\\begin{eqnarray*}\n\\Delta C &=& \\Delta \\theta_w\\,C_w \\\\\n&=& 0.1 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& \\underline{0.418\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\\(C\\) of the soil will increase by \\(0.418\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\).\n\n\n\n\nAssume we have a soil with \\(C = 2\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\) and we measure a soil heat flux density \\(Q_G\\) of \\(+100\\,\\rm{W}\\,\\rm{m}^{-2}\\) all going to the first 10 cm of the soil, how fast would the layer 0-10 cm heat up?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe warming rate of a material is defined by:\n\\[\n\\begin{eqnarray*}\n\\frac{\\Delta T}{\\Delta t} = \\frac{1}{C}\\, \\frac{\\Delta Q_G}{\\Delta z}\n\\end{eqnarray*}\n\\]\n\\(Q_G\\) at 0 cm depth (surface) is \\(+100\\,\\rm{W}\\,\\rm{m}^{-3}\\), \\(Q_G\\) at 10 cm must be zero because there is no energy distributed to lower layers, i.e. only topmost 10 cm experience heating, hence \\(\\Delta Q_G = 100\\,\\rm{W}\\,\\rm{m}^{-2} - 0\\,\\rm{W}\\,\\rm{m}^{-2} = 100\\,\\rm{W}\\,\\rm{m}^{-2}\\) (same as \\(\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}\\)):\n\\[\n\\begin{eqnarray*}\n\\frac{\\Delta T}{\\Delta t} = \\frac{100\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}}{2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\times 0.1 \\rm{m}} = 0.0005 \\,\\rm{K}\\,\\rm{s}^{-1} =  \\underline{1.8 \\,\\rm{K}\\,\\rm{h}^{-1}}.\n\\end{eqnarray*}\n\\]\n\n\n\n\nWrite Fourier’s law and explain it briefly.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nFourier’s Law: \\(Q_{G} = -k\\,\\Delta T/\\Delta z = -k(T_{2}-T_{1})/(z_{2}-z_{1})\\). It states that the flow rate of heat conducted through a solid material (or still fluid) is proportional to the temperature gradient.\n\n\n\n\nIn a dry and uniform mineral soil with a porosity of 55%, we measure soil temperatures \\(T_1\\) at 2 cm and \\(T_2\\) at 6 cm. \\(T_1 = 20 \\rm{^{\\circ}C}\\), \\(T_2 = 18.5 \\rm{^{\\circ}C}\\). Calculate the soil heat flux density \\(Q_G\\) assuming a thermal conductivity of \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nUse Fourier’s Law:\n\\[\n\\begin{eqnarray*}\nQ_G = - k\\, \\frac{\\Delta T}{\\Delta z}\n\\end{eqnarray*}\n\\]\nYou insert the thermal conductivity of \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\):\n\\[\n\\begin{eqnarray*}\nQ_G &=& - 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\, \\frac{20\\rm{^{\\circ}C}-18.5\\rm{^{\\circ}C}}{0.02\\,\\rm{m} - 0.06\\,\\rm{m}} \\\\\n&=& - 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\, \\frac{1.5\\rm{K}}{-0.04\\,\\rm{m}} \\\\\n&=& \\underline{10.1\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nAt 5 cm depth we measure a soil heat flux density \\(Q_G = 20 \\,\\rm{W}\\,\\rm{m}^{-2}\\) and simultaneously a temperature gradient of -0.5 K\\(\\,\\rm{cm}^{-1}\\). Calculate the thermal conductivity \\(k\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nAgain we use Fourier’s Law, but rearranged:\n\\[\n\\begin{eqnarray*}\n- Q_G \\frac{\\Delta z}{\\Delta T} = k\n\\end{eqnarray*}\n\\]\nWe can directly plug-in the inverse of the gradient \\(\\Delta T/\\Delta z = -0.5\\, \\rm{K}\\,\\rm{cm}^{-1}\\) into \\(\\Delta z/\\Delta T\\): \\[\n\\begin{eqnarray*}\nk &=&  -20\\,\\rm{W}\\,\\rm{m}^{-2} \\times -0.02\\, \\rm{K}\\,\\rm{m}^{-1} \\\\\n&=& \\underline{\\textcolor{red}{+} 0.4\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nFor a soil with a specific heat \\(c_p =\\) 1.8 kJ kg\\(^{-1}\\) K\\(^{-1}\\), a density \\(\\rho =\\) 1.4 Mg m\\(^{-3}\\), and a thermal conductivity \\(k = 0.4\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\), calculate the thermal diffusivity \\(K\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe thermal diffusivity \\(K\\) tells us how quickly temperature waves propagate down into the soil, and \\(K\\) is defined by:\n\\[\n\\begin{eqnarray*}\nK &=& \\frac{k}{C} = \\frac{k}{\\rho\\,c_p} \\\\\n&=& \\frac{0.4\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}}{1.4\\times 10^{3}\\, \\rm{kg}\\, \\rm{m}^{-3}\\,1.8 \\times 10^{3}\\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}} \\\\\n&=& \\underline{0.16 \\times 10^{-6}\\,\\rm{m}^{2}\\,\\rm{s}^{-1}}\n\\end{eqnarray*}\n\\]\nNote the fine - but important - difference between the symbol \\(k\\) for thermal conductivity (Latin k’) and the symbol \\(K\\) for thermal diffusivity.\n\n\n\n\nCalculate the thermal admittance \\(\\mu\\) for the same soil.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe thermal admittance \\(\\mu\\) is strictly speaking a surface property. It defines how well a surface can accept or release heat.\n\\[\n\\begin{eqnarray*}\n\\mu &=& \\sqrt{k\\,C} = \\sqrt{k\\,\\rho\\, c_p} \\\\\n&=& \\sqrt{0.4\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1} \\times 1.4 \\times 10^{3}\\, \\rm{kg}\\, \\rm{m}^{-3} \\times 1.8 \\times 10^{3}\\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}} \\\\\n&=& \\sqrt{1.008 \\times 10^{6}  \\,\\rm{J}^{2} \\,\\rm{m}^{-4} \\,\\rm{K}^{-2}  \\,\\rm{s}^{-1}} \\\\\n&=& \\underline{1004 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nAssume we know a soil’s dry fraction of organic material ($f_o = $25%), and its bulk density (_s = 1.4 \\(\\,\\rm{Mg}\\,\\rm{m}^{-3}\\)). What is the mass of organic (\\(M_o\\) ) and mineral material (\\(M_m\\)) contained in one cubic metre of this soil?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(M_m\\) and \\(M_o\\) is the mass of mineral and organic material, respectively, in one \\(\\rm{m}^{3}\\) of soil.\nThe total mass of the dry soil \\(M\\) in one cubic-metre is given by the bulk density (_s = 1.4 \\(\\rm{Mg}\\,\\rm{m}^{-3}\\)):\n\\[\nM = M_m + M_o = \\rho_s \\times 1\\, \\rm{m}^3 = 1.4\\,\\rm{Mg}\\,\\rm{m}^{-3} \\times 1\\, \\rm{m}^3 = 1.4\\,\\rm{Mg}\n\\]\n\\(f_o\\) is the organic mass fraction (given: \\(f_o = 0.25\\)) which is the mass of organic material to the total mass\n\\[\nf_o =  \\frac{M_o}{M}  = \\frac{M_o}{M_o + M_m} = 0.25\n\\]\nsolving for \\(M_m\\) and \\(M_o\\):\n\\[\nM_m = M \\times (1 - f_o) = 1.4\\,\\rm{Mg} \\times (1 - 0.25) = 1.4\\,\\rm{Mg} \\times) 0.75 = 1.05 \\,\\rm{Mg}\n\\]\n\\[\nM_o = M \\times f_o = 1.4\\,\\rm{Mg} \\times 0.25 = 0.35\\,\\rm{Mg}\n\\]\n\n\n\n\nUsing the values of specific heat for organic (\\(c_o\\)) and mineral (\\(c_m\\)) given in the table of Lecture 10, slide 5, calculate the composite heat capacity (\\(C_s\\)) for the dry soil in Question 12.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nUsing the mass of organic and mineral material contained in one cubic metre (determined in Question 12), we can formulate the densities of organic (\\(\\rho_o\\)) and mineral material (\\(\\rho_m\\)) in the same soil:\n\\[\n\\rho_o = \\frac{M_o}{1\\rm{m}^{3} \\times \\theta_o}\n\\]\n\\[\n\\rho_m = \\frac{M_m}{1\\rm{m}^{3} \\times \\theta_m}\n\\]\nWhere \\((1\\rm{m}^{3} \\times \\theta_o)\\) is the volume of organic material in one cubic metre, and \\((1\\rm{m}^{3} \\theta_m)\\) is the volume of mineral material in one cubic metre.\nLecture 10, slide 5 provides \\(c_m = 0.8 \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}\\) and \\(c_o = 1.9 \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}\\). Using \\(C = \\rho c\\) allows us to then determine the heat capacity of organic (\\(C_o\\)) and mineral material (\\(C_m\\)) in this soil:\n\\[\nC_o = \\rho_o \\,c_o\n\\]\n\\[\nC_m = \\rho_m \\,c_m\n\\]\nThe composite heat capacity of the dry soil (\\(C_s\\)) is the sum of the compound heat capacities weighted by the respective volume fractions:\n\\[\nC_s = \\theta_o C_o  + \\theta_m C_m\n\\]\nreplacing \\(C_o\\) by \\(\\rho_o \\,c_o\\) (and same for \\(C_m\\)) then gives:\n\\[\nC_s = \\theta_o \\rho_o \\,c_o  + \\theta_m \\rho_m \\,c_m\n\\]\nreplacing \\(\\rho_o\\) by \\(\\frac{M_o}{1\\rm{m}^{3} \\theta_o}\\) (and same for \\(\\rho_m\\)) then gives:\n\\[\nC_s = \\theta_o \\frac{M_o}{1\\rm{m}^{3} \\theta_o} \\,c_o  + \\theta_m \\frac{M_m}{1\\rm{m}^{3}  \\theta_m} \\,c_m\n\\]\nNote that then \\(\\theta_o\\) and \\(\\theta_m\\) cancel out:\n\\[\nC_s =  \\frac{M_o}{1\\rm{m}^{3}} \\,c_o  + \\frac{M_m}{1\\rm{m}^{3}} \\,c_m\n\\]\nInserting the values:\n\\[\nC_s =  \\frac{ 0.35\\,\\rm{Mg}}{1\\rm{m}^{3}} \\, 1.9\\, \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}  + \\frac{1.05 \\,\\rm{Mg}}{1\\rm{m}^{3}} \\,0.8 \\, \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1} =\n\\]\n\\[\n0.665 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 0.84 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 1.505 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\n\\]\nWe learn from this exercise that generally we can rewrite the composite heat capacity of a soil (\\(C_s\\)) from using heat capacities of compound substances and volume fractions:\n\\[\nC_s = \\theta_o C_o  + \\theta_m C_m + ...\n\\]\nto using specific heat and known mass (\\(M_o\\), \\(M_m\\), etc.) of the compound substances in a soil volume \\(V_s\\):\n\\[\nC_s = \\frac{M_o}{V_s} \\,c_o  + \\frac{M_o}{V_s} \\,c_m + ...\n\\]\nwhere \\(V_s\\) is the volume of the soil, and \\(M_o\\) and \\(M_m\\) is the mass of organic and mineral material in the same volume \\(V_s\\). This has the advantage of avoiding assuming any specific denisty of organic and mineral material, which is difficult to determine practically.",
     "crumbs": [
       "Study Questions",
-      "Study Question Set 03"
+      "Study Question Set 04"
     ]
   },
   {
-    "objectID": "Study_Questions/01.html",
-    "href": "Study_Questions/01.html",
-    "title": "Study Question Set 01",
+    "objectID": "Study_Questions/02.html",
+    "href": "Study_Questions/02.html",
+    "title": "Study Question Set 02",
     "section": "",
-    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \\(\\rm{g} \\rm{m}^{-3} \\rm{s}^{-1}\\)\n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
+    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
     "crumbs": [
       "Study Questions",
-      "Study Question Set 01"
+      "Study Question Set 02"
     ]
   },
   {
-    "objectID": "Lectures/index.html",
-    "href": "Lectures/index.html",
-    "title": "Lecture Slides",
+    "objectID": "Resources.html",
+    "href": "Resources.html",
+    "title": "Programming Resources",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "In this course, I will rely heavily on examples that incorporate scientific programming. Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts. Programming will also be helpful when completing your assignments. However, programming experience is not a prerequisite for this course.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#python",
+    "href": "Resources.html#python",
+    "title": "Programming Resources",
+    "section": "Python",
+    "text": "Python\nPython is my personal preference. I like python because its very flexible, general-purpose programming language that is fairly easy to read / write. It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free! If you want to install Python on your own computer and don’t know where to start, I suggest you go with Anaconda. Its a scientific programming platform that will install python for you along with most of the commonly used extensions.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#r",
+    "href": "Resources.html#r",
+    "title": "Programming Resources",
+    "section": "R",
+    "text": "R\nR is also a great option. It is a programming language that was developed specifically for statistical computing and graphics. This means its not a flexible as a langue like Python, but also that it can be a bit easier to use “out of the box” for specific applications, like data visualization. Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax. One advantage R has over python, is that its a bit easier to install. All you need to do to get setup is to install R and RStudio.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#online-access",
+    "href": "Resources.html#online-access",
+    "title": "Programming Resources",
+    "section": "Online Access",
+    "text": "Online Access\nUBC also provides students with free server space that you can use at https://ubc.syzygy.ca/. This isn’t necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations. However, it already comes with both Python and R installed, and will probably be sufficient for most things we’ll do in this course. So you can use it to try things out without installing anything on your own computer.",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#albedo",
+    "href": "Resources.html#albedo",
+    "title": "Programming Resources",
+    "section": "Albedo",
+    "text": "Albedo\n\\[\nalbedo = \\alpha_{SW} = \\frac{SW_{\\uparrow}}{SW_{\\downarrow}}\n\\tag{1}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#beers-law",
+    "href": "Resources.html#beers-law",
+    "title": "Programming Resources",
+    "section": "Beers Law",
+    "text": "Beers Law\n\\[\nR_z = R_0 e^{-z\\mu}\n\\tag{2}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#le-bowen",
+    "href": "Resources.html#le-bowen",
+    "title": "Programming Resources",
+    "section": "LE Bowen",
+    "text": "LE Bowen\n\\[\nLE = \\frac{R_n-G}{1+B}\n\\tag{3}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#h-bowen",
+    "href": "Resources.html#h-bowen",
+    "title": "Programming Resources",
+    "section": "H Bowen",
+    "text": "H Bowen\n\\[\nH = \\frac{R_n-G}{1+B^{-1}}\n\\tag{4}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#bowen-ratio",
+    "href": "Resources.html#bowen-ratio",
+    "title": "Programming Resources",
+    "section": "Bowen Ratio",
+    "text": "Bowen Ratio\n\\[\nB = \\frac{H}{LE}\n\\tag{5}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#bulk-transmissivity",
+    "href": "Resources.html#bulk-transmissivity",
+    "title": "Programming Resources",
+    "section": "Bulk Transmissivity",
+    "text": "Bulk Transmissivity\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{6}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-equation-radiation",
+    "href": "Resources.html#conservation-equation-radiation",
+    "title": "Programming Resources",
+    "section": "Conservation Equation Radiation",
+    "text": "Conservation Equation Radiation\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{7}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-law-scalar-1d",
+    "href": "Resources.html#conservation-law-scalar-1d",
+    "title": "Programming Resources",
+    "section": "Conservation Law Scalar 1D",
+    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{8}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-law-scalar-homogeneous-2",
+    "href": "Resources.html#conservation-law-scalar-homogeneous-2",
+    "title": "Programming Resources",
+    "section": "Conservation Law Scalar Homogeneous 2",
+    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{9}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-law-scalar-homogeneous",
+    "href": "Resources.html#conservation-law-scalar-homogeneous",
+    "title": "Programming Resources",
+    "section": "Conservation Law Scalar Homogeneous",
+    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{10}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-law-scalar",
+    "href": "Resources.html#conservation-law-scalar",
+    "title": "Programming Resources",
+    "section": "Conservation Law Scalar",
+    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{11}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#conservation-law-simplified",
+    "href": "Resources.html#conservation-law-simplified",
+    "title": "Programming Resources",
+    "section": "Conservation Law Simplified",
+    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{12}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#cosine-law-of-illumination",
+    "href": "Resources.html#cosine-law-of-illumination",
+    "title": "Programming Resources",
+    "section": "Cosine Law of Illumination",
+    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{13}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#damping-depth",
+    "href": "Resources.html#damping-depth",
+    "title": "Programming Resources",
+    "section": "Damping Depth",
+    "text": "Damping Depth\n\\[\nD = \\sqrt{\\small\\frac{2K}{\\omega}} = \\sqrt{\\small\\frac{KP}{\\pi}}\n\\tag{14}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#energy-of-photon",
+    "href": "Resources.html#energy-of-photon",
+    "title": "Programming Resources",
+    "section": "Energy of Photon",
+    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{15}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#extraterrestrial-irradiance",
+    "href": "Resources.html#extraterrestrial-irradiance",
+    "title": "Programming Resources",
+    "section": "Extraterrestrial Irradiance",
+    "text": "Extraterrestrial Irradiance\n\\[\nI_{ex}=I_0(\\frac{R_{av}}{R})^2\\cos(Z)\n\\tag{16}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#adjusted-constant",
+    "href": "Resources.html#adjusted-constant",
+    "title": "Programming Resources",
+    "section": "Adjusted Constant",
+    "text": "Adjusted Constant\n\\[\n\\begin{eqnarray}(\\frac{R_{av}}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\\end{eqnarray}\n\\tag{17}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#fouriers-law",
+    "href": "Resources.html#fouriers-law",
+    "title": "Programming Resources",
+    "section": "Fouriers Law",
+    "text": "Fouriers Law\n\\[\nH_G = -k \\small\\frac{T_2 - T_1}{z_2 - z_1}\n\\tag{18}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#frequency",
+    "href": "Resources.html#frequency",
+    "title": "Programming Resources",
+    "section": "Frequency",
+    "text": "Frequency\n\\[\nv=\\frac{c}{\\lambda}\n\\tag{19}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#heat-capacity-soil",
+    "href": "Resources.html#heat-capacity-soil",
+    "title": "Programming Resources",
+    "section": "Heat Capacity Soil",
+    "text": "Heat Capacity Soil\n\\[\nC_{s}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\tag{20}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#heat-sharing",
+    "href": "Resources.html#heat-sharing",
+    "title": "Programming Resources",
+    "section": "Heat Sharing",
+    "text": "Heat Sharing\n\\[\n\\frac{H_g}{H} = \\frac{\\mu_g}{\\mu_a}\n\\tag{21}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#kelvin",
+    "href": "Resources.html#kelvin",
+    "title": "Programming Resources",
+    "section": "Kelvin",
+    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{22}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#kirchhoffs-law",
+    "href": "Resources.html#kirchhoffs-law",
+    "title": "Programming Resources",
+    "section": "Kirchhoffs Law",
+    "text": "Kirchhoffs Law\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{23}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#longwave-radiation-balance",
+    "href": "Resources.html#longwave-radiation-balance",
+    "title": "Programming Resources",
+    "section": "Longwave Radiation Balance",
+    "text": "Longwave Radiation Balance\n\\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\tag{24}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#longwave-reflectivity",
+    "href": "Resources.html#longwave-reflectivity",
+    "title": "Programming Resources",
+    "section": "Longwave Reflectivity",
+    "text": "Longwave Reflectivity\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\tag{25}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#long-wave-flux-density-stefan-boltzman",
+    "href": "Resources.html#long-wave-flux-density-stefan-boltzman",
+    "title": "Programming Resources",
+    "section": "Long wave Flux Density Stefan Boltzman",
+    "text": "Long wave Flux Density Stefan Boltzman\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\tag{26}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#long-wave-flux-density",
+    "href": "Resources.html#long-wave-flux-density",
+    "title": "Programming Resources",
+    "section": "Long wave Flux Density",
+    "text": "Long wave Flux Density\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\tag{27}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#ndvi",
+    "href": "Resources.html#ndvi",
+    "title": "Programming Resources",
+    "section": "NDVI",
+    "text": "NDVI\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\tag{28}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#absorbed-sw",
+    "href": "Resources.html#absorbed-sw",
+    "title": "Programming Resources",
+    "section": "Absorbed SW",
+    "text": "Absorbed SW\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\tag{29}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-absorbed-emitted-lw",
+    "href": "Resources.html#net-absorbed-emitted-lw",
+    "title": "Programming Resources",
+    "section": "Net Absorbed Emitted LW",
+    "text": "Net Absorbed Emitted LW\n\\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{30}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-radiation-energy-balance",
+    "href": "Resources.html#net-radiation-energy-balance",
+    "title": "Programming Resources",
+    "section": "Net Radiation Energy Balance",
+    "text": "Net Radiation Energy Balance\n\\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{31}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-radiation-short",
+    "href": "Resources.html#net-radiation-short",
+    "title": "Programming Resources",
+    "section": "Net Radiation Short",
+    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{32}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#net-radiation",
+    "href": "Resources.html#net-radiation",
+    "title": "Programming Resources",
+    "section": "Net Radiation",
+    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{33}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#phase-shifted-sinusoidal-temperature-wave",
+    "href": "Resources.html#phase-shifted-sinusoidal-temperature-wave",
+    "title": "Programming Resources",
+    "section": "Phase Shifted Sinusoidal Temperature Wave",
+    "text": "Phase Shifted Sinusoidal Temperature Wave\n\\[\nT_{(z,t)}=\\overline{T_o}+\\Delta T_o e^{-z(\\small\\frac{\\omega}{2K})^{1/2}} \\sin(\\omega t - (\\small\\frac{\\omega}{2K})^{1/2}z)\n\\tag{34}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#planks-law",
+    "href": "Resources.html#planks-law",
+    "title": "Programming Resources",
+    "section": "Planks Law",
+    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{35}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#prata",
+    "href": "Resources.html#prata",
+    "title": "Programming Resources",
+    "section": "Prata",
+    "text": "Prata\n\\[\n\\epsilon_a = [1-(1+zeta)\\exp{-(a+b\\zeta)^{0.5}}]\n\\tag{36}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#radiation-balance-air.qmd",
+    "href": "Resources.html#radiation-balance-air.qmd",
+    "title": "Programming Resources",
+    "section": "Radiation Balance Air.qmd",
+    "text": "Radiation Balance Air.qmd\n\\[\n\\Delta R_{n(\\Delta z)}=R_{n(z+\\Delta z)}-R_{n(z)}=C_a(\\frac{\\Delta T_a}{\\Delta t})_R \\Delta z\n\\tag{37}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#reflectivity",
+    "href": "Resources.html#reflectivity",
+    "title": "Programming Resources",
+    "section": "Reflectivity",
+    "text": "Reflectivity\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\tag{38}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#reflectance-coefficient",
+    "href": "Resources.html#reflectance-coefficient",
+    "title": "Programming Resources",
+    "section": "Reflectance Coefficient",
+    "text": "Reflectance Coefficient\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\tag{39}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#relative-humidity",
+    "href": "Resources.html#relative-humidity",
+    "title": "Programming Resources",
+    "section": "Relative Humidity",
+    "text": "Relative Humidity\n\\[\nRH=\\frac{P_v}{P_v^*}\n\\tag{40}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#shear-stress",
+    "href": "Resources.html#shear-stress",
+    "title": "Programming Resources",
+    "section": "Shear Stress",
+    "text": "Shear Stress\n\\[\n\\tau = \\mu\\small\\frac{\\delta u}{\\delta z}\n\\tag{41}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#sinusoidal-temperature-wave",
+    "href": "Resources.html#sinusoidal-temperature-wave",
+    "title": "Programming Resources",
+    "section": "Sinusoidal Temperature Wave",
+    "text": "Sinusoidal Temperature Wave\n\\[\nT_{(o,t)}=\\overline{T_o}+\\Delta T_o \\sin(\\omega t)\n\\tag{42}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#soil-heat-flux-divergence",
+    "href": "Resources.html#soil-heat-flux-divergence",
+    "title": "Programming Resources",
+    "section": "Soil Heat Flux Divergence",
+    "text": "Soil Heat Flux Divergence\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  \\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\tag{43}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#soil-heat-flux",
+    "href": "Resources.html#soil-heat-flux",
+    "title": "Programming Resources",
+    "section": "Soil Heat Flux",
+    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\tag{44}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#soil-volume-fractions",
+    "href": "Resources.html#soil-volume-fractions",
+    "title": "Programming Resources",
+    "section": "Soil Volume Fractions",
+    "text": "Soil Volume Fractions\n\\[\n\\theta_a+\\theta_w+\\theta_g = 1\n\\tag{45}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#soil-volume-fractions-1",
+    "href": "Resources.html#soil-volume-fractions-1",
+    "title": "Programming Resources",
+    "section": "Soil Volume Fractions",
+    "text": "Soil Volume Fractions\n\\[\n\\theta_P = \\theta_a + \\theta_w = 1 - \\theta_g\n\\tag{46}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#organic-mineral",
+    "href": "Resources.html#organic-mineral",
+    "title": "Programming Resources",
+    "section": "Organic Mineral",
+    "text": "Organic Mineral\n\\[\n\\theta_g = \\theta_m + \\theta_o\n\\tag{47}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#solar-declination",
+    "href": "Resources.html#solar-declination",
+    "title": "Programming Resources",
+    "section": "Solar Declination",
+    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{48}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#fractional-year",
+    "href": "Resources.html#fractional-year",
+    "title": "Programming Resources",
+    "section": "Fractional Year",
+    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{49}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#solar-zenith",
+    "href": "Resources.html#solar-zenith",
+    "title": "Programming Resources",
+    "section": "Solar Zenith",
+    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{50}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#hour-angle",
+    "href": "Resources.html#hour-angle",
+    "title": "Programming Resources",
+    "section": "Hour Angle",
+    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{51}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
+    "href": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
+    "title": "Programming Resources",
+    "section": "Stefan Boltzman Law Grey Body Adjusted",
+    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{52}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#stefan-boltzman-law-grey-body",
+    "href": "Resources.html#stefan-boltzman-law-grey-body",
+    "title": "Programming Resources",
+    "section": "Stefan Boltzman Law Grey Body",
+    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{53}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#stefan-boltzman-law",
+    "href": "Resources.html#stefan-boltzman-law",
+    "title": "Programming Resources",
+    "section": "Stefan Boltzman Law",
+    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{54}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#surface-energy-balance-ice",
+    "href": "Resources.html#surface-energy-balance-ice",
+    "title": "Programming Resources",
+    "section": "Surface Energy Balance Ice",
+    "text": "Surface Energy Balance Ice\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\tag{55}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#surface-energy-balance-no-mass",
+    "href": "Resources.html#surface-energy-balance-no-mass",
+    "title": "Programming Resources",
+    "section": "Surface Energy Balance No Mass",
+    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{56}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#surface-energy-balance-storage",
+    "href": "Resources.html#surface-energy-balance-storage",
+    "title": "Programming Resources",
+    "section": "Surface Energy Balance Storage",
+    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{57}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#surface-energy-balance",
+    "href": "Resources.html#surface-energy-balance",
+    "title": "Programming Resources",
+    "section": "Surface Energy Balance",
+    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{58}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#tetens",
+    "href": "Resources.html#tetens",
+    "title": "Programming Resources",
+    "section": "Tetens",
+    "text": "Tetens\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\tag{59}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#thermal-admittance-v-temperature",
+    "href": "Resources.html#thermal-admittance-v-temperature",
+    "title": "Programming Resources",
+    "section": "Thermal Admittance v Temperature",
+    "text": "Thermal Admittance v Temperature\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\tag{60}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#thermal-admittance",
+    "href": "Resources.html#thermal-admittance",
+    "title": "Programming Resources",
+    "section": "Thermal Admittance",
+    "text": "Thermal Admittance\n\\[\n\\mu = \\sqrt{k C}\n\\tag{61}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#thermal-diffusivity",
+    "href": "Resources.html#thermal-diffusivity",
+    "title": "Programming Resources",
+    "section": "Thermal Diffusivity",
+    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{62}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#lmst",
+    "href": "Resources.html#lmst",
+    "title": "Programming Resources",
+    "section": "LMST",
+    "text": "LMST\n\\[\nLMST = (TZ) + (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{63}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#lat",
+    "href": "Resources.html#lat",
+    "title": "Programming Resources",
+    "section": "LAT",
+    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{64}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#delta-lat",
+    "href": "Resources.html#delta-lat",
+    "title": "Programming Resources",
+    "section": "Delta LAT",
+    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{65}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#weins-law",
+    "href": "Resources.html#weins-law",
+    "title": "Programming Resources",
+    "section": "Weins Law",
+    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{66}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#the-midterm",
+    "href": "Lectures/11.html#the-midterm",
+    "title": "Laminar and Turbulent Flow",
+    "section": "The Midterm",
+    "text": "The Midterm\nThe mid-term exam is Wednesday March 13th.\n\nThe midterm will be completed asynchronously over canvas. We will not meet in-person on Wednesday the 13th. You can use this time to complete your exam on canvas instead.\nThe exam will not be timed. It is not intended to take longer that a normal lecture period (80 minutes), but I want you to have more time if you need it.\n\nThe exam will be open for 24 hours and may be completed only once.\n\n8 AM Wednesday March 13th to 8 AM Thursday March 24th\nLate submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes",
     "crumbs": [
       "Lectures",
-      "Lecture Slides"
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#the-midterm-1",
+    "href": "Lectures/11.html#the-midterm-1",
+    "title": "Laminar and Turbulent Flow",
+    "section": "The Midterm",
+    "text": "The Midterm\nIt will include topics covered through the end of this lecture. Any topics covered in lecture, assignments, or study questions are fair game.\n\nA collection of multiple choice, fill in the blanks, matching etc. (~65%)\n\nMay require some simple calculations\nWill be marked automatically and grades will be posted shortly after the exam closes\n\nShort answer questions (~35%)\n\nMay require some simple calculations\nWill be marked by myself/your TA and posted about a week after the exam closes",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#study-questions",
+    "href": "Lectures/11.html#study-questions",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Study Questions",
+    "text": "Study Questions\nStudy question sets 1-5 should be submitted before completing the mid-term.\n\nThese account for approximately 2.8% of your final grade and are only marked for completeness.\nAs long as you give an answer for each question (right or wrong) you’ll get full credit.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#mid-term-iclicker",
+    "href": "Lectures/11.html#mid-term-iclicker",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Mid-term (iClicker)",
+    "text": "Mid-term (iClicker)\nWhen and where will the midterm be held?\n\nA: Wednesday March 13th on Canvas\nB: Wednesday March 6th in Person",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#mid-term-iclicker-1",
+    "href": "Lectures/11.html#mid-term-iclicker-1",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Mid-term (iClicker)",
+    "text": "Mid-term (iClicker)\nHow long should the mid-term take?\n\nA: All day! Don’t make any other plans!\nB: About 80 minutes, but you’ll have extra time if needed :)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#todays-learning-objectives",
+    "href": "Lectures/11.html#todays-learning-objectives",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Today’s learning objectives",
+    "text": "Today’s learning objectives\n\nDefine turbulence, and how a turbulent flow differs from a laminar (non-turbulent) one.\nGive examples where flow in the atmosphere is purely laminar.\nDescribe how we can describe mass and heat exchange in a laminar flow.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#mechanisms-of-energy-transfer",
+    "href": "Lectures/11.html#mechanisms-of-energy-transfer",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Mechanisms of Energy Transfer",
+    "text": "Mechanisms of Energy Transfer\n\n\n\nRadiation: electromagnetic waves\n\n\n\n\n\nConduction: molecular motion\n\n\n\n\n\nConvection: mass movement in a fluid\n\n\n\nRadiative exchange - electromagnetic waves Diffusion, process resulting from random motion of molecules by which there is a net flow of matter from a region of high concentration to a region of low concentration. Heat conduction involves thermal energy transported, or diffused, from higher to lower temperature. Heat conduction is usually an effective mode of transfer in solids (e.g. transport of heat beneath the surface), less so in liquids, and least important in gases. In general, pure molecular conduction is negligible in atmospheric applications, except within the very thin laminar boundary layer. In the atmosphere, the parcels of air (or eddies) transport energy and mass from one location to another. The eddies may be set into turbulent motion by free or forced convection. Free convection is due to the parcel of air being at a different density than the surrounding fluid (e.g. the motion of water in a heated kettle, and a similar bubbling of air parcels occurs when the Earth’s surface is strongly heated by solar radiation). Forced (mechanical) convection – flow of air or water over obstacles. Depends on the roughness of the surface and the speed of the horizontal flow.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#viscosity",
+    "href": "Lectures/11.html#viscosity",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Viscosity",
+    "text": "Viscosity\n\n\n\nViscosity: internal resistance of fluid to deformation.\nCan be also interpreted as internal ‘friction’ between adjacent fluid layers or particles.\n\n\n\n\n\nSource\n\n\n\n\n\nThe viscosity of a fluid is a measure of its resistance to gradual deformation by shear stress or tensile stress.[1]  For liquids, it corresponds to the informal concept of “thickness”: for example, syrup has a higher viscosity than water.[2] It is a measure of the resistance of flow due to internal friction when one layer of fluid is caused to move in relationship to another layer.  In simple terms, viscosity means friction between the molecules of fluid\nThe resistance offered to a layer of fluid when it moves over another layer of fluid Fluid viscosity is a molecular property which is a measure of the internal resistance of the fluid to deformation. All real fluids, whether liquids or gases, have finite viscosities associated with them.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#viscosity-1",
+    "href": "Lectures/11.html#viscosity-1",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Viscosity",
+    "text": "Viscosity\n\nno-slip condition applies to the fixed surface\nAn important manifestation of the effect of viscosity is that fluid particles adhere to a solid surface as they come in contact with it and consequently there is no relative motion between the fluid and the solid surface - the fluid is at same velocity as surfaces If the surface is at rest, the fluid motion right at the surface must also vanish. This is called the no-slip boundary condition (which is also applicable at the interface of two fluids with widely different densities (e.g., air and water)). Let’s say you have two plates – bottom plate (fixed surface) – fluid (liquid or gas) – top plate and let’s say you exert some kind of force (i.e. move to the right) Fluid will be displaced – move as layers – friction between layers (viscosity is responsible for the frictional resistance between adjacent fluid layers) The resistance force per unit area is called the shearing stress, because it is associated with the shearing motion (variation of velocity) between the layers. Fluid at the top will be faster at the top than the bottom Shear stress = stress that results from layers moving past each other\nhttps://opentextbc.ca/physicstestbook2/chapter/viscosity-and-laminar-flow-poiseuilles-law/",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#inviscid-flows",
+    "href": "Lectures/11.html#inviscid-flows",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Inviscid flows",
+    "text": "Inviscid flows\nAn inviscid fluid is assumed to have no viscosity.\n\n\n\nEffects of viscosity and turbulence are neglected. As a consequence there is is no transport of momentum, energy and mass except via advection.\n\n\n\n\n\nIn some applications, the atmosphere needs to be modelled as a viscous flow.\n\n\n\n\n\nFor theoretical treatments, fluid flows are commonly divided into two broad categories, namely, inviscid and viscous flows. In an inviscid or ideal fluid the effects of viscosity are completely ignored, i.e., the fluid is assumed to have no viscosity, and the flow is considered to be nonturbulent. This works only far away from any solid boundaries and far away from any strong density gradients. In the free atmosphere (i.e. above the planetary boundary layer, in which the effect of the earth’s surface friction on the air motion is negligible) the flow is often treated as inviscid, and the viscous forces may be neglected for many purposes; the air is usually treated (dynamically) as an ideal fluid. Inviscid flows are smooth and orderly, and the adjacent fluid layers can easily slip past each other or against solid surfaces without any friction or drag. Consequently, there is no mixing and no transfer of momentum, heat, and mass across the moving layers. Such properties can only be transported along the streamlines through advection. The inviscid flow theory obviously results in some serious dilemmas and inconsistencies when applied anywhere close to solid surfaces or density interfaces.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#viscous-flows",
+    "href": "Lectures/11.html#viscous-flows",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Viscous flows",
+    "text": "Viscous flows\nCloser to surfaces, flow is always viscous and viscosity plays an important role in boundary layers. In a viscous flow, shear stress \\(\\tau\\) is proportional to the velocity gradient (linearly proportional in a Newtonian fluid):\n\\[\n\\tau = \\mu\\small\\frac{\\delta u}{\\delta z}\n\\qquad(1)\\]\n\nwhere \\(\\mu\\) is the dynamic viscosity (kg s-1 m-1) and \\(\\upsilon = \\small\\frac{\\mu}{\\rho}\\) is the kinematic viscosity (m2 s-1) and \\(\\rho\\) is fluid density (kg m-3). In laminar flows, \\(\\mu\\) and \\(\\upsilon\\) are molecular properties of the fluid.\n\n\\(\\upsilon\\) varies non-linearly as a function of temperature; so \\(\\mu\\) is a function of both the temperature and density of a substance.\n\n\n\nShear stress = stress that results from layers moving past each other many common liquids and gases, such as water and air are Newtonian. Dynamic (absolute) viscosity - is a measure of internal resistance. Kinematic viscosity - is the measure of a fluid’s inherent resistance to flow when no external force, except gravity, is acting on it.\nOne way is to measure a fluid’s resistance to flow when an external force is applied. This is dynamic viscosity.   The other way is to measure the resistive flow of a fluid under the weight of gravity. The result is kinematic viscosity. Put another way, kinematic viscosity is the measure of a fluid’s inherent resistance to flow when no external force, except gravity, is acting on it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#laminar-and-turbulent-flow",
+    "href": "Lectures/11.html#laminar-and-turbulent-flow",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Laminar and turbulent flow",
+    "text": "Laminar and turbulent flow\n\nExamples of streamlines in laminar (left) and turbulent (right) flows",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#laminar-or-turbulent",
+    "href": "Lectures/11.html#laminar-or-turbulent",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Laminar or turbulent?",
+    "text": "Laminar or turbulent?\n\n\nThe flow between the two red lines could best be described as:\n\nA Turbulent\nB Laminar\nC Anisotropic\nD All of the above\n\n\n\n\n\n\nsmoke from a smoldering candle in a still room, are laminar initially. The flow is therefore smooth in appearance. The slow flow of water from a laboratory faucet",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#effect-of-flow-velocity",
+    "href": "Lectures/11.html#effect-of-flow-velocity",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Effect of flow velocity",
+    "text": "Effect of flow velocity\n\nAs flow speed increases, so does the turbulence Source\nLaminar flow, Turbulent flow by Reynolds Experiment Osborne Reynolds demonstrated that there are two distinctly different types of flow by injecting a very thin stream of colored fluid having the same density of water into a large transparent tube through which water is flowing.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#effect-of-viscosity",
+    "href": "Lectures/11.html#effect-of-viscosity",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Effect of viscosity",
+    "text": "Effect of viscosity\n\nTurbulence is easier to create in low viscosity fluids\nTurbulence is easier to create in low viscosity fluids, but more difficult in highly viscous fluids.  Turbulence is caused by excessive kinetic energy in parts of a fluid flow, which overcomes the damping effect of the fluid’s viscosity. Laminar flow is characteristic of very slow moving, shallow water, which is uncommon in nature.  It is also characteristic of flows in “fluids” that are very viscous, like glacial ice or mud flows that have little water.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#effect-of-differential-forces",
+    "href": "Lectures/11.html#effect-of-differential-forces",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Effect of differential forces",
+    "text": "Effect of differential forces\n\n\nThis figure shows how a boundary layer grows with distance over a flat plate. The thickness of the laminar boundary layer grows but eventually a critical combination of properties (speed of flow, distance and viscosity) is exceeded after which the flow breaks down into the haphazard jumble of eddies characteristic of turbulent flow. However, note that a laminar sub-layer still remains at the surface. The thickness of the sub-layer mainly depends upon the roughness of the surface and the external wind speed. Over relatively smooth surfaces, and especially with high wind speeds, the layer becomes very thin or is temporarily absent. The onset of turbulence can be predicted by the Reynolds number, which is the ratio of inertial forces to viscous forces within a fluid Immediately above the surface is the laminar boundary layer (LBL). It is the thin skin (only a few millimeters) of air adhering to all surfaces within which the motion is laminar (i.e. the streamlines are parallel to the surface with no cross-stream component).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#turbulence",
+    "href": "Lectures/11.html#turbulence",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Turbulence",
+    "text": "Turbulence\nTurbulence is a feature of flows, not fluids.\n\n\n\nTurbulent flows are very efficient in equalizing temperature and concentration gradients:\n\nIn the Atmosphere, turbulent flows are 105 times faster than molecular diffusion.\n\n\n\n\n\n\n\nTurbulence is a feature of fluid flow, not of the fluid. When the Reynolds number is high enough, most of the dynamics of turbulence are the same whether the fluid is an actual fluid or a gas. Most of the dynamics are then independent of the properties of the fluid. Cover cup to prevent cooling!\nTurbulent flow is defined as the flow in which the system’s inertial forces are dominant over the viscous forces. This phenomenon is described by Reynolds number, a unit-less number used to determine when turbulent flow will occur.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#turbulence-1",
+    "href": "Lectures/11.html#turbulence-1",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Turbulence",
+    "text": "Turbulence\n\n\n\nEddies are coherent parts within the moving fluid.\nEddies exist in a wide range of different sizes.\nThe smallest eddies dissipate to heat.\n\n\n\n\n\nLeonardo da Vinci’s famous drawing of water poured into a pot: His turbulent flow superimposes different scales of eddies.\n\n\n\n\n\nAn eddy may be considered akin to a vortex or a whirl in common terminology. Turbulent flows are highly rotational and have all kinds of vortexlike structures (eddies) buried in them. However, eddies are not simple two-dimensional circulatory motions of the type in an isolated vortex, but are believed to be complex, three-dimensional structures. Eddies generally become more numerous as the fluid flow velocity increases. Energy is constantly transferred from large to small eddies until it is dissipated. Turbulent flow consists of a hierarchy of eddies of a wide range of sizes (length scales), from the smallest that can survive the dissipative action of viscosity to the largest that is allowed by the flow geometry. The range of eddy sizes increases with the Reynolds number of the overall mean flow. In particular, for the ABL, the typical range of eddy sizes is 10^-3 (mm) to 10^3 (km).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#properties-of-turbulence",
+    "href": "Lectures/11.html#properties-of-turbulence",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Properties of turbulence",
+    "text": "Properties of turbulence\n\n\n\nIrregular, random, and three-dimensional\n\nMotions are rotational and anisotropic\n\nDiffusive & dissipative\n\nAbility to mix properties\nEnergy of motion is degraded into heat\n\nConsists of multiple length scales\n\nLarge scales of energy input break down into smaller and smaller scales\n\n\n\n“Big whirls have little whirls, That feed on their velocity; And little whirls have lesser whirls, And so on to viscosity.”\n― Lewis Fry Richardson\n\n\n\nIrregular: This makes any turbulent motion essentially unpredictable. For this reason, a statistical description of turbulence is invariably used in practice. Diffusive: It is responsible for the efficient diffusion of momentum, heat, and mass (e.g., water vapor, CO2, and various pollutants) in turbulent flows. Macroscale diffusivity of turbulence is usually many orders of magnitude larger than the molecular diffusivity. Dissipative: The kinetic energy of turbulent motion is continuously dissipated (converted into internal energy or heat) by viscosity. Therefore, in order to maintain turbulent motion, the energy has to be supplied continuously. If no energy is supplied, turbulence decays rapidly. Multiple length scales: All turbulent flows are characterized by a wide range (depending on the Reynolds number) of scales or eddies. The transfer of energy from the mean flow into turbulence occurs at the upper end of scales (large eddies), while the viscous dissipation of turbulent energy occurs at the lower end (small eddies).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#visualizing-the-lbl",
+    "href": "Lectures/11.html#visualizing-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Visualizing the LBL",
+    "text": "Visualizing the LBL\n\n\nThe LBL can be made visible using the Schlieren photography. This technique uses the temperature dependence of the index of refraction of air.\n\n\n\n\n\nSchlieren photograph of rabbit’s head (cooler air: dark, warmer air: light)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#the-laminar-boundary-layer-lbl",
+    "href": "Lectures/11.html#the-laminar-boundary-layer-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "The laminar boundary layer (LBL)",
+    "text": "The laminar boundary layer (LBL)\n\n\nThis thin layer (5 to 50 mm) is very important.\n\nIt adheres to all objects and because diffusion is very poor (molecular) it provides a buffer between the object and the turbulent air above.\n\n\n\n\n\nMeasurements in the LBL of leaves with a hotwire probe (Photo: R. Jassal, UBC).\n\n\n\n\n\nImmediately above the surface is the laminar boundary layer (LBL). It is the thin skin (only a few millimeters) of air adhering to all surfaces within which the motion is laminar (i.e. the streamlines are parallel to the surface with no cross-stream component). The connotation is that adjacent layers (laminae) of the fluid remain distinct and do not intermix.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#importance-of-the-lbl",
+    "href": "Lectures/11.html#importance-of-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Importance of the LBL",
+    "text": "Importance of the LBL\n\nThe principles we’ll learn about the LBL are important in developing formulae for calculating:\n\nrates of transpiration and evaporation from leaves\nrates of CO2 uptake by leaves (plant growth)\nrates of pollutant (O3, SO2) deposition on leaves\nrates of heat loss from buildings, humans, & animals\n\n\n\nSulfur dioxide",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#describing-exchange-in-the-lbl",
+    "href": "Lectures/11.html#describing-exchange-in-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Describing exchange in the LBL",
+    "text": "Describing exchange in the LBL\nFluxes that pass through the LBL (molecular transport) are proportional to gradients between surface and turbulent atmosphere.\n\n\nSensible heat\n\\(H\\propto K_H\\small\\frac{\\delta T}{\\delta z}\\)\n\n\\(K_H\\) molecular diffusivity for heat\n\n\nLatent heat\n\\(LE\\propto K_{LE}\\small\\frac{\\delta \\rho_v}{\\delta z}\\)\n\n\\(K_{LE}\\) molecular diffusivity for water vapor\n\n\nMomentum\n\\(\\tau\\propto K_{M}\\small\\frac{\\delta u}{\\delta z}\\)\n\n\\(K_M\\) molecular diffusivity for momentum\n\n\n\n\nIn the laminar sublayer there is no convection molecular diffusion coefficients = molecular diffusivity in m2 s-1. K values are very small, of the order of 10^-5 m2 s-1, thus providing an important insulating barrier between the surface and the bulk of the atmosphere. Fick’s Law of diffusion! Momentum, same as ‘Shear stress’ (stress that results from layers moving past each other) – in the surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum. Thus the gradients of climatic properties (T, water vapor, [CO2], u, etc.) are very steep in the LBL, and since both the flux and the diffusivity are constant with height the vertical profile of a property is approximately linear, i.e. the gradient is constant.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#describing-heat-exchange-in-the-lbl",
+    "href": "Lectures/11.html#describing-heat-exchange-in-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Describing heat exchange in the LBL",
+    "text": "Describing heat exchange in the LBL\n\n\nOhm’s law (resistance) format very useful:\n\\[\nH = \\small\\frac{C_a(T_0-T_a)}{r_b}\n\\qquad(2)\\]\n\nWhere \\(r_b\\) is the boundary layer resistance in s m-1 which mainly depends on thickness of the LBL.\n\n\n\n\n\n\nOhm’s Law  Current = V/R",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#characteristics-of-the-lbl",
+    "href": "Lectures/11.html#characteristics-of-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Characteristics of the LBL",
+    "text": "Characteristics of the LBL\n\n\nWhy this temperature distribution? Thickness of LBL depends on:\n\nObject size, shape, orientation, and roughness\nInversely on wind speed & turbulence intensity\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition, with permission.\n\n\n\n\n\nWeak but turbulent air Temperature difference increases from the windward to the leeward side since the LBL increases with distance from edge of leaf",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#latent-heat-exchange-in-the-lbl",
+    "href": "Lectures/11.html#latent-heat-exchange-in-the-lbl",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Latent heat exchange in the LBL",
+    "text": "Latent heat exchange in the LBL\n\n\nFick’s Law of diffusion can be written in resistance form for the transfer of water vapour (latent heat) in the LBL:\n\\[\nH = \\small\\frac{L_v(\\rho_{v0}-\\rho_{va})}{r_b}\n\\qquad(3)\\]\nWhere \\(r_b\\) is again the boundary layer resistance for water vapour in s m-1\n\n\n\n\n\nFick’s Law of diffusion - molecular diffusivity",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#why-does-the-frost-accumulate-at-the-edge-of-the-leaf",
+    "href": "Lectures/11.html#why-does-the-frost-accumulate-at-the-edge-of-the-leaf",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Why does the frost accumulate at the edge of the leaf?",
+    "text": "Why does the frost accumulate at the edge of the leaf?\n\nPhoto by A. Christen",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
+    ]
+  },
+  {
+    "objectID": "Lectures/11.html#take-home-points",
+    "href": "Lectures/11.html#take-home-points",
+    "title": "Laminar and Turbulent Flow",
+    "section": "Take Home Points",
+    "text": "Take Home Points\n\nA laminar flow has approximately parallel streamlines. Layers glide by. A turbulent flow is highly irregular, and contains many scales of eddies.\nTurbulent and laminar are properties of the flow, not the fluid.\nWithin millimetres of the surface of objects, the flow is always laminar - this is the laminar boundary layer (LBL)\nMolecular transfer of energy (heat) and mass in the LBL can be described using resistances in analogy to Ohm’s law.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Laminar and Turbulent Flow"
     ]
   },
   {
@@ -4272,6 +5367,18 @@
     ]
   },
   {
+    "objectID": "Lectures/10.html#albedo-of-a-water-iclicker",
+    "href": "Lectures/10.html#albedo-of-a-water-iclicker",
+    "title": "Radiation and heat transfer in water, snow and ice",
+    "section": "Albedo of a Water (iClicker)",
+    "text": "Albedo of a Water (iClicker)\nA smooth water surface will under clear (cloud-free) skies will have the highest albedo at:\n\nNoon\nSunset\nMidnight\nAll of the above",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Radiation and heat transfer in water, snow and ice"
+    ]
+  },
+  {
     "objectID": "Lectures/10.html#influence-of-waves-on-albedo",
     "href": "Lectures/10.html#influence-of-waves-on-albedo",
     "title": "Radiation and heat transfer in water, snow and ice",
@@ -4320,796 +5427,47 @@
     ]
   },
   {
-    "objectID": "Resources.html",
-    "href": "Resources.html",
-    "title": "Programming Resources",
+    "objectID": "Lectures/index.html",
+    "href": "Lectures/index.html",
+    "title": "Lecture Slides",
     "section": "",
-    "text": "In this course, I will rely heavily on examples that incorporate scientific programming. Some lecture slides will contain embedded Python and/or R code to help illustrate different concepts. Programming will also be helpful when completing your assignments. However, programming experience is not a prerequisite for this course.",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\n\n\n\n\n\n2024-03-06\n\n\n\n\n\n2024-03-11\n\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
-      "Syllabus",
-      "Programming Resources"
+      "Lectures",
+      "Lecture Slides"
     ]
   },
   {
-    "objectID": "Resources.html#python",
-    "href": "Resources.html#python",
-    "title": "Programming Resources",
-    "section": "Python",
-    "text": "Python\nPython is my personal preference. I like python because its very flexible, general-purpose programming language that is fairly easy to read / write. It is well suited for scientific programming and has lots of packages for data analysis and visualization, and it’s completely free! If you want to install Python on your own computer and don’t know where to start, I suggest you go with Anaconda. Its a scientific programming platform that will install python for you along with most of the commonly used extensions.",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#r",
-    "href": "Resources.html#r",
-    "title": "Programming Resources",
-    "section": "R",
-    "text": "R\nR is also a great option. It is a programming language that was developed specifically for statistical computing and graphics. This means its not a flexible as a langue like Python, but also that it can be a bit easier to use “out of the box” for specific applications, like data visualization. Personally, I find R a bit harder to read/write, but it is still fairly straightforward once you get a handle on the syntax. One advantage R has over python, is that its a bit easier to install. All you need to do to get setup is to install R and RStudio.",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#online-access",
-    "href": "Resources.html#online-access",
-    "title": "Programming Resources",
-    "section": "Online Access",
-    "text": "Online Access\nUBC also provides students with free server space that you can use at https://ubc.syzygy.ca/. This isn’t necessarily a viable long-term option for all your computing needs because it does come withe some storage limitations. However, it already comes with both Python and R installed, and will probably be sufficient for most things we’ll do in this course. So you can use it to try things out without installing anything on your own computer.",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#albedo",
-    "href": "Resources.html#albedo",
-    "title": "Programming Resources",
-    "section": "Albedo",
-    "text": "Albedo\n\\[\nalbedo = \\alpha_{SW} = \\frac{SW_{\\uparrow}}{SW_{\\downarrow}}\n\\tag{1}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#beers-law",
-    "href": "Resources.html#beers-law",
-    "title": "Programming Resources",
-    "section": "Beers Law",
-    "text": "Beers Law\n\\[\nR_z = R_0 e^{-z\\mu}\n\\tag{2}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#le-bowen",
-    "href": "Resources.html#le-bowen",
-    "title": "Programming Resources",
-    "section": "LE Bowen",
-    "text": "LE Bowen\n\\[\nLE = \\frac{R_n-G}{1+B}\n\\tag{3}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#h-bowen",
-    "href": "Resources.html#h-bowen",
-    "title": "Programming Resources",
-    "section": "H Bowen",
-    "text": "H Bowen\n\\[\nH = \\frac{R_n-G}{1+B^{-1}}\n\\tag{4}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#bowen-ratio",
-    "href": "Resources.html#bowen-ratio",
-    "title": "Programming Resources",
-    "section": "Bowen Ratio",
-    "text": "Bowen Ratio\n\\[\nB = \\frac{H}{LE}\n\\tag{5}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#bulk-transmissivity",
-    "href": "Resources.html#bulk-transmissivity",
-    "title": "Programming Resources",
-    "section": "Bulk Transmissivity",
-    "text": "Bulk Transmissivity\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{6}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-equation-radiation",
-    "href": "Resources.html#conservation-equation-radiation",
-    "title": "Programming Resources",
-    "section": "Conservation Equation Radiation",
-    "text": "Conservation Equation Radiation\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{7}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-law-scalar-1d",
-    "href": "Resources.html#conservation-law-scalar-1d",
-    "title": "Programming Resources",
-    "section": "Conservation Law Scalar 1D",
-    "text": "Conservation Law Scalar 1D\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + w \\frac{\\partial c}{\\partial z}\n\\tag{8}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-law-scalar-homogeneous-2",
-    "href": "Resources.html#conservation-law-scalar-homogeneous-2",
-    "title": "Programming Resources",
-    "section": "Conservation Law Scalar Homogeneous 2",
-    "text": "Conservation Law Scalar Homogeneous 2\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{white}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{9}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-law-scalar-homogeneous",
-    "href": "Resources.html#conservation-law-scalar-homogeneous",
-    "title": "Programming Resources",
-    "section": "Conservation Law Scalar Homogeneous",
-    "text": "Conservation Law Scalar Homogeneous\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} \\color{gray}{+ u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y}} + w \\frac{\\partial c}{\\partial z}\n\\tag{10}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-law-scalar",
-    "href": "Resources.html#conservation-law-scalar",
-    "title": "Programming Resources",
-    "section": "Conservation Law Scalar",
-    "text": "Conservation Law Scalar\n\\[\n\\frac{dc}{dt} = \\frac{\\partial c}{\\partial t} + u \\frac{\\partial c}{\\partial x} + v \\frac{\\partial c}{\\partial y} + w \\frac{\\partial c}{\\partial z}\n\\tag{11}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#conservation-law-simplified",
-    "href": "Resources.html#conservation-law-simplified",
-    "title": "Programming Resources",
-    "section": "Conservation Law Simplified",
-    "text": "Conservation Law Simplified\n\\[\nIn - Out = \\Delta S\n\\tag{12}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#cosine-law-of-illumination",
-    "href": "Resources.html#cosine-law-of-illumination",
-    "title": "Programming Resources",
-    "section": "Cosine Law of Illumination",
-    "text": "Cosine Law of Illumination\n\\[\nR_s = R_p cos(Z)\n\\tag{13}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#damping-depth",
-    "href": "Resources.html#damping-depth",
-    "title": "Programming Resources",
-    "section": "Damping Depth",
-    "text": "Damping Depth\n\\[\nD = \\sqrt{\\small\\frac{2K}{\\omega}} = \\sqrt{\\small\\frac{KP}{\\pi}}\n\\tag{14}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#energy-of-photon",
-    "href": "Resources.html#energy-of-photon",
-    "title": "Programming Resources",
-    "section": "Energy of Photon",
-    "text": "Energy of Photon\n\\[\ne = hv\n\\tag{15}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#extraterrestrial-irradiance",
-    "href": "Resources.html#extraterrestrial-irradiance",
-    "title": "Programming Resources",
-    "section": "Extraterrestrial Irradiance",
-    "text": "Extraterrestrial Irradiance\n\\[\nI_{ex}=I_0(\\frac{R_{av}}{R})^2\\cos(Z)\n\\tag{16}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#adjusted-constant",
-    "href": "Resources.html#adjusted-constant",
-    "title": "Programming Resources",
-    "section": "Adjusted Constant",
-    "text": "Adjusted Constant\n\\[\n\\begin{eqnarray}(\\frac{R_{av}}{R})^2 = & 1.00011+0.034221\\cos(\\gamma)+0.001280\\sin(\\gamma)+\\\\                     &0.000819\\cos(2\\gamma)+0.000077\\sin(2\\gamma)\\end{eqnarray}\n\\tag{17}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#fouriers-law",
-    "href": "Resources.html#fouriers-law",
-    "title": "Programming Resources",
-    "section": "Fouriers Law",
-    "text": "Fouriers Law\n\\[\nH_G = -k \\small\\frac{T_2 - T_1}{z_2 - z_1}\n\\tag{18}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#frequency",
-    "href": "Resources.html#frequency",
-    "title": "Programming Resources",
-    "section": "Frequency",
-    "text": "Frequency\n\\[\nv=\\frac{c}{\\lambda}\n\\tag{19}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#heat-capacity-soil",
-    "href": "Resources.html#heat-capacity-soil",
-    "title": "Programming Resources",
-    "section": "Heat Capacity Soil",
-    "text": "Heat Capacity Soil\n\\[\nC_{s}=C_{m}\\theta_{m}+C_{o}\\theta_{o}+C_{w}\\theta_{w}+C_{a}\\theta_{a}\n\\tag{20}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#heat-sharing",
-    "href": "Resources.html#heat-sharing",
-    "title": "Programming Resources",
-    "section": "Heat Sharing",
-    "text": "Heat Sharing\n\\[\n\\frac{H_g}{H} = \\frac{\\mu_g}{\\mu_a}\n\\tag{21}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#kelvin",
-    "href": "Resources.html#kelvin",
-    "title": "Programming Resources",
-    "section": "Kelvin",
-    "text": "Kelvin\n\\[\nT(K) = T(\\deg C) + 273.15\n\\tag{22}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#kirchhoffs-law",
-    "href": "Resources.html#kirchhoffs-law",
-    "title": "Programming Resources",
-    "section": "Kirchhoffs Law",
-    "text": "Kirchhoffs Law\n\\[\n\\zeta_{\\lambda} = \\epsilon_{\\lambda}\n\\tag{23}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#longwave-radiation-balance",
-    "href": "Resources.html#longwave-radiation-balance",
-    "title": "Programming Resources",
-    "section": "Longwave Radiation Balance",
-    "text": "Longwave Radiation Balance\n\\[\n\\zeta_{LW} + \\alpha_{LW} = 1\n\\tag{24}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#longwave-reflectivity",
-    "href": "Resources.html#longwave-reflectivity",
-    "title": "Programming Resources",
-    "section": "Longwave Reflectivity",
-    "text": "Longwave Reflectivity\n\\[\n\\alpha_{LW} = 1 - \\epsilon_{LW}\n\\tag{25}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#long-wave-flux-density-stefan-boltzman",
-    "href": "Resources.html#long-wave-flux-density-stefan-boltzman",
-    "title": "Programming Resources",
-    "section": "Long wave Flux Density Stefan Boltzman",
-    "text": "Long wave Flux Density Stefan Boltzman\n\\[\nLW^* = LW\\downarrow - \\epsilon_{LW}\\sigma_b T_s^4 -(1-\\epsilon_{LW})LW\\downarrow\n\\tag{26}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#long-wave-flux-density",
-    "href": "Resources.html#long-wave-flux-density",
-    "title": "Programming Resources",
-    "section": "Long wave Flux Density",
-    "text": "Long wave Flux Density\n\\[\nLW^* = LW\\downarrow - LW\\uparrow\n\\tag{27}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#ndvi",
-    "href": "Resources.html#ndvi",
-    "title": "Programming Resources",
-    "section": "NDVI",
-    "text": "NDVI\n\\[\nNDVI = \\frac{NIR-Red}{NIR+Red}\n\\tag{28}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#absorbed-sw",
-    "href": "Resources.html#absorbed-sw",
-    "title": "Programming Resources",
-    "section": "Absorbed SW",
-    "text": "Absorbed SW\n\\[\nSW^* = SW \\downarrow (1 - \\alpha)\n\\tag{29}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#net-absorbed-emitted-lw",
-    "href": "Resources.html#net-absorbed-emitted-lw",
-    "title": "Programming Resources",
-    "section": "Net Absorbed Emitted LW",
-    "text": "Net Absorbed Emitted LW\n\\[\nLW^* = \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{30}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#net-radiation-energy-balance",
-    "href": "Resources.html#net-radiation-energy-balance",
-    "title": "Programming Resources",
-    "section": "Net Radiation Energy Balance",
-    "text": "Net Radiation Energy Balance\n\\[\nR_n = SW \\downarrow (1 - \\alpha) + \\epsilon LW \\downarrow - \\epsilon \\sigma_b T_s^4\n\\tag{31}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#net-radiation-short",
-    "href": "Resources.html#net-radiation-short",
-    "title": "Programming Resources",
-    "section": "Net Radiation Short",
-    "text": "Net Radiation Short\n\\[\nR_n = SW^* + LW^*\n\\tag{32}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#net-radiation",
-    "href": "Resources.html#net-radiation",
-    "title": "Programming Resources",
-    "section": "Net Radiation",
-    "text": "Net Radiation\n\\[\nR_n = (SW \\downarrow - SW \\uparrow) + (LW \\downarrow - LW \\uparrow)\n\\tag{33}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#phase-shifted-sinusoidal-temperature-wave",
-    "href": "Resources.html#phase-shifted-sinusoidal-temperature-wave",
-    "title": "Programming Resources",
-    "section": "Phase Shifted Sinusoidal Temperature Wave",
-    "text": "Phase Shifted Sinusoidal Temperature Wave\n\\[\nT_{(z,t)}=\\overline{T_o}+\\Delta T_o e^{-z(\\small\\frac{\\omega}{2K})^{1/2}} \\sin(\\omega t - (\\small\\frac{\\omega}{2K})^{1/2}z)\n\\tag{34}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#planks-law",
-    "href": "Resources.html#planks-law",
-    "title": "Programming Resources",
-    "section": "Planks Law",
-    "text": "Planks Law\n\\[\nE = \\frac{2*h*c}{\\lambda^{5}}*\\frac{1}{e^{\\frac{h*c}{\\lambda*\\sigma_b*T}}-1}\n\\tag{35}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#prata",
-    "href": "Resources.html#prata",
-    "title": "Programming Resources",
-    "section": "Prata",
-    "text": "Prata\n\\[\n\\epsilon_a = [1-(1+zeta)\\exp{-(a+b\\zeta)^{0.5}}]\n\\tag{36}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#radiation-balance-air.qmd",
-    "href": "Resources.html#radiation-balance-air.qmd",
-    "title": "Programming Resources",
-    "section": "Radiation Balance Air.qmd",
-    "text": "Radiation Balance Air.qmd\n\\[\n\\Delta R_{n(\\Delta z)}=R_{n(z+\\Delta z)}-R_{n(z)}=C_a(\\frac{\\Delta T_a}{\\Delta t})_R \\Delta z\n\\tag{37}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#reflectivity",
-    "href": "Resources.html#reflectivity",
-    "title": "Programming Resources",
-    "section": "Reflectivity",
-    "text": "Reflectivity\n\\[\n\\alpha_\\lambda = \\frac{\\lambda_{reflected}}{\\lambda_{incident}}\n\\tag{38}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#reflectance-coefficient",
-    "href": "Resources.html#reflectance-coefficient",
-    "title": "Programming Resources",
-    "section": "Reflectance Coefficient",
-    "text": "Reflectance Coefficient\n\\[\n\\alpha_{\\lambda_1 \\rightarrow \\lambda_2} = \\frac{\\int_{\\lambda_1}^{\\lambda_2}\\alpha_\\lambda I_\\lambda d_\\lambda}{\\int_{\\lambda_1}^{\\lambda_2}I_\\lambda d_\\lambda}\n\\tag{39}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#relative-humidity",
-    "href": "Resources.html#relative-humidity",
-    "title": "Programming Resources",
-    "section": "Relative Humidity",
-    "text": "Relative Humidity\n\\[\nRH=\\frac{P_v}{P_v^*}\n\\tag{40}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#sinusoidal-temperature-wave",
-    "href": "Resources.html#sinusoidal-temperature-wave",
-    "title": "Programming Resources",
-    "section": "Sinusoidal Temperature Wave",
-    "text": "Sinusoidal Temperature Wave\n\\[\nT_{(o,t)}=\\overline{T_o}+\\Delta T_o \\sin(\\omega t)\n\\tag{41}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#soil-heat-flux-divergence",
-    "href": "Resources.html#soil-heat-flux-divergence",
-    "title": "Programming Resources",
-    "section": "Soil Heat Flux Divergence",
-    "text": "Soil Heat Flux Divergence\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  \\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\tag{42}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#soil-heat-flux",
-    "href": "Resources.html#soil-heat-flux",
-    "title": "Programming Resources",
-    "section": "Soil Heat Flux",
-    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\tag{43}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#soil-volume-fractions",
-    "href": "Resources.html#soil-volume-fractions",
-    "title": "Programming Resources",
-    "section": "Soil Volume Fractions",
-    "text": "Soil Volume Fractions\n\\[\n\\theta_a+\\theta_w+\\theta_g = 1\n\\tag{44}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#soil-volume-fractions-1",
-    "href": "Resources.html#soil-volume-fractions-1",
-    "title": "Programming Resources",
-    "section": "Soil Volume Fractions",
-    "text": "Soil Volume Fractions\n\\[\n\\theta_P = \\theta_a + \\theta_w = 1 - \\theta_g\n\\tag{45}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#organic-mineral",
-    "href": "Resources.html#organic-mineral",
-    "title": "Programming Resources",
-    "section": "Organic Mineral",
-    "text": "Organic Mineral\n\\[\n\\theta_g = \\theta_m + \\theta_o\n\\tag{46}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#solar-declination",
-    "href": "Resources.html#solar-declination",
-    "title": "Programming Resources",
-    "section": "Solar Declination",
-    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{47}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#fractional-year",
-    "href": "Resources.html#fractional-year",
-    "title": "Programming Resources",
-    "section": "Fractional Year",
-    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{48}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#solar-zenith",
-    "href": "Resources.html#solar-zenith",
-    "title": "Programming Resources",
-    "section": "Solar Zenith",
-    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{49}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#hour-angle",
-    "href": "Resources.html#hour-angle",
-    "title": "Programming Resources",
-    "section": "Hour Angle",
-    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{50}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
-    "href": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
-    "title": "Programming Resources",
-    "section": "Stefan Boltzman Law Grey Body Adjusted",
-    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{51}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#stefan-boltzman-law-grey-body",
-    "href": "Resources.html#stefan-boltzman-law-grey-body",
-    "title": "Programming Resources",
-    "section": "Stefan Boltzman Law Grey Body",
-    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{52}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#stefan-boltzman-law",
-    "href": "Resources.html#stefan-boltzman-law",
-    "title": "Programming Resources",
-    "section": "Stefan Boltzman Law",
-    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{53}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#surface-energy-balance-ice",
-    "href": "Resources.html#surface-energy-balance-ice",
-    "title": "Programming Resources",
-    "section": "Surface Energy Balance Ice",
-    "text": "Surface Energy Balance Ice\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\tag{54}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#surface-energy-balance-no-mass",
-    "href": "Resources.html#surface-energy-balance-no-mass",
-    "title": "Programming Resources",
-    "section": "Surface Energy Balance No Mass",
-    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{55}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#surface-energy-balance-storage",
-    "href": "Resources.html#surface-energy-balance-storage",
-    "title": "Programming Resources",
-    "section": "Surface Energy Balance Storage",
-    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{56}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#surface-energy-balance",
-    "href": "Resources.html#surface-energy-balance",
-    "title": "Programming Resources",
-    "section": "Surface Energy Balance",
-    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{57}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#tetens",
-    "href": "Resources.html#tetens",
-    "title": "Programming Resources",
-    "section": "Tetens",
-    "text": "Tetens\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\tag{58}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#thermal-admittance-v-temperature",
-    "href": "Resources.html#thermal-admittance-v-temperature",
-    "title": "Programming Resources",
-    "section": "Thermal Admittance v Temperature",
-    "text": "Thermal Admittance v Temperature\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\tag{59}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#thermal-admittance",
-    "href": "Resources.html#thermal-admittance",
-    "title": "Programming Resources",
-    "section": "Thermal Admittance",
-    "text": "Thermal Admittance\n\\[\n\\mu = \\sqrt{k C}\n\\tag{60}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#thermal-diffusivity",
-    "href": "Resources.html#thermal-diffusivity",
-    "title": "Programming Resources",
-    "section": "Thermal Diffusivity",
-    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{61}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#lmst",
-    "href": "Resources.html#lmst",
-    "title": "Programming Resources",
-    "section": "LMST",
-    "text": "LMST\n\\[\nLMST = (TZ) + (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{62}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#lat",
-    "href": "Resources.html#lat",
-    "title": "Programming Resources",
-    "section": "LAT",
-    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{63}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#delta-lat",
-    "href": "Resources.html#delta-lat",
-    "title": "Programming Resources",
-    "section": "Delta LAT",
-    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{64}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Resources.html#weins-law",
-    "href": "Resources.html#weins-law",
-    "title": "Programming Resources",
-    "section": "Weins Law",
-    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{65}\\]",
-    "crumbs": [
-      "Syllabus",
-      "Programming Resources"
-    ]
-  },
-  {
-    "objectID": "Study_Questions/02.html",
-    "href": "Study_Questions/02.html",
-    "title": "Study Question Set 02",
+    "objectID": "Study_Questions/01.html",
+    "href": "Study_Questions/01.html",
+    "title": "Study Question Set 01",
     "section": "",
-    "text": "Calculate Earth’s declination \\(\\delta\\) for the following dates: January 1, March 22, June 21, and December 31.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray}\n\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\\n         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\\n         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber\n\\end{eqnarray}\n\\tag{1}\\]\nwhere \\(\\gamma\\) is the fractional year and DOY is the day of the year:\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{2}\\]\n\\(\\rm{DOY}\\) is the number of the day of the year, which is 1 (January 1), 81 (March 22), 172 (June 21), and 365 (December 31) - assuming a non-leap year. Gamma is 0.00 (January 1), 1.38 (March 22), 2.94 (June 21), and 6.27 (December 31).\nDeclination changes throughout the year, but for a given date it is the same for the whole planet. \\(\\delta\\) is \\(0^{\\circ}\\) during the vernal and autumnal equinox, and \\(\\delta\\) is \\(\\pm 23.5^{\\circ}\\) (minimum / maximum) for the winter and summer solstices.\nInserting \\(\\gamma\\) into formula Equation 1 returns declinations of \\(\\delta = -23.1^{\\circ}\\) on January 1, \\(0.39^{\\circ}\\) on March 22, \\(23.5^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively. Note that formula Equation 1 returns \\(\\delta\\) in radians, so you have to multiply the result form Eq. by \\(\\frac{360}{2 \\pi}\\) to get degrees.\nInserting \\(\\emph{DOY}\\) into formula (Equation 2) returns declinations of \\(\\delta = -23.0^{\\circ}\\) on January 1, \\(-0.1^{\\circ}\\) on March 22, \\(23.4^{\\circ}\\) on June 21, and \\(-23.1^{\\circ}\\) on December 31, respectively, which is slightly different from the calculation above. This is because formula (\\(\\ref{E3}\\)) is . It assumes a circular orbit of Earth around the Sun.\n\n\n\n\nCalculate the Local Mean Solar Time (LMST) for Port Hardy, BC on Vancouver Island, if a regular 24h clock shows 14:00 on February 15th, and 08:00 on July 22nd.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nLocal mean solar time (LMST) is the geometric adjustment for the east-west location within the time zone (see Lecture 4 or reading package) to make sure that the sun path reaches it’s highest point at noon.\nPort Hardy’s longitude is \\(127^{\\circ}30^{\\prime}\\)W. It is located within the Pacific Standard Time Zone (PST) - similar to Vancouver - whose standard meridian is at \\(120^{\\circ}\\textrm{W} (=8 \\times 15^{\\circ})\\). The offset between PST and LMST is, in minutes:\n\\[\n\\begin{eqnarray}\n\\textrm{PST} - \\textrm{LST} = 4\\,\\textrm{min}/^{\\circ} \\times (120-127.5) = -30  \\textrm{min}\n\\end{eqnarray}\n\\]\nAt 14:00 on February 15th, we do have a LMST of 13:30. For 08:00 on July 22nd, we must additionally take into account the daylight saving time (Pacific Daylight Saving Time, PDT), that is PDT = PST + 1, hence 08:00 PDT = 07:00 PST. Again, subtract the 30 minutes, and we get a LMST of 06:30 for 08:00 on July 22nd.\n\n\n\n\nCalculate the Local Apparent Time (LAT) for the same location and times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe local apparent time, does - in addition to the above geometric adjustment for longitude - also take into account the effects the non-circular orbit and the fact that Earth’s rotational speed changes over a year. This is incorporated in the equation of time (see lecture 4, slide 12). The time offset between LMST and LAT, in minutes can be calculated using the formula given in Lecture 4, Slide 12:\n\\[\n\\begin{eqnarray}\n\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}  = && 229.18 \\times (0.000075 \\\\ &&+ 0.001868 \\cos \\gamma\n                - 0.032077 \\sin \\gamma \\\\\n               &&- 0.014615 \\cos(2\\gamma) - 0.040849 \\sin(2 \\gamma)\n\\end{eqnarray}\n\\]\nwhere \\(\\gamma\\) is again the fractional year in radians (see question 1) which is \\(\\gamma = 0.775\\) for February 15, and \\(\\gamma = 3.48\\) for July 22. The offset \\(\\Delta T_{\\rm{LAT}} = \\textrm{LMST} - \\textrm{LAT}\\) is -14.3 min for February 15 and -6.41 min for July 22. Hence, \\(\\rm{LAT} = \\rm{LMST} - \\Delta T_{\\rm{LAT}}\\), is 13:30 - (-14.3 min) = 13:44 for February 15 and 06:30 - (-6.41 min) = 6:36 for July 22.\n\n\n\n\nCalculate the solar altitude angle \\(\\beta\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe solar altitude \\(\\beta\\) can then be calculated by \\[\\begin{eqnarray*}\n\\sin \\beta = \\sin \\phi \\sin \\delta + \\cos \\phi \\cos \\delta \\cos h\n\\end{eqnarray*}\\] \\(\\phi\\) is the latitude (\\(50^{\\circ}72^{\\prime}\\)N for Port Hardy), \\(\\delta\\) is the declination (see above), and \\(h\\) is the hour angle: \\[\\begin{eqnarray*}\nh = 15^{\\circ} (12 - \\textrm{LAT})\n\\end{eqnarray*}\\] where LAT is the local apparent time (see above) in hours of the day, i.e. $h = 15^{} (12 - 13.44) = -21.6^{} $ for February 15, and \\(h = 15^{\\circ} (12 - 6.36) = +84.6^{\\circ}\\) for July 22.\nFor February 15: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (-12.8^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (-12.8^{\\circ}) \\cos (-21.6^{\\circ}) \\\\ &=& 0.403 \\\\\n\\beta &=& 23.74^{\\circ}\n\\end{eqnarray*}\\]\nFor July, 22: \\[\\begin{eqnarray*}\n\\sin \\beta &=& \\sin (50.72^{\\circ}) \\sin (20.39^{\\circ}) + \\cos (50.72^{\\circ})  \\cos (20.39^{\\circ}) \\cos (84.6^{\\circ}) \\\\&=& 0.325 \\\\\n\\beta &=& 18.99^{\\circ}\n\\end{eqnarray*}\\]\nPlease make sure you transform all degrees to radians if your calculator is set to radians.\n\n\n\n\nCalculate the extraterrestrial short-wave irradiance \\(SW_{Ex}\\) for the same location and those two times.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe extraterrestrial short-wave irradiance \\(SW_{Ex}\\) is related through the cosine law of illumination to the solar constant and the solar altitude \\(\\beta\\):\n\\[\n\\begin{eqnarray*}\nSW_{Ex} = I_0  \\left( \\frac{R_{av}}{R} \\right)^2 \\sin \\beta\n\\end{eqnarray*}\n\\]\n\\(I_0\\) is the solar constant (1366.5 W m\\(^{-2}\\)) and the term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) accounts for the non-circular orbit (changing distance over course of a year). \\(\\gamma\\) is the fractional year as defined above.\n\\[\n\\begin{eqnarray*}\n\\left( \\frac{R_{av}}{R} \\right)^2 &=& 1.00011 + 0.034221 \\cos(\\gamma) + 0.001280  \\sin(\\gamma) \\\\\n&& + 0.000719  \\cos(2 \\gamma) + 0.000077  \\sin( \\gamma)\n\\end{eqnarray*}\n\\]\nThe term \\(\\left( \\frac{R_{av}}{R} \\right)^2\\) is 1.02 on February 15 (Earth closer to the Sun than in the yearly average) and 0.97 (Earth further away from the Sun than in the yearly average).\n\\(SW_{Ex}\\) = \\(1366.5 \\times 1.02 \\times \\sin(23.74^{\\circ})\\) = 562 W m\\(^{-2}\\) on February 15, 08:00 PST and \\(SW_{Ex}\\) = \\(1366 \\times 0.97 \\times \\sin(18.99^{\\circ})\\) = 431 W m\\(^{-2}\\). Again, make sure you transform the solar altitude to radians if your calculator is set to radians.",
+    "text": "Let us write the general conservation equation for humidity in the air:\n\\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + u \\frac{\\partial \\rho_v}{\\partial x} + v \\frac{\\partial \\rho_v}{\\partial y} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nwhere \\(\\rho_v\\) is vapor density (same as absolute humidity). For the purpose of this set of questions, we assume there is no condensation or vaporization happening.\n\nWhat does the term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(\\frac{\\partial \\rho_v}{\\partial t}\\) describes the change in absolute humidity \\(\\partial \\rho_v\\) in time \\(\\partial t\\) and as such is the change in storage within the `volume’. Its unit is partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by time (in \\(\\rm{s}\\)), i.e. \\(\\rm{g} \\rm{m}^{-3} \\rm{s}^{-1}\\)\n\n\n\n\nWhat does the term \\(u \\frac{\\partial \\rho_v}{\\partial x}\\) describe, and what is the unit of the term?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe term \\(u\\frac{\\partial \\rho_v}{\\partial x}\\) describes transport of a humidity gradient along the \\(x\\)-axis by the wind. Its unit is wind speed (\\(\\rm{m}\\,\\rm{s}^{-1}\\)) times partial density of water vapor (\\(\\rm{g}\\,\\rm{m}^{-3}\\)) divided by distance (in \\(\\rm{m}\\)), i.e. again \\(\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\)\n\n\n\n\nAssume horizontally homogeneous conditions, and \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}\\). \\(u =  2\\,\\rm{m}\\,\\rm{s}^{-1}\\), \\(v =  0\\,\\rm{m}\\,\\rm{s}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) Is the air drying out, becoming more humid, or is the humidity staying constant?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHorizontally homogeneous conditions mean \\(\\frac{\\partial \\rho_v}{\\partial x} = 0\\) and \\(\\frac{\\partial \\rho_v}{\\partial y} = 0\\). So the conservation equation simplifies to: \\[\n0 = \\frac{\\partial \\rho_v}{\\partial t} + w \\frac{\\partial \\rho_v}{\\partial z}\n\\] or \\[\n\\frac{\\partial \\rho_v}{\\partial t} = - w \\frac{\\partial \\rho_v}{\\partial z}\n\\]\nInserting \\(\\frac{\\partial \\rho_v}{\\partial z} = -1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{m}^{-1}\\) and \\(w = 0.1 \\,\\rm{m}\\,\\rm{s}^{-1}\\) results in: \\[\n\\frac{\\partial \\rho_v}{\\partial t} = 0.1\\,\\rm{g}\\,\\rm{m}^{-3}\\,\\rm{s}^{-1}.\n\\]\nSo the `volume’ becomes more humid over time.",
     "crumbs": [
       "Study Questions",
-      "Study Question Set 02"
+      "Study Question Set 01"
     ]
   },
   {
-    "objectID": "Study_Questions/04.html",
-    "href": "Study_Questions/04.html",
+    "objectID": "Study_Questions/03.html",
+    "href": "Study_Questions/03.html",
+    "title": "Study Question Set 03",
+    "section": "",
+    "text": "The highest yearly total \\(I_{ex}\\) (extraterrestrial irradiance) is found at the Equator (\\(\\theta = 0^{\\circ}\\)) with \\(13.2\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\) and the lowest yearly total \\(I_{ex}\\) is at the Poles \\(\\theta = 90^{\\circ}\\), with \\(5.5\\,\\rm{GJ}\\,\\rm{m}^{-2}\\,\\rm{year}^{-1}\\). What are the implications of this?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis means that there is an energy gradient from the Equator to the Poles that creates a global circulation exchanging energy from low to high latitudes (ocean currents, general atmospheric circulation)\n\n\n\n\nThe highest daily total \\(I_{ex}\\) is found at the poles with \\(47\\) \\(\\,\\rm{MJ}\\,\\rm{m}^{-2}\\,\\) \\(\\rm{day}^{-1}\\) during the summer solstice. Why?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis is because the solar irradiance reaches the poles during the full 24h cycle.\n\n\n\n\nFor Vancouver, the highest instantaneous \\(I_{ex} \\approx 1190\\,\\rm{W}\\,\\rm{m}^{-2}\\) is found on the day of the summer solstice (Jun 22) at 12 LAT. When is the lowest value?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe lowest daily maximum would be on the winter solstice. But the annual minimum is (\\(0\\,\\rm{W}\\,\\rm{m}^{-2}\\)), which occurs during every nighttime period.\n\n\n\n\nUsing the radiation conservation equation we know that radiation of wavelength \\(\\lambda\\) incident upon a substance must either be transmitted through it, be reflected from its surface, or be absorbed. If a body is opaque and has an absorptivity coefficient for of 0.75 for \\(\\lambda=0.55 \\mu m\\): A. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.55 \\mu m\\), and B. what is \\(\\alpha_\\lambda\\) for \\(\\lambda=0.65 \\mu m\\)&gt;\n\n\\[\n\\zeta_\\lambda + \\Psi_\\lambda + \\alpha_\\lambda = 1\n\\tag{1}\\]\n\n\n\n\n\n\nTip\n\n\n\n\n\nA. If the body is opaque, then \\(\\Psi_{\\lambda} = 0\\) and: \\[\n\\begin{eqnarray}\n\\alpha_{\\lambda} + \\zeta_{\\lambda} &=& 1 \\nonumber \\\\\n\\alpha_{\\lambda} &=& 1 - \\zeta_{\\lambda}\n\\end{eqnarray}\n\\]\nso the reflectivity is \\(\\alpha_{\\lambda} = 1 - 0.75 = \\underline{0.25}\\).\nB. There isn’t enough information to answer the questions - the conservation equation applies per wavelength. It would be a reasonable assumption that the reflectivity at \\(\\lambda = 0.65 \\mu m\\) is similar to \\(\\lambda = 0.55 \\mu m\\) if you don’t have any further information, but there is no guarantee they are the same.\n\n\n\n\nIf incident PAR (Photosynthetically Active Radiation) is \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\) and plant canopy has the following characteristics: \\(\\Psi_{PAR}\\) = 0.08 and \\(\\alpha_{PAR}\\) = 0.11. How many mols of PAR will 1 m-2 the plant canopy absorb in one hour?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nWe use Equation 1 and solve for absorptivity: \\[\\begin{eqnarray}\n\\zeta_{\\rm{PAR}} = 1 - (\\Psi_{\\rm{PAR}} + \\alpha_{\\rm{PAR}})\n\\label{E3}\n\\end{eqnarray}\\] This results in \\(\\zeta_{\\rm{PAR}} = 1 - (0.08 + 0.11) = 0.81\\). Hence, the fraction of the incident radiation of \\(800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}\\) that is absorbed is 81%: \\[\\begin{eqnarray*}\n0.81 \\times 800\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} = \\underline{648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}} \\\\\n\\end{eqnarray*}\\]\nThere are 3600 seconds in an hour and 1,000,000 \\(\\mu mol\\) per mol, so assuming PAR doesn’t change over this period:\n\\[\n648\\,\\mu \\rm{mol}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2} * 3600 \\frac{s}{h} * \\frac{1 mol}{1000000 \\mu mol} = 2.3328\\, mol\\, \\rm{m}^{-2}\n\\]\n\n\n\n\nIf \\(I_{ex} = 562\\,\\rm{W}\\,\\rm{m}^{-2}\\), \\(SW_\\downarrow = 298\\,\\rm{W}\\,\\rm{m}^{-2}\\) and the sun angle \\(\\beta = 23.74^{\\circ}\\), determine the bulk transmissivity of atmosphere:\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\nSW_\\downarrow = I_{ex} \\Psi_a^{m}\n\\tag{2}\\]\nwhere\n\\[\nm = \\frac{1}{\\cos(Z)} = \\frac{1}{\\sin(\\beta)}\n\\]\nwe use \\(\\beta = 23.74^{\\circ}\\) and \\(\\sin \\beta = 0.403\\) from Study Question Set 4, Question 4 and get \\(m\\) = 2.481. We insert this in Equation 2:\n\\[\\begin{eqnarray}\n\\Psi_a &=& \\left( \\frac{298\\,\\rm{W}\\,\\rm{m}^{-2}}{562\\,\\rm{W}\\,\\rm{m}^{-2}} \\right) ^{\\frac{1}{2.481}} = \\underline{0.77}\n\\end{eqnarray}\\]\n\n\n\n\nWe use \\(\\Psi_a = 0.77\\) from determine \\(SW\\downarrow\\) at the surface if \\(I_{ex} = 439 \\,\\rm{W}\\,\\rm{m}^{-2}\\) and the zenith angle \\(Z = 71.6^{\\circ}\\):\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nFollowing Equation 2:\n\\[\\begin{eqnarray}\nK_{\\downarrow} &=& 439 \\,\\rm{W}\\,\\rm{m}^{-2} \\times 0.77^{3.17} = \\underline{191 \\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray}\\]",
+    "crumbs": [
+      "Study Questions",
+      "Study Question Set 03"
+    ]
+  },
+  {
+    "objectID": "Study_Questions/05.html",
+    "href": "Study_Questions/05.html",
     "title": "Study Question Set 04",
     "section": "",
-    "text": "The specific heat of water is \\(c_p = 4.18 kJ kg^{-1} K^{-1}\\). Calculate the heat capacity \\(C\\) of water.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(C = \\rho c_p\\), where \\(\\rho\\) is the density of the material. For water we know that \\(\\rho = 1 \\times 10^3\\, \\rm{kg}\\, \\rm{m}^{-3}\\) (i.e. \\(1\\,\\rm{kg} = 1 \\ell = 10 \\times 10 \\times 10\\, \\rm{cm}\\)), therefore \\(4.180 \\times 10^{3}\\, \\rm{J}\\, \\rm{kg}^{-1}\\) K\\(^{-1}\\) \\(\\times\\) \\(10^3\\, \\rm{kg} \\, \\rm{m}^{-3}\\) = .\n\n\n\n\nCalculate the heat capacity \\(C\\) of a dry mineral soil with a porosity of 55%. Use values from the table in Lecture.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P\\) = 55% for a dry soil means \\(\\theta_a = 0.55\\) and \\(\\theta_{m} = 1 - \\theta_a = 0.45\\): \\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_a\\,C_a \\\\\n&\\approx& \\theta_m\\,C_m \\\\\n&=& 0.45 \\times 2.1 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&=& \\underline{0.945\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\nSubscripts \\(a\\) and \\(m\\) refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (\\(\\theta_a\\,C_a = 0.45 \\times 0.0012 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 0.00066 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\)) and can be neglected.\n\n\n\n\nCalculate the heat capacity \\(C\\) for the same soil if it is completely saturated.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P\\) = 55% for the saturated case means \\(\\theta_w = 0.55\\) and \\(\\theta_{m} = 1 - \\theta_w = 0.45\\):\n\\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_w\\,C_w \\\\\n&=& 0.45 \\times 2.1 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 0.55 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& 0.945\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 2.299\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&=& \\underline{3.24\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\nSubscripts \\(a\\) and \\(m\\) refer to air and mineral matter, respectively. Note, the second term is small compared to the first one (\\(\\theta_a\\,C_a = 0.45 \\times 0.0012 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 0.00066 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\)) and can be neglected.\n\n\n\n\nCalculate the heat capacity \\(C\\) of a partly saturated soil with \\(P = 50\\%\\), \\(\\theta_a = 0.30\\) and an organic to mineral ratio of 1.5. Again, use the table in Lecture.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(P = 50\\%\\) and \\(\\theta_a = 0.30\\) means \\(\\theta_{w} = P - \\theta_a = 0.20\\). An organic to mineral ratio of 1.5 (3/2) means \\((1-P) = 0.5\\) is made up of 0.3 \\(\\theta_{o}\\) and 0.2 \\(\\theta_{m}\\):\n\\[\n\\begin{eqnarray*}\nC &=& \\theta_m\\,C_m + \\theta_o\\,C_o + \\theta_w\\,C_w \\\\\n&=& 0.3 \\times 2.{5}\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\n+ 0.2 \\times 2.{1} \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\\\\n&& + 0.2 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& \\underline{{2.0}\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nIf you increase the soil volumetric water content \\(\\theta_w\\) of any soil by 0.1, how does the heat capacity \\(C\\) of the soil change?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(\\Delta \\theta_w = 0.1\\):\n\\[\n\\begin{eqnarray*}\n\\Delta C &=& \\Delta \\theta_w\\,C_w \\\\\n&=& 0.1 \\times 4.18 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}  \\\\\n&=& \\underline{0.418\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\\(C\\) of the soil will increase by \\(0.418\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\).\n\n\n\n\nAssume we have a soil with \\(C = 2\\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\) and we measure a soil heat flux density \\(Q_G\\) of \\(+100\\,\\rm{W}\\,\\rm{m}^{-2}\\) all going to the first 10 cm of the soil, how fast would the layer 0-10 cm heat up?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe warming rate of a material is defined by:\n\\[\n\\begin{eqnarray*}\n\\frac{\\Delta T}{\\Delta t} = \\frac{1}{C}\\, \\frac{\\Delta Q_G}{\\Delta z}\n\\end{eqnarray*}\n\\]\n\\(Q_G\\) at 0 cm depth (surface) is \\(+100\\,\\rm{W}\\,\\rm{m}^{-3}\\), \\(Q_G\\) at 10 cm must be zero because there is no energy distributed to lower layers, i.e. only topmost 10 cm experience heating, hence \\(\\Delta Q_G = 100\\,\\rm{W}\\,\\rm{m}^{-2} - 0\\,\\rm{W}\\,\\rm{m}^{-2} = 100\\,\\rm{W}\\,\\rm{m}^{-2}\\) (same as \\(\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}\\)):\n\\[\n\\begin{eqnarray*}\n\\frac{\\Delta T}{\\Delta t} = \\frac{100\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}}{2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} \\times 0.1 \\rm{m}} = 0.0005 \\,\\rm{K}\\,\\rm{s}^{-1} =  \\underline{1.8 \\,\\rm{K}\\,\\rm{h}^{-1}}.\n\\end{eqnarray*}\n\\]\n\n\n\n\nWrite Fourier’s law and explain it briefly.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nFourier’s Law: \\(Q_{G} = -k\\,\\Delta T/\\Delta z = -k(T_{2}-T_{1})/(z_{2}-z_{1})\\). It states that the flow rate of heat conducted through a solid material (or still fluid) is proportional to the temperature gradient.\n\n\n\n\nIn a dry and uniform mineral soil with a porosity of 55%, we measure soil temperatures \\(T_1\\) at 2 cm and \\(T_2\\) at 6 cm. \\(T_1 = 20 \\rm{^{\\circ}C}\\), \\(T_2 = 18.5 \\rm{^{\\circ}C}\\). Calculate the soil heat flux density \\(Q_G\\) assuming a thermal conductivity of \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nUse Fourier’s Law:\n\\[\n\\begin{eqnarray*}\nQ_G = - k\\, \\frac{\\Delta T}{\\Delta z}\n\\end{eqnarray*}\n\\]\nYou insert the thermal conductivity of \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\):\n\\[\n\\begin{eqnarray*}\nQ_G &=& - 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\, \\frac{20\\rm{^{\\circ}C}-18.5\\rm{^{\\circ}C}}{0.02\\,\\rm{m} - 0.06\\,\\rm{m}} \\\\\n&=& - 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\, \\frac{1.5\\rm{K}}{-0.04\\,\\rm{m}} \\\\\n&=& \\underline{10.1\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nAt 5 cm depth we measure a soil heat flux density \\(Q_G = 20 \\,\\rm{W}\\,\\rm{m}^{-2}\\) and simultaneously a temperature gradient of -0.5 K\\(\\,\\rm{cm}^{-1}\\). Calculate the thermal conductivity \\(k\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nAgain we use Fourier’s Law, but rearranged:\n\\[\n\\begin{eqnarray*}\n- Q_G \\frac{\\Delta z}{\\Delta T} = k\n\\end{eqnarray*}\n\\]\nWe can directly plug-in the inverse of the gradient \\(\\Delta T/\\Delta z = -0.5\\, \\rm{K}\\,\\rm{cm}^{-1}\\) into \\(\\Delta z/\\Delta T\\): \\[\n\\begin{eqnarray*}\nk &=&  -20\\,\\rm{W}\\,\\rm{m}^{-2} \\times -0.02\\, \\rm{K}\\,\\rm{m}^{-1} \\\\\n&=& \\underline{\\textcolor{red}{+} 0.4\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nFor a soil with a specific heat \\(c_p =\\) 1.8 kJ kg\\(^{-1}\\) K\\(^{-1}\\), a density \\(\\rho =\\) 1.4 Mg m\\(^{-3}\\), and a thermal conductivity \\(k = 0.4\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\), calculate the thermal diffusivity \\(K\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe thermal diffusivity \\(K\\) tells us how quickly temperature waves propagate down into the soil, and \\(K\\) is defined by:\n\\[\n\\begin{eqnarray*}\nK &=& \\frac{k}{C} = \\frac{k}{\\rho\\,c_p} \\\\\n&=& \\frac{0.4\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}}{1.4\\times 10^{3}\\, \\rm{kg}\\, \\rm{m}^{-3}\\,1.8 \\times 10^{3}\\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}} \\\\\n&=& \\underline{0.16 \\times 10^{-6}\\,\\rm{m}^{2}\\,\\rm{s}^{-1}}\n\\end{eqnarray*}\n\\]\nNote the fine - but important - difference between the symbol \\(k\\) for thermal conductivity (Latin k’) and the symbol \\(K\\) for thermal diffusivity.\n\n\n\n\nCalculate the thermal admittance \\(\\mu\\) for the same soil.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe thermal admittance \\(\\mu\\) is strictly speaking a surface property. It defines how well a surface can accept or release heat.\n\\[\n\\begin{eqnarray*}\n\\mu &=& \\sqrt{k\\,C} = \\sqrt{k\\,\\rho\\, c_p} \\\\\n&=& \\sqrt{0.4\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1} \\times 1.4 \\times 10^{3}\\, \\rm{kg}\\, \\rm{m}^{-3} \\times 1.8 \\times 10^{3}\\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}} \\\\\n&=& \\sqrt{1.008 \\times 10^{6}  \\,\\rm{J}^{2} \\,\\rm{m}^{-4} \\,\\rm{K}^{-2}  \\,\\rm{s}^{-1}} \\\\\n&=& \\underline{1004 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nAssume we know a soil’s dry fraction of organic material ($f_o = $25%), and its bulk density (_s = 1.4 \\(\\,\\rm{Mg}\\,\\rm{m}^{-3}\\)). What is the mass of organic (\\(M_o\\) ) and mineral material (\\(M_m\\)) contained in one cubic metre of this soil?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\(M_m\\) and \\(M_o\\) is the mass of mineral and organic material, respectively, in one \\(\\rm{m}^{3}\\) of soil.\nThe total mass of the dry soil \\(M\\) in one cubic-metre is given by the bulk density (_s = 1.4 \\(\\rm{Mg}\\,\\rm{m}^{-3}\\)):\n\\[\nM = M_m + M_o = \\rho_s \\times 1\\, \\rm{m}^3 = 1.4\\,\\rm{Mg}\\,\\rm{m}^{-3} \\times 1\\, \\rm{m}^3 = 1.4\\,\\rm{Mg}\n\\]\n\\(f_o\\) is the organic mass fraction (given: \\(f_o = 0.25\\)) which is the mass of organic material to the total mass\n\\[\nf_o =  \\frac{M_o}{M}  = \\frac{M_o}{M_o + M_m} = 0.25\n\\]\nsolving for \\(M_m\\) and \\(M_o\\):\n\\[\nM_m = M \\times (1 - f_o) = 1.4\\,\\rm{Mg} \\times (1 - 0.25) = 1.4\\,\\rm{Mg} \\times) 0.75 = 1.05 \\,\\rm{Mg}\n\\]\n\\[\nM_o = M \\times f_o = 1.4\\,\\rm{Mg} \\times 0.25 = 0.35\\,\\rm{Mg}\n\\]\n\n\n\n\nUsing the values of specific heat for organic (\\(c_o\\)) and mineral (\\(c_m\\)) given in the table of Lecture 10, slide 5, calculate the composite heat capacity (\\(C_s\\)) for the dry soil in Question 12.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nUsing the mass of organic and mineral material contained in one cubic metre (determined in Question 12), we can formulate the densities of organic (\\(\\rho_o\\)) and mineral material (\\(\\rho_m\\)) in the same soil:\n\\[\n\\rho_o = \\frac{M_o}{1\\rm{m}^{3} \\times \\theta_o}\n\\]\n\\[\n\\rho_m = \\frac{M_m}{1\\rm{m}^{3} \\times \\theta_m}\n\\]\nWhere \\((1\\rm{m}^{3} \\times \\theta_o)\\) is the volume of organic material in one cubic metre, and \\((1\\rm{m}^{3} \\theta_m)\\) is the volume of mineral material in one cubic metre.\nLecture 10, slide 5 provides \\(c_m = 0.8 \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}\\) and \\(c_o = 1.9 \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}\\). Using \\(C = \\rho c\\) allows us to then determine the heat capacity of organic (\\(C_o\\)) and mineral material (\\(C_m\\)) in this soil:\n\\[\nC_o = \\rho_o \\,c_o\n\\]\n\\[\nC_m = \\rho_m \\,c_m\n\\]\nThe composite heat capacity of the dry soil (\\(C_s\\)) is the sum of the compound heat capacities weighted by the respective volume fractions:\n\\[\nC_s = \\theta_o C_o  + \\theta_m C_m\n\\]\nreplacing \\(C_o\\) by \\(\\rho_o \\,c_o\\) (and same for \\(C_m\\)) then gives:\n\\[\nC_s = \\theta_o \\rho_o \\,c_o  + \\theta_m \\rho_m \\,c_m\n\\]\nreplacing \\(\\rho_o\\) by \\(\\frac{M_o}{1\\rm{m}^{3} \\theta_o}\\) (and same for \\(\\rho_m\\)) then gives:\n\\[\nC_s = \\theta_o \\frac{M_o}{1\\rm{m}^{3} \\theta_o} \\,c_o  + \\theta_m \\frac{M_m}{1\\rm{m}^{3}  \\theta_m} \\,c_m\n\\]\nNote that then \\(\\theta_o\\) and \\(\\theta_m\\) cancel out:\n\\[\nC_s =  \\frac{M_o}{1\\rm{m}^{3}} \\,c_o  + \\frac{M_m}{1\\rm{m}^{3}} \\,c_m\n\\]\nInserting the values:\n\\[\nC_s =  \\frac{ 0.35\\,\\rm{Mg}}{1\\rm{m}^{3}} \\, 1.9\\, \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1}  + \\frac{1.05 \\,\\rm{Mg}}{1\\rm{m}^{3}} \\,0.8 \\, \\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1} =\n\\]\n\\[\n0.665 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} + 0.84 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1} = 1.505 \\, \\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\n\\]\nWe learn from this exercise that generally we can rewrite the composite heat capacity of a soil (\\(C_s\\)) from using heat capacities of compound substances and volume fractions:\n\\[\nC_s = \\theta_o C_o  + \\theta_m C_m + ...\n\\]\nto using specific heat and known mass (\\(M_o\\), \\(M_m\\), etc.) of the compound substances in a soil volume \\(V_s\\):\n\\[\nC_s = \\frac{M_o}{V_s} \\,c_o  + \\frac{M_o}{V_s} \\,c_m + ...\n\\]\nwhere \\(V_s\\) is the volume of the soil, and \\(M_o\\) and \\(M_m\\) is the mass of organic and mineral material in the same volume \\(V_s\\). This has the advantage of avoiding assuming any specific denisty of organic and mineral material, which is difficult to determine practically.",
+    "text": "At 11:30 in the morning, we measure a soil heat flux density \\(H_{G(\\rm{5cm})}\\) of \\(25\\,\\rm{W}\\,\\rm{m}^{-2}\\) using a heat flux plate installed at 5 cm depth. Calculate the soil heat flux density at the surface \\(H_{G(\\rm{0})}\\), if the soil’s heat capacity in the layer from 0 to 5 cm depth is \\(2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\) and the temperature in the same layer changed from 24.8\\(^{\\circ}\\rm{C}\\) at 11:00 to 25.3\\(^{\\circ}\\rm{C}\\) at 12:00.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nAssume a uniform and linear warming rate of the soil: \\[\n\\frac{\\Delta T}{\\Delta t} = \\frac{25.3^{\\circ}\\rm{C} - 24.8^{\\circ}\\rm{C}}{1\\,\\rm{h}} \\\\\n= 0.5\\rm{K}\\,\\rm{h}^{-1} = 1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}\n\\]\nThe heat flux at the surface \\(H_{G(\\rm{0})}\\) is (Lecture 11, Slide 6):\n\\[\nH_{G(\\rm{0})} = H_{G(\\rm{5cm})} + C\\, \\frac{\\Delta T}{\\Delta t} \\Delta z \\\\\n= 25,\\rm{W}\\,\\rm{m}^{-2} + 2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\, \\times 1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}  \\times 0.05\\,\\rm{m} \\\\\n= 25\\,\\rm{W}\\,\\rm{m}^{-2} + 13.8\\,\\rm{W}\\,\\rm{m}^{-2} \\\\\n= \\underline{38.8\\,\\rm{W}\\,\\rm{m}^{-2}} \\\\\n\\]\n\n\n\n\nFor the same soil, at 20:30 in the evening, we measure a soil heat flux density \\(H_{G(\\rm{5cm})}\\) of \\(-12\\,\\rm{W}\\,\\rm{m}^{-2}\\). Calculate the soil heat flux density at the surface \\(H_{G(\\rm{0})}\\), if the temperature in the layer from 0 to 5 cm depth changed from 7.5 at 20:00 to 7.0\\(^{\\circ}\\rm{C}\\) at 21:00.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nNow we have a cooling rate (i.e. negative change of temperature over time): \\[\n\\frac{\\Delta T}{\\Delta t} = \\frac{7.0^{\\circ}\\rm{C} - 7.5^{\\circ}\\rm{C}}{1\\,\\rm{h}} \\\\\n= -0.5\\rm{K}\\,\\rm{h}^{-1} = -1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}\n\\]\nSimilar to the first example, the heat flux at the surface is: \\[\nH_{G(\\rm{0})}  = H_{G(\\rm{5cm})} + C\\, \\frac{\\Delta T}{\\Delta t} \\Delta z \\\\\n= -12\\,\\rm{W}\\,\\rm{m}^{-2} + 2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\, \\times \\left( -1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1} \\right) \\times 0.05\\,\\rm{m} \\\\\n= -12\\,\\rm{W}\\,\\rm{m}^{-2} + (-13.88\\,\\rm{W}\\,\\rm{m}^{-2})  \\\\\n= \\underline{-25.9\\,\\rm{W}\\,\\rm{m}^{-2}} \\\\\n\\]\n\n\n\n\nWhat is meant by heat sharing?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHeat sharing refers to how the soil and the atmosphere (or two other materials) share in accepting sensible heat (i.e. \\(R_n\\) - \\(LE\\)) during the daytime and share in releasing it at night. Heat sharing is determined by the ratio of the thermal admittances of the two materials (Lecture 11, slides 13): \\[\n\\frac{H}{H_g} = \\frac{\\mu_a}{\\mu_s}\n\\]\nwhere \\(\\mu_s\\) is the thermal admittance of the soil and \\(\\mu_a\\) is the thermal admittance of the atmosphere.\n\n\n\n\nCalculate the sensible heat flux \\(H\\) at 11:30 for the example in Question 1, if the soil’s thermal conductivity is \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\) and the atmospheric thermal admittance \\(\\mu_a\\) is \\(\\approx 5000 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nRearrange the heat sharing equation from above:\n\\[\nH = H_G \\times \\frac{\\mu_a}{\\mu_s}\n\\]\nWe can calculate \\(\\mu_s\\) by:\n\\[\n\\mu_s = \\sqrt{k\\,C} \\\\\n= \\sqrt{0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1} \\times 2 \\times 10^{6} \\,\\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}} \\\\\n= 735 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}\n\\]\nHence:\n\\[\nH = H_G \\times \\frac{\\mu_a}{\\mu_s} \\\\\n= 38.8\\,\\rm{W}\\,\\rm{m}^{-2} \\times \\frac{5000 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}}{735 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}} \\\\\n= \\underline{283\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\]",
     "crumbs": [
       "Study Questions",
       "Study Question Set 04"
-    ]
-  },
-  {
-    "objectID": "Lectures/10.html#albedo-of-a-water-iclicker",
-    "href": "Lectures/10.html#albedo-of-a-water-iclicker",
-    "title": "Radiation and heat transfer in water, snow and ice",
-    "section": "Albedo of a Water (iClicker)",
-    "text": "Albedo of a Water (iClicker)\nA smooth water surface will under clear (cloud-free) skies will have the highest albedo at:\n\nNoon\nSunset\nMidnight\nAll of the above",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Radiation and heat transfer in water, snow and ice"
     ]
   }
 ]

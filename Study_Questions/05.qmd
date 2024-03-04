@@ -1,0 +1,91 @@
+---
+title: Study Question Set 04
+subtitle: More on Heat Fluxes
+---
+
+(@) At 11:30 in the morning, we measure a soil heat flux density $H_{G(\rm{5cm})}$ of $25\,\rm{W}\,\rm{m}^{-2}$ using a heat flux plate installed at 5 cm depth. Calculate the soil heat flux density at the surface $H_{G(\rm{0})}$, if the soil's heat capacity in the layer from 0 to 5 cm depth is $2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}$ and the temperature in the same layer changed from 24.8$^{\circ}\rm{C}$ at 11:00 to 25.3$^{\circ}\rm{C}$ at 12:00.
+
+
+::: {.callout-tip collapse="true"}
+
+Assume a uniform and linear warming rate of the soil:
+$$
+\frac{\Delta T}{\Delta t} = \frac{25.3^{\circ}\rm{C} - 24.8^{\circ}\rm{C}}{1\,\rm{h}} \\
+ = 0.5\rm{K}\,\rm{h}^{-1} = 1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} 
+$$
+
+The heat flux at the surface $H_{G(\rm{0})}$ is (Lecture 11, Slide 6):
+
+$$
+H_{G(\rm{0})} = H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
+= 25,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times 1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1}  \times 0.05\,\rm{m} \\
+= 25\,\rm{W}\,\rm{m}^{-2} + 13.8\,\rm{W}\,\rm{m}^{-2} \\
+= \underline{38.8\,\rm{W}\,\rm{m}^{-2}} \\
+$$
+
+:::
+
+(@) For the same soil, at 20:30 in the evening, we measure a soil heat flux density $H_{G(\rm{5cm})}$ of $-12\,\rm{W}\,\rm{m}^{-2}$. Calculate the soil heat flux density at the surface $H_{G(\rm{0})}$, if the temperature in the layer from 0 to 5 cm depth changed from 7.5 at 20:00 to 7.0$^{\circ}\rm{C}$ at 21:00.
+
+
+::: {.callout-tip collapse="true"}
+
+Now we have a cooling rate (i.e. negative change of temperature over time):
+$$
+\frac{\Delta T}{\Delta t} = \frac{7.0^{\circ}\rm{C} - 7.5^{\circ}\rm{C}}{1\,\rm{h}} \\
+= -0.5\rm{K}\,\rm{h}^{-1} = -1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} 
+$$
+
+Similar to the first example, the heat flux at the surface is:
+$$
+H_{G(\rm{0})}  = H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
+ = -12\,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times \left( -1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} \right) \times 0.05\,\rm{m} \\
+ = -12\,\rm{W}\,\rm{m}^{-2} + (-13.88\,\rm{W}\,\rm{m}^{-2})  \\
+ = \underline{-25.9\,\rm{W}\,\rm{m}^{-2}} \\
+$$
+
+
+:::
+
+(@) What is meant by **heat sharing**?
+
+::: {.callout-tip collapse="true"}
+
+Heat sharing refers to how the soil and the atmosphere (or two other materials) share
+in accepting sensible heat (i.e. $R_n$ - $LE$) during the
+daytime and share in releasing it at night. Heat sharing is determined by the ratio of the thermal admittances of the two materials (Lecture 11, slides 13):
+$$
+\frac{H}{H_g} = \frac{\mu_a}{\mu_s}
+$$
+
+where $\mu_s$ is the thermal admittance of the soil and $\mu_a$ is the thermal admittance of the atmosphere.
+
+:::
+
+(@) Calculate the sensible heat flux $H$ at 11:30 for the example in Question 1, if the soil's thermal conductivity is $k = 0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1}$ and the atmospheric thermal admittance $\mu_a$ is $\approx 5000 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}$.
+
+::: {.callout-tip collapse="true"}
+
+Rearrange the heat sharing equation from above:
+
+$$ 
+H = H_G \times \frac{\mu_a}{\mu_s} 
+$$ 
+
+We can calculate $\mu_s$ by:
+
+$$ 
+\mu_s = \sqrt{k\,C} \\
+ = \sqrt{0.27\,\rm{W}\,\rm{m}^{-1}\,\rm{K}^{-1} \times 2 \times 10^{6} \,\rm{J}\,\rm{m}^{-3}\,\rm{K}^{-1}} \\
+ = 735 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}
+$$ 
+
+Hence:
+
+$$ 
+H = H_G \times \frac{\mu_a}{\mu_s} \\
+= 38.8\,\rm{W}\,\rm{m}^{-2} \times \frac{5000 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}}{735 \,\rm{J} \,\rm{m}^{-2} \,\rm{K}^{-1} \,\rm{s}^{-1/2}} \\
+= \underline{283\,\rm{W}\,\rm{m}^{-2}}
+$$ 
+
+:::

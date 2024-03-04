@@ -239,6 +239,12 @@ $$
 RH=\frac{P_v}{P_v^*}
 $${#eq-Relative-Humidity}
 
+## Shear Stress
+
+$$
+\tau = \mu\small\frac{\delta u}{\delta z}
+$${#eq-Shear-Stress}
+
 ## Sinusoidal Temperature Wave
 
 $$
