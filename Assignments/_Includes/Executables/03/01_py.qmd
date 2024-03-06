@@ -1,0 +1,20 @@
+
+
+```{python}
+
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
+TimeStamp = '200008191630'
+# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
+Turbulence = pd.read_csv(
+    f'{data_url}turbulence{TimeStamp}.txt',skiprows=7,
+    parse_dates={'TIMESTAMP':['YYYY-MM-DD HH:MM:SS']},index_col='TIMESTAMP',na_values=-9999)
+
+Wind = pd.read_csv(
+    f'{data_url}wind{TimeStamp}.txt',skiprows=6,na_values=-9999)
+
+print('Data imported and gap-filled successfully.')
+
+Wind.head()
+```

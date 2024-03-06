@@ -185,3 +185,60 @@ P = 60 * 60 * 24
 # Solve
 omega_a = 2*pi/P
 sprintf('Angular Frequncy of a year %0.3e s-1',omega_a)
+
+
+
+#| warning: false
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.
+
+
+# # We have to parse the timestamp explicitly to convert it to a "time aware" object
+
+# # All sub-surface data were collected at the same frequency (15-minute intervals).  
+# # However, H data were only available at 30-minute resolution.  
+# # So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   
+# # Use linear interpolation to estimate missing H values where available
+# df$H_filled = na.approx(df$H,na.rm=FALSE)
+# # Backfill where linear interpolation didn't work (the first observation)
+# df$H_filled = na.locf(df$H_filled,fromLast=TRUE)
+
+# print('Data imported and gap-filled successfully.')
+data_url='C:/Users/User/Teaching/GEOS300/Assignment03/'
+Time = '200008021530'
+Turbulence = sprintf('%sturbulence%s.txt',data_url,Time)
+df_Turbulence <- read.csv(file = Turbulence,na.strings="-9999",skip=7)
+df_Turbulence$TIMESTAMP <- as.POSIXct(df_Turbulence$YYYY.MM.DD.HH.MM.SS.,format = "%Y-%m-%d %H:%M%:%s")
+head(df_Turbulence)
+
+
+Wind = sprintf('%swind%s.txt',data_url,Time)
+df_Wind <- read.csv(file = Wind,na.strings="-9999",skip=6)
+head(df_Wind)
+
+
+
+
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
+TimeStamp = '200008191630'
+
+
+Turbulence <- read.csv(file = sprintf('%sturbulence%s.txt',data_url,Time),
+                        na.strings="-9999",skip=7)
+Turbulence$TIMESTAMP <- as.POSIXct(Turbulence$YYYY.MM.DD.HH.MM.SS,format = "%Y-%m-%d %H:%M:%S")
+Turbulence=Turbulence[,!(names(Turbulence) %in% c('YYYY.MM.DD.HH.MM.SS'))]
+
+Wind <- read.csv(file = sprintf('%swind%s.txt',data_url,Time),
+                na.strings="-9999",skip=6)
+
+print('Data imported and gap-filled successfully.')
+
+
+Wind$lnz <- log(Wind$Height..m.)
+Wind$U <- Wind$Horizontal.wind.velocity..m.s.
+
+modelFit <- lm(lnz~U,data=Wind)
+summary(modelFit)
+Wind

@@ -1,0 +1,13 @@
+
+```{r}
+#| warning: false
+
+p1 <- ggplot()+ # < Do something here to plot your data
+  geom_line()+ 
+  xlim(0,4)+
+  scale_y_log10(limits = c(1e-2,10))
+p1
+
+p1 + plot_annotation(sprintf('Student # %i',Student.Number))
+
+```

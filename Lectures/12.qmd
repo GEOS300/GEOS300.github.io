@@ -42,6 +42,14 @@ Turbulence – how energy and mass is exchange (energy, mass, GHGs, pollutants, 
 * Explain where the energy for turbulent motions comes from.
 * Explain whether the characteristics of a turbulent flow depend on the processes causing them.
 
+## Midterm (iClicker)
+
+Will today's material be on the mid-term?
+
+* A - Yes
+* B - No
+
+
 ## Reynold’s number (Re) {.smaller}
 
 
@@ -491,6 +499,14 @@ TKE can be produced by fluid shear, friction or buoyancy. Turbulence kinetic ene
 
 
 :::
+
+## Turbulence (iClicker)
+
+Parcel of cool air moving over a 5 m tall tree canopy at 10 m s<sup>-1</sup>  on a hot, sunny day would experience:
+
+* A - Mechanical Convection
+* B - Thermal Convection
+* C - Both!
 
 
 

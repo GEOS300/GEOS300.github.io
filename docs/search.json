@@ -814,6 +814,18 @@
     ]
   },
   {
+    "objectID": "Lectures/12.html#midterm-iclicker",
+    "href": "Lectures/12.html#midterm-iclicker",
+    "title": "Production of atmospheric turbulence",
+    "section": "Midterm (iClicker)",
+    "text": "Midterm (iClicker)\nWill today’s material be on the mid-term?\n\nA - Yes\nB - No",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Production of atmospheric turbulence"
+    ]
+  },
+  {
     "objectID": "Lectures/12.html#reynolds-number-re",
     "href": "Lectures/12.html#reynolds-number-re",
     "title": "Production of atmospheric turbulence",
@@ -1071,6 +1083,18 @@
     "title": "Production of atmospheric turbulence",
     "section": "Conservation of energy - The Turbulent Kinetic Energy (TKE) budget",
     "text": "Conservation of energy - The Turbulent Kinetic Energy (TKE) budget\n\n\nMechanical turbulence in the ABL is caused by instabilities arising from strong mean velocity gradients, which in turn are caused by surface skin or form drag (obstacles) or shear flow. Thermal turbulence is caused by mean velocity gradients between warm air plumes rising up which in turn are caused by differential surface heating. At the smallest eddy sizes, the cascade of energy is dissipated into heat by molecular viscosity. Turbulent kinetic energy is one of the most important variables in micrometeorology. It’s a measure of the intensity of turbulence. Mechanical turbulence production requires continual supply of kinetic energy (mean wind) while thermal turbulence requires continual supply of a sensible heat flux (surface heating). TKE can be produced by fluid shear, friction or buoyancy. Turbulence kinetic energy is then transferred down the turbulence energy cascade, and is dissipated by viscous forces at the Kolmogorov scale.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Production of atmospheric turbulence"
+    ]
+  },
+  {
+    "objectID": "Lectures/12.html#turbulence-iclicker",
+    "href": "Lectures/12.html#turbulence-iclicker",
+    "title": "Production of atmospheric turbulence",
+    "section": "Turbulence (iClicker)",
+    "text": "Turbulence (iClicker)\nParcel of cool air moving over a 5 m tall tree canopy at 10 m s-1 on a hot, sunny day would experience:\n\nA - Mechanical Convection\nB - Thermal Convection\nC - Both!",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -5750,12 +5774,12 @@
   {
     "objectID": "Study_Questions/05.html",
     "href": "Study_Questions/05.html",
-    "title": "Study Question Set 04",
+    "title": "Study Question Set 05",
     "section": "",
     "text": "At 11:30 in the morning, we measure a soil heat flux density \\(H_{G(\\rm{5cm})}\\) of \\(25\\,\\rm{W}\\,\\rm{m}^{-2}\\) using a heat flux plate installed at 5 cm depth. Calculate the soil heat flux density at the surface \\(H_{G(\\rm{0})}\\), if the soil’s heat capacity in the layer from 0 to 5 cm depth is \\(2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\) and the temperature in the same layer changed from 24.8\\(^{\\circ}\\rm{C}\\) at 11:00 to 25.3\\(^{\\circ}\\rm{C}\\) at 12:00.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nAssume a uniform and linear warming rate of the soil: \\[\n\\frac{\\Delta T}{\\Delta t} = \\frac{25.3^{\\circ}\\rm{C} - 24.8^{\\circ}\\rm{C}}{1\\,\\rm{h}} \\\\\n= 0.5\\rm{K}\\,\\rm{h}^{-1} = 1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}\n\\]\nThe heat flux at the surface \\(H_{G(\\rm{0})}\\) is (Lecture 11, Slide 6):\n\\[\nH_{G(\\rm{0})} = H_{G(\\rm{5cm})} + C\\, \\frac{\\Delta T}{\\Delta t} \\Delta z \\\\\n= 25,\\rm{W}\\,\\rm{m}^{-2} + 2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\, \\times 1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}  \\times 0.05\\,\\rm{m} \\\\\n= 25\\,\\rm{W}\\,\\rm{m}^{-2} + 13.8\\,\\rm{W}\\,\\rm{m}^{-2} \\\\\n= \\underline{38.8\\,\\rm{W}\\,\\rm{m}^{-2}} \\\\\n\\]\n\n\n\n\nFor the same soil, at 20:30 in the evening, we measure a soil heat flux density \\(H_{G(\\rm{5cm})}\\) of \\(-12\\,\\rm{W}\\,\\rm{m}^{-2}\\). Calculate the soil heat flux density at the surface \\(H_{G(\\rm{0})}\\), if the temperature in the layer from 0 to 5 cm depth changed from 7.5 at 20:00 to 7.0\\(^{\\circ}\\rm{C}\\) at 21:00.\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nNow we have a cooling rate (i.e. negative change of temperature over time): \\[\n\\frac{\\Delta T}{\\Delta t} = \\frac{7.0^{\\circ}\\rm{C} - 7.5^{\\circ}\\rm{C}}{1\\,\\rm{h}} \\\\\n= -0.5\\rm{K}\\,\\rm{h}^{-1} = -1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1}\n\\]\nSimilar to the first example, the heat flux at the surface is: \\[\nH_{G(\\rm{0})}  = H_{G(\\rm{5cm})} + C\\, \\frac{\\Delta T}{\\Delta t} \\Delta z \\\\\n= -12\\,\\rm{W}\\,\\rm{m}^{-2} + 2 \\,\\rm{MJ}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}\\, \\times \\left( -1.38 \\times 10^{-4}\\rm{K}\\,\\rm{s}^{-1} \\right) \\times 0.05\\,\\rm{m} \\\\\n= -12\\,\\rm{W}\\,\\rm{m}^{-2} + (-13.88\\,\\rm{W}\\,\\rm{m}^{-2})  \\\\\n= \\underline{-25.9\\,\\rm{W}\\,\\rm{m}^{-2}} \\\\\n\\]\n\n\n\n\nWhat is meant by heat sharing?\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nHeat sharing refers to how the soil and the atmosphere (or two other materials) share in accepting sensible heat (i.e. \\(R_n\\) - \\(LE\\)) during the daytime and share in releasing it at night. Heat sharing is determined by the ratio of the thermal admittances of the two materials (Lecture 11, slides 13): \\[\n\\frac{H}{H_g} = \\frac{\\mu_a}{\\mu_s}\n\\]\nwhere \\(\\mu_s\\) is the thermal admittance of the soil and \\(\\mu_a\\) is the thermal admittance of the atmosphere.\n\n\n\n\nCalculate the sensible heat flux \\(H\\) at 11:30 for the example in Question 1, if the soil’s thermal conductivity is \\(k = 0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1}\\) and the atmospheric thermal admittance \\(\\mu_a\\) is \\(\\approx 5000 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}\\).\n\n\n\n\n\n\n\nTip\n\n\n\n\n\nRearrange the heat sharing equation from above:\n\\[\nH = H_G \\times \\frac{\\mu_a}{\\mu_s}\n\\]\nWe can calculate \\(\\mu_s\\) by:\n\\[\n\\mu_s = \\sqrt{k\\,C} \\\\\n= \\sqrt{0.27\\,\\rm{W}\\,\\rm{m}^{-1}\\,\\rm{K}^{-1} \\times 2 \\times 10^{6} \\,\\rm{J}\\,\\rm{m}^{-3}\\,\\rm{K}^{-1}} \\\\\n= 735 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}\n\\]\nHence:\n\\[\nH = H_G \\times \\frac{\\mu_a}{\\mu_s} \\\\\n= 38.8\\,\\rm{W}\\,\\rm{m}^{-2} \\times \\frac{5000 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}}{735 \\,\\rm{J} \\,\\rm{m}^{-2} \\,\\rm{K}^{-1} \\,\\rm{s}^{-1/2}} \\\\\n= \\underline{283\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\]",
     "crumbs": [
       "Study Questions",
-      "Study Question Set 04"
+      "Study Question Set 05"
     ]
   }
 ]
