@@ -731,7 +731,7 @@ Fick’s Law of diffusion can be written in resistance form for the transfer of 
 
 
 $$
-H = \small\frac{L_v(\rho_{v0}-\rho_{va})}{r_b}
+LE = \small\frac{L_v(\rho_{v0}-\rho_{va})}{r_b}
 $${#eq-Ficks-Law}
 
 
