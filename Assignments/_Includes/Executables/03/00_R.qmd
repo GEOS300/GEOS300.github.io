@@ -1,0 +1,39 @@
+
+```{r}
+#| warning: false
+
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
+TimeStamp = '200008191630'
+
+# Format the links to Table 1 (mean wind speed) and Table 2 (high frequency wind data)
+Table_1_url = sprintf('%swind%s.txt',data_url,TimeStamp)
+Table_2_url =  sprintf('%sturbulence%s.txt',data_url,TimeStamp)
+
+# Both tables have 7 rows of metadata at the top.  We'll parse and print those before reading the rest of the data
+header_rows = 7
+
+
+print('Table 1 Metadata:')
+Table_1_header_info = read_fwf(Table_1_url,fwf_widths(c(100)), show_col_types = FALSE)
+print(Table_1_header_info[1:header_rows-1,])
+
+Table_1 <- read.csv(file = Table_1_url,skip=header_rows)
+
+print('Table 1 Data:')
+head(Table_1)
+
+print('Table 2 Metadata:')
+Table_2_header_info = read_fwf(Table_2_url,fwf_widths(c(100)), show_col_types = FALSE)
+print(Table_2_header_info[1:header_rows-1,])
+
+Table_2 <- read.csv(file = Table_2_url,skip=header_rows)
+
+# Parse the timestamp info then drop the old column
+Table_2$TIMESTAMP <- as.POSIXct(Table_2$YYYY.MM.DD.HH.MM.SS,format = "%Y-%m-%d %H:%M:%S")
+Table_2=Table_2[,!(names(Table_2) %in% c('YYYY.MM.DD.HH.MM.SS'))]
+
+print('Table 2 Data:')
+head(Table_2)
+```

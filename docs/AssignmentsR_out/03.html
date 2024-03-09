@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microscale Weather and Climate - Assignment 2</title>
+<title>Microscale Weather and Climate - Assignment 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -190,7 +190,7 @@ window.Quarto = {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Assignment 2</h1>
+<h1 class="title">Assignment 3</h1>
 <p class="subtitle lead">GEOS 300, 2024</p>
 </div>
 
@@ -208,77 +208,77 @@ window.Quarto = {
 </header>
 
 
-<p><a href="https://github.com/GEOS300/Assignment02">Python and R code templates be found here</a> to help get you started.</p>
+<p><a href="https://github.com/GEOS300/Assignment03">Python and R code templates be found here</a> to help get you started.</p>
 <section id="instructions" class="level2">
 <h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
 <p>It is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here <a href="https://github.com/GEOS300/AssignmentData/">here</a>. <strong>Note</strong> these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.</p>
 <p>Please upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File <span class="math inline">\(\gg\)</span> Download as <span class="math inline">\(\gg\)</span> HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. <strong>Do not attach a spreadsheet.</strong></p>
 <p><strong>Make Sure</strong> your student number is include on each plot you produce, and that each plot is using the correct units.</p>
-</section>
-<section id="westham-island-energy-balance" class="level2">
-<h2 class="anchored" data-anchor-id="westham-island-energy-balance">Westham Island Energy Balance</h2>
-<p>You have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (<a href="#tbl-dates" class="quarto-xref">Table&nbsp;1</a>). Refer to the <a href="https://github.com/GEOS300/AssignmentData/blob/main/WesthamIslandSoilData/Metadata.txt">metadata</a> for a description of the data with variable names, units, and sensor depths. You can see this <a href="https://geos300.github.io/Lectures/06.html#/24">lecture slide</a> for a photo of the station.</p>
-<p>The soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is <span class="math inline">\(P=0.57\)</span>, bulk density of the dry soil is <span class="math inline">\(\rho_{dry} = 1.13\)</span> Mg m<span class="math inline">\(^{-3}\)</span>. The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.</p>
+<p>In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near <a href="http://www.eol.ucar.edu/rtf/projects/ebex2000/">Kettleman City, CA, US</a>. The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (<a href="#tbl-dates" class="quarto-xref">Table&nbsp;1</a>). You will be provided with two tables:</p>
+<p><strong>Table1</strong>: lists horizontal wind speeds <span class="math inline">\(\overline{u}\)</span> measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.</p>
+<p><strong>Table2</strong>: contains longitudinal wind <span class="math inline">\(u\)</span>, lateral wind <span class="math inline">\(v\)</span> and vertical wind <span class="math inline">\(w\)</span> measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.</p>
+<ul>
+<li>For all questions assume neutral conditions, <span class="math inline">\(z_d=0\)</span>, and <span class="math inline">\(P_a\)</span> = 100 kPa.</li>
+</ul>
 <div id="tbl-dates" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
 <figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format. The filename for your date will follow this format: YYYYMMDD.txt. e.g., 20240214.txt would be the file for February 14th, 2023. If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files <a href="https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData">here</a>.
+Table&nbsp;1: The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format. The filename for your date will follow this format: YYYYmmddHHMM.txt. e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30. If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files <a href="https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData">here</a>.
 </figcaption>
 <div aria-describedby="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <table class="table">
 <thead>
 <tr class="header">
 <th>Last digit of student number</th>
-<th>date (YYYMMDD)</th>
+<th>date (YYYmmddHHMM)</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
 <td>0</td>
-<td>20090614</td>
+<td>200008021530</td>
 </tr>
 <tr class="even">
 <td>1</td>
-<td>20090630</td>
+<td>200008031000</td>
 </tr>
 <tr class="odd">
 <td>2</td>
-<td>20090701</td>
+<td>200008031030</td>
 </tr>
 <tr class="even">
 <td>3</td>
-<td>20090702</td>
+<td>200008031200</td>
 </tr>
 <tr class="odd">
 <td>4</td>
-<td>20090711</td>
+<td>200008041030</td>
 </tr>
 <tr class="even">
 <td>5</td>
-<td>20090716</td>
+<td>200008041100</td>
 </tr>
 <tr class="odd">
 <td>6</td>
-<td>20090721</td>
+<td>200008041130</td>
 </tr>
 <tr class="even">
 <td>7</td>
-<td>20090729</td>
+<td>200008041530</td>
 </tr>
 <tr class="odd">
 <td>8</td>
-<td>20090730</td>
+<td>200008101230</td>
 </tr>
 <tr class="even">
 <td>9</td>
-<td>20090802</td>
+<td>200008101530</td>
 </tr>
 </tbody>
 </table>
 </div>
 </figure>
 </div>
-<hr>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Enter your information below</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Student.Name <span class="ot">=</span> <span class="st">'June Skeeter'</span></span>
@@ -299,156 +299,154 @@ Table&nbsp;1: The date you are responsible for analyzing in YYYY (Year) MM (mont
 </div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Import the data from github &amp; parse the timestamp for each record</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## **</span><span class="al">NOTE</span><span class="do">**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'</span></span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> data_url,<span class="at">na.strings=</span><span class="st">"-9999"</span>)</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="do">## **</span><span class="al">NOTE</span><span class="do">**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>data_url<span class="ot">=</span><span class="st">'https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>TimeStamp <span class="ot">=</span> <span class="st">'200008191630'</span></span>
 <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># We have to parse the timestamp explicitly to convert it to a "time aware" object</span></span>
-<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(df<span class="sc">$</span>TIME.PST.,<span class="at">format =</span> <span class="st">"%Y/%m/%d %H:%M"</span>)</span>
-<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="co"># All sub-surface data were collected at the same frequency (15-minute intervals).  </span></span>
-<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># However, H data were only available at 30-minute resolution.  </span></span>
-<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="co"># So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   </span></span>
-<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Use linear interpolation to estimate missing H values where available</span></span>
-<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>H_filled <span class="ot">=</span> <span class="fu">na.approx</span>(df<span class="sc">$</span>H,<span class="at">na.rm=</span><span class="cn">FALSE</span>)</span>
-<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Backfill where linear interpolation didn't work (the first observation)</span></span>
-<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>df<span class="sc">$</span>H_filled <span class="ot">=</span> <span class="fu">na.locf</span>(df<span class="sc">$</span>H_filled,<span class="at">fromLast=</span><span class="cn">TRUE</span>)</span>
-<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Data imported and gap-filled successfully.'</span>)</span>
-<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Format the links to Table 1 (mean wind speed) and Table 2 (high frequency wind data)</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>Table_1_url <span class="ot">=</span> <span class="fu">sprintf</span>(<span class="st">'%swind%s.txt'</span>,data_url,TimeStamp)</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>Table_2_url <span class="ot">=</span>  <span class="fu">sprintf</span>(<span class="st">'%sturbulence%s.txt'</span>,data_url,TimeStamp)</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Both tables have 7 rows of metadata at the top.  We'll parse and print those before reading the rest of the data</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>header_rows <span class="ot">=</span> <span class="dv">7</span></span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Table 1 Metadata:'</span>)</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>Table_1_header_info <span class="ot">=</span> <span class="fu">read_fwf</span>(Table_1_url,<span class="fu">fwf_widths</span>(<span class="fu">c</span>(<span class="dv">100</span>)), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Table_1_header_info[<span class="dv">1</span><span class="sc">:</span>header_rows<span class="dv">-1</span>,])</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>Table_1 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> Table_1_url,<span class="at">skip=</span>header_rows)</span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Table 1 Data:'</span>)</span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Table_1)</span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Table 2 Metadata:'</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>Table_2_header_info <span class="ot">=</span> <span class="fu">read_fwf</span>(Table_2_url,<span class="fu">fwf_widths</span>(<span class="fu">c</span>(<span class="dv">100</span>)), <span class="at">show_col_types =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(Table_2_header_info[<span class="dv">1</span><span class="sc">:</span>header_rows<span class="dv">-1</span>,])</span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>Table_2 <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="at">file =</span> Table_2_url,<span class="at">skip=</span>header_rows)</span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a><span class="co"># Parse the timestamp info then drop the old column</span></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>Table_2<span class="sc">$</span>TIMESTAMP <span class="ot">&lt;-</span> <span class="fu">as.POSIXct</span>(Table_2<span class="sc">$</span>YYYY.MM.DD.HH.MM.SS,<span class="at">format =</span> <span class="st">"%Y-%m-%d %H:%M:%S"</span>)</span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>Table_2<span class="ot">=</span>Table_2[,<span class="sc">!</span>(<span class="fu">names</span>(Table_2) <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">'YYYY.MM.DD.HH.MM.SS'</span>))]</span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">'Table 2 Data:'</span>)</span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(Table_2)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-1" class="level2">
 <h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
-<p>Run the code block above, making sure you’ve edited the file name so that it corresponds to <strong>your assigned date</strong> (<a href="#tbl-dates" class="quarto-xref">Table&nbsp;1</a>). Then in the space below, calculate descriptive statistics for the all the variables in the dataset. Comment on the mean value and the range (max-min) of the four soil temperature variables. <strong>Hint</strong> you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.</p>
+<p>Estimate <span class="math inline">\(z_0\)</span> from the measured values vertical wind profile provided. Indicate your estimate of <span class="math inline">\(z_0\)</span> in m and produce a log wind profile plot. You can either use a spreadsheet/software or by hand using <a href="https://www.eeweb.com/wp-content/uploads/semi-log-graph-paper.pdf">semi-logarithmic graph paper</a>. <strong>Note</strong>: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 1 &gt;&gt;</span></span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This function can be used to calculate the "natural logarithm" (ln):</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># log()</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 2 &gt;&gt;</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a><span class="co"># The "lm" function can be used to estimate the slope (m) and intercept (b) of a line (Y=mX+b), </span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co"># with the following syntax:</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co"># fit=lm(Y~X)</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co"># b=fit$coefficients[1]</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a><span class="co"># m=fit$coefficients[2]</span></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Hint 3 &gt;&gt;</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co"># The following set of commands can add a new first row a table </span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Crate a new table with one row (without data values)</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co"># If you know the values you want to add, just replace np.nan with the value</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">#new_first_row = data.frame(Height..m. = NaN, Wind.Speed..m.s. = NaN)</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Concatenate the new row to the top of the original table then reset the index</span></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Wind_Profile = rbind(new_first_row,Table_1)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-2" class="level2">
 <h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
-<p>First we’ll make a plot of net radiation (<span class="math inline">\(R_n\)</span>), sensible heat flux (<span class="math inline">\(H\)</span>), and ground heat flux (<span class="math inline">\(H_g\)</span>). Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.</p>
+<p>Based on the slope of the curve in Question 1, calculate the friction velocity <span class="math inline">\(u_{\ast}\)</span>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>plot_energy_fluxes <span class="ot">&lt;-</span> <span class="fu">melt</span>(</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  df[,<span class="fu">c</span>(<span class="st">'TIME.PST.'</span>,<span class="st">'R_n'</span>,<span class="st">'H_filled'</span>,<span class="st">'H_g'</span>)],</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">id=</span><span class="st">"TIME.PST."</span>)</span>
-<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>p1 <span class="ot">&lt;-</span> <span class="fu">ggplot</span>(plot_energy_fluxes, <span class="fu">aes</span>(<span class="at">x =</span> TIME.PST., <span class="at">y =</span> value, <span class="at">group =</span> variable)) <span class="sc">+</span></span>
-<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="fu">aes</span>(<span class="at">color =</span> variable,<span class="at">linetype =</span> variable)) <span class="sc">+</span></span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_color_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Net Radiation'</span>,<span class="st">'Sensible Heat Flux'</span>,<span class="st">'Soil Heat Flux'</span>),<span class="at">values =</span> <span class="fu">c</span>(<span class="st">'black'</span>,<span class="st">'red'</span>,<span class="st">'blue'</span>)) <span class="sc">+</span></span>
-<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_linetype_manual</span>(<span class="at">labels =</span> <span class="fu">c</span>(<span class="st">'Net Radiation'</span>,<span class="st">'Sensible Heat Flux'</span>,<span class="st">'Soil Heat Flux'</span>), <span class="at">values =</span> <span class="fu">c</span>(<span class="st">"solid"</span>,<span class="st">"dotted"</span>,<span class="st">"dashed"</span>))<span class="sc">+</span></span>
-<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>  </span>
-<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  <span class="co"># Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes</span></span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">y =</span> <span class="st">"W m-2 s-1"</span>,<span class="at">x=</span><span class="st">'Time'</span>)</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>p1 <span class="sc">+</span> <span class="fu">plot_annotation</span>(<span class="fu">sprintf</span>(<span class="st">'Student # %i'</span>,Student.Number))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">options</span>(<span class="at">repr.plot.width=</span><span class="dv">8</span>, <span class="at">repr.plot.height=</span><span class="dv">10</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-3" class="level2">
 <h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
-<p>Using the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period. Describe the patterns you see here: discuss how the soil changes with depth and through time over this day.</p>
+<p>Estimate the surface shear stress <span class="math inline">\(\tau_0\)</span> from the result in Question 2 and with help of Appendix A3 (p.&nbsp;392 ff.) in T. R. Oke, ’Boundary Layer Climates available on Canvas.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-4" class="level2">
 <h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
-<p>The code block below will give the first and last record in the dataset. You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e.&nbsp;the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.</p>
+<p>Estimate the eddy diffusivities for momentum <span class="math inline">\(K_M\)</span> using the wind gradients <span class="math inline">\(\Delta \overline{u}\)</span> in Table 1 between (a) <span class="math inline">\(z=0.95\)</span> and <span class="math inline">\(1.55\)</span> m, (b) <span class="math inline">\(z=1.55\)</span> and <span class="math inline">\(2.35\)</span> m, (c) <span class="math inline">\(z=2.35\)</span> and <span class="math inline">\(3.72\)</span> m, (d) <span class="math inline">\(z=3.72\)</span> and <span class="math inline">\(6.15\)</span> m, and (e) <span class="math inline">\(z=6.15\)</span> and <span class="math inline">\(9.05\)</span> m. How does <span class="math inline">\(K_M\)</span> change with height? Explain why.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A command to get rows of a dataframe based on their position and columns based on their names</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is the first row and nrow(df) is the position of the last row</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>First_and_Last <span class="ot">&lt;-</span> df[<span class="fu">c</span>(<span class="dv">1</span>,<span class="fu">nrow</span>(df)),<span class="fu">c</span>(<span class="st">'T_1'</span>,<span class="st">'T_4'</span>)]</span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(First_and_Last)</span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A command to calculate the difference between adjacent values in each column</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">diff</span>(<span class="fu">as.matrix</span>(First_and_Last)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-5" class="level2">
 <h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
-<p>Using daily average soil temperature for each of the four depths (<span class="math inline">\(T_1\)</span> to <span class="math inline">\(T_4\)</span>), determine the direction (away from or towards the ground surface) of the daily total <span class="math inline">\(H_g\)</span> in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?</p>
+<p>From the values in Table 1, calculate the aerodynamic resistance of the momentum flux <span class="math inline">\(r_{a_M}\)</span> for the layer from the surface to 9.05 m.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-6" class="level2">
 <h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
-<p>Calculate the daily total of <span class="math inline">\(H_g\)</span> at 7.5 cm depth in <span class="math inline">\(\textrm{MJ}\, \textrm{m}^{-2}\, \textrm{day}^{-1}\)</span> using the measured values from the soil heat flux plate. Compare the direction of <span class="math inline">\(H_g\)</span> to the direction of the heat flux obtained for the 5 -10 cm layer in question <span class="math inline">\(5\)</span>.</p>
+<p>From the turbulence data provided in Table 2, calculate <span class="math inline">\(\overline{u}\)</span>, <span class="math inline">\(\overline{v}\)</span>, and <span class="math inline">\(\overline{w}\)</span>. How does the magnitude of <span class="math inline">\(\overline{u}\)</span> compare to <span class="math inline">\(\overline{v}\)</span>, and <span class="math inline">\(\overline{w}\)</span>?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># A command to get rows of a dataframe based on their position and columns based on their names</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># 1 is the first row and nrow(df) is the position of the last row</span></span>
-<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>First_and_Last <span class="ot">&lt;-</span> df[<span class="fu">c</span>(<span class="dv">1</span>,<span class="fu">nrow</span>(df)),<span class="fu">c</span>(<span class="st">'T_1'</span>,<span class="st">'T_4'</span>)]</span>
-<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(First_and_Last)</span>
-<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a><span class="co"># A command to calculate the difference between adjacent values in each column</span></span>
-<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">diff</span>(<span class="fu">as.matrix</span>(First_and_Last)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-7" class="level2">
 <h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
-<p>Find a method to estimate the thermal conductivity of the soil <span class="math inline">\(k\)</span> at noon that day. Is <span class="math inline">\(k\)</span> constant throughout the day?</p>
+<p>From the data in Table 2 calculate <span class="math inline">\(\overline{u^{\prime 2}}\)</span>, <span class="math inline">\(\overline{v^{\prime 2}}\)</span>, and <span class="math inline">\(\overline{w^{\prime 2}}\)</span>. Name those parameters.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-8" class="level2">
 <h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
-<p>Find a method to estimate soil’s heat capacity <span class="math inline">\(C\)</span> using the change in mid-day soil temperatures over a two-hour period. Use the near-surface observations for you calculations (5 and 10 cm). Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods. This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.</p>
+<p>From the data in Table 2 calculate the turbulence intensities <span class="math inline">\(I_u\)</span>, <span class="math inline">\(I_v\)</span>, and <span class="math inline">\(I_w\)</span>.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-9" class="level2">
 <h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
-<p>Calculate the heat capacity <span class="math inline">\(C\)</span> of the soil using the lab analysis results (see introduction text) and measured soil water content <span class="math inline">\(\theta_w\)</span>. Does your value obtained agree with <span class="math inline">\(C\)</span> calculated based in the question above? Why or why not? <strong>Note</strong> For subsequent calculations, use the value of <span class="math inline">\(C\)</span> from your answer to <strong>this question</strong>, and not <span class="math inline">\(C\)</span> from your answer to the previous question.</p>
+<p>From the data in Table 2 calculate the mean turbulent kinetic energy per unit mass <span class="math inline">\(\overline{e}\)</span>. What is the ratio of <span class="math inline">\(\overline{e}\)</span> to the mean kinetic energy per unit mass?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-10" class="level2">
 <h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
-<p>With <span class="math inline">\(C\)</span> from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5% of the amplitude of the sinusoidal surface temperature wave.</p>
+<p>Which of the three wind components, <span class="math inline">\(u\)</span>, <span class="math inline">\(v\)</span> or <span class="math inline">\(w\)</span>, contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-11" class="level2">
 <h2 class="anchored" data-anchor-id="question-11">Question 11</h2>
-<p>The soil heat flux density <span class="math inline">\(H_g\)</span> is not measured at the surface, but rather at 7.5 cm depth. Using <span class="math inline">\(\Delta T_1 / \Delta t\)</span> as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface <span class="math inline">\(H_{g(0)}\)</span> at 10:00 and at 19:00.</p>
+<p>From the data in Table 2 calculate (a) <span class="math inline">\(\overline{u^{\prime}v^{\prime}}\)</span> and (b) <span class="math inline">\(\overline{u^{\prime}w^{\prime}}\)</span></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-12" class="level2">
 <h2 class="anchored" data-anchor-id="question-12">Question 12</h2>
-<p>Draw a graph of <span class="math inline">\(R_n\)</span> (<span class="math inline">\(x\)</span>-axis) against <span class="math inline">\(H_g\)</span> (<span class="math inline">\(y\)</span>-axis). Might we use <span class="math inline">\(R_n\)</span> to predict <span class="math inline">\(H_g\)</span> at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.</p>
+<p>Calculate <span class="math inline">\(r_{uv}\)</span> and <span class="math inline">\(r_{uw}\)</span>. Discuss your results.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-13" class="level2">
 <h2 class="anchored" data-anchor-id="question-13">Question 13</h2>
-<p>Calculate the thermal admittance of the atmosphere <span class="math inline">\(\mu_a\)</span> at noon.</p>
+<p>Plot a scatter graph of <span class="math inline">\(u^{\prime}\)</span> (<span class="math inline">\(x\)</span>-axis) vs.&nbsp;<span class="math inline">\(w^{\prime}\)</span> (<span class="math inline">\(y\)</span>-axis). Comment your graph and discuss if it looks like you expected.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="question-14" class="level2">
 <h2 class="anchored" data-anchor-id="question-14">Question 14</h2>
-<p>The Bowen ratio <span class="math inline">\(\beta\)</span> describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e.&nbsp;<span class="math inline">\(\beta = H/LE\)</span>. Calculate <span class="math inline">\(\beta\)</span> from the available data for noon that day. Neglect the energy use for photosynthesis.</p>
+<p>Using your result in question 11 (b), calculate the friction velocity <span class="math inline">\(u_{\ast}\)</span> based on the high-frequency data and compare it to your answer in question 2.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

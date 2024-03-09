@@ -221,16 +221,16 @@ head(df_Wind)
 
 # Import the data from github & parse the timestamp for each record
 ## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
-data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
+data_url='C:\\Users\\User\\Teaching\\GEOS300\\AssignmentData\\KettlemanCityCottonField/'
 TimeStamp = '200008191630'
 
 
-Turbulence <- read.csv(file = sprintf('%sturbulence%s.txt',data_url,Time),
+Turbulence <- read.csv(file = sprintf('%sturbulence%s.txt',data_url,TimeStamp),
                         na.strings="-9999",skip=7)
 Turbulence$TIMESTAMP <- as.POSIXct(Turbulence$YYYY.MM.DD.HH.MM.SS,format = "%Y-%m-%d %H:%M:%S")
 Turbulence=Turbulence[,!(names(Turbulence) %in% c('YYYY.MM.DD.HH.MM.SS'))]
 
-Wind <- read.csv(file = sprintf('%swind%s.txt',data_url,Time),
+Wind <- read.csv(file = sprintf('%swind%s.txt',data_url,TimeStamp),
                 na.strings="-9999",skip=6)
 
 print('Data imported and gap-filled successfully.')
@@ -239,6 +239,5 @@ print('Data imported and gap-filled successfully.')
 Wind$lnz <- log(Wind$Height..m.)
 Wind$U <- Wind$Horizontal.wind.velocity..m.s.
 
-modelFit <- lm(lnz~U,data=Wind)
-summary(modelFit)
-Wind
+# modelFit <- lm(Y~X,data=Wind) # Replace X & T with proper variables
+# modelFit

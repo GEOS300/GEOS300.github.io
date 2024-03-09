@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Microscale Weather and Climate - Assignments</title>
+<title>Microscale Weather and Climate - Assignment 3</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
 
 <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -124,7 +153,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/03.html">Assignment 3</a></li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
     </div>
@@ -138,7 +167,7 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../Assignments/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../Assignments/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Assignments</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -159,7 +188,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../Assignments/03.html" class="sidebar-item-text sidebar-link">
+  <a href="../Assignments/03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Assignment 3</span></a>
   </div>
 </li>
@@ -174,9 +203,10 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/03.html">Assignment 3</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Assignments</h1>
+<h1 class="title">Assignment 3</h1>
+<p class="subtitle lead">GEOS 300, 2024</p>
 </div>
 
 
@@ -193,51 +223,155 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.</p>
-<div class="cell" data-execution_count="1">
-<div id="tbl-assignments" class="cell quarto-float anchored" data-execution_count="1">
+<p><a href="https://github.com/GEOS300/Assignment03">Python and R code templates be found here</a> to help get you started.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>It is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here <a href="https://github.com/GEOS300/AssignmentData/">here</a>. <strong>Note</strong> these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.</p>
+<p>Please upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File <span class="math inline">\(\gg\)</span> Download as <span class="math inline">\(\gg\)</span> HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. <strong>Do not attach a spreadsheet.</strong></p>
+<p><strong>Make Sure</strong> your student number is include on each plot you produce, and that each plot is using the correct units.</p>
+<p>In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near <a href="http://www.eol.ucar.edu/rtf/projects/ebex2000/">Kettleman City, CA, US</a>. The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (<a href="#tbl-dates" class="quarto-xref">Table&nbsp;1</a>). You will be provided with two tables:</p>
+<p><strong>Table1</strong>: lists horizontal wind speeds <span class="math inline">\(\overline{u}\)</span> measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.</p>
+<p><strong>Table2</strong>: contains longitudinal wind <span class="math inline">\(u\)</span>, lateral wind <span class="math inline">\(v\)</span> and vertical wind <span class="math inline">\(w\)</span> measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.</p>
+<ul>
+<li>For all questions assume neutral conditions, <span class="math inline">\(z_d=0\)</span>, and <span class="math inline">\(P_a\)</span> = 100 kPa.</li>
+</ul>
+<div id="tbl-dates" class="quarto-float anchored">
 <figure class="quarto-float quarto-float-tbl figure">
-<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-assignments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-Table&nbsp;1: Assignment schedule
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format. The filename for your date will follow this format: YYYYmmddHHMM.txt. e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30. If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files <a href="https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData">here</a>.
 </figcaption>
-<div aria-describedby="tbl-assignments-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display" data-execution_count="1">
+<div aria-describedby="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Last digit of student number</th>
+<th>date (YYYmmddHHMM)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>200008021530</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>200008031000</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>200008031030</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>200008031200</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>200008041030</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>200008041100</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>200008041130</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>200008041530</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>200008101230</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>200008101530</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+<div id="0641df7a" class="cell" data-execution_count="3">
+<div class="cell-output cell-output-stdout">
+<pre><code>Table 1 Metadata:
+# EBEX 2000, Kettleman City, CA, USA
+# Wind profile measured by cup anemometers
+# Start: 2000/08/19 16:30 PST
+# Average values over 30 min
+# Air temperature: 33.4 deg C
+# Air pressure: 101.444 kPa
+Table 1 Data:
+   Height (m)  Wind Speed (m/s)
+0        0.95              1.77
+1        1.55              2.18
+2        2.35              2.47
+3        3.72              2.85
+4        6.15              3.37
+5        9.05              3.67
+
+
+
+Table 2 Metadata:
+# EBEX 2000, Kettleman City, CA, USA
+# Turbulence data measured at 1 Hz by fast-anemometer at 6.4 m
+# Start: 2000/08/19 16:30 PST
+# u (m/s) : longitudinal wind vector component
+# v (m/s) : lateral wind vector component
+# w (m/s) : vertical wind vector component
+Table 2 Data preview:</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="3">
 <div>
 
 
-<table class="dataframe do-not-create-environment cell table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
 <thead>
 <tr class="header">
 <th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">Due Date</th>
-<th data-quarto-table-cell-role="th">Topic</th>
+<th data-quarto-table-cell-role="th">u (m/s)</th>
+<th data-quarto-table-cell-role="th">v (m/s)</th>
+<th data-quarto-table-cell-role="th">w (m/s)</th>
 </tr>
 <tr class="odd">
-<th data-quarto-table-cell-role="th">Post Date</th>
+<th data-quarto-table-cell-role="th">TIMESTAMP</th>
+<th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 <th data-quarto-table-cell-role="th"></th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2024-01-26</td>
-<td>2024-02-16</td>
-<td>Radiation Budgets</td>
+<td data-quarto-table-cell-role="th">2000-08-19 16:30:00</td>
+<td>3.0774</td>
+<td>0.0560</td>
+<td>-0.1993</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2024-02-16</td>
-<td>2024-03-08</td>
-<td>Soil Properties</td>
+<td data-quarto-table-cell-role="th">2000-08-19 16:30:01</td>
+<td>2.9384</td>
+<td>-0.0827</td>
+<td>0.0345</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2024-03-08</td>
-<td>2024-03-29</td>
-<td>Wind, Turbulence, &amp; Fluxes</td>
+<td data-quarto-table-cell-role="th">2000-08-19 16:30:02</td>
+<td>2.9198</td>
+<td>-0.1783</td>
+<td>-0.1177</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">2024-03-22</td>
-<td>2024-04-12</td>
-<td>Soil Chamber Data Collection &amp; Processing</td>
+<td data-quarto-table-cell-role="th">2000-08-19 16:30:03</td>
+<td>3.0079</td>
+<td>0.0066</td>
+<td>0.2113</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2000-08-19 16:30:04</td>
+<td>3.1117</td>
+<td>0.0649</td>
+<td>0.0785</td>
 </tr>
 </tbody>
 </table>
@@ -245,11 +379,65 @@ Table&nbsp;1: Assignment schedule
 </div>
 </div>
 </div>
-</figure>
-</div>
-</div>
+</section>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Estimate <span class="math inline">\(z_0\)</span> from the measured values vertical wind profile provided. Indicate your estimate of <span class="math inline">\(z_0\)</span> in m and produce a log wind profile plot. You can either use a spreadsheet/software or by hand using <a href="https://www.eeweb.com/wp-content/uploads/semi-log-graph-paper.pdf">semi-logarithmic graph paper</a>. <strong>Note</strong>: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.</p>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Based on the slope of the curve in Question 1, calculate the friction velocity <span class="math inline">\(u_{\ast}\)</span>.</p>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>Estimate the surface shear stress <span class="math inline">\(\tau_0\)</span> from the result in Question 2 and with help of Appendix A3 (p.&nbsp;392 ff.) in T. R. Oke, ’Boundary Layer Climates available on Canvas.</p>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Estimate the eddy diffusivities for momentum <span class="math inline">\(K_M\)</span> using the wind gradients <span class="math inline">\(\Delta \overline{u}\)</span> in Table 1 between (a) <span class="math inline">\(z=0.95\)</span> and <span class="math inline">\(1.55\)</span> m, (b) <span class="math inline">\(z=1.55\)</span> and <span class="math inline">\(2.35\)</span> m, (c) <span class="math inline">\(z=2.35\)</span> and <span class="math inline">\(3.72\)</span> m, (d) <span class="math inline">\(z=3.72\)</span> and <span class="math inline">\(6.15\)</span> m, and (e) <span class="math inline">\(z=6.15\)</span> and <span class="math inline">\(9.05\)</span> m. How does <span class="math inline">\(K_M\)</span> change with height? Explain why.</p>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>From the values in Table 1, calculate the aerodynamic resistance of the momentum flux <span class="math inline">\(r_{a_M}\)</span> for the layer from the surface to 9.05 m.</p>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<p>From the turbulence data provided in Table 2, calculate <span class="math inline">\(\overline{u}\)</span>, <span class="math inline">\(\overline{v}\)</span>, and <span class="math inline">\(\overline{w}\)</span>. How does the magnitude of <span class="math inline">\(\overline{u}\)</span> compare to <span class="math inline">\(\overline{v}\)</span>, and <span class="math inline">\(\overline{w}\)</span>?</p>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p>From the data in Table 2 calculate <span class="math inline">\(\overline{u^{\prime 2}}\)</span>, <span class="math inline">\(\overline{v^{\prime 2}}\)</span>, and <span class="math inline">\(\overline{w^{\prime 2}}\)</span>. Name those parameters.</p>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<p>From the data in Table 2 calculate the turbulence intensities <span class="math inline">\(I_u\)</span>, <span class="math inline">\(I_v\)</span>, and <span class="math inline">\(I_w\)</span>.</p>
+</section>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<p>From the data in Table 2 calculate the mean turbulent kinetic energy per unit mass <span class="math inline">\(\overline{e}\)</span>. What is the ratio of <span class="math inline">\(\overline{e}\)</span> to the mean kinetic energy per unit mass?</p>
+</section>
+<section id="question-10" class="level2">
+<h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
+<p>Which of the three wind components, <span class="math inline">\(u\)</span>, <span class="math inline">\(v\)</span> or <span class="math inline">\(w\)</span>, contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.</p>
+</section>
+<section id="question-11" class="level2">
+<h2 class="anchored" data-anchor-id="question-11">Question 11</h2>
+<p>From the data in Table 2 calculate (a) <span class="math inline">\(\overline{u^{\prime}v^{\prime}}\)</span> and (b) <span class="math inline">\(\overline{u^{\prime}w^{\prime}}\)</span></p>
+</section>
+<section id="question-12" class="level2">
+<h2 class="anchored" data-anchor-id="question-12">Question 12</h2>
+<p>Calculate <span class="math inline">\(r_{uv}\)</span> and <span class="math inline">\(r_{uw}\)</span>. Discuss your results.</p>
+</section>
+<section id="question-13" class="level2">
+<h2 class="anchored" data-anchor-id="question-13">Question 13</h2>
+<p>Plot a scatter graph of <span class="math inline">\(u^{\prime}\)</span> (<span class="math inline">\(x\)</span>-axis) vs.&nbsp;<span class="math inline">\(w^{\prime}\)</span> (<span class="math inline">\(y\)</span>-axis). Comment your graph and discuss if it looks like you expected.</p>
+</section>
+<section id="question-14" class="level2">
+<h2 class="anchored" data-anchor-id="question-14">Question 14</h2>
+<p>Using your result in question 11 (b), calculate the friction velocity <span class="math inline">\(u_{\ast}\)</span> based on the high-frequency data and compare it to your answer in question 2.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

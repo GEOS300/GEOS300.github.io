@@ -1,0 +1,43 @@
+
+
+```{python}
+
+# Import the data from github & parse the timestamp for each record
+## **NOTE**  Make sure to edit the TimeStamp variable so it corresponds to the timestamp you were assigned.
+data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
+TimeStamp = '200008191630'
+
+# Format the links to Table 1 (mean wind speed) and Table 2 (high frequency wind data)
+Table_1_url = f'{data_url}wind{TimeStamp}.txt'
+Table_2_url = f'{data_url}turbulence{TimeStamp}.txt'
+
+# Both tables have 7 rows of metadata at the top.  We'll parse and print those before reading the rest of the data
+header_rows = 7
+
+print('Table 1 Metadata:')
+Table_1_header_info = pd.read_fwf(Table_1_url,widths=[100],nrows=header_rows,header=None)
+for i,row in Table_1_header_info.iterrows():
+    print(row.values[0])
+
+Table_1 = pd.read_csv(Table_1_url,skiprows=header_rows,na_values=-9999)
+
+print('Table 1 Data:')
+print(Table_1)
+
+print('\n\n')
+
+print('Table 2 Metadata:')
+Table_2_header_info = pd.read_fwf(Table_2_url,widths=[100],nrows=header_rows,header=None)
+for i,row in Table_2_header_info.iterrows():
+    print(row.values[0])
+
+# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
+Table_2 = pd.read_csv(Table_2_url,skiprows=header_rows,
+    parse_dates={'TIMESTAMP':['YYYY-MM-DD HH:MM:SS']},index_col='TIMESTAMP',na_values=-9999)
+
+
+print('Table 2 Data preview:')
+Table_2.head()
+
+
+```

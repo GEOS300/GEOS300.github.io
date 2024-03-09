@@ -15,9 +15,9 @@ output: False
 
 In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near [Kettleman City, CA, US](http://www.eol.ucar.edu/rtf/projects/ebex2000/). The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (@tbl-dates). You will be provided with two tables: 
 
-**Wind**: lists horizontal wind speeds $\overline{u}$ measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Screen-level air temperature is also provided.
+**Table1**: lists horizontal wind speeds $\overline{u}$ measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.
 
-**Turbulence**: contains longitudinal wind $u$, lateral wind $v$ and vertical wind $w$ measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.
+**Table2**: contains longitudinal wind $u$, lateral wind $v$ and vertical wind $w$ measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.
 
 * For all questions assume neutral conditions, $z_d=0$, and $P_a$ = 100 kPa.
 
@@ -39,7 +39,11 @@ Last digit of student number | date (YYYmmddHHMM)
 : The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format.  The filename for your date will follow this format: YYYYmmddHHMM.txt.  e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30.  If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files [here](https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData). {#tbl-dates}
 
 
-{{< include../Assignments/_Includes/Executables/02/01_R.qmd >}}
+{{< include../Assignments/_Includes/Executables/Student_Info_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/Import_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/03/00_R.qmd >}}
 
 
 ## Question 1
@@ -47,7 +51,7 @@ Last digit of student number | date (YYYmmddHHMM)
 Estimate $z_0$ from the measured values vertical wind profile provided.  Indicate your estimate of $z_0$ in m and produce a log wind profile plot.  You can either use a spreadsheet/software or by hand using [semi-logarithmic graph paper](https://www.eeweb.com/wp-content/uploads/semi-log-graph-paper.pdf). **Note**: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.
 
 
-{{< include../Assignments/_Includes/Executables/02/01_2_R.qmd >}}
+{{< include../Assignments/_Includes/Executables/03/01_R.qmd >}}
 
 
 ## Question 2
@@ -78,7 +82,7 @@ From the values in Table 1, calculate the aerodynamic resistance of the momentum
 
 ## Question 6
 
-From the turbulence data provided in Table 2, calculate $\overline{u}$, $\overline{v}$, and $\overline{w}$
+From the turbulence data provided in Table 2, calculate $\overline{u}$, $\overline{v}$, and $\overline{w}$.  How does the magnitude of $\overline{u}$ compare to $\overline{v}$, and $\overline{w}$?
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
@@ -103,9 +107,9 @@ From the data in Table 2 calculate the mean turbulent kinetic energy per unit ma
 
 ## Question 10
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
-
 Which of the three wind components, $u$, $v$ or $w$, contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 
 ## Question 11
 

@@ -1,23 +1,23 @@
 ---
 title: "Assignment 3"
 subtitle: "GEOS 300, 2024"
+jupyter: python3
 execute:
-  keep-md: true
-echo: true
-output: False
+  keep-ipynb: true
+echo: false
 ---
 
 
 
 [Python and R code templates be found here](https://github.com/GEOS300/Assignment03) to help get you started.
 
-{{< include../Assignments/_Includes/Instructions.qmd >}}
+{{< include _Includes/Instructions.qmd >}}
 
 In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near [Kettleman City, CA, US](http://www.eol.ucar.edu/rtf/projects/ebex2000/). The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (@tbl-dates). You will be provided with two tables: 
 
-**Wind**: lists horizontal wind speeds $\overline{u}$ measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Screen-level air temperature is also provided.
+**Table1**: lists horizontal wind speeds $\overline{u}$ measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.
 
-**Turbulence**: contains longitudinal wind $u$, lateral wind $v$ and vertical wind $w$ measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.
+**Table2**: contains longitudinal wind $u$, lateral wind $v$ and vertical wind $w$ measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.
 
 * For all questions assume neutral conditions, $z_d=0$, and $P_a$ = 100 kPa.
 
@@ -39,7 +39,11 @@ Last digit of student number | date (YYYmmddHHMM)
 : The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format.  The filename for your date will follow this format: YYYYmmddHHMM.txt.  e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30.  If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files [here](https://github.com/GEOS300/AssignmentData/tree/main/WesthamIslandSoilData). {#tbl-dates}
 
 
-{{< include../Assignments/_Includes/Executables/02/01_R.qmd >}}
+{{< include _Includes/Executables/Student_Info_py.qmd >}}
+
+{{< include _Includes/Executables/Import_py.qmd >}}
+
+{{< include _Includes/Executables/03/00_py.qmd >}}
 
 
 ## Question 1
@@ -47,7 +51,7 @@ Last digit of student number | date (YYYmmddHHMM)
 Estimate $z_0$ from the measured values vertical wind profile provided.  Indicate your estimate of $z_0$ in m and produce a log wind profile plot.  You can either use a spreadsheet/software or by hand using [semi-logarithmic graph paper](https://www.eeweb.com/wp-content/uploads/semi-log-graph-paper.pdf). **Note**: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.
 
 
-{{< include../Assignments/_Includes/Executables/02/01_2_R.qmd >}}
+{{< include _Includes/Executables/03/01_py.qmd >}}
 
 
 ## Question 2
@@ -55,79 +59,79 @@ Estimate $z_0$ from the measured values vertical wind profile provided.  Indicat
 Based on the slope of the curve in Question 1, calculate the friction velocity $u_{\ast}$.
 
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ##  Question 3
 
 Estimate the surface shear stress $\tau_0$ from the result in Question 2 and with help of Appendix A3 (p. 392 ff.) in T. R. Oke, 'Boundary Layer Climates available on Canvas.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 4
 
 Estimate the eddy diffusivities for momentum $K_M$ using the wind gradients $\Delta \overline{u}$ in Table 1 between (a) $z=0.95$ and $1.55$ m, (b) $z=1.55$ and $2.35$ m, (c) $z=2.35$ and $3.72$ m, (d) $z=3.72$ and $6.15$ m, and (e) $z=6.15$ and $9.05$ m. How does $K_M$ change with height? Explain why.
 
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 5
 
 From the values in Table 1, calculate the aerodynamic resistance of the momentum flux $r_{a_M}$ for the layer from the surface to 9.05 m. 
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 6
 
-From the turbulence data provided in Table 2, calculate $\overline{u}$, $\overline{v}$, and $\overline{w}$
+From the turbulence data provided in Table 2, calculate $\overline{u}$, $\overline{v}$, and $\overline{w}$.  How does the magnitude of $\overline{u}$ compare to $\overline{v}$, and $\overline{w}$?
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 7
 
 From the data in Table 2 calculate $\overline{u^{\prime 2}}$, $\overline{v^{\prime 2}}$, and $\overline{w^{\prime 2}}$. Name those parameters.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 8
 
 From the data in Table 2 calculate the turbulence intensities $I_u$, $I_v$, and $I_w$.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 9
 
 From the data in Table 2 calculate the mean turbulent kinetic energy per unit mass $\overline{e}$. What is the ratio of $\overline{e}$ to the mean kinetic energy per unit mass?
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 
 ## Question 10
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
-
 Which of the three wind components, $u$, $v$ or $w$, contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 11
 
 From the data in Table 2 calculate (a) $\overline{u^{\prime}v^{\prime}}$ and (b) $\overline{u^{\prime}w^{\prime}}$
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 12
 
 Calculate $r_{uv}$ and $r_{uw}$. Discuss your results.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 13
 
 Plot a scatter graph of $u^{\prime}$ ($x$-axis) vs. $w^{\prime}$ ($y$-axis). Comment your graph and discuss if it looks like you expected.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 14
 
 Using your result in question 11 (b), calculate the friction velocity $u_{\ast}$ based on the high-frequency data and compare it to your answer in question 2.
 
-{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 

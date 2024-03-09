@@ -1,24 +1,23 @@
 
 ```{r}
 #| warning: false
+# Hint 1 >>
+# This function can be used to calculate the "natural logarithm" (ln):
+# log()
 
-# Import the data from github & parse the timestamp for each record
-## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
-data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
-TimeStamp = '200008191630'
+# Hint 2 >>
+# The "lm" function can be used to estimate the slope (m) and intercept (b) of a line (Y=mX+b), 
+# with the following syntax:
+# fit=lm(Y~X)
+# b=fit$coefficients[1]
+# m=fit$coefficients[2]
 
+# Hint 3 >>
+# The following set of commands can add a new first row a table 
+# 1) Crate a new table with one row (without data values)
+# If you know the values you want to add, just replace np.nan with the value
+#new_first_row = data.frame(Height..m. = NaN, Wind.Speed..m.s. = NaN)
+# 2) Concatenate the new row to the top of the original table then reset the index
+# Wind_Profile = rbind(new_first_row,Table_1)
 
-Turbulence <- read.csv(file = sprintf('%sturbulence%s.txt',data_url,TimeStamp),
-                        na.strings="-9999",skip=7)
-
-# Parse the timestamp info then drop the old column
-Turbulence$TIMESTAMP <- as.POSIXct(Turbulence$YYYY.MM.DD.HH.MM.SS,format = "%Y-%m-%d %H:%M:%S")
-Turbulence=Turbulence[,!(names(Turbulence) %in% c('YYYY.MM.DD.HH.MM.SS'))]
-
-Wind <- read.csv(file = sprintf('%swind%s.txt',data_url,TimeStamp),
-                na.strings="-9999",skip=6)
-
-print('Data imported and gap-filled successfully.')
-
-head(Wind)
 ```

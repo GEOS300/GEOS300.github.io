@@ -3072,32 +3072,133 @@
     ]
   },
   {
-    "objectID": "AssignmentsR_out/01.html",
-    "href": "AssignmentsR_out/01.html",
-    "title": "Assignment 1",
+    "objectID": "AssignmentsR_out/02.html",
+    "href": "AssignmentsR_out/02.html",
+    "title": "Assignment 2",
     "section": "",
     "text": "Python and R code templates be found here to help get you started."
   },
   {
-    "objectID": "AssignmentsR_out/01.html#instructions",
-    "href": "AssignmentsR_out/01.html#instructions",
-    "title": "Assignment 1",
+    "objectID": "AssignmentsR_out/02.html#instructions",
+    "href": "AssignmentsR_out/02.html#instructions",
+    "title": "Assignment 2",
     "section": "Instructions",
     "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units."
   },
   {
-    "objectID": "AssignmentsR_out/01.html#ca-dbb-flux-station",
-    "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
-    "title": "Assignment 1",
-    "section": "CA DBB Flux Station",
-    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"knitr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "objectID": "AssignmentsR_out/02.html#westham-island-energy-balance",
+    "href": "AssignmentsR_out/02.html#westham-island-energy-balance",
+    "title": "Assignment 2",
+    "section": "Westham Island Energy Balance",
+    "text": "Westham Island Energy Balance\nYou have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (Table 1). Refer to the metadata for a description of the data with variable names, units, and sensor depths. You can see this lecture slide for a photo of the station.\nThe soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is \\(P=0.57\\), bulk density of the dry soil is \\(\\rho_{dry} = 1.13\\) Mg m\\(^{-3}\\). The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.\n\n\n\nTable 1: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format. The filename for your date will follow this format: YYYYMMDD.txt. e.g., 20240214.txt would be the file for February 14th, 2023. If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYMMDD)\n\n\n\n\n0\n20090614\n\n\n1\n20090630\n\n\n2\n20090701\n\n\n3\n20090702\n\n\n4\n20090711\n\n\n5\n20090716\n\n\n6\n20090721\n\n\n7\n20090729\n\n\n8\n20090730\n\n\n9\n20090802\n\n\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"knitr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\nlibrary(\"readr\")\n\n\n# Import the data from github & parse the timestamp for each record\n## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'\ndf &lt;- read.csv(file = data_url,na.strings=\"-9999\")\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIME.PST.,format = \"%Y/%m/%d %H:%M\")\n\n# All sub-surface data were collected at the same frequency (15-minute intervals).  \n# However, H data were only available at 30-minute resolution.  \n# So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   \n# Use linear interpolation to estimate missing H values where available\ndf$H_filled = na.approx(df$H,na.rm=FALSE)\n# Backfill where linear interpolation didn't work (the first observation)\ndf$H_filled = na.locf(df$H_filled,fromLast=TRUE)\n\nprint('Data imported and gap-filled successfully.')\n\nhead(df)"
   },
   {
-    "objectID": "AssignmentsR_out/01.html#question-5",
-    "href": "AssignmentsR_out/01.html#question-5",
-    "title": "Assignment 1",
+    "objectID": "AssignmentsR_out/02.html#question-1",
+    "href": "AssignmentsR_out/02.html#question-1",
+    "title": "Assignment 2",
+    "section": "Question 1",
+    "text": "Question 1\nRun the code block above, making sure you’ve edited the file name so that it corresponds to your assigned date (Table 1). Then in the space below, calculate descriptive statistics for the all the variables in the dataset. Comment on the mean value and the range (max-min) of the four soil temperature variables. Hint you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-2",
+    "href": "AssignmentsR_out/02.html#question-2",
+    "title": "Assignment 2",
+    "section": "Question 2",
+    "text": "Question 2\nFirst we’ll make a plot of net radiation (\\(R_n\\)), sensible heat flux (\\(H\\)), and ground heat flux (\\(H_g\\)). Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.\n\nplot_energy_fluxes &lt;- melt(\n  df[,c('TIME.PST.','R_n','H_filled','H_g')],\n  id=\"TIME.PST.\")\n\np1 &lt;- ggplot(plot_energy_fluxes, aes(x = TIME.PST., y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'),values = c('black','red','blue')) +\n  scale_linetype_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'), values = c(\"solid\",\"dotted\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = \"W m-2 s-1\",x='Time')\n\np1 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-3",
+    "href": "AssignmentsR_out/02.html#question-3",
+    "title": "Assignment 2",
+    "section": "Question 3",
+    "text": "Question 3\nUsing the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period. Describe the patterns you see here: discuss how the soil changes with depth and through time over this day.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-4",
+    "href": "AssignmentsR_out/02.html#question-4",
+    "title": "Assignment 2",
+    "section": "Question 4",
+    "text": "Question 4\nThe code block below will give the first and last record in the dataset. You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e. the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-5",
+    "href": "AssignmentsR_out/02.html#question-5",
+    "title": "Assignment 2",
     "section": "Question 5",
-    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_{ex}\\) for the center point of this observation period (12:45). Given the value of \\(I_{ex}\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_{ex}\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n# Create a scatter plot\n\n# p &lt;- ggplot(Selection, aes(x=TA_1_1_1, y=TS_1)) + geom_point()\n# p + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_{ex}\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n# Code Tip: getting the time and value when a variable reaches it's maximum\n\n# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LW_{\\downarrow}\\)? How well do these approximations match with what we actually observed?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 5\nUsing daily average soil temperature for each of the four depths (\\(T_1\\) to \\(T_4\\)), determine the direction (away from or towards the ground surface) of the daily total \\(H_g\\) in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-6",
+    "href": "AssignmentsR_out/02.html#question-6",
+    "title": "Assignment 2",
+    "section": "Question 6",
+    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(5\\).\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-7",
+    "href": "AssignmentsR_out/02.html#question-7",
+    "title": "Assignment 2",
+    "section": "Question 7",
+    "text": "Question 7\nFind a method to estimate the thermal conductivity of the soil \\(k\\) at noon that day. Is \\(k\\) constant throughout the day?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-8",
+    "href": "AssignmentsR_out/02.html#question-8",
+    "title": "Assignment 2",
+    "section": "Question 8",
+    "text": "Question 8\nFind a method to estimate soil’s heat capacity \\(C\\) using the change in mid-day soil temperatures over a two-hour period. Use the near-surface observations for you calculations (5 and 10 cm). Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods. This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-9",
+    "href": "AssignmentsR_out/02.html#question-9",
+    "title": "Assignment 2",
+    "section": "Question 9",
+    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-10",
+    "href": "AssignmentsR_out/02.html#question-10",
+    "title": "Assignment 2",
+    "section": "Question 10",
+    "text": "Question 10\nWith \\(C\\) from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5% of the amplitude of the sinusoidal surface temperature wave.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-11",
+    "href": "AssignmentsR_out/02.html#question-11",
+    "title": "Assignment 2",
+    "section": "Question 11",
+    "text": "Question 11\nThe soil heat flux density \\(H_g\\) is not measured at the surface, but rather at 7.5 cm depth. Using \\(\\Delta T_1 / \\Delta t\\) as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface \\(H_{g(0)}\\) at 10:00 and at 19:00.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-12",
+    "href": "AssignmentsR_out/02.html#question-12",
+    "title": "Assignment 2",
+    "section": "Question 12",
+    "text": "Question 12\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-13",
+    "href": "AssignmentsR_out/02.html#question-13",
+    "title": "Assignment 2",
+    "section": "Question 13",
+    "text": "Question 13\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/02.html#question-14",
+    "href": "AssignmentsR_out/02.html#question-14",
+    "title": "Assignment 2",
+    "section": "Question 14",
+    "text": "Question 14\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "Assignments/index.html",
+    "href": "Assignments/index.html",
+    "title": "Assignments",
+    "section": "",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-08\n2024-03-29\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "crumbs": [
+      "Assignments"
+    ]
   },
   {
     "objectID": "Assignments/02.html",
@@ -3342,133 +3443,320 @@
     ]
   },
   {
-    "objectID": "Assignments/index.html",
-    "href": "Assignments/index.html",
-    "title": "Assignments",
+    "objectID": "Assignments/03.html",
+    "href": "Assignments/03.html",
+    "title": "Assignment 3",
     "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-08\n2024-03-29\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "text": "Python and R code templates be found here to help get you started.",
     "crumbs": [
-      "Assignments"
+      "Assignments",
+      "Assignment 3"
     ]
   },
   {
-    "objectID": "AssignmentsR_out/02.html",
-    "href": "AssignmentsR_out/02.html",
-    "title": "Assignment 2",
+    "objectID": "Assignments/03.html#instructions",
+    "href": "Assignments/03.html#instructions",
+    "title": "Assignment 3",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units.\nIn this exercise you will use a 30-min data-set measured above an extensively flat cotton field near Kettleman City, CA, US. The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (Table 1). You will be provided with two tables:\nTable1: lists horizontal wind speeds \\(\\overline{u}\\) measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.\nTable2: contains longitudinal wind \\(u\\), lateral wind \\(v\\) and vertical wind \\(w\\) measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.\n\nFor all questions assume neutral conditions, \\(z_d=0\\), and \\(P_a\\) = 100 kPa.\n\n\n\n\nTable 1: The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format. The filename for your date will follow this format: YYYYmmddHHMM.txt. e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30. If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYmmddHHMM)\n\n\n\n\n0\n200008021530\n\n\n1\n200008031000\n\n\n2\n200008031030\n\n\n3\n200008031200\n\n\n4\n200008041030\n\n\n5\n200008041100\n\n\n6\n200008041130\n\n\n7\n200008041530\n\n\n8\n200008101230\n\n\n9\n200008101530\n\n\n\n\n\n\n\n\nTable 1 Metadata:\n# EBEX 2000, Kettleman City, CA, USA\n# Wind profile measured by cup anemometers\n# Start: 2000/08/19 16:30 PST\n# Average values over 30 min\n# Air temperature: 33.4 deg C\n# Air pressure: 101.444 kPa\nTable 1 Data:\n   Height (m)  Wind Speed (m/s)\n0        0.95              1.77\n1        1.55              2.18\n2        2.35              2.47\n3        3.72              2.85\n4        6.15              3.37\n5        9.05              3.67\n\n\n\nTable 2 Metadata:\n# EBEX 2000, Kettleman City, CA, USA\n# Turbulence data measured at 1 Hz by fast-anemometer at 6.4 m\n# Start: 2000/08/19 16:30 PST\n# u (m/s) : longitudinal wind vector component\n# v (m/s) : lateral wind vector component\n# w (m/s) : vertical wind vector component\nTable 2 Data preview:\n\n\n\n\n\n\n\n\n\nu (m/s)\nv (m/s)\nw (m/s)\n\n\nTIMESTAMP\n\n\n\n\n\n\n\n2000-08-19 16:30:00\n3.0774\n0.0560\n-0.1993\n\n\n2000-08-19 16:30:01\n2.9384\n-0.0827\n0.0345\n\n\n2000-08-19 16:30:02\n2.9198\n-0.1783\n-0.1177\n\n\n2000-08-19 16:30:03\n3.0079\n0.0066\n0.2113\n\n\n2000-08-19 16:30:04\n3.1117\n0.0649\n0.0785",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-1",
+    "href": "Assignments/03.html#question-1",
+    "title": "Assignment 3",
+    "section": "Question 1",
+    "text": "Question 1\nEstimate \\(z_0\\) from the measured values vertical wind profile provided. Indicate your estimate of \\(z_0\\) in m and produce a log wind profile plot. You can either use a spreadsheet/software or by hand using semi-logarithmic graph paper. Note: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-2",
+    "href": "Assignments/03.html#question-2",
+    "title": "Assignment 3",
+    "section": "Question 2",
+    "text": "Question 2\nBased on the slope of the curve in Question 1, calculate the friction velocity \\(u_{\\ast}\\).",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-3",
+    "href": "Assignments/03.html#question-3",
+    "title": "Assignment 3",
+    "section": "Question 3",
+    "text": "Question 3\nEstimate the surface shear stress \\(\\tau_0\\) from the result in Question 2 and with help of Appendix A3 (p. 392 ff.) in T. R. Oke, ’Boundary Layer Climates available on Canvas.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-4",
+    "href": "Assignments/03.html#question-4",
+    "title": "Assignment 3",
+    "section": "Question 4",
+    "text": "Question 4\nEstimate the eddy diffusivities for momentum \\(K_M\\) using the wind gradients \\(\\Delta \\overline{u}\\) in Table 1 between (a) \\(z=0.95\\) and \\(1.55\\) m, (b) \\(z=1.55\\) and \\(2.35\\) m, (c) \\(z=2.35\\) and \\(3.72\\) m, (d) \\(z=3.72\\) and \\(6.15\\) m, and (e) \\(z=6.15\\) and \\(9.05\\) m. How does \\(K_M\\) change with height? Explain why.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-5",
+    "href": "Assignments/03.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nFrom the values in Table 1, calculate the aerodynamic resistance of the momentum flux \\(r_{a_M}\\) for the layer from the surface to 9.05 m.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-6",
+    "href": "Assignments/03.html#question-6",
+    "title": "Assignment 3",
+    "section": "Question 6",
+    "text": "Question 6\nFrom the turbulence data provided in Table 2, calculate \\(\\overline{u}\\), \\(\\overline{v}\\), and \\(\\overline{w}\\). How does the magnitude of \\(\\overline{u}\\) compare to \\(\\overline{v}\\), and \\(\\overline{w}\\)?",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-7",
+    "href": "Assignments/03.html#question-7",
+    "title": "Assignment 3",
+    "section": "Question 7",
+    "text": "Question 7\nFrom the data in Table 2 calculate \\(\\overline{u^{\\prime 2}}\\), \\(\\overline{v^{\\prime 2}}\\), and \\(\\overline{w^{\\prime 2}}\\). Name those parameters.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-8",
+    "href": "Assignments/03.html#question-8",
+    "title": "Assignment 3",
+    "section": "Question 8",
+    "text": "Question 8\nFrom the data in Table 2 calculate the turbulence intensities \\(I_u\\), \\(I_v\\), and \\(I_w\\).",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-9",
+    "href": "Assignments/03.html#question-9",
+    "title": "Assignment 3",
+    "section": "Question 9",
+    "text": "Question 9\nFrom the data in Table 2 calculate the mean turbulent kinetic energy per unit mass \\(\\overline{e}\\). What is the ratio of \\(\\overline{e}\\) to the mean kinetic energy per unit mass?",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-10",
+    "href": "Assignments/03.html#question-10",
+    "title": "Assignment 3",
+    "section": "Question 10",
+    "text": "Question 10\nWhich of the three wind components, \\(u\\), \\(v\\) or \\(w\\), contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-11",
+    "href": "Assignments/03.html#question-11",
+    "title": "Assignment 3",
+    "section": "Question 11",
+    "text": "Question 11\nFrom the data in Table 2 calculate (a) \\(\\overline{u^{\\prime}v^{\\prime}}\\) and (b) \\(\\overline{u^{\\prime}w^{\\prime}}\\)",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-12",
+    "href": "Assignments/03.html#question-12",
+    "title": "Assignment 3",
+    "section": "Question 12",
+    "text": "Question 12\nCalculate \\(r_{uv}\\) and \\(r_{uw}\\). Discuss your results.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-13",
+    "href": "Assignments/03.html#question-13",
+    "title": "Assignment 3",
+    "section": "Question 13",
+    "text": "Question 13\nPlot a scatter graph of \\(u^{\\prime}\\) (\\(x\\)-axis) vs. \\(w^{\\prime}\\) (\\(y\\)-axis). Comment your graph and discuss if it looks like you expected.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "Assignments/03.html#question-14",
+    "href": "Assignments/03.html#question-14",
+    "title": "Assignment 3",
+    "section": "Question 14",
+    "text": "Question 14\nUsing your result in question 11 (b), calculate the friction velocity \\(u_{\\ast}\\) based on the high-frequency data and compare it to your answer in question 2.",
+    "crumbs": [
+      "Assignments",
+      "Assignment 3"
+    ]
+  },
+  {
+    "objectID": "AssignmentsR_out/01.html",
+    "href": "AssignmentsR_out/01.html",
+    "title": "Assignment 1",
     "section": "",
     "text": "Python and R code templates be found here to help get you started."
   },
   {
-    "objectID": "AssignmentsR_out/02.html#instructions",
-    "href": "AssignmentsR_out/02.html#instructions",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/01.html#instructions",
+    "href": "AssignmentsR_out/01.html#instructions",
+    "title": "Assignment 1",
     "section": "Instructions",
     "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units."
   },
   {
-    "objectID": "AssignmentsR_out/02.html#westham-island-energy-balance",
-    "href": "AssignmentsR_out/02.html#westham-island-energy-balance",
-    "title": "Assignment 2",
-    "section": "Westham Island Energy Balance",
-    "text": "Westham Island Energy Balance\nYou have been randomly assigned a single day of data from the Westham Island energy balance station based on your student number (Table 1). Refer to the metadata for a description of the data with variable names, units, and sensor depths. You can see this lecture slide for a photo of the station.\nThe soil at the climate station has been analyzed in the UBC Soil Water Atmosphere Lab and the following values were determined: porosity is \\(P=0.57\\), bulk density of the dry soil is \\(\\rho_{dry} = 1.13\\) Mg m\\(^{-3}\\). The soil organic mass fraction was determined 3.77 % (of total dry soil mass). Assume that those values apply to the entire vertical profile.\n\n\n\nTable 1: The date you are responsible for analyzing in YYYY (Year) MM (month) DD (day) format. The filename for your date will follow this format: YYYYMMDD.txt. e.g., 20240214.txt would be the file for February 14th, 2023. If you are completing the assignment using Python or R, just edit the filename in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYMMDD)\n\n\n\n\n0\n20090614\n\n\n1\n20090630\n\n\n2\n20090701\n\n\n3\n20090702\n\n\n4\n20090711\n\n\n5\n20090716\n\n\n6\n20090721\n\n\n7\n20090729\n\n\n8\n20090730\n\n\n9\n20090802\n\n\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"knitr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\n\n\n# Import the data from github & parse the timestamp for each record\n## **NOTE**  Make sure to edit the filename in the URL so it corresponds to the date you were assigned.\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/WesthamIslandSoilData/20090324.txt'\ndf &lt;- read.csv(file = data_url,na.strings=\"-9999\")\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIME.PST.,format = \"%Y/%m/%d %H:%M\")\n\n# All sub-surface data were collected at the same frequency (15-minute intervals).  \n# However, H data were only available at 30-minute resolution.  \n# So we'll use a simple gap-filling procedure to estimate missing values from the nearest available observations.   \n# Use linear interpolation to estimate missing H values where available\ndf$H_filled = na.approx(df$H,na.rm=FALSE)\n# Backfill where linear interpolation didn't work (the first observation)\ndf$H_filled = na.locf(df$H_filled,fromLast=TRUE)\n\nprint('Data imported and gap-filled successfully.')\n\nhead(df)"
+    "objectID": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "href": "AssignmentsR_out/01.html#ca-dbb-flux-station",
+    "title": "Assignment 1",
+    "section": "CA DBB Flux Station",
+    "text": "CA DBB Flux Station\nIn this lab, assignment, you’re going to look at data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. On the assignment data page you can find a Climate_Summary_BB.csv with data from the CA-DBB station along with two metadata files, one describing the climate data and another describing the station. Reviewing the metadata is an important first step of any project.\n\nFigure 1 shows some pictures of the site from different perspectives. Figure 2 shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is a concept we’ll cover later in term. For now, we’ll stick to looking at some basic components of the site’s energy balance. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like.\n\n\n\n\n\n\n\n\n\n\n(a) Looking south from above the in winter\n\n\n\n\n\n\n\n\n\n\n\n(b) Looking south from the EC station\n\n\n\n\n\n\n\n\n\n\n\n\n\n(c) Just after a fresh snowfall\n\n\n\n\n\n\n\n\n\n\n\n(d) Looking east from the top of the station in late summer\n\n\n\n\n\n\n\nFigure 1\n\n\n\n\n\n\n\n\n\n\n\nFigure 2: Location of UBC-Micromet Eddy Covariance Stations\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"knitr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\nlibrary(\"readr\")\n\n\nQuestion 1\nBelow is an example showing the first few rows of the BB climate summary data. What values do you see listed for Incoming and outgoing \\(SW\\) in the first row of the table, are these values reasonable? Why or why not?\n\nMake suer to specify the units in your answer. Check the metadata provided here to make sure you understand the variable names and units.\n\n\n# Import the data from github & parse the timestamp for each record\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/Climate_Summary_BB.csv'\ndf &lt;- read.csv(file = data_url)\n\n# We have to parse the timestamp explicitly to convert it to a \"time aware\" object\ndf$TIMESTAMP &lt;- as.POSIXct(df$TIMESTAMP,format = \"%Y-%m-%d %H%M\")\n# Using this we can get a extra variables (DOY & HOUR) that will be helpful later\ndf$HOUR &lt;- format(df$TIMESTAMP,format = \"%H\")\ndf$DOY &lt;- format(df$TIMESTAMP,format = \"%j\")\n\n# Calculate Albedo\ndf$Albedo = df$SW_OUT_1_1_1/df$SW_IN_1_1_1\n\n# Preview the table using head()\nhead(df)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 2\nWe’re going to be looking at some data from the January 2024 cold-snap (Jan 12 to Jan 19) and snowstorm (Jan 17-Jan 19) during which record low temperatures were observed and over 25cm of snow was received across the Metro Vancouver area. The table below shows some descriptive statistics for key variables during this time period. What was the range of air temperatures observed over this time period? How does it compare to the range of soil temperatures observed?\n\n# Set a time window and query the dataframe\nStart ='2024-01-12 0000'\nEnd ='2024-01-20 0000'\n\n# Select a subset of the variables\nQuery.Cols &lt;- c('TIMESTAMP','DOY','HOUR','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1','TA_1_1_1','TS_1','RH_1_1_1')\n\n# Run the query and save it to a new dataframe called \"Selection\"\nSelection &lt;- df[which((df$TIMESTAMP &gt;= Start) & (df$TIMESTAMP &lt;End)),\n        Query.Cols]\n\n# Generate some descriptive statistics for the data (excluding the timestamp)\nsummary(subset(Selection,select = -TIMESTAMP))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 3\nThe plot below shows traces of the four radiation component, air & soil temperature, and relative humidity are. Looking at the plot, what stands out to you? Comment on the progression of each radiative component over time, using the temperature and humidity data to support your discussion and help explain any patterns you might see. Do you see any issues in the data? If so, what is a possible explanation?\n\n# Create a plot with three sub-plots\n# Plot the radiation components on the first sub-plot\n# Plot Ta and Ts on the second sub-plot, and RH on the third\nplot_radiation &lt;- melt(\n  Selection[,c('TIMESTAMP','SW_IN_1_1_1','LW_IN_1_1_1','SW_OUT_1_1_1', 'LW_OUT_1_1_1')],\n  id=\"TIMESTAMP\")\n\np1 &lt;- ggplot(plot_radiation, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('SW In','LW In','SW Out','LW Out'),values = c('red','red','blue','blue')) +\n  scale_linetype_manual(labels = c('SW In','LW In','SW Out','LW Out'), values = c(\"solid\",\"dashed\",\"solid\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = TeX(r\"($Unit_{sub}^{sup}$)\"))+\n  ylim(0,425)+\n  ggtitle('Radiative Fluxes at CA-DBB Flux Station')\n\nplot_temp &lt;- melt(\n  Selection[,c('TIMESTAMP','TA_1_1_1','TS_1')],\n  id=\"TIMESTAMP\")\np2 &lt;- ggplot(plot_temp, aes(x = TIMESTAMP, y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('T_a 2m','T_s 0.05m'),values = c('red','red')) +\n  scale_linetype_manual(labels = c('T_a 2m','T_s 0.05m'), values = c(\"solid\",\"dashed\"))+\n  labs(y = TeX(r\"($C\\degree)\"))+\n  ylim(-15,10)+\n  ggtitle('Temperature and Humidity')\n\np3 &lt;- ggplot(Selection, aes(x = TIMESTAMP, y = RH_1_1_1,lty = 'RH')) +\n  geom_line(color='blue') +\n  labs(y = 'RH')+\n  ggtitle('Temperature and Humidity')\n\n\np1 / p2 / p3 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 4\nThe plot below shows mean daily albedo. What explains sharp increase on the 17th?\n\n# Create a single plot bar showing mean daily albedo\n\n# Calculate Albedo\nSelection$Albedo = Selection$SW_OUT_1_1_1/Selection$SW_IN_1_1_1\n\n# Filter out implausible values\nSelection$Albedo = replace(Selection$Albedo, Selection$SW_OUT_1_1_1&gt;Selection$SW_IN_1_1_1 , NaN )\n\n# Resample to get mean daily Albedo, ignoring the NaN values\nDailyAlbedo&lt;-ddply(Selection,.(DOY),summarise, Albedo=mean(Albedo,na.rm=TRUE))\n\np &lt;- ggplot(data=DailyAlbedo, aes(x=DOY, y=Albedo)) +\n  geom_bar(stat=\"identity\", color=\"black\", fill=\"blue\")+\n  labs(y = '%')+\n  ggtitle('Daily Albedo')\np + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-1",
-    "href": "AssignmentsR_out/02.html#question-1",
-    "title": "Assignment 2",
-    "section": "Question 1",
-    "text": "Question 1\nRun the code block above, making sure you’ve edited the file name so that it corresponds to your assigned date (Table 1). Then in the space below, calculate descriptive statistics for the all the variables in the dataset. Comment on the mean value and the range (max-min) of the four soil temperature variables. Hint you can refer to Assignment 1 for the appropriate commands to list descriptive statistics of a dataset.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-2",
-    "href": "AssignmentsR_out/02.html#question-2",
-    "title": "Assignment 2",
-    "section": "Question 2",
-    "text": "Question 2\nFirst we’ll make a plot of net radiation (\\(R_n\\)), sensible heat flux (\\(H\\)), and ground heat flux (\\(H_g\\)). Describe the patterns you see here and discuss how these three components of the energy balance compare to one another at this site.\n\nplot_energy_fluxes &lt;- melt(\n  df[,c('TIME.PST.','R_n','H_filled','H_g')],\n  id=\"TIME.PST.\")\n\np1 &lt;- ggplot(plot_energy_fluxes, aes(x = TIME.PST., y = value, group = variable)) +\n  geom_line(aes(color = variable,linetype = variable)) +\n  scale_color_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'),values = c('black','red','blue')) +\n  scale_linetype_manual(labels = c('Net Radiation','Sensible Heat Flux','Soil Heat Flux'), values = c(\"solid\",\"dotted\",\"dashed\"))+\n  \n  # Note: You can use a markup language called LaTeX to format labels.  Replace Units,subscript, and superscript with the appropriate unit for radiative fluxes\n  labs(y = \"W m-2 s-1\",x='Time')\n\np1 + plot_annotation(sprintf('Student # %i',Student.Number))\noptions(repr.plot.width=8, repr.plot.height=10)\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-3",
-    "href": "AssignmentsR_out/02.html#question-3",
-    "title": "Assignment 2",
-    "section": "Question 3",
-    "text": "Question 3\nUsing the above code as a template, create another plot showing the four soil temperature observations over the 24 hour period. Describe the patterns you see here: discuss how the soil changes with depth and through time over this day.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-4",
-    "href": "AssignmentsR_out/02.html#question-4",
-    "title": "Assignment 2",
-    "section": "Question 4",
-    "text": "Question 4\nThe code block below will give the first and last record in the dataset. You can use this to calculate the net warming/cooling of the soil over the 24 hours for each depth (5 cm, 10 cm, 20 cm and the 50 cm), i.e. the temperature change from midnight to midnight. Speculate what caused the warming or cooling observed if there was any.\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
-  },
-  {
-    "objectID": "AssignmentsR_out/02.html#question-5",
-    "href": "AssignmentsR_out/02.html#question-5",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/01.html#question-5",
+    "href": "AssignmentsR_out/01.html#question-5",
+    "title": "Assignment 1",
     "section": "Question 5",
-    "text": "Question 5\nUsing daily average soil temperature for each of the four depths (\\(T_1\\) to \\(T_4\\)), determine the direction (away from or towards the ground surface) of the daily total \\(H_g\\) in the soil layers from 5 - 10 cm, 10 - 20 cm and 20 - 50 cm?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 5\nThe maximum half-hourly \\(SW_\\downarrow\\) observed during this time period occurred between 12:30 and 13:00 on January 13th. Using the equations from lecture, calculate the Local Apparent Time (LAT), solar declination \\(\\delta\\), solar zenith angle \\(Z\\), and extraterrestrial irradiance \\(I_{ex}\\) for the center point of this observation period (12:45). Given the value of \\(I_{ex}\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time? Given the value of \\(I_{ex}\\), compared to observed \\(SW_\\downarrow\\), what is the approximate bulk transmissivity (\\(\\Psi_a\\)) coefficient of the atmosphere over CA-DBB at this point in time?\nNote: you can find the site’s Lat/Lon and time zone info in the CA-DBB station metadata file.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\nQuestion 6\nNow calculate \\(\\Psi_a\\) for 12:45 January 19; the observed value of \\(SW_\\downarrow\\) was between 12:30 and 13:00 was 58.375 W\\(^m{-2}\\). What explains the difference between these two days?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 7\nUsing the examples above as a template, calculate \\(R_n\\) over the cold-snap. Make a scatter plot showing \\(R_n\\) on the y-axis and \\(SW_\\downarrow\\) on the x-axis. Describe the relationship you.\n\n# Create a scatter plot\n\n# p &lt;- ggplot(Selection, aes(x=TA_1_1_1, y=TS_1)) + geom_point()\n# p + plot_annotation(sprintf('Student # %i',Student.Number))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 8\nUsing the examples above as a template, create a new selection to see how typical summertime conditions compare to severe winter time conditions. Change the selection period so that it spans July 12th to July 19th, 2023. Provide summary statistics of the same variables as those shown above and produce plots like the ones shown above as well. Discuss how each of these variables during this mid-summer period compare to those from the cold-snap period.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 9\nFind the timestamp of the observation interval when maximum \\(SW_\\downarrow\\) was observed for the mid-summer period. You will use observations from this timestamp to answer each of the questions below. Note our sites do not use daylight savings, so the UTC offset is fixed all year. Use this information to calculate \\(I_{ex}\\) and \\(\\Psi_a\\) for the mid-point of this observation period. Discus how these two values compare between this observation, and the observation spanning between 12:30 and 13:00 on January 13th of 2024. How does the magnitude differ and why does the relative timing of the maximum daily \\(SW_\\downarrow\\) differ?\n\n# Code Tip: getting the time and value when a variable reaches it's maximum\n\n# Selection[Selection$TA_1_1_1==max(Selection$TA_1_1_1), c('TIMESTAMP','TA_1_1_1')]\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 10\nApproximately 42% of the energy in the short-wave is within the PAR band (Photosynthetically active radiation that can be used by plants to perform photosynthesis). Based on this assumption, calculate the energy available to plants (also called: photosynthetic photon flux density, PPFD) at noon in \\(\\mu \\rm{mol}\\, \\rm{m}^{-2}\\,\\rm{s}^{-1}\\). You can use the wavelength of yellow light (\\(\\lambda 0.55 \\mu m\\)) for your estimate. Hint: Consult examples in reading package for radiation geometry.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 11\nLet’s assume the surface emissivity at CA-DBB is \\(\\epsilon = 0.95\\). Using this assumption and the Stephan Boltzman law for grey bodies, estimate temperature of the land surface at CA-DBB for the time period identified above in question 9.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 12\nNow use the same equation to estimate the “apparent” radiative sky temperature (\\(T_k\\)) from \\(LW_{\\downarrow}\\) for this timestamp. “Apparent” means you should assume \\(\\epsilon{a} = 1.0\\). How would you interpret \\(T_k\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 13\nUsing measured \\(LW_{\\downarrow}\\) and measured air temperature \\(T_a\\), calculate the actual bulk emissivity of the atmosphere \\(\\varepsilon_{a}\\) at noon? [2]\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block\n\n\n\nQuestion 14\nUsing the Prata (1996) equation from lecture and measured \\(T_a\\) and \\(RH\\), what is the calculated apparent emissivity of the atmosphere and the calculated estimate of \\(LW_{\\downarrow}\\)? How well do these approximations match with what we actually observed?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-6",
-    "href": "AssignmentsR_out/02.html#question-6",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html",
+    "href": "AssignmentsR_out/03.html",
+    "title": "Assignment 3",
+    "section": "",
+    "text": "Python and R code templates be found here to help get you started."
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#instructions",
+    "href": "AssignmentsR_out/03.html#instructions",
+    "title": "Assignment 3",
+    "section": "Instructions",
+    "text": "Instructions\nIt is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here here. Note these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.\nPlease upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File \\(\\gg\\) Download as \\(\\gg\\) HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. Do not attach a spreadsheet.\nMake Sure your student number is include on each plot you produce, and that each plot is using the correct units.\nIn this exercise you will use a 30-min data-set measured above an extensively flat cotton field near Kettleman City, CA, US. The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (Table 1). You will be provided with two tables:\nTable1: lists horizontal wind speeds \\(\\overline{u}\\) measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.\nTable2: contains longitudinal wind \\(u\\), lateral wind \\(v\\) and vertical wind \\(w\\) measured every second over the same 30 minutes by a fast-response anemometer located at 6.4 m height.\n\nFor all questions assume neutral conditions, \\(z_d=0\\), and \\(P_a\\) = 100 kPa.\n\n\n\n\nTable 1: The Timestamp you are responsible for analyzing in YYYY (Year) mm (month) dd (day) HH (hour) MM (minute) format. The filename for your date will follow this format: YYYYmmddHHMM.txt. e.g., wind202402141330.txt and turbulence202402141330.txt would be the files for February 14th, 2023 13:30. If you are completing the assignment using Python or R, just edit the filename timestamp in the corresponding template. If you are completing the assignment by hand or in excel, you can find the data files here.\n\n\n\n\n\nLast digit of student number\ndate (YYYmmddHHMM)\n\n\n\n\n0\n200008021530\n\n\n1\n200008031000\n\n\n2\n200008031030\n\n\n3\n200008031200\n\n\n4\n200008041030\n\n\n5\n200008041100\n\n\n6\n200008041130\n\n\n7\n200008041530\n\n\n8\n200008101230\n\n\n9\n200008101530\n\n\n\n\n\n\n\n# Enter your information below\nStudent.Name = 'June Skeeter'\nStudent.Number = 123456789\nsprintf('GEOS 300 Assignment Submission for %s: %s',Student.Name,Student.Number)\n\n\nlibrary(\"ggplot2\")\nlibrary(\"reshape2\")\nlibrary(\"latex2exp\")\nlibrary(\"patchwork\")\nlibrary(\"tidyr\")\nlibrary(\"knitr\")\nlibrary(\"plyr\")\nlibrary(\"lubridate\")\nlibrary(\"zoo\")\nlibrary(\"readr\")\n\n\n# Import the data from github & parse the timestamp for each record\n## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.\ndata_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'\nTimeStamp = '200008191630'\n\n# Format the links to Table 1 (mean wind speed) and Table 2 (high frequency wind data)\nTable_1_url = sprintf('%swind%s.txt',data_url,TimeStamp)\nTable_2_url =  sprintf('%sturbulence%s.txt',data_url,TimeStamp)\n\n# Both tables have 7 rows of metadata at the top.  We'll parse and print those before reading the rest of the data\nheader_rows = 7\n\n\nprint('Table 1 Metadata:')\nTable_1_header_info = read_fwf(Table_1_url,fwf_widths(c(100)), show_col_types = FALSE)\nprint(Table_1_header_info[1:header_rows-1,])\n\nTable_1 &lt;- read.csv(file = Table_1_url,skip=header_rows)\n\nprint('Table 1 Data:')\nhead(Table_1)\n\nprint('Table 2 Metadata:')\nTable_2_header_info = read_fwf(Table_2_url,fwf_widths(c(100)), show_col_types = FALSE)\nprint(Table_2_header_info[1:header_rows-1,])\n\nTable_2 &lt;- read.csv(file = Table_2_url,skip=header_rows)\n\n# Parse the timestamp info then drop the old column\nTable_2$TIMESTAMP &lt;- as.POSIXct(Table_2$YYYY.MM.DD.HH.MM.SS,format = \"%Y-%m-%d %H:%M:%S\")\nTable_2=Table_2[,!(names(Table_2) %in% c('YYYY.MM.DD.HH.MM.SS'))]\n\nprint('Table 2 Data:')\nhead(Table_2)"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-1",
+    "href": "AssignmentsR_out/03.html#question-1",
+    "title": "Assignment 3",
+    "section": "Question 1",
+    "text": "Question 1\nEstimate \\(z_0\\) from the measured values vertical wind profile provided. Indicate your estimate of \\(z_0\\) in m and produce a log wind profile plot. You can either use a spreadsheet/software or by hand using semi-logarithmic graph paper. Note: If you solve this question using a semi-logarithmic paper, use a ruler and your graphical judgement (subjective) to create the best fit through the points.\n\n# Hint 1 &gt;&gt;\n# This function can be used to calculate the \"natural logarithm\" (ln):\n# log()\n\n# Hint 2 &gt;&gt;\n# The \"lm\" function can be used to estimate the slope (m) and intercept (b) of a line (Y=mX+b), \n# with the following syntax:\n# fit=lm(Y~X)\n# b=fit$coefficients[1]\n# m=fit$coefficients[2]\n\n# Hint 3 &gt;&gt;\n# The following set of commands can add a new first row a table \n# 1) Crate a new table with one row (without data values)\n# If you know the values you want to add, just replace np.nan with the value\n#new_first_row = data.frame(Height..m. = NaN, Wind.Speed..m.s. = NaN)\n# 2) Concatenate the new row to the top of the original table then reset the index\n# Wind_Profile = rbind(new_first_row,Table_1)"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-2",
+    "href": "AssignmentsR_out/03.html#question-2",
+    "title": "Assignment 3",
+    "section": "Question 2",
+    "text": "Question 2\nBased on the slope of the curve in Question 1, calculate the friction velocity \\(u_{\\ast}\\).\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-3",
+    "href": "AssignmentsR_out/03.html#question-3",
+    "title": "Assignment 3",
+    "section": "Question 3",
+    "text": "Question 3\nEstimate the surface shear stress \\(\\tau_0\\) from the result in Question 2 and with help of Appendix A3 (p. 392 ff.) in T. R. Oke, ’Boundary Layer Climates available on Canvas.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-4",
+    "href": "AssignmentsR_out/03.html#question-4",
+    "title": "Assignment 3",
+    "section": "Question 4",
+    "text": "Question 4\nEstimate the eddy diffusivities for momentum \\(K_M\\) using the wind gradients \\(\\Delta \\overline{u}\\) in Table 1 between (a) \\(z=0.95\\) and \\(1.55\\) m, (b) \\(z=1.55\\) and \\(2.35\\) m, (c) \\(z=2.35\\) and \\(3.72\\) m, (d) \\(z=3.72\\) and \\(6.15\\) m, and (e) \\(z=6.15\\) and \\(9.05\\) m. How does \\(K_M\\) change with height? Explain why.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-5",
+    "href": "AssignmentsR_out/03.html#question-5",
+    "title": "Assignment 3",
+    "section": "Question 5",
+    "text": "Question 5\nFrom the values in Table 1, calculate the aerodynamic resistance of the momentum flux \\(r_{a_M}\\) for the layer from the surface to 9.05 m.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+  },
+  {
+    "objectID": "AssignmentsR_out/03.html#question-6",
+    "href": "AssignmentsR_out/03.html#question-6",
+    "title": "Assignment 3",
     "section": "Question 6",
-    "text": "Question 6\nCalculate the daily total of \\(H_g\\) at 7.5 cm depth in \\(\\textrm{MJ}\\, \\textrm{m}^{-2}\\, \\textrm{day}^{-1}\\) using the measured values from the soil heat flux plate. Compare the direction of \\(H_g\\) to the direction of the heat flux obtained for the 5 -10 cm layer in question \\(5\\).\n\n# A command to get rows of a dataframe based on their position and columns based on their names\n# 1 is the first row and nrow(df) is the position of the last row\nFirst_and_Last &lt;- df[c(1,nrow(df)),c('T_1','T_4')]\nprint(First_and_Last)\n\n# A command to calculate the difference between adjacent values in each column\nprint(diff(as.matrix(First_and_Last)))\n\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 6\nFrom the turbulence data provided in Table 2, calculate \\(\\overline{u}\\), \\(\\overline{v}\\), and \\(\\overline{w}\\). How does the magnitude of \\(\\overline{u}\\) compare to \\(\\overline{v}\\), and \\(\\overline{w}\\)?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-7",
-    "href": "AssignmentsR_out/02.html#question-7",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-7",
+    "href": "AssignmentsR_out/03.html#question-7",
+    "title": "Assignment 3",
     "section": "Question 7",
-    "text": "Question 7\nFind a method to estimate the thermal conductivity of the soil \\(k\\) at noon that day. Is \\(k\\) constant throughout the day?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 7\nFrom the data in Table 2 calculate \\(\\overline{u^{\\prime 2}}\\), \\(\\overline{v^{\\prime 2}}\\), and \\(\\overline{w^{\\prime 2}}\\). Name those parameters.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-8",
-    "href": "AssignmentsR_out/02.html#question-8",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-8",
+    "href": "AssignmentsR_out/03.html#question-8",
+    "title": "Assignment 3",
     "section": "Question 8",
-    "text": "Question 8\nFind a method to estimate soil’s heat capacity \\(C\\) using the change in mid-day soil temperatures over a two-hour period. Use the near-surface observations for you calculations (5 and 10 cm). Hint: the exact choice of timestamps is up to you, but keep in mind the timestamp corresponds to the end of the averaging periods. This means a timestamp of 12:15, corresponds to the interval 12:00-12:15, and the center point of the observation period would be 12:07.5.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 8\nFrom the data in Table 2 calculate the turbulence intensities \\(I_u\\), \\(I_v\\), and \\(I_w\\).\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-9",
-    "href": "AssignmentsR_out/02.html#question-9",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-9",
+    "href": "AssignmentsR_out/03.html#question-9",
+    "title": "Assignment 3",
     "section": "Question 9",
-    "text": "Question 9\nCalculate the heat capacity \\(C\\) of the soil using the lab analysis results (see introduction text) and measured soil water content \\(\\theta_w\\). Does your value obtained agree with \\(C\\) calculated based in the question above? Why or why not? Note For subsequent calculations, use the value of \\(C\\) from your answer to this question, and not \\(C\\) from your answer to the previous question.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 9\nFrom the data in Table 2 calculate the mean turbulent kinetic energy per unit mass \\(\\overline{e}\\). What is the ratio of \\(\\overline{e}\\) to the mean kinetic energy per unit mass?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-10",
-    "href": "AssignmentsR_out/02.html#question-10",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-10",
+    "href": "AssignmentsR_out/03.html#question-10",
+    "title": "Assignment 3",
     "section": "Question 10",
-    "text": "Question 10\nWith \\(C\\) from the question above, calculate the depths where you expect the amplitude of the diurnal and yearly waves to drop below 5% of the amplitude of the sinusoidal surface temperature wave.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 10\nWhich of the three wind components, \\(u\\), \\(v\\) or \\(w\\), contains most turbulent kinetic energy per unit mass. Speculate about the shape of the eddies.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-11",
-    "href": "AssignmentsR_out/02.html#question-11",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-11",
+    "href": "AssignmentsR_out/03.html#question-11",
+    "title": "Assignment 3",
     "section": "Question 11",
-    "text": "Question 11\nThe soil heat flux density \\(H_g\\) is not measured at the surface, but rather at 7.5 cm depth. Using \\(\\Delta T_1 / \\Delta t\\) as a surrogate for the average warming / cooling rates in the whole layer from 0 to 7.5 cm, correct the soil heat flux density and find the value at the surface \\(H_{g(0)}\\) at 10:00 and at 19:00.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 11\nFrom the data in Table 2 calculate (a) \\(\\overline{u^{\\prime}v^{\\prime}}\\) and (b) \\(\\overline{u^{\\prime}w^{\\prime}}\\)\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-12",
-    "href": "AssignmentsR_out/02.html#question-12",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-12",
+    "href": "AssignmentsR_out/03.html#question-12",
+    "title": "Assignment 3",
     "section": "Question 12",
-    "text": "Question 12\nDraw a graph of \\(R_n\\) (\\(x\\)-axis) against \\(H_g\\) (\\(y\\)-axis). Might we use \\(R_n\\) to predict \\(H_g\\) at 7.5 cm depth? What do we call this curve’s characteristic? Explain the physical reason for the curve’s shape.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 12\nCalculate \\(r_{uv}\\) and \\(r_{uw}\\). Discuss your results.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-13",
-    "href": "AssignmentsR_out/02.html#question-13",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-13",
+    "href": "AssignmentsR_out/03.html#question-13",
+    "title": "Assignment 3",
     "section": "Question 13",
-    "text": "Question 13\nCalculate the thermal admittance of the atmosphere \\(\\mu_a\\) at noon.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 13\nPlot a scatter graph of \\(u^{\\prime}\\) (\\(x\\)-axis) vs. \\(w^{\\prime}\\) (\\(y\\)-axis). Comment your graph and discuss if it looks like you expected.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
-    "objectID": "AssignmentsR_out/02.html#question-14",
-    "href": "AssignmentsR_out/02.html#question-14",
-    "title": "Assignment 2",
+    "objectID": "AssignmentsR_out/03.html#question-14",
+    "href": "AssignmentsR_out/03.html#question-14",
+    "title": "Assignment 3",
     "section": "Question 14",
-    "text": "Question 14\nThe Bowen ratio \\(\\beta\\) describes the ratio between the sensible and latent heat flux densities directed into the atmosphere, i.e. \\(\\beta = H/LE\\). Calculate \\(\\beta\\) from the available data for noon that day. Neglect the energy use for photosynthesis.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
+    "text": "Question 14\nUsing your result in question 11 (b), calculate the friction velocity \\(u_{\\ast}\\) based on the high-frequency data and compare it to your answer in question 2.\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "Lectures/01.html#learning-objectives",

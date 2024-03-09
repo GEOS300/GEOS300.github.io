@@ -2,19 +2,25 @@
 
 ```{python}
 
-# Import the data from github & parse the timestamp for each record
-## **NOTE**  Make sure to edit the timestamp variable so it corresponds to the timestamp you were assigned.
-data_url='https://raw.githubusercontent.com/GEOS300/AssignmentData/main/KettlemanCityCottonField/'
-TimeStamp = '200008191630'
-# Pandas (pd here) allows us to set a timestamp as an index which lets us easily parse time series data
-Turbulence = pd.read_csv(
-    f'{data_url}turbulence{TimeStamp}.txt',skiprows=7,
-    parse_dates={'TIMESTAMP':['YYYY-MM-DD HH:MM:SS']},index_col='TIMESTAMP',na_values=-9999)
+# Hint 1 >>
+# This function can be used to calculate the "natural logarithm" (ln):
+# np.log()
 
-Wind = pd.read_csv(
-    f'{data_url}wind{TimeStamp}.txt',skiprows=6,na_values=-9999)
+# Hint 2 >>
+# The "polyfit" function can be used to estimate the slope (m) and intercept (b) of a line (Y=mX+b), 
+# with the following syntax:
+# m,b np.polyfit(X,Y,1)
 
-print('Data imported and gap-filled successfully.')
+# Hint 3 >>
+# The following set of commands can add a new first row a table 
+# 1) Crate a new table with one row (without data values)
+# If you know the values you want to add, just replace np.nan with the value
+# new_first_row = pd.DataFrame(data={
+#                             'Height (m)':np.nan,
+#                             'Wind Speed (m/s)':np.nan,
+#                              # Any other columns follow the same pattern
+#                             },index=[-1])
 
-Wind.head()
+# 2) Concatenate the new row to the top of the original table then reset the index
+# Wind_Profile = pd.concat([new_first_row,Table_1]).reset_index()
 ```
