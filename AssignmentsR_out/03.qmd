@@ -13,7 +13,7 @@ output: False
 
 {{< include../Assignments/_Includes/Instructions.qmd >}}
 
-In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near [Kettleman City, CA, US](http://www.eol.ucar.edu/rtf/projects/ebex2000/). The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (@tbl-dates). You will be provided with two tables: 
+In this exercise you will use a 30-min data-set measured above an extensively flat cotton field near Kettleman City, CA, US. The actual day / time is selected based on your student number, the timestamp you are responsible for can be found in (@tbl-dates). You will be provided with two tables: 
 
 **Table1**: lists horizontal wind speeds $\overline{u}$ measured with cup-anemometers installed at six heights on a profile tower averaged over 30 minutes. Air temperature and pressure are also provided in the table header.
 

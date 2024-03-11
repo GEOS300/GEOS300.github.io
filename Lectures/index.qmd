@@ -40,6 +40,9 @@ Topics = [
 '',
 'Modelling Sub-Surface Temperatures',
 'Water & Ice',
+'Laminar & Turbulent Flow',
+'Production of Atmospheric Turbulence',
+'Dissipation of Turbulence',
 ]
 Readings = [
     '',
@@ -68,7 +71,7 @@ Study = ['',
         '',
         '',
         '',
-        '[04](../Study_Questions/04.html)',
+        '[04](../Study_Questions/04.html) & [05](../Study_Questions/05.html)',
         ]
 
 for i,row in Lectures.iterrows():
