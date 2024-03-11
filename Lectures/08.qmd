@@ -716,7 +716,7 @@ z_2 = 10 #cm
 H_g = 15 #Wm-2
 
 # Rearrange Fourier's Law
-k = -(z_1-z_2)/(T_2-T_1)*H_g
+k = -(z_2-z_1)/(T_2-T_1)*H_g
 
 sprintf('k = %.2f W m-1 K-1',k)
 

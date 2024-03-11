@@ -693,7 +693,7 @@ $R_av$ is the mean distance Earth-Sun over the year and $R$ is the actual distan
 :::
 
 
-## Extraterrestrial Irradiance
+## Extraterrestrial Irradiance {.smaller}
 
 
 {{< include ../_Equations/Extraterrestrial-Irradiance.qmd >}}

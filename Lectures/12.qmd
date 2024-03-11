@@ -67,7 +67,7 @@ $$
 
 * u - characteristic velocity of the fluid
 * d - characteristic length scale 
-* v  - kinematic viscosity (includes density)
+* $\upsilon$  - kinematic viscosity (includes density)
 
 
 :::

@@ -6,5 +6,5 @@ $${#eq-Bulk-Transmissivity}
 where 
 
 $$
-m = \frac{1}{\cos(Z)} = \frac{1}{\sin(\beta)}
+m = \small\frac{1}{\cos(Z)} = \small\frac{1}{\sin(\beta)}
 $$

@@ -340,7 +340,7 @@ Bulk transmissivity of the atmosphere ($\Psi_a$) depends on turbidity of the air
 
 {{< include ../_Equations/Bulk-Transmissivity.qmd >}}
 
-* $\Psi_a$$ varies from about 0.9 (clean) to 0.6 (dirty, smog)
+* $\Psi_a$ varies from about 0.9 (clean) to 0.6 (dirty, smog)
 
 
 :::
