@@ -1,4 +1,6 @@
  
 $$
-\small\frac{\Delta T_s}{\Delta t} =  \small\frac{1}{C_s}\small\frac{\Delta H_g}{\Delta z}
+\small\frac{\Delta T_s}{\Delta t} =  -\small\frac{1}{C_s}\small\frac{\Delta H_g}{\Delta z}
 $${#eq-Soil-Heat-Flux-Divergence}
+
+where: $\small\frac{\Delta H_g}{\Delta z} = \small\frac{H_{g(z_2)}-H_{g(z_1)}}{z_2-z_1}$ 

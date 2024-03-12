@@ -14,13 +14,15 @@ $$
  = 0.5\rm{K}\,\rm{h}^{-1} = 1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} 
 $$
 
-The heat flux at the surface $H_{G(\rm{0})}$ is (Lecture 11, Slide 6):
+Rearranging from the [Lecture 8, equation 6](../Lectures/08.html#heat-flux-divergence), we can estimate heat flux at the surface $H_{G(\rm{0})}$:
 
 $$
-H_{G(\rm{0})} = H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
-= 25,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times 1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1}  \times 0.05\,\rm{m} \\
-= 25\,\rm{W}\,\rm{m}^{-2} + 13.8\,\rm{W}\,\rm{m}^{-2} \\
-= \underline{38.8\,\rm{W}\,\rm{m}^{-2}} \\
+\begin{align}
+H_{G(\rm{0})} &= H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
+&= 25,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times 1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1}  \times 0.05\,\rm{m} \\
+&= 25\,\rm{W}\,\rm{m}^{-2} + 13.8\,\rm{W}\,\rm{m}^{-2} \\
+&= \underline{38.8\,\rm{W}\,\rm{m}^{-2}} \\
+\end{align}
 $$
 
 :::
@@ -38,10 +40,12 @@ $$
 
 Similar to the first example, the heat flux at the surface is:
 $$
-H_{G(\rm{0})}  = H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
- = -12\,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times \left( -1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} \right) \times 0.05\,\rm{m} \\
- = -12\,\rm{W}\,\rm{m}^{-2} + (-13.88\,\rm{W}\,\rm{m}^{-2})  \\
- = \underline{-25.9\,\rm{W}\,\rm{m}^{-2}} \\
+\begin{align}
+H_{G(\rm{0})}  &= H_{G(\rm{5cm})} + C\, \frac{\Delta T}{\Delta t} \Delta z \\
+ &= -12\,\rm{W}\,\rm{m}^{-2} + 2 \,\rm{MJ}\,\rm{m}^{-3}\,\rm{K}^{-1}\, \times \left( -1.38 \times 10^{-4}\rm{K}\,\rm{s}^{-1} \right) \times 0.05\,\rm{m} \\
+ &= -12\,\rm{W}\,\rm{m}^{-2} + (-13.88\,\rm{W}\,\rm{m}^{-2})  \\
+ &= \underline{-25.9\,\rm{W}\,\rm{m}^{-2}} \\
+ \end{align}
 $$
 
 

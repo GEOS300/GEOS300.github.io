@@ -1,7 +1,7 @@
 import os
 
-# if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
-#     exit()
+if not os.getenv("QUARTO_PROJECT_RENDER_ALL"):
+    exit()
 
 
 In_Dir = 'Assignments/'

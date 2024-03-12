@@ -385,14 +385,27 @@ Evaluating the above code give a value of: `r sprintf('%.3f W m<sup>-2</sup>',H_
 * A True
 * B False
 
-## Heat Flux Divergence
+## Heat Flux Divergence {.smaller}
 
-Alternatively, if we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:
+If we know the heat flux at the top and bottom of some soil layer, we can calculate the change in temperature over the layer as:
+
+:::: {.columns}
+
+::: {.column width="50%"}
 
 {{< include ../_Equations/Soil-Heat-Flux-Divergence.qmd >}}
 
+* $\Delta H_g$ is the heat flux divergence term
+  * It is the energy that goes into (or is released from) the layer
+
+:::
+
+::: {.column width="50%"}
+
 ![](images/FluxDivergence.png)
 
+:::
+::::
 
 ## Fourier's Law
 
