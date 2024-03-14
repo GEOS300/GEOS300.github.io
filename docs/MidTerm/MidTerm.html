@@ -472,15 +472,19 @@ Table&nbsp;3: Observations
 </div>
 </div>
 <ol class="example" type="1">
-<li>Based on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours?</li>
+<li>Based on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours? <strong>1/6</strong></li>
 </ol>
 <ul>
-<li>Dew/frost are likely to occur. As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.</li>
+<li><p>Surface (+ adjacent air/soil) will cool because <span class="math inline">\(R_n\)</span> is negative.</p></li>
+<li><p>Dew/frost are are expected to occur. As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.</p>
+<ul>
+<li>Should mention possibility of frost for full marks</li>
+</ul></li>
 </ul>
 <ol start="2" class="example" type="1">
-<li>Assuming heat storage fluxes (<span class="math inline">\(\Delta S\)</span>) are negligible; calculate <span class="math inline">\(H\)</span> approximate <span class="math inline">\(H_g\)</span>. You can assume that the laminar boundary layer for each site is exactly 0.1m thick.</li>
+<li>Assuming heat storage fluxes (<span class="math inline">\(\Delta S\)</span>) are negligible; calculate <span class="math inline">\(H\)</span> approximate <span class="math inline">\(H_g\)</span>. You can assume that the laminar boundary layer for each site is exactly 0.1m thick. <strong>1/4</strong></li>
 </ol>
-<div id="9260c260" class="cell" data-execution_count="4">
+<div id="1e1394a9" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-display" data-execution_count="4">
 <div>
 
@@ -531,9 +535,9 @@ Table&nbsp;3: Observations
 </div>
 </div>
 <ol start="3" class="example" type="1">
-<li>Estimate thermal admittance (<span class="math inline">\(\mu\)</span>) of the soil surface and report any intermediary parameters you calculated to obtain these values.</li>
+<li>Estimate thermal admittance (<span class="math inline">\(\mu\)</span>) of the soil surface and report any intermediary parameters you calculated to obtain these values. <strong>1/4</strong></li>
 </ol>
-<div id="01654325" class="cell" data-execution_count="5">
+<div id="211e347b" class="cell" data-execution_count="5">
 <div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
@@ -591,165 +595,171 @@ Table&nbsp;3: Observations
 </div>
 </div>
 <ol start="4" class="example" type="1">
-<li>On another day, the same initial conditions are observed at each of your sites: <span class="math inline">\(R_n = 0 W m^{-2}\)</span>, <span class="math inline">\(LE = 0 W m^{-2}\)</span>, and <span class="math inline">\(Ta_{0.1} = -1 ^{\circ}C\)</span>, <span class="math inline">\(T_0 = 1 ^{\circ}C\)</span>, and <span class="math inline">\(Ts_{0.1} = 2 ^{\circ}C\)</span>. While the thermal properties of the soils that you estimated in the previous question have not changed. You can assume that <span class="math inline">\(R_n\)</span>, <span class="math inline">\(LE\)</span>, and <span class="math inline">\(Ta_{0.1}\)</span> remain fixed at their initial values, but <span class="math inline">\(T_0\)</span> and <span class="math inline">\(Ts_{0.1}\)</span> will change. It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation. Assuming that no snow accumulated at each site until <span class="math inline">\(T_0 &lt; 0 ^{\circ}C\)</span> which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning. <em>Note</em> you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms.</li>
+<li>On another day, the same initial conditions are observed at each of your sites: <span class="math inline">\(R_n = 0 W m^{-2}\)</span>, <span class="math inline">\(LE = 0 W m^{-2}\)</span>, and <span class="math inline">\(Ta_{0.1} = -1 ^{\circ}C\)</span>, <span class="math inline">\(T_0 = 1 ^{\circ}C\)</span>, and <span class="math inline">\(Ts_{0.1} = 2 ^{\circ}C\)</span>. While the thermal properties of the soils that you estimated in the previous question have not changed. You can assume that <span class="math inline">\(R_n\)</span>, <span class="math inline">\(LE\)</span>, and <span class="math inline">\(Ta_{0.1}\)</span> remain fixed at their initial values, but <span class="math inline">\(T_0\)</span> and <span class="math inline">\(Ts_{0.1}\)</span> will change. It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation. Assuming that no snow accumulated at each site until <span class="math inline">\(T_0 &lt; 0 ^{\circ}C\)</span> which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning. <em>Note</em> you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. <strong>1/3</strong></li>
 </ol>
 <ul>
-<li>Snowfall accumulation is expected to be proportional to thermal admittance <span class="math inline">\(\mu\)</span> &gt; lower thermal admittance means surface cools rapidly (less heat transfer from depth) &gt; given the outlined assumptions the first soil to have <span class="math inline">\(T_0\)</span> &lt; 0 will accumulate snow first.</li>
+<li><p><span class="math inline">\(R_n\)</span> and <span class="math inline">\(LE\)</span> are zero. From the temperature gradients, we can assume <span class="math inline">\(H\)</span> will be positive slightly positive (soil surface losing heat to atmosphere) and <span class="math inline">\(H_g\)</span> will be negative soil at depth losing heat to soil surface. However, we can’t assume that <span class="math inline">\(0 = H+H_G\)</span> (same magnitude/opposite sign) in this case, because we have to account for another component of the energy balance, <span class="math inline">\(\Delta M\)</span>, that we did not have to think about in previously.</p>
+<ul>
+<li>Given the outlined assumption (snow won’t accumulate until <span class="math inline">\(T_0 &lt; 0 ^{\circ} C\)</span>) the first soil to have <span class="math inline">\(T_0\)</span> &lt; 0 will accumulate snow first. Until then, snow will melt on the grounds surface until <span class="math inline">\(T_0 &lt; 0 ^{\circ} C\)</span>. The process of melting will remove heat from the soil as well <span class="math inline">\(\Delta M &gt;0\)</span>; which means <span class="math inline">\(0 = H + H_G + \Delta_M\)</span>.</li>
+</ul></li>
+<li><p>Snowfall accumulation is expected to be inversely related to to thermal admittance <span class="math inline">\(\mu\)</span> because lower thermal admittance means surface cools rapidly (less heat transfer from depth).</p>
+<ul>
+<li>Thermal admittance does increase as a function of <span class="math inline">\(\Theta_w\)</span>, and the water input from melting will increase <span class="math inline">\(\mu\)</span> slightly. While the increase is not linear, since all soils have initial <span class="math inline">\(\Theta_w &gt; 0.15\)</span>, its close enough to linear that one could reasonably assume a linear relationship. The increases in <span class="math inline">\(\mu\)</span> wouldn’t be drastically different between soils anyway as they have fairly similar properties.</li>
+<li>Since <span class="math inline">\(T_0\)</span> is quite close to 0 C to start, there isn’t much cooling that needs to be done before accumulation will occur. So its reasonable to just look at the starting values of <span class="math inline">\(\mu\)</span> and use those to guess the order of which will reach 0 C first.</li>
+</ul></li>
 </ul>
-<div id="cd44a222" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Profile.sort_values(by<span class="op">=</span><span class="st">'mu'</span>).reset_index()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="6">
-<div>
-
-
-<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<div id="efcbb9c0" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Ranked <span class="op">=</span> Profile.sort_values(by<span class="op">=</span><span class="st">'mu'</span>).reset_index()</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  Ranked,headers<span class="op">=</span>Ranked.columns.values</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="6">
+<table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">index</th>
-<th data-quarto-table-cell-role="th">ID</th>
-<th data-quarto-table-cell-role="th">$R_n$</th>
-<th data-quarto-table-cell-role="th">$LE$</th>
-<th data-quarto-table-cell-role="th">$Ta_{0.1}$</th>
-<th data-quarto-table-cell-role="th">$RH_{0.1}$</th>
-<th data-quarto-table-cell-role="th">$T_0$</th>
-<th data-quarto-table-cell-role="th">$Ts_{0.1}$</th>
-<th data-quarto-table-cell-role="th">$\Theta_o$</th>
-<th data-quarto-table-cell-role="th">Porosity</th>
-<th data-quarto-table-cell-role="th">$\Theta_w$</th>
-<th data-quarto-table-cell-role="th">$r_b$</th>
-<th data-quarto-table-cell-role="th">H</th>
-<th data-quarto-table-cell-role="th">Hg</th>
-<th data-quarto-table-cell-role="th">k</th>
-<th data-quarto-table-cell-role="th">C</th>
-<th data-quarto-table-cell-role="th">mu</th>
+<th></th>
+<th style="text-align: left;">index</th>
+<th style="text-align: left;">ID</th>
+<th style="text-align: right;"><span class="math inline">\(R_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(LE\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(Ta_{0.1}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(RH_{0.1}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(T_0\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(Ts_{0.1}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(\Theta_o\)</span></th>
+<th style="text-align: right;">Porosity</th>
+<th style="text-align: right;"><span class="math inline">\(\Theta_w\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(r_b\)</span></th>
+<th style="text-align: right;">H</th>
+<th style="text-align: right;">Hg</th>
+<th style="text-align: right;">k</th>
+<th style="text-align: right;">C</th>
+<th style="text-align: right;">mu</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>A</td>
-<td>A</td>
-<td>-48.0</td>
-<td>-5.0</td>
-<td>-0.9</td>
-<td>100.0</td>
-<td>1.0</td>
-<td>3.3</td>
-<td>27.0</td>
-<td>32.0</td>
-<td>17.0</td>
-<td>52.0</td>
-<td>36.538462</td>
-<td>-79.538462</td>
-<td>3.458194</td>
-<td>2.20915</td>
-<td>2.763995</td>
+<td>0</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: left;">A</td>
+<td style="text-align: right;">-48</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-0.9</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.3</td>
+<td style="text-align: right;">27</td>
+<td style="text-align: right;">32</td>
+<td style="text-align: right;">17</td>
+<td style="text-align: right;">52</td>
+<td style="text-align: right;">36.5385</td>
+<td style="text-align: right;">-79.5385</td>
+<td style="text-align: right;">3.45819</td>
+<td style="text-align: right;">2.20915</td>
+<td style="text-align: right;">2.764</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>C</td>
-<td>C</td>
-<td>-46.0</td>
-<td>-4.0</td>
-<td>-0.8</td>
-<td>100.0</td>
-<td>1.0</td>
-<td>3.2</td>
-<td>29.0</td>
-<td>34.0</td>
-<td>19.0</td>
-<td>54.0</td>
-<td>33.333333</td>
-<td>-75.333333</td>
-<td>3.424242</td>
-<td>2.26315</td>
-<td>2.783806</td>
+<td>1</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: left;">C</td>
+<td style="text-align: right;">-46</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-0.8</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">29</td>
+<td style="text-align: right;">34</td>
+<td style="text-align: right;">19</td>
+<td style="text-align: right;">54</td>
+<td style="text-align: right;">33.3333</td>
+<td style="text-align: right;">-75.3333</td>
+<td style="text-align: right;">3.42424</td>
+<td style="text-align: right;">2.26315</td>
+<td style="text-align: right;">2.78381</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>D</td>
-<td>D</td>
-<td>-47.0</td>
-<td>-4.0</td>
-<td>-0.8</td>
-<td>100.0</td>
-<td>1.1</td>
-<td>3.1</td>
-<td>28.0</td>
-<td>33.0</td>
-<td>18.0</td>
-<td>53.0</td>
-<td>35.849057</td>
-<td>-78.849057</td>
-<td>3.942453</td>
-<td>2.23615</td>
-<td>2.969161</td>
+<td>2</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: left;">D</td>
+<td style="text-align: right;">-47</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-0.8</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">28</td>
+<td style="text-align: right;">33</td>
+<td style="text-align: right;">18</td>
+<td style="text-align: right;">53</td>
+<td style="text-align: right;">35.8491</td>
+<td style="text-align: right;">-78.8491</td>
+<td style="text-align: right;">3.94245</td>
+<td style="text-align: right;">2.23615</td>
+<td style="text-align: right;">2.96916</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>E</td>
-<td>E</td>
-<td>-49.0</td>
-<td>-5.0</td>
-<td>-1.0</td>
-<td>100.0</td>
-<td>1.1</td>
-<td>3.1</td>
-<td>26.0</td>
-<td>31.0</td>
-<td>16.0</td>
-<td>51.0</td>
-<td>41.176471</td>
-<td>-85.176471</td>
-<td>4.258824</td>
-<td>2.18215</td>
-<td>3.048506</td>
+<td>3</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: left;">E</td>
+<td style="text-align: right;">-49</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.1</td>
+<td style="text-align: right;">3.1</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">41.1765</td>
+<td style="text-align: right;">-85.1765</td>
+<td style="text-align: right;">4.25882</td>
+<td style="text-align: right;">2.18215</td>
+<td style="text-align: right;">3.04851</td>
 </tr>
 <tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>B</td>
-<td>B</td>
-<td>-45.0</td>
-<td>-4.0</td>
-<td>-0.7</td>
-<td>100.0</td>
-<td>1.2</td>
-<td>3.0</td>
-<td>30.0</td>
-<td>35.0</td>
-<td>20.0</td>
-<td>55.0</td>
-<td>34.545455</td>
-<td>-75.545455</td>
-<td>4.196970</td>
-<td>2.29015</td>
-<td>3.100273</td>
+<td>4</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: left;">B</td>
+<td style="text-align: right;">-45</td>
+<td style="text-align: right;">-4</td>
+<td style="text-align: right;">-0.7</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">30</td>
+<td style="text-align: right;">35</td>
+<td style="text-align: right;">20</td>
+<td style="text-align: right;">55</td>
+<td style="text-align: right;">34.5455</td>
+<td style="text-align: right;">-75.5455</td>
+<td style="text-align: right;">4.19697</td>
+<td style="text-align: right;">2.29015</td>
+<td style="text-align: right;">3.10027</td>
 </tr>
 <tr class="even">
-<td data-quarto-table-cell-role="th">5</td>
-<td>F</td>
-<td>F</td>
-<td>-49.0</td>
-<td>-5.0</td>
-<td>-1.0</td>
-<td>100.0</td>
-<td>1.3</td>
-<td>3.2</td>
-<td>26.0</td>
-<td>31.0</td>
-<td>16.0</td>
-<td>51.0</td>
-<td>45.098039</td>
-<td>-89.098039</td>
-<td>4.689370</td>
-<td>2.18215</td>
-<td>3.198892</td>
+<td>5</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: left;">F</td>
+<td style="text-align: right;">-49</td>
+<td style="text-align: right;">-5</td>
+<td style="text-align: right;">-1</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: right;">1.3</td>
+<td style="text-align: right;">3.2</td>
+<td style="text-align: right;">26</td>
+<td style="text-align: right;">31</td>
+<td style="text-align: right;">16</td>
+<td style="text-align: right;">51</td>
+<td style="text-align: right;">45.098</td>
+<td style="text-align: right;">-89.098</td>
+<td style="text-align: right;">4.68937</td>
+<td style="text-align: right;">2.18215</td>
+<td style="text-align: right;">3.19889</td>
 </tr>
 </tbody>
 </table>
-
-</div>
 </div>
 </div>
 </section>
@@ -782,14 +792,14 @@ Table&nbsp;3: Observations
 <li><span class="math inline">\(LW^*\)</span> depends on:
 <ul>
 <li><span class="math inline">\(LW\downarrow\)</span> &gt; determined by the temperature and emissivity <span class="math inline">\(\epsilon\)</span> of the atmosphere. Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions. Clouds are a good example: <span class="math inline">\(LW\downarrow\)</span> tends to be higher (for equivalent surface temps/seasons) when clouds are present (<strong>1/4</strong>)</li>
-<li><span class="math inline">\(LW\uparrow\)</span> &gt; determined by the temperature, emissivity <span class="math inline">\(\epsilon\)</span>, and <strong>reflectivity</strong> of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that <span class="math inline">\(\epsilon = \zeta\)</span> (absorptivity) in the <strong>long-wave</strong> portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (<span class="math inline">\(SW\)</span>): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.</li>
+<li><span class="math inline">\(LW\uparrow\)</span> &gt; determined by the temperature, emissivity <span class="math inline">\(\epsilon\)</span>, and <strong>reflectivity</strong> of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that <span class="math inline">\(\epsilon = \zeta\)</span> (absorptivity) in the <strong>long-wave</strong> portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (<span class="math inline">\(SW\)</span>): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(<strong>1/4</strong>)</li>
 </ul></li>
 </ul>
 </section>
 </section>
 <section id="calculations" class="level1">
 <h1>Calculations</h1>
-<div id="68187634" class="cell" data-execution_count="7">
+<div id="bb883632" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">42</span></span>
@@ -802,7 +812,7 @@ Table&nbsp;3: Observations
 <ol start="7" class="example" type="1">
 <li>Assuming that a surface has an emissivity (<span class="math inline">\(\epsilon_{o,LW}\)</span>) of array([0.928, 0.971, 0.955, 0.945]), how much of the incoming long-wave radiation <span class="math inline">\(LW\downarrow\)</span> is reflected from the surface when <span class="math inline">\(LW\downarrow\)</span> is array([107., 119., 115., 112.]) <span class="math inline">\(W m^{-2}\)</span>?</li>
 </ol>
-<div id="6ad199a8" class="cell" data-execution_count="8">
+<div id="7ae1925b" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>epsilon</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>a </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'alpha = '</span>, alpha)</span>
@@ -812,7 +822,7 @@ Table&nbsp;3: Observations
 LW_reflected =  [7.704 3.451 5.175 6.16 ]</code></pre>
 </div>
 </div>
-<div id="c52cd954" class="cell" data-execution_count="9">
+<div id="104ba6c6" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Dates <span class="op">=</span> pd.DatetimeIndex([<span class="st">'2024-12-15'</span>,<span class="st">'2024-03-31'</span>,<span class="st">'2024-07-20'</span>,<span class="st">'2024-10-01'</span>])</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="op">=</span> np.array([<span class="fl">0.85</span>,<span class="fl">0.7</span>,<span class="fl">0.65</span>,<span class="fl">0.8</span>])</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
@@ -821,7 +831,7 @@ LW_reflected =  [7.704 3.451 5.175 6.16 ]</code></pre>
 <ol start="8" class="example" type="1">
 <li>At Local solar noon (LAT = 12:00) on DatetimeIndex([‘2024-12-15’, ‘2024-03-31’, ‘2024-07-20’, ‘2024-10-01’], dtype=‘datetime64[ns]’, freq=None) at array([58, 71, 48, 34]) <span class="math inline">\(^{\circ}\)</span> N, <span class="math inline">\(\Psi_a\)</span> = array([0.85, 0.7 , 0.65, 0.8 ]). Estimate <span class="math inline">\(SW\downarrow\)</span></li>
 </ol>
-<div id="e64c67dc" class="cell" data-execution_count="10">
+<div id="4252bfec" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Extraterrestrial_Irradiance(DOY,Lat):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    I0 <span class="op">=</span> <span class="dv">1361</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">365</span><span class="op">*</span>(DOY<span class="op">-</span><span class="dv">1</span>)</span>

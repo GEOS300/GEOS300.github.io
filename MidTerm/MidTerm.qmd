@@ -100,11 +100,14 @@ Markdown(tabulate(
 ))
 ```
 
-(@) Based on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours?
+(@) Based on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours? **1/6**
 
-* Dew/frost are likely to occur.  As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.
+* Surface (+ adjacent air/soil) will cool because $R_n$ is negative.
 
-(@) Assuming heat storage fluxes ($\Delta S$) are negligible; calculate $H$ approximate $H_g$.  You can assume that the laminar boundary layer for each site is exactly 0.1m thick.
+* Dew/frost are are expected to occur.  As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.
+  * Should mention possibility of frost for full marks
+
+(@) Assuming heat storage fluxes ($\Delta S$) are negligible; calculate $H$ approximate $H_g$.  You can assume that the laminar boundary layer for each site is exactly 0.1m thick. **1/4**
 
 
 ```{python}
@@ -116,7 +119,7 @@ Profile[['H','Hg']]
 ```
 
 
-(@) Estimate thermal admittance ($\mu$) of the soil surface and report any intermediary parameters you calculated to obtain these values.
+(@) Estimate thermal admittance ($\mu$) of the soil surface and report any intermediary parameters you calculated to obtain these values. **1/4**
 
 
 ```{python}
@@ -132,12 +135,22 @@ Profile['mu'] = (Profile['k']*Profile['C'])**.5
 Profile[['C','k','mu']]
 ```
 
-(@) On another day, the same initial conditions are observed at each of your sites: $R_n = 0 W m^{-2}$, $LE = 0 W m^{-2}$, and $Ta_{0.1} = -1 ^{\circ}C$, $T_0 = 1 ^{\circ}C$, and $Ts_{0.1} = 2 ^{\circ}C$.  While the thermal properties of the soils that you estimated in the previous question have not changed.  You can assume that $R_n$, $LE$, and $Ta_{0.1}$ remain fixed at their initial values, but $T_0$ and $Ts_{0.1}$ will change.  It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation.  Assuming that no snow accumulated at each site until $T_0 < 0 ^{\circ}C$ which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning.  *Note* you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. 
+(@) On another day, the same initial conditions are observed at each of your sites: $R_n = 0 W m^{-2}$, $LE = 0 W m^{-2}$, and $Ta_{0.1} = -1 ^{\circ}C$, $T_0 = 1 ^{\circ}C$, and $Ts_{0.1} = 2 ^{\circ}C$.  While the thermal properties of the soils that you estimated in the previous question have not changed.  You can assume that $R_n$, $LE$, and $Ta_{0.1}$ remain fixed at their initial values, but $T_0$ and $Ts_{0.1}$ will change.  It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation.  Assuming that no snow accumulated at each site until $T_0 < 0 ^{\circ}C$ which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning.  *Note* you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. **1/3**
 
-* Snowfall accumulation is expected to be proportional to thermal admittance $\mu$ > lower thermal admittance means surface cools rapidly (less heat transfer from depth) > given the outlined assumptions the first soil to have $T_0$ < 0 will accumulate snow first.
+* $R_n$ and $LE$ are zero.  From the temperature gradients, we can assume $H$ will be positive slightly positive (soil surface losing heat to atmosphere) and $H_g$ will be negative soil at depth losing heat to soil surface.  However, we can't assume that $0 = H+H_G$ (same magnitude/opposite sign) in this case, because we have to account for another component of the energy balance, $\Delta M$, that we did not have to think about in previously.  
+
+  * Given the outlined assumption (snow won't accumulate until $T_0 < 0 ^{\circ} C$) the first soil to have $T_0$ < 0 will accumulate snow first.  Until then, snow will melt on the grounds surface until $T_0 < 0 ^{\circ} C$.  The process of melting will remove heat from the soil as well $\Delta M >0$; which means $0 = H + H_G + \Delta_M$.
+
+* Snowfall accumulation is expected to be inversely related to to thermal admittance $\mu$ because lower thermal admittance means surface cools rapidly (less heat transfer from depth).
+  * Thermal admittance does increase as a function of $\Theta_w$, and the water input from melting will increase $\mu$ slightly.  While the increase is not linear, since all soils have initial $\Theta_w > 0.15$, its close enough to linear that one could reasonably assume a linear relationship.  The increases in $\mu$ wouldn't be drastically different between soils anyway as they have fairly similar properties.
+  * Since $T_0$ is quite close to 0 C to start, there isn't much cooling that needs to be done before accumulation will occur.  So its reasonable to just look at the starting values of $\mu$ and use those to guess the order of which will reach 0 C first.
+
 
 ```{python}
-Profile.sort_values(by='mu').reset_index()
+Ranked = Profile.sort_values(by='mu').reset_index()
+Markdown(tabulate(
+  Ranked,headers=Ranked.columns.values
+))
 ```
 
 
@@ -160,7 +173,7 @@ Profile.sort_values(by='mu').reset_index()
   + $SW\uparrow$ > determined by albedo & magnitude of $SW\downarrow$.  Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles).  For some "surfaces" (ice, water, etc.) it also depends on the transitivity of the volume.  Surface can absorb $SW\downarrow$, but **cannot** emit it! (**1/4**)
 * $LW^*$ depends on:
   + $LW\downarrow$ > determined by the temperature and emissivity $\epsilon$ of the atmosphere.  Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions.  Clouds are a good example: $LW\downarrow$ tends to be higher (for equivalent surface temps/seasons) when clouds are present (**1/4**)
-  + $LW\uparrow$ > determined by the temperature, emissivity $\epsilon$, and **reflectivity** of the surface.  Warmer surface = higher LW emissions; more emissive surface = higher LW emissions.  Should mention that $\epsilon = \zeta$ (absorptivity) in the **long-wave** portion of the spectrum (Khirchoff's law).  Also influenced by surface albedo ($SW$): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.
+  + $LW\uparrow$ > determined by the temperature, emissivity $\epsilon$, and **reflectivity** of the surface.  Warmer surface = higher LW emissions; more emissive surface = higher LW emissions.  Should mention that $\epsilon = \zeta$ (absorptivity) in the **long-wave** portion of the spectrum (Khirchoff's law).  Also influenced by surface albedo ($SW$): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(**1/4**)
 
 # Calculations
 
