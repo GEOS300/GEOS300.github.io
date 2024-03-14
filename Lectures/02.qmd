@@ -145,7 +145,7 @@ Source: https://www.khanacademy.org/math/multivariable-calculus/multivariable-de
 
 ## Convergence
 
-In this case, we have convergence ($\Delta S = 0$) in the system, because the inputs exceed the outputs.
+In this case, we have convergence ($\Delta S > 0$) in the system, because the inputs exceed the outputs.
 
 :::: {.columns}
 
