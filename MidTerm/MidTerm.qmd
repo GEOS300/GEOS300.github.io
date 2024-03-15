@@ -111,7 +111,6 @@ Markdown(tabulate(
 
 
 ```{python}
-#| echo: false
 Ca = Constants.loc['Heat Capacity of Air','value']
 Profile['H'] = Ca*1e6*(Profile['$T_0$']-Profile['$Ta_{0.1}$'])/Profile['$r_b$']
 Profile['Hg'] = Profile['$R_n$']-Profile['$LE$']-Profile['H']
@@ -123,7 +122,6 @@ Profile[['H','Hg']]
 
 
 ```{python}
-#| echo: false
 Ca = Constants.loc['Heat Capacity of Air','value']
 Cm = Constants.loc['Heat Capacity of Mineral Soil','value']
 Co = Constants.loc['Heat Capacity of Organic Soil','value']
