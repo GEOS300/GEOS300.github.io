@@ -1,0 +1,8 @@
+
+$$
+\begin{align}
+\bar{a^{\prime}} = 0 \nonumber \\
+\bar{a }\times \bar{b^{\prime}} = 0 \nonumber \\
+\overline{a \times b} =\overline{(\bar{a}+a^{\prime})\times(\bar{b}+b^{\prime})} = \bar{a}\times\bar{b} + \overline{a^{\prime}\times b^{\prime}}
+\end{align}
+$${#eq-Reynolds-Decomposition}

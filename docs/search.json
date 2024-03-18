@@ -516,11 +516,44 @@
     ]
   },
   {
+    "objectID": "Resources.html#reynolds-decomposition",
+    "href": "Resources.html#reynolds-decomposition",
+    "title": "Programming Resources",
+    "section": "Reynolds Decomposition",
+    "text": "Reynolds Decomposition\n\\[\n\\begin{align}\\bar{a^{\\prime}} = 0 \\nonumber \\\\\\bar{a }\\times \\bar{b^{\\prime}} = 0 \\nonumber \\\\\\overline{a \\times b} =\\overline{(\\bar{a}+a^{\\prime})\\times(\\bar{b}+b^{\\prime})} = \\bar{a}\\times\\bar{b} + \\overline{a^{\\prime}\\times b^{\\prime}}\\end{align}\n\\tag{41}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#reynolds-decomposition-1",
+    "href": "Resources.html#reynolds-decomposition-1",
+    "title": "Programming Resources",
+    "section": "Reynolds Decomposition",
+    "text": "Reynolds Decomposition\n\\[\na(t) = \\bar{a} + a^{\\prime}(t)\n\\tag{42}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#mean",
+    "href": "Resources.html#mean",
+    "title": "Programming Resources",
+    "section": "Mean",
+    "text": "Mean\n\\[\n\\bar{a} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a(t_i)\n\\tag{43}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
     "objectID": "Resources.html#shear-stress",
     "href": "Resources.html#shear-stress",
     "title": "Programming Resources",
     "section": "Shear Stress",
-    "text": "Shear Stress\n\\[\n\\tau = \\mu\\small\\frac{\\delta u}{\\delta z}\n\\tag{41}\\]",
+    "text": "Shear Stress\n\\[\n\\tau = \\mu\\small\\frac{\\delta u}{\\delta z}\n\\tag{44}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -531,7 +564,7 @@
     "href": "Resources.html#sinusoidal-temperature-wave",
     "title": "Programming Resources",
     "section": "Sinusoidal Temperature Wave",
-    "text": "Sinusoidal Temperature Wave\n\\[\nT_{(o,t)}=\\overline{T_o}+\\Delta T_o \\sin(\\omega t)\n\\tag{42}\\]",
+    "text": "Sinusoidal Temperature Wave\n\\[\nT_{(o,t)}=\\overline{T_o}+\\Delta T_o \\sin(\\omega t)\n\\tag{45}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -542,7 +575,7 @@
     "href": "Resources.html#soil-heat-flux-divergence",
     "title": "Programming Resources",
     "section": "Soil Heat Flux Divergence",
-    "text": "Soil Heat Flux Divergence\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  -\\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\tag{43}\\]",
+    "text": "Soil Heat Flux Divergence\n\\[\n\\small\\frac{\\Delta T_s}{\\Delta t} =  -\\small\\frac{1}{C_s}\\small\\frac{\\Delta H_g}{\\Delta z}\n\\tag{46}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -553,7 +586,7 @@
     "href": "Resources.html#soil-heat-flux",
     "title": "Programming Resources",
     "section": "Soil Heat Flux",
-    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\tag{44}\\]",
+    "text": "Soil Heat Flux\n\\[\n\\frac{H_g}{z} = C_{s} \\frac{\\Delta T_{s}}{\\Delta t}\n\\tag{47}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -564,7 +597,7 @@
     "href": "Resources.html#soil-volume-fractions",
     "title": "Programming Resources",
     "section": "Soil Volume Fractions",
-    "text": "Soil Volume Fractions\n\\[\n\\theta_a+\\theta_w+\\theta_g = 1\n\\tag{45}\\]",
+    "text": "Soil Volume Fractions\n\\[\n\\theta_a+\\theta_w+\\theta_g = 1\n\\tag{48}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -575,7 +608,7 @@
     "href": "Resources.html#soil-volume-fractions-1",
     "title": "Programming Resources",
     "section": "Soil Volume Fractions",
-    "text": "Soil Volume Fractions\n\\[\n\\theta_P = \\theta_a + \\theta_w = 1 - \\theta_g\n\\tag{46}\\]",
+    "text": "Soil Volume Fractions\n\\[\n\\theta_P = \\theta_a + \\theta_w = 1 - \\theta_g\n\\tag{49}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -586,7 +619,7 @@
     "href": "Resources.html#organic-mineral",
     "title": "Programming Resources",
     "section": "Organic Mineral",
-    "text": "Organic Mineral\n\\[\n\\theta_g = \\theta_m + \\theta_o\n\\tag{47}\\]",
+    "text": "Organic Mineral\n\\[\n\\theta_g = \\theta_m + \\theta_o\n\\tag{50}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -597,7 +630,7 @@
     "href": "Resources.html#solar-declination",
     "title": "Programming Resources",
     "section": "Solar Declination",
-    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{48}\\]",
+    "text": "Solar Declination\n\\[\n\\begin{eqnarray}\\delta = & 0.006918 - 0.399912 \\cos( \\gamma)+0.070257 \\sin( \\gamma)  \\\\         & -0.006758 \\cos(2 \\gamma) + 0.000907\\sin(2\\gamma) \\nonumber \\\\         & -0.002697\\cos(3\\gamma)+0.00148 \\sin(3\\gamma) \\nonumber \\end{eqnarray}\n\\tag{51}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -608,7 +641,7 @@
     "href": "Resources.html#fractional-year",
     "title": "Programming Resources",
     "section": "Fractional Year",
-    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{49}\\]",
+    "text": "Fractional Year\n\\[\n\\gamma = \\frac{2 \\pi }{365} (DOY-1)\n\\tag{52}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -619,7 +652,7 @@
     "href": "Resources.html#solar-zenith",
     "title": "Programming Resources",
     "section": "Solar Zenith",
-    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{50}\\]",
+    "text": "Solar Zenith\n\\[\n\\cos(Z) = \\sin(\\beta) = \\sin(\\Phi)\\sin(\\delta)+\\cos(\\Phi)\\cos(\\delta)\\cos(h)\n\\tag{53}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -630,7 +663,7 @@
     "href": "Resources.html#hour-angle",
     "title": "Programming Resources",
     "section": "Hour Angle",
-    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{51}\\]",
+    "text": "Hour Angle\n\\[\nh = 15^{\\circ}(12-LAT)\n\\tag{54}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -641,7 +674,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body-adjusted",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body Adjusted",
-    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{52}\\]",
+    "text": "Stefan Boltzman Law Grey Body Adjusted\n\\[\nE_g = \\epsilon\\sigma_b T^4 + (1-\\epsilon) * (SW\\downarrow+LW\\downarrow)\n\\tag{55}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -652,7 +685,7 @@
     "href": "Resources.html#stefan-boltzman-law-grey-body",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law Grey Body",
-    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{53}\\]",
+    "text": "Stefan Boltzman Law Grey Body\n\\[\nE_g = \\epsilon\\sigma_b T^4\n\\tag{56}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -663,7 +696,7 @@
     "href": "Resources.html#stefan-boltzman-law",
     "title": "Programming Resources",
     "section": "Stefan Boltzman Law",
-    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{54}\\]",
+    "text": "Stefan Boltzman Law\n\\[\nE_b = \\sigma_b T^4\n\\tag{57}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -674,7 +707,7 @@
     "href": "Resources.html#surface-energy-balance-ice",
     "title": "Programming Resources",
     "section": "Surface Energy Balance Ice",
-    "text": "Surface Energy Balance Ice\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\tag{55}\\]",
+    "text": "Surface Energy Balance Ice\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{green}{\\Delta S} + \\color{grey}{\\Delta M}\n\\tag{58}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -685,7 +718,7 @@
     "href": "Resources.html#surface-energy-balance-no-mass",
     "title": "Programming Resources",
     "section": "Surface Energy Balance No Mass",
-    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{56}\\]",
+    "text": "Surface Energy Balance No Mass\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G}\n\\tag{59}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -696,7 +729,7 @@
     "href": "Resources.html#surface-energy-balance-storage",
     "title": "Programming Resources",
     "section": "Surface Energy Balance Storage",
-    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{57}\\]",
+    "text": "Surface Energy Balance Storage\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{60}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -707,7 +740,7 @@
     "href": "Resources.html#surface-energy-balance",
     "title": "Programming Resources",
     "section": "Surface Energy Balance",
-    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{58}\\]",
+    "text": "Surface Energy Balance\n\\[\nR_n = H + LE + G + \\Delta S\n\\tag{61}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -718,7 +751,7 @@
     "href": "Resources.html#tetens",
     "title": "Programming Resources",
     "section": "Tetens",
-    "text": "Tetens\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\tag{59}\\]",
+    "text": "Tetens\n\\[\nP_v^* = 6.112\\exp{17.62\\frac{T_a}{243.12+T_a}}\n\\tag{62}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -729,7 +762,7 @@
     "href": "Resources.html#thermal-admittance-v-temperature",
     "title": "Programming Resources",
     "section": "Thermal Admittance v Temperature",
-    "text": "Thermal Admittance v Temperature\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\tag{60}\\]",
+    "text": "Thermal Admittance v Temperature\n\\[\n\\Delta T_s = \\frac{\\Delta H_g}{\\mu}\n\\tag{63}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -740,7 +773,7 @@
     "href": "Resources.html#thermal-admittance",
     "title": "Programming Resources",
     "section": "Thermal Admittance",
-    "text": "Thermal Admittance\n\\[\n\\mu = \\sqrt{k C}\n\\tag{61}\\]",
+    "text": "Thermal Admittance\n\\[\n\\mu = \\sqrt{k C}\n\\tag{64}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -751,7 +784,7 @@
     "href": "Resources.html#thermal-diffusivity",
     "title": "Programming Resources",
     "section": "Thermal Diffusivity",
-    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{62}\\]",
+    "text": "Thermal Diffusivity\n\\[\nK = \\frac{k}{C}\n\\tag{65}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -762,7 +795,7 @@
     "href": "Resources.html#lmst",
     "title": "Programming Resources",
     "section": "LMST",
-    "text": "LMST\n\\[\nLMST = (TZ) + (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{63}\\]",
+    "text": "LMST\n\\[\nLMST = (TZ) + (\\lambda-TZ_{m})\\frac{4}{60}\n\\tag{66}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -773,7 +806,7 @@
     "href": "Resources.html#lat",
     "title": "Programming Resources",
     "section": "LAT",
-    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{64}\\]",
+    "text": "LAT\n\\[\nLAT = LMST-\\Delta LAT\n\\tag{67}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -784,7 +817,62 @@
     "href": "Resources.html#delta-lat",
     "title": "Programming Resources",
     "section": "Delta LAT",
-    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{65}\\]",
+    "text": "Delta LAT\n\\[\n\\begin{eqnarray}\\Delta LAT = & 229.18[0.000075+0.001868\\cos(\\gamma)-0.032077\\sin(\\gamma) \\\\             & -0.014615\\cos(2\\gamma)-0.040849\\sin(2\\gamma)]\\end{eqnarray}\n\\tag{68}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#mke",
+    "href": "Resources.html#mke",
+    "title": "Programming Resources",
+    "section": "MKE",
+    "text": "MKE\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\bar{u}^2+\\bar{v}^2+\\bar{w}^2)\n\\tag{69}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#tke",
+    "href": "Resources.html#tke",
+    "title": "Programming Resources",
+    "section": "TKE",
+    "text": "TKE\n\\[\ne=\\frac{1}{2}(u^{\\prime2}+v^{\\prime2}+w^{\\prime2}) \\nonumber\n\\tag{70}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#turbulence-intensities",
+    "href": "Resources.html#turbulence-intensities",
+    "title": "Programming Resources",
+    "section": "Turbulence Intensities",
+    "text": "Turbulence Intensities\n\\[\n\\begin{align}I_u = \\small\\frac{\\sigma_u}{M} \\nonumber \\\\ I_v = \\small\\frac{\\sigma_v}{M} \\nonumber \\\\ I_w = \\small\\frac{\\sigma_w}{M} \\nonumber \\\\ M = \\sqrt{\\bar{u^2} + \\bar{v^2} + \\bar{w^2}}\\end{align}\n\\tag{71}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#variances",
+    "href": "Resources.html#variances",
+    "title": "Programming Resources",
+    "section": "Variances",
+    "text": "Variances\n\\[\n\\overline{a^{\\prime2}} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\tag{72}\\]",
+    "crumbs": [
+      "Syllabus",
+      "Programming Resources"
+    ]
+  },
+  {
+    "objectID": "Resources.html#std",
+    "href": "Resources.html#std",
+    "title": "Programming Resources",
+    "section": "std",
+    "text": "std\n\\[\n\\sigma_a=\\overline{a^{\\prime2}}\n\\tag{73}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -795,7 +883,7 @@
     "href": "Resources.html#weins-law",
     "title": "Programming Resources",
     "section": "Weins Law",
-    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{66}\\]",
+    "text": "Weins Law\n\\[\n\\lambda_{max} = \\frac{b}{T}\n\\tag{74}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -806,10 +894,226 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\n\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#learning-objectives",
+    "href": "Lectures/14.html#learning-objectives",
+    "title": "Turbulence Statistics",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nDescribe how we can separate turbulent from mean kinetic energy.\nExplain how we can quantify turbulence and its properties.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#statistical-approach",
+    "href": "Lectures/14.html#statistical-approach",
+    "title": "Turbulence Statistics",
+    "section": "Statistical Approach",
+    "text": "Statistical Approach\n\n\nSingle motions in a turbulent flow are chaotic and unpredictable. Luckily, they are seldom important,\n\nPrediction focuses on integral effects of turbulence on dispersion and exchange processes.\n\nWhere are regions of strong / weak turbulence?\nWhen is the flow more / less turbulent?\nHow efficiently does turbulence transfer energy and mass?\n\n\n\n\n\n\nInstantaneous temperature field in a Large Eddy Simulation of the PBL (M. A. Carper, University of Minnesota)\n\n\n\n\n\nSample turbulent time series of measured temperatures (10 min)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#reynolds-decomposition",
+    "href": "Lectures/14.html#reynolds-decomposition",
+    "title": "Turbulence Statistics",
+    "section": "Reynolds Decomposition",
+    "text": "Reynolds Decomposition\n\n\nTurbulent properties appear chaotic, but can be analyzed by deconstructing them into two parts:\n\nThe time mean (e.g., \\(\\bar{a}\\))\nThe instantaneous deviation from the mean (e.g., \\(a^{\\prime}\\))\n\n\n\\[\na(t) = \\bar{a} + a^{\\prime}(t)\n\\qquad(1)\\]\nwhere:\n\\[\n\\bar{a} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a(t_i)\n\\qquad(2)\\]\n\n\n\n\nSee fluctuations as eddies move by.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#wind-vector-has-u-v-w-components",
+    "href": "Lectures/14.html#wind-vector-has-u-v-w-components",
+    "title": "Turbulence Statistics",
+    "section": "Wind vector has u, v, & w components",
+    "text": "Wind vector has u, v, & w components\n\n\nA vector is a mathematical object that has a size, called the magnitude, and a direction.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#reynolds-decomposition-covariance",
+    "href": "Lectures/14.html#reynolds-decomposition-covariance",
+    "title": "Turbulence Statistics",
+    "section": "Reynolds Decomposition: Covariance",
+    "text": "Reynolds Decomposition: Covariance\nBy definition the average of all fluctuations must vanish.\n\\[\n\\begin{align}\n\\bar{a^{\\prime}} = 0 \\nonumber \\\\\n\\bar{a }\\times \\bar{b^{\\prime}} = 0 \\nonumber \\\\\n\\overline{a \\times b} =\\overline{(\\bar{a}+a^{\\prime})\\times(\\bar{b}+b^{\\prime})} = \\bar{a}\\times\\bar{b} + \\overline{a^{\\prime}\\times b^{\\prime}}\n\\end{align}\n\\qquad(3)\\]\nWe conclude: A covariance is not necessarily vanishing. Covariances are often very important terms in turbulence.\n\nThe covariance indicates the amount of common variation between two variables. It is positive where both variables increase or decrease together. Covariance is negative for opposite variation, such as when one variable increases while the other decreases. Covariance is zero if one variable is unrelated to the variation of the other. “eddy flux” is computed as a covariance between instantaneous deviation in vertical wind speed (w’) from the mean value (w-overbar) and instantaneous deviation in gas concentration, mixing ratio (s’), from its mean value (s-overbar), multiplied by mean air density (ρa). Several mathematical operations and assumptions, including Reynolds decomposition, are involved in getting from physically complete equations of the turbulent flow to practical equations for computing “eddy flux”, as shown below.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#integral-statistics",
+    "href": "Lectures/14.html#integral-statistics",
+    "title": "Turbulence Statistics",
+    "section": "Integral Statistics",
+    "text": "Integral Statistics\nAlso the variance of a in a turbulent time series is not zero. It is defined by:\n\\[\n\\overline{a^{\\prime2}} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\qquad(4)\\]\nThe standard deviation (square root of variance) is in the same units as a:\n\\[\n\\sigma_a=\\overline{a^{\\prime2}}\n\\qquad(5)\\]\n\nThe covariance indicates the amount of common variation between two variables. Variance: Informally, it measures how far a set of (random) numbers are spread out from their average value.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#integral-statistics-1",
+    "href": "Lectures/14.html#integral-statistics-1",
+    "title": "Turbulence Statistics",
+    "section": "Integral statistics",
+    "text": "Integral statistics\nTurbulence intensities are the dimensionless ratio between the standard deviation and the length of the mean wind vector M.\n\n\n\\[\n\\begin{align}\nI_u = \\small\\frac{\\sigma_u}{M} \\nonumber \\\\\nI_v = \\small\\frac{\\sigma_v}{M} \\nonumber \\\\\nI_w = \\small\\frac{\\sigma_w}{M} \\nonumber \\\\\nM = \\sqrt{\\bar{u^2} + \\bar{v^2} + \\bar{w^2}}\n\\end{align}\n\\qquad(6)\\]\n\n\n\n\n\nIntensity of turbulence basically can be said as degree of turbulence.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#turbulent-kinetic-energy",
+    "href": "Lectures/14.html#turbulent-kinetic-energy",
+    "title": "Turbulence Statistics",
+    "section": "Turbulent Kinetic Energy",
+    "text": "Turbulent Kinetic Energy\nFollowing the definition of kinetic energy (\\(E=\\frac{1}{2}mv^2\\)) we can define a mean kinetic energy (MKE) per unit mass \\(m\\) of the flow, namely\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\bar{u}^2+\\bar{v}^2+\\bar{w}^2)\n\\qquad(7)\\]\nSimilarly, the kinetic energy of the instantaneous deviations per unit mass (e) is:\n\\[\ne=\\frac{1}{2}(u^{\\prime2}+v^{\\prime2}+w^{\\prime2}) \\nonumber\n\\]\nThe average e is called mean turbulent kinetic energy (TKE):\n\\[\nTKE = \\bar{e}=\\frac{1}{2}(\\bar{u}^{\\prime2}+\\bar{v}^{\\prime2}+\\bar{w}^{\\prime2})\n\\qquad(8)\\]\n\nSum of variances",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#the-tke-budget",
+    "href": "Lectures/14.html#the-tke-budget",
+    "title": "Turbulence Statistics",
+    "section": "The TKE budget",
+    "text": "The TKE budget\n\n\nIt’s a measure of the intensity of turbulence",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#tke-in-the-boundary-layer-iclicker",
+    "href": "Lectures/14.html#tke-in-the-boundary-layer-iclicker",
+    "title": "Turbulence Statistics",
+    "section": "TKE in the boundary layer (iClicker)",
+    "text": "TKE in the boundary layer (iClicker)\nTKE increases with _______ wind speed.\n\nA increasing\nB decreasing",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#tke-in-the-boundary-layer-iclicker-1",
+    "href": "Lectures/14.html#tke-in-the-boundary-layer-iclicker-1",
+    "title": "Turbulence Statistics",
+    "section": "TKE in the boundary layer (iClicker)",
+    "text": "TKE in the boundary layer (iClicker)\nTKE is greater over _______ than ________ surfaces.\n\nA rough / smooth\nB smooth / rough",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#tke-in-the-boundary-layer-iclicker-2",
+    "href": "Lectures/14.html#tke-in-the-boundary-layer-iclicker-2",
+    "title": "Turbulence Statistics",
+    "section": "TKE in the boundary layer (iClicker)",
+    "text": "TKE in the boundary layer (iClicker)\nTKE is greatest in __________ atmosphere, least in ________ atmosphere.\n\nA stable / unstable\nB unstable / stable",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#probability-densities",
+    "href": "Lectures/14.html#probability-densities",
+    "title": "Turbulence Statistics",
+    "section": "Probability Densities",
+    "text": "Probability Densities\nA probability density function (PDF) describes the probability of occurrence of a particular value of any parameter.\n\n\n\nIt is useful to look at the probability density functions of turbulent fluctuations (\\(u^{\\prime}\\),\\(v^{\\prime}\\),\\(w^{\\prime}\\),\\(T^{\\prime}\\),\\(\\rho^{\\prime}\\),etc.).\nA histogram is a discrete representation of a probability density.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#joint-probability-density",
+    "href": "Lectures/14.html#joint-probability-density",
+    "title": "Turbulence Statistics",
+    "section": "Joint Probability Density",
+    "text": "Joint Probability Density\n\n\nA \\(\\geq 2D\\) probability density of co-occurrence variables is called joint probability density.\n\nThis can be very informative, e.g.,:\n\nSay \\(w^{\\prime}\\) and \\(\\rho_{H_2O}^{\\prime}\\) are correlated, this gives us information about H2O transport toward/away from the surface\n\n\n\n\n\n\nH. Tennekes and J. L. Lumley (1972): A first course in turbulence. Massachusetts Institute of Technology.\n\n\n\n\n\nA joint probability is a statistical measure that calculates the likelihood of two events occurring together and at the same point in time. Joint probability is the probability of event Y occurring at the same time event X occurs. Useful for metrics such as covariance of correlation coefficients Covariance = related to the area under your PDF",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#joint-probability-density---examples",
+    "href": "Lectures/14.html#joint-probability-density---examples",
+    "title": "Turbulence Statistics",
+    "section": "Joint probability density - examples",
+    "text": "Joint probability density - examples\n\nH. Tennekes and J. L. Lumley (1972): A first course in turbulence. Massachusetts Institute of Technology.\nJoint probability density B(u,v)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#correlation-coefficient",
+    "href": "Lectures/14.html#correlation-coefficient",
+    "title": "Turbulence Statistics",
+    "section": "Correlation coefficient",
+    "text": "Correlation coefficient\nThe correlation coefficient \\(r\\) describes covariance relative to variability:\n\ne.g., for \\(u\\) and \\(w\\), it would be: \\(r_{uw} = \\small\\frac{\\overline{u^{\\prime}w^{\\prime}}}{\\sigma_u \\sigma_w}\\)\n\n\n\nCorrelation coefficient is defined as the covariance normalized by the standard deviations for the two variables. Normalizing means -1=&gt; r +&lt; 1. A correlations coefficient of 1 indicates a perfect correlation (both variables increase or decrease together proportionally), -1 means a perfect opposite correlation, and 0 indicates no correlation. Joint probability density. Note the asymmetric PDF –By inspection, note that the larger probabilities occur as X and Y move in opposite directions. This indicates a negative covariance. All values of ruw are well negatively correlated (average -0.3) because wind increases with height In the ABL, many turbulent variables are correlated. E.g. in unstable conditions, parcels of warm air rise while other cool parcels sink in convective circulation (e.g. w’theta’ = postive) The closer the correlation is to 1 or −1, the closer the joint distribution of (x,y) pairs hugs a straight line, with positive or negative slope.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#taylors-hypothesis---translating-from-time-to-space",
+    "href": "Lectures/14.html#taylors-hypothesis---translating-from-time-to-space",
+    "title": "Turbulence Statistics",
+    "section": "Taylor’s Hypothesis - translating from time to space",
+    "text": "Taylor’s Hypothesis - translating from time to space\n\\[\n\\small\\frac{\\delta T}{\\delta t} = -u \\small\\frac{\\delta T}{\\delta x}  \n\\]\n\n\n\nR. B. Stull (1988)\n\n\n\n:::\n::::\n\nWe would like to be able to take snapshots of the eddies in three dimensions and measure all their sizes each instant. Unfortunately, we do not have a good way to do this. Instead, we can simply measure the fluctuations of a variable such as wind speed, specific humidity, or temperature with a sensor at one location for a period of time. In this way, we watch the eddies drift by the sensor. But the eddies could be changing size and shape as they drift by the sensor. Let’s put this physical concept in the context of the total derivative.\nTake a variable like temperature, T. We know that the change in T with time at any location (such as where a sensor might be placed) is the sum of the total derivative and the temperature advection: The temperature advection is the change in temperature at the sensor due to the advection of warmer or colder air past the sensor. The total derivative is the change in temperature of an air parcel moving past the sensor. Such a temperature change may be caused by any number of processes, such as the absorption or emission of radiation, condensation or evaporation (latent heating or cooling), or compression and expansion. Taylor’s hypothesis says that we can assume that the turbulent eddies (which we can think of as large air parcels) are frozen as they advect past the sensor and thus the change in temperature within each eddy is negligible: The temperature advection is the change in temperature at the sensor due to the advection of warmer or colder air past the sensor. The total derivative is the change in temperature of an air parcel moving past the sensor. Such a temperature change may be caused by any number of processes, such as the absorption or emission of radiation, condensation or evaporation (latent heating or cooling), or compression and expansion. Taylor’s hypothesis says that we can assume that the turbulent eddies (which we can think of as large air parcels) are frozen as they advect past the sensor and thus the change in temperature within each eddy is negligible:\nLocal temperature gradients, which might be present from one side of an eddy to another, are advected across the sensor by the mean wind without the eddy changing.\nTaylor’s Hypothesis: Frozen turbulence If turbulence is frozen as it moves (or advects) past a sensor, then the characteristics of the turbulence as a function of time might be translated to their measurements in space (i.e., estimate size of eddies from time rate of fluctuations)\nhttps://www.e-education.psu.edu/meteo300/node/737",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
+    ]
+  },
+  {
+    "objectID": "Lectures/14.html#take-home-points",
+    "href": "Lectures/14.html#take-home-points",
+    "title": "Turbulence Statistics",
+    "section": "Take home points",
+    "text": "Take home points\n\nTurbulent flow can be described using the continuum assumption (parcels rather than molecules).\nReynolds decomposition allows to separate the mean from the turbulent part of a time series.\nWe are rarely interested in the instantaneous values of the turbulent part - but only in the integral effects.\nWe can use probability distributions to predict exchange efficiency and mixing in a turbulent flow.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Turbulence Statistics"
     ]
   },
   {
@@ -6290,11 +6594,227 @@
     ]
   },
   {
+    "objectID": "Lectures/15.html#learning-objectives",
+    "href": "Lectures/15.html#learning-objectives",
+    "title": "Momentum Exchange",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\nDescribe forces that deform surface objects and air parcels.\nExplain how momentum is exchanged in the ABL.\nDescribe and quantify momentum transfer in the ABL.\n\n\nBed load movement and sediment transport is a function of Shear Stress.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#motivation",
+    "href": "Lectures/15.html#motivation",
+    "title": "Momentum Exchange",
+    "section": "Motivation",
+    "text": "Motivation\nAtmospheric motions create forces that deform the atmosphere itself, deform and damage objects, and create waves on water surfaces.\n\n\n\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nMomentum exchange in the atmosphere, which is key to later understand and predict wind near the surface. The force exerted on the surface by the air being dragged over it is called the surface shearing stress (t ) and is expressed as a pressure (Pa, force per unit surface area).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#what-is-momentum-iclicker",
+    "href": "Lectures/15.html#what-is-momentum-iclicker",
+    "title": "Momentum Exchange",
+    "section": "What is Momentum? (iClicker)",
+    "text": "What is Momentum? (iClicker)\nWhich would best describe momentum?\n\nA: Momentum = mass \\(\\times\\) velocity\nB: Momentum = mass \\(\\times\\) speed\nC: Momentum = mass \\(\\times\\) direction\nD: Momentum = mass \\(\\times\\) acceleration",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#mechanics-review--",
+    "href": "Lectures/15.html#mechanics-review--",
+    "title": "Momentum Exchange",
+    "section": "Mechanics review -",
+    "text": "Mechanics review -\n\n\nThe momentum a body is given by the product of its mass and velocity. In the case of the atmosphere the mean horizontal momentum of a unit volume is therefore given by its density (ρ) multiplied by its mean horizontal wind. Remember we use the overbar to",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#drag",
+    "href": "Lectures/15.html#drag",
+    "title": "Momentum Exchange",
+    "section": "Drag",
+    "text": "Drag\n\n\nIn the ABL drag acts as an opposing force exerted by the surface, slowing wind.\n\nThe drag force can be caused by form drag and skin drag.\nFor a fluid to move, we require a horizontal force in the direction of the mean flow. Usually this is the pressure gradient force.\n\n\n\n\n\n\nThe wind speed in the planetary boundary layer is largely controlled by the frictional drag imposed on the flow by the underlying rigid surface. The drag retards motion close to the ground and gives rise to a sharp decrease of mean horizontal wind speed (u) as the surface is approached. The force exerted on the surface by the air being dragged over it is called the surface shearing stress (⌧ ) and is expressed as a pressure (Pa, force per unit surface area).\nThe wind speed in the atmospheric boundary layer is largely controlled by the fric- tional drag imposed on the flow by the underlying rigid surface.\nAbove the laminar boundary layer, in turbulent flows the ‘no-slip condition’ applies and the flow is brought to a standstill at the boundary.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#stress",
+    "href": "Lectures/15.html#stress",
+    "title": "Momentum Exchange",
+    "section": "Stress",
+    "text": "Stress\n\n\nA force tending to deform a body, expressed as force per unit area.\n\nThere are forces acting normal and tangential to a surface.\n\n\n\n\n\n\n\nPressure is a type of stress that can act on a fluid at rest. pressure acts equally in all directions Tangential = shear stress The surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#stress-in-the-atmosphere",
+    "href": "Lectures/15.html#stress-in-the-atmosphere",
+    "title": "Momentum Exchange",
+    "section": "Stress in the Atmosphere",
+    "text": "Stress in the Atmosphere\n\n\nIn the atmosphere, three particular forms of stress are acting on an air parcel:\n\nPressure\nViscous shear stress\nReynolds stress\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nStress is the force tending to produce deformation in a body. It is measured as a force per unit area. Three types of stress appear frequently in studies of the atmosphere: pressure, Reynolds stress, and viscous shear stress.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#pressure",
+    "href": "Lectures/15.html#pressure",
+    "title": "Momentum Exchange",
+    "section": "Pressure",
+    "text": "Pressure\n\n\n\nPressure can act on an air parcel at rest.\nAt a point, pressure acts isotropically and normal to the surface (normal force per unit area). Because it is not dependent on direction, pressure can be reduced to the scalar \\(P\\).\nPressure changes always result in an isotropic compression or expansion of an air parcel.\n\n\n\n\n\nR. B. Stull (1988): ‘An introduction to boundary layer meteorology’\n\n\n\n\n\nPressure is a type of stress that can act on a fluid at rest. For an infinitesimally small fluid element, such as idealized as the cube sketched in Fig 2.16a, pressure acts equally in all directions. Isotropic is the name given to characteristics that are the same in all directions (see Figs 2.4 and 2.5). If we consider just one face of this cube, as in Fig. 2.16b, we see that the isotropic nature of pressure tends to counteract itself in all directions except in a direction normal to (perpendicular to) the surface of the cube. Forces acting normal to all faces of the cube tend to compress or expand the cube, thereby deforming it (Fig 2.l6c). Because pressure is not dependent on direction, we need just one number to describe it at any point in space and time. Thus, pressure is a scalar.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#total-shear-stress",
+    "href": "Lectures/15.html#total-shear-stress",
+    "title": "Momentum Exchange",
+    "section": "Total Shear Stress",
+    "text": "Total Shear Stress\n\n\nViscous shear stress is important whenever there are shearing forces in a moving fluid (laminar or turbulent).\n\nThese shearing forces are opposed to the intermolecular forces. Viscous stress is a function of the velocity gradients and the dynamic viscosity.\n\nReynolds stress is only found in turbulent flows. It is a result of convective movement of momentum surplus and momentum deficit eddies within the fluid.\n\n\n\n\nR. B. Stull (1988): ‘An introduction to boundary layer meteorology’\n\n\n\n\n\nViscous stress exists when there are shearing motions in the fluid. The motion can be laminar or turbulent. When one portion of a fluid moves, the intermolecular forces tend to drag adjacent fluid molecules in the same direction. The strength of these intermolecular forces depend on the nature of the fluid: molasses has stronger forces than water, which in turn has stronger forces than air. A measure of these forces is the viscosity. The result of this stress is a deformation of the fluid\nReynolds stress exists only when the fluid is in turbulent motion. A turbulent eddy can mix air of different wind speeds into our cube of interest (Fig 2.l6d). When this different-speed air is incorporated into one face of the cube and not the opposite face, the cube deforms because of the velocity differences between those two faces",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#reynolds-stress",
+    "href": "Lectures/15.html#reynolds-stress",
+    "title": "Momentum Exchange",
+    "section": "Reynolds stress",
+    "text": "Reynolds stress\nThe flux of momentum is accomplished through random motion. Discrete ‘lumps’ (eddies) of the fluid are displaced by turbulence over a distance and there merge with the flow. Consequently eddies transport their momentum surplus or their momentum deficit (${u}) across a distance.\n\nSimulation: O. Coceal, Univ. of Reading",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#stress-tensor",
+    "href": "Lectures/15.html#stress-tensor",
+    "title": "Momentum Exchange",
+    "section": "Stress Tensor",
+    "text": "Stress Tensor\n\n\nIn a three dimensional view, we can define a stress tensor \\(\\tau\\) that deforms a body\n\nIt incorporates 9 stress vectors acting on one point in space.\n\nThe tensor is symmetric, so there are only 6 independent components (3 normal / 3 tangential).\nA stress tensor can be separately written for the viscous shear stress and the Reynolds stress.\n\n\n\n\n\n\n\nDelete?",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#sweeps-and-ejections",
+    "href": "Lectures/15.html#sweeps-and-ejections",
+    "title": "Momentum Exchange",
+    "section": "Sweeps and Ejections",
+    "text": "Sweeps and Ejections\nIn the atmospheric boundary layer over flat terrain the transfer can be often simplified 1-dimensional (up/down only)\n\n\n\nEjections Events transporting momentum deficit upward\nSweeps Events transporting momentum surplus downward",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#momentum-exchange",
+    "href": "Lectures/15.html#momentum-exchange",
+    "title": "Momentum Exchange",
+    "section": "Momentum Exchange",
+    "text": "Momentum Exchange\n\n\nJoint probability density. Note the asymmetric PDF –By inspection, note that the larger probabilities occur as X and Y move in opposite directions. This indicates a negative covariance. Events transporting momentum deficit upward are called ejections. Events transporting momentum surplus downward are called sweeps. The surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum.\nWork on handout",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#mixing-length",
+    "href": "Lectures/15.html#mixing-length",
+    "title": "Momentum Exchange",
+    "section": "Mixing Length",
+    "text": "Mixing Length\nThe characteristic height for mixing to occur is the mixing length \\(l\\) and is likely related to the mean size of eddies.\n\n\nAssume an eddy at level (\\(z+l\\)) with mean velocity \\(\\bar{u}_{(z+l)}\\) moves down to \\(z\\) where mean velocity \\(\\bar{u}_{(z)}\\) is less, by \\(u^{\\prime}\\):\n\\[\nu^{\\prime} = \\bar{u}_{(z+l)}-\\bar{u}_{(z)}\n\\]\nso: \\[\nu^{\\prime} = l\\small\\frac{\\delta u}{\\delta z}\n\\qquad(1)\\]\n\ni.e. extra velocity = increment in height x rate of change of velocity with height.\n\n\n\n\n\n\nMixing length is related to mean size of eddies. The characteristic height difference for mixing to occur is the mixing length l",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#reynolds-stress-and-covariance",
+    "href": "Lectures/15.html#reynolds-stress-and-covariance",
+    "title": "Momentum Exchange",
+    "section": "Reynolds stress and covariance",
+    "text": "Reynolds stress and covariance\n\n\nAssuming horizontal homogeneity, if an eddy merges:\n\nIt imports /subtracts \\(\\rho u^{\\prime}\\) amount of horizontal momentum per unit volume from/to the flow at level \\(z\\).\n\nIf the vertical velocity of the eddy is w’ then the instantaneous Reynolds stress (momentum flux) is\n\\[\n\\tau = -\\rho u^{\\prime} w^{\\prime}\n\\]\nand in the time average\n\\[\n\\tau = -\\rho \\overline{u^{\\prime} w^{\\prime}}\n\\]\n\n\n\n\n\nThus, stress and momentum flux are physically the same in a fluid such as air.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#friction-velocity",
+    "href": "Lectures/15.html#friction-velocity",
+    "title": "Momentum Exchange",
+    "section": "Friction Velocity",
+    "text": "Friction Velocity\nAssuming horizontal homogeneity: In turbulent shear flows, the Reynolds stress (momentum flux) is found to be proportional to the square of the mean flow velocity, which leads to the definition of the friction velocity \\(u_*\\) (units: m s-1)\n\\[\nu_*^2 = \\small\\frac{\\tau_0}{\\rho}\n\\qquad(2)\\]\n\nClose to the surface, we can assume \\(\\tau = \\tau_0\\) and write: \\(\\tau = \\rho u_*^2\\)\nAnd because \\(\\tau = -\\rho \\overline{u^{\\prime}w^{\\prime}}\\):\nA reasonable estimate of the friction velocity can be made from measurements of the Reynolds stress \\(\\overline{u^{\\prime}w^{\\prime}}\\) close to the surface, i.e.\n\n\\[\nu_* = \\sqrt{-\\overline{u^{\\prime}w^{\\prime}}}\n\\qquad(3)\\]\n\nShear Velocity, also called friction velocity, is a form by which a shear stress may be re-written in units of velocity. Shear velocity is used to describe shear-related motion in moving fluids. It is used to describe:",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#vertical-flux-profile",
+    "href": "Lectures/15.html#vertical-flux-profile",
+    "title": "Momentum Exchange",
+    "section": "Vertical flux profile",
+    "text": "Vertical flux profile\nThe force is generated within the lowest layers and transmitted as a vertical flux of horizontal momentum mainly in terms of a Reynolds stress.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/15.html#take-home-points",
+    "href": "Lectures/15.html#take-home-points",
+    "title": "Momentum Exchange",
+    "section": "Take home points",
+    "text": "Take home points\n\nThere are tangential and normal stresses that deform an air parcel in the atmosphere.\nSweeps and ejections refer to part of eddies in a turbulent flow that move momentum up and down.\nMomentum transfer can be quantified using the covariance u’w’ and friction velocity u* is a global parameter that describes its square root in the lowest surface layer.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Momentum Exchange"
+    ]
+  },
+  {
     "objectID": "MidTerm/MidTerm.html",
     "href": "MidTerm/MidTerm.html",
     "title": "MidTerm",
     "section": "",
-    "text": "Table 1: Constants\n\n\n\n\n\n\nConstant\nSymbol\nValue\nUnits\n\n\n\n\nHeat Capacity of Air\n\\(C_a\\)\n0.001\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Water\n\\(C_w\\)\n4.2\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Organic Soil\n\\(C_o\\)\n2.5\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Mineral Soil\n\\(C_a\\)\n2\n\\(MJ m^{-3} K^{-1}\\)\n\n\nSolar Constant\n\\(I_0\\)\n1361\n\\(W m^{-2}\\)\n\n\nLatent Heat of Vaporization\n\\(L_v\\)\n2.5\n\\(MJ kg^{-1}\\)\n\n\nLatent Heat of Fusion\n\\(L_f\\)\n0.34\n\\(MJ kg^{-1}\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTable 2: Symbols\n\n\n\n\n\n\nSymbol\nName\nUnits\n\n\n\n\n\\(R_n\\)\nNet Radiation\n\\(W m^{-2}\\)\n\n\n\\(LE\\)\nLatent Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(H\\)\nSensible Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(H_g\\)\nGround Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(Ta_z\\)\nAir Temperature at the Height (z in m) Above the Surface\n\\(^{\\circ}C\\)\n\n\n\\(RH_z\\)\nRelative Humidity at the Height (z in m) Above the Surface\n%\n\n\n\\(T_0\\)\nTemperature at the Ground Surface\n\\(^{\\circ}C\\)\n\n\n\\(Ts_z\\)\nAir Temperature at the Depth (z in m) Below the Surface\n\\(^{\\circ}C\\)\n\n\n\\(\\Theta_o\\)\nVolumetric Fraction of Organic Matter\n%\n\n\n\\(\\Theta_w\\)\nVolumetric Fraction of Liquid Fresh Water\n%\n\n\n\\(r_b\\)\nBoundary Layer Resistance\n\\(s m^{-1}\\)\n\n\n\n\n\n\n\n\nYou have randomly been assigned observations of conditions above and below different the ground surface at a collection of different sites Table 3. Each set observation was taken at midnight in early winter, under partly cloudy skies with light winds. The observations were precede by a period of dry weather, such that there is no liquid or solid water present on or above the soil surface. You will use these data to answer the questions below.\n\n\n\n\nTable 3: Observations\n\n\n\n\n\n\nID\n\\(R_n\\)\n\\(LE\\)\n\\(Ta_{0.1}\\)\n\\(RH_{0.1}\\)\n\\(T_0\\)\n\\(Ts_{0.1}\\)\n\\(\\Theta_o\\)\nPorosity\n\\(\\Theta_w\\)\n\\(r_b\\)\n\n\n\n\nA\n-48\n-5\n-0.9\n100\n1\n3.3\n27\n32\n17\n52\n\n\nB\n-45\n-4\n-0.7\n100\n1.2\n3\n30\n35\n20\n55\n\n\nC\n-46\n-4\n-0.8\n100\n1\n3.2\n29\n34\n19\n54\n\n\nD\n-47\n-4\n-0.8\n100\n1.1\n3.1\n28\n33\n18\n53\n\n\nE\n-49\n-5\n-1\n100\n1.1\n3.1\n26\n31\n16\n51\n\n\nF\n-49\n-5\n-1\n100\n1.3\n3.2\n26\n31\n16\n51\n\n\n\n\n\n\n\n\n\nBased on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours? 1/6\n\n\nSurface (+ adjacent air/soil) will cool because \\(R_n\\) is negative.\nDew/frost are are expected to occur. As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.\n\nShould mention possibility of frost for full marks\n\n\n\nAssuming heat storage fluxes (\\(\\Delta S\\)) are negligible; calculate \\(H\\) approximate \\(H_g\\). You can assume that the laminar boundary layer for each site is exactly 0.1m thick. 1/4\n\n\nCa = Constants.loc['Heat Capacity of Air','value']\nProfile['H'] = Ca*1e6*(Profile['$T_0$']-Profile['$Ta_{0.1}$'])/Profile['$r_b$']\nProfile['Hg'] = Profile['$R_n$']-Profile['$LE$']-Profile['H']\nProfile[['H','Hg']]\n\n\n\n\n\n\n\n\nH\nHg\n\n\n\n\nA\n36.538462\n-79.538462\n\n\nB\n34.545455\n-75.545455\n\n\nC\n33.333333\n-75.333333\n\n\nD\n35.849057\n-78.849057\n\n\nE\n41.176471\n-85.176471\n\n\nF\n45.098039\n-89.098039\n\n\n\n\n\n\n\n\nEstimate thermal admittance (\\(\\mu\\)) of the soil surface and report any intermediary parameters you calculated to obtain these values. 1/4\n\n\nCa = Constants.loc['Heat Capacity of Air','value']\nCm = Constants.loc['Heat Capacity of Mineral Soil','value']\nCo = Constants.loc['Heat Capacity of Organic Soil','value']\nCw = Constants.loc['Heat Capacity of Water','value']\nProfile['k'] = -1*Profile['Hg']*(.1)/(Profile['$Ts_{0.1}$']-Profile['$T_0$'])\nProfile['C'] = (Profile['$\\Theta_o$']*Co+(100-Profile['Porosity']-Profile['$\\Theta_o$'])*Cm+Profile['$\\Theta_w$']*Cw+(Profile['Porosity']-Profile['$\\Theta_w$'])*Ca)*0.01\nProfile['mu'] = (Profile['k']*Profile['C'])**.5\n\nProfile[['C','k','mu']]\n\n\n\n\n\n\n\n\nC\nk\nmu\n\n\n\n\nA\n2.20915\n3.458194\n2.763995\n\n\nB\n2.29015\n4.196970\n3.100273\n\n\nC\n2.26315\n3.424242\n2.783806\n\n\nD\n2.23615\n3.942453\n2.969161\n\n\nE\n2.18215\n4.258824\n3.048506\n\n\nF\n2.18215\n4.689370\n3.198892\n\n\n\n\n\n\n\n\nOn another day, the same initial conditions are observed at each of your sites: \\(R_n = 0 W m^{-2}\\), \\(LE = 0 W m^{-2}\\), and \\(Ta_{0.1} = -1 ^{\\circ}C\\), \\(T_0 = 1 ^{\\circ}C\\), and \\(Ts_{0.1} = 2 ^{\\circ}C\\). While the thermal properties of the soils that you estimated in the previous question have not changed. You can assume that \\(R_n\\), \\(LE\\), and \\(Ta_{0.1}\\) remain fixed at their initial values, but \\(T_0\\) and \\(Ts_{0.1}\\) will change. It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation. Assuming that no snow accumulated at each site until \\(T_0 &lt; 0 ^{\\circ}C\\) which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning. Note you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. 1/3\n\n\n\\(R_n\\) and \\(LE\\) are zero. From the temperature gradients, we can assume \\(H\\) will be positive slightly positive (soil surface losing heat to atmosphere) and \\(H_g\\) will be negative soil at depth losing heat to soil surface. However, we can’t assume that \\(0 = H+H_G\\) (same magnitude/opposite sign) in this case, because we have to account for another component of the energy balance, \\(\\Delta M\\), that we did not have to think about in previously.\n\nGiven the outlined assumption (snow won’t accumulate until \\(T_0 &lt; 0 ^{\\circ} C\\)) the first soil to have \\(T_0\\) &lt; 0 will accumulate snow first. Until then, snow will melt on the grounds surface until \\(T_0 &lt; 0 ^{\\circ} C\\). The process of melting will remove heat from the soil as well \\(\\Delta M &gt;0\\); which means \\(0 = H + H_G + \\Delta_M\\).\n\nSnowfall accumulation is expected to be inversely related to to thermal admittance \\(\\mu\\) because lower thermal admittance means surface cools rapidly (less heat transfer from depth).\n\nThermal admittance does increase as a function of \\(\\Theta_w\\), and the water input from melting will increase \\(\\mu\\) slightly. While the increase is not linear, since all soils have initial \\(\\Theta_w &gt; 0.15\\), its close enough to linear that one could reasonably assume a linear relationship. The increases in \\(\\mu\\) wouldn’t be drastically different between soils anyway as they have fairly similar properties.\nSince \\(T_0\\) is quite close to 0 C to start, there isn’t much cooling that needs to be done before accumulation will occur. So its reasonable to just look at the starting values of \\(\\mu\\) and use those to guess the order of which will reach 0 C first.\n\n\n\nRanked = Profile.sort_values(by='mu').reset_index()\nMarkdown(tabulate(\n  Ranked,headers=Ranked.columns.values\n))\n\n\n\n\n\nindex\nID\n\\(R_n\\)\n\\(LE\\)\n\\(Ta_{0.1}\\)\n\\(RH_{0.1}\\)\n\\(T_0\\)\n\\(Ts_{0.1}\\)\n\\(\\Theta_o\\)\nPorosity\n\\(\\Theta_w\\)\n\\(r_b\\)\nH\nHg\nk\nC\nmu\n\n\n\n\n0\nA\nA\n-48\n-5\n-0.9\n100\n1\n3.3\n27\n32\n17\n52\n36.5385\n-79.5385\n3.45819\n2.20915\n2.764\n\n\n1\nC\nC\n-46\n-4\n-0.8\n100\n1\n3.2\n29\n34\n19\n54\n33.3333\n-75.3333\n3.42424\n2.26315\n2.78381\n\n\n2\nD\nD\n-47\n-4\n-0.8\n100\n1.1\n3.1\n28\n33\n18\n53\n35.8491\n-78.8491\n3.94245\n2.23615\n2.96916\n\n\n3\nE\nE\n-49\n-5\n-1\n100\n1.1\n3.1\n26\n31\n16\n51\n41.1765\n-85.1765\n4.25882\n2.18215\n3.04851\n\n\n4\nB\nB\n-45\n-4\n-0.7\n100\n1.2\n3\n30\n35\n20\n55\n34.5455\n-75.5455\n4.19697\n2.29015\n3.10027\n\n\n5\nF\nF\n-49\n-5\n-1\n100\n1.3\n3.2\n26\n31\n16\n51\n45.098\n-89.098\n4.68937\n2.18215\n3.19889\n\n\n\n\n\n\n\n\n\nBriefly describe two ways in which a soil temperature wave changes with depth as it moves down in response to radiate forcing at the surface. Which thermal property of soil that we discussed in lecture influences how the temperature wave will propagate through the soil? All else equal, what happens if this property decreases?\n\n\nThe changes are described by the equation on this slide\n\nAttenuation/damping (reduction in amplitude) with increasing depth (1/3)\nPhase shift (time offset) with increasing depth (1/3)\n\nThermal diffusivity (\\(K = \\frac{k}{C}\\)) is the property that controls it (as per the equation). If K is higher &gt; phase shift and attenuation are reduced (reduced attenuation would mean damping depth increases) (1/3)\n\nThermal conductivity (\\(k\\)) or heat capacity (\\(C\\)) can be accepted (for partial marks). However \\(K = \\frac{k}{C}\\), so its not strictly controlled by either\n\n\n\nBriefly explain what factors influence net short-wave SW* and net long-wave LW* radiation at the earth’s surface?\n\n\nThis slide summarizes the important aspects:\n\\(SW^*\\) depends on:\n\n\\(SW\\downarrow\\) &gt; influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude and time of day, some mention of cosine law of attenuation here), along with atmospheric scattering & reflection (bulk transitivity). Only sourced from the Sun (1/4)\n\\(SW\\uparrow\\) &gt; determined by albedo & magnitude of \\(SW\\downarrow\\). Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles). For some “surfaces” (ice, water, etc.) it also depends on the transitivity of the volume. Surface can absorb \\(SW\\downarrow\\), but cannot emit it! (1/4)\n\n\\(LW^*\\) depends on:\n\n\\(LW\\downarrow\\) &gt; determined by the temperature and emissivity \\(\\epsilon\\) of the atmosphere. Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions. Clouds are a good example: \\(LW\\downarrow\\) tends to be higher (for equivalent surface temps/seasons) when clouds are present (1/4)\n\\(LW\\uparrow\\) &gt; determined by the temperature, emissivity \\(\\epsilon\\), and reflectivity of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that \\(\\epsilon = \\zeta\\) (absorptivity) in the long-wave portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (\\(SW\\)): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(1/4)"
+    "text": "Table 1: Constants\n\n\n\n\n\n\nConstant\nSymbol\nValue\nUnits\n\n\n\n\nHeat Capacity of Air\n\\(C_a\\)\n0.001\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Water\n\\(C_w\\)\n4.2\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Organic Soil\n\\(C_o\\)\n2.5\n\\(MJ m^{-3} K^{-1}\\)\n\n\nHeat Capacity of Mineral Soil\n\\(C_a\\)\n2\n\\(MJ m^{-3} K^{-1}\\)\n\n\nSolar Constant\n\\(I_0\\)\n1361\n\\(W m^{-2}\\)\n\n\nLatent Heat of Vaporization\n\\(L_v\\)\n2.5\n\\(MJ kg^{-1}\\)\n\n\nLatent Heat of Fusion\n\\(L_f\\)\n0.34\n\\(MJ kg^{-1}\\)\n\n\n\n\n\n\n\n\n\n\n\n\nTable 2: Symbols\n\n\n\n\n\n\nSymbol\nName\nUnits\n\n\n\n\n\\(R_n\\)\nNet Radiation\n\\(W m^{-2}\\)\n\n\n\\(LE\\)\nLatent Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(H\\)\nSensible Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(H_g\\)\nGround Heat Flux\n\\(W m^{-2}\\)\n\n\n\\(Ta_z\\)\nAir Temperature at the Height (z in m) Above the Surface\n\\(^{\\circ}C\\)\n\n\n\\(RH_z\\)\nRelative Humidity at the Height (z in m) Above the Surface\n%\n\n\n\\(T_0\\)\nTemperature at the Ground Surface\n\\(^{\\circ}C\\)\n\n\n\\(Ts_z\\)\nAir Temperature at the Depth (z in m) Below the Surface\n\\(^{\\circ}C\\)\n\n\n\\(\\Theta_o\\)\nVolumetric Fraction of Organic Matter\n%\n\n\n\\(\\Theta_w\\)\nVolumetric Fraction of Liquid Fresh Water\n%\n\n\n\\(r_b\\)\nBoundary Layer Resistance\n\\(s m^{-1}\\)\n\n\n\n\n\n\n\n\nYou have randomly been assigned observations of conditions above and below different the ground surface at a collection of different sites Table 3. Each set observation was taken at midnight in early winter, under partly cloudy skies with light winds. The observations were precede by a period of dry weather, such that there is no liquid or solid water present on or above the soil surface. You will use these data to answer the questions below.\n\n\n\n\nTable 3: Observations\n\n\n\n\n\n\nID\n\\(R_n\\)\n\\(LE\\)\n\\(Ta_{0.1}\\)\n\\(RH_{0.1}\\)\n\\(T_0\\)\n\\(Ts_{0.1}\\)\n\\(\\Theta_o\\)\nPorosity\n\\(\\Theta_w\\)\n\\(r_b\\)\n\n\n\n\nA\n-48\n-5\n-0.9\n100\n1\n3.3\n27\n32\n17\n52\n\n\nB\n-45\n-4\n-0.7\n100\n1.2\n3\n30\n35\n20\n55\n\n\nC\n-46\n-4\n-0.8\n100\n1\n3.2\n29\n34\n19\n54\n\n\nD\n-47\n-4\n-0.8\n100\n1.1\n3.1\n28\n33\n18\n53\n\n\nE\n-49\n-5\n-1\n100\n1.1\n3.1\n26\n31\n16\n51\n\n\nF\n-49\n-5\n-1\n100\n1.3\n3.2\n26\n31\n16\n51\n\n\n\n\n\n\n\n\n\nBased on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours? 1/6\n\n\nSurface (+ adjacent air/soil) will cool because \\(R_n\\) is negative.\nDew/frost are are expected to occur. As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.\n\nShould mention possibility of frost for full marks\n\n\n\nAssuming heat storage fluxes (\\(\\Delta S\\)) are negligible; calculate \\(H\\) approximate \\(H_g\\). You can assume that the laminar boundary layer for each site is exactly 0.1m thick. 1/4\n\n\nCa = Constants.loc['Heat Capacity of Air','value']\nProfile['H'] = Ca*1e6*(Profile['$T_0$']-Profile['$Ta_{0.1}$'])/Profile['$r_b$']\nProfile['Hg'] = Profile['$R_n$']-Profile['$LE$']-Profile['H']\nProfile[['H','Hg']]\n\n\n\n\n\n\n\n\nH\nHg\n\n\n\n\nA\n36.538462\n-79.538462\n\n\nB\n34.545455\n-75.545455\n\n\nC\n33.333333\n-75.333333\n\n\nD\n35.849057\n-78.849057\n\n\nE\n41.176471\n-85.176471\n\n\nF\n45.098039\n-89.098039\n\n\n\n\n\n\n\n\nEstimate thermal admittance (\\(\\mu\\)) of the soil surface and report any intermediary parameters you calculated to obtain these values. 1/4\n\n\nCa = Constants.loc['Heat Capacity of Air','value']\nCm = Constants.loc['Heat Capacity of Mineral Soil','value']\nCo = Constants.loc['Heat Capacity of Organic Soil','value']\nCw = Constants.loc['Heat Capacity of Water','value']\nProfile['k'] = -1*Profile['Hg']*(.1)/(Profile['$Ts_{0.1}$']-Profile['$T_0$'])\nProfile['C'] = (Profile['$\\Theta_o$']*Co+(100-Profile['Porosity']-Profile['$\\Theta_o$'])*Cm+Profile['$\\Theta_w$']*Cw+(Profile['Porosity']-Profile['$\\Theta_w$'])*Ca)*0.01\nProfile['mu'] = (Profile['k']*Profile['C'])**.5\n\nProfile[['C','k','mu']]\n\n\n\n\n\n\n\n\nC\nk\nmu\n\n\n\n\nA\n2.20915\n3.458194\n2.763995\n\n\nB\n2.29015\n4.196970\n3.100273\n\n\nC\n2.26315\n3.424242\n2.783806\n\n\nD\n2.23615\n3.942453\n2.969161\n\n\nE\n2.18215\n4.258824\n3.048506\n\n\nF\n2.18215\n4.689370\n3.198892\n\n\n\n\n\n\n\n\nOn another day, the same initial conditions are observed at each of your sites: \\(R_n = 0 W m^{-2}\\), \\(LE = 0 W m^{-2}\\), and \\(Ta_{0.1} = -1 ^{\\circ}C\\), \\(T_0 = 1 ^{\\circ}C\\), and \\(Ts_{0.1} = 2 ^{\\circ}C\\). While the thermal properties of the soils that you estimated in the previous question have not changed. You can assume that \\(R_n\\), \\(LE\\), and \\(Ta_{0.1}\\) remain fixed at their initial values, but \\(T_0\\) and \\(Ts_{0.1}\\) will change. It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation. Assuming that no snow accumulated at each site until \\(T_0 &lt; 0 ^{\\circ}C\\) which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning. Note you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. 1/3\n\n\n\\(R_n\\) and \\(LE\\) are zero. From the temperature gradients, we can assume \\(H\\) will be positive slightly positive (soil surface losing heat to atmosphere) and \\(H_g\\) will be negative soil at depth losing heat to soil surface. However, we can’t assume that \\(0 = H+H_G\\) (same magnitude/opposite sign) in this case, because we have to account for another component of the energy balance, \\(\\Delta M\\), that we did not have to think about in previously.\n\nGiven the outlined assumption (snow won’t accumulate until \\(T_0 &lt; 0 ^{\\circ} C\\)) the first soil to have \\(T_0\\) &lt; 0 will accumulate snow first. Until then, snow will melt on the grounds surface until \\(T_0 &lt; 0 ^{\\circ} C\\). The process of melting will remove heat from the soil as well \\(\\Delta M &gt;0\\); which means \\(0 = H + H_G + \\Delta_M\\).\n\nSnowfall accumulation is expected to be inversely related to to thermal admittance \\(\\mu\\) because lower thermal admittance means surface cools rapidly (less heat transfer from depth).\n\nThermal admittance does increase as a function of \\(\\Theta_w\\), and the water input from melting will increase \\(\\mu\\) slightly. While the increase is not linear, since all soils have initial \\(\\Theta_w &gt; 0.15\\), its close enough to linear that one could reasonably assume a linear relationship. The increases in \\(\\mu\\) wouldn’t be drastically different between soils anyway as they have fairly similar properties.\nSince \\(T_0\\) is quite close to 0 C to start, there isn’t much cooling that needs to be done before accumulation will occur. So its reasonable to just look at the starting values of \\(\\mu\\) and use those to guess the order of which will reach 0 C first.\n\n\n\nRanked = Profile.sort_values(by='mu').reset_index()\nMarkdown(tabulate(\n  Ranked,headers=Ranked.columns.values\n))\n\n\n\n\n\nindex\nID\n\\(R_n\\)\n\\(LE\\)\n\\(Ta_{0.1}\\)\n\\(RH_{0.1}\\)\n\\(T_0\\)\n\\(Ts_{0.1}\\)\n\\(\\Theta_o\\)\nPorosity\n\\(\\Theta_w\\)\n\\(r_b\\)\nH\nHg\nk\nC\nmu\n\n\n\n\n0\nA\nA\n-48\n-5\n-0.9\n100\n1\n3.3\n27\n32\n17\n52\n36.5385\n-79.5385\n3.45819\n2.20915\n2.764\n\n\n1\nC\nC\n-46\n-4\n-0.8\n100\n1\n3.2\n29\n34\n19\n54\n33.3333\n-75.3333\n3.42424\n2.26315\n2.78381\n\n\n2\nD\nD\n-47\n-4\n-0.8\n100\n1.1\n3.1\n28\n33\n18\n53\n35.8491\n-78.8491\n3.94245\n2.23615\n2.96916\n\n\n3\nE\nE\n-49\n-5\n-1\n100\n1.1\n3.1\n26\n31\n16\n51\n41.1765\n-85.1765\n4.25882\n2.18215\n3.04851\n\n\n4\nB\nB\n-45\n-4\n-0.7\n100\n1.2\n3\n30\n35\n20\n55\n34.5455\n-75.5455\n4.19697\n2.29015\n3.10027\n\n\n5\nF\nF\n-49\n-5\n-1\n100\n1.3\n3.2\n26\n31\n16\n51\n45.098\n-89.098\n4.68937\n2.18215\n3.19889\n\n\n\n\n\n\n\n\n\nBriefly describe two ways in which a soil temperature wave changes with depth as it moves down in response to radiate forcing at the surface. Which thermal property of soil that we discussed in lecture influences how the temperature wave will propagate through the soil? All else equal, what happens if this property decreases?\n\n\nThe changes are described by the equation on this slide\n\nAttenuation/damping (reduction in amplitude) with increasing depth (1/3)\nPhase shift (time offset) with increasing depth (1/3)\n\nThermal diffusivity (\\(K = \\frac{k}{C}\\)) is the property that controls it (as per the equation). If K is higher &gt; phase shift and attenuation are reduced (reduced attenuation would mean damping depth increases) (1/3)\n\nThermal conductivity (\\(k\\)) or heat capacity (\\(C\\)) can be accepted (for partial marks). However \\(K = \\frac{k}{C}\\), so its not strictly controlled by either\n\n\n\nBriefly explain what factors influence net short-wave SW* and net long-wave LW* radiation at the earth’s surface?\n\n\nThis slide summarizes the important aspects:\n\\(SW^*\\) depends on:\n\n\\(SW\\downarrow\\) &gt; influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity). Only sourced from the Sun (1/4)\n\\(SW\\uparrow\\) &gt; determined by albedo & magnitude of \\(SW\\downarrow\\). Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles). For some “surfaces” (ice, water, etc.) it also depends on the transitivity of the volume. Surface can absorb \\(SW\\downarrow\\), but cannot emit it! (1/4)\n\n\\(LW^*\\) depends on:\n\n\\(LW\\downarrow\\) &gt; determined by the temperature and emissivity \\(\\epsilon\\) of the atmosphere. Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions. Clouds are a good example: \\(LW\\downarrow\\) tends to be higher (for equivalent surface temps/seasons) when clouds are present (1/4)\n\\(LW\\uparrow\\) &gt; determined by the temperature, emissivity \\(\\epsilon\\), and reflectivity of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that \\(\\epsilon = \\zeta\\) (absorptivity) in the long-wave portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (\\(SW\\)): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(1/4)"
   },
   {
     "objectID": "MidTerm/MidTerm.html#problem-question",
@@ -6308,7 +6828,7 @@
     "href": "MidTerm/MidTerm.html#short-answers",
     "title": "MidTerm",
     "section": "",
-    "text": "Briefly describe two ways in which a soil temperature wave changes with depth as it moves down in response to radiate forcing at the surface. Which thermal property of soil that we discussed in lecture influences how the temperature wave will propagate through the soil? All else equal, what happens if this property decreases?\n\n\nThe changes are described by the equation on this slide\n\nAttenuation/damping (reduction in amplitude) with increasing depth (1/3)\nPhase shift (time offset) with increasing depth (1/3)\n\nThermal diffusivity (\\(K = \\frac{k}{C}\\)) is the property that controls it (as per the equation). If K is higher &gt; phase shift and attenuation are reduced (reduced attenuation would mean damping depth increases) (1/3)\n\nThermal conductivity (\\(k\\)) or heat capacity (\\(C\\)) can be accepted (for partial marks). However \\(K = \\frac{k}{C}\\), so its not strictly controlled by either\n\n\n\nBriefly explain what factors influence net short-wave SW* and net long-wave LW* radiation at the earth’s surface?\n\n\nThis slide summarizes the important aspects:\n\\(SW^*\\) depends on:\n\n\\(SW\\downarrow\\) &gt; influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude and time of day, some mention of cosine law of attenuation here), along with atmospheric scattering & reflection (bulk transitivity). Only sourced from the Sun (1/4)\n\\(SW\\uparrow\\) &gt; determined by albedo & magnitude of \\(SW\\downarrow\\). Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles). For some “surfaces” (ice, water, etc.) it also depends on the transitivity of the volume. Surface can absorb \\(SW\\downarrow\\), but cannot emit it! (1/4)\n\n\\(LW^*\\) depends on:\n\n\\(LW\\downarrow\\) &gt; determined by the temperature and emissivity \\(\\epsilon\\) of the atmosphere. Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions. Clouds are a good example: \\(LW\\downarrow\\) tends to be higher (for equivalent surface temps/seasons) when clouds are present (1/4)\n\\(LW\\uparrow\\) &gt; determined by the temperature, emissivity \\(\\epsilon\\), and reflectivity of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that \\(\\epsilon = \\zeta\\) (absorptivity) in the long-wave portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (\\(SW\\)): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(1/4)"
+    "text": "Briefly describe two ways in which a soil temperature wave changes with depth as it moves down in response to radiate forcing at the surface. Which thermal property of soil that we discussed in lecture influences how the temperature wave will propagate through the soil? All else equal, what happens if this property decreases?\n\n\nThe changes are described by the equation on this slide\n\nAttenuation/damping (reduction in amplitude) with increasing depth (1/3)\nPhase shift (time offset) with increasing depth (1/3)\n\nThermal diffusivity (\\(K = \\frac{k}{C}\\)) is the property that controls it (as per the equation). If K is higher &gt; phase shift and attenuation are reduced (reduced attenuation would mean damping depth increases) (1/3)\n\nThermal conductivity (\\(k\\)) or heat capacity (\\(C\\)) can be accepted (for partial marks). However \\(K = \\frac{k}{C}\\), so its not strictly controlled by either\n\n\n\nBriefly explain what factors influence net short-wave SW* and net long-wave LW* radiation at the earth’s surface?\n\n\nThis slide summarizes the important aspects:\n\\(SW^*\\) depends on:\n\n\\(SW\\downarrow\\) &gt; influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity). Only sourced from the Sun (1/4)\n\\(SW\\uparrow\\) &gt; determined by albedo & magnitude of \\(SW\\downarrow\\). Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles). For some “surfaces” (ice, water, etc.) it also depends on the transitivity of the volume. Surface can absorb \\(SW\\downarrow\\), but cannot emit it! (1/4)\n\n\\(LW^*\\) depends on:\n\n\\(LW\\downarrow\\) &gt; determined by the temperature and emissivity \\(\\epsilon\\) of the atmosphere. Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions. Clouds are a good example: \\(LW\\downarrow\\) tends to be higher (for equivalent surface temps/seasons) when clouds are present (1/4)\n\\(LW\\uparrow\\) &gt; determined by the temperature, emissivity \\(\\epsilon\\), and reflectivity of the surface. Warmer surface = higher LW emissions; more emissive surface = higher LW emissions. Should mention that \\(\\epsilon = \\zeta\\) (absorptivity) in the long-wave portion of the spectrum (Khirchoff’s law). Also influenced by surface albedo (\\(SW\\)): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(1/4)"
   },
   {
     "objectID": "Study_Questions/01.html",

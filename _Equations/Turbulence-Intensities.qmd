@@ -1,0 +1,10 @@
+
+$$
+\begin{align}
+I_u = \small\frac{\sigma_u}{M} \nonumber \\ 
+I_v = \small\frac{\sigma_v}{M} \nonumber \\ 
+I_w = \small\frac{\sigma_w}{M} \nonumber \\ 
+M = \sqrt{\bar{u^2} + \bar{v^2} + \bar{w^2}}
+\end{align}
+$${#eq-Turbulence-Intensities}
+

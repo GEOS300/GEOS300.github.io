@@ -1,0 +1,387 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Turbulence Statistics
+subtitle: Using statistics to simplify our understanding of turbulence
+---
+
+{{< include _imports.qmd >}}
+
+
+
+## Learning Objectives
+
+* Describe how we can separate turbulent from mean kinetic energy.
+* Explain how we can quantify turbulence and its properties.
+
+
+## Statistical Approach {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+
+Single motions in a turbulent flow are chaotic and unpredictable. Luckily, they are seldom important,
+
+* Prediction focuses on integral effects of turbulence on dispersion and exchange processes. 
+
+  * **Where** are regions of strong / weak turbulence?
+  * **When** is the flow more / less turbulent?
+  * **How** efficiently does turbulence transfer energy and mass?
+
+
+
+
+
+
+:::
+
+::: {.column width="40%"}
+
+
+
+
+![Instantaneous temperature field in a Large Eddy Simulation of the PBL (M. A. Carper, University of Minnesota)](images/14_4_3.jpg)
+
+
+
+![Sample turbulent time series of measured temperatures (10 min)](images/14_4_7.gif)
+
+
+:::
+
+::::
+
+
+## Reynolds Decomposition
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+Turbulent properties appear chaotic, but can be analyzed by deconstructing them into two parts: 
+
+* The time mean (e.g., $\bar{a}$)
+* The instantaneous deviation from the mean (e.g., $a^{\prime}$)
+
+:::
+
+::: {.column width="50%"}
+
+
+{{< include ..\_Equations\Reynolds-Decomposition.qmd >}}
+
+
+![](images/20_2.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+See fluctuations as eddies move by.
+
+:::
+
+
+## Wind vector has u, v, & w components
+
+![](images/14_8_2.jpg)
+
+
+::: {.notes}
+
+A vector is a mathematical object that has a size, called the magnitude, and a direction.
+
+:::
+
+
+
+
+## Reynolds Decomposition: Covariance
+
+
+By definition the average of all fluctuations must vanish.
+
+{{< include ..\_Equations\Reynolds-Decomposition-Covariance.qmd >}}
+
+We conclude:  A covariance is not necessarily vanishing. Covariances are often very important terms in turbulence.
+
+::: {.notes}
+
+The covariance indicates the amount of common variation between two variables. It is positive where both variables increase or decrease together. Covariance is negative for opposite variation, such as when one variable increases while the other decreases. Covariance is zero if one variable is unrelated to the variation of the other. 
+"eddy flux" is computed as a covariance between instantaneous deviation in vertical wind speed (w') from the mean value (w-overbar) and instantaneous deviation in gas concentration, mixing ratio (s'), from its mean value (s-overbar), multiplied by mean air density (ρa). Several mathematical operations and assumptions, including Reynolds decomposition, are involved in getting from physically complete equations of the turbulent flow to practical equations for computing "eddy flux", as shown below.
+
+:::
+
+
+## Integral Statistics
+
+Also the variance of a in a turbulent time series is not zero. It is defined by:
+
+
+{{< include ..\_Equations\Variances.qmd >}}
+
+::: {.notes}
+
+The covariance indicates the amount of common variation between two variables. 
+Variance: Informally, it measures how far a set of (random) numbers are spread out from their average value. 
+
+:::
+
+
+
+
+## Integral statistics
+
+Turbulence intensities are the dimensionless ratio between the standard deviation and the length of the mean wind vector M.
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+{{< include ..\_Equations\Turbulence-Intensities.qmd >}}
+
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/14_15_33.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Intensity of turbulence basically can be said as degree of turbulence.
+
+:::
+
+
+## Turbulent Kinetic Energy {.smaller}
+
+Following the definition of kinetic energy ($E=\frac{1}{2}mv^2$) we can define a mean kinetic energy (MKE) per unit mass $m$ of the flow, namely
+
+{{< include ..\_Equations\TKE.qmd >}}
+
+::: {.notes}
+
+Sum of variances
+
+:::
+
+
+## The TKE budget
+
+
+![](images/TKE.png)
+
+::: {.notes}
+
+It’s a measure of the intensity of turbulence
+
+:::
+
+
+
+
+## TKE in the boundary layer (iClicker)
+
+TKE increases with _______ wind speed. 
+
+* A increasing 
+* B decreasing
+
+## TKE in the boundary layer (iClicker)
+
+TKE is greater over _______ than ________ surfaces.
+
+* A rough / smooth
+* B smooth / rough
+
+## TKE in the boundary layer (iClicker)
+
+TKE is greatest in __________ atmosphere, least in  ________ atmosphere. 
+
+* A stable / unstable
+* B unstable / stable
+
+
+
+## Probability Densities {.smaller}
+
+A probability density function (PDF) describes the probability of occurrence of a particular value of any parameter. 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* It is useful to look at the probability density functions of turbulent fluctuations ($u^{\prime}$,$v^{\prime}$,$w^{\prime}$,$T^{\prime}$,$\rho^{\prime}$,etc.). 
+* A histogram is a discrete representation of a probability density.
+
+
+:::
+
+::: {.column width="50%"}
+
+![](images/PDF.png)
+
+:::
+
+::::
+
+
+## Joint Probability Density {.smaller}
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+A $\geq 2D$ probability density of co-occurrence variables is called joint probability density.
+
+* This can be **very** informative, e.g.,:
+  + Say $w^{\prime}$ and $\rho_{H_2O}^{\prime}$ are correlated, this gives us information about H<sub>2</sub>O transport toward/away from the surface
+
+:::
+
+::: {.column width="40%"}
+
+![H. Tennekes and J. L. Lumley (1972): A first course in turbulence. Massachusetts Institute of Technology.](images/14_22_2.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+A joint probability is a statistical measure that calculates the likelihood of two events occurring together and at the same point in time. Joint probability is the probability of event Y occurring at the same time event X occurs.
+Useful for metrics such as covariance of correlation coefficients
+Covariance = related to the area under your PDF
+
+
+:::
+
+
+
+## Joint probability density - examples
+
+
+![H. Tennekes and J. L. Lumley (1972): A first course in turbulence. Massachusetts Institute of Technology.](images/14_23_2.gif)
+
+::: {.notes}
+
+Joint probability density B(u,v)
+
+
+:::
+
+
+
+
+## Correlation coefficient
+
+The correlation coefficient $r$ describes covariance relative to variability:
+
+* e.g., for $u$ and $w$, it would be: $r_{uw} = \small\frac{\overline{u^{\prime}w^{\prime}}}{\sigma_u \sigma_w}$
+
+![](images/14_24_2.png)
+
+
+
+
+::: {.notes}
+
+Correlation coefficient is defined as the covariance normalized by the standard deviations for the two variables. Normalizing means -1=> r +< 1. A correlations coefficient of 1 indicates a perfect correlation (both variables increase or decrease together proportionally), -1 means a perfect opposite correlation, and 0 indicates no correlation. 
+Joint probability density.
+Note the asymmetric PDF –By inspection, note that the larger probabilities occur as X and Y move in opposite directions. This indicates a negative covariance. 
+All values of ruw are well negatively correlated (average -0.3) because wind increases with height 
+In the ABL, many turbulent variables are correlated. E.g. in unstable conditions, parcels of warm air rise while other cool parcels sink in convective circulation (e.g. w’theta’ = postive)
+The closer the correlation is to 1 or −1, the closer the joint distribution of (x,y) pairs hugs a straight line, with positive or negative slope.
+
+
+
+
+:::
+
+
+
+
+
+## Taylor’s Hypothesis - translating from time to space
+
+$$
+\small\frac{\delta T}{\delta t} = -u \small\frac{\delta T}{\delta x}  
+$$
+
+
+![R. B. Stull (1988)](images/14_26_1.png)
+
+
+
+![](images/14_26_2.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+We would like to be able to take snapshots of the eddies in three dimensions and measure all their sizes each instant. Unfortunately, we do not have a good way to do this. Instead, we can simply measure the fluctuations of a variable such as wind speed, specific humidity, or temperature with a sensor at one location for a period of time. In this way, we watch the eddies drift by the sensor. But the eddies could be changing size and shape as they drift by the sensor. Let’s put this physical concept in the context of the total derivative.
+
+Take a variable like temperature, T. We know that the change in T with time at any location (such as where a sensor might be placed) is the sum of the total derivative and the temperature advection:
+The temperature advection is the change in temperature at the sensor due to the advection of warmer or colder air past the sensor. The total derivative is the change in temperature of an air parcel moving past the sensor. Such a temperature change may be caused by any number of processes, such as the absorption or emission of radiation, condensation or evaporation (latent heating or cooling), or compression and expansion. Taylor’s hypothesis says that we can assume that the turbulent eddies (which we can think of as large air parcels) are frozen as they advect past the sensor and thus the change in temperature within each eddy is negligible:
+The temperature advection is the change in temperature at the sensor due to the advection of warmer or colder air past the sensor. The total derivative is the change in temperature of an air parcel moving past the sensor. Such a temperature change may be caused by any number of processes, such as the absorption or emission of radiation, condensation or evaporation (latent heating or cooling), or compression and expansion. Taylor’s hypothesis says that we can assume that the turbulent eddies (which we can think of as large air parcels) are frozen as they advect past the sensor and thus the change in temperature within each eddy is negligible:
+
+Local temperature gradients, which might be present from one side of an eddy to another, are advected across the sensor by the mean wind without the eddy changing.
+
+Taylor’s Hypothesis: Frozen turbulence 
+If turbulence is frozen as it moves (or advects) past a sensor, then the characteristics of the turbulence as a function of time might be translated to their measurements in space (i.e., estimate size of eddies from time rate of fluctuations) 
+
+
+
+
+
+https://www.e-education.psu.edu/meteo300/node/737
+
+:::
+
+
+## Take home points
+
+
+* Turbulent flow can be described using the continuum assumption (parcels rather than molecules).
+* Reynolds decomposition allows to separate the mean from the turbulent part of a time series.
+* We are rarely interested in the instantaneous values of the turbulent part - but only in the integral effects.
+* We can use probability distributions to predict exchange  efficiency and mixing in a turbulent flow.
+

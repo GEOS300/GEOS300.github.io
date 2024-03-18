@@ -167,7 +167,7 @@ Markdown(tabulate(
 
 * [This slide](../Lectures/07.html#/component-fluxes) summarizes the important aspects:
 * $SW^*$ depends on:
-  + $SW\downarrow$ > influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude and time of day, some mention of cosine law of attenuation here), along with atmospheric scattering & reflection (bulk transitivity).  **Only** sourced from the Sun (**1/4**)
+  + $SW\downarrow$ > influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity).  **Only** sourced from the Sun (**1/4**)
   + $SW\uparrow$ > determined by albedo & magnitude of $SW\downarrow$.  Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles).  For some "surfaces" (ice, water, etc.) it also depends on the transitivity of the volume.  Surface can absorb $SW\downarrow$, but **cannot** emit it! (**1/4**)
 * $LW^*$ depends on:
   + $LW\downarrow$ > determined by the temperature and emissivity $\epsilon$ of the atmosphere.  Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions.  Clouds are a good example: $LW\downarrow$ tends to be higher (for equivalent surface temps/seasons) when clouds are present (**1/4**)

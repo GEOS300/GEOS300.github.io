@@ -794,7 +794,7 @@ ax.plot(theta_w,(k_organic*get_C(0.05,.1,theta_w))**.5,label='Organic',color='gr
 ax.legend()
 ax.grid()
 ax.set_xlabel(r'$\theta_w$')
-ax.set_ylabel(r'$J m^{-2} K^{-1} s^{-1/2}$')
+ax.set_ylabel(r'$MJ m^{-2} K^{-1} s^{-1/2}$')
 
 ```
 

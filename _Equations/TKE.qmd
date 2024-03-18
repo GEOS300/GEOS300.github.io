@@ -1,0 +1,16 @@
+
+$$
+\frac{MKE}{m}=\frac{1}{2}(\bar{u}^2+\bar{v}^2+\bar{w}^2)
+$${#eq-MKE}
+
+Similarly, the kinetic energy of the instantaneous deviations per unit mass (e) is:
+
+$$
+e=\frac{1}{2}(u^{\prime2}+v^{\prime2}+w^{\prime2}) \nonumber
+$$
+
+The average e is called mean turbulent kinetic energy (TKE):
+
+$$
+TKE = \bar{e}=\frac{1}{2}(\bar{u}^{\prime2}+\bar{v}^{\prime2}+\bar{w}^{\prime2})
+$${#eq-TKE}

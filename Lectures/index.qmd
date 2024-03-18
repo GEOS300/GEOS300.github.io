@@ -43,6 +43,8 @@ Topics = [
 'Laminar & Turbulent Flow',
 'Production of Atmospheric Turbulence',
 'Dissipation of Turbulence',
+'',
+'Turbulence Statistics + Momentum Exchange',
 ]
 Readings = [
     '',

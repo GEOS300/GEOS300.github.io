@@ -239,6 +239,24 @@ $$
 RH=\frac{P_v}{P_v^*}
 $${#eq-Relative-Humidity}
 
+## Reynolds Decomposition
+
+$$
+\begin{align}\bar{a^{\prime}} = 0 \nonumber \\\bar{a }\times \bar{b^{\prime}} = 0 \nonumber \\\overline{a \times b} =\overline{(\bar{a}+a^{\prime})\times(\bar{b}+b^{\prime})} = \bar{a}\times\bar{b} + \overline{a^{\prime}\times b^{\prime}}\end{align}
+$${#eq-Reynolds-Decomposition}
+
+## Reynolds Decomposition
+
+$$
+a(t) = \bar{a} + a^{\prime}(t)
+$${#eq-Reynolds-Decomposition}
+
+## Mean
+
+$$
+\bar{a} = \small\frac{1}{N}\sum_{i=0}^{N-1}a(t_i)
+$${#eq-Mean}
+
 ## Shear Stress
 
 $$
@@ -388,6 +406,36 @@ $${#eq-LAT}
 $$
 \begin{eqnarray}\Delta LAT = & 229.18[0.000075+0.001868\cos(\gamma)-0.032077\sin(\gamma) \\             & -0.014615\cos(2\gamma)-0.040849\sin(2\gamma)]\end{eqnarray}
 $${#eq-Delta-LAT}
+
+## MKE
+
+$$
+\frac{MKE}{m}=\frac{1}{2}(\bar{u}^2+\bar{v}^2+\bar{w}^2)
+$${#eq-MKE}
+
+## TKE
+
+$$
+e=\frac{1}{2}(u^{\prime2}+v^{\prime2}+w^{\prime2}) \nonumber
+$${#eq-TKE}
+
+## Turbulence Intensities
+
+$$
+\begin{align}I_u = \small\frac{\sigma_u}{M} \nonumber \\ I_v = \small\frac{\sigma_v}{M} \nonumber \\ I_w = \small\frac{\sigma_w}{M} \nonumber \\ M = \sqrt{\bar{u^2} + \bar{v^2} + \bar{w^2}}\end{align}
+$${#eq-Turbulence-Intensities}
+
+## Variances
+
+$$
+\overline{a^{\prime2}} = \small\frac{1}{N}\sum_{i=0}^{N-1}a^{\prime2}(t_i)
+$${#eq-Variances}
+
+## std
+
+$$
+\sigma_a=\overline{a^{\prime2}}
+$${#eq-std}
 
 ## Weins Law
 
