@@ -126,11 +126,11 @@ Ca = Constants.loc['Heat Capacity of Air','value']
 Cm = Constants.loc['Heat Capacity of Mineral Soil','value']
 Co = Constants.loc['Heat Capacity of Organic Soil','value']
 Cw = Constants.loc['Heat Capacity of Water','value']
-Profile['k'] = -1*Profile['Hg']*(.1)/(Profile['$Ts_{0.1}$']-Profile['$T_0$'])
-Profile['C'] = (Profile['$\Theta_o$']*Co+(100-Profile['Porosity']-Profile['$\Theta_o$'])*Cm+Profile['$\Theta_w$']*Cw+(Profile['Porosity']-Profile['$\Theta_w$'])*Ca)*0.01
-Profile['mu'] = (Profile['k']*Profile['C'])**.5
+Profile['k W m-1 K-1'] = -1*Profile['Hg']*(.1)/(Profile['$Ts_{0.1}$']-Profile['$T_0$'])
+Profile['C MJ m-3 K-1'] = (Profile['$\Theta_o$']*Co+(100-Profile['Porosity']-Profile['$\Theta_o$'])*Cm+Profile['$\Theta_w$']*Cw+(Profile['Porosity']-Profile['$\Theta_w$'])*Ca)*0.01
+Profile['mu kJ m-2 K-1 s-1/2'] = (Profile['k W m-1 K-1']*Profile['C MJ m-3 K-1'])**.5
 
-Profile[['C','k','mu']]
+Profile[['C MJ m-3 K-1','k W m-1 K-1','mu kJ m-2 K-1 s-1/2']]
 ```
 
 (@) On another day, the same initial conditions are observed at each of your sites: $R_n = 0 W m^{-2}$, $LE = 0 W m^{-2}$, and $Ta_{0.1} = -1 ^{\circ}C$, $T_0 = 1 ^{\circ}C$, and $Ts_{0.1} = 2 ^{\circ}C$.  While the thermal properties of the soils that you estimated in the previous question have not changed.  You can assume that $R_n$, $LE$, and $Ta_{0.1}$ remain fixed at their initial values, but $T_0$ and $Ts_{0.1}$ will change.  It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation.  Assuming that no snow accumulated at each site until $T_0 < 0 ^{\circ}C$ which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning.  *Note* you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. **1/3**
@@ -145,7 +145,7 @@ Profile[['C','k','mu']]
 
 
 ```{python}
-Ranked = Profile.sort_values(by='mu').reset_index()
+Ranked = Profile.sort_values(by='mu kJ m-2 K-1 s-1/2').reset_index()
 Markdown(tabulate(
   Ranked,headers=Ranked.columns.values
 ))
