@@ -10,7 +10,7 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.533">
 
-  <title>Microscale Weather and Climate - Momentum Exchange</title>
+  <title>Microscale Weather and Climate - Velocity Profile Laws</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,6 +28,71 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
+    /* CSS for syntax highlighting */
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
   <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -326,333 +391,45 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Momentum Exchange</h1>
+  <h1 class="title">Velocity Profile Laws</h1>
+  <p class="subtitle">General characteristics of how wind speed varies with height</p>
 
 <div class="quarto-title-authors">
 </div>
 
 </section>
-<section id="learning-objectives" class="slide level2">
-<h2>Learning Objectives</h2>
-<ul>
-<li>Describe forces that deform surface objects and air parcels.</li>
-<li>Explain how momentum is exchanged in the ABL.</li>
-<li>Describe and quantify momentum transfer in the ABL.</li>
-</ul>
-<aside class="notes">
-<p>Bed load movement and sediment transport is a function of Shear Stress.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="motivation" class="slide level2">
-<h2>Motivation</h2>
-<p>Atmospheric motions create forces that deform the atmosphere itself, deform and damage objects, and create waves on water surfaces.</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JG3J9y9Ug4M?si=qjVT_gRsdxQsh-L0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="">
-</iframe>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/15_3_5.jpg"></p>
-<figcaption>Photo: A. Christen</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Momentum exchange in the atmosphere, which is key to later understand and predict wind near the surface. The force exerted on the surface by the air being dragged over it is called the surface shearing stress (t ) and is expressed as a pressure (Pa, force per unit surface area).</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="what-is-momentum-iclicker" class="slide level2">
-<h2>What is Momentum? (iClicker)</h2>
-<p>Which would best describe momentum?</p>
-<ul>
-<li>A: Momentum = mass <span class="math inline">\(\times\)</span> velocity</li>
-<li>B: Momentum = mass <span class="math inline">\(\times\)</span> speed</li>
-<li>C: Momentum = mass <span class="math inline">\(\times\)</span> direction</li>
-<li>D: Momentum = mass <span class="math inline">\(\times\)</span> acceleration</li>
-</ul>
-</section>
-<section id="mechanics-review--" class="slide level2">
-<h2>Mechanics review -</h2>
-
-<img data-src="images/15_4_4.png" class="r-stretch"><aside class="notes">
-<p>The momentum a body is given by the product of its mass and velocity. In the case of the atmosphere the mean horizontal momentum of a unit volume is therefore given by its density (ρ) multiplied by its mean horizontal wind. Remember we use the overbar to</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
 <section class="slide level2">
 
 
-<img data-src="images/15_5_3.png" class="r-stretch quarto-figure-center"><p class="caption"><a href="https://www.windy.com/?55.249,-121.536,4,i:pressure">Source</a></p><aside class="notes">
-<p>LiveSlide Site https://www.windytv.com/?55.249,-121.536,4</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="drag" class="slide level2">
-<h2>Drag</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<p>In the ABL drag acts as an opposing force exerted by the surface, slowing wind.</p>
+<img data-src="images/16_1_8.jpg" class="r-stretch quarto-figure-center"><p class="caption">For any given weather condition, there is a theoretical equilibrium wind speed, called the geostrophic wind <span class="math inline">\(G\)</span>, that can be calculated for frictionless conditions. However, steady-state winds in the ABL are usually slower than geostrophic (i.e., subgeostrophic) because of frictional and turbulent drag of the air against the surface.</p></section>
+<section id="todays-learning-objectives" class="slide level2">
+<h2>Today’s learning objectives</h2>
 <ul>
-<li>The drag force can be caused by form drag and skin drag.</li>
-<li>For a fluid to move, we require a horizontal force in the direction of the mean flow. Usually this is the pressure gradient force.</li>
+<li>Describe how the mean velocity profile is linked to the momentum flux.</li>
+<li>Understand the ‘famous’ logarithmic wind profile equation.</li>
 </ul>
-</div><div class="column" style="width:40%;">
-<p><img data-src="images/Drag.png"></p>
-</div>
-</div>
-<aside class="notes">
-<p>The wind speed in the planetary boundary layer is largely controlled by the frictional drag imposed on the flow by the underlying rigid surface. The drag retards motion close to the ground and gives rise to a sharp decrease of mean horizontal wind speed (u) as the surface is approached. The force exerted on the surface by the air being dragged over it is called the surface shearing stress (⌧ ) and is expressed as a pressure (Pa, force per unit surface area).</p>
-<p>The wind speed in the atmospheric boundary layer is largely controlled by the fric- tional drag imposed on the flow by the underlying rigid surface.</p>
-<p>Above the laminar boundary layer, in turbulent flows the ‘no-slip condition’ applies and the flow is brought to a standstill at the boundary.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
 </section>
-<section id="stress" class="slide level2 smaller">
-<h2>Stress</h2>
+<section id="the-vertical-profile-of-horizontal-wind" class="slide level2">
+<h2>The vertical profile of horizontal wind</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>A force tending to deform a body, expressed as force per unit area.</p>
-<ul>
-<li>There are forces acting normal and tangential to a surface.</li>
-</ul>
-<p><img data-src="images/15_7_3.gif" style="width:50.0%"></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/Stress.png"></p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/16_3_5.png"></p>
+<figcaption>Series of anemometers at different heights z over an extensive flat</figcaption>
+</figure>
 </div>
-</div>
-<aside class="notes">
-<p>Pressure is a type of stress that can act on a fluid at rest. pressure acts equally in all directions Tangential = shear stress The surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section class="slide level2">
-
-
-<img data-src="images/Grass_blowing_in_the_wind.gif" class="r-stretch quarto-figure-center"><p class="caption">Tangential stress acting on a grassy field</p></section>
-<section id="stress-in-the-atmosphere" class="slide level2">
-<h2>Stress in the Atmosphere</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p>In the atmosphere, three particular forms of stress are acting on an air parcel:</p>
-<ul>
-<li>Pressure</li>
-<li>Viscous shear stress</li>
-<li>Reynolds stress</li>
-</ul>
 </div><div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/15_10_3.png"></p>
-<figcaption>Photo: A. Christen</figcaption>
+<p><img data-src="images/16_6_1.gif"></p>
+<figcaption>This is the vertical profile of mean horizontal wind ū and shows that the wind gradient (or ‘wind shear’) decreases as z increases.</figcaption>
 </figure>
 </div>
 </div>
 </div>
 <aside class="notes">
-<p>Stress is the force tending to produce deformation in a body. It is measured as a force per unit area. Three types of stress appear frequently in studies of the atmosphere: pressure, Reynolds stress, and viscous shear stress.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="pressure" class="slide level2 smaller">
-<h2>Pressure</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li>Pressure can act on an air parcel at rest.</li>
-<li>At a point, pressure acts isotropically and normal to the surface (normal force per unit area). Because it is not dependent on direction, pressure can be reduced to the scalar <span class="math inline">\(P\)</span>.</li>
-<li>Pressure changes always result in an isotropic compression or expansion of an air parcel.</li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/15_11_3.gif"></p>
-<figcaption>R. B. Stull (1988): ‘An introduction to boundary layer meteorology’</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Pressure is a type of stress that can act on a fluid at rest. For an infinitesimally small fluid element, such as idealized as the cube sketched in Fig 2.16a, pressure acts equally in all directions. Isotropic is the name given to characteristics that are the same in all directions (see Figs 2.4 and 2.5). If we consider just one face of this cube, as in Fig. 2.16b, we see that the isotropic nature of pressure tends to counteract itself in all directions except in a direction normal to (perpendicular to) the surface of the cube. Forces acting normal to all faces of the cube tend to compress or expand the cube, thereby deforming it (Fig 2.l6c). Because pressure is not dependent on direction, we need just one number to describe it at any point in space and time. Thus, pressure is a scalar.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="total-shear-stress" class="slide level2 smaller">
-<h2>Total Shear Stress</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<p><strong>Viscous shear stress</strong> is important whenever there are shearing forces in a moving fluid (laminar or turbulent).</p>
-<ul>
-<li>These shearing forces are opposed to the intermolecular forces. Viscous stress is a function of the velocity gradients and the dynamic viscosity.</li>
-</ul>
-<p><strong>Reynolds stress</strong> is only found in turbulent flows. It is a result of convective movement of momentum surplus and momentum deficit eddies within the fluid.</p>
-</div><div class="column" style="width:50%;">
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><img data-src="images/15_12_7.png"></p>
-<figcaption>R. B. Stull (1988): ‘An introduction to boundary layer meteorology’</figcaption>
-</figure>
-</div>
-</div>
-</div>
-<aside class="notes">
-<p>Viscous stress exists when there are shearing motions in the fluid. The motion can be laminar or turbulent. When one portion of a fluid moves, the intermolecular forces tend to drag adjacent fluid molecules in the same direction. The strength of these intermolecular forces depend on the nature of the fluid: molasses has stronger forces than water, which in turn has stronger forces than air. A measure of these forces is the viscosity. The result of this stress is a deformation of the fluid</p>
-<p>Reynolds stress exists only when the fluid is in turbulent motion. A turbulent eddy can mix air of different wind speeds into our cube of interest (Fig 2.l6d). When this different-speed air is incorporated into one face of the cube and not the opposite face, the cube deforms because of the velocity differences between those two faces</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="reynolds-stress" class="slide level2">
-<h2>Reynolds stress</h2>
-<p>The flux of momentum is accomplished through random motion. Discrete ‘lumps’ (eddies) of the fluid are displaced by turbulence over a distance and there merge with the flow. Consequently eddies transport their momentum surplus or their momentum deficit (${u}) across a distance.</p>
-
-<img data-src="images/15_13_5.png" class="r-stretch quarto-figure-center"><p class="caption">Simulation: O. Coceal, Univ. of Reading</p></section>
-<section id="stress-tensor" class="slide level2">
-<h2>Stress Tensor</h2>
-<div class="columns">
-<div class="column" style="width:65%;">
-<p>In a three dimensional view, we can define a stress tensor <span class="math inline">\(\tau\)</span> that deforms a body</p>
-<ul>
-<li>It incorporates 9 stress vectors acting on one point in space.
-<ul>
-<li>The tensor is symmetric, so there are only 6 independent components (3 normal / 3 tangential).</li>
-<li>A stress tensor can be separately written for the viscous shear stress and the Reynolds stress.</li>
-</ul></li>
-</ul>
-</div><div class="column" style="width:35%;">
-<p><img data-src="images/15_14_26.png"></p>
-</div>
-</div>
-<aside class="notes">
-<p>Delete?</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="sweeps-and-ejections" class="slide level2">
-<h2>Sweeps and Ejections</h2>
-<p>In the atmospheric boundary layer over flat terrain the transfer can be often simplified 1-dimensional (up/down only)</p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p><strong>Ejections</strong> Events transporting momentum deficit upward</p></li>
-<li><p><strong>Sweeps</strong> Events transporting momentum surplus downward</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/Sweeps.png"></p>
-</div>
-</div>
-<aside class="notes">
-
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="momentum-exchange" class="slide level2">
-<h2>Momentum Exchange</h2>
-
-<img data-src="images/MomentumExchange.png" class="r-stretch"><aside class="notes">
-<p>Joint probability density. Note the asymmetric PDF –By inspection, note that the larger probabilities occur as X and Y move in opposite directions. This indicates a negative covariance. Events transporting momentum deficit upward are called ejections. Events transporting momentum surplus downward are called sweeps. The surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum.</p>
-<p>Work on handout</p>
+<p>The drag slows motion close to the ground and gives rise to a sharp decrease of mean horizontal wind speed (u) as the surface is approached. The force exerted on the surface by the air being dragged over it is called the surface shearing stress (tau ) and is expressed as a pressure (Pa, force per unit surface area). The surface layer of frictional influence generates this shearing force and transmits it downwards as a flux of momentum.</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -698,56 +475,57 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
           display:block!important;
       }</style></aside>
 </section>
-<section id="reynolds-stress-and-covariance" class="slide level2 smaller">
-<h2>Reynolds stress and covariance</h2>
+<section id="the-mixing-length-approach" class="slide level2 smaller">
+<h2>The mixing length approach</h2>
+<p>If turbulence is assumed to be isotropic (<span class="math inline">\(u^{\prime} \approx w^{\prime}\)</span>), i.e., eddies are symmetric:</p>
+<div class="columns">
+<div class="column" style="width:60%;">
+<ul>
+<li><span class="math inline">\(\tau = -\rho u^{\prime}w^{\prime} \approx \rho u_*^2\)</span> (see previous lecture) it follows <span class="math inline">\(u^{\prime} \approx w^{\prime} \approx u_*\)</span> and we can define <span class="math inline">\(u_*\)</span> in terms of the mixing lenght:</li>
+</ul>
+<p><span class="math display">\[
+\small\frac{\delta \bar{u}}{\delta z} = \small\frac{u_*}{l}
+\]</span></p>
+<ul>
+<li>i.e.&nbsp;the <strong>wind gradient is inversely related to the size of the eddies</strong>. As we approach the ground the spectrum of eddy sizes is restricted by the physical barrier.</li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><img data-src="images/mixing_length.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>If we take this mixing length approach, we can re-write this in terms of friction velocity: is a form by which a&nbsp;shear stress&nbsp;may be re-written in units of&nbsp;velocity</p>
+<p>mixing length l and is likely related to the mean size of eddies.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-mixing-length-approach-1" class="slide level2">
+<h2>The mixing length approach</h2>
+<p>If turbulence is assumed to be isotropic (eddies are symmetric) <span class="math inline">\(u^{\prime} \approx w^{\prime}\)</span> and <span class="math inline">\(\tau = -\rho u^{\prime}w^{\prime}\)</span> and <span class="math inline">\(\tau = \rho u_*^2\)</span> (see previous lecture) it follows <span class="math inline">\(u^{\prime} \approx w^{\prime} \approx u_*\)</span> and we can write:</p>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p><strong>Assuming horizontal homogeneity</strong>, if an eddy merges to a new layer:</p>
-<ul>
-<li>It imports /subtracts <span class="math inline">\(\rho u^{\prime}\)</span> amount of horizontal momentum per unit volume from/to the flow at level <span class="math inline">\(z\)</span>.</li>
-</ul>
-<p>If the vertical velocity of the eddy is w’ then the instantaneous Reynolds stress (momentum flux) is</p>
-<p><span class="math display">\[
-\tau = -\rho u^{\prime} w^{\prime}
-\]</span></p>
-<p>and in the time average</p>
-<p><span class="math display">\[
-\tau = -\rho \overline{u^{\prime} w^{\prime}}
-\]</span></p>
-</div><div class="column" style="width:50%;">
-<p><img data-src="images/ReynoldsStress.png"></p>
-</div>
-</div>
-<aside class="notes">
-<p>Thus, stress and momentum flux are physically the same in a fluid such as air.</p>
-<style type="text/css">
-        span.MJX_Assistive_MathML {
-          position:absolute!important;
-          clip: rect(1px, 1px, 1px, 1px);
-          padding: 1px 0 0 0!important;
-          border: 0!important;
-          height: 1px!important;
-          width: 1px!important;
-          overflow: hidden!important;
-          display:block!important;
-      }</style></aside>
-</section>
-<section id="friction-velocity" class="slide level2 smaller">
-<h2>Friction Velocity</h2>
-<p><strong>Assuming horizontal homogeneity</strong>: In turbulent shear flows, the Reynolds stress (momentum flux) is found to be proportional to the square of the mean flow velocity, which leads to the definition of the friction velocity <span class="math inline">\(u_*\)</span> (units: m s-1)</p>
-<p><span id="eq-Friction-Velocity"><span class="math display">\[
-u_*^2 = \small\frac{\tau_0}{\rho}
+<p><span id="eq-Mixing-Length-Log-Profile"><span class="math display">\[
+\small\frac{\delta \bar{u}}{\delta z} = \small\frac{u_*}{l}
 \qquad(2)\]</span></span></p>
 <ul>
-<li><p>Close to the surface, we can assume <span class="math inline">\(\tau = \tau_0\)</span> and write: <span class="math inline">\(\tau = \rho u_*^2\)</span></p></li>
-<li><p>And because <span class="math inline">\(\tau = -\rho \overline{u^{\prime}w^{\prime}}\)</span>:</p></li>
-<li><p>A reasonable estimate of the friction velocity can be made from measurements of the Reynolds stress <span class="math inline">\(\overline{u^{\prime}w^{\prime}}\)</span> close to the surface, i.e.</p></li>
+<li>i.e.&nbsp;the <strong>wind gradient is inversely related to the size of the eddies</strong>. As we approach the ground the spectrum of eddy sizes is restricted by the physical barrier.</li>
 </ul>
-<p><span id="eq-Friction-Velocity-Surface"><span class="math display">\[
-u_* = \sqrt{-\overline{u^{\prime}w^{\prime}}}
-\qquad(3)\]</span></span></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/16_6_1.gif"></p>
+</div>
+</div>
 <aside class="notes">
-<p>Shear Velocity, also called&nbsp;friction velocity, is a form by which a&nbsp;shear stress&nbsp;may be re-written in units of&nbsp;velocity. Shear velocity is used to describe shear-related motion in moving fluids. It is used to describe:</p>
+<p>mixing length l and is likely related to the mean size of eddies. WRITE ON BOARD</p>
+<p>Shear Velocity, also called&nbsp;friction velocity, is a form by which a&nbsp;shear stress&nbsp;may be re-written in units of&nbsp;velocity. It is useful as a method in&nbsp;fluid mechanics&nbsp;to compare true velocities, such as the velocity of a flow in a stream, to a velocity that relates shear between layers of flow. Shear velocity is used to describe shear-related motion in moving fluids. It is used to describe: Diffusion&nbsp;and&nbsp;dispersion&nbsp;of particles, tracers, and contaminants in fluid flows The velocity profile near the boundary of a flow (see&nbsp;Law of the wall) Transport of sediment in a channel</p>
 <style type="text/css">
         span.MJX_Assistive_MathML {
           position:absolute!important;
@@ -760,17 +538,439 @@ u_* = \sqrt{-\overline{u^{\prime}w^{\prime}}}
           display:block!important;
       }</style></aside>
 </section>
-<section id="vertical-flux-profile" class="slide level2">
-<h2>Vertical flux profile</h2>
-<p>The force is generated within the lowest layers and transmitted as a vertical flux of horizontal momentum mainly in terms of a Reynolds stress.</p>
+<section id="the-vertical-profile-of-horizontal-wind-1" class="slide level2">
+<h2>The vertical profile of horizontal wind</h2>
+<p>The form of the vertical profile of horizontal wind is found to be:</p>
+<div class="columns">
+<div class="column" style="width:65%;">
+<p><span id="eq-Log-Profile-Law"><span class="math display">\[
+\small\frac{\delta \bar{u}}{\delta z} = a(z)^-b
+\qquad(3)\]</span></span></p>
+<ul>
+<li>The form says <span class="math inline">\(\bar{u}\)</span> is proportional to the logarithm of <span class="math inline">\(z\)</span>
+<ul>
+<li>Extensively verified in the field and laboratory.</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:35%;">
+<p><img data-src="images/16_7_4.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>Parameter a</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="von-kármáns-constant" class="slide level2">
+<h2>von Kármán’s constant</h2>
+<p>So if the eddy size is proportional to the distance to the ground, let’s set <span class="math inline">\(l=k(z)^b\)</span>, in neutral stability: <span class="math inline">\(b = 1 \rightarrow l=kz\)</span></p>
+<ul>
+<li>and therefore, substitution of <span class="math inline">\(l\)</span> into <a href="#/the-mixing-length-approach-1" class="quarto-xref">Equation&nbsp;2</a> gives</li>
+</ul>
+<p><span id="eq-von-Karma-Definition"><span class="math display">\[
+\small\frac{\delta \bar{u}}{\delta z} = \small\frac{u_*}{k}(z)^-b = \small\frac{u_*}{kz}
+\qquad(4)\]</span></span></p>
+<ul>
+<li>i.e.&nbsp;in <a href="#/the-vertical-profile-of-horizontal-wind-1" class="quarto-xref">Equation&nbsp;3</a>; <span class="math inline">\(a=u_*/k\)</span></li>
+</ul>
+<p>The constant <span class="math inline">\(k\)</span> is von Kármán’s constant (<span class="math inline">\(\approx\)</span> 0.41)</p>
+</section>
+<section id="the-logarithmic-wind-law" class="slide level2 smaller">
+<h2>The logarithmic wind law</h2>
+<p>Integration of <a href="#/von-kármáns-constant" class="quarto-xref">Equation&nbsp;4</a> requires knowledge of the exact height where is <span class="math inline">\(\bar{u}\)</span> zero (integration constant). In practice this depends on the roughness of the ground so we set a roughness length (<span class="math inline">\(z_0\)</span>, units m) and restrict the equation to <span class="math inline">\(z &gt; z_0\)</span>.</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><span id="eq-Log-Wind-Law"><span class="math display">\[
+\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z}{z_0})
+\qquad(5)\]</span></span></p>
+<ul>
+<li>This is the <strong>log wind law for <em>neutral conditions</em></strong>. The general form for measurements in two levels:</li>
+</ul>
+<p><span id="eq-Log-Wind-Law-General"><span class="math display">\[
+\bar{u_2}-\bar{u_1}=\small\frac{u_*}{k}ln(\small\frac{z_2}{z_1})
+\qquad(6)\]</span></span></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/16_10_6.gif"></p>
+</div>
+</div>
+<aside class="notes">
+<p>neutral conditions where buoyancy is unimportant. Such conditions are found with cloudy skies and strong winds, and in the lowest 1 to 2 m of the atmosphere.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="linear-log-plot-of-neutral-wind-profile" class="slide level2 smaller">
+<h2>Linear-Log Plot of Neutral Wind Profile</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>In neutral conditions, the slope of wind speed with <span class="math inline">\(ln(z)\)</span> is exactly linear and both, <span class="math inline">\(u_*\)</span> and <span class="math inline">\(z_0\)</span> can be determined from analysis of wind data from several levels.</p>
+<ul>
+<li>The y-intercept on a log-linear plot will give us <span class="math inline">\(z_0\)</span></li>
+<li>The slope on a log-linear plot will give us <span class="math inline">\(k/u_*\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/16_15_18.png"></p>
+</div>
+</div>
+<aside class="notes">
+<p>neutral conditions where buoyancy is unimportant. Such conditions are found with cloudy skies and strong winds, and in the lowest 1 to 2 m of the atmosphere.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="semi-log-paper" class="slide level2 smaller">
+<h2>Semi-log paper</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>On this paper, you can directly enter wind velocity on the x-axis (linear scale) and height on the y-axis (logarithmic scale).</p>
+<p>First label your own axes (orders of magnitude on y-axis) to fit data optimally on paper. Then enter data points.</p>
+<p>You can fit a line (e.g.&nbsp;by hand using a ruler). The intercept with the y-axis gives you an estimate of z0.</p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/16_17_3.png"></p>
+</div>
+</div>
+</section>
+<section id="make-your-own-log-plot" class="slide level2">
+<h2>Make Your Own Log-Plot</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-3"><a></a></span>
+<span id="cb1-4"><a></a><span class="co"># Load a wind profile</span></span>
+<span id="cb1-5"><a></a>profile <span class="op">=</span> pd.read_csv(<span class="st">'Data/Profile.csv'</span>)</span>
+<span id="cb1-6"><a></a><span class="co"># Calculate ln(z)</span></span>
+<span id="cb1-7"><a></a>profile[<span class="st">'lnz'</span>]<span class="op">=</span>np.log(profile[<span class="st">'z (m)'</span>])</span>
+<span id="cb1-8"><a></a><span class="co"># Find the intercept of a linear fit</span></span>
+<span id="cb1-9"><a></a>m,b<span class="op">=</span>np.polyfit(profile[<span class="st">'u (m/s)'</span>],profile[<span class="st">'lnz'</span>],<span class="dv">1</span>)</span>
+<span id="cb1-10"><a></a></span>
+<span id="cb1-11"><a></a><span class="bu">print</span>(<span class="ss">f'm = </span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">; b = </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>m = 1.1751196328367708; b = -2.0986472898421247</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a></a><span class="co"># Plot the results</span></span>
+<span id="cb3-3"><a></a>fit,ax<span class="op">=</span>plt.subplots()</span>
+<span id="cb3-4"><a></a>profile.plot(x<span class="op">=</span><span class="st">'u (m/s)'</span>,y<span class="op">=</span><span class="st">'lnz'</span>,ax<span class="op">=</span>ax,marker<span class="op">=</span><span class="st">'*'</span>,label<span class="op">=</span><span class="st">'log-profile'</span>)</span>
+<span id="cb3-5"><a></a>ax.scatter(<span class="dv">0</span>,b,marker<span class="op">=</span><span class="st">'*'</span>,color<span class="op">=</span><span class="st">'r'</span>,label<span class="op">=</span><span class="st">'intercept'</span>)</span>
+<span id="cb3-6"><a></a>ax.grid()</span>
+<span id="cb3-7"><a></a>ax.set_title(<span class="st">'Log Wind Profile'</span>)</span>
+<span id="cb3-8"><a></a>ax.set_ylabel(<span class="st">'ln(z)'</span>)</span>
+<span id="cb3-9"><a></a>ax.set_xlabel(<span class="st">'U (m/s)'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="16_files/figure-revealjs/unnamed-chunk-3-1.png" width="614"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="log-profile-iclicker" class="slide level2">
+<h2>Log-Profile (iClicker)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb4-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="co"># Load a wind profile</span></span>
+<span id="cb4-5"><a></a>profile <span class="op">=</span> pd.read_csv(<span class="st">'Data/Profile.csv'</span>)</span>
+<span id="cb4-6"><a></a><span class="co"># Calculate ln(z)</span></span>
+<span id="cb4-7"><a></a>profile[<span class="st">'lnz'</span>]<span class="op">=</span>np.log(profile[<span class="st">'z (m)'</span>])</span>
+<span id="cb4-8"><a></a><span class="co"># Find the intercept of a linear fit</span></span>
+<span id="cb4-9"><a></a>m,b<span class="op">=</span>np.polyfit(profile[<span class="st">'u (m/s)'</span>],profile[<span class="st">'lnz'</span>],<span class="dv">1</span>)</span>
+<span id="cb4-10"><a></a></span>
+<span id="cb4-11"><a></a><span class="bu">print</span>(<span class="ss">f'slope (m) = </span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">; intercept (b) = </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>slope (m) = 1.1751196328367708; intercept (b) = -2.0986472898421247</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>From this, what would be the value of <span class="math inline">\(z_0\)</span> in meters?</p>
+<ul>
+<li>A <span class="math inline">\(z_0 = b\)</span></li>
+<li>B <span class="math inline">\(z_0 = ln(b)\)</span></li>
+<li>C <span class="math inline">\(z_0 = e^{b}\)</span></li>
+<li>D <span class="math inline">\(z_0 = e^{m}\)</span></li>
+<li>E <span class="math inline">\(z_0 = ln{m}\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="log-profile-iclicker-1" class="slide level2">
+<h2>Log-Profile (iClicker)</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb6-2"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="co"># Load a wind profile</span></span>
+<span id="cb6-5"><a></a>profile <span class="op">=</span> pd.read_csv(<span class="st">'Data/Profile.csv'</span>)</span>
+<span id="cb6-6"><a></a><span class="co"># Calculate ln(z)</span></span>
+<span id="cb6-7"><a></a>profile[<span class="st">'lnz'</span>]<span class="op">=</span>np.log(profile[<span class="st">'z (m)'</span>])</span>
+<span id="cb6-8"><a></a><span class="co"># Find the intercept of a linear fit</span></span>
+<span id="cb6-9"><a></a>m,b<span class="op">=</span>np.polyfit(profile[<span class="st">'u (m/s)'</span>],profile[<span class="st">'lnz'</span>],<span class="dv">1</span>)</span>
+<span id="cb6-10"><a></a></span>
+<span id="cb6-11"><a></a><span class="bu">print</span>(<span class="ss">f'slope (m) = </span><span class="sc">{</span>m<span class="sc">}</span><span class="ss">; intercept (b) = </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>slope (m) = 1.1751196328367708; intercept (b) = -2.0986472898421247</code></pre>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<p>From this, what would be the value of <span class="math inline">\(u_*\)</span> in meters per second?</p>
+<ul>
+<li>A <span class="math inline">\(u_* = m\)</span></li>
+<li>B <span class="math inline">\(u_* = 0.41 \times m\)</span></li>
+<li>C <span class="math inline">\(u_* = 0.41 \times b\)</span></li>
+<li>D <span class="math inline">\(u_* = b\)</span></li>
+<li>E <span class="math inline">\(u_* = b / 0.41\)</span></li>
+</ul>
+</div>
+</div>
+</section>
+<section id="relation-between-z0-and-mean-wind-speed" class="slide level2">
+<h2>Relation between z0 and mean wind speed</h2>
+<p>See an interactive visualization <a href="https://sknox01.github.io/GEOS300/applets/neutralwind/">here</a></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/16_22_0.png"></p>
+<figcaption>Same reference velocity $u_{ref} but different <span class="math inline">\(z_0\)</span> and shear stress</figcaption>
+</figure>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/16_22_3.png"></p>
+<figcaption>Same shear stress but different roughness</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>As shear stress decreases our slope increases (and z0 decreases too) Shear = slope = u* Rougher surface we have, the lower the windspeed at a given height</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="roughness-length-z_0---examples" class="slide level2">
+<h2>Roughness length <span class="math inline">\(z_0\)</span> - examples</h2>
 
-<img data-src="images/MomentumFluxGradient.png" class="r-stretch"></section>
+<img data-src="images/16_23_0.png" class="r-stretch"></section>
+<section id="estimating-the-roughness-length-z0" class="slide level2">
+<h2>Estimating the roughness length z0</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>If observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements. A traditional rule-of-thumb gives: <span class="math inline">\(z_0 = 0.1\)</span></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/16_24_5.jpg"></p>
+</div>
+</div>
+</section>
+<section id="wind-profiles-over-different-surfaces" class="slide level2">
+<h2>Wind profiles over different surfaces</h2>
+
+<img data-src="images/16_25_3.gif" class="r-stretch quarto-figure-center"><p class="caption">T.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.</p><aside class="notes">
+<p>Geostrophic The depth of this layer increases with increasing roughness. Therefore the vertical gradient of mean wind speed (du/dz) is greatest over smooth terrain, and least over rough surfaces. Rougher surface we have, the lower the windspeed at a given height</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="tall-roughness" class="slide level2 smaller">
+<h2>Tall roughness</h2>
+<p>Over tall roughness elements (such as tall vegetation, orchards, forests) a dead zone in amongst the elements exists.</p>
+<ul>
+<li>This causes the form of the wind profile to diverge from observations, wind seems to go to zero at z &gt;&gt; z0.</li>
+</ul>
+
+<img data-src="images/Tall.png" class="r-stretch"></section>
+<section id="zero-plane-displacement-z_d" class="slide level2 smaller">
+<h2>Zero-plane displacement <span class="math inline">\(z_d\)</span></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li>We introduce an effective height of mean drag, the zero-plane displacement <span class="math inline">\(z_d\)</span>:</li>
+</ul>
+<p><span id="eq-Log-Wind-Law"><span class="math display">\[
+\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z-z_z}{z_0})
+\qquad(7)\]</span></span></p>
+<ul>
+<li>Over tall roughness elements the straight line plot of ū vs.&nbsp;ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement <span class="math inline">\(z_d\)</span>.</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/16_27_6.png"></p>
+<figcaption>T.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<aside class="notes">
+<p>roughness length</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="estimating-z_d" class="slide level2">
+<h2>Estimating <span class="math inline">\(z_d\)</span></h2>
+<ul>
+<li><p>It is possible to determine zd from analysis of wind observations:</p>
+<ul>
+<li>Iteration using trial values to find <span class="math inline">\(z_d\)</span> which straightens plot <span class="math inline">\(\bar{u}\)</span> vs.&nbsp;<span class="math inline">\(ln(z- z_d)\)</span> under neutral conditions.</li>
+</ul></li>
+<li><p>A rule-of-thumb says: <span class="math inline">\(z_d = 2/3 z_h\)</span>, but it omits density consideration.</p>
+<ul>
+<li><span class="math inline">\(\bar{u}_z\)</span> should reach zero at the height <span class="math inline">\(z_d+z_0\)</span>.</li>
+</ul></li>
+<li><p>However, this is not observed in vegetation canopies.</p>
+<ul>
+<li>We observe wind speed &gt; 0 even below <span class="math inline">\(z_d+z_0\)</span>.</li>
+</ul></li>
+</ul>
+<aside class="notes">
+<p>roughness length</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-vertical-profile-of-horizontal-wind-2" class="slide level2">
+<h2>The vertical profile of horizontal wind</h2>
+<p>In most canopies (forests, orchards, crops) we find the logarithmic wind profile well above the mean canopy height h, and an exponential profile within the canopy.</p>
+
+<img data-src="images/16_29_6.png" class="r-stretch"></section>
+<section id="the-exponential-wind-profile" class="slide level2 smaller">
+<h2>The Exponential Wind Profile</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>The mean wind profile inside homogeneous canopies can be approximated as exponential function (z &lt; h):</p>
+<p><span id="eq-exponential"><span class="math display">\[
+\bar{u}_z=\bar{u}_h e^{\alpha(z/h-1)}
+\qquad(8)\]</span></span></p>
+<p><span class="math inline">\(\alpha\)</span> is an empirical constant, the canopy’s wind extinction coefficient.</p>
+<div class="cell">
+<div id="tbl-30_2" class="cell quarto-float">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-30_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Alpha values for different canopies
+</figcaption>
+<div aria-describedby="tbl-30_2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output-display">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Wind extinction coefficients</th>
+<th style="text-align: right;">α</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Wheat</td>
+<td style="text-align: right;">4.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Corn</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Sunflower</td>
+<td style="text-align: right;">1.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spruce</td>
+<td style="text-align: right;">2.4</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/16_30_14.png"></p>
+<figcaption>S. P. Arya (1998): ‘Introduction to Micrmeteorology’</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</section>
 <section id="take-home-points" class="slide level2">
 <h2>Take home points</h2>
 <ul>
-<li>There are tangential and normal stresses that deform an air parcel in the atmosphere.</li>
-<li>Sweeps and ejections refer to part of eddies in a turbulent flow that move momentum up and down.</li>
-<li>Momentum transfer can be quantified using the covariance u’w’ and friction velocity u* is a global parameter that describes its square root in the lowest surface layer.</li>
+<li>The wind profile in the surface layer follows the logarithmic law.</li>
+<li>The integration constant of the log-law is the roughness length z0, which depends on the surface’s roughness.</li>
+<li>Over tall roughness elements the straight line plot of ū vs.&nbsp;ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement zd.</li>
 </ul>
 
 

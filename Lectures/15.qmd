@@ -464,8 +464,7 @@ $${#eq-Mixing-Length}
 
 ::: {.notes}
 
-Mixing length is related to mean size of eddies.
-The characteristic height difference for mixing to occur is the mixing length l
+Mixing length is related to mean size of eddies.  The characteristic height difference for mixing to occur is the mixing length l
 
 
 :::
@@ -479,7 +478,7 @@ The characteristic height difference for mixing to occur is the mixing length l
 
 ::: {.column width="50%"}
 
-**Assuming horizontal homogeneity**, if an eddy merges:
+**Assuming horizontal homogeneity**, if an eddy merges to a new layer:
 
 * It imports /subtracts $\rho u^{\prime}$ amount of horizontal momentum per unit volume from/to the flow at level $z$.
 
