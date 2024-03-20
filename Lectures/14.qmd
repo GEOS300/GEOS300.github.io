@@ -339,7 +339,7 @@ The closer the correlation is to 1 or −1, the closer the joint distribution o
 ## Taylor’s Hypothesis - translating from time to space
 
 $$
-\small\frac{\delta T}{\delta t} = -u \small\frac{\delta T}{\delta x}  
+\frac{\delta T}{\delta t} = -u \frac{\delta T}{\delta x}  
 $$
 
 

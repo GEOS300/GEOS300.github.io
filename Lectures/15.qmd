@@ -328,7 +328,7 @@ The flux of momentum is accomplished through random motion. Discrete ‘lumps’
 
 
 
-## Stress Tensor
+## Stress Tensor {.smaller}
 
 
 :::: {.columns}
