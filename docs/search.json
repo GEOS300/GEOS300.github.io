@@ -6886,7 +6886,7 @@
     "href": "Lectures/16.html#von-kármáns-constant",
     "title": "Velocity Profile Laws",
     "section": "von Kármán’s constant",
-    "text": "von Kármán’s constant\nSo if the eddy size is proportional to the distance to the ground, let’s set \\(l=k(z)^b\\), in neutral stability: \\(b = 1 \\rightarrow l=kz\\)\n\nand therefore, substitution of \\(l\\) into Equation 2 gives\n\n\\[\n\\small\\frac{\\delta \\bar{u}}{\\delta z} = \\small\\frac{u_*}{k}(z)^-b = \\small\\frac{u_*}{kz}\n\\qquad(4)\\]\n\ni.e. in Equation 3; \\(a=u_*/k\\)\n\nThe constant \\(k\\) is von Kármán’s constant (\\(\\approx\\) 0.41)",
+    "text": "von Kármán’s constant\nSo if the eddy size is proportional to the distance to the ground, let’s set \\(l=k(z)^b\\), in neutral stability: \\(b = 1 \\rightarrow l=kz\\)\n\nand therefore, substitution of \\(l\\) into Equation 2 gives\n\n\\[\n\\frac{\\delta \\bar{u}}{\\delta z} = \\frac{u_*}{k}(z)^-b = \\frac{u_*}{kz}\n\\qquad(4)\\]\n\ni.e. in Equation 3; \\(a=u_*/k\\)\n\nThe constant \\(k\\) is von Kármán’s constant (\\(\\approx\\) 0.41)",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -6898,7 +6898,7 @@
     "href": "Lectures/16.html#the-logarithmic-wind-law",
     "title": "Velocity Profile Laws",
     "section": "The logarithmic wind law",
-    "text": "The logarithmic wind law\nIntegration of Equation 4 requires knowledge of the exact height where is \\(\\bar{u}\\) zero (integration constant). In practice this depends on the roughness of the ground so we set a roughness length (\\(z_0\\), units m) and restrict the equation to \\(z &gt; z_0\\).\n\n\n\\[\n\\bar{u_z}=\\small\\frac{u_*}{k}ln(\\small\\frac{z}{z_0})\n\\qquad(5)\\]\n\nThis is the log wind law for neutral conditions. The general form for measurements in two levels:\n\n\\[\n\\bar{u_2}-\\bar{u_1}=\\small\\frac{u_*}{k}ln(\\small\\frac{z_2}{z_1})\n\\qquad(6)\\]\n\n\n\n\n\nneutral conditions where buoyancy is unimportant. Such conditions are found with cloudy skies and strong winds, and in the lowest 1 to 2 m of the atmosphere.",
+    "text": "The logarithmic wind law\nIntegration of Equation 4 requires knowledge of the exact height where is \\(\\bar{u}\\) zero (integration constant). In practice this depends on the roughness of the ground so we set a roughness length (\\(z_0\\), units m) and restrict the equation to \\(z &gt; z_0\\).\n\n\n\\[\n\\bar{u_z}=\\frac{u_*}{k}ln(\\frac{z}{z_0})\n\\qquad(5)\\]\n\nThis is the log wind law for neutral conditions. The general form for measurements in two levels:\n\n\\[\n\\bar{u_2}-\\bar{u_1}=\\small\\frac{u_*}{k}ln(\\small\\frac{z_2}{z_1})\n\\qquad(6)\\]\n\n\n\n\n\nneutral conditions where buoyancy is unimportant. Such conditions are found with cloudy skies and strong winds, and in the lowest 1 to 2 m of the atmosphere.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -6994,7 +6994,7 @@
     "href": "Lectures/16.html#estimating-the-roughness-length-z0",
     "title": "Velocity Profile Laws",
     "section": "Estimating the roughness length z0",
-    "text": "Estimating the roughness length z0\n\n\n\nIf observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements. A traditional rule-of-thumb gives: \\(z_0 = 0.1\\)",
+    "text": "Estimating the roughness length z0\n\n\nIf observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements.\n\nA traditional rule-of-thumb gives: \\(z_0 = 0.1\\)",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -7030,7 +7030,7 @@
     "href": "Lectures/16.html#zero-plane-displacement-z_d",
     "title": "Velocity Profile Laws",
     "section": "Zero-plane displacement \\(z_d\\)",
-    "text": "Zero-plane displacement \\(z_d\\)\n\n\n\nWe introduce an effective height of mean drag, the zero-plane displacement \\(z_d\\):\n\n\\[\n\\bar{u_z}=\\small\\frac{u_*}{k}ln(\\small\\frac{z-z_z}{z_0})\n\\qquad(7)\\]\n\nOver tall roughness elements the straight line plot of ū vs. ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement \\(z_d\\).\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nroughness length",
+    "text": "Zero-plane displacement \\(z_d\\)\n\n\n\nWe introduce an effective height of mean drag, the zero-plane displacement \\(z_d\\):\n\n\\[\n\\bar{u_z}=\\small\\frac{u_*}{k}ln(\\frac{z-z_z}{z_0})\n\\qquad(7)\\]\n\nOver tall roughness elements the straight line plot of ū vs. ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement \\(z_d\\).\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nroughness length",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -7137,6 +7137,18 @@
     "crumbs": [
       "Study Questions",
       "Study Question Set 05"
+    ]
+  },
+  {
+    "objectID": "Lectures/16.html#try-yourself",
+    "href": "Lectures/16.html#try-yourself",
+    "title": "Velocity Profile Laws",
+    "section": "Try yourself",
+    "text": "Try yourself\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = 0.41\n# short grass (0.01), trees (1.0)\nz0_list = [0.01,1.0] \n# weak winds (0.1), moderately strong winds (0.5)\nu_star_list = [0.1,0.5]\n# define a height profile\nz = np.linspace(0.1,25)\n# define a plot and loop through scenarios\nfig,ax=plt.subplots(1,2)\nfor u_star,c in zip(u_star_list,['r','b']):\n    for z0,l in zip(z0_list,[':','-']):\n        u_bar_z = u_star/k*np.log(z/z0)\n        u_bar_z[u_bar_z&lt;0]=np.nan\n        ax[0].plot(u_bar_z,z,color=c,linestyle=l)\n        ax[1].plot(u_bar_z,np.log(z),label=f'z0={z0}\\nu*={u_star}',color=c,linestyle=l)\n# format the graph\nax[1].legend()\nax[0].set_ylabel('z (m)')\nax[0].set_title('Profile')\nax[1].set_ylabel('ln(z)')\nax[1].set_title('Log-Linear-Profile')\nfor a in ax:\n    a.set_xlabel('u (m/s)')\n    a.grid()\nplt.tight_layout()",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Velocity Profile Laws"
     ]
   }
 ]

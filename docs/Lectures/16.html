@@ -577,7 +577,7 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
 <li>and therefore, substitution of <span class="math inline">\(l\)</span> into <a href="#/the-mixing-length-approach-1" class="quarto-xref">Equation&nbsp;2</a> gives</li>
 </ul>
 <p><span id="eq-von-Karma-Definition"><span class="math display">\[
-\small\frac{\delta \bar{u}}{\delta z} = \small\frac{u_*}{k}(z)^-b = \small\frac{u_*}{kz}
+\frac{\delta \bar{u}}{\delta z} = \frac{u_*}{k}(z)^-b = \frac{u_*}{kz}
 \qquad(4)\]</span></span></p>
 <ul>
 <li>i.e.&nbsp;in <a href="#/the-vertical-profile-of-horizontal-wind-1" class="quarto-xref">Equation&nbsp;3</a>; <span class="math inline">\(a=u_*/k\)</span></li>
@@ -590,7 +590,7 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span id="eq-Log-Wind-Law"><span class="math display">\[
-\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z}{z_0})
+\bar{u_z}=\frac{u_*}{k}ln(\frac{z}{z_0})
 \qquad(5)\]</span></span></p>
 <ul>
 <li>This is the <strong>log wind law for <em>neutral conditions</em></strong>. The general form for measurements in two levels:</li>
@@ -795,6 +795,40 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
           display:block!important;
       }</style></aside>
 </section>
+<section id="try-yourself" class="slide level2">
+<h2>Try yourself</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb8-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb8-3"><a></a></span>
+<span id="cb8-4"><a></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
+<span id="cb8-5"><a></a><span class="co"># short grass (0.01), trees (1.0)</span></span>
+<span id="cb8-6"><a></a>z0_list <span class="op">=</span> [<span class="fl">0.01</span>,<span class="fl">1.0</span>] </span>
+<span id="cb8-7"><a></a><span class="co"># weak winds (0.1), moderately strong winds (0.5)</span></span>
+<span id="cb8-8"><a></a>u_star_list <span class="op">=</span> [<span class="fl">0.1</span>,<span class="fl">0.5</span>]</span>
+<span id="cb8-9"><a></a><span class="co"># define a height profile</span></span>
+<span id="cb8-10"><a></a>z <span class="op">=</span> np.linspace(<span class="fl">0.1</span>,<span class="dv">25</span>)</span>
+<span id="cb8-11"><a></a><span class="co"># define a plot and loop through scenarios</span></span>
+<span id="cb8-12"><a></a>fig,ax<span class="op">=</span>plt.subplots(<span class="dv">1</span>,<span class="dv">2</span>)</span>
+<span id="cb8-13"><a></a><span class="cf">for</span> u_star,c <span class="kw">in</span> <span class="bu">zip</span>(u_star_list,[<span class="st">'r'</span>,<span class="st">'b'</span>]):</span>
+<span id="cb8-14"><a></a>    <span class="cf">for</span> z0,l <span class="kw">in</span> <span class="bu">zip</span>(z0_list,[<span class="st">':'</span>,<span class="st">'-'</span>]):</span>
+<span id="cb8-15"><a></a>        u_bar_z <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
+<span id="cb8-16"><a></a>        u_bar_z[u_bar_z<span class="op">&lt;</span><span class="dv">0</span>]<span class="op">=</span>np.nan</span>
+<span id="cb8-17"><a></a>        ax[<span class="dv">0</span>].plot(u_bar_z,z,color<span class="op">=</span>c,linestyle<span class="op">=</span>l)</span>
+<span id="cb8-18"><a></a>        ax[<span class="dv">1</span>].plot(u_bar_z,np.log(z),label<span class="op">=</span><span class="ss">f'z0=</span><span class="sc">{</span>z0<span class="sc">}</span><span class="ch">\n</span><span class="ss">u*=</span><span class="sc">{</span>u_star<span class="sc">}</span><span class="ss">'</span>,color<span class="op">=</span>c,linestyle<span class="op">=</span>l)</span>
+<span id="cb8-19"><a></a><span class="co"># format the graph</span></span>
+<span id="cb8-20"><a></a>ax[<span class="dv">1</span>].legend()</span>
+<span id="cb8-21"><a></a>ax[<span class="dv">0</span>].set_ylabel(<span class="st">'z (m)'</span>)</span>
+<span id="cb8-22"><a></a>ax[<span class="dv">0</span>].set_title(<span class="st">'Profile'</span>)</span>
+<span id="cb8-23"><a></a>ax[<span class="dv">1</span>].set_ylabel(<span class="st">'ln(z)'</span>)</span>
+<span id="cb8-24"><a></a>ax[<span class="dv">1</span>].set_title(<span class="st">'Log-Linear-Profile'</span>)</span>
+<span id="cb8-25"><a></a><span class="cf">for</span> a <span class="kw">in</span> ax:</span>
+<span id="cb8-26"><a></a>    a.set_xlabel(<span class="st">'u (m/s)'</span>)</span>
+<span id="cb8-27"><a></a>    a.grid()</span>
+<span id="cb8-28"><a></a>plt.tight_layout()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+
+</div>
+<img data-src="16_files/figure-revealjs/unnamed-chunk-6-3.png" width="960" class="r-stretch"></section>
 <section id="roughness-length-z_0---examples" class="slide level2">
 <h2>Roughness length <span class="math inline">\(z_0\)</span> - examples</h2>
 
@@ -803,8 +837,9 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
 <h2>Estimating the roughness length z0</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
+<p>If observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements.</p>
 <ul>
-<li>If observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements. A traditional rule-of-thumb gives: <span class="math inline">\(z_0 = 0.1\)</span></li>
+<li>A traditional rule-of-thumb gives: <span class="math inline">\(z_0 = 0.1\)</span></li>
 </ul>
 </div><div class="column" style="width:50%;">
 <p><img data-src="images/16_24_5.jpg"></p>
@@ -844,7 +879,7 @@ u^{\prime} = l\small\frac{\delta u}{\delta z}
 <li>We introduce an effective height of mean drag, the zero-plane displacement <span class="math inline">\(z_d\)</span>:</li>
 </ul>
 <p><span id="eq-Log-Wind-Law"><span class="math display">\[
-\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z-z_z}{z_0})
+\bar{u_z}=\small\frac{u_*}{k}ln(\frac{z-z_z}{z_0})
 \qquad(7)\]</span></span></p>
 <ul>
 <li>Over tall roughness elements the straight line plot of ū vs.&nbsp;ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement <span class="math inline">\(z_d\)</span>.</li>

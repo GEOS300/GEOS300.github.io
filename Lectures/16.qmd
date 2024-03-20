@@ -258,7 +258,7 @@ So if the eddy size is proportional to the distance to the ground, let’s set $
 * and therefore, substitution of $l$ into @eq-Mixing-Length-Log-Profile gives
 
 $$
-\small\frac{\delta \bar{u}}{\delta z} = \small\frac{u_*}{k}(z)^-b = \small\frac{u_*}{kz}
+\frac{\delta \bar{u}}{\delta z} = \frac{u_*}{k}(z)^-b = \frac{u_*}{kz}
 $${#eq-von-Karma-Definition}
 
 * i.e. in @eq-Log-Profile-Law; $a=u_*/k$
@@ -274,7 +274,7 @@ Integration of @eq-von-Karma-Definition requires knowledge of the exact height w
 ::: {.column width="50%"}
 
 $$
-\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z}{z_0})
+\bar{u_z}=\frac{u_*}{k}ln(\frac{z}{z_0})
 $${#eq-Log-Wind-Law}
 
 * This is the **log wind law for *neutral conditions***.  The general form for measurements in two levels:
@@ -541,6 +541,42 @@ Rougher surface we have, the lower the windspeed at a given height
 :::
 
 
+## Try yourself
+
+```{python}
+#| echo: true
+import numpy as np
+import matplotlib.pyplot as plt
+
+k = 0.41
+# short grass (0.01), trees (1.0)
+z0_list = [0.01,1.0] 
+# weak winds (0.1), moderately strong winds (0.5)
+u_star_list = [0.1,0.5]
+# define a height profile
+z = np.linspace(0.1,25)
+# define a plot and loop through scenarios
+fig,ax=plt.subplots(1,2)
+for u_star,c in zip(u_star_list,['r','b']):
+    for z0,l in zip(z0_list,[':','-']):
+        u_bar_z = u_star/k*np.log(z/z0)
+        u_bar_z[u_bar_z<0]=np.nan
+        ax[0].plot(u_bar_z,z,color=c,linestyle=l)
+        ax[1].plot(u_bar_z,np.log(z),label=f'z0={z0}\nu*={u_star}',color=c,linestyle=l)
+# format the graph
+ax[1].legend()
+ax[0].set_ylabel('z (m)')
+ax[0].set_title('Profile')
+ax[1].set_ylabel('ln(z)')
+ax[1].set_title('Log-Linear-Profile')
+for a in ax:
+    a.set_xlabel('u (m/s)')
+    a.grid()
+plt.tight_layout()
+```
+
+
+
 ## Roughness length $z_0$ - examples
 
 
@@ -558,8 +594,9 @@ Rougher surface we have, the lower the windspeed at a given height
 ::: {.column width="50%"}
 
 
+If observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements.
 
-* If observations are not available, a first order estimate of z0 can be obtained from a geometric analysis of the surface roughness elements.  A traditional rule-of-thumb gives: $z_0 = 0.1$
+* A traditional rule-of-thumb gives: $z_0 = 0.1$
 
 
 :::
@@ -613,7 +650,7 @@ Over tall roughness elements (such as tall vegetation, orchards, forests) a dead
 
 
 $$
-\bar{u_z}=\small\frac{u_*}{k}ln(\small\frac{z-z_z}{z_0})
+\bar{u_z}=\small\frac{u_*}{k}ln(\frac{z-z_z}{z_0})
 $${#eq-Log-Wind-Law}
 
 

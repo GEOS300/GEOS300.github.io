@@ -45,6 +45,7 @@ Topics = [
 'Dissipation of Turbulence',
 '',
 'Turbulence Statistics + Momentum Exchange',
+'Momentum Exchange + Profile Laws',
 ]
 Readings = [
     '',
@@ -92,6 +93,7 @@ Lectures.loc[((Lectures.index>=pd.to_datetime('2024-02-19').date())&
 Lectures.loc[Lectures.index==pd.to_datetime('2024-03-13').date(),'Topic'] = '**Midterm Exam**'
 Lectures.loc[Lectures.index==pd.to_datetime('2024-03-13').date(),'Study Questions'] = '**1-5 Due**'
 
+Lectures.loc[Lectures.index==pd.to_datetime('2024-04-01').date(),'Topic'] = '**Easter Monday, no class**'
 Lectures.loc[Lectures.index==pd.to_datetime('2024-04-24').date(),'Topic'] = '**Final Exam**'
 Lectures.loc[Lectures.index==pd.to_datetime('2024-04-24').date(),'Study Questions'] = '**6+ Due**'
 
