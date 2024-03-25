@@ -428,13 +428,13 @@ $${#eq-Turbulence-Intensities}
 ## Variances
 
 $$
-\overline{a^{\prime2}} = \small\frac{1}{N}\sum_{i=0}^{N-1}a^{\prime2}(t_i)
+\overline{a^{\prime2}} = \frac{1}{N}\sum_{i=0}^{N-1}a^{\prime2}(t_i)
 $${#eq-Variances}
 
 ## std
 
 $$
-\sigma_a=\overline{a^{\prime2}}
+\sigma_a=\sqrt{\overline{a^{\prime2}}}
 $${#eq-std}
 
 ## Weins Law

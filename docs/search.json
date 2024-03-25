@@ -861,7 +861,7 @@
     "href": "Resources.html#variances",
     "title": "Programming Resources",
     "section": "Variances",
-    "text": "Variances\n\\[\n\\overline{a^{\\prime2}} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\tag{72}\\]",
+    "text": "Variances\n\\[\n\\overline{a^{\\prime2}} = \\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\tag{72}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -872,7 +872,7 @@
     "href": "Resources.html#std",
     "title": "Programming Resources",
     "section": "std",
-    "text": "std\n\\[\n\\sigma_a=\\overline{a^{\\prime2}}\n\\tag{73}\\]",
+    "text": "std\n\\[\n\\sigma_a=\\sqrt{\\overline{a^{\\prime2}}}\n\\tag{73}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -1109,7 +1109,7 @@
     "href": "Lectures/17.html#aerodynamic-approach-13",
     "title": "Flux-gradient Relations",
     "section": "Aerodynamic Approach ( 1/3)",
-    "text": "Aerodynamic Approach ( 1/3)\nFrom the neutral wind law:\n\\[\n\\bar{u_2} =\\frac{u*}{k} (ln z_2 - ln z_0) \\\\ \\nonumber\n\\bar{u_1} =\\frac{u*}{k} (ln z_1 - ln z_0) \\\\ \\nonumber\n(\\bar{u_2} - \\bar{u_1})=\\frac{u*}{k} (ln z_2 - ln z_1) \\nonumber\n\\]\nrearranging:\n\\[\n\\frac{\\Delta \\bar{u}}{ln(z_2/z_1)} = u_*/k\n\\tag{9}\\]",
+    "text": "Aerodynamic Approach ( 1/3)\nFrom the neutral wind law:\n\\[\n\\begin{align}\n\\bar{u_2} =\\frac{u*}{k} (ln z_2 - ln z_0) \\\\ \\nonumber\n\\bar{u_1} =\\frac{u*}{k} (ln z_1 - ln z_0) \\\\ \\nonumber\n(\\bar{u_2} - \\bar{u_1})=\\frac{u*}{k} (ln z_2 - ln z_1) \\nonumber\n\\end{align}\n\\]\nrearranging:\n\\[\n\\frac{\\Delta \\bar{u}}{ln(z_2/z_1)} = u_*/k\n\\tag{9}\\]",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -6910,7 +6910,7 @@
     "href": "Lectures/14.html#integral-statistics",
     "title": "Turbulence Statistics",
     "section": "Integral Statistics",
-    "text": "Integral Statistics\nAlso the variance of a in a turbulent time series is not zero. It is defined by:\n\\[\n\\overline{a^{\\prime2}} = \\small\\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\qquad(4)\\]\nThe standard deviation (square root of variance) is in the same units as a:\n\\[\n\\sigma_a=\\overline{a^{\\prime2}}\n\\qquad(5)\\]\n\nThe covariance indicates the amount of common variation between two variables. Variance: Informally, it measures how far a set of (random) numbers are spread out from their average value.",
+    "text": "Integral Statistics\nAlso the variance of a in a turbulent time series is not zero. It is defined by:\n\\[\n\\overline{a^{\\prime2}} = \\frac{1}{N}\\sum_{i=0}^{N-1}a^{\\prime2}(t_i)\n\\qquad(4)\\]\nThe standard deviation (square root of variance) is in the same units as a:\n\\[\n\\sigma_a=\\sqrt{\\overline{a^{\\prime2}}}\n\\qquad(5)\\]\n\nThe covariance indicates the amount of common variation between two variables. Variance: Informally, it measures how far a set of (random) numbers are spread out from their average value.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",

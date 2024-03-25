@@ -559,9 +559,11 @@ In the turbulent surface layer (define): typically the bottom 10% where the log
 From the neutral wind law:
 
 $$
+\begin{align}
 \bar{u_2} =\frac{u*}{k} (ln z_2 - ln z_0) \\ \nonumber
 \bar{u_1} =\frac{u*}{k} (ln z_1 - ln z_0) \\ \nonumber
 (\bar{u_2} - \bar{u_1})=\frac{u*}{k} (ln z_2 - ln z_1) \nonumber
+\end{align}
 $$
 
 rearranging:
