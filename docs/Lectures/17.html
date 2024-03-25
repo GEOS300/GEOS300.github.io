@@ -516,7 +516,7 @@ E = - \frac{\Delta\bar{\rho_v}}{r_{av}}
 </ul>
 </div><div class="column" style="width:50%;">
 <p><span id="eq-Resistance-Scalar"><span class="math display">\[
-F_c = - \frac{\Delta\bar{\rho_v}}{r_{av}}
+F_c = - \frac{\Delta\bar{\rho_c}}{r_{ac}}
 \tag{7}\]</span></span></p>
 <ul>
 <li>Where <span class="math inline">\(F_c\)</span> is trace gas flux density (in <span class="math inline">\(kg m^{-2} s^{-1}\)</span>)</li>
@@ -619,7 +619,7 @@ F_c = - \frac{\Delta\bar{\rho_v}}{r_{av}}
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><span class="math display">\[
-\tau = \rho \frac{\delta\bar{u}}{\delta z}
+\tau = \rho K_m \frac{\delta\bar{u}}{\delta z}
 \]</span></p>
 <p><span class="math display">\[
 LE = -K_v \frac{\delta\bar{\rho_v}}{\delta z}
@@ -689,7 +689,7 @@ F_c = -K_c \frac{\delta\bar{\rho_c}}{\delta z}
 <ul>
 <li>and consequently, over the same layer</li>
 </ul>
-<p><span class="math inline">\(r_am = r_aH = r_av = r_ac\)</span></p>
+<p><span class="math inline">\(r_{am} = r_{aH} = r_{av} = r_{ac}\)</span></p>
 <ul>
 <li><p>Practically this implies that we must only determine one of the K’s</p></li>
 <li><p>Generally held that close to the ground this applies, except that <span class="math inline">\(K_M\)</span> becomes increasingly dissimilar as instability increases, and then:</p></li>
@@ -739,7 +739,7 @@ F_c = -K_c \frac{\delta\bar{\rho_c}}{\delta z}
 \frac{\tau}{H} = \frac{\cancel{\rho}\cancel{K_M}(\Delta\bar{u}/\cancel{\Delta z})}{-\cancel{\rho}c_a\cancel{K_H}(\Delta\bar{\Theta}/\cancel{\Delta z})} = \frac{\Delta \bar{u}}{-c_a \Delta \bar{\Theta}}
 \tag{8}\]</span></span></p>
 <ul>
-<li>where <span class="math inline">\(c_a = \rho C_a\)</span></li>
+<li>where <span class="math inline">\(C_a = \rho c_a\)</span></li>
 </ul>
 <aside class="notes">
 <p>Potential temperature</p>
@@ -794,8 +794,8 @@ F_c = -K_c \frac{\delta\bar{\rho_c}}{\delta z}
 <h2>Aerodynamic Approach ( 1/3)</h2>
 <p>From the neutral wind law:</p>
 <p><span class="math display">\[
-\bar{u_2} =\frac{u*}{k} (ln z_2 - ln z_0) \nonumber
-\bar{u_1} =\frac{u*}{k} (ln z_1 - ln z_0) \nonumber
+\bar{u_2} =\frac{u*}{k} (ln z_2 - ln z_0) \\ \nonumber
+\bar{u_1} =\frac{u*}{k} (ln z_1 - ln z_0) \\ \nonumber
 (\bar{u_2} - \bar{u_1})=\frac{u*}{k} (ln z_2 - ln z_1) \nonumber
 \]</span></p>
 <p>rearranging:</p>
@@ -855,7 +855,7 @@ LE = -\frac{L_v k^2 \Delta\bar{u} \Delta\bar{\rho_v}}{[ln(z_2/z_1)]^2}
 <ul>
 <li>Resistance allow us to handle the flow of energy and mass though a complex system such as a land-atmosphere interface. Resistances can be formulated in series or in parallel.</li>
 <li>Resistance formulations and flux-gradient relations (using eddy diffusivities, i.e.&nbsp;K’s) can be used to describe sensible, latent heat and trace gas transfer.</li>
-<li>Reynolds analogy assumes that the eddy diffusivities for different scalars are similar, i.e.&nbsp;KM = KH = KE = KC</li>
+<li>Reynolds analogy assumes that the eddy diffusivities for different scalars are similar, i.e.&nbsp;<span class="math inline">\(K_M\)</span> = <span class="math inline">\(K_H\)</span> = <span class="math inline">\(K_E\)</span> = <span class="math inline">\(K_C\)</span></li>
 <li>This allows us to overcome the severe restrictions of using K-theory - as in the aerodynamic approach the K’s cancel out.</li>
 </ul>
 

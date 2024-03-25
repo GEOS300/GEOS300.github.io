@@ -253,7 +253,7 @@ $${#eq-Vapor}
 
 
 $$
-F_c = - \frac{\Delta\bar{\rho_v}}{r_{av}} 
+F_c = - \frac{\Delta\bar{\rho_c}}{r_{ac}} 
 $${#eq-Resistance-Scalar}
 
 * Where $F_c$ is trace gas flux density (in $kg m^{-2} s^{-1}$)
@@ -367,7 +367,7 @@ If $K_M$, $K_H$, $K_V$ and $K_C$ are eddy diffusivities (in $m^2 s{-1}$).
 ::: {.column width="50%"}
 
 $$
-\tau = \rho \frac{\delta\bar{u}}{\delta z} 
+\tau = \rho K_m \frac{\delta\bar{u}}{\delta z} 
 $$
 
 $$
@@ -451,7 +451,7 @@ $K_m = K_H = K_v = K_c$
 
 * and consequently, over the same layer
 
-$r_am = r_aH = r_av = r_ac$
+$r_{am} = r_{aH} = r_{av} = r_{ac}$
 
 * Practically this implies that we must only determine one of the K’s 
 
@@ -508,7 +508,7 @@ $$
 \frac{\tau}{H} = \frac{\cancel{\rho}\cancel{K_M}(\Delta\bar{u}/\cancel{\Delta z})}{-\cancel{\rho}c_a\cancel{K_H}(\Delta\bar{\Theta}/\cancel{\Delta z})} = \frac{\Delta \bar{u}}{-c_a \Delta \bar{\Theta}}
 $${#eq-Reynolds-Analogy}
 
-* where $c_a = \rho C_a$
+* where $C_a = \rho c_a$
 
 
 ::: {.notes}
@@ -559,8 +559,8 @@ In the turbulent surface layer (define): typically the bottom 10% where the log
 From the neutral wind law:
 
 $$
-\bar{u_2} =\frac{u*}{k} (ln z_2 - ln z_0) \nonumber
-\bar{u_1} =\frac{u*}{k} (ln z_1 - ln z_0) \nonumber
+\bar{u_2} =\frac{u*}{k} (ln z_2 - ln z_0) \\ \nonumber
+\bar{u_1} =\frac{u*}{k} (ln z_1 - ln z_0) \\ \nonumber
 (\bar{u_2} - \bar{u_1})=\frac{u*}{k} (ln z_2 - ln z_1) \nonumber
 $$
 
@@ -631,6 +631,6 @@ Specific heat of air
 
 * Resistance allow us to handle the flow of energy and mass though a complex system such as a land-atmosphere interface. Resistances can be formulated in series or in parallel.
 * Resistance formulations and flux-gradient relations (using eddy diffusivities, i.e. K’s) can be used to describe sensible, latent heat and trace gas transfer.
-* Reynolds analogy assumes that the eddy diffusivities for different scalars are similar, i.e. KM = KH = KE = KC 
+* Reynolds analogy assumes that the eddy diffusivities for different scalars are similar, i.e. $K_M$ = $K_H$ = $K_E$ = $K_C$ 
 * This allows us to overcome the severe restrictions of using K-theory - as in the aerodynamic approach the K’s cancel out.
 
