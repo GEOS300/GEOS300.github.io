@@ -410,7 +410,7 @@ $${#eq-Delta-LAT}
 ## MKE
 
 $$
-\frac{MKE}{m}=\frac{1}{2}(\bar{u}^2+\bar{v}^2+\bar{w}^2)
+\frac{MKE}{m}=\frac{1}{2}(\overline{u^2}+\overline{v^2}+\overline{w^2})
 $${#eq-MKE}
 
 ## TKE

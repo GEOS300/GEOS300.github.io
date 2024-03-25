@@ -828,7 +828,7 @@
     "href": "Resources.html#mke",
     "title": "Programming Resources",
     "section": "MKE",
-    "text": "MKE\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\bar{u}^2+\\bar{v}^2+\\bar{w}^2)\n\\tag{69}\\]",
+    "text": "MKE\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\overline{u^2}+\\overline{v^2}+\\overline{w^2})\n\\tag{69}\\]",
     "crumbs": [
       "Syllabus",
       "Programming Resources"
@@ -6934,7 +6934,7 @@
     "href": "Lectures/14.html#turbulent-kinetic-energy",
     "title": "Turbulence Statistics",
     "section": "Turbulent Kinetic Energy",
-    "text": "Turbulent Kinetic Energy\nFollowing the definition of kinetic energy (\\(E=\\frac{1}{2}mv^2\\)) we can define a mean kinetic energy (MKE) per unit mass \\(m\\) of the flow, namely\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\bar{u}^2+\\bar{v}^2+\\bar{w}^2)\n\\qquad(7)\\]\nSimilarly, the kinetic energy of the instantaneous deviations per unit mass (e) is:\n\\[\ne=\\frac{1}{2}(u^{\\prime2}+v^{\\prime2}+w^{\\prime2}) \\nonumber\n\\]\nThe average e is called mean turbulent kinetic energy (TKE):\n\\[\nTKE = \\bar{e}=\\frac{1}{2}(\\bar{u}^{\\prime2}+\\bar{v}^{\\prime2}+\\bar{w}^{\\prime2})\n\\qquad(8)\\]\n\nSum of variances",
+    "text": "Turbulent Kinetic Energy\nFollowing the definition of kinetic energy (\\(E=\\frac{1}{2}mv^2\\)) we can define a mean kinetic energy (MKE) per unit mass \\(m\\) of the flow, namely\n\\[\n\\frac{MKE}{m}=\\frac{1}{2}(\\overline{u^2}+\\overline{v^2}+\\overline{w^2})\n\\qquad(7)\\]\nSimilarly, the kinetic energy of the instantaneous deviations per unit mass (e) is:\n\\[\ne=\\frac{1}{2}(u^{\\prime2}+v^{\\prime2}+w^{\\prime2}) \\nonumber\n\\]\nThe average e is called mean turbulent kinetic energy (TKE):\n\\[\nTKE = \\overline{e}=\\frac{1}{2}(\\overline{u{\\prime2}}+\\overline{v{\\prime2}}+\\overline{w{\\prime2}})\n\\qquad(8)\\]\n\nSum of variances",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
