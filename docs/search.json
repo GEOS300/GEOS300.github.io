@@ -894,10 +894,262 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\n\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\n\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\nMomentum Exchange + Profile Laws\n\n\n\n\n2024-03-25\n\n\n\n\n\n2024-03-27\n\n\n\n\n\n2024-04-01\nEaster Monday, no class\n\n\n\n\n2024-04-03\n\n\n\n\n\n2024-04-08\n\n\n\n\n\n2024-04-10\n\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#learning-objective",
+    "href": "Lectures/17.html#learning-objective",
+    "title": "Flux-gradient Relations",
+    "section": "Learning Objective",
+    "text": "Learning Objective\n\n\n\nExplain what can we learn from electrical circuits (Ohm’s Law) to describe heat and mass transfer on a land-atmosphere interface.\nDiscuss is we can we use the K-Theory introduced for the momentum transfer to relate the gradients of temperature, humidity and trace gas concentrations to fluxes.\nMaking the K-Theory useful - Reynold’s analogy (similarity) and aerodynamic approach.\n\n\n\n\n\n\nK theory: eddy diffusivities – the ability of eddies to transport mass and energy",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#energy-balance-and-turbulence",
+    "href": "Lectures/17.html#energy-balance-and-turbulence",
+    "title": "Flux-gradient Relations",
+    "section": "Energy balance and turbulence",
+    "text": "Energy balance and turbulence\n\\[\n\\color{orange}{R_n} = \\color{red}{H} + \\color{blue}{LE} + \\color{purple}{G} + \\color{green}{\\Delta S}\n\\tag{1}\\]\n\nDeltaQp = net biochemical energy storage in the biomass through photosynthesis minus respiration The common term in the water and energy balance equations is evaporation. To assimilate one mole of CO2, it requires an energy of 469 kJ.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#turbulent-exchange",
+    "href": "Lectures/17.html#turbulent-exchange",
+    "title": "Flux-gradient Relations",
+    "section": "Turbulent exchange",
+    "text": "Turbulent exchange\n\nVertical turbulent flux of sensible heat, latent heat and trace gases",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#resistance-approach---ohms-law",
+    "href": "Lectures/17.html#resistance-approach---ohms-law",
+    "title": "Flux-gradient Relations",
+    "section": "Resistance Approach - Ohm’s Law",
+    "text": "Resistance Approach - Ohm’s Law\n\n\n\nTo describe land-atmosphere exchange of heat, mass and momentum we can identify resistances of different sub-processes, e.g. of plant components (leaf, xylem, root, etc.), soil, whole PBL, etc.\nResistance relate the flux to a measured difference Δs across part of a system. For a given difference:\nLow resistance - high flux densityHigh resistance - low flux density\n\n\n\n\n\nOke (1987)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#inspired-by-ohms-law",
+    "href": "Lectures/17.html#inspired-by-ohms-law",
+    "title": "Flux-gradient Relations",
+    "section": "Inspired by Ohm’s Law",
+    "text": "Inspired by Ohm’s Law\nWe can define a scalar flux (\\(F_c\\) in \\(m^{-2} s^{-1}\\)) in terms of storage (\\(\\Delta S\\) in \\(m^{-3}\\)) and either resistance (\\(r\\) in \\(s m^{-1}\\)) or conductance (\\(g\\) in \\(m s^{-1}\\)):\n\\[\nF_c = \\frac{\\Delta S}{r}\n\\tag{2}\\]\n\\[\nF_c = g \\Delta S\n\\tag{3}\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#resistances-vs.-conductances",
+    "href": "Lectures/17.html#resistances-vs.-conductances",
+    "title": "Flux-gradient Relations",
+    "section": "Resistances vs. Conductances",
+    "text": "Resistances vs. Conductances\n\n\n\n\n\nResistances are additive in series\n\n\n\n\n\n\nConductances are additive in parallel",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#resistances-at-the-surface-atmosphere-interface",
+    "href": "Lectures/17.html#resistances-at-the-surface-atmosphere-interface",
+    "title": "Flux-gradient Relations",
+    "section": "Resistances at the surface-atmosphere interface",
+    "text": "Resistances at the surface-atmosphere interface\n\nSeveral types of resistances / conductances can be conceived of, depending on the transport processes in the layer, e.g.\n\\(r_a\\) (or \\(g_a\\)) - aerodynamic resistance (conductance) in the turbulent surface layer. Depends on degree of turbulent activity.\n\\(r_b\\) (or \\(g_b\\)) - laminar boundary layer resistance (conductance) in the LBL immediately adjacent to surfaces. Depends on molecular diffusivities and thickness is the key variable.\n\\(r_s\\) (or \\(g_s\\)) - stomatal resistance (conductance) of leaf pores. Depends on stomatal aperture (light, T, VPD, \\(CO_2\\) conc., leaf water potential)\n\\(r_c\\) (or \\(g_c\\)) - canopy or surface resistance (conductance). Integrated resistance of complete surface system including \\(r_s\\) and \\(r_b\\) of leaves and air in canopy.\n\n\naerodynamic resistance (drag): The frictional impedance offered by air to the motion of bodies passing through it.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-resistances",
+    "href": "Lectures/17.html#aerodynamic-resistances",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic resistances",
+    "text": "Aerodynamic resistances\n\n\n\\[\n\\tau = \\rho \\frac{\\Delta\\bar{u}}{r_{aM}} \\approx \\rho \\frac{\\bar{u_z}}{r_{aM (0-z)}}\n\\tag{4}\\]\n\nWhere \\(\\tau\\) is momentum flux density (in \\(N m^{-2}\\) aka \\(Pa\\))\n\\(r_{aM}\\) is aerodynamic resistance (in \\(s m^{-1}\\))\n\\(\\bar{u_z}\\) is mean wind speed at z (in \\(m s^{-1}\\))\n\\(\\rho\\) is density of air (in \\(kg m^{-3}\\))\n\n\n\\[\nH = -C_a \\frac{\\Delta\\bar{\\Theta}}{r_{aM}}\n\\tag{5}\\]\n\nWhere \\(H\\) is sensible heat flux density (in \\(W m^{-2}\\) )\n\\(\\bar{\\Theta}\\) is mean potential temperature (in \\(K\\)) see\n\\(C_{a}\\) is the heat capacity of air (in \\(J m^{-3} K^{-1}\\)) see\n\n\n\n\nIn the turbulent surface layer (define): typically the bottom 10% where the log wind profile is valid Between SURFACE and measurement height!",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-resistances-1",
+    "href": "Lectures/17.html#aerodynamic-resistances-1",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic resistances",
+    "text": "Aerodynamic resistances\n\n\n\\[\nE = - \\frac{\\Delta\\bar{\\rho_v}}{r_{av}}\n\\tag{6}\\]\n\nWhere \\(E\\) is water vapor flux density (in \\(kg m^{-2} s^{-1}\\))\n\\(r_{av}\\) is aerodynamic resistance (in \\(s m^{-1}\\))\n\\(\\bar{\\rho_v}\\) is mean partial vapor density of water (in \\(kg m^{-3}\\))\n\n\n\\[\nF_c = - \\frac{\\Delta\\bar{\\rho_v}}{r_{av}}\n\\tag{7}\\]\n\nWhere \\(F_c\\) is trace gas flux density (in \\(kg m^{-2} s^{-1}\\))\n\\(r_{ac}\\) is aerodynamic resistance (in \\(s m^{-1}\\))\n\\(\\bar{\\rho_c}\\) is mean partial density of the trace gas (in \\(kg m^{-3}\\))\n\n\n\n\nIn the turbulent surface layer (define): typically the bottom 10% where the log wind profile is valid Between SURFACE and measurement height!",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#flux-gradient-relationships",
+    "href": "Lectures/17.html#flux-gradient-relationships",
+    "title": "Flux-gradient Relations",
+    "section": "Flux-gradient relationships",
+    "text": "Flux-gradient relationships\n\n\n\nFor small-scale turbulence, the flux is down the concentration gradient, i.e\n\nmomentum flux density is fast \\(\\rightarrow\\) slow\nsensible heat flux density is ?? \\(\\rightarrow\\) ??\nwater vapor flux density is wet \\(\\rightarrow\\) dry\ntrace gas flux density is high concentration \\(\\rightarrow\\) low concentration\n\n\nBoussinesq suggested that turbulent transfer could be considered analogous to molecular diffusion - eddies replace molecules:\n\nFlux density = transfer efficiency \\(\\times\\) gradient of entity\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nIf we have more momentum at a higher layer (rhoubar) than a lower layer (rhoubar) , a potential gradient in momentum will be established. Momentum will flow from the region of higher momentum to that of lower momentum. So, momentum must be transferred downward. Which are analogous to Fourier’s and Fick’s laws of molecular diffusion of heat and mass.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#sensible-heat-flux-density-iclicker",
+    "href": "Lectures/17.html#sensible-heat-flux-density-iclicker",
+    "title": "Flux-gradient Relations",
+    "section": "Sensible Heat Flux Density (iClicker)",
+    "text": "Sensible Heat Flux Density (iClicker)\n\n\nSensible heat flux density is directed from ?? \\(\\rightarrow\\) ??\n\nA cold \\(\\rightarrow\\) hot\nB hot \\(\\rightarrow\\) cold\nC dry \\(\\rightarrow\\) wet\nD sunny \\(\\rightarrow\\) dark\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nIf we have more momentum at a higher layer (rhoubar) than a lower layer (rhoubar) , a potential gradient in momentum will be established. Momentum will flow from the region of higher momentum to that of lower momentum. So, momentum must be transferred downward. Which are analogous to Fourier’s and Fick’s laws of molecular diffusion of heat and mass.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#k-theory",
+    "href": "Lectures/17.html#k-theory",
+    "title": "Flux-gradient Relations",
+    "section": "K-Theory",
+    "text": "K-Theory\nIf \\(K_M\\), \\(K_H\\), \\(K_V\\) and \\(K_C\\) are eddy diffusivities (in \\(m^2 s{-1}\\)).\n\n\n\\[\n\\tau = \\rho \\frac{\\delta\\bar{u}}{\\delta z}\n\\]\n\\[\nLE = -K_v \\frac{\\delta\\bar{\\rho_v}}{\\delta z}\n\\]\n\n\\[\nH = -C_a K_H \\frac{\\delta\\bar{\\Theta}}{\\delta z}\n\\]\n\\[\nF_c = -K_c \\frac{\\delta\\bar{\\rho_c}}{\\delta z}\n\\]\n\n\n\nWhich are analogous to Fourier’s and Fick’s laws of molecular diffusion of heat and mass. Km analogous to the molecular kinematic viscosity v. Transfer efficiency It should be recognized that the above gradient-transport relations are not the expressions of any sound physical laws in the same sense that their molecular counterparts are. These are not based on any rigorous theory, but only on an intuitive assumption of similarity or analogy between molecular and turbulent transfers. Under ordinary circumstances, one would expect heat to flow from warmer to colder regions, roughly in proportion to the temperature gradient.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#k-theory---limitations",
+    "href": "Lectures/17.html#k-theory---limitations",
+    "title": "Flux-gradient Relations",
+    "section": "K-Theory - limitations",
+    "text": "K-Theory - limitations\n\n\n\nK’s are extremely variable in time, space and atmospheric conditions (stability).\nRequires instruments capable of measuring small vertical gradients (differences) to high accuracy.\nAlso the K-theory does not account for counter-gradient transport.\n\nIn the atmosphere, sometimes fluxes are counter gradient. Due to a large eddies which (briefly) transport flux regardless of background average (e.g. within plant canopies)\n\n\n\n\n\n\nA 100m profile research tower probing theatmospheric surface layer (Falkenberg, DWD, Photo: A. Christen)\n\n\n\n\n\neddy diffusivities The observation of a secondary wind maxima suggests counter-gradient transfer since momentum transfer is directed downward and is diminishing with depth, despite the local increase in wind velocity. It also led to a major finding that K theory is wrong, when applied in vegetation. Wilson and Shaw [N R Wilson and Shaw, 1977] applied a second order closure model to assess this phenomenon. It should be recognized that the above gradient-transport relations are not the expressions of any sound physical laws in the same sense that their molecular counterparts are",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#reynolds-analogy",
+    "href": "Lectures/17.html#reynolds-analogy",
+    "title": "Flux-gradient Relations",
+    "section": "Reynolds Analogy",
+    "text": "Reynolds Analogy\nReynolds surmised that in fully turbulent flow (high \\(R_e\\)) eddies would carry entities with equal ease (similarity principle):\n\\(K_m = K_H = K_v = K_c\\)\n\nand consequently, over the same layer\n\n\\(r_am = r_aH = r_av = r_ac\\)\n\nPractically this implies that we must only determine one of the K’s\nGenerally held that close to the ground this applies, except that \\(K_M\\) becomes increasingly dissimilar as instability increases, and then:\n\n\\(K_x \\propto K_M^2\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#using-k-theory-reynolds-analogy-to-measure-fluxes",
+    "href": "Lectures/17.html#using-k-theory-reynolds-analogy-to-measure-fluxes",
+    "title": "Flux-gradient Relations",
+    "section": "Using K-theory & Reynold’s Analogy to measure fluxes",
+    "text": "Using K-theory & Reynold’s Analogy to measure fluxes\nAssumptions:\n\nNeutral stability: buoyancy effects are absent.\n\n\n\n\nSteady state: no marked shifts in the radiation or wind fields during the observation period.\nConstancy of fluxes with height: no vertical divergence or convergence.\nSimilarity of all transfer coefficients.\n\n\n\n\n\n2 x Anemometer & 2 x Thermometer-Hygrometer\n\n\n\n\n\nIn the turbulent surface layer (define): typically the bottom 10% where the log wind profile is valid",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#reynolds-analogy-1",
+    "href": "Lectures/17.html#reynolds-analogy-1",
+    "title": "Flux-gradient Relations",
+    "section": "Reynolds Analogy",
+    "text": "Reynolds Analogy\nIf we assume a similarity, we can take ratios of flux-gradient equations, and eliminate the K’s. If one flux is known (usually \\(\\tau\\) from a measured wind profile), we can obtain other if their gradients are measured, e.g.\n\\[\n\\frac{\\tau}{H} = \\frac{\\cancel{\\rho}\\cancel{K_M}(\\Delta\\bar{u}/\\cancel{\\Delta z})}{-\\cancel{\\rho}c_a\\cancel{K_H}(\\Delta\\bar{\\Theta}/\\cancel{\\Delta z})} = \\frac{\\Delta \\bar{u}}{-c_a \\Delta \\bar{\\Theta}}\n\\tag{8}\\]\n\nwhere \\(c_a = \\rho C_a\\)\n\n\nPotential temperature",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-approach",
+    "href": "Lectures/17.html#aerodynamic-approach",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic Approach",
+    "text": "Aerodynamic Approach\nThe aerodynamic approach requires the measurement [or prediction in a model] of mean wind u and relevant property (e.g. potential temperature \\(\\Theta\\) absolute humidity \\(\\rho_v\\) ) at same two heights [or layers]. It relies on the similarity of \\(K_M\\) and \\(K_x\\).\n\n\nAssumptions:\n\nNeutral stability - buoyancy effects are absent.\nSteady state - no marked shifts in the radiation or wind fields during the observation period.\nConstancy of fluxes with height - no vertical divergence or convergence.\nSimilarity of all transfer coefficients.\n\n\n\n\n\n2 x Anemometer & 2 x Thermometer-Hygrometer\n\n\n\n\n\nIn the turbulent surface layer (define): typically the bottom 10% where the log wind profile is valid",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-approach-13",
+    "href": "Lectures/17.html#aerodynamic-approach-13",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic Approach ( 1/3)",
+    "text": "Aerodynamic Approach ( 1/3)\nFrom the neutral wind law:\n\\[\n\\bar{u_2} =\\frac{u*}{k} (ln z_2 - ln z_0) \\nonumber\n\\bar{u_1} =\\frac{u*}{k} (ln z_1 - ln z_0) \\nonumber\n(\\bar{u_2} - \\bar{u_1})=\\frac{u*}{k} (ln z_2 - ln z_1) \\nonumber\n\\]\nrearranging:\n\\[\n\\frac{\\Delta \\bar{u}}{ln(z_2/z_1)} = u_*/k\n\\tag{9}\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-approach-23",
+    "href": "Lectures/17.html#aerodynamic-approach-23",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic Approach ( 2/3)",
+    "text": "Aerodynamic Approach ( 2/3)\nSince \\(\\tau \\approx \\rho u_*^2\\); we can redefine:\n\\[\n\\tau = \\rho k^2 [\\Delta\\bar{u}/ln(z_2/z_1)]^2\n\\tag{10}\\]\nAnd substitute Equation 10 into Equation 8 and solve \\(H\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#aerodynamic-approach-33",
+    "href": "Lectures/17.html#aerodynamic-approach-33",
+    "title": "Flux-gradient Relations",
+    "section": "Aerodynamic Approach ( 3/3)",
+    "text": "Aerodynamic Approach ( 3/3)\n\n\nFor Sensible Heat Flux (\\(H\\)):\n\\[\n\\begin{align}\nH&=\\frac{-\\tau c_a \\Delta\\bar{\\Theta}}{\\Delta\\bar{u}} \\\\ \\nonumber\n&=\\frac{-\\rho k^2 \\Delta\\bar{u}^2c_a \\Delta\\bar{\\Theta}}{\\Delta\\bar{u}[ln(z_2/z_1)]^2} \\\\ \\nonumber\n&=\\frac{-\\rho k^2 \\Delta\\bar{u} c_a \\Delta\\bar{\\Theta}}{[ln(z_2/z_1)]^2}\n\\end{align}\n\\tag{11}\\]\nFor Latent Heat Flux (\\(LE\\)):\n\\[\nLE = -\\frac{L_v k^2 \\Delta\\bar{u} \\Delta\\bar{\\rho_v}}{[ln(z_2/z_1)]^2}\n\\]\n\n\n\n\n2 x Anemometer & 2 x Thermometer-Hygrometer\n\n\n\n\n\nSpecific heat of air",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
+    ]
+  },
+  {
+    "objectID": "Lectures/17.html#take-home-points",
+    "href": "Lectures/17.html#take-home-points",
+    "title": "Flux-gradient Relations",
+    "section": "Take Home Points",
+    "text": "Take Home Points\n\nResistance allow us to handle the flow of energy and mass though a complex system such as a land-atmosphere interface. Resistances can be formulated in series or in parallel.\nResistance formulations and flux-gradient relations (using eddy diffusivities, i.e. K’s) can be used to describe sensible, latent heat and trace gas transfer.\nReynolds analogy assumes that the eddy diffusivities for different scalars are similar, i.e. KM = KH = KE = KC\nThis allows us to overcome the severe restrictions of using K-theory - as in the aerodynamic approach the K’s cancel out.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flux-gradient Relations"
     ]
   },
   {
@@ -6874,7 +7126,7 @@
     "href": "Lectures/16.html#the-vertical-profile-of-horizontal-wind-1",
     "title": "Velocity Profile Laws",
     "section": "The vertical profile of horizontal wind",
-    "text": "The vertical profile of horizontal wind\nThe form of the vertical profile of horizontal wind is found to be:\n\n\n\\[\n\\small\\frac{\\delta \\bar{u}}{\\delta z} = a(z)^-b\n\\qquad(3)\\]\n\nThe form says \\(\\bar{u}\\) is proportional to the logarithm of \\(z\\)\n\nExtensively verified in the field and laboratory.\n\n\n\n\n\n\n\nParameter a",
+    "text": "The vertical profile of horizontal wind\nThe form of the vertical profile of horizontal wind is found to be:\n\n\n\\[\n\\small\\frac{\\delta \\bar{u}}{\\delta z} = a(z)^{-b}\n\\qquad(3)\\]\n\nThe form says \\(\\bar{u}\\) is proportional to the logarithm of \\(z\\)\n\nExtensively verified in the field and laboratory.\n\n\n\n\n\n\n\nParameter a",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -6886,7 +7138,7 @@
     "href": "Lectures/16.html#von-kármáns-constant",
     "title": "Velocity Profile Laws",
     "section": "von Kármán’s constant",
-    "text": "von Kármán’s constant\nSo if the eddy size is proportional to the distance to the ground, let’s set \\(l=k(z)^b\\), in neutral stability: \\(b = 1 \\rightarrow l=kz\\)\n\nand therefore, substitution of \\(l\\) into Equation 2 gives\n\n\\[\n\\frac{\\delta \\bar{u}}{\\delta z} = \\frac{u_*}{k}(z)^-b = \\frac{u_*}{kz}\n\\qquad(4)\\]\n\ni.e. in Equation 3; \\(a=u_*/k\\)\n\nThe constant \\(k\\) is von Kármán’s constant (\\(\\approx\\) 0.41)",
+    "text": "von Kármán’s constant\nSo if the eddy size is proportional to the distance to the ground, let’s set \\(l=k(z)^b\\), in neutral stability: \\(b = 1 \\rightarrow l=kz\\)\n\nand therefore, substitution of \\(l\\) into Equation 2 gives\n\n\\[\n\\frac{\\delta \\bar{u}}{\\delta z} = \\frac{u_*}{k}(z)^{-b} = \\frac{u_*}{kz}\n\\qquad(4)\\]\n\ni.e. in Equation 3; \\(a=u_*/k\\)\n\nThe constant \\(k\\) is von Kármán’s constant (\\(\\approx\\) 0.41)",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -6978,6 +7230,18 @@
     ]
   },
   {
+    "objectID": "Lectures/16.html#try-yourself",
+    "href": "Lectures/16.html#try-yourself",
+    "title": "Velocity Profile Laws",
+    "section": "Try yourself",
+    "text": "Try yourself\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = 0.41\n# short grass (0.01), trees (1.0)\nz0_list = [0.01,1.0] \n# weak winds (0.1), moderately strong winds (0.5)\nu_star_list = [0.1,0.5]\n# define a height profile\nz = np.linspace(0.1,25)\n# define a plot and loop through scenarios\nfig,ax=plt.subplots(1,2)\nfor u_star,c in zip(u_star_list,['r','b']):\n    for z0,l in zip(z0_list,[':','-']):\n        u_bar_z = u_star/k*np.log(z/z0)\n        u_bar_z[u_bar_z&lt;0]=np.nan\n        ax[0].plot(u_bar_z,z,color=c,linestyle=l)\n        ax[1].plot(u_bar_z,np.log(z),label=f'z0={z0}\\nu*={u_star}',color=c,linestyle=l)\n# format the graph\nax[1].legend()\nax[0].set_ylabel('z (m)')\nax[0].set_title('Profile')\nax[1].set_ylabel('ln(z)')\nax[1].set_title('Log-Linear-Profile')\nfor a in ax:\n    a.set_xlabel('u (m/s)')\n    a.grid()\nplt.tight_layout()",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Velocity Profile Laws"
+    ]
+  },
+  {
     "objectID": "Lectures/16.html#roughness-length-z_0---examples",
     "href": "Lectures/16.html#roughness-length-z_0---examples",
     "title": "Velocity Profile Laws",
@@ -7030,7 +7294,7 @@
     "href": "Lectures/16.html#zero-plane-displacement-z_d",
     "title": "Velocity Profile Laws",
     "section": "Zero-plane displacement \\(z_d\\)",
-    "text": "Zero-plane displacement \\(z_d\\)\n\n\n\nWe introduce an effective height of mean drag, the zero-plane displacement \\(z_d\\):\n\n\\[\n\\bar{u_z}=\\small\\frac{u_*}{k}ln(\\frac{z-z_z}{z_0})\n\\qquad(7)\\]\n\nOver tall roughness elements the straight line plot of ū vs. ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement \\(z_d\\).\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nroughness length",
+    "text": "Zero-plane displacement \\(z_d\\)\n\n\n\nWe introduce an effective height of mean drag, the zero-plane displacement \\(z_d\\):\n\n\\[\n\\bar{u_z}=\\small\\frac{u_*}{k}ln(\\frac{z-z_d}{z_0})\n\\qquad(7)\\]\n\nOver tall roughness elements the straight line plot of ū vs. ln(z) breaks down - so we need to introduce an effective height of mean drag - zero plane displacement \\(z_d\\).\n\n\n\n\n\nT.R. Oke (1987): ‘Boundary Layer Climates’ 2nd Edition.\n\n\n\n\n\nroughness length",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -7086,6 +7350,90 @@
     ]
   },
   {
+    "objectID": "Lectures/18.html#learning-objectives",
+    "href": "Lectures/18.html#learning-objectives",
+    "title": "Eddy Covariance",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\n\nDescribe the eddy covariance approach & what observations are required to measure flux densities using this approach.\nDescribe the equations used to calculate QH, QE and trace gas fluxes.\nBe able to interpret eddy covariance observations of Net Ecosystem Exchange (NEE).\n\n\n\n\n\nMeasurement of convective fluxes using the EC technique at a salt marsh in Boundary Bay, Delta, BC (Photo: Tzu-Yi Lu, UBC)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#convective-transport",
+    "href": "Lectures/18.html#convective-transport",
+    "title": "Eddy Covariance",
+    "section": "Convective transport",
+    "text": "Convective transport\n\n\nTurbulence and associated eddies transport not only momentum but also heat and mass.\n\nTurbulence is the most relevant vertical transport mechanism in the ABL.\n\n\n\n\n\nTower with eddy covariance instrumentation Photo: Nick Lee",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#evidence-of-convective-transport-in-a-time-series",
+    "href": "Lectures/18.html#evidence-of-convective-transport-in-a-time-series",
+    "title": "Eddy Covariance",
+    "section": "Evidence of Convective Transport in a Time Series",
+    "text": "Evidence of Convective Transport in a Time Series\n\nSimultaneous measurements at 6 heights on a tower of wind vector (arrows) and temperature (colors)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#test-your-knowledge",
+    "href": "Lectures/18.html#test-your-knowledge",
+    "title": "Eddy Covariance",
+    "section": "Test your knowledge",
+    "text": "Test your knowledge\nWhat temperature profile do those observations correspond to? A (Nighttime) or B (daytime)\n\n\n\n\n\n\n\n\nSimultaneous measurements at 6 heights on a tower of wind vector (arrows) and temperature (colors)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#daytime-joint-probability-density-wprime-tprime",
+    "href": "Lectures/18.html#daytime-joint-probability-density-wprime-tprime",
+    "title": "Eddy Covariance",
+    "section": "Daytime Joint Probability Density \\(w^{\\prime} T^{\\prime}\\)",
+    "text": "Daytime Joint Probability Density \\(w^{\\prime} T^{\\prime}\\)\n\n\nSensible heat flux transports energy away from the surface:\n\\(\\overline{w^\\primeT^\\prime} &gt; 0\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#fast-trace-of-signals",
+    "href": "Lectures/18.html#fast-trace-of-signals",
+    "title": "Eddy Covariance",
+    "section": "Fast Trace of Signals",
+    "text": "Fast Trace of Signals\n\n\nFigure 2 very clearly illustrates how the product of w’ and T’ combine to produce an instantaneous sensible heat flux (QH ). The time average of this heat flux is the value given by equation",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
+    "objectID": "Lectures/18.html#nighttime-joint-probability-density-wprime-tprime",
+    "href": "Lectures/18.html#nighttime-joint-probability-density-wprime-tprime",
+    "title": "Eddy Covariance",
+    "section": "Nighttime Joint Probability Density \\(w^{\\prime} T^{\\prime}\\)",
+    "text": "Nighttime Joint Probability Density \\(w^{\\prime} T^{\\prime}\\)\n\n\nSensible heat flux transports energy away from the surface:\n\\(\\overline{w^\\primeT^\\prime} &lt; 0\\)\n\n\n\n\n\n\nTurbulence is the most relevant vertical transport mechanism in the ABL.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Eddy Covariance"
+    ]
+  },
+  {
     "objectID": "MidTerm/MidTerm.html",
     "href": "MidTerm/MidTerm.html",
     "title": "MidTerm",
@@ -7137,18 +7485,6 @@
     "crumbs": [
       "Study Questions",
       "Study Question Set 05"
-    ]
-  },
-  {
-    "objectID": "Lectures/16.html#try-yourself",
-    "href": "Lectures/16.html#try-yourself",
-    "title": "Velocity Profile Laws",
-    "section": "Try yourself",
-    "text": "Try yourself\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nk = 0.41\n# short grass (0.01), trees (1.0)\nz0_list = [0.01,1.0] \n# weak winds (0.1), moderately strong winds (0.5)\nu_star_list = [0.1,0.5]\n# define a height profile\nz = np.linspace(0.1,25)\n# define a plot and loop through scenarios\nfig,ax=plt.subplots(1,2)\nfor u_star,c in zip(u_star_list,['r','b']):\n    for z0,l in zip(z0_list,[':','-']):\n        u_bar_z = u_star/k*np.log(z/z0)\n        u_bar_z[u_bar_z&lt;0]=np.nan\n        ax[0].plot(u_bar_z,z,color=c,linestyle=l)\n        ax[1].plot(u_bar_z,np.log(z),label=f'z0={z0}\\nu*={u_star}',color=c,linestyle=l)\n# format the graph\nax[1].legend()\nax[0].set_ylabel('z (m)')\nax[0].set_title('Profile')\nax[1].set_ylabel('ln(z)')\nax[1].set_title('Log-Linear-Profile')\nfor a in ax:\n    a.set_xlabel('u (m/s)')\n    a.grid()\nplt.tight_layout()",
-    "crumbs": [
-      "Lectures",
-      "Lecture Slides",
-      "Velocity Profile Laws"
     ]
   }
 ]

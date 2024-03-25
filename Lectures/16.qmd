@@ -217,7 +217,7 @@ The form of the vertical profile of horizontal wind is found to be:
 
 
 $$
-\small\frac{\delta \bar{u}}{\delta z} = a(z)^-b
+\small\frac{\delta \bar{u}}{\delta z} = a(z)^{-b}
 $${#eq-Log-Profile-Law}
 
 
@@ -258,7 +258,7 @@ So if the eddy size is proportional to the distance to the ground, let’s set $
 * and therefore, substitution of $l$ into @eq-Mixing-Length-Log-Profile gives
 
 $$
-\frac{\delta \bar{u}}{\delta z} = \frac{u_*}{k}(z)^-b = \frac{u_*}{kz}
+\frac{\delta \bar{u}}{\delta z} = \frac{u_*}{k}(z)^{-b} = \frac{u_*}{kz}
 $${#eq-von-Karma-Definition}
 
 * i.e. in @eq-Log-Profile-Law; $a=u_*/k$
@@ -650,7 +650,7 @@ Over tall roughness elements (such as tall vegetation, orchards, forests) a dead
 
 
 $$
-\bar{u_z}=\small\frac{u_*}{k}ln(\frac{z-z_z}{z_0})
+\bar{u_z}=\small\frac{u_*}{k}ln(\frac{z-z_d}{z_0})
 $${#eq-Log-Wind-Law}
 
 
