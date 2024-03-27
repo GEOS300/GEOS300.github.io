@@ -1,0 +1,6 @@
+
+$$
+PV=nRT
+$${#eq-Ideal-Gas-Law}
+
+here,$R$ is the ideal gas constant ($8.31446261815324 Pa\ m^3\ mol^{-1} K ^{-1}$), $T$ is temperature (in Kelvin!), $P$ is air pressure, $V$ is volume, $n$ is the amount of the gas in mols; with $n=m/M$, where $m$ is mass and $M$ is the molar mass.  The molar mass of air is $\approx .028964 kg mol^{-1}$

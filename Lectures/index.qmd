@@ -46,6 +46,10 @@ Topics = [
 '',
 'Turbulence Statistics + Momentum Exchange',
 'Momentum Exchange + Profile Laws',
+'Velocity Profile Laws',
+'Flux Gradient Relationships',
+'Eddy Covariance',
+'',
 ]
 Readings = [
     '',

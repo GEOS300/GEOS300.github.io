@@ -125,6 +125,12 @@ $$
 \frac{H_g}{H} = \frac{\mu_g}{\mu_a}
 $${#eq-Heat-Sharing}
 
+## Ideal Gas Law
+
+$$
+PV=nRT
+$${#eq-Ideal-Gas-Law}
+
 ## Kelvin
 
 $$
@@ -148,6 +154,12 @@ $${#eq-Longwave-Radiation-Balance}
 $$
 \alpha_{LW} = 1 - \epsilon_{LW}
 $${#eq-Longwave-Reflectivity}
+
+## Latent Heat Vaporization
+
+$$
+L_v = 2500.8-2.36T-0.0016T^2-0.00006T^3
+$${#eq-Latent-Heat-Vaporization}
 
 ## Long wave Flux Density Stefan Boltzman
 
@@ -197,6 +209,18 @@ $$
 R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)
 $${#eq-Net-Radiation}
 
+## Obukhov Length
+
+$$
+L = - \frac{\bar{T_v} u_*^3}{kg\overline{w^{\prime}T^{\prime}}}k g w0T0
+$${#eq-Obukhov-Length}
+
+## Virtual Temperature
+
+$$
+T_v = (1 + 0.61 r_v) T
+$${#eq-Virtual-Temperature}
+
 ## Phase Shifted Sinusoidal Temperature Wave
 
 $$
@@ -208,6 +232,12 @@ $${#eq-Phase-Shifted-Sinusoidal-Temperature-Wave}
 $$
 E = \frac{2*h*c}{\lambda^{5}}*\frac{1}{e^{\frac{h*c}{\lambda*\sigma_b*T}}-1}
 $${#eq-Planks-Law}
+
+## Potential Temperature
+
+$$
+\theta = T_z + DALR z
+$${#eq-Potential-Temperature}
 
 ## Prata
 

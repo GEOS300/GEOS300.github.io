@@ -1,0 +1,46 @@
+:::: {.columns}
+
+@fig-BB1 shows some pictures of the site from different perspectives.  @fig-map shows an interactive web map with high resolution satellite imagery.  Clicking on "BB" in will zoom to the CA-DBB station and show the site's "Flux Footprint Climatology", which is the average "field of view" of the eddy covariance system at the station.  Clicking the "BB" button again will toggle the footprint later on and off.  You can pan/zoom to get a feel for what the site looks like.  Take note of the scale bar in the bottom left to get a sense for how large the footprint is.  @tbl-dates shows the estimated size of the source area contours.
+
+
+::: {#fig-BB1 layout-ncol=2}
+
+![Looking south from above the in winter](../Lectures/images/BB1_Radiation.jpg){#fig-BB1-RAD}
+
+![Looking south from the EC station](../Lectures/images/BB1_Flux_Sensors.jpg){#fig-BB1-EC}
+
+![Drone image of the EC Station](../images/DJI_0524.JPG){#fig-BB1-Drone}
+
+![Close of up of the EC sensors](../images/EC_System.jpg){#fig-BB1-Sensors}
+
+
+:::
+
+::: {#fig-map}
+
+<div style="overflow: hidden;
+  padding-top: 55%;
+  position: relative">
+<iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0"
+style="border: 0;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 75%;">
+</iframe>
+</div>
+Location of UBC-Micromet Eddy Covariance Stations
+:::
+
+
+Source Area % | Size $m^2$
+--------------|-----------
+90% | 13845
+75% | 2569
+50% | 587
+
+: Footprint climatology for the CA-DBB eddy covariance system, showing the area of the 50%, 75%, and 90% source area contours {#tbl-dates}
+
+::::
+

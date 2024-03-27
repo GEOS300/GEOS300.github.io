@@ -1,0 +1,5 @@
+Following Yao & Rogers (1996), the latent heat of vaporization of water ($L_v$ in $J g^{-1}$) can be approximated as a function of temperature ($T$ in $^{\circ}C$) using a third order polynomial function:
+
+$$
+L_v = 2500.8-2.36T-0.0016T^2-0.00006T^3
+$${#eq-Latent-Heat-Vaporization}

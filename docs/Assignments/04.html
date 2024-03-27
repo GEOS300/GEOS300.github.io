@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.533">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Microscale Weather and Climate - Assignment 4</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+</style>
+
+
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body class="nav-sidebar docked nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="../index.html">
+    <span class="navbar-title">Microscale Weather and Climate</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../index.html"> 
+<span class="menu-text">Syllabus</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Lectures/index.html"> 
+<span class="menu-text">Lectures</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="../Assignments/index.html" aria-current="page"> 
+<span class="menu-text">Assignments</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../Study_Questions/index.html"> 
+<span class="menu-text">Study Questions</span></a>
+  </li>  
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/June-Skeeter"> <i class="bi bi-github" role="img" aria-label="Quarto GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+          <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/04.html">Assignment 4</a></li></ol></nav>
+        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        </a>
+    </div>
+  </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../Assignments/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignments</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Assignments/01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 1</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Assignments/02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 2</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Assignments/03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Assignment 3</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../Assignments/04.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Assignment 4</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../Assignments/index.html">Assignments</a></li><li class="breadcrumb-item"><a href="../Assignments/04.html">Assignment 4</a></li></ol></nav>
+<div class="quarto-title">
+<h1 class="title">Assignment 4</h1>
+<p class="subtitle lead">GEOS 300, 2024</p>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<p>There is no template for this assignment, you can use a .ipynb or .Rmd file from one of your previous assignments as a template to get started.</p>
+<section id="instructions" class="level2">
+<h2 class="anchored" data-anchor-id="instructions">Instructions</h2>
+<p>It is strongly recommended that you complete the assignment in Python or R, although you can complete it in excel/numbers if necessary. They will download the data for you and get you started with a few blocks of code to make plots and tables. If you are electing to complete the lab in excel, you can find all the relevant data files here <a href="https://github.com/GEOS300/AssignmentData/">here</a>. <strong>Note</strong> these data are in .csv format. If you plan to work in excel, you should save a copy of the data in a suitable excel format (e.g., .xlsx) before making any charts or doing any calculations.</p>
+<p>Please upload your answers including all calculations, discussions, tables, and graphs in a single document (PDF or HTML file). Note that you can download your .ipynb file under ‘File <span class="math inline">\(\gg\)</span> Download as <span class="math inline">\(\gg\)</span> HTLM or PDF via Latex’ and submit this as your report. Label the report document with your name and your student number. Upload your answers to Canvas. <strong>Do not attach a spreadsheet.</strong></p>
+<p><strong>Make Sure</strong> your student number is include on each plot you produce, and that each plot is using the correct units.</p>
+</section>
+<section id="ca-dbb-flux-station" class="level2">
+<h2 class="anchored" data-anchor-id="ca-dbb-flux-station">CA DBB Flux Station</h2>
+<p>In this lab, assignment, you’re going to go back to look at more data from the CA-DBB (aka “BB”) Eddy Covariance (EC) Station located in Delta, BC. We’re going to look specifically at a single day of EC observations to consider how the energy and mass flow through the ecosystem over a daily cycle.</p>
+<div class="columns">
+<p><a href="#fig-BB1" class="quarto-xref">Figure&nbsp;1</a> shows some pictures of the site from different perspectives. <a href="#fig-map" class="quarto-xref">Figure&nbsp;2</a> shows an interactive web map with high resolution satellite imagery. Clicking on “BB” in will zoom to the CA-DBB station and show the site’s “Flux Footprint Climatology”, which is the average “field of view” of the eddy covariance system at the station. Clicking the “BB” button again will toggle the footprint later on and off. You can pan/zoom to get a feel for what the site looks like. Take note of the scale bar in the bottom left to get a sense for how large the footprint is. <a href="#tbl-dates" class="quarto-xref">Table&nbsp;2</a> shows the estimated size of the source area contours.</p><div id="fig-BB1" class="quarto-layout-panel">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-BB1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-RAD" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-RAD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Lectures/images/BB1_Radiation.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-RAD-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Looking south from above the in winter
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-EC" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../Lectures/images/BB1_Flux_Sensors.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-EC-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b) Looking south from the EC station
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-Drone" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-Drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/DJI_0524.JPG" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-Drone-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(c) Drone image of the EC Station
+</figcaption>
+</figure>
+</div>
+</div>
+<div class="quarto-layout-cell-subref quarto-layout-cell" data-ref-parent="fig-BB1" style="flex-basis: 50.0%;justify-content: flex-start;display: flex;">
+<div id="fig-BB1-Sensors" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-subfloat-fig figure">
+<div aria-describedby="fig-BB1-Sensors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/EC_System.jpg" class="img-fluid figure-img" data-ref-parent="fig-BB1">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-BB1-Sensors-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(d) Close of up of the EC sensors
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-BB1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;1
+</figcaption>
+</figure>
+</div><div id="fig-map" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div style="overflow: hidden;
+  padding-top: 55%;
+  position: relative">
+<iframe src="https://ubc-micromet.github.io/FieldSiteMaps/" title="Processes" scrolling="no" frameborder="0" style="border: 0;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 75%;">
+</iframe>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;2: Location of UBC-Micromet Eddy Covariance Stations
+</figcaption>
+</figure>
+</div><div id="tbl-dates" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;1: Footprint climatology for the CA-DBB eddy covariance system, showing the area of the 50%, 75%, and 90% source area contours
+</figcaption>
+<div aria-describedby="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Source Area %</th>
+<th>Size <span class="math inline">\(m^2\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>90%</td>
+<td>13845</td>
+</tr>
+<tr class="even">
+<td>75%</td>
+<td>2569</td>
+</tr>
+<tr class="odd">
+<td>50%</td>
+<td>587</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</div>
+<p>The data-set includes half-hourly values of the following variables: absolute temperature <span class="math inline">\(\overline{T}\)</span> at 0.4 m and 2 m above ground in <span class="math inline">\(^{\circC}\)</span>, mean horizontal wind <span class="math inline">\(\overline{u}\)</span> at 0.4 and 2 m above ground in <span class="math inline">\(m s^-1\)</span>, net all wave radiation <span class="math inline">\(R_n\)</span> at 5 m above ground in <span class="math inline">\(W m^{-2}\)</span>, air pressure <span class="math inline">\(P_a\)</span> in <span class="math inline">\(hPa\)</span>, photon flux density in <span class="math inline">\(\rm{\mu mol}\,\rm{m}^{-2} \rm{s}^{-1}\)</span> and measured covariances <span class="math inline">\(\overline{u^{\prime}w^{\prime}}\)</span>, <span class="math inline">\(\overline{w^{\prime}T^{\prime}}\)</span>, <span class="math inline">\(\overline{w^{\prime}\rho_v^{\prime}}\)</span>, and <span class="math inline">\(\overline{u^{\prime}\rho_{\rm{CO}_2}^{\prime}}\)</span>, all measured at 2 m above ground using an eddy covariance system. Here <span class="math inline">\(u^{\prime}\)</span> and <span class="math inline">\(w^{\prime}\)</span> are instantaneous horizontal and vertical winds in <span class="math inline">\(m s^-1\)</span>, respectively, <span class="math inline">\(\rho_v\)</span> is absolute humidity in <span class="math inline">\(\rm{g}\,\rm{m}^{-3}\)</span>, and <span class="math inline">\(\rho_{\rm{CO}_2}\)</span> is the molar density of the greenhouse gas carbon dioxide (in <span class="math inline">\(\rm{\mu mol}\,\rm{m}^{-3}\)</span>).</p>
+<div id="tbl-dates" class="quarto-float anchored">
+<figure class="quarto-float quarto-float-tbl figure">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table&nbsp;2: The file you are responsible for analyzing, named by date in YYYY (Year) mm (month) dd (day) format. If you are completing the assignment using Python or R, use one of the example from the previous assignments to format your data download command. Assignment 2 is a good template; you just need to change three things: 1) use the following url https://raw.githubusercontent.com/GEOS300/AssignmentData/main/CA_DBB_DailyData/20150728.txt 2) update the filename and 3) the date column is named “Date/Time (PST)”. <em>Note</em> if you are using R, the default behavior of the language is to substitute all non-alphanumeric characters (slashes, underscores, primes, etc.) with a “.” character, so your column names will not perfectly match notation used in the file. You can also view/download your data files <a href="https://github.com/GEOS300/AssignmentData/tree/main/CA_DBB_DailyData">here</a>.
+</figcaption>
+<div aria-describedby="tbl-dates-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<table class="table">
+<thead>
+<tr class="header">
+<th>Last digit of student number</th>
+<th>filename</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>0</td>
+<td>20160620.txt</td>
+</tr>
+<tr class="even">
+<td>1</td>
+<td>20160723.txt</td>
+</tr>
+<tr class="odd">
+<td>2</td>
+<td>20160725.txt</td>
+</tr>
+<tr class="even">
+<td>3</td>
+<td>20160726.txt</td>
+</tr>
+<tr class="odd">
+<td>4</td>
+<td>20160727.txt</td>
+</tr>
+<tr class="even">
+<td>5</td>
+<td>20160728.txt</td>
+</tr>
+<tr class="odd">
+<td>6</td>
+<td>20160729.txt</td>
+</tr>
+<tr class="even">
+<td>7</td>
+<td>20160730.txt</td>
+</tr>
+<tr class="odd">
+<td>8</td>
+<td>20160731.txt</td>
+</tr>
+<tr class="even">
+<td>9</td>
+<td>20160804.txt</td>
+</tr>
+</tbody>
+</table>
+</div>
+</figure>
+</div>
+</section>
+<section id="question-1" class="level2">
+<h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p>Download your data and print descriptive statistics for all columns. How do maximum and minimum air temperature at 0.4 m compare to those at 2.0 m?</p>
+</section>
+<section id="question-2" class="level2">
+<h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p>Convert the air temperature <span class="math inline">\(T\)</span> values at 0.4 m and 2.0 m to potential temperature <span class="math inline">\(\Theta\)</span>. Recalculate the descriptive statistics for <span class="math inline">\(\Theta_{z=0.4}\)</span> and <span class="math inline">\(\Theta_{z=2}\)</span>; how does this adjustment impact the values?</p>
+</section>
+<section id="question-3" class="level2">
+<h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
+<p>From the data-set provided, calculate <span class="math inline">\(H\)</span>, <span class="math inline">\(LE\)</span> and <span class="math inline">\(F_{CO2}\)</span> from the covariances of <span class="math inline">\(\overline{w^{\prime}T^{\prime}}\)</span>, <span class="math inline">\(\overline{w^{\prime}\rho_v^{\prime}}\)</span>, and <span class="math inline">\(\overline{u^{\prime}\rho_{\rm{CO}_2}^{\prime}}\)</span> respectively. You can assume that the heat capacity of air is 0.0012 MJ m<sup>-3</sup> K<sup>-1</sup>. You can estimate the density of air <span class="math inline">\(\rho\)</span> using the Ideal Gas Law <a href="#eq-Ideal-Gas-Law" class="quarto-xref">Equation&nbsp;1</a> and you can estimate the latent heat of vaporization following <a href="#eq-Latent-Heat-Vaporization" class="quarto-xref">Equation&nbsp;2</a>:</p>
+<p><span id="eq-Ideal-Gas-Law"><span class="math display">\[
+PV=nRT
+\tag{1}\]</span></span></p>
+<p>here,<span class="math inline">\(R\)</span> is the ideal gas constant (<span class="math inline">\(8.31446261815324 Pa\ m^3\ mol^{-1} K ^{-1}\)</span>), <span class="math inline">\(T\)</span> is temperature (in Kelvin!), <span class="math inline">\(P\)</span> is air pressure, <span class="math inline">\(V\)</span> is volume, <span class="math inline">\(n\)</span> is the amount of the gas in mols; with <span class="math inline">\(n=m/M\)</span>, where <span class="math inline">\(m\)</span> is mass and <span class="math inline">\(M\)</span> is the molar mass. The molar mass of air is <span class="math inline">\(\approx .028964 kg mol^{-1}\)</span></p>
+<p>Following Yao &amp; Rogers (1996), the latent heat of vaporization of water (<span class="math inline">\(L_v\)</span> in <span class="math inline">\(J g^{-1}\)</span>) can be approximated as a function of temperature (<span class="math inline">\(T\)</span> in <span class="math inline">\(^{\circ}C\)</span>) using a third order polynomial function:</p>
+<p><span id="eq-Latent-Heat-Vaporization"><span class="math display">\[
+L_v = 2500.8-2.36T-0.0016T^2-0.00006T^3
+\tag{2}\]</span></span></p>
+</section>
+<section id="question-4" class="level2">
+<h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
+<p>Create a graph with time of day on the <span class="math inline">\(x\)</span>-axis and the three measured flux densities of the surface energy balance (<span class="math inline">\(R_n\)</span>, <span class="math inline">\(H\)</span>, <span class="math inline">\(H\)</span>) on the <span class="math inline">\(y\)</span>-axis. Briefly discuss their diurnal course. Do <span class="math inline">\(H\)</span> and <span class="math inline">\(LE\)</span> sum to <span class="math inline">\(R_n\)</span>? If not, why?</p>
+</section>
+<section id="question-5" class="level2">
+<h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
+<p>For 16:00, Calculate <span class="math inline">\(H\)</span> based on the aerodynamic method using the simultaneously measured profiles of <span class="math inline">\(\overline{u}\)</span> and <span class="math inline">\(\overline{T}\)</span>. How does the value of <span class="math inline">\(H\)</span> compare to <span class="math inline">\(H\)</span> in your answer to question 2? Why could it differ?</p>
+</section>
+<section id="question-6" class="level2">
+<h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
+<p>Using the covariances and the profile measurements, calculate the eddy diffusivities for sensible heat <span class="math inline">\(K_H\)</span> and momentum <span class="math inline">\(K_M\)</span> at 16:00. Is Reynold’s analogy fulfilled or not at 16:00?</p>
+</section>
+<section id="question-7" class="level2">
+<h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
+<p>For 16:00, calculate the Obukhov-length <span class="math inline">\(L\)</span> and the stability parameter <span class="math inline">\(\zeta = z/L\)</span>. Does <span class="math inline">\(\zeta\)</span> qualitatively agree with <span class="math inline">\(Rf\)</span>? Is <span class="math inline">\(\zeta = z/L\)</span> really indicating `neutral’ as assumed in using the aerodynamic method above?</p>
+</section>
+<section id="question-8" class="level2">
+<h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
+<p>In the process of photosynthesis, energy is extracted from photons in the PAR range. To assimilate one mole of <span class="math inline">\(\rm{CO}_2\)</span>, it requires an energy of 469 kJ. The same amount is released back during respiration (metabolism, decomposition of organic matter). We call this energy flux density the <em>net biochemical energy storage</em> <span class="math inline">\(\Delta P\)</span>. Calculate <span class="math inline">\(\Delta P\)</span> at 13:00 in <span class="math inline">\(\rm{W}\,\rm{m}^{-2}\)</span>. At 13:00, what fraction of <span class="math inline">\(R_n\)</span> is used up in the process of photosynthesis? Is <span class="math inline">\(\Delta P\)</span> a relevant term in the surface energy balance of this bog or not?</p>
+</section>
+<section id="question-9" class="level2">
+<h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
+<p>Determine the average carbon dioxide (<span class="math inline">\(\rm{CO}_2\)</span>) flux density between the bog and the atmosphere for this day and convert it to <span class="math inline">\(\rm{g}\,\rm{CO}_2\,\rm{m^{-2}}\,\rm{day}^{-1}\)</span>. Is the surface a net sink or net source for atmospheric <span class="math inline">\(\rm{CO}_2\)</span> on this day? Note: the molar mass of <span class="math inline">\(\rm{CO}_2\)</span> 44.01 <span class="math inline">\(g mol^{-1}\)</span></p>
+</section>
+<div class="columns">
+<section id="extra-credit-self-guided-field-trip" class="level1">
+<h1>Extra Credit: Self guided field trip</h1>
+<p><strong>Note</strong> the extra credit is due with the final exam. Don’t submit the extra credit with Assignment 4! There will be a space to upload your extra credit on canvas in the exam!</p>
+<p>The CA-DBB eddy covariance station is located within the Burns Bog Ecological Conservancy Area. It is a large peatland area that is being actively managed to restore the the ecosystem after decades of peat harvesting and mismanagement. Public access to the bog is prohibited, so we can’t take a field trip to visit the site. However, you can visit a (much smaller) restored peatland, which is only 30 minutes away from UBC! The <a href="http://camosunbog.ca/restoration-methods/">Camosun Bog</a> is a restored remnant of a once much larger peat bog, located on the eastern edgy of Pacific Spirit Park. The entrance to the bog is a 6 minute walks south along Camosun street from 16th avenue, and it can easily accessible from UBC by bus via the 25 or 33 bus <a href="#fig-Camosun-Map" class="quarto-xref">Figure&nbsp;3</a>. The bog has a short elevated boardwalk <a href="#fig-Camosun-Map2" class="quarto-xref">Figure&nbsp;4</a> path with informational signs <a href="#fig-Camosun-Sign" class="quarto-xref">Figure&nbsp;5</a> that allows visitors to explore this unique urban-peatland without disturbing the fragile ecosystem. The bog is centered on “Devils Hole” (<a href="#fig-Camosun-Pond" class="quarto-xref">Figure&nbsp;6</a>), a restored pond area surrounded by a small open sphagnum peatland that grades into the surrounding forested landscape.</p>
+<div id="fig-Camosun-Map" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Camosun-Map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Camosun.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Camosun-Map-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;3: Transit access to Camosun Bog
+</figcaption>
+</figure>
+</div>
+<div id="fig-Camosun-Map2" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Camosun-Map2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="http://camosunbog.ca/wp-content/uploads/2017/12/26036951_525706821133853_1428030430_o-768x564.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Camosun-Map2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;4: Illustrative map of Camosun Bog
+</figcaption>
+</figure>
+</div>
+<div id="fig-Camosun-Sign" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Camosun-Sign-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/Camosun_sign.png" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Camosun-Sign-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;5: Pond in Camosun Bog
+</figcaption>
+</figure>
+</div>
+<div id="fig-Camosun-Pond" class="quarto-figure quarto-figure-center quarto-float anchored">
+<figure class="quarto-float quarto-float-fig figure">
+<div aria-describedby="fig-Camosun-Pond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="../images/CamosunBog.jpg" class="img-fluid figure-img">
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-Camosun-Pond-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure&nbsp;6: Informational Signage at Camosun Bog
+</figcaption>
+</figure>
+</div>
+<section id="extra-credit-tasks" class="level2">
+<h2 class="anchored" data-anchor-id="extra-credit-tasks">Extra Credit Tasks!</h2>
+<ol type="1">
+<li><p>Visit the Camosun Bog! Go to the Camosun Bog, walk around the boardwalk area, read the interpretive signs, and check out the unique ecosystem. Take a selfie from the bog (or group photo if you visit with classmates!) with the bog clearly visible in the background to verify your visit. If you aren’t comfortable taking a selfie, a photo from the bog that includes your student number written on a piece of paper with the bog clearly visible in the background is also sufficient to verify your visit.</p></li>
+<li><p>Write a brief description of the bog (1 paragraph). How does it compare (sights, sounds, smells) to the surrounding area (forest and residential neighborhood).</p></li>
+<li><p>The Camosun Bog restoration group is interested in measuring the water balance of the bog to ensure their restoration efforts will be effective over the long-term in a changing climate. They are considering installing an eddy covariance system, similar to the CA-DBB eddy covariance station in Burns Bog to measure evapotranspiration at the site. Do you think this would be an effective approach at this location? Why or why not? <em>Hint</em> you can zoom out / pan / zoom in on the map from assignment 4 to view the Camosun Bog with high resolution satellite imagery.</p></li>
+</ol>
+</section>
+</section>
+</div>
+
+
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

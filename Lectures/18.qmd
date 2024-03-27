@@ -14,12 +14,10 @@ format:
 jupyter: python3
 engine: knitr
 title: Eddy Covariance
+subtitle: Measuring scalar transport via turbulent exchange
 ---
 
 {{< include _imports.qmd >}}
-
-
-
 
 
 ## Learning Objectives {.smaller}
@@ -30,7 +28,7 @@ title: Eddy Covariance
 ::: {.column width="50%"}
 
 * Describe the eddy covariance approach & what observations are required to measure flux densities using this approach.
-* Describe the equations used to calculate QH, QE and trace gas fluxes.
+* Describe the equations used to calculate H, LE and trace gas fluxes.
 * Be able to interpret eddy covariance observations of Net Ecosystem Exchange (NEE).
 
 :::
@@ -45,7 +43,13 @@ title: Eddy Covariance
 ::::
 
 
+## iClicker 
 
+How do you submit the extra credit field trip assignment?
+
+* A: Submit on Canvas as part of Assignment 4
+* B: Submit on Canvas in the Final Exam
+* C: Email it in anytime before the Final Exam
 
 
 
@@ -60,8 +64,6 @@ title: Eddy Covariance
 Turbulence and associated eddies transport not only momentum but also heat and mass. 
 
 * Turbulence is the **most** relevant vertical transport mechanism in the ABL.
-
-
 
 :::
 
@@ -87,18 +89,16 @@ Turbulence and associated eddies transport not only momentum but also heat and m
 
 ## Test your knowledge
 
-What temperature profile do those observations correspond to? A (Nighttime) or B (daytime)
+What temperature profile do those observations correspond to? A (daytime) or B (nighttime)
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
 
-![](images/18_6_3.png)
+![](images/18_7_5.png)
 
 
-
-![](images/18_6_4.png)
 
 :::
 
@@ -112,24 +112,22 @@ What temperature profile do those observations correspond to? A (Nighttime) or B
 ::::
 
 
-## Daytime Joint Probability Density $w^{\prime} T^{\prime}$
+## Daytime Joint PDF $w^{\prime} T^{\prime}$ {.smaller}
 
 :::: {.columns}
 
-::: {.column width="50%"}
-
-
-Sensible heat flux transports energy away from the surface:
-
-$\overline{w^\primeT^\prime} > 0$
+::: {.column width="40%"}
 
 
 
-![](images/18_7_5.png)
+
+
+![Sensible heat flux transports energy away from the surface: $\overline{w^{\prime}T^{\prime}} > 0$](images/18_6_4.png)
+
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 
 
@@ -156,27 +154,21 @@ Figure 2 very clearly illustrates how the product of w’ and T’ combine to pr
 
 
 
-## Nighttime Joint Probability Density $w^{\prime} T^{\prime}$
+## Nighttime Joint PDF $w^{\prime} T^{\prime}$ {.smaller}
 
 
 :::: {.columns}
 
-::: {.column width="50%"}
+::: {.column width="40%"}
 
 
 
-Sensible heat flux transports energy away from the surface:
-
-$\overline{w^\primeT^\prime} < 0$
-
-
-
-![](images/18_7_5.png)
+![Sensible heat flux transports energy *towards* from the surface: $\overline{w^{\prime}T^{\prime}} < 0$](images/18_6_3.png)
 
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 
 
 
@@ -194,16 +186,26 @@ $\overline{w^\primeT^\prime} < 0$
 Turbulence is the most relevant vertical transport mechanism in the ABL.
 
 :::
-<!-- 
 
-## Covariance and flux densities (1/2)
+## Covariance and flux densities (1/2) {.smaller}
 
 The vertical flux density of an entity $c$ is defined as:
 
-* Flux density = air density $\times$ vertical velocity $\times$ concentration of c 
-* For some entity $c$, its average flux density is hence
+* Flux density (amount of c $m^{-2} s^{-1}$) = air density ($kg\ m^{-3}$) $\times$ vertical velocity ($m s^{-1}$) $\times$ the amount of c (units vary)
 
-* $F_c (m^{-2} s^{-1}) = \rho (kg\ m^{-3}) \times w (m s^{-1}) \times c (kg^{-1})$
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+* For some entity $c$, the general form for average flux density is:
+
+$$
+F_c = \overline{\rho w c }
+$${#eq-Flux-Density-General}
+
 
 
 :::
@@ -211,13 +213,16 @@ The vertical flux density of an entity $c$ is defined as:
 ::: {.column width="50%"}
 
 
+*Recall:* applying Reynolds decomposition to each component:
 
+$$
+\begin{align}
+\rho=\bar{\rho}+\rho^{\prime} \\ \nonumber
+w=\bar{w}+w^{\prime} \\ \nonumber
+c=\bar{c}+c^{\prime} \\ \nonumber
+\end{align}
+$$
 
-![](images/18_12_3.png)
-
-
-
-![](images/18_12_5.png)
 
 
 :::
@@ -232,7 +237,7 @@ The eddy covariance method is based on the turbulent transport theory in the sur
 
 All atmospheric entities show short-period fluctuations about their longer term mean value. This is the result of turbulence which causes eddies to move continually around carrying with them their properties derived elsewhere. 
 
-extensive site mass continuity requires that as much air moves up as moves down over a reasonable period of time (e.g. 10 min); and the detail of the fluctuating trace gives the value of w0 at any instant as a positive or negative quantity depending upon whether it is above the mean (an updraft) or below it (a downdraft). 
+Extensive site mass continuity requires that as much air moves up as moves down over a reasonable period of time (e.g. 10 min); and the detail of the fluctuating trace gives the value of w0 at any instant as a positive or negative quantity depending upon whether it is above the mean (an updraft) or below it (a downdraft). 
 
 The properties contained by, and therefore transported with, an eddy are its mass (which by considering unit volume is given by its density, (⇢), its vertical velocity (w) and the volumetric content of any entity it possesses (s). Since each one can be broken into a mean and a fluctuating part the mean vertical flux density of the entity (S) can therefore be written 
 
@@ -240,58 +245,19 @@ The properties contained by, and therefore transported with, an eddy are its mas
 :::
 
 
+## Covariance and flux densities (2/2)
 
+Close to the surface, $\bar{w} \rightarrow 0$ and $\rho^{\prime} \approx 0$, therefore, @eq-Flux-Density-General reduces to:
 
----
+$$
+F_c = \overline{\bar{\rho}w^{\prime}(\bar{c}+c^{\prime})} = \overline{\bar{\rho}(w^{\prime}\bar{c}+w^{\prime}c^{\prime})} \nonumber
+$$
 
+Recalling that $\overline{\bar{c}\times w^{\prime}} =0$; a flux density can be expressed in terms of the correlation coefficient:
 
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-A flux density can be also expressed in terms of the correlation coefficient:
-
-* = 0 
-* since constant x w’ → 0 (see lecture 18).
-
-Covariance and flux densities (2/2)
-
-
-Close to the surface,               and                hence 
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_15_3.png)
-
-
-
-![](images/18_15_4.png)
-
-
-
-![](images/18_15_5.png)
-
-
-
-![](images/18_15_6.png)
-
-
-
-![](images/18_15_8.png)
-
-
-:::
-
-::::
-
+$$
+F_c = \rho \overline{w^{\prime}c^{\prime}}
+$${#eq-Flux-Correlation}
 
 ::: {.notes}
 
@@ -307,208 +273,27 @@ Flux  = turbulent fluctuations in vertical wind and the scalar, and then computi
 
 
 
----
 
 
-:::: {.columns}
+## A Helpful Explanation
 
-::: {.column width="50%"}
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CR4Anc8Mkas?si=vqY25OdKfkpsGRHm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+## Measuring Sensible Heat Flux Density H by EC
 
-A flux density can be also expressed in terms of the correlation coefficient:
+The instantaneous sensible heat flux density is (in W m-2):
 
-* = 0 
-* since constant x w’ → 0 (see lecture 18).
+$$
+H = C_a w^{\prime}T^{\prime}  \nonumber
+$${#eq-Sensible-Heat-EC}
 
-Covariance and flux densities (2/2)
+Averaging and substituting $\rho c_a$ gives:
 
+$$
+H = \rho c_a \overline{w^{\prime}T^{\prime}}
+$${#eq-Sensible-Heat-EC}
 
-Close to the surface,               and                hence 
 
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_15_3.png)
-
-
-
-![](images/18_15_4.png)
-
-
-
-![](images/18_15_5.png)
-
-
-
-![](images/18_15_6.png)
-
-
-
-![](images/18_15_8.png)
-
-
-:::
-
-::::
-
-
-::: {.notes}
-
-First, all terms involving a single primed quantity are eliminated because by definition the average of all their fluctuations equals zero (i.e. we lose the second, third and fifth terms). 
-Second, we may neglect terms involving fluctuations of density since air density is considered to be virtually constant in the lower atmosphere (i.e. we lose the sixth, seventh and eighth terms. 
-Third, if observations are restricted to uniform terrain without areas of preferred vertical motion (i.e. no ‘hotspots’ or standing waves) we may neglect terms containing the mean vertical velocity, as w = 0 (i.e. we lose also the first term). With these assumptions equation 9.26 reduces to the form of the relation underlying the eddy fluctuation approach.
-Redefine correlation coefficient
-Flux  = turbulent fluctuations in vertical wind and the scalar, and then computing the covariance between the two.
-
-
-:::
-
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-A flux density can be also expressed in terms of the correlation coefficient:
-
-
-Covariance and flux densities (2/2)
-
-
-Close to the surface,               and                hence 
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_15_3.png)
-
-
-
-![](images/18_15_4.png)
-
-
-
-![](images/18_15_5.png)
-
-
-
-![](images/18_15_6.png)
-
-
-
-![](images/18_15_8.png)
-
-
-:::
-
-::::
-
-
-::: {.notes}
-
-First, all terms involving a single primed quantity are eliminated because by definition the average of all their fluctuations equals zero (i.e. we lose the second, third and fifth terms). 
-Second, we may neglect terms involving fluctuations of density since air density is considered to be virtually constant in the lower atmosphere (i.e. we lose the sixth, seventh and eighth terms. 
-Third, if observations are restricted to uniform terrain without areas of preferred vertical motion (i.e. no ‘hotspots’ or standing waves) we may neglect terms containing the mean vertical velocity, as w = 0 (i.e. we lose also the first term). With these assumptions equation 9.26 reduces to the form of the relation underlying the eddy fluctuation approach.
-Redefine correlation coefficient
-Flux  = turbulent fluctuations in vertical wind and the scalar, and then computing the covariance between the two.
-
-
-:::
-
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="100%"}
-
-
-The eddy-covariance approach (EC)
-
-
-Source: https://www.youtube.com/watch?v=CR4Anc8Mkas
-
-
-
-:::
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-Averaging:
-
-
-Where cp is the specific heat of air at constant pressure.
-
-
-Since                     we can write:
-
-
-Measuring sensible heat flux density QH by EC
-
-* The instantaneous sensible heat flux density is (in W m-2):
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_17_3.png)
-
-
-
-![](images/18_17_4.png)
-
-
-
-![](images/18_17_5.png)
-
-
-
-![](images/18_17_10.png)
-
-
-:::
-
-::::
 
 
 ::: {.notes}
@@ -519,103 +304,49 @@ Specific heat: kJ kg-1 K-1
 
 
 
-
----
-
-
-:::: {.columns}
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::: {.column width="100%"}
-
-
+## A Typical Setup
 
 
 ![](images/18_18_0.png)
 
 
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::: {.column width="100%"}
-
-
+## A Typical Setup
 
 
 ![](images/18_19_3.jpg)
 
 
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::: {.column width="100%"}
-
-
+## Fast Response Temperature
 
 
 ![](images/18_20_1.png)
 
 
-:::
-
-::::
+## Sensible heat flux vs. momentum flux
 
 
+![](images/18_21_2.png)
 
----
 
+## Sensible heat flux vs. momentum flux (iClicker)
+
+Which (if either) of these joint probability distributions would you expect to have an inverted relationship at nighttime?
 
 :::: {.columns}
 
 ::: {.column width="50%"}
 
-
-Sensible heat flux vs. momentum flux
-
-
+* A Sensible Heat Flux
+* B Momentum Flux
+* C Both
+* D Neither
 
 :::
 
 ::: {.column width="50%"}
 
 
-
-
 ![](images/18_21_2.png)
-
 
 :::
 
@@ -629,41 +360,21 @@ Because u is increasing with height, the horizontal momentum flux is negative t
 :::
 
 
+## Latent heat flux density LE
 
 
----
+The instantaneous latent heat flux density is (in W m-2):
 
+$$
+LE = L_v w^{\prime}\rho_v^{\prime} \nonumber
+$${#eq-Latent-Heat-EC}
 
-:::: {.columns}
+Where $\rho_v$ is the partial vapor density of water (aka absolute humidity) and $L_v$ is the latent heat of vaporization in $J \ kg^{-1}$ (see next slide).  Averaging gives:
 
-::: {.column width="50%"}
+$$
+H = L_v \overline{w^{\prime}\rho_v^{\prime}}
+$${#eq-Latent-Heat-EC}
 
-
-Latent heat flux density QE
-
-
-Averaging over a longer period results in the covariance (Lv ~constant):
-
-* The instantaneous latent heat flux density is (in W m-2):
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_22_6.png)
-
-
-
-![](images/18_22_7.png)
-
-
-:::
-
-::::
 
 
 ::: {.notes}
@@ -674,272 +385,82 @@ measure mole density, not mixing ratio
 :::
 
 
-
-
----
-
+## Latent Heat of Vaporization {.smaller}
 
 :::: {.columns}
+::: {.column width="50%"}
 
-::: {.column width="0%"}
+{{< include ../_Equations/Latent-Heat-Vaporization.qmd >}}
 
-
+While $L_v$ varies as a function of $T$; over small temperature ranges, the differences are negligible
 
 :::
+::: {.column width="50%"}
 
-::: {.column width="100%"}
+```{python}
+import numpy as np
+import matplotlib.pyplot as plt
+T = np.linspace(-25,40)
+L_v = 2500.8-2.36*T-0.0016*T**2-0.00006*T**3
+plt.figure()
+plt.plot(T,L_v)
+plt.xlabel('Temp deg. C')
+plt.ylabel('Latent Heat of Vaporization J kg^-1')
+```
 
+:::
+::::
+
+
+## A Typical Setup
 
 
 
 ![](images/18_23_0.png)
 
 
-:::
-
-::::
 
 
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::: {.column width="100%"}
-
-
+## A Typical Setup
 
 
 ![](images/18_24_0.png)
 
 
-:::
 
-::::
+## Mass trace gas flux
 
-
-
+If we equip an eddy covariance system with an analyzer that measures fast fluctuations of the **molar density** of any trace gas $\rho_c^{\prime}$ (e.g. µmol m-3) we can directly determine the gas-exchange (molar flux) between a land surface and the atmosphere:
 
 
+$$
+F_c = \overline{w^{\prime}\rho_c^{\prime}}
+$${#eq-Gas-FLux-EC}
 
 
-## https://youtu.be/qhWem_mXyX8
-
-
-:::: {.columns}
-
-::: {.column width="100%"}
-
-
-Eddy covariance in Boundary Bay, Delta, BC
+To convert a molar trace gas flux to a mass flux, you multiply by the molar mass M ($\rm{g} \ \rm{mol}^{-1}$) of the compound.  For example the molar mass of $\rm{CO}_2$ is 44.01 $\rm{g} \ \rm{mol}^{-1}$
 
 
 
-:::
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::::
-
-
-
-
-
-
-
-## Check out this link: https://www.youtube.com/watch?v=63Ho07nCYjY
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-360 video of the Boundary Bay EC system
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_26_2.png)
-
-
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="0%"}
-
-
-
-:::
-
-::: {.column width="100%"}
-
+## A Typical Setup
 
 
 
 ![](images/18_27_0.png)
 
+## Measuring the ‘breathing’ of our biosphere
 
-:::
+![Net Ecosystem Exchange (of CO<sub>2</sub>) and Latent Heat (Energy) Fluxes over a year at a salt marsh in Delta, BC](videos/NEE_vid.mp4)
 
-::::
+## Net Ecosystem Exchange
 
+Fluxes of carbon dioxide (CO<sub>2</sub>) are of particular concern for micrometeorologists, climate scientists, and ecologists because of the role ecosystem-scale CO<sub>2</sub> exchange plays in the global climate system.
 
+* Measurements of Net Ecosystem Exchange (NEE) are an important component of monitoring the effects of an predicting the progression of climate change!
 
----
+## FLUXNET – a global network of EC sites
 
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-vertical wind(m s-1)
-
-
-Mass trace gas flux(g m-2 s-1)
-
-
-To convert a molar trace gas flux to a mass flux, you multiply by the molar mass ℳ (g mol-1) of the compound:
-
-
-molar density(µmol m-3)
-
-
-Molar trace gas flux(mol m-2 s-1)
-
-
-Measuring trace gas fluxes
-
-
-Molar trace gas flux(µmol m-2 s-1)
-
-
-If we equip an eddy covariance system with an analyzer that measures fast fluctuations of the molar density of any trace gas ρc’ (e.g. µmol m-3) we can directly determine the gas-exchange (molar flux) between a land surface and the atmosphere:
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_28_1.png)
-
-
-
-![](images/18_28_12.png)
-
-
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-CO2 uptake
-
-
-CO2 uptake
-
-
-Net ecosystem exchange (NEE, gC m-2 d-1)
-
-
-CO2 release
-
-
-CO2 release
-
-
-Measuring the ‘breathing’ of our biosphere
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_29_4.png)
-
-
-
-![](images/18_29_5.jpg)
-
-
-:::
-
-::::
-
-
-
----
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-
-
-Source: http://fluxnet.fluxdata.org/
-
-
-FLUXNET – a global network of EC sites
-
-
-
-:::
-
-::: {.column width="50%"}
-
-
-
-
-![](images/18_30_2.jpg)
-
-
-:::
-
-::::
+![Source: http://fluxnet.fluxdata.org/](images/18_30_2.jpg)
 
 
 
@@ -976,7 +497,7 @@ Visualizing eddy covariance data (30 min avg data)
 
 
 
-## Jung et al. 2020 Biogeosciences
+## Research example – upscaling EC to the global scale
 
 
 :::: {.columns}
@@ -984,7 +505,11 @@ Visualizing eddy covariance data (30 min avg data)
 ::: {.column width="50%"}
 
 
-Research example – upscaling EC obs to the global scale
+![](images/18_32_1.png)
+
+
+
+
 
 
 
@@ -995,11 +520,7 @@ Research example – upscaling EC obs to the global scale
 
 
 
-![](images/18_32_1.png)
-
-
-
-![](images/18_32_2.png)
+![Jung et al. 2020 Biogeosciences](images/18_32_2.png)
 
 
 
@@ -1011,28 +532,19 @@ Research example – upscaling EC obs to the global scale
 ::::
 
 
-
----
-
-
-:::: {.columns}
-
-::: {.column width="100%"}
+## Key Components of an EC System
 
 
-Take home points
 
-* By simultaneously measuring vertical wind and a concentration, we can measure turbulent fluxes using the eddy-covariance technique.
-* Eddy-covariance can be used to directly measure the sensible heat flux density using QH = ρ cp w’T’
-* We can track the flux of water vapour and measure the latent heat flux density using QE = Lv  w’ρv’
-* To measure traces gas fluxes we use the covariance between the molar density and the vertical wind (w’ρc’)
-* Eddy covariance observations can help inform carbon cycle & climate science 
+![](images/19_2_1.jpg)
 
 
-:::
 
-::: {.column width="0%"}
 
+## 1. Net all-wave radiometer
+
+
+![Measures total incoming and outdoing radiation (short- and long-wave)](images/19_3_2.jpg)
 
 
 :::
@@ -1040,16 +552,8 @@ Take home points
 ::::
 
 
-::: {.notes}
 
-rhov  = absolute humidity
-
-:::
-
-
-
-
----
+## 2. 3-D Sonic Anemometer
 
 
 :::: {.columns}
@@ -1057,18 +561,44 @@ rhov  = absolute humidity
 ::: {.column width="50%"}
 
 
-Day
+![](images/19_4_1.png)
+
+:::
+
+::: {.column width="50%"}
 
 
-Night
+![Travel time of sound pulses between transducers is effected to speed of wind](images/19_5_1.png)
+
+:::
+
+::::
 
 
-Fill-in the joint probability density for w’T’
+
+## 3. Fine-Wire Thermocouple
+
+![Gives fast response, high-precisions temperatures observations.](images/19_6_1.png)
 
 
-Activity
 
 
+## 4. Infrared CO2/H2O gas analyzer
+
+
+![The gas analyzer operates by measuring the absorption of infrared radiation at different wavelengths.](images/19_7_1.png)
+
+
+
+## 5. Soil heat flux plate 
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+![](images/19_8_1.png)
 
 :::
 
@@ -1077,17 +607,41 @@ Activity
 
 
 
-![](images/18_34_3.png)
-
-
-
-![](images/18_34_6.png)
-
-
-
-![](images/18_34_7.png)
+![](images/19_8_3.png)
 
 
 :::
 
-:::: -->
+::::
+
+
+
+## Chamber measurements of GHG fluxes
+
+Chambers placed over the soil can measure soil GHG fluxes at even smaller scales.  This requires placing the chamber on top of the soil and measuring the change in gas concentration over time
+
+
+![](images/19_11_2.png)
+
+
+
+## Chamber measurements of GHG fluxes
+
+Fluxes are calculated based on the change in gas concentration over time (i.e., the slope of the line labeled data).
+
+![](images/19_12_2.png)
+
+
+
+
+
+## Take Home Points
+
+
+
+* By simultaneously measuring vertical wind and a concentration, we can measure turbulent fluxes using the eddy-covariance technique.
+* Eddy-covariance can be used to directly measure the sensible heat flux density using $H = \rho c_a w’T’$
+* We can track the flux of water vapour and measure the latent heat flux density using $LE = L_v  w’ρv’$
+* To measure traces gas fluxes we use the covariance between the molar density and the vertical wind (w’ρc’)
+* Eddy covariance observations can help inform carbon cycle & climate science 
+

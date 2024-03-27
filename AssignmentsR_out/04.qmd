@@ -1,0 +1,101 @@
+---
+title: "Assignment 4"
+subtitle: "GEOS 300, 2024"
+execute:
+  keep-md: true
+echo: true
+output: False
+---
+
+
+
+There is no template for this assignment, you can use a .ipynb or .Rmd file from one of your previous assignments as a template to get started.
+
+{{< include../Assignments/_Includes/Instructions.qmd >}}
+
+
+## CA DBB Flux Station
+
+In this lab, assignment, you're going to go back to look at more data from the CA-DBB (aka "BB") Eddy Covariance (EC) Station located in Delta, BC.  We're going to look specifically at a single day of EC observations to consider how the energy and mass flow through the ecosystem over a daily cycle.
+
+
+{{< include../Assignments/_Includes/Figures/04/A.qmd >}}
+
+
+The data-set includes half-hourly values of the following variables: absolute temperature $\overline{T}$ at 0.4 m and 2 m above ground in $^{\circC}$, mean horizontal wind $\overline{u}$ at 0.4 and 2 m above ground in $m s^-1$, net all wave radiation $R_n$ at 5 m above ground in $W m^{-2}$, air pressure $P_a$ in $hPa$, photon flux density in $\rm{\mu mol}\,\rm{m}^{-2} \rm{s}^{-1}$ and measured covariances $\overline{u^{\prime}w^{\prime}}$, $\overline{w^{\prime}T^{\prime}}$, $\overline{w^{\prime}\rho_v^{\prime}}$, and $\overline{u^{\prime}\rho_{\rm{CO}_2}^{\prime}}$, all measured at 2 m above ground using an eddy covariance system. Here $u^{\prime}$ and $w^{\prime}$ are instantaneous horizontal and vertical winds in $m s^-1$, respectively, $\rho_v$ is absolute humidity in $\rm{g}\,\rm{m}^{-3}$, and $\rho_{\rm{CO}_2}$ is the molar density of the greenhouse gas carbon dioxide (in $\rm{\mu mol}\,\rm{m}^{-3}$).
+
+
+Last digit of student number | filename
+-----------------------------|---------
+0 | 20160620.txt
+1 | 20160723.txt
+2 | 20160725.txt
+3 | 20160726.txt
+4 | 20160727.txt
+5 | 20160728.txt
+6 | 20160729.txt
+7 | 20160730.txt
+8 | 20160731.txt
+9 | 20160804.txt
+
+
+: The file you are responsible for analyzing, named by date in YYYY (Year) mm (month) dd (day) format.  If you are completing the assignment using Python or R, use one of the example from the previous assignments to format your data download command.  Assignment 2 is a good template; you just need to change three things: 1) use the following url https://raw.githubusercontent.com/GEOS300/AssignmentData/main/CA_DBB_DailyData/20150728.txt 2) update the filename and 3) the date column is named "Date/Time (PST)".  *Note* if you are using R, the default behavior of the language is to substitute all non-alphanumeric characters (slashes, underscores, primes, etc.) with a "." character, so your column names will not perfectly match notation used in the file. You can also view/download your data files [here](https://github.com/GEOS300/AssignmentData/tree/main/CA_DBB_DailyData). {#tbl-dates}
+
+{{< include../Assignments/_Includes/Executables/Student_Info_R.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/Import_R.qmd >}}
+
+## Question 1
+
+Download your data and print descriptive statistics for all columns.  How do maximum and minimum air temperature at 0.4 m compare to those at 2.0 m?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+## Question 2
+
+Convert the air temperature $T$ values at 0.4 m and 2.0 m to potential temperature $\Theta$.  Recalculate the descriptive statistics for $\Theta_{z=0.4}$ and  $\Theta_{z=2}$; how does this adjustment impact the values?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+## Question 3
+
+From the data-set provided, calculate $H$, $LE$ and $F_{CO2}$ from the covariances of $\overline{w^{\prime}T^{\prime}}$, $\overline{w^{\prime}\rho_v^{\prime}}$, and $\overline{u^{\prime}\rho_{\rm{CO}_2}^{\prime}}$ respectively.  You can assume that the heat capacity of air is 0.0012 MJ m<sup>-3</sup> K<sup>-1</sup>.  You can estimate the density of air $\rho$ using the Ideal Gas Law @eq-Ideal-Gas-Law and you can estimate the latent heat of vaporization following @eq-Latent-Heat-Vaporization:
+
+
+{{< include ../_Equations/Ideal-Gas-Law.qmd >}}
+
+{{< include ../_Equations/Latent-Heat-Vaporization.qmd >}}
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+
+## Question 4
+
+Create a graph with time of day on the $x$-axis and the three measured flux densities of the surface energy balance ($R_n$, $H$, $H$) on the $y$-axis. Briefly discuss their diurnal course.  Do $H$ and $LE$ sum to $R_n$?  If not, why?
+
+{{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
+
+
+## Question 5
+
+For 16:00, Calculate $H$ based on the aerodynamic method using the simultaneously measured profiles of $\overline{u}$ and $\overline{T}$. How does the value of $H$ compare to $H$ in your answer to question 2? Why could it differ?
+
+## Question 6
+
+Using the covariances and the profile measurements, calculate the eddy diffusivities for sensible heat $K_H$ and momentum $K_M$ at 16:00. Is Reynold's analogy fulfilled or not at 16:00?
+
+## Question 7
+
+For 16:00, calculate the Obukhov-length $L$ and the stability parameter $\zeta = z/L$. Does $\zeta$ qualitatively agree with $Rf$? Is $\zeta = z/L$ really indicating `neutral' as assumed in using the aerodynamic method above?
+
+## Question 8
+
+In the process of photosynthesis, energy is extracted from photons in the PAR range. To assimilate one mole of $\rm{CO}_2$, it requires an energy of 469 kJ. The same amount is released back during respiration (metabolism, decomposition of organic matter). We call this energy flux density the *net biochemical energy storage* $\Delta P$. Calculate $\Delta P$ at 13:00 in $\rm{W}\,\rm{m}^{-2}$. At 13:00, what fraction of $R_n$ is used up in the process of photosynthesis? Is $\Delta P$ a relevant term in the surface energy balance of this bog or not?
+
+## Question 9
+
+Determine the average carbon dioxide ($\rm{CO}_2$) flux density between the bog and the atmosphere for this day and convert it to $\rm{g}\,\rm{CO}_2\,\rm{m^{-2}}\,\rm{day}^{-1}$. Is the surface a net sink or net source for atmospheric $\rm{CO}_2$ on this day?  Note: the molar mass of $\rm{CO}_2$ 44.01 $g mol^{-1}$
+
+
+
+{{< include../Assignments/_Includes/Figures/04/B.qmd >}}

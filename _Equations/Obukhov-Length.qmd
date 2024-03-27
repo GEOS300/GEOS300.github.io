@@ -1,0 +1,10 @@
+$$
+L = - \frac{\bar{T_v} u_*^3}{kg\overline{w^{\prime}T^{\prime}}}
+k g w0T0
+$${#eq-Obukhov-Length}
+
+Where $T_v$ is the virtual temperature, which varies with atmospheric humidity; it can be approximated from air temperature (in Kelvin!) and the mixing ration $r_v$ as:
+
+$$
+T_v = (1 + 0.61 r_v) T
+$${#eq-Virtual-Temperature}
