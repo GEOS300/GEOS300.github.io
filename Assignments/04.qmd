@@ -28,16 +28,15 @@ The data-set includes half-hourly values of the following variables: absolute te
 Last digit of student number | filename
 -----------------------------|---------
 0 | 20160620.txt
-1 | 20160723.txt
-2 | 20160725.txt
-3 | 20160726.txt
-4 | 20160727.txt
-5 | 20160728.txt
+1 | 20160808.txt
+2 | 20160811.txt
+3 | 20160812.txt
+4 | 20160813.txt
+5 | 20160817.txt
 6 | 20160729.txt
 7 | 20160730.txt
-8 | 20160731.txt
-9 | 20160804.txt
-
+8 | 20160820.txt
+9 | 20160821.txt
 
 : The file you are responsible for analyzing, named by date in YYYY (Year) mm (month) dd (day) format.  If you are completing the assignment using Python or R, use one of the example from the previous assignments to format your data download command.  Assignment 2 is a good template; you just need to change three things: 1) use the following url https://raw.githubusercontent.com/GEOS300/AssignmentData/main/CA_DBB_DailyData/20150728.txt 2) update the filename and 3) the date column is named "Date/Time (PST)".  *Note* if you are using R, the default behavior of the language is to substitute all non-alphanumeric characters (slashes, underscores, primes, etc.) with a "." character, so your column names will not perfectly match notation used in the file. You can also view/download your data files [here](https://github.com/GEOS300/AssignmentData/tree/main/CA_DBB_DailyData). {#tbl-dates}
 
