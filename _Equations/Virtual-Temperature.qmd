@@ -1,0 +1,6 @@
+
+$$
+T_v = (1 + 0.61 r_v - r_l) T
+$${#eq-Virtual-Temperature}
+
+where $T$ is the absolute temperature, $r_v$ is the mixing ratio of water vapor in mol/mol, and $r_l$ is is the mixing ratio of liquid water in mol/mol.  **Note** $r_l = 0$, *unless* the atmosphere is saturated.

@@ -1,0 +1,5 @@
+
+$$
+\bar{u_z}=\frac{u_*}{k}ln(\frac{z}{z_0})
+$${#eq-Log-Wind-Law}
+

@@ -1,0 +1,15 @@
+
+$$
+\frac{\Delta\bar{u_z}}{\Delta z}=\frac{u_*}{k}\Phi_M
+$${#eq-Log-Wind-Law-Non-Neutral}
+
+where $\Phi_M$ is a stability correction that can be approximated as:
+
+$$
+\Phi_M = \begin{cases}
+    \zeta > 0 , 1 + 4.7 \zeta \\
+    \zeta = 0 , 1 \\
+    \zeta < 0 , (1 - 15 \zeta)^{-0.25}
+\end{cases}
+$${#eq-Phi}
+

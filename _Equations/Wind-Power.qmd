@@ -1,0 +1,6 @@
+
+$$
+U = \frac{\pi}{2}\rho E R^2 \bar{u}^3
+$${#eq-Wind-Power}
+
+Where $R$ is the radius of the turbine (in m), $E$ is the turbine efficiency (usually ~ 30 - 45%), and $\bar{u}$ is the mean wind speed at the height of the turbine.
