@@ -50,6 +50,9 @@ Topics = [
 'Eddy Covariance',
 '',
 'Stability and Turbulent Exchange',
+'General Boundary Layer and Flow Characteristics',
+'Water & Carbon Cycles',
+'Office Hours Drop-in Exam'
 ]
 Readings = [
     '',
