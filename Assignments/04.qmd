@@ -52,7 +52,7 @@ Download your data and print descriptive statistics for all columns.  How do max
 
 ## Question 2
 
-Convert the air temperature $T$ values at 0.4 m and 2.0 m to potential temperature $\Theta$.  Recalculate the descriptive statistics for $\Theta_{z=0.4}$ and  $\Theta_{z=2}$; how does this adjustment impact the values?
+Convert the air temperature $T$ values at 0.4 m and 2.0 m to potential temperature $\theta$.  Recalculate the descriptive statistics for $\theta_{z=0.4}$ and  $\theta_{z=2}$; how does this adjustment impact the values?
 
 {{< include _Includes/Executables/empty_code_py.qmd >}}
 

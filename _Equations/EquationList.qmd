@@ -161,6 +161,24 @@ $$
 L_v = 2500.8-2.36T-0.0016T^2-0.00006T^3
 $${#eq-Latent-Heat-Vaporization}
 
+## Log Wind Law Non Neutral
+
+$$
+\frac{\Delta\bar{u_z}}{\Delta z}=\frac{u_*}{k}\Phi_M
+$${#eq-Log-Wind-Law-Non-Neutral}
+
+## Phi
+
+$$
+\Phi_M = \begin{cases}    \zeta > 0 , 1 + 4.7 \zeta \\    \zeta = 0 , 1 \\    \zeta < 0 , (1 - 15 \zeta)^{-0.25}\end{cases}
+$${#eq-Phi}
+
+## Log Wind Law
+
+$$
+\bar{u_z}=\frac{u_*}{k}ln(\frac{z}{z_0})
+$${#eq-Log-Wind-Law}
+
 ## Long wave Flux Density Stefan Boltzman
 
 $$
@@ -212,14 +230,8 @@ $${#eq-Net-Radiation}
 ## Obukhov Length
 
 $$
-L = - \frac{\bar{T_v} u_*^3}{kg\overline{w^{\prime}T^{\prime}}}k g w0T0
+\begin{align}& \zeta = \frac{z}{L} \\ \nonumber& L = - \frac{\bar{\theta_v} u_*^3}{kg\overline{w^{\prime}\theta_v^{\prime}}} = - \frac{\bar{\rho c_a \theta_v} u_*^3}{kgH}\end{align}
 $${#eq-Obukhov-Length}
-
-## Virtual Temperature
-
-$$
-T_v = (1 + 0.61 r_v) T
-$${#eq-Virtual-Temperature}
 
 ## Phase Shifted Sinusoidal Temperature Wave
 
@@ -467,9 +479,21 @@ $$
 \sigma_a=\sqrt{\overline{a^{\prime2}}}
 $${#eq-std}
 
+## Virtual Temperature
+
+$$
+T_v = (1 + 0.61 r_v - r_l) T
+$${#eq-Virtual-Temperature}
+
 ## Weins Law
 
 $$
 \lambda_{max} = \frac{b}{T}
 $${#eq-Weins-Law}
+
+## Wind Power
+
+$$
+U = \frac{\pi}{2}\rho E R^2 \bar{u}^3
+$${#eq-Wind-Power}
 

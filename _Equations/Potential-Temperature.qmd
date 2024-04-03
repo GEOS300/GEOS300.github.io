@@ -3,4 +3,4 @@ $$
 \theta = T_z + DALR z
 $${#eq-Potential-Temperature}
 
-Where $\Theta$ is the potential temperature (temperature corrected for adiabatic warming/cooling), $T_z$ is the temperature observed at height level $z$ and the Dry Adiabatic Lapse Rate (DALR) is 0.01 $K \ m^{-1}$
+where $T_z$ is the absolute temperature at height $z$ and the Dry Adiabatic Lapse Rate ($DALR = 0.01 K / m^{-1}$)

@@ -484,7 +484,7 @@ Table&nbsp;3: Observations
 <ol start="2" class="example" type="1">
 <li>Assuming heat storage fluxes (<span class="math inline">\(\Delta S\)</span>) are negligible; calculate <span class="math inline">\(H\)</span> approximate <span class="math inline">\(H_g\)</span>. You can assume that the laminar boundary layer for each site is exactly 0.1m thick. <strong>1/4</strong></li>
 </ol>
-<div id="7da48b24" class="cell" data-execution_count="4">
+<div id="a2cd2d47" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>Ca <span class="op">=</span> Constants.loc[<span class="st">'Heat Capacity of Air'</span>,<span class="st">'value'</span>]</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'H'</span>] <span class="op">=</span> Ca<span class="op">*</span><span class="fl">1e6</span><span class="op">*</span>(Profile[<span class="st">'$T_0$'</span>]<span class="op">-</span>Profile[<span class="st">'$Ta_</span><span class="sc">{0.1}</span><span class="st">$'</span>])<span class="op">/</span>Profile[<span class="st">'$r_b$'</span>]</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Hg'</span>] <span class="op">=</span> Profile[<span class="st">'$R_n$'</span>]<span class="op">-</span>Profile[<span class="st">'$LE$'</span>]<span class="op">-</span>Profile[<span class="st">'H'</span>]</span>
@@ -541,7 +541,7 @@ Table&nbsp;3: Observations
 <ol start="3" class="example" type="1">
 <li>Estimate thermal admittance (<span class="math inline">\(\mu\)</span>) of the soil surface and report any intermediary parameters you calculated to obtain these values. <strong>1/4</strong></li>
 </ol>
-<div id="6c1d48c4" class="cell" data-execution_count="5">
+<div id="37bd026e" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>Ca <span class="op">=</span> Constants.loc[<span class="st">'Heat Capacity of Air'</span>,<span class="st">'value'</span>]</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>Cm <span class="op">=</span> Constants.loc[<span class="st">'Heat Capacity of Mineral Soil'</span>,<span class="st">'value'</span>]</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>Co <span class="op">=</span> Constants.loc[<span class="st">'Heat Capacity of Organic Soil'</span>,<span class="st">'value'</span>]</span>
@@ -621,7 +621,7 @@ Table&nbsp;3: Observations
 <li>Since <span class="math inline">\(T_0\)</span> is quite close to 0 C to start, there isn’t much cooling that needs to be done before accumulation will occur. So its reasonable to just look at the starting values of <span class="math inline">\(\mu\)</span> and use those to guess the order of which will reach 0 C first.</li>
 </ul></li>
 </ul>
-<div id="828df91b" class="cell" data-execution_count="6">
+<div id="4e548e49" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Ranked <span class="op">=</span> Profile.sort_values(by<span class="op">=</span><span class="st">'mu kJ m-2 K-1 s-1/2'</span>).reset_index()</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Markdown(tabulate(</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  Ranked,headers<span class="op">=</span>Ranked.columns.values</span>
@@ -812,7 +812,7 @@ Table&nbsp;3: Observations
 </section>
 <section id="calculations" class="level1">
 <h1>Calculations</h1>
-<div id="1fc55fcf" class="cell" data-execution_count="7">
+<div id="8bbadfab" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">42</span></span>
@@ -825,7 +825,7 @@ Table&nbsp;3: Observations
 <ol start="7" class="example" type="1">
 <li>Assuming that a surface has an emissivity (<span class="math inline">\(\epsilon_{o,LW}\)</span>) of array([0.928, 0.971, 0.955, 0.945]), how much of the incoming long-wave radiation <span class="math inline">\(LW\downarrow\)</span> is reflected from the surface when <span class="math inline">\(LW\downarrow\)</span> is array([107., 119., 115., 112.]) <span class="math inline">\(W m^{-2}\)</span>?</li>
 </ol>
-<div id="f906d8e3" class="cell" data-execution_count="8">
+<div id="4d5c1eea" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>epsilon</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>a </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'alpha = '</span>, alpha)</span>
@@ -835,7 +835,7 @@ Table&nbsp;3: Observations
 LW_reflected =  [7.704 3.451 5.175 6.16 ]</code></pre>
 </div>
 </div>
-<div id="9298e2b4" class="cell" data-execution_count="9">
+<div id="7a5fee06" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Dates <span class="op">=</span> pd.DatetimeIndex([<span class="st">'2024-12-15'</span>,<span class="st">'2024-03-31'</span>,<span class="st">'2024-07-20'</span>,<span class="st">'2024-10-01'</span>])</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Psi_a <span class="op">=</span> np.array([<span class="fl">0.85</span>,<span class="fl">0.7</span>,<span class="fl">0.65</span>,<span class="fl">0.8</span>])</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
@@ -844,7 +844,7 @@ LW_reflected =  [7.704 3.451 5.175 6.16 ]</code></pre>
 <ol start="8" class="example" type="1">
 <li>At Local solar noon (LAT = 12:00) on DatetimeIndex([‘2024-12-15’, ‘2024-03-31’, ‘2024-07-20’, ‘2024-10-01’], dtype=‘datetime64[ns]’, freq=None) at array([58, 71, 48, 34]) <span class="math inline">\(^{\circ}\)</span> N, <span class="math inline">\(\Psi_a\)</span> = array([0.85, 0.7 , 0.65, 0.8 ]). Estimate <span class="math inline">\(SW\downarrow\)</span></li>
 </ol>
-<div id="e95b9080" class="cell" data-execution_count="10">
+<div id="d7b1f788" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Extraterrestrial_Irradiance(DOY,Lat):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    I0 <span class="op">=</span> <span class="dv">1361</span></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    gamma <span class="op">=</span> <span class="dv">2</span><span class="op">*</span>np.pi<span class="op">/</span><span class="dv">365</span><span class="op">*</span>(DOY<span class="op">-</span><span class="dv">1</span>)</span>

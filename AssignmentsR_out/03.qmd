@@ -63,7 +63,10 @@ Based on the slope of the curve in Question 1, calculate the friction velocity $
 
 ##  Question 3
 
-Estimate the surface shear stress $\tau_0$ from the result in Question 2 and with help of Appendix A3 (p. 392 ff.) in T. R. Oke, 'Boundary Layer Climates available on Canvas.
+Estimate the surface shear stress $\tau_0$ from the result in Question 2 and with help of the ideal gas law:
+
+{{< include ../_Equations/Ideal-Gas-Law.qmd >}}
+
 
 {{< include../Assignments/_Includes/Executables/empty_code_R.qmd >}}
 

@@ -273,9 +273,7 @@ Integration of @eq-von-Karma-Definition requires knowledge of the exact height w
 
 ::: {.column width="50%"}
 
-$$
-\bar{u_z}=\frac{u_*}{k}ln(\frac{z}{z_0})
-$${#eq-Log-Wind-Law}
+{{< include ../_Equations/Log-Wind-Profile.qmd >}}
 
 * This is the **log wind law for *neutral conditions***.  The general form for measurements in two levels:
 
