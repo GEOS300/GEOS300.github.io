@@ -77,11 +77,15 @@ Create a graph with time of day on the $x$-axis and the three measured flux dens
 
 ## Question 5
 
-For 16:00, Calculate $H$ based on the aerodynamic method using the simultaneously measured profiles of $\overline{u}$ and $\overline{T}$. How does the value of $H$ compare to $H$ in your answer to question 2? Why could it differ?
+For 16:00, Calculate $H$ based on the aerodynamic method using the simultaneously measured profiles of $\overline{u}$ and $\overline{T}$. How does the value of $H$ compare to $H$ calculated from $\overline{w^{\prime}T^{\prime}}$? Why could it differ?
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 6
 
 Using the covariances and the profile measurements, calculate the eddy diffusivities for sensible heat $K_H$ and momentum $K_M$ at 16:00. Is Reynold's analogy fulfilled or not at 16:00?
+
+{{< include _Includes/Executables/empty_code_py.qmd >}}
 
 ## Question 7
 

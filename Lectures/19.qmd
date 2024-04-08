@@ -145,7 +145,7 @@ $$
 \frac{g}{\theta_v}\overline{w^{\prime}\theta_v^{\prime}} \nonumber
 $${#eq-Thermal}
 
-* $g$ is the acceleration due to gravity ($\approx \ 9.8 \ \rm{m \ s}^{-1}$)
+* $g$ is the acceleration due to gravity ($\approx \ 9.8 \ \rm{m \ s}^{-2}$)
 
 :::
 ::::

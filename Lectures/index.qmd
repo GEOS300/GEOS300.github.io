@@ -14,7 +14,7 @@ import pandas as pd
 import numpy as np
 from IPython.display import Markdown
 from tabulate import tabulate
-Mon = pd.date_range("20240108", "20240412", freq='W-Mon')
+Mon = pd.date_range("20240108", "20240415", freq='W-Mon')
 Wed = pd.date_range("20240108", "20240424", freq='W-Wed')
 Week = np.arange(1,Mon.shape[0])
 Lecture_Dates = Mon.union(Wed).date
@@ -50,9 +50,10 @@ Topics = [
 'Eddy Covariance',
 '',
 'Stability and Turbulent Exchange',
-'General Boundary Layer and Flow Characteristics',
+'General Boundary Layer Characteristics & Flow in Complex Terrain',
 'Water & Carbon Cycles',
-'Office Hours Drop-in Exam'
+'Office Hours Drop-in Exam Prep'
+'Office Hours Drop-in Exam Prep'
 ]
 Readings = [
     '',

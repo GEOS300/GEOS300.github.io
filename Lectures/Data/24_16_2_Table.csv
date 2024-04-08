@@ -1,0 +1,5 @@
+Fr,Dominant term,Stability,Wind strenght,Result
+Fr $\approx$ 0,$\leftrightarrow$,very stable,weak,Wind around obstacle
+Fr $\approx$ 0.5,$\leftrightarrow$ $\updownarrow$,stable,moderate,Wind around and over obstacle
+Fr $>1$,$\updownarrow$,neutral,strong,Wind over obstacle
+Fr $= \infty$,$\updownarrow$,unstable,weak to moderate,Wind over obstacle

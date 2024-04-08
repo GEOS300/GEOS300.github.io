@@ -1,0 +1,439 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: General Boundary Layer Characterisitcs
+---
+
+{{< include _imports.qmd >}}
+
+## The Final Exam {.smaller}
+
+The final exam will be open between April Wednesday April 24th and Thursday April 25th.  It will be completed **asynchronously** over canvas. 
+    
+* The exam will **not be timed**. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.
+  * The exam will be open for 48 hours starting at 8 AM Wednesday April 24th
+    * Late submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes
+
+* The final is **cumulative**; any topics from the course are fair game.  Similar to the midterm:
+ * A collection of multiple choice, fill in the blanks, matching etc. (~50%)
+ * Problem set + short answer questions (~50%)
+
+
+## Learning Objectives
+
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+
+* Describe how the ABL responds to the surface energy balance over a day.
+* Explain how sensible heat is mixed and distributed in the ABL (i.e. mixed layer growth and entrainment processes.)
+* Describe how moisture is mixed in the ABL.
+
+
+:::
+
+::: {.column width="40%"}
+
+![Photo: A. Christen](images/22_2_4.png)
+
+
+:::
+
+::::
+
+
+
+## Review (iClicker) 
+
+Name the layer of the atmosphere from the surface to the level where the frictional influence of the surface is absent.
+
+* A Atmospheric boundary layer
+* B Residual layer
+* C Troposphere
+* D Laminar boundary layer
+
+
+## {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### Convective Boundary Layer (CBL)
+
+* Thermal plumes, convection cells and roll structures.
+* Surface layer, mixed layer and entrainment zone.
+* Deep, well mixed temperature profiles.
+
+![](images/22_8_0.jpg){width="80%"}
+
+:::
+
+::: {.column width="50%"}
+
+### Stable Boundary Layer (SBL)
+
+
+*  Inversion close to the ground, growth during night
+*  Stable layer close to ground and residual layer above
+*  Waves
+
+![](images/22_8_7.jpg){width="80%"}
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Stable = inversion layer
+Residual layer = Weak mixed layer
+Intermittent turbulence and wavelike motions of varying amplitudes and periods.
+Vorticity waves = driven by shear (i.e. differences in wind speed - wind profile may exhibit a wind maximum located near the top of the inversion).
+Buoyancy waves = airflow (streamlines) displaced by topography, density differences, turbulence). 
+
+:::
+
+
+## Thermal structure of ABL 
+
+:::: {.columns}
+::: {.column width="60%"}
+
+![The dashed line shows an idealized $\theta$ profile of a stable boundary atmosphere; the solid line is the profile with a well mixed convective boundary layer](images/ThermalStructure.png){width="80%"}
+
+:::
+::: {.column width="35%"}
+
+
+![Potential temperature profiles day vs. night.  B. Crawford, PhD Thesis in Geography, UBC, 2014](images/22_16_4.png)
+
+
+:::
+::::
+
+::: {.notes}
+
+The standard atmosphere slopes toward warmer potential temperatures at greater altitudes. Such a slope indicates statically stable air; namely, air that opposes vertical motion. 
+The ABL is often turbulent. Because turbulence causes mixing, the bottom part of the standard atmosphere becomes homogenized. Namely, within the turbulent region, the resulting mixture has a medium potential temperature that is uniform with height
+Above the mixed layer, the air is usually unmodified by turbulence. This tropospheric air above the ABL is known as the free atmosphere (FA). 
+As a result of a turbulent mixed layer being adjacent to the unmixed free atmosphere, there is a sharp temperature increase at the mixed layer top. This transition zone is very stable, and is often a temperature inversion. The altitude of the middle of this inversion is given the symbol zi, and is a measure of the depth of the turbulent ABL. 
+The temperature inversion acts like a lid or cap to motions in the ABL. If turbulence were to try to push it out of the top of the mixed layer into the free atmosphere, it would be so much colder than the surrounding environment that a strong buoyant force would push it back down into the mixed layer. Hence, air parcels, turbulence, and any air pollution in the parcels, are trapped within the mixed layer. 
+Vigorous turbulence within the ABL causes the ABL to respond quickly to surface influences such as heating and frictional drag. However, the remainder of the troposphere does not experience this strong turbulent coupling with the surface, and hence does not experience frictional drag nor a daily heating cycle. 
+In summary, the bottom 200 m to 4 km of the troposphere is called the atmospheric boundary layer. ABL depth is variable with location and time. Turbulent transport causes the ABL to feel the direct effects of the Earth’s surface. The ABL exhibits strong diurnal (daily) variations of temperature, moisture, winds, pollutants, turbulence, and depth in response to daytime solar heating and nighttime IR cooling of the ground. 
+
+:::
+
+## Diurnal Course of the ABL
+
+![The upper boundary of the ABL ($z_i$) can vary substatially over the course of a day.](images/22_7_2.png)
+
+::: {.notes}
+
+The atmospheric boundary layer is continually evolving in response to the daily heat/cooling cycle and to changing synoptic conditions.
+During daytime there is a statically-unstable mixed layer (mL). The depth of the mixed layer start to rise when the surface sensible heat flux becomes positive. It develops in depth over the course of the day to its maximum value in the mid-afternoon and the complete layer is convectively unstable. The principle agent of transport and mixing in the mixed layer are thermals (ie. rising masses of warm air).
+The bottom 20 to 200 m of the ABL is called the surface layer. Here frictional drag, heat conduction, and evaporation from the surface cause substantial variations of wind speed, temperature, and humidity with height. However, turbulent fluxes are relatively uniform with height; hence, the surface layer is known as the constant flux layer. 
+Above the mixed layer is the free atmosphere - the air is usually unmodified by turbulence.
+In the evening, when radiative cooling begins, and the surface sensible heat flux becomes negative, the surface-based radiation inversion begins to grow in depth and cuts off the mixed layer from its source of heat and buoyancy. The turbulence in the mixed layer decays, only roughness-generated turbulence persists near the surface.
+At night, a statically stable boundary layer (sBL) forms under a statically neutral residual layer (rL) (or weak mixed layer). The residual layer contains the pollutants and moisture from the previous mixed layer, but is not very turbulent. 
+
+:::
+
+
+---
+
+
+![Diurnal Course of $\theta$ and $r_{CO_2}$ over Vancouver](images/22_14_2.png)
+
+::: {.notes}
+
+Residual layer cut off from surface
+The temperature a parcel of dry air would have if brought adiabatically (i.e., without transfer of heat or mass) to a standard pressure level of 1000 mb.
+
+:::
+
+## The Mixed Layer (ML) {.smaller}
+
+In the convective boundary layer (CBL) apart from mechanical convection close to the surface, turbulence is driven mainly by thermal convection.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+ 
+* Large buoyancy driven plumes originate from surface. 
+  * Need 10 to 15 minutes to turn over.  
+  * Air is well mixed and $\theta$ is approximately constant with height 
+    - We call this layer from ~100 m up to 3 ~km the mixed layer (ML).
+* ML growth depends on $H$ at surface
+
+:::
+
+::: {.column width="50%"}
+
+![Snapshot of the temperature field in a direct numerical simulation of convection in the ABL. Figure by Peter Sullivan (NCAR/MMM) and H. Jonker (Delft University, Netherlands)](images/22_18_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+blobs of air called thermals rise from this surface layer up through the mixed layer, until they hit the temperature inversion in the entrainment zone. Fig. 18.12a shows a closer view of the surface layer (bottom 5 - 10% of ABL). 
+These thermal circulations create strong turbulence, and cause pollutants, potential temperature, and moisture to be well mixed in the vertical (hence the name mixed layer). The whole mixed layer, surface layer, and bottom portion of the entrainment zone are statically unstable. 
+
+
+:::
+
+
+
+## Entrainment Zone {.smaller}
+
+Thermals from CBL overshoot into capping inversion at $z_i$.
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Acceleration due to buoyancy causes thermals to penetrate some distance up into stable layer, where they are repelled and returned to upper mixed layer. 
+
+  + This brings downward flux of warmer, drier, cleaner, less turbulent air. 
+  + This process is called entrainment.
+
+ 
+:::
+
+::: {.column width="50%"}
+
+![Capping inversion is typically at the height of fair-weather cumulus clouds (cumulus humilis, A. Christen).](images/22_20_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The turbulent mixed layer grows by entraining non-turbulent air from the free atmosphere. 
+During free convection (when winds are weak and thermal convection is strong), the entrained kinematic heat flux is approximately 20% of the sur- face heat flux: 
+
+
+:::
+
+
+
+## Entrainment
+
+![Note, ABL growth is due to both, ‘encroachment’ from surface and ‘entrainment’ from free atmosphere above.](images/22_21_3.png)
+
+
+::: {.notes}
+
+This brings downward flux of warmer, drier, cleaner, less turbulent air. This process is called entrainment.
+This means that the height of the boundary layer zi increases as long as convection is active (heat inflow by radiation)
+The top of the whole convective mixed layer, zi , is often defined as the level of most negative heat flux. 
+This level is near the middle of the entrainment zone, often at the height where the capping inversion is strongest.
+
+:::
+
+
+
+## Roll Vortices and ‘Cloud Streets’ 
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+![The mixed layer may contain roll vortices - organized uplift and sinking cells. Uplift areas create cloud ‘streets’, these may reinforce structure due to shadows.](images/22_23_4.jpg)
+
+
+:::
+
+::: {.column width="50%"}
+
+![Satellite image of cloud streets over a convective ABL during afternoon over Kenya (NASA)](images/22_23_2.png)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Cloud streets or cloud lines are rows of fair- weather cumulus-humilis clouds (Fig. 6.9) that are roughly parallel with the mean wind direction. 
+They form over warm land in the boundary layer on sunny days, and over water day or night when cold air advects over warmer water. 
+Light to moderate winds in the convective boundary layer cause horizontal roll vortices, which are very weak counter- rotating circulations with axes nearly parallel with the mean wind direction. These weak circulations sweep rising cloud-topped thermals into rows with horizontal spacing of roughly twice the boundary- layer depth (order of 1 km).
+
+
+:::
+
+
+## Sensible heat flux density in the CBL
+
+
+![](images/22_29_2.png)
+
+::: {.notes}
+
+What are the different layers?
+Because this warm air is entrained downward, it corresponds to a negative heat flux at the top of the mixed layer. The heat-flux profile (Fig. 18.17b) is often linear with height, with the most negative value marking the top of the mixed layer. 
+Surface layer = constant flux layer
+The potential temperature of a parcel of fluid at pressure {\displaystyle P} is the temperature that the parcel would attain if adiabatically brought to a standard reference pressure {\displaystyle P_{0}}, usually 1,000 hPa (1,000 mb). 
+
+
+:::
+
+
+## Measured vertical profiles of moisture
+
+![](images/22_36_2.png)
+
+
+
+::: {.notes}
+
+Decrease above mixed layer since source if from the surface
+The mixed layer is so named because intense vertical mixing tends to leave conserved variables such as potential temperature and specific humidity nearly constant with height
+
+
+:::
+
+
+## Moisture in the daytime CBL
+
+
+:::: {.columns}
+
+::: {.column width="55%"}
+
+* The amount of boundary layer moistening during the day depends on relative strength of:
+  * Surface fluxes (wetting)
+  * Entrainment fluxes (drying)
+* $LE$ will be a function of $R_n$ **and** the gradient of $r_{H_2O}$
+
+
+:::
+
+::: {.column width="45%"}
+
+
+![The drier free atmosphere produces a drying flux through the entrainment zone. So the mixing ratio ($r_{H_2O}$) declines through the ML, and sharply above.](images/22_37_2.png)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+mixing ratio is the abundance of one component of a mixture relative to that of all other components. The term can refer either to mole ratio or mass ratio (moles of X per mole of air).
+
+:::
+
+
+## Structure of a Nocuturnal Boundary Layer
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+Above the stable boundary layer at the surface, weak mixing continues in remnants of previous day’s CBL, called the residual laye.
+
+* It shows the properties of the decayed daytime mixed layer.
+
+:::
+
+::: {.column width="50%"}
+
+![](images/22_32_4.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Stable ABLs are quite complex. Turbulence can be intermittent, and coupling of air to the ground can be quite weak. In addition, any slope of the ground causes the cold air to drain downhill. Cold, downslope winds are called katabatic winds, as discussed in the Regional Winds chapter. 
+
+
+:::
+
+## Temperatures in SBL {.smaller}
+
+In the stable boundary layer surface cooling causes downward sensible heat flux.  
+
+* Typical over land at night or when warm air advected over cold surfaces (lakes, ice, etc.)
+
+![Potential temperature profile defines the depth of the stable boundary layer, but may be hard to identify top (merges) - typically 100 - 300 m on a clear sky night.](images/22_33_2.png)
+
+
+::: {.notes}
+
+Capping Inversion ist eine nicht-turbulente Inversion (Sozusagen überiggeblieben)
+
+:::
+
+
+## Moisture in the SBL
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* At night, the stable boundary layer shows relatively small gradients in the water mixing ratio r and can be of either sign:
+  * Drying with height $\rightarrow$ evaporation continues (more slowly)
+  * Inversion $\rightarrow$ dew / frost will occur!
+
+:::
+
+::: {.column width="50%"}
+
+![](images/22_39_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+e.g. over water body could get evaporation;
+
+:::
+
+## Take home points
+
+
+* The Atmospheric boundary layer is responding to energetic changes of the surface, i.e.the surface energy balance.
+* Thermal convection is the dominating mixing process in the daytime mixed layer. The ML grows due to encroachment and entrainment.
+* A stable boundary layer with suppressed mixing develops during night and over cool surfaces (ice etc.).
+* A drying flux through the entrainment zone is observed, as the free atmosphere is less humid that the ABL.
+

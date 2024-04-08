@@ -1,0 +1,917 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Flow Characteristics in Complex Terrain
+---
+
+{{< include _imports.qmd >}}
+
+## Learning Objectives
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* Explain what happens to the wind profile if we introduce horizontal changes in surface properties 
+  * Moisture, roughness, topograpny, etc.
+* Describe how horizontal changes in surface properties affect the surface energy balance partitioning.
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/23_2_3.png)
+
+
+
+:::
+
+::::
+
+
+
+## 1-D View of Surface Layer {.smaller}
+
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+* It has been implicit in all derivations to this point that the surface layer of the ABL is a ‘constant flux layer’:
+  * Flux densities do not vary horizontally.
+  * Flux densities do not vary vertically.
+* This allowed us to assume that flux densities measurements made anywhere in the surface layer represented the surface value. 
+
+
+
+:::
+
+::: {.column width="40%"}
+
+
+
+
+![](images/23_3_4.png)
+
+
+:::
+
+::::
+
+
+
+
+## Variability over ‘ideal’ Surface
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Observations with eddy covariance show:
+
+* Even over ‘ideal’ flat, homogeneous and extensive sites, horizontal and vertical variability of $\tau$, $H$, $LE$ etc. is in the order of 5 to 10%.
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Instruments within 50m horizontal distance (EBEX-2000)](images/23_5_3.gif)
+
+
+:::
+
+::::
+
+
+
+## Heterogeneous Surfaces
+
+The real world is not made of ‘infinite, homogeneous, plains’. It is a patchwork of different surfaces each with its own energy balance, roughness etc. Hence microclimates at the surface vary greatly, sometimes sharply, and often they are uneven, patchy, rolling etc.
+
+
+![](images/23_6_3.png)
+
+::: {.notes}
+
+Each has it’s own combination of radiative, thermal, moisture and aerodynamic properties such as albedo, soil conductivity, soil moisture and roughness. Each has own unique energy and water balance.
+Gives rise to different surface and subsurface climates in terms of temperature, humidity and wind speed profiles.
+Thus there will be spatial discontinuity of climates, and horizontal gradients will exist. 
+Near the surface, at the boundaries between the fields, these gradients will be greatest and horizontal interactions will occur. Topography complicates things even further.
+
+
+
+:::
+
+
+## The complex surface
+
+
+
+![This is the geographical challenge of boundary layer climatology - a 3D reality.](images/23_7_3.jpg)
+
+
+
+
+## Tile-approach
+
+Used in weather forecasting; we calculate the exchange of different patches separately and then average them by factional occurrence
+
+
+![](images/23_9_3.png)
+
+
+## Why the tile approach might not work
+
+![](images/23_10_2.gif)
+
+
+::: {.notes}
+
+Advective effects 
+The modification of atmospheric properties as air, already in horizontal motion, moves from one distinct surface type to a different one—these are advective effects
+
+
+:::
+
+
+## Changing Roughness Effects Wind? (iClicker)
+
+How does mean wind $u$ near the surfac echange for a transition from a smooth to a rough patch?
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+
+
+![](images/23_11_5.png)
+
+
+
+:::
+
+::: {.column width="65%"}
+
+
+
+
+![](images/23_12_3.jpg)
+
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The correct answer is C. Mean wind will be slowed once it reaches the rough surface - but slowing does not happen immediately (inertia)
+
+:::
+
+
+
+## Changing Roughness & Reynolds Stress? (iClicker)
+
+How does Reynolds stress ($\tau$) change for a transitionfrom a smooth to a rough patch?
+
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+
+![](images/23_14_4.png)
+
+
+
+:::
+
+::: {.column width="65%"}
+
+
+
+
+![](images/23_15_4.jpg)
+
+
+
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+The correct answer is D. Reynolds stress τ is strongest, where mean wind and roughness are high
+
+:::
+
+
+## We Conclude
+
+
+* Mean wind will be slowed once it encounters and increase in surface roughness
+  * But slowing does not happen immediately (inertia)
+* Reynolds stress $\tau$ is strongest where mean wind **and** roughness are high (**at the boundary**)
+  * Reynolds stress is ‘overshooting’ and readjusts afterwards to its new value
+
+
+::: {.notes}
+
+The greater roughness of the vegetation will exert a greater drag on the air. 
+This increases the surface shearing stress and decreases the mean wind speed (Figure 5.3b). 
+
+
+:::
+
+
+
+## Relevance of step-changes in landscapes
+
+
+![](images/23_19_2.png)
+
+
+## Internal boundary layer
+
+
+* As air crosses a sharp change in surface properties ($z_0$, $T_0$, $\rho_{v0}$, etc.); air immediately above is affected (due to turbulent exchange). 
+
+
+![Modification affects a layer ($\delta$) known as the internal boundary layer as a function of greater distances ($x$) known as fetch)](images/23_20_3.jpg)
+
+
+::: {.notes}
+
+As air passes from one surface-type to a new and climatically different surface, it must adjust to a new set of boundary conditions. 
+The layer of air whose properties have been affected by the new surface is referred to as an internal boundary layer, and its depth grows with increasing distance, or fetch, downwind from the leading-edge. 
+It is only in the lower 10% of this layer that the conditions are fully adjusted to the properties of the new surface. The remainder of the layer is a transition zone wherein the air is modified by the new surface but is not adjusted to it. The properties of the air above the internal boundary layer remain determined by upwind influences and not those of the surface immediately beneath. 
+
+
+:::
+
+
+
+## Wind Profile Across a Step Change
+
+
+
+![](images/23_21_2.jpg)
+
+
+
+::: {.notes}
+
+The properties of the air above the internal boundary layer remain determined by upwind influences and not those of the surface immediately beneath. 
+
+:::
+
+
+
+## Changes in Evaporation
+
+![Vapor density increases gradually after the step change; Evapotranspiration 'overcorrects', spiking then decreasing to new baselevel](images/23_23_2.jpg)
+
+
+::: {.notes}
+
+As the air crosses the leading-edge into box 2 the surface evaporation rate rises sharply because there is an extremely strong gradient in vapour concentration between the moist surface and the ‘dry’ air. This increase cannot immediately spread upward, so E0 exceeds Ez and there is an increase of vapour in the box (Figure 5.2b), and hence a larger horizontal transport out of the downwind side of box 2 (Figure 5.2a). 
+This process continues in boxes 3 and 4 but because of the accumulation of vapour with distance the surface-to-air vapour gradient weakens and with it the surface evaporation input. Finally at box 5 a new equilibrium situation arises where the mean content reaches a value which is more typical of the moist surface, and which does not overstimulate the surface evaporation regime.
+Downwind of box 5 both the horizontal and vertical fluxes are constant with distance and the air layer has become fully adjusted to the properties of the new surface.
+
+
+
+In Figure 5.2a the vertical fluxes of water vapour into and out of the boxes are shown by vector arrows the lengths of which are proportional to the strength of the flux. The vertical arrows represent the evaporation fluxes, and the horizontal arrows the advective fluxes. 
+
+If the vertical arrows are of different lengths this indicates divergence or convergence of the vertical flux (Figures 2.1a, b, p. 35) and a non-constant flux layer. 
+
+If the horizontal arrows are dissimilar it indicates divergence or convergence of the horizontal flux (Figure 2.1c) and that advection is in operation, and the difference in their length is a measure of the net moisture advection (deltaA). 
+
+
+ 
+
+Air with a vapour content (kg m-3) moves from the dry to the wet surface at a speed u† (m s-1). Hence the rate of horizontal moisture transport, A (kg m-2 s-1) is: 
+A=upv (5.1) 
+
+
+
+
+:::
+
+
+
+## Changes in the surface energy balance
+
+
+
+![](images/23_28_2.jpg)
+
+## Changes in the surface energy balance
+
+
+
+![](images/23_29_2.jpg)
+
+::: {.notes}
+
+Oasis effect.
+
+:::
+
+
+## Oasis Effect
+
+Advectively driven $LE$ due to a wet patch within a larger dry environment (desert oasis, urban park, irrigated field). 
+
+* Contributes sensible heat to boost $LE$. In some cases $LE$ can be 1.5 to 2 times $R_n$.
+
+![](images/23_32_5.gif)
+
+
+::: {.notes}
+
+Advective effect: The oasis effect
+This apparently anomalous situation is explained by the fact that the atmosphere supplies sensible heat to the surface because the oasis is cooler than the regional air in which it is embedded. Therefore there is a continual air-to-oasis inversion temperature gradient driving a downward directed heat flux, and the process is aided by air mass subsidence over the oasis. (Note that the reversal of $H$ gives the oasis a negative Bowen ratio.) 
+Figure 5.5 shows the average daily energy balance components in June following the irrigation in late May. For the first half of June an ‘oasis effect’ is clearly evident; evapotranspiration exceeds the net radiation, and $H$ is directed towards the crop. During this period the average Bowen ratio is about -0·25, and the ratio $LE$/$R_n$ is approximately 1·5. However, by the middle of June soil moisture starts to become restricted, the surface resistance (rc) increases, and evaporation rates decrease. Since $R_n$ remains relatively constant this requires an adjustment by $H$. By 25 June the Bowen ratio is +1·0, and $LE$/$R_n$ is about 0·5. In the absence of further irrigation or precipitation the energy balance would return to a semi-arid type. 
+
+Many other ‘oasis-effect’ advective situations can be envisaged. In each of the following examples a cool, moist surface is dominated by larger- scale warmer, drier surroundings: a lake in an area with a dry summer climate; a glacier in a mountain valley; an isolated snow patch; an urban park; an isolated tree in a street or on open, bare ground. In each case we may expect evaporation to proceed at an increased rate compared with that from an extensive area of the same composition, and it is quite possible that the energy required to accomplish this will exceed the local radiative surplus. 
+
+
+
+:::
+
+
+## ‘Clothesline’ Effect 
+
+
+![Photo: A. Christen](images/23_33_3.jpg)
+
+
+
+::: {.notes}
+
+One last advective effect:  
+
+:::
+
+
+
+## ‘Clothesline’ Effect 
+
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Advective effects of drier air penetrating a vegetation canopy. Especially seen at crop and forest edges.
+
+![Analogy of the drying effect of air through a clothesline of wet laundry.](images/23_34_3.gif)
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+
+
+
+![Enhanced $LE$ of edge plants often causes them to be stunted, open to disease, and soil moisture is drawn down.](images/23_34_4.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+If the air entering the crop from the right is warm and dry it will increase both the heat supply, and the vapour pressure gradient between the transpiring leaves and the crop air. The net result is to enhance the evaporation rate and hence to more rapidly deplete the soil moisture close to the stand border. Further into the crop the air cools down and acquires moisture, thus causing it to adjust to the more typical conditions within the stand. 
+At the edge of crops the soil moisture depletion, crop desiccation, greater wind damage, and greater exposure to new plant pests and disease commonly combine to stunt crop growth for a few metres in from the border. 
+
+
+:::
+
+
+
+
+
+
+::: {.notes}
+
+horizontal interactions will occur
+
+:::
+
+
+## Orographic Effects
+
+
+Dynamic effects of orography require a larger-scale pressure gradient. 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+* Mountains and hills block, deflect, channel and accelerate pre-existing airflow. 
+
+* Controlled by the dimension and form of the orographic obstacle and the atmospheric conditions.
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![Airflow across BC coast mountains (Photo: A.Christen) ](images/24_4_0.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Wind is produced by differences in air pressure between one place to another.
+
+:::
+
+
+
+## Wind in complex terrain
+
+Airflow past an orographic obstacle depends on three properties:
+
+
+![](images/24_8_3.png)
+
+
+::: {.notes}
+
+Momentum:  mean horizontal momentum of a unit volume is therefore given by its density (ρ) multiplied by its mean horizontal wind.
+
+:::
+
+
+
+
+## Froude Number (Fr) {.smaller}
+
+The Froude Number describes the ratio of inertia forces to gravitational forces in a system:
+
+$$
+Fr = \frac{\pi U_0}{NH}
+$${#eq-Froude-Number}
+
+where $U_0$ is the veloity of the approaching flow, H is the **height** of the obstacle and N is:
+
+$$
+N = \sqrt{\frac{g}{\theta}\frac{\Delta\theta}{\Delta z}}
+$${#eq-Brun-Vaisala-Frequency}
+
+where $g$ is the gravitational constant 9.8 m s<sub>-2</sub> and $\theta$ is the potential temperature.
+
+
+::: {.notes}
+
+FROOD
+The more stable the atmosphere is stratified, the faster the frequency. Note: Only defined for stable atmosphere. Atmosphere on the vertical scale of the relief is often stably layered.
+
+:::
+
+
+
+
+## Froude Number (Fr)
+
+We can use the Froude Number to determine whether air flows around or across an orographic obstacle:
+
+
+* The more stable the atmosphere $\rightarrow$ the greater the resistance to orographic uplift
+
+
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+
+![](images/24_11_2.png)
+
+
+:::
+
+::: {.column width="33%"}
+
+
+![](images/24_12_2.png)
+
+:::
+
+::: {.column width="33%"}
+
+![](images/24_13_2.png)
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Form and dimension of the obstacle
+Velocity of the approaching flow (momentum)
+Stability of the atmosphere (controlling uplift)
+
+
+
+
+:::
+
+
+
+---
+
+
+![Lee rotor clouds in Boulder, Colorado, USA](images/24_14_3.jpg)
+
+
+::: {.notes}
+
+Rotor clouds are turbulent, ragged-looking clouds that form at low altitude under the crests of mountain waves. 
+They are associated with violent turbulence that can break wings off of aircraft, and their strong up- and down-drafts can cause pilots of small aircraft to crash while attempting to land and take off.
+
+
+:::
+
+
+
+
+## What Happens in a an Unstable Atmosphere?
+
+
+In an unstable atmosphere, the $Fr$ is undefined; any obstacle will cause air to flow completely across and streamlines are displaced upwards:
+
+
+
+![](images/24_17_4.png)
+
+
+::: {.notes}
+
+Only defined for stable atmosphere
+For statically neutral conditions, Fr = ∞. A large turbulent wake occurs (Fig. 17.30d). These wakes are hazardous to aircraft. 
+
+
+For weak static stability and strong winds, the natural wavelength is much greater than the hill width, Fr3 >> 1. Wave amplitude is weak, z1 < H/2. A turbulent wake will form downwind of the mountain, sometimes with a cavity of reverse flow near the ground (Fig. 17.30c). The cavity and rotor circulations are driven by the wind like a bike chain turning a gear. 
+
+
+:::
+
+
+
+
+## Summary {.smaller}
+
+* Wind around the a hill: velocity increases along base of hill.
+* Wind over the hill: velocity increases on top of the hill.
+
+```{r}
+#| label: tbl-16_2
+#| tbl-cap: Froude Number's effect on wind
+
+Data <- read.csv(file = 'Data/24_16_2_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+
+
+
+::: {.notes}
+
+gravitational forces 
+inertia forces & gravitational forces 
+inertia forces; neutral = much weaker thermal stratification
+
+
+:::
+
+
+## Wind profile in complex orography
+
+The vertical wind profile is modified in a way, so that near-surface horizontal winds over the hill are 1 to 3 times stronger compared to the situation over the flat plane upwind:
+
+![](images/24_26_3.jpg)
+
+
+::: {.notes}
+
+Essentially an increase in the ground elevation relative to the mean requires the flow to constrict vertically and this results in acceleration. 
+
+:::
+
+
+
+
+
+---
+
+
+![](images/24_18_9.jpg)
+
+
+## Flow Separation
+
+
+![](images/24_24_1.png)
+
+
+::: {.notes}
+
+Flow over moderate topography. The varying elevation of the surface over moderate topography (slopes up to about 0.3 (17)) (without separation). 
+Increase in height requires the flow to constrict vertically and this results in acceleration; Conversely a drop of surface elevation results in a slowing down. 
+Flow over steep topography. If the up wind or down-wind slope of the ground exceeds about 17, flow separation occurs. This is accompanied by secondary flows. 
+Flow down over a step creates a strong lee eddy and helps to dissipate low cloud. 
+As the flow approaches the steep ridge a pressure build-up occurs. The pressure is a maximum in the middle to upper part of the face. The major portion of the flow moves upwards (to lower pressure) and ‘squeezes’ over the ridge with a major speed-up at the top. Some of the flow is deflected and drawn downwards (to lower pressure) and forms a bolster eddy (or roll vortex) along the base (general flow and winds are weak, unsteady and turbulent).
+As the rest of the flow streams over the ridge separation occurs at the top and a lee eddy forms. Again winds at the surface are counter to the mean flow, weak and unsteady. Hence the area is sheltered in the mean but subject to short-term gustiness. Above and slightly downstream of the ridge the conditions are conducive to convective cloud formation. For stably stratified flow, a series of recurrent, but diminishing lee waves and their associated lee wave clouds may form downstream. 
+
+
+:::
+
+
+
+## Implications on air pollution
+
+Problems of pollution dispersion on the windward slope of a steep-sided valley:
+
+![The plume contents are trapped in the lee eddy or forced to ground by ‘downwash’](images/Lee_Polution.gif)
+
+
+::: {.notes}
+
+There are many environmental and practical implications arising from these preferred flow structures. Knowledge of localized areas of speed-up are important in the siting of: windmills for power generation, emission sources to maximize pollutant dispersal, communications towers to avoid structural failure, and forest cutting patterns to minimize windthrow due to excessive wind loading. 
+Lee eddies are semi-enclosed circulation systems and therefore poor locations for a pollutant source (Figure 8). Similarly areas of persistent downward motion are to be avoided for such uses, and are relatively dangerous places in which to land aircraft. On the other hand zones of persistent uplift are excellent areas for soaring bird flight, kiting and gliding. 
+
+
+:::
+
+
+
+
+
+
+
+## Thermo-topographic flows
+
+
+Complex terrain causes unequal distribution of radiation on slopes. Warming and cooling rates of the near-surface air depend on terrain location (ridges, slopes, valley floor). 
+
+
+
+![Valley floor is in shadow, while slopes receive irradiance (Photo: A. Christen)](images/24_30_3.png)
+
+
+
+::: {.notes}
+
+Valleys, especially those in mountainous regions, produce their own local wind systems as a result of thermal differences. 
+
+
+:::
+
+
+## Thermo-topographic flows
+
+
+* This creates horizontal temperature gradients and consequently pressure differences - along the valley’s axis and along slopes - that are the causation for two well known local thermo-topographic wind circulations:
+* Cross-valley circulations - circulations perpendicular a valley axis.
+* Along-valley circulations - circulations along a valley axis.
+
+
+
+::: {.notes}
+
+Valleys, especially those in mountainous regions, produce their own local wind systems as a result of thermal differences. 
+
+
+:::
+
+
+## Anabatic flow
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+* With mostly clear skies and weak synoptic winds (e.g. high-pressure system) anabatic winds are formed:
+* Slopes are heated by sun.
+* Warm air rises along slope.
+* At ridge top, warm air breaks away from the mountain and rises vertically.
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![(Stull, 2016)](images/24_32_3.png)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+Anabatic Wind: During daytime in synoptically calm conditions (high-pressure center) with mostly clear skies, the sunlight heats mountain slopes. The warm mountain surface heats the neighboring air, which then rises. However, instead of rising vertically like thermals, the rising air hugs the slope as it rises. This warm turbulent air rising upslope is called an anabatic wind (Fig. 17.7). 
+Typical speeds are 3 to 5 m s–1, and depths are hundreds of meters. The anabatic wind is the rising portion of a cross-valley circulation. 
+When the warm air reaches ridge top, it breaks away from the mountain and rises vertically, often joined by the updraft from the other side of the same mountain. Cumulus clouds called anabatic clouds can form just above ridge top in this updraft. 
+
+
+
+Anabatic and valley-wind. By day the air above the slopes and floor of the valley will be heated by the un- derlying surface to a temperature well above that over the centre of the valley. As a result shallow, unsta- ble upslope (or anabatic) flow arises, and to maintain continuity a closed circulation develops across the val- ley involving air sinking in the valley centre (Figure 2). 
+Commonly the uplift along the slopes is at speeds of 2 to 4 m s1 with a maximum at about 20-40 m above the surface. It can lead to the formation of convective anabatic clouds along the valley ridges. 
+The cross-valley circulation also effectively transports sensible heat (QH ) from the surrounding active surfaces to warm the whole valley atmosphere. Therefore when compared to the at- mosphere at the same level over an adjacent plain (or further downstream) the valley air is much warmer, and in a manner analogous to the sea breeze, a plain-to- mountain flow develops. The up-valley flow is termed the valley wind, and fills the entire valley. 
+
+
+:::
+
+
+## Anabatic flow
+
+
+Over the course of a day, cumulus clouds (called ‘ridgetop cumulus’ or ‘anabatic clouds’) can form above the ridge in the updraft.
+
+
+
+![Formation of ridge top (anabatic) cumulus clouds over the course of a day from early morning (1) to mid afternoon (12) (Photos: A. Christen)](images/24_33_3.png)
+
+
+## Katabatic flow
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+
+
+
+
+
+Katabatic flows over gently sloped terrain are nearly constant in wind speed and show little turbulence. The maximum wind speed is found just a few meters above the surface. 
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![R. B. Stull, 2015](images/24_34_4.jpg)
+
+
+:::
+
+::::
+
+
+::: {.notes}
+
+During anticyclonic conditions of calm or light synoptic-scale winds at night, air adjacent to a cold mountain slope can become colder than the surrounding air. This cold, dense air flows downhill under the influence of gravity (buoyancy), and is called a katabatic wind (Fig. 17.9). It can also form in the daytime over snow- or ice-covered slopes. 
+The katabatic wind is shallowest at the top of the slope, and increases in thickness and speed further downhill. Typical depths are 10 to 100 m, where the depth is roughly 5% of the vertical drop distance from the hill top. Typical speeds are 3 to 8 m s–1. Katabatic flows are shallower and less turbulent than anabatic flows. 
+The virtual potential temperature in a katabatic flow is generally coldest at the ground, and smoothly increases with height (Fig. 17.9). 
+However, winds closest to the ground are slowed due to turbulent drag, leaving a nose of fast winds just above ground level (Fig. 17.9). 
+
+
+
+Katabatic and mountain-wind. At night the valley surfaces cool by the emission of long-wave radiation. The lower air layers cool and slide down-slope under the influence of gravity. These katabatic winds usually flow gently downhill at about 2 to 3 ms-1, but greater speeds are observed where the cold layer is thicker and the slope steeper. The convergence of these slope winds at the valley centre results in a weak lifting motion (Fig- ure 2b). All of the downslope flows combine into a down-valley flow known as the mountain wind which seeps out of the mountain valleys onto the adjacent low- lands. A counter flow (the anti-mountain wind) flows up-valley aloft (Figures 2b and 3). 
+
+
+
+:::
+
+
+
+
+## Katabatic flow
+
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+
+If the slopes are forested, the maximum wind speed can be found in the trunk space of a forest. On steeper slopes, however, more substantial flows are observed, and a large number of smaller circulations can establish.
+
+
+
+
+
+
+:::
+
+::: {.column width="50%"}
+
+
+
+
+![](images/24_35_3.png)
+
+
+:::
+
+::::
+
+
+
+## Bimodal Winds on A Steep Slope
+
+
+
+![One-second measurements (Christen, 2000)](images/24_38_3.png)
+
+
+
+## Valley winds
+
+![By day, in mountainous areas, the air at higher elevation warms more rapidly than that down the valley triggering up-slope (anabatic) flow and also up-valley flow. At night the rapidly cooling air on mountains flows down by gravity (katabatic flows) and combines to form mountain winds flowing down the main valley](images/Valley.gif)
+
+
+::: {.notes}
+
+Cross valley: Day = a weak cross-valley horizontal circulation (not drawn) from the tops of the anabatic updrafts back toward the center of the valley. Some of this air sinks (sub- sides) over the valley center, and helps trap air pollutants in the valley.
+Along valley: During daytime, the upslope anabatic winds along the valley walls remove air from the valley floor. This lowers the pressure very slightly near the valley floor, which creates a pressure gradient that draws in replacement air from lower in the valley. These upstream flowing winds are called valley winds (Fig. 17.11), and are part of an along-valley circulation. A weak return flow aloft (heading down valley; not drawn in Fig. 17.11) is called the anti-valley wind. 
+Cross valley: At night, the katabatic winds from the bottom of the slopes drain into the valley, where they start to accumulate. Meanwhile, the cold pool of air in the valley bottom flows along the valley axis in the same direction that a stream of water would flow. As this cold air drains out of the valley onto the lowlands, it is known as a mountain wind. This is part of an along-valley circulation. A weak return flow aloft (not drawn), called the anti-mountain wind, flows up-valley, and is the other part of this along- valley circulation. 
+
+
+Under such conditions, with almost cloudless skies and weak large- scale motion, differential warming or cooling of dif- ferent facets of the landscape gives rise to horizontal temperature and pressure gradients, which cause winds. The exact nature of these wind systems depends on the orientation and geometry of the valley. The best devel- oped and most symmetric wind system might be antici- pated in a deep, straight valley with a north-south axis. 
+In valleys with other orientations or possessing complex geometries (e.g. bends, constrictions, etc.) the flow pat- tern may be asymmetric or incomplete. 
+
+Katabatic flows are commonly found over ice and snow surfaces. If the head of the valley considered above was occupied by a glacier or snowfield the additional cold air would have augmented the nocturnal down-valley wind. In fact katabatic winds are also found by day over glaciers and ice-caps 
+
+Similar katabatic flows exist on a larger scale on the sur- face and at the margins of the continental ice-caps. In this case the cold layer is up to 300 metres deep, and the wind speeds are greater than for glacier and valley winds. Winds as strong as 20 m s1 are often encoun- tered (Figure 4). 
+
+
+:::
+
+## Take home points {.smaller}
+
+
+* Our one-dimensional approach is limited as the typical geographical distribution of surface properties (roughness, surface temperatures, evaporation) varies greatly, sometimes sharply.
+* This causes momentum, heat and moisture and the corresponding fluxes to depend not only on the underlying surface, but they show a ‘memory’ of surfaces encountered upwind - advection.
+* Advection can dominate the energy balances, or even invert the direction of turbulent fluxes - oasis effect and ‘clothesline’ effect.
+
+* Dynamically, mountains and hills can block, deflect, channel and accelerate airflow. Thermally, they can cause thermo-topographic circulations.
+* Whether air flows across or around a hill or obstacle is defined by the Froude Number. 
+* Thermo-topographic flows form along slope and valley axes under fair-weather situations with limited synoptic wind. Anabatic flows are upslope, katabatic flows downhill.
+

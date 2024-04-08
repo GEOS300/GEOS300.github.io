@@ -993,10 +993,214 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\nMomentum Exchange + Profile Laws\n\n\n\n\n2024-03-25\nProfile Laws + Flux Gradient Relationships\n\n\n\n\n2024-03-27\nEddy Covariance\n\n\n\n\n2024-04-01\nEaster Monday, no class\n\n\n\n\n2024-04-03\nStability and Turbulent Exchange\n\n\n\n\n2024-04-08\nGeneral Boundary Layer and Flow Characteristics\n\n\n\n\n2024-04-10\nWater & Carbon Cycles\n\n\n\n\n2024-04-17\nOffice Hours Drop-in Exam\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\nMomentum Exchange + Profile Laws\n\n\n\n\n2024-03-25\nProfile Laws + Flux Gradient Relationships\n\n\n\n\n2024-03-27\nEddy Covariance\n\n\n\n\n2024-04-01\nEaster Monday, no class\n\n\n\n\n2024-04-03\nStability and Turbulent Exchange\n\n\n\n\n2024-04-08\nGeneral Boundary Layer Characteristics & Flow in Complex Terrain\n\n\n\n\n2024-04-10\nWater & Carbon Cycles\n\n\n\n\n2024-04-15\nOffice Hours Drop-in Exam PrepOffice Hours Drop-in Exam Prep\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#the-final-exam",
+    "href": "Lectures/20.html#the-final-exam",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "The Final Exam",
+    "text": "The Final Exam\nThe final exam will be open between April Wednesday April 24th and Thursday April 25th. It will be completed asynchronously over canvas.\n\nThe exam will not be timed. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.\n\nThe exam will be open for 48 hours starting at 8 AM Wednesday April 24th\n\nLate submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes\n\n\nThe final is cumulative; any topics from the course are fair game. Similar to the midterm:\nA collection of multiple choice, fill in the blanks, matching etc. (~50%)\nProblem set + short answer questions (~50%)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#learning-objectives",
+    "href": "Lectures/20.html#learning-objectives",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\n\nDescribe how the ABL responds to the surface energy balance over a day.\nExplain how sensible heat is mixed and distributed in the ABL (i.e. mixed layer growth and entrainment processes.)\nDescribe how moisture is mixed in the ABL.\n\n\n\n\n\nPhoto: A. Christen",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#review-iclicker",
+    "href": "Lectures/20.html#review-iclicker",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Review (iClicker)",
+    "text": "Review (iClicker)\nName the layer of the atmosphere from the surface to the level where the frictional influence of the surface is absent.\n\nA Atmospheric boundary layer\nB Residual layer\nC Troposphere\nD Laminar boundary layer",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#section",
+    "href": "Lectures/20.html#section",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "",
+    "text": "Convective Boundary Layer (CBL)\n\nThermal plumes, convection cells and roll structures.\nSurface layer, mixed layer and entrainment zone.\nDeep, well mixed temperature profiles.\n\n\n\nStable Boundary Layer (SBL)\n\nInversion close to the ground, growth during night\nStable layer close to ground and residual layer above\nWaves\n\n\n\n\n\nStable = inversion layer Residual layer = Weak mixed layer Intermittent turbulence and wavelike motions of varying amplitudes and periods. Vorticity waves = driven by shear (i.e. differences in wind speed - wind profile may exhibit a wind maximum located near the top of the inversion). Buoyancy waves = airflow (streamlines) displaced by topography, density differences, turbulence).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#thermal-structure-of-abl",
+    "href": "Lectures/20.html#thermal-structure-of-abl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Thermal structure of ABL",
+    "text": "Thermal structure of ABL\n\n\n\n\n\nThe dashed line shows an idealized \\(\\theta\\) profile of a stable boundary atmosphere; the solid line is the profile with a well mixed convective boundary layer\n\n\n\n\n\n\nPotential temperature profiles day vs. night. B. Crawford, PhD Thesis in Geography, UBC, 2014\n\n\n\n\n\nThe standard atmosphere slopes toward warmer potential temperatures at greater altitudes. Such a slope indicates statically stable air; namely, air that opposes vertical motion. The ABL is often turbulent. Because turbulence causes mixing, the bottom part of the standard atmosphere becomes homogenized. Namely, within the turbulent region, the resulting mixture has a medium potential temperature that is uniform with height Above the mixed layer, the air is usually unmodified by turbulence. This tropospheric air above the ABL is known as the free atmosphere (FA). As a result of a turbulent mixed layer being adjacent to the unmixed free atmosphere, there is a sharp temperature increase at the mixed layer top. This transition zone is very stable, and is often a temperature inversion. The altitude of the middle of this inversion is given the symbol zi, and is a measure of the depth of the turbulent ABL. The temperature inversion acts like a lid or cap to motions in the ABL. If turbulence were to try to push it out of the top of the mixed layer into the free atmosphere, it would be so much colder than the surrounding environment that a strong buoyant force would push it back down into the mixed layer. Hence, air parcels, turbulence, and any air pollution in the parcels, are trapped within the mixed layer. Vigorous turbulence within the ABL causes the ABL to respond quickly to surface influences such as heating and frictional drag. However, the remainder of the troposphere does not experience this strong turbulent coupling with the surface, and hence does not experience frictional drag nor a daily heating cycle. In summary, the bottom 200 m to 4 km of the troposphere is called the atmospheric boundary layer. ABL depth is variable with location and time. Turbulent transport causes the ABL to feel the direct effects of the Earth’s surface. The ABL exhibits strong diurnal (daily) variations of temperature, moisture, winds, pollutants, turbulence, and depth in response to daytime solar heating and nighttime IR cooling of the ground.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#diurnal-course-of-the-abl",
+    "href": "Lectures/20.html#diurnal-course-of-the-abl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Diurnal Course of the ABL",
+    "text": "Diurnal Course of the ABL\n\nThe upper boundary of the ABL (\\(z_i\\)) can vary substatially over the course of a day.\nThe atmospheric boundary layer is continually evolving in response to the daily heat/cooling cycle and to changing synoptic conditions. During daytime there is a statically-unstable mixed layer (mL). The depth of the mixed layer start to rise when the surface sensible heat flux becomes positive. It develops in depth over the course of the day to its maximum value in the mid-afternoon and the complete layer is convectively unstable. The principle agent of transport and mixing in the mixed layer are thermals (ie. rising masses of warm air). The bottom 20 to 200 m of the ABL is called the surface layer. Here frictional drag, heat conduction, and evaporation from the surface cause substantial variations of wind speed, temperature, and humidity with height. However, turbulent fluxes are relatively uniform with height; hence, the surface layer is known as the constant flux layer. Above the mixed layer is the free atmosphere - the air is usually unmodified by turbulence. In the evening, when radiative cooling begins, and the surface sensible heat flux becomes negative, the surface-based radiation inversion begins to grow in depth and cuts off the mixed layer from its source of heat and buoyancy. The turbulence in the mixed layer decays, only roughness-generated turbulence persists near the surface. At night, a statically stable boundary layer (sBL) forms under a statically neutral residual layer (rL) (or weak mixed layer). The residual layer contains the pollutants and moisture from the previous mixed layer, but is not very turbulent.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#the-mixed-layer-ml",
+    "href": "Lectures/20.html#the-mixed-layer-ml",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "The Mixed Layer (ML)",
+    "text": "The Mixed Layer (ML)\nIn the convective boundary layer (CBL) apart from mechanical convection close to the surface, turbulence is driven mainly by thermal convection.\n\n\n\nLarge buoyancy driven plumes originate from surface.\n\nNeed 10 to 15 minutes to turn over.\n\nAir is well mixed and \\(\\theta\\) is approximately constant with height\n\nWe call this layer from ~100 m up to 3 ~km the mixed layer (ML).\n\n\nML growth depends on \\(H\\) at surface\n\n\n\n\n\nSnapshot of the temperature field in a direct numerical simulation of convection in the ABL. Figure by Peter Sullivan (NCAR/MMM) and H. Jonker (Delft University, Netherlands)\n\n\n\n\n\nblobs of air called thermals rise from this surface layer up through the mixed layer, until they hit the temperature inversion in the entrainment zone. Fig. 18.12a shows a closer view of the surface layer (bottom 5 - 10% of ABL). These thermal circulations create strong turbulence, and cause pollutants, potential temperature, and moisture to be well mixed in the vertical (hence the name mixed layer). The whole mixed layer, surface layer, and bottom portion of the entrainment zone are statically unstable.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#entrainment-zone",
+    "href": "Lectures/20.html#entrainment-zone",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Entrainment Zone",
+    "text": "Entrainment Zone\nThermals from CBL overshoot into capping inversion at \\(z_i\\).\n\n\n\nAcceleration due to buoyancy causes thermals to penetrate some distance up into stable layer, where they are repelled and returned to upper mixed layer.\n\nThis brings downward flux of warmer, drier, cleaner, less turbulent air.\nThis process is called entrainment.\n\n\n\n\n\n\nCapping inversion is typically at the height of fair-weather cumulus clouds (cumulus humilis, A. Christen).\n\n\n\n\n\nThe turbulent mixed layer grows by entraining non-turbulent air from the free atmosphere. During free convection (when winds are weak and thermal convection is strong), the entrained kinematic heat flux is approximately 20% of the sur- face heat flux:",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#entrainment",
+    "href": "Lectures/20.html#entrainment",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Entrainment",
+    "text": "Entrainment\n\nNote, ABL growth is due to both, ‘encroachment’ from surface and ‘entrainment’ from free atmosphere above.\nThis brings downward flux of warmer, drier, cleaner, less turbulent air. This process is called entrainment. This means that the height of the boundary layer zi increases as long as convection is active (heat inflow by radiation) The top of the whole convective mixed layer, zi , is often defined as the level of most negative heat flux. This level is near the middle of the entrainment zone, often at the height where the capping inversion is strongest.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#roll-vortices-and-cloud-streets",
+    "href": "Lectures/20.html#roll-vortices-and-cloud-streets",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Roll Vortices and ‘Cloud Streets’",
+    "text": "Roll Vortices and ‘Cloud Streets’\n\n\n\n\n\nThe mixed layer may contain roll vortices - organized uplift and sinking cells. Uplift areas create cloud ‘streets’, these may reinforce structure due to shadows.\n\n\n\n\n\n\nSatellite image of cloud streets over a convective ABL during afternoon over Kenya (NASA)\n\n\n\n\n\nCloud streets or cloud lines are rows of fair- weather cumulus-humilis clouds (Fig. 6.9) that are roughly parallel with the mean wind direction. They form over warm land in the boundary layer on sunny days, and over water day or night when cold air advects over warmer water. Light to moderate winds in the convective boundary layer cause horizontal roll vortices, which are very weak counter- rotating circulations with axes nearly parallel with the mean wind direction. These weak circulations sweep rising cloud-topped thermals into rows with horizontal spacing of roughly twice the boundary- layer depth (order of 1 km).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#sensible-heat-flux-density-in-the-cbl",
+    "href": "Lectures/20.html#sensible-heat-flux-density-in-the-cbl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Sensible heat flux density in the CBL",
+    "text": "Sensible heat flux density in the CBL\n\n\nWhat are the different layers? Because this warm air is entrained downward, it corresponds to a negative heat flux at the top of the mixed layer. The heat-flux profile (Fig. 18.17b) is often linear with height, with the most negative value marking the top of the mixed layer. Surface layer = constant flux layer The potential temperature of a parcel of fluid at pressure {P} is the temperature that the parcel would attain if adiabatically brought to a standard reference pressure {P_{0}}, usually 1,000 hPa (1,000 mb).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#measured-vertical-profiles-of-moisture",
+    "href": "Lectures/20.html#measured-vertical-profiles-of-moisture",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Measured vertical profiles of moisture",
+    "text": "Measured vertical profiles of moisture\n\n\nDecrease above mixed layer since source if from the surface The mixed layer is so named because intense vertical mixing tends to leave conserved variables such as potential temperature and specific humidity nearly constant with height",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#moisture-in-the-daytime-cbl",
+    "href": "Lectures/20.html#moisture-in-the-daytime-cbl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Moisture in the daytime CBL",
+    "text": "Moisture in the daytime CBL\n\n\n\nThe amount of boundary layer moistening during the day depends on relative strength of:\n\nSurface fluxes (wetting)\nEntrainment fluxes (drying)\n\n\\(LE\\) will be a function of \\(R_n\\) and the gradient of \\(r_{H_2O}\\)\n\n\n\n\n\nThe drier free atmosphere produces a drying flux through the entrainment zone. So the mixing ratio (\\(r_{H_2O}\\)) declines through the ML, and sharply above.\n\n\n\n\n\nmixing ratio is the abundance of one component of a mixture relative to that of all other components. The term can refer either to mole ratio or mass ratio (moles of X per mole of air).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#structure-of-a-nocuturnal-boundary-layer",
+    "href": "Lectures/20.html#structure-of-a-nocuturnal-boundary-layer",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Structure of a Nocuturnal Boundary Layer",
+    "text": "Structure of a Nocuturnal Boundary Layer\n\n\nAbove the stable boundary layer at the surface, weak mixing continues in remnants of previous day’s CBL, called the residual laye.\n\nIt shows the properties of the decayed daytime mixed layer.\n\n\n\n\n\n\nStable ABLs are quite complex. Turbulence can be intermittent, and coupling of air to the ground can be quite weak. In addition, any slope of the ground causes the cold air to drain downhill. Cold, downslope winds are called katabatic winds, as discussed in the Regional Winds chapter.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#temperatures-in-sbl",
+    "href": "Lectures/20.html#temperatures-in-sbl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Temperatures in SBL",
+    "text": "Temperatures in SBL\nIn the stable boundary layer surface cooling causes downward sensible heat flux.\n\nTypical over land at night or when warm air advected over cold surfaces (lakes, ice, etc.)\n\n\nPotential temperature profile defines the depth of the stable boundary layer, but may be hard to identify top (merges) - typically 100 - 300 m on a clear sky night.\nCapping Inversion ist eine nicht-turbulente Inversion (Sozusagen überiggeblieben)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#moisture-in-the-sbl",
+    "href": "Lectures/20.html#moisture-in-the-sbl",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Moisture in the SBL",
+    "text": "Moisture in the SBL\n\n\n\nAt night, the stable boundary layer shows relatively small gradients in the water mixing ratio r and can be of either sign:\n\nDrying with height \\(\\rightarrow\\) evaporation continues (more slowly)\nInversion \\(\\rightarrow\\) dew / frost will occur!\n\n\n\n\n\n\n\ne.g. over water body could get evaporation;",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
+    ]
+  },
+  {
+    "objectID": "Lectures/20.html#take-home-points",
+    "href": "Lectures/20.html#take-home-points",
+    "title": "General Boundary Layer Characterisitcs",
+    "section": "Take home points",
+    "text": "Take home points\n\nThe Atmospheric boundary layer is responding to energetic changes of the surface, i.e.the surface energy balance.\nThermal convection is the dominating mixing process in the daytime mixed layer. The ML grows due to encroachment and entrainment.\nA stable boundary layer with suppressed mixing develops during night and over cool surfaces (ice etc.).\nA drying flux through the entrainment zone is observed, as the free atmosphere is less humid that the ABL.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "General Boundary Layer Characterisitcs"
     ]
   },
   {
@@ -4439,7 +4643,7 @@
     "href": "Assignments/04.html#question-5",
     "title": "Assignment 4",
     "section": "Question 5",
-    "text": "Question 5\nFor 16:00, Calculate \\(H\\) based on the aerodynamic method using the simultaneously measured profiles of \\(\\overline{u}\\) and \\(\\overline{T}\\). How does the value of \\(H\\) compare to \\(H\\) in your answer to question 2? Why could it differ?",
+    "text": "Question 5\nFor 16:00, Calculate \\(H\\) based on the aerodynamic method using the simultaneously measured profiles of \\(\\overline{u}\\) and \\(\\overline{T}\\). How does the value of \\(H\\) compare to \\(H\\) calculated from \\(\\overline{w^{\\prime}T^{\\prime}}\\)? Why could it differ?",
     "crumbs": [
       "Assignments",
       "Assignment 4"
@@ -4923,7 +5127,7 @@
     "href": "Assignments/index.html",
     "title": "Assignments",
     "section": "",
-    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-08\n2024-03-29\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-12\nSoil Chamber Data Collection & Processing",
+    "text": "Your assignments will be posted here as they become available. You will have an assignment due approximately every 3-weeks.\n\n\n\n\nTable 1: Assignment schedule Assignment 4 deadline has been extended. But submission must be turned in but the new due date.\n\n\n\n\n\n\n\n\n\n\nDue Date\nTopic\n\n\nPost Date\n\n\n\n\n\n\n2024-01-26\n2024-02-16\nRadiation Budgets\n\n\n2024-02-16\n2024-03-08\nSoil Properties\n\n\n2024-03-08\n2024-03-29\nWind, Turbulence, & Fluxes\n\n\n2024-03-22\n2024-04-19*\nSoil Chamber Data Collection & Processing",
     "crumbs": [
       "Assignments"
     ]
@@ -5101,14 +5305,14 @@
     "href": "AssignmentsR_out/04.html#question-5",
     "title": "Assignment 4",
     "section": "Question 5",
-    "text": "Question 5\nFor 16:00, Calculate \\(H\\) based on the aerodynamic method using the simultaneously measured profiles of \\(\\overline{u}\\) and \\(\\overline{T}\\). How does the value of \\(H\\) compare to \\(H\\) in your answer to question 2? Why could it differ?"
+    "text": "Question 5\nFor 16:00, Calculate \\(H\\) based on the aerodynamic method using the simultaneously measured profiles of \\(\\overline{u}\\) and \\(\\overline{T}\\). How does the value of \\(H\\) compare to \\(H\\) calculated from \\(\\overline{w^{\\prime}T^{\\prime}}\\)? Why could it differ?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/04.html#question-6",
     "href": "AssignmentsR_out/04.html#question-6",
     "title": "Assignment 4",
     "section": "Question 6",
-    "text": "Question 6\nUsing the covariances and the profile measurements, calculate the eddy diffusivities for sensible heat \\(K_H\\) and momentum \\(K_M\\) at 16:00. Is Reynold’s analogy fulfilled or not at 16:00?"
+    "text": "Question 6\nUsing the covariances and the profile measurements, calculate the eddy diffusivities for sensible heat \\(K_H\\) and momentum \\(K_M\\) at 16:00. Is Reynold’s analogy fulfilled or not at 16:00?\n\n# Insert your code or text answer here.  If writing a text answer in .ipynb, change the cell type to Markdown.  If writing a text answer in .Rmd, just delete the tick marks surrounding the block"
   },
   {
     "objectID": "AssignmentsR_out/04.html#question-7",
@@ -8179,7 +8383,7 @@
     "href": "Lectures/19.html#mechanical-and-thermal-production",
     "title": "Stability and Turbulent Exchange",
     "section": "Mechanical and thermal production",
-    "text": "Mechanical and thermal production\nMechanical production and thermal production (suppression) can be expressed in discrete form of fluxes and gradients of mean variables as follows:\n\n\nMechanical\n\\[\n\\overline{u^{\\prime}w^{\\prime}}\\frac{\\Delta \\bar{u}}{\\Delta z} \\nonumber\n\\qquad(3)\\]\n\nThermal\n\\[\n\\frac{g}{\\theta_v}\\overline{w^{\\prime}\\theta_v^{\\prime}} \\nonumber\n\\qquad(4)\\]\n\n\\(g\\) is the acceleration due to gravity (\\(\\approx \\ 9.8 \\ \\rm{m \\ s}^{-1}\\))\n\n\n\n\nHence the virtual temperature is the temperature that dry dry air would have if its pressure and density were equal to those of a given sample of moist air.  Over land, w’T’ sfc and B are usually positive during the daytime, and negative at night.",
+    "text": "Mechanical and thermal production\nMechanical production and thermal production (suppression) can be expressed in discrete form of fluxes and gradients of mean variables as follows:\n\n\nMechanical\n\\[\n\\overline{u^{\\prime}w^{\\prime}}\\frac{\\Delta \\bar{u}}{\\Delta z} \\nonumber\n\\qquad(3)\\]\n\nThermal\n\\[\n\\frac{g}{\\theta_v}\\overline{w^{\\prime}\\theta_v^{\\prime}} \\nonumber\n\\qquad(4)\\]\n\n\\(g\\) is the acceleration due to gravity (\\(\\approx \\ 9.8 \\ \\rm{m \\ s}^{-2}\\))\n\n\n\n\nHence the virtual temperature is the temperature that dry dry air would have if its pressure and density were equal to those of a given sample of moist air.  Over land, w’T’ sfc and B are usually positive during the daytime, and negative at night.",
     "crumbs": [
       "Lectures",
       "Lecture Slides",
@@ -8532,6 +8736,450 @@
       "Lectures",
       "Lecture Slides",
       "Stability and Turbulent Exchange"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#learning-objectives",
+    "href": "Lectures/21.html#learning-objectives",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Learning Objectives",
+    "text": "Learning Objectives\n\n\n\nExplain what happens to the wind profile if we introduce horizontal changes in surface properties\n\nMoisture, roughness, topograpny, etc.\n\nDescribe how horizontal changes in surface properties affect the surface energy balance partitioning.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#d-view-of-surface-layer",
+    "href": "Lectures/21.html#d-view-of-surface-layer",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "1-D View of Surface Layer",
+    "text": "1-D View of Surface Layer\n\n\n\nIt has been implicit in all derivations to this point that the surface layer of the ABL is a ‘constant flux layer’:\n\nFlux densities do not vary horizontally.\nFlux densities do not vary vertically.\n\nThis allowed us to assume that flux densities measurements made anywhere in the surface layer represented the surface value.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#variability-over-ideal-surface",
+    "href": "Lectures/21.html#variability-over-ideal-surface",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Variability over ‘ideal’ Surface",
+    "text": "Variability over ‘ideal’ Surface\n\n\nObservations with eddy covariance show:\n\nEven over ‘ideal’ flat, homogeneous and extensive sites, horizontal and vertical variability of \\(\\tau\\), \\(H\\), \\(LE\\) etc. is in the order of 5 to 10%.\n\n\n\n\n\nInstruments within 50m horizontal distance (EBEX-2000)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#heterogeneous-surfaces",
+    "href": "Lectures/21.html#heterogeneous-surfaces",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Heterogeneous Surfaces",
+    "text": "Heterogeneous Surfaces\nThe real world is not made of ‘infinite, homogeneous, plains’. It is a patchwork of different surfaces each with its own energy balance, roughness etc. Hence microclimates at the surface vary greatly, sometimes sharply, and often they are uneven, patchy, rolling etc.\n\n\nEach has it’s own combination of radiative, thermal, moisture and aerodynamic properties such as albedo, soil conductivity, soil moisture and roughness. Each has own unique energy and water balance. Gives rise to different surface and subsurface climates in terms of temperature, humidity and wind speed profiles. Thus there will be spatial discontinuity of climates, and horizontal gradients will exist. Near the surface, at the boundaries between the fields, these gradients will be greatest and horizontal interactions will occur. Topography complicates things even further.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#the-complex-surface",
+    "href": "Lectures/21.html#the-complex-surface",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "The complex surface",
+    "text": "The complex surface\n\nThis is the geographical challenge of boundary layer climatology - a 3D reality.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#tile-approach",
+    "href": "Lectures/21.html#tile-approach",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Tile-approach",
+    "text": "Tile-approach\nUsed in weather forecasting; we calculate the exchange of different patches separately and then average them by factional occurrence",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#why-the-tile-approach-might-not-work",
+    "href": "Lectures/21.html#why-the-tile-approach-might-not-work",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Why the tile approach might not work",
+    "text": "Why the tile approach might not work\n\n\nAdvective effects The modification of atmospheric properties as air, already in horizontal motion, moves from one distinct surface type to a different one—these are advective effects",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#changing-roughness-effects-wind-iclicker",
+    "href": "Lectures/21.html#changing-roughness-effects-wind-iclicker",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Changing Roughness Effects Wind? (iClicker)",
+    "text": "Changing Roughness Effects Wind? (iClicker)\nHow does mean wind \\(u\\) near the surfac echange for a transition from a smooth to a rough patch?\n\n\n\n\n\n\n\n\nThe correct answer is C. Mean wind will be slowed once it reaches the rough surface - but slowing does not happen immediately (inertia)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#changing-roughness-reynolds-stress-iclicker",
+    "href": "Lectures/21.html#changing-roughness-reynolds-stress-iclicker",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Changing Roughness & Reynolds Stress? (iClicker)",
+    "text": "Changing Roughness & Reynolds Stress? (iClicker)\nHow does Reynolds stress (\\(\\tau\\)) change for a transitionfrom a smooth to a rough patch?\n\n\n\n\n\n\n\n\nThe correct answer is D. Reynolds stress τ is strongest, where mean wind and roughness are high",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#we-conclude",
+    "href": "Lectures/21.html#we-conclude",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "We Conclude",
+    "text": "We Conclude\n\nMean wind will be slowed once it encounters and increase in surface roughness\n\nBut slowing does not happen immediately (inertia)\n\nReynolds stress \\(\\tau\\) is strongest where mean wind and roughness are high (at the boundary)\n\nReynolds stress is ‘overshooting’ and readjusts afterwards to its new value\n\n\n\nThe greater roughness of the vegetation will exert a greater drag on the air. This increases the surface shearing stress and decreases the mean wind speed (Figure 5.3b).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#relevance-of-step-changes-in-landscapes",
+    "href": "Lectures/21.html#relevance-of-step-changes-in-landscapes",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Relevance of step-changes in landscapes",
+    "text": "Relevance of step-changes in landscapes",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#internal-boundary-layer",
+    "href": "Lectures/21.html#internal-boundary-layer",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Internal boundary layer",
+    "text": "Internal boundary layer\n\nAs air crosses a sharp change in surface properties (\\(z_0\\), \\(T_0\\), \\(\\rho_{v0}\\), etc.); air immediately above is affected (due to turbulent exchange).\n\n\nModification affects a layer (\\(\\delta\\)) known as the internal boundary layer as a function of greater distances (\\(x\\)) known as fetch)\nAs air passes from one surface-type to a new and climatically different surface, it must adjust to a new set of boundary conditions. The layer of air whose properties have been affected by the new surface is referred to as an internal boundary layer, and its depth grows with increasing distance, or fetch, downwind from the leading-edge. It is only in the lower 10% of this layer that the conditions are fully adjusted to the properties of the new surface. The remainder of the layer is a transition zone wherein the air is modified by the new surface but is not adjusted to it. The properties of the air above the internal boundary layer remain determined by upwind influences and not those of the surface immediately beneath.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#wind-profile-across-a-step-change",
+    "href": "Lectures/21.html#wind-profile-across-a-step-change",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Wind Profile Across a Step Change",
+    "text": "Wind Profile Across a Step Change\n\n\nThe properties of the air above the internal boundary layer remain determined by upwind influences and not those of the surface immediately beneath.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#changes-in-evaporation",
+    "href": "Lectures/21.html#changes-in-evaporation",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Changes in Evaporation",
+    "text": "Changes in Evaporation\n\nVapor density increases gradually after the step change; Evapotranspiration ‘overcorrects’, spiking then decreasing to new baselevel\nAs the air crosses the leading-edge into box 2 the surface evaporation rate rises sharply because there is an extremely strong gradient in vapour concentration between the moist surface and the ‘dry’ air. This increase cannot immediately spread upward, so E0 exceeds Ez and there is an increase of vapour in the box (Figure 5.2b), and hence a larger horizontal transport out of the downwind side of box 2 (Figure 5.2a). This process continues in boxes 3 and 4 but because of the accumulation of vapour with distance the surface-to-air vapour gradient weakens and with it the surface evaporation input. Finally at box 5 a new equilibrium situation arises where the mean content reaches a value which is more typical of the moist surface, and which does not overstimulate the surface evaporation regime. Downwind of box 5 both the horizontal and vertical fluxes are constant with distance and the air layer has become fully adjusted to the properties of the new surface.\nIn Figure 5.2a the vertical fluxes of water vapour into and out of the boxes are shown by vector arrows the lengths of which are proportional to the strength of the flux. The vertical arrows represent the evaporation fluxes, and the horizontal arrows the advective fluxes.\nIf the vertical arrows are of different lengths this indicates divergence or convergence of the vertical flux (Figures 2.1a, b, p. 35) and a non-constant flux layer.\nIf the horizontal arrows are dissimilar it indicates divergence or convergence of the horizontal flux (Figure 2.1c) and that advection is in operation, and the difference in their length is a measure of the net moisture advection (deltaA).\nAir with a vapour content (kg m-3) moves from the dry to the wet surface at a speed u† (m s-1). Hence the rate of horizontal moisture transport, A (kg m-2 s-1) is: A=upv (5.1)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#changes-in-the-surface-energy-balance",
+    "href": "Lectures/21.html#changes-in-the-surface-energy-balance",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Changes in the surface energy balance",
+    "text": "Changes in the surface energy balance",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#changes-in-the-surface-energy-balance-1",
+    "href": "Lectures/21.html#changes-in-the-surface-energy-balance-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Changes in the surface energy balance",
+    "text": "Changes in the surface energy balance\n\n\nOasis effect.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#oasis-effect",
+    "href": "Lectures/21.html#oasis-effect",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Oasis Effect",
+    "text": "Oasis Effect\nAdvectively driven \\(LE\\) due to a wet patch within a larger dry environment (desert oasis, urban park, irrigated field).\n\nContributes sensible heat to boost \\(LE\\). In some cases \\(LE\\) can be 1.5 to 2 times \\(R_n\\).\n\n\n\nAdvective effect: The oasis effect This apparently anomalous situation is explained by the fact that the atmosphere supplies sensible heat to the surface because the oasis is cooler than the regional air in which it is embedded. Therefore there is a continual air-to-oasis inversion temperature gradient driving a downward directed heat flux, and the process is aided by air mass subsidence over the oasis. (Note that the reversal of \\(H\\) gives the oasis a negative Bowen ratio.) Figure 5.5 shows the average daily energy balance components in June following the irrigation in late May. For the first half of June an ‘oasis effect’ is clearly evident; evapotranspiration exceeds the net radiation, and \\(H\\) is directed towards the crop. During this period the average Bowen ratio is about -0·25, and the ratio \\(LE\\)/\\(R_n\\) is approximately 1·5. However, by the middle of June soil moisture starts to become restricted, the surface resistance (rc) increases, and evaporation rates decrease. Since \\(R_n\\) remains relatively constant this requires an adjustment by \\(H\\). By 25 June the Bowen ratio is +1·0, and \\(LE\\)/\\(R_n\\) is about 0·5. In the absence of further irrigation or precipitation the energy balance would return to a semi-arid type.\nMany other ‘oasis-effect’ advective situations can be envisaged. In each of the following examples a cool, moist surface is dominated by larger- scale warmer, drier surroundings: a lake in an area with a dry summer climate; a glacier in a mountain valley; an isolated snow patch; an urban park; an isolated tree in a street or on open, bare ground. In each case we may expect evaporation to proceed at an increased rate compared with that from an extensive area of the same composition, and it is quite possible that the energy required to accomplish this will exceed the local radiative surplus.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#clothesline-effect",
+    "href": "Lectures/21.html#clothesline-effect",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "‘Clothesline’ Effect",
+    "text": "‘Clothesline’ Effect\n\nPhoto: A. Christen\nOne last advective effect:",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#clothesline-effect-1",
+    "href": "Lectures/21.html#clothesline-effect-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "‘Clothesline’ Effect",
+    "text": "‘Clothesline’ Effect\n\n\nAdvective effects of drier air penetrating a vegetation canopy. Especially seen at crop and forest edges.\n\n\n\nAnalogy of the drying effect of air through a clothesline of wet laundry.\n\n\n\n\n\n\nEnhanced \\(LE\\) of edge plants often causes them to be stunted, open to disease, and soil moisture is drawn down.\n\n\n\n\n\nIf the air entering the crop from the right is warm and dry it will increase both the heat supply, and the vapour pressure gradient between the transpiring leaves and the crop air. The net result is to enhance the evaporation rate and hence to more rapidly deplete the soil moisture close to the stand border. Further into the crop the air cools down and acquires moisture, thus causing it to adjust to the more typical conditions within the stand. At the edge of crops the soil moisture depletion, crop desiccation, greater wind damage, and greater exposure to new plant pests and disease commonly combine to stunt crop growth for a few metres in from the border.\n\n\nhorizontal interactions will occur",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#orographic-effects",
+    "href": "Lectures/21.html#orographic-effects",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Orographic Effects",
+    "text": "Orographic Effects\nDynamic effects of orography require a larger-scale pressure gradient.\n\n\n\nMountains and hills block, deflect, channel and accelerate pre-existing airflow.\nControlled by the dimension and form of the orographic obstacle and the atmospheric conditions.\n\n\n\n\n\nAirflow across BC coast mountains (Photo: A.Christen)\n\n\n\n\n\nWind is produced by differences in air pressure between one place to another.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#wind-in-complex-terrain",
+    "href": "Lectures/21.html#wind-in-complex-terrain",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Wind in complex terrain",
+    "text": "Wind in complex terrain\nAirflow past an orographic obstacle depends on three properties:\n\n\nMomentum: mean horizontal momentum of a unit volume is therefore given by its density (ρ) multiplied by its mean horizontal wind.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#froude-number-fr",
+    "href": "Lectures/21.html#froude-number-fr",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Froude Number (Fr)",
+    "text": "Froude Number (Fr)\nThe Froude Number describes the ratio of inertia forces to gravitational forces in a system:\n\\[\nFr = \\frac{\\pi U_0}{NH}\n\\qquad(1)\\]\nwhere \\(U_0\\) is the veloity of the approaching flow, H is the height of the obstacle and N is:\n\\[\nN = \\sqrt{\\frac{g}{\\theta}\\frac{\\Delta\\theta}{\\Delta z}}\n\\qquad(2)\\]\nwhere \\(g\\) is the gravitational constant 9.8 m s-2 and \\(\\theta\\) is the potential temperature.\n\nFROOD The more stable the atmosphere is stratified, the faster the frequency. Note: Only defined for stable atmosphere. Atmosphere on the vertical scale of the relief is often stably layered.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#froude-number-fr-1",
+    "href": "Lectures/21.html#froude-number-fr-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Froude Number (Fr)",
+    "text": "Froude Number (Fr)\nWe can use the Froude Number to determine whether air flows around or across an orographic obstacle:\n\nThe more stable the atmosphere \\(\\rightarrow\\) the greater the resistance to orographic uplift\n\n\n\n\n\n\n\n\n\n\n\nForm and dimension of the obstacle Velocity of the approaching flow (momentum) Stability of the atmosphere (controlling uplift)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#what-happens-in-a-an-unstable-atmosphere",
+    "href": "Lectures/21.html#what-happens-in-a-an-unstable-atmosphere",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "What Happens in a an Unstable Atmosphere?",
+    "text": "What Happens in a an Unstable Atmosphere?\nIn an unstable atmosphere, the \\(Fr\\) is undefined; any obstacle will cause air to flow completely across and streamlines are displaced upwards:\n\n\nOnly defined for stable atmosphere For statically neutral conditions, Fr = ∞. A large turbulent wake occurs (Fig. 17.30d). These wakes are hazardous to aircraft.\nFor weak static stability and strong winds, the natural wavelength is much greater than the hill width, Fr3 &gt;&gt; 1. Wave amplitude is weak, z1 &lt; H/2. A turbulent wake will form downwind of the mountain, sometimes with a cavity of reverse flow near the ground (Fig. 17.30c). The cavity and rotor circulations are driven by the wind like a bike chain turning a gear.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#summary",
+    "href": "Lectures/21.html#summary",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Summary",
+    "text": "Summary\n\nWind around the a hill: velocity increases along base of hill.\nWind over the hill: velocity increases on top of the hill.\n\n\n\n\n\nTable 1: Froude Number’s effect on wind\n\n\n\n\n\n\n\n\n\n\n\n\n\nFr\nDominant term\nStability\nWind strenght\nResult\n\n\n\n\nFr \\(\\approx\\) 0\n\\(\\leftrightarrow\\)\nvery stable\nweak\nWind around obstacle\n\n\nFr \\(\\approx\\) 0.5\n\\(\\leftrightarrow\\) \\(\\updownarrow\\)\nstable\nmoderate\nWind around and over obstacle\n\n\nFr \\(&gt;1\\)\n\\(\\updownarrow\\)\nneutral\nstrong\nWind over obstacle\n\n\nFr \\(= \\infty\\)\n\\(\\updownarrow\\)\nunstable\nweak to moderate\nWind over obstacle\n\n\n\n\n\n\n\n\n\ngravitational forces inertia forces & gravitational forces inertia forces; neutral = much weaker thermal stratification",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#wind-profile-in-complex-orography",
+    "href": "Lectures/21.html#wind-profile-in-complex-orography",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Wind profile in complex orography",
+    "text": "Wind profile in complex orography\nThe vertical wind profile is modified in a way, so that near-surface horizontal winds over the hill are 1 to 3 times stronger compared to the situation over the flat plane upwind:\n\n\nEssentially an increase in the ground elevation relative to the mean requires the flow to constrict vertically and this results in acceleration.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#flow-separation",
+    "href": "Lectures/21.html#flow-separation",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Flow Separation",
+    "text": "Flow Separation\n\n\nFlow over moderate topography. The varying elevation of the surface over moderate topography (slopes up to about 0.3 (17)) (without separation). Increase in height requires the flow to constrict vertically and this results in acceleration; Conversely a drop of surface elevation results in a slowing down. Flow over steep topography. If the up wind or down-wind slope of the ground exceeds about 17, flow separation occurs. This is accompanied by secondary flows. Flow down over a step creates a strong lee eddy and helps to dissipate low cloud. As the flow approaches the steep ridge a pressure build-up occurs. The pressure is a maximum in the middle to upper part of the face. The major portion of the flow moves upwards (to lower pressure) and ‘squeezes’ over the ridge with a major speed-up at the top. Some of the flow is deflected and drawn downwards (to lower pressure) and forms a bolster eddy (or roll vortex) along the base (general flow and winds are weak, unsteady and turbulent). As the rest of the flow streams over the ridge separation occurs at the top and a lee eddy forms. Again winds at the surface are counter to the mean flow, weak and unsteady. Hence the area is sheltered in the mean but subject to short-term gustiness. Above and slightly downstream of the ridge the conditions are conducive to convective cloud formation. For stably stratified flow, a series of recurrent, but diminishing lee waves and their associated lee wave clouds may form downstream.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#implications-on-air-pollution",
+    "href": "Lectures/21.html#implications-on-air-pollution",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Implications on air pollution",
+    "text": "Implications on air pollution\nProblems of pollution dispersion on the windward slope of a steep-sided valley:\n\nThe plume contents are trapped in the lee eddy or forced to ground by ‘downwash’\nThere are many environmental and practical implications arising from these preferred flow structures. Knowledge of localized areas of speed-up are important in the siting of: windmills for power generation, emission sources to maximize pollutant dispersal, communications towers to avoid structural failure, and forest cutting patterns to minimize windthrow due to excessive wind loading. Lee eddies are semi-enclosed circulation systems and therefore poor locations for a pollutant source (Figure 8). Similarly areas of persistent downward motion are to be avoided for such uses, and are relatively dangerous places in which to land aircraft. On the other hand zones of persistent uplift are excellent areas for soaring bird flight, kiting and gliding.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#thermo-topographic-flows",
+    "href": "Lectures/21.html#thermo-topographic-flows",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Thermo-topographic flows",
+    "text": "Thermo-topographic flows\nComplex terrain causes unequal distribution of radiation on slopes. Warming and cooling rates of the near-surface air depend on terrain location (ridges, slopes, valley floor).\n\nValley floor is in shadow, while slopes receive irradiance (Photo: A. Christen)\nValleys, especially those in mountainous regions, produce their own local wind systems as a result of thermal differences.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#thermo-topographic-flows-1",
+    "href": "Lectures/21.html#thermo-topographic-flows-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Thermo-topographic flows",
+    "text": "Thermo-topographic flows\n\nThis creates horizontal temperature gradients and consequently pressure differences - along the valley’s axis and along slopes - that are the causation for two well known local thermo-topographic wind circulations:\nCross-valley circulations - circulations perpendicular a valley axis.\nAlong-valley circulations - circulations along a valley axis.\n\n\nValleys, especially those in mountainous regions, produce their own local wind systems as a result of thermal differences.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#anabatic-flow",
+    "href": "Lectures/21.html#anabatic-flow",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Anabatic flow",
+    "text": "Anabatic flow\n\n\n\nWith mostly clear skies and weak synoptic winds (e.g. high-pressure system) anabatic winds are formed:\nSlopes are heated by sun.\nWarm air rises along slope.\nAt ridge top, warm air breaks away from the mountain and rises vertically.\n\n\n\n\n\n(Stull, 2016)\n\n\n\n\n\nAnabatic Wind: During daytime in synoptically calm conditions (high-pressure center) with mostly clear skies, the sunlight heats mountain slopes. The warm mountain surface heats the neighboring air, which then rises. However, instead of rising vertically like thermals, the rising air hugs the slope as it rises. This warm turbulent air rising upslope is called an anabatic wind (Fig. 17.7). Typical speeds are 3 to 5 m s–1, and depths are hundreds of meters. The anabatic wind is the rising portion of a cross-valley circulation. When the warm air reaches ridge top, it breaks away from the mountain and rises vertically, often joined by the updraft from the other side of the same mountain. Cumulus clouds called anabatic clouds can form just above ridge top in this updraft.\nAnabatic and valley-wind. By day the air above the slopes and floor of the valley will be heated by the un- derlying surface to a temperature well above that over the centre of the valley. As a result shallow, unsta- ble upslope (or anabatic) flow arises, and to maintain continuity a closed circulation develops across the val- ley involving air sinking in the valley centre (Figure 2). Commonly the uplift along the slopes is at speeds of 2 to 4 m s1 with a maximum at about 20-40 m above the surface. It can lead to the formation of convective anabatic clouds along the valley ridges. The cross-valley circulation also effectively transports sensible heat (QH ) from the surrounding active surfaces to warm the whole valley atmosphere. Therefore when compared to the at- mosphere at the same level over an adjacent plain (or further downstream) the valley air is much warmer, and in a manner analogous to the sea breeze, a plain-to- mountain flow develops. The up-valley flow is termed the valley wind, and fills the entire valley.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#anabatic-flow-1",
+    "href": "Lectures/21.html#anabatic-flow-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Anabatic flow",
+    "text": "Anabatic flow\nOver the course of a day, cumulus clouds (called ‘ridgetop cumulus’ or ‘anabatic clouds’) can form above the ridge in the updraft.\n\nFormation of ridge top (anabatic) cumulus clouds over the course of a day from early morning (1) to mid afternoon (12) (Photos: A. Christen)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#katabatic-flow",
+    "href": "Lectures/21.html#katabatic-flow",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Katabatic flow",
+    "text": "Katabatic flow\n\n\nKatabatic flows over gently sloped terrain are nearly constant in wind speed and show little turbulence. The maximum wind speed is found just a few meters above the surface.\n\n\n\n\nR. B. Stull, 2015\n\n\n\n\n\nDuring anticyclonic conditions of calm or light synoptic-scale winds at night, air adjacent to a cold mountain slope can become colder than the surrounding air. This cold, dense air flows downhill under the influence of gravity (buoyancy), and is called a katabatic wind (Fig. 17.9). It can also form in the daytime over snow- or ice-covered slopes. The katabatic wind is shallowest at the top of the slope, and increases in thickness and speed further downhill. Typical depths are 10 to 100 m, where the depth is roughly 5% of the vertical drop distance from the hill top. Typical speeds are 3 to 8 m s–1. Katabatic flows are shallower and less turbulent than anabatic flows. The virtual potential temperature in a katabatic flow is generally coldest at the ground, and smoothly increases with height (Fig. 17.9). However, winds closest to the ground are slowed due to turbulent drag, leaving a nose of fast winds just above ground level (Fig. 17.9).\nKatabatic and mountain-wind. At night the valley surfaces cool by the emission of long-wave radiation. The lower air layers cool and slide down-slope under the influence of gravity. These katabatic winds usually flow gently downhill at about 2 to 3 ms-1, but greater speeds are observed where the cold layer is thicker and the slope steeper. The convergence of these slope winds at the valley centre results in a weak lifting motion (Fig- ure 2b). All of the downslope flows combine into a down-valley flow known as the mountain wind which seeps out of the mountain valleys onto the adjacent low- lands. A counter flow (the anti-mountain wind) flows up-valley aloft (Figures 2b and 3).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#katabatic-flow-1",
+    "href": "Lectures/21.html#katabatic-flow-1",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Katabatic flow",
+    "text": "Katabatic flow\n\n\nIf the slopes are forested, the maximum wind speed can be found in the trunk space of a forest. On steeper slopes, however, more substantial flows are observed, and a large number of smaller circulations can establish.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#bimodal-winds-on-a-steep-slope",
+    "href": "Lectures/21.html#bimodal-winds-on-a-steep-slope",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Bimodal Winds on A Steep Slope",
+    "text": "Bimodal Winds on A Steep Slope\n\nOne-second measurements (Christen, 2000)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#valley-winds",
+    "href": "Lectures/21.html#valley-winds",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Valley winds",
+    "text": "Valley winds\n\nBy day, in mountainous areas, the air at higher elevation warms more rapidly than that down the valley triggering up-slope (anabatic) flow and also up-valley flow. At night the rapidly cooling air on mountains flows down by gravity (katabatic flows) and combines to form mountain winds flowing down the main valley\nCross valley: Day = a weak cross-valley horizontal circulation (not drawn) from the tops of the anabatic updrafts back toward the center of the valley. Some of this air sinks (sub- sides) over the valley center, and helps trap air pollutants in the valley. Along valley: During daytime, the upslope anabatic winds along the valley walls remove air from the valley floor. This lowers the pressure very slightly near the valley floor, which creates a pressure gradient that draws in replacement air from lower in the valley. These upstream flowing winds are called valley winds (Fig. 17.11), and are part of an along-valley circulation. A weak return flow aloft (heading down valley; not drawn in Fig. 17.11) is called the anti-valley wind. Cross valley: At night, the katabatic winds from the bottom of the slopes drain into the valley, where they start to accumulate. Meanwhile, the cold pool of air in the valley bottom flows along the valley axis in the same direction that a stream of water would flow. As this cold air drains out of the valley onto the lowlands, it is known as a mountain wind. This is part of an along-valley circulation. A weak return flow aloft (not drawn), called the anti-mountain wind, flows up-valley, and is the other part of this along- valley circulation.\nUnder such conditions, with almost cloudless skies and weak large- scale motion, differential warming or cooling of dif- ferent facets of the landscape gives rise to horizontal temperature and pressure gradients, which cause winds. The exact nature of these wind systems depends on the orientation and geometry of the valley. The best devel- oped and most symmetric wind system might be antici- pated in a deep, straight valley with a north-south axis. In valleys with other orientations or possessing complex geometries (e.g. bends, constrictions, etc.) the flow pat- tern may be asymmetric or incomplete.\nKatabatic flows are commonly found over ice and snow surfaces. If the head of the valley considered above was occupied by a glacier or snowfield the additional cold air would have augmented the nocturnal down-valley wind. In fact katabatic winds are also found by day over glaciers and ice-caps\nSimilar katabatic flows exist on a larger scale on the sur- face and at the margins of the continental ice-caps. In this case the cold layer is up to 300 metres deep, and the wind speeds are greater than for glacier and valley winds. Winds as strong as 20 m s1 are often encoun- tered (Figure 4).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
+    ]
+  },
+  {
+    "objectID": "Lectures/21.html#take-home-points",
+    "href": "Lectures/21.html#take-home-points",
+    "title": "Flow Characteristics in Complex Terrain",
+    "section": "Take home points",
+    "text": "Take home points\n\nOur one-dimensional approach is limited as the typical geographical distribution of surface properties (roughness, surface temperatures, evaporation) varies greatly, sometimes sharply.\nThis causes momentum, heat and moisture and the corresponding fluxes to depend not only on the underlying surface, but they show a ‘memory’ of surfaces encountered upwind - advection.\nAdvection can dominate the energy balances, or even invert the direction of turbulent fluxes - oasis effect and ‘clothesline’ effect.\nDynamically, mountains and hills can block, deflect, channel and accelerate airflow. Thermally, they can cause thermo-topographic circulations.\nWhether air flows across or around a hill or obstacle is defined by the Froude Number.\nThermo-topographic flows form along slope and valley axes under fair-weather situations with limited synoptic wind. Anabatic flows are upslope, katabatic flows downhill.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Flow Characteristics in Complex Terrain"
     ]
   },
   {
