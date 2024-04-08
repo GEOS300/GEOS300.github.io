@@ -5,7 +5,6 @@ jupyter: python3
 
 Your assignments will be posted here as they become available.  You will have an assignment due approximately every 3-weeks.
 
-
 ```{python}
 #| echo: False
 #| label: tbl-Assignments
