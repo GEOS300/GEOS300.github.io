@@ -372,7 +372,7 @@ $${#eq-Latent-Heat-EC}
 Where $\rho_v$ is the partial vapor density of water (aka absolute humidity) and $L_v$ is the latent heat of vaporization in $J \ kg^{-1}$ (see next slide).  Averaging gives:
 
 $$
-H = L_v \overline{w^{\prime}\rho_v^{\prime}}
+LE = L_v \overline{w^{\prime}\rho_v^{\prime}}
 $${#eq-Latent-Heat-EC}
 
 
