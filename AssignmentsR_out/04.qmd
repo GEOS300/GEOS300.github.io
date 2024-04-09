@@ -58,7 +58,7 @@ Convert the air temperature $T$ values at 0.4 m and 2.0 m to potential temperatu
 
 ## Question 3
 
-From the data-set provided, calculate $H$, $LE$ and $F_{CO2}$ from the covariances of $\overline{w^{\prime}T^{\prime}}$, $\overline{w^{\prime}\rho_v^{\prime}}$, and $\overline{w^{\prime}\rho_{\rm{CO}_2}^{\prime}}$ respectively.  You can assume that the heat capacity of air is 0.0012 MJ m<sup>-3</sup> K<sup>-1</sup>.  You can estimate the density of air $\rho$ using the Ideal Gas Law @eq-Ideal-Gas-Law and you can estimate the latent heat of vaporization following @eq-Latent-Heat-Vaporization:
+From the data-set provided, calculate $H$, $LE$ and $F_{CO2}$ from the covariances of $\overline{w^{\prime}T^{\prime}}$, $\overline{w^{\prime}\rho_v^{\prime}}$, and $\overline{w^{\prime}\rho_{\rm{CO}_2}^{\prime}}$ respectively.  You can assume that the specific of air is 1.01 kJ kg<sup>-1</sup> K<sup>-1</sup>.  You can estimate the density of air $\rho$ using the Ideal Gas Law @eq-Ideal-Gas-Law and you can estimate the latent heat of vaporization following @eq-Latent-Heat-Vaporization:
 
 
 {{< include ../_Equations/Ideal-Gas-Law.qmd >}}
