@@ -4665,7 +4665,7 @@
     "href": "Assignments/04.html#question-7",
     "title": "Assignment 4",
     "section": "Question 7",
-    "text": "Question 7\nFor 16:00, calculate the Obukhov-length \\(L\\) and the stability parameter \\(\\zeta = z/L\\). Does \\(\\zeta\\) qualitatively agree with \\(Rf\\)? Is \\(\\zeta = z/L\\) really indicating `neutral’ as assumed in using the aerodynamic method above?",
+    "text": "Question 7\nFor 16:00, calculate the Obukhov-length \\(L\\) and the stability parameter \\(\\zeta = z/L\\). Is \\(\\zeta = z/L\\) really indicating `neutral’ as assumed in using the aerodynamic method above?",
     "crumbs": [
       "Assignments",
       "Assignment 4"
