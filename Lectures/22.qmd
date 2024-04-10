@@ -31,7 +31,7 @@ The final exam will be open between April Wednesday April 24th and Thursday Apri
  * A collection of multiple choice, fill in the blanks, matching etc. (~50%)
  * Problem set + short answer questions (~50%)
 
-## Teaching Evaluations (iClicker)
+## Teaching Evaluations (iClicker) {.smaller}
 
 :::: {.columns}
 ::: {.column width="35%"}
@@ -57,7 +57,7 @@ Have you filled out an evaluation yet?
 
 :::
 
-
+::::
 
 
 ## Learning objectives
@@ -88,11 +88,6 @@ Have you filled out an evaluation yet?
 ## Photosynthesis across the globe
 
 ![](images/26_5_1.png)
-
-
-## The ‘breathing’ of the biosphere
-
-![](images/BreathingBiosphere.gif)
 
 
 ## The land sink for CO<sub>2</sub>
