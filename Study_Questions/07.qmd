@@ -1,0 +1,115 @@
+---
+title: Study Question Set 07
+subtitle: Covariances
+---
+
+(@)You measure a covariance $\overline{w^{\prime}T^{\prime}} = -0.031\,\rm{m}\,\rm{s}^{-1}\,\rm{K}$. Average air temperature is 10 $^{\circ}$C and the density is 1.230\,\rm{kg}. Calculate $H$. Is this a day-time or night-time situation?
+
+::: {.callout-tip collapse="true"}
+
+$$
+\begin{eqnarray*}
+H &=& C_a \, \overline{w^{\prime}T^{\prime}} = \rho_a \, c_p \, \overline{w^{\prime}T^{\prime}} \\
+&=& 1.230\,\rm{kg}\,\rm{m}^{-3} \times 1010 \,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1} \times -0.031 \,\rm{m}\,\rm{s}^{-1}\,\rm{K} \\
+&=& -38.5 \,\rm{J}\,\rm{m}^{-2}\,\rm{s}^{-1} =  \underline{ - 38.5\,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray*}
+$$
+
+This is likely a night-time situation, when the surface is cold and that atmosphere is warmer. The profile of potential temperature is likely increasing with height. Excess sensible heat (i.e.\ $\rho_a c_p T$) is transported from higher levels of the atmosphere down to the layers close to the surface, as indicated by the negative sign of $H$. 
+:::
+
+(@)You measure a covariance $\overline{w^{\prime}\rho_v^{\prime}} = 1.73 \times 10^{-4}\, \rm{kg}\,\rm{m}^{-2}\,\rm{s}^{-1}$. $\rho_v$ is the water vapour density in $\rm{kg}\,\rm{m}^{-3}$. Average air temperature is 30 $^{\circ}$ C. Calculate $LE$.
+
+::: {.callout-tip collapse="true"}
+
+Use the latent heat of vaporization for water, $L_v$, form [Lecture](https://geos300.github.io/Lectures/18.html#/latent-heat-of-vaporization).  Rounding to the nearest whole number, we'll get:
+
+$$
+\begin{eqnarray*}
+LE &=& L_v \, \overline{w^{\prime}\rho_v^{\prime}} \\
+&=& 2427 \times 10^{6} \,\rm{J}\,\rm{kg}^{-1} \times 1.73 \times 10^{-4}\, \rm{kg}\,\rm{m}^{-2}\,\rm{s}^{-1} \\
+&=& 420 \,\rm{J}\,\rm{m}^{-2}\,\rm{s}^{-1} =  \underline{420\,\rm{W}\,\rm{m}^{-2}}
+\end{eqnarray*}
+$$
+
+:::
+
+(@)Determine the Bowen ratio $\beta$ if $\overline{w^{\prime}T^{\prime}} = -0.121\,\rm{m}\,\rm{s}^{-1}\,\rm{K}$ and $\overline{w^{\prime}\rho_v^{\prime}} = 1.21 \times 10^{-4}\, \rm{kg}\,\rm{m}^{-2}\,\rm{s}^{-1}$. Average air temperature is 20 $^{\circ}$ C and density is 1.188 $\rm{kg}\,\rm{m}^{-3}$ .
+
+
+::: {.callout-tip collapse="true"}
+
+The bowen ratio is $\beta = H / LE$. Analogous to Question 1, calculate $H$:
+
+$$
+\begin{eqnarray*}
+H &=& \rho_a \, c_p \, \overline{w^{\prime}T^{\prime}} \\
+&=& 1.188\,\rm{kg}\,\rm{m}^{-3} \times 1010 \,\rm{J}\,\rm{kg}^{-1}\,\rm{K}^{-1} \times 0.121 \,\rm{m}\,\rm{s}^{-1}\,\rm{K} \\
+&=& 145.1  \,\rm{W}\,\rm{m}^{-2}
+\end{eqnarray*}
+$$
+
+Analogous to Question 2, calculate $LE$:
+
+$$
+\begin{eqnarray*}
+LE &=& L_v \, \overline{w^{\prime}\rho_v^{\prime}} \\
+&=& 2.453 \times 10^{6} \,\rm{J}\,\rm{kg}^{-1} \times 1.21 \times 10^{-4}\, \rm{kg}\,\rm{m}^{-2}\,\rm{s}^{-1} \\
+&=& 296.8 \,\rm{W}\,\rm{m}^{-2}
+\end{eqnarray*}
+$$
+
+Hence 
+
+$$
+\begin{eqnarray*}
+\beta &=& \frac{H}{LE} = \frac{145.1\,\rm{W}\,\rm{m}^{-2}}{296.8\,\rm{W}\,\rm{m}^{-2}} = \underline{0.49}
+\end{eqnarray*}
+$$
+
+
+:::
+
+(@)Given is $LE$ = 240 W m $^{-2}$ at 20 $^{\circ}$ C air temperature. Determine the covariance $\overline{w^{\prime}q^{\prime}}$, where $q$ is the specific humidity (in g water vapour per kg air ,i.e. g kg $^{-1}$).
+
+2452
+::: {.callout-tip collapse="true"}
+The relation between specific humidity $q$ and water vapour density $\rho_v$ is: $\rho_v = \rho_a q$, where $\rho_a$ is the density of the (moist) air. Because $\rho_a$ is not changing significantly it can be taken out of the averaging operator:
+
+$$
+\begin{eqnarray*}
+LE &=& L_v \, \overline{w^{\prime}\rho_v^{\prime}} \\
+    &=& \, L_v\, \overline{w^{\prime}(\rho_a q)^{\prime}} \\
+    &=& \rho_a \, L_v\, \overline{w^{\prime}q^{\prime}}
+\end{eqnarray*}
+$$
+
+rearrange:
+
+$$
+\begin{eqnarray*}
+\overline{w^{\prime}q^{\prime}} &=& \frac{LE}{\rho_a \, L_v}\\
+&=& \frac{240\,\rm{J}\,\rm{s}^{-1}\,\rm{m}^{-2}}{1.188\,\rm{kg}\,\rm{m}^{-3}  \times 2.453 \times 10^{6} \,\rm{J}\,\rm{kg}^{-1} } \\
+&=& 8.24 \times 10^{-5}\,\rm{m}\,\rm{s}^{-1}\,\rm{kg}\,\rm{kg}^{-1} \\
+&=& \underline{0.0824\,\rm{m}\,\rm{s}^{-1}\,\rm{g}\,\rm{kg}^{-1}}
+\end{eqnarray*}
+$$
+
+:::
+
+(@)Over a rice paddy you measure a covariance between vertical wind and methane concentration $\rho_{\rm{CH}_4}$ in $\rm{\mu g}\,\rm{m}^{-3}$ of  $\overline{w^{\prime}\rho_{\rm{CH}_4}^{\prime}} = 10 \,\rm{m}\,\rm{s}^{-1}\,\rm{\mu g}\,\rm{m}^{-3}\,$. Determine the mass flux density between surface and atmosphere.
+
+
+::: {.callout-tip collapse="true"}
+
+This covariance is already a mass flux density, because its units are mass per square meter and per second if sorted properly:
+
+$$
+\begin{eqnarray*}
+F_{\rm{CH}_4} &=& \overline{w^{\prime}\rho_{\rm{CH}_4}^{\prime}} \\
+ &=& 10 \,\rm{m}\,\rm{s}^{-1}\,\rm{\mu g}\,\rm{m}^{-3}\\
+ &=& \underline{10 \,\rm{\mu g}\,\rm{m}^{-2}\,\rm{s}^{-1}}\\
+\end{eqnarray*}
+$$
+
+:::

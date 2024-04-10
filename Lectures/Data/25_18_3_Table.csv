@@ -1,0 +1,6 @@
+Ecosystem,R/P,E/P
+Tundra,> 0.7,< 0.3
+Forest,0.3 – 0.7,0.3 – 0.7
+Steppe,0.1 – 0.3,0.7 – 0.9
+Semi-desert,0.03 – 0.1,0.9 – 0.97
+Desert,< 0.03,> 0.97

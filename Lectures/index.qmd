@@ -52,7 +52,7 @@ Topics = [
 'Stability and Turbulent Exchange',
 'General Boundary Layer Characteristics & Flow in Complex Terrain',
 'Water & Carbon Cycles',
-'Office Hours Drop-in Exam Prep'
+'Office Hours Drop-in Exam Prep',
 'Office Hours Drop-in Exam Prep'
 ]
 Readings = [

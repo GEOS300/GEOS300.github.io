@@ -152,7 +152,20 @@ Assignments will most easily be completed using a programming language such as R
 
 ## Examinations 
 
-Exams will make up the half of your overall grade.  Exams will be open book, and and completed **asynchronously**.  The midterm will be Wednesday on March 13th.  The final exam will be completed April Wednesday April 24th.  I will give further details closer to the date of the exams.
+Exams will make up the half of your overall grade.  Exams will be open book, and and completed **asynchronously**.  The midterm will be Wednesday on March 13th.  
+
+
+### The Final Exam
+
+The final exam will be open between April Wednesday April 24th and Thursday April 25th.  It will be completed **asynchronously** over canvas. 
+    
+* The exam will **not be timed**. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.
+  * The exam will be open for 48 hours starting at 8 AM Wednesday April 24th
+    * Late submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes
+
+* The final is **cumulative**; any topics from the course are fair game.  Similar to the midterm:
+ * A collection of multiple choice, fill in the blanks, matching etc. (~50%)
+ * Problem set + short answer questions (~50%)
 
 ### Study Questions
 

@@ -1,0 +1,333 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Ecosystem Water Balance
+---
+
+{{< include _imports.qmd >}}
+
+## Learning objectives {.smaller}
+
+* Describe the water balance at a surface-atmosphere interface.
+* Explain how the surface water balance is linked to the energy balance.
+* Know what are water inputs, outputs and stores within vegetation canopies.
+
+---
+
+![](images/27_4_1.png)
+
+## Evapotranspiration
+
+![](images/Evap1.mp4)
+
+## Precipitation
+
+![](images/Precip1.mp4)
+
+## Mass Balance of Drainage Basins
+
+In hydrology, we use mass conservation for water:
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Input
+  * Precipitation P
+* Output
+  * Evapotranspiration E
+  * Run off R
+* Internal mass change
+  * Storage change $\Delta S$
+
+:::
+
+::: {.column width="50%"}
+
+![](images/25_8_3.jpg)
+
+:::
+
+::::
+
+## Land-Atmosphere Water Balance
+
+Components can be considered as mass flux densities: 
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Volume of water per unit ground area $\rm{m}^3 \ \rm{m}^{-2} \ \rm{s}^{-1}$ 
+  + Equivalent to depth of water $\rm{mm} \ \rm{h}^{-1}$
+
+$$
+P = E + I + \Delta R + \Delta S
+$$
+
+:::
+
+::: {.column width="50%"}
+
+![](images/25_9_3.png)
+
+:::
+
+::::
+
+::: {.notes}
+
+:::
+
+## Evapotranspiration
+
+Latent heat flux $LE$ (in $\rm{W} \ \rm{m}^{-2}$) and evapotranspiration $E$ (in $\rm{mm} \ \rm{s}^{-1}$) are linked by the latent heat of vaporization:
+
+$$
+LE = L_v E
+$${#eq-ET}
+
+You might notice then, that we can also define $E$ as:
+
+$$
+E = \overline{w^{\prime}\rho_v^{\prime}}
+$${#eq-ET2}
+
+::: {.notes}
+
+Condensation operates in the reverse sense by adding to both the mass and energy stores. Melting and freezing are energetically less significant, but still of importance especially in soil climate. 
+Latent heat is thermal energy released or absorbed
+
+:::
+
+## Water Balance as a Climate Index {.smaller}
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* We can use two ratios as climatic indices:
+  * Run-off ratio ($\frac{R}{P}$)
+  * Evaporation ratio ($\frac{E}{P}$)
+* For similar annual precipitation and similar $R_n$, the annual Bowen ratio (β = H / LE) increases as R/P increases and E/P decreases. 
+
+:::
+
+::: {.column width="50%"}
+
+```{r}
+#| label: tbl-18_3
+#| tbl-cap: Runoff and evaporation ratios for selected ecosystems
+
+Data <- read.csv(file = 'Data/25_18_3_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+:::
+
+::::
+
+::: {.notes}
+
+Knowledge of a region’s annual water balance tells us a great deal about its climate.  Several climatic indices based on components of the water balance have been used.  
+
+:::
+
+## Bowen ratio and climate
+
+![Wilson et al.. (2002). Water Res. Research, 38 (12)](images/25_19_3.png)
+
+::: {.notes}
+
+Distinct clustering based on water and energy balance.
+Lines of constant total turbulent energy fluxes (solid diagonal lines). Enclosed circles denote subjective delineations between different vegetation types and climates, although there are exceptions. 
+conifers = needle-like leaves such as the fir, pine, spruce and larch
+
+:::
+
+
+## Water balance of plant canopies
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+* Inside a canopy there are significant air, soil, and plant flows
+  * Re-distribution of water and temporary water storage (on leaves, in plants, soils, surface)
+* The plant structure can cause atmospheric water to condense
+* Water vapour is released from plant into atmosphere
+
+:::
+
+::: {.column width="40%"}
+
+![Oke, 1987](images/25_23_2.png)
+
+:::
+
+::::
+
+::: {.notes}
+
+Horizontal exchanges (in the air, along the ground, and within the soil) can be neglected. These conditions are met in the middle of an extensive plant community or crop growing on level terrain.
+The intercepted water contributes to a form of storage
+Termed dewfall if the water comes from the air above, the distillation if it comes from the soil
+Guttation is the exudation of drops of xylem sap on the tips or edges of leaves of some vascular plants.
+It is defined as the movement of water within the spaces of a porous material due to the forces of adhesion, cohesion, and surface tension.
+Infiltrate or percolate 
+
+:::
+
+## Throughfall ($P_T$)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+Precipitation directly falling through the canopy or deflected by the tree crowns reaching the ground.
+
+![](images/25_25_5.png)
+
+:::
+
+::: {.column width="50%"}
+
+![Photo: A. Christen](images/25_25_3.jpg)
+
+:::
+
+::::
+
+::: {.notes}
+
+Water balance of plant canopies
+
+:::
+
+## Canopy Drip
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+A special case of throughfall:
+
+* Coniferous trees prefer to direct water to the edge of the tree, due to their characteristic shape. 
+  * Causes, $\theta_W$ is increased in a ring around a tree, while reducing $\theta_W$ at base of tree 
+
+:::
+
+::: {.column width="40%"}
+
+![J. Seemann, et al. (1979): "Agrometeorology", Springer.](images/25_26_8.png){width="80%"}
+
+:::
+
+::::
+
+::: {.notes}
+
+Canopy or leaf drip
+
+:::
+
+## Stem Flow ($P_S$)
+
+:::: {.columns}
+
+::: {.column width="60%"}
+
+* Process where water is drained along leaves / branches, and directed to the stem
+* Increased $\theta_w$ close to the stem
+  + Common strategy for plants in drier ecosystems
+
+:::
+
+::: {.column width="40%"}
+
+![Measurement of stem flow, Photo: A. Christen](images/25_27_3.jpg){width="80%"}
+
+:::
+
+::::
+
+## Interception (PI)
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+* Water form a precipitation event that remains on the surface of the plant
+
+  * Evaporates or drips down to the ground later  
+
+:::
+
+::: {.column width="50%"}
+
+![Photo: A. Christen](images/25_29_5.jpg)
+
+:::
+
+::::
+
+::: {.notes}
+
+Forests are able to retain a large proportion of their precipitation as interception storage. The canopy of a deciduous forest can intercept 10 - 25% of the total annual precipitation, and the range for coniferous forests is 15 - 40%. 
+Water dripping off leaves to the ground surface is technically called leaf drip.
+Interception is important in the water balance of forests because it is capable of ‘short-circuiting’ the availability of water to the ecosystem. The direct evaporation of intercepted water can constitute the major portion of evapotranspiration (i.e. exceeding transpiration). This water therefore does not enter the soil moisture store for use by trees and under story, nor is it released as runoff to streams. 
+Throughfall, Stem flow, and interception.
+
+:::
+
+## Interception vs. Precipitation 
+
+![Interception for different trees and intensities of rainfall events Oke, 1987](images/25_32_6.png)
+
+::: {.notes}
+
+For an individual storm the efficiency can be almost 100% in the early stages but when the maximum storage capacity is exceeded the efficiency drops. Figure 3 illustrates this fact for a range of tropical and temperate forests. It also shows that interception depends more upon the nature of the rainstorm than upon the tree species. The maximum storage capacity for rain is from 0.5 to 2 mm for all forest types, and from 2 to 6 mm for snow. 
+
+:::
+
+## Partitioning Precipitation {.smaller}
+
+For the partitioning of P in a vegetation canopy: $P = P_T + P_S + P_I$
+
+```{r}
+#| label: tbl-30_2
+#| tbl-cap: Annual fractions of interception, stemflow and throughfall relative to total P.  Average values based on 60 studies worldwide.
+
+Data <- read.csv(file = 'Data/25_30_2_Table.csv',sep=',')
+
+kable(Data, col.names = gsub("[.]", " ", names(Data)))
+
+```
+
+::: {.notes}
+
+Sclerophyll is a type of vegetation that has hard leaves, short internodes (the distance between leaves along the stem) and leaf orientation parallel or oblique to direct sunlight. The word comes from the Greek sklēros (hard) and phyllon (leaf). Sclerophyllous plants occur in many parts of the world,[1] but are most typical in the chaparral biomes.
+Scrubland, also called shrubland, heathland, or chaparral, diverse assortment of vegetation types sharing the common physical characteristic of dominance by shrubs. 
+Coniferous forest, vegetation composed primarily of cone-bearing needle-leaved or scale-leaved evergreen trees, found in areas that have long winters and moderate to high annual precipitation. 
+
+:::
+
+## Take home points {.smaller}
+
+* Water at land-atmosphere interfaces can be balanced the same way we accounted for energy using a flux per unit area (resulting in mm per time).
+* Water balance and energy balance are linked through the latent heat flux / Evapotranspiration (by latent heat of vaporization, $LE = L_v E$).
+* The three-dimensional structure of a plant canopy causes vertical differences in the input, storage and re-distribution of water (throughfall, interception, stem flow, fog drip).

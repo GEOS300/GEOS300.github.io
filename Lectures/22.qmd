@@ -1,0 +1,400 @@
+---
+format:
+  revealjs:
+    theme: default
+    scrollable: true
+    controls: true
+    navigation-mode: linear
+    controls-layout: bottom-right
+    controls-tutorial: true
+    slide-number: true
+    show-slide-number: all
+    pdfMaxPagesPerSlide: 1
+    footer: <a href="index.html">Back to Homepage</a>
+jupyter: python3
+engine: knitr
+title: Plant-atmosphere interactions
+---
+
+{{< include _imports.qmd >}}
+
+
+## The Final Exam {.smaller}
+
+The final exam will be open between April Wednesday April 24th and Thursday April 25th.  It will be completed **asynchronously** over canvas. 
+    
+* The exam will **not be timed**. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.
+  * The exam will be open for 48 hours starting at 8 AM Wednesday April 24th
+    * Late submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes
+
+* The final is **cumulative**; any topics from the course are fair game.  Similar to the midterm:
+ * A collection of multiple choice, fill in the blanks, matching etc. (~50%)
+ * Problem set + short answer questions (~50%)
+
+## Teaching Evaluations (iClicker)
+
+:::: {.columns}
+::: {.column width="35%"}
+
+Have you filled out an evaluation yet?
+
+* A Yes
+* B No, but I will
+* C No, and I don’t plan to
+
+:::
+::: {.column width="65%"}
+
+
+**About Evaluations**
+
+* They are completely anonymous!
+* They matter!
+  * I read every comment & value constructive feedback!
+  * This was my first time teaching the course, so I would like to know how I could improve it!
+
+* You can follow [this link](https://go.blueja.io/K-XAIM8x6UWr0ii46rzj5A) to the evaluation
+
+:::
+
+
+
+
+## Learning objectives
+
+
+:::: {.columns}
+
+::: {.column width="65%"}
+
+* Explain why plant processes are important for the atmosphere.
+* Assess the importance of the energy absorbed in photosynthesis or heat released by respiration.
+* Describe what controls the exchange of water and carbon between a leaf and the atmosphere.
+
+
+:::
+
+::: {.column width="35%"}
+
+
+![](images/26_2_3.jpg)
+
+
+:::
+
+::::
+
+
+## Photosynthesis across the globe
+
+![](images/26_5_1.png)
+
+
+## The ‘breathing’ of the biosphere
+
+![](images/BreathingBiosphere.gif)
+
+
+## The land sink for CO<sub>2</sub>
+
+![](images/26_7_1.gif)
+
+
+## Looking Inside a Leaf
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/pwymX2LxnQs?si=xi3HHoHzdBV0vso6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+## Plant-Atmosphere Exchnage
+
+:::: {.columns}
+::: {.column width="50%"}
+
+Exchange of CO<sub>2</sub>, H<sub>2</sub>O, and O<sub>2</sub> between plant interior and atmosphere occurs through stomata.
+
+* Found on the underside of the leaf
+* Open/close to regulate exchange
+
+:::
+
+::: {.column width="50%"}
+
+![](images/26_10_1.jpg)
+
+:::
+::::
+
+::: {.notes}
+
+Epidermis: the outer layer of tissue in a plant.
+
+:::
+
+
+## Photosynthesis vs. Respiration
+
+
+![](images/26_11_1.jpg)
+
+
+::: {.notes}
+
+Heterotrophs cannot produce organic compounds from inorganic sources and therefore rely on consuming other organisms in the food chain.
+Growth respiration (to grow new tissue, repair injured tissue) and maintenance respiration (re-synthesis of compounds, maintenance of chemical gradients, metabolic processes in physiological adjustment to change in plant’s environment).
+
+
+:::
+
+
+## Gross chemical processes
+
+
+![](images/26_12_1.jpg)
+
+
+::: {.notes}
+
+Photosynthesis and cellular respiration are like two sides of the same coin. 
+The products of one process are the reactants of the other. 
+Growth respiration (to grow new tissue, repair injured tissue) and maintenance respiration (re-synthesis of compounds, maintenance of chemical gradients, metabolic processes in physiological adjustment to change in plant’s environment).
+Together, the two processes store and release energy in living organisms. The two processes also work together to recycle oxygen in Earth’s atmosphere.
+
+
+By breaking the chemical bonds in glucose, cells release the stored energy and make the ATP they need. The process in which glucose is broken down and ATP is made is called cellular respiration.
+This is apparent from Figure below. 
+
+:::
+
+## Net Ecosystem Exchange (NEE)
+
+Defined by atmospheric scientists; the atmosphere is the reference reserviour for CO<sub>2</sub>; Units are generally in mol m<sup>-2</sup> s<sup>-1</sup> or g m<sup>-2</sup> s<sup>-1</sup>.  Negative values indicates uptake by the ecosystem, positive indicates accumulation in the atmosphere:
+
+$$
+NEE = F_c = \overline{w^{\prime}\rho_c^{\prime}}
+$$
+
+## Net ecosystem productivity (NEP) {.smaller}
+
+Reference reserviour for CO<sub>2</sub> is the ecosystem.  In simple cases, $NEP \approx - NEE$.  NEP is more comprehensive; it also includes land-water fluxes, but **much** more difficult to measure.
+
+It is defined as the difference between ecosystem Gross Primary Productivity (GPP) and Ecosystem Respiration (ER) :
+
+$$
+NEP = GPP-ER
+$$
+
+
+ER is the total aerobic respiration of CO<sub>2</sub> by an ecosystem:
+
+
+$$
+ER = AR + HR
+$$
+
+* Autotrophic respiration (AR) is CO<sub>2</sub> respired by primary producers (plants)
+* Heterotrophic respiration (HR) is CO<sub>2</sub> respired by all other living organisms (bacteria, animals, fungi). This CO<sub>2</sub> is also derived from GPP, but in a more roundabout way.
+
+
+::: {.notes}
+
+Net rate of photosynthesis
+
+GEP = true photosynthesis – photorespiration
+
+Photorespiration (also known as the oxidative photosynthetic carbon cycle, or C2 photosynthesis) refers to a process in plant metabolism where the enzyme RuBisCO oxygenates RuBP, wasting some of the energy produced by photosynthesis. The desired reaction is the addition of carbon dioxide to RuBP (carboxylation), a key step in the Calvin–Benson cycle, however approximately 25% of reactions by RuBisCO instead add oxygen to RuBP (oxygenation), creating a product that cannot be used within the Calvin–Benson cycle. This process reduces the efficiency of photosynthesis, potentially reducing photosynthetic output by 25% in C3 plants.[1] Photorespiration involves a complex network of enzyme reactions that exchange metabolites between chloroplasts, leaf peroxisomes and mitochondria.
+
+Leaf net photosynthesis: Pn = Vc − 0.5Vo − Rday​.
+
+:::
+
+## Carbon uptake or release from ecosystems?
+
+
+![](images/26_15_1.png)
+
+
+## Energy Balance & NEP {.smaller}
+
+
+Energy absorbed in photosynthesis or heat released by respiration can be expressed as a storage term in W m<sup>-2</sup>:
+
+$$
+\Delta P = \Phi NEP
+$$
+
+* where $\Phi$ is the heat of assimilation of carbon, which is 469 kJ mol<sup>-1</sup>, or aproximately 3 W h g(CO<sub>2</sub>)<sup>-1</sup>.
+
+* $\Delta P$ is small; often neglected in energy balance calculations
+  * Stomatal control of transpiration is **much** more relevant in the surface energy balance!
+
+
+::: {.notes}
+
+In comparison with most other terms of the energy balance, QP is so small that it is often neglected in energy balance considerations. 
+Much more relevant in the surface energy balance of a land- atmosphere interface is the stomatal control of transpiration.
+BUT NEP is key to the carbon balance
+
+:::
+
+## Conversion Efficiency {.smaller}
+
+:::: {.columns}
+::: {.column width="60%"}
+
+PAR (0.4 to 0.7 $\mu m$) is ~ 50% of $SW$
+
+* Effieciency of PAR absoprtion is < 20%
+  * Since > 50% of this goes to heat; < 10% of energy from $SW\downarrow$ is converted to chemical energy
+* 10% is an upper limit under optimal conditoins
+  * In reality it is often < 1%
+    + Water & temperature stress, sub-optimal light intensities, nutrient limitations, etc.
+
+:::
+
+::: {.column width="40%"}
+
+![Cuvet method of measuring photosynthesis](images/26_23_2.jpg)
+
+:::
+::::
+
+
+
+## Light response curve & light saturation
+
+
+![](images/26_25_1.jpg)
+
+
+::: {.notes}
+
+Increasing photon flux above this point results in a proportional increase in photosynthetic rate, represented by a linear relationship between photon flux and photosynthetic rate. In this part photosynthesis is light limited, so the more light is incident the more photosynthesis comes about. 
+Thus, the plant reaches a "light saturation point" and the rate of photosynthesis is limited due to a limited amount of carbon dioxide, or due to some other limiting factor (e.g. temperature).
+
+At higher photon fluxes, the photosynthetic response to light starts to level off and reaches saturation, after which further increase in photon flux no longer affect photosynthetic rates, indicating that factors other than incident light, (electron transport rate, rubisco activity etc.) limit photosynthesis. After the saturation point, photosynthesis is referred to as CO<sub>2</sub> limited, due to the inability of the Calvin cycle enzymes to keep pace with the absorbed light energy.
+
+
+:::
+
+
+
+## Exchange of water through plants
+
+:::: {.columns}
+::: {.column width="50%"}
+
+When stomata are open:
+
+* They expose the moist plant interior to dry ambient air
+* As they take up CO<sub>2</sub>, they loose H<sub>2</sub>O
+  + This is **transpiration**
+
+:::
+
+::: {.column width="50%"}
+
+![](images/26_20_1.jpg)
+
+:::
+::::
+
+## Evaporation vs. transpiration
+
+
+![](images/26_21_1.jpg)
+
+
+
+## Photosynthesis – Biochemistry Rules Efficiency
+
+
+![](images/26_26_1.jpg)
+
+
+::: {.notes}
+
+C3: Such plants whose first product after the carbon assimilation from sunlight is 3-carbon molecule 
+Plants in the tropical area, convert the sunlight energy into 4-carbon molecule, which takes place before the C3 cycle and then it further convert into the energy, is called C4 plants and pathway is called as the C4 pathway. This is more efficient than the C3 pathway.
+CAM: The plants which store the energy from the sun and then convert it into energy during night follows the CAM or crassulacean acid metabolism. (semi-arid)
+An example of C3 are Sunflower, Spinach, Beans, Rice, Cotton, while the example of C4 plants is Sugarcane, Sorghum, and Maize, and Cacti, orchids are the example of CAM plants.
+
+
+:::
+
+
+## Temperature Response of Photosynthesis
+
+
+![](images/26_27_1.jpg)
+
+
+::: {.notes}
+
+Low = temperature limited
+High = increase in photorespiration and under extreme conditions enzyme inactivation and destruction of photosynthetic pigments
+Net photosynthesis = Net photosynthesis is true photosynthesis minus photorespiration and dark respiration (mitochondrial respiration)
+
+:::
+
+
+## CO<sub>2</sub> Response of Photosynthesis
+
+![](images/26_28_1.jpg)
+
+
+::: {.notes}
+
+Mesophyll cell – which contain chloroplasts which are the site of photosynthesis
+
+Greatest response of C3 plants
+Higher Photosynthesis, higher WUE, and increased soil moisture and runoff with higher CO<sub>2</sub> concentrations
+Increased growth under elevated CO<sub>2</sub> and higher yields with elevated CO<sub>2</sub> (Ainsworth 2008; Long et al. 2006)
+Lower protein concentrations and nutrient status in crops grown at elevated CO<sub>2</sub>
+
+
+:::
+
+
+## Resistance Approach
+
+
+![](images/26_29_1.jpg)
+
+
+::: {.notes}
+
+Mesophyll cell – which contain chloroplasts which are the site of photosynthesis
+Resistances are additive in series
+
+:::
+
+
+## Stomatal Response to Humidity and Temperature
+
+![](images/26_30_1.jpg)
+
+
+## Stomatal Resistance
+
+![](images/26_31_1.jpg)
+
+::: {.notes}
+
+Water potential = water status of plants
+
+:::
+
+
+## Timelapse: photosynthesis from space
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Nsmdzd2NSjQ?si=Z707F2ovZQYTSxNq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+## Take home points
+
+* Ecosystems take up CO<sub>2</sub> by **photosynthesis** and release it by **respiration**.
+
+* Energy used by photosynthesis is minor, won't exceed 10% of $R_n$
+
+* Stomatal resistance is a very important control over partitioning of $LE$ and $H$
+
+* Properly representing stomatal resistance is essential for weather and climate models.

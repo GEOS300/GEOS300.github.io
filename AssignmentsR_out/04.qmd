@@ -89,7 +89,7 @@ Using the covariances and the profile measurements, calculate the eddy diffusivi
 
 ## Question 7
 
-For 16:00, calculate the Obukhov-length $L$ and the stability parameter $\zeta = z/L$. Does $\zeta$ qualitatively agree with $Rf$? Is $\zeta = z/L$ really indicating `neutral' as assumed in using the aerodynamic method above?
+For 16:00, calculate the Obukhov-length $L$ and the stability parameter $\zeta = z/L$. Is $\zeta = z/L$ really indicating `neutral' as assumed in using the aerodynamic method above?
 
 ## Question 8
 

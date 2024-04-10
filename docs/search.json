@@ -10,6 +10,17 @@
     ]
   },
   {
+    "objectID": "Study_Questions/06.html",
+    "href": "Study_Questions/06.html",
+    "title": "Study Question Set 06",
+    "section": "",
+    "text": "During an hour, you measure air temperature \\(T\\) every 10 minutes according the table below. Calculate the following terms:\n\n\n\n\nMinutes\n\\(T\\)\n\n\n\n\n10\n\\(12.6^{\\circ}\\textrm{C}\\)\n\n\n20\n\\(11.2^{\\circ}\\textrm{C}\\)\n\n\n30\n\\(11.9^{\\circ}\\textrm{C}\\)\n\n\n40\n\\(13.1^{\\circ}\\textrm{C}\\)\n\n\n50\n\\(12.0^{\\circ}\\textrm{C}\\)\n\n\n60\n\\(11.8^{\\circ}\\textrm{C}\\)\n\n\n\n\n\\(\\overline{T}\\)\n\\(T^{\\prime}\\) at 40 min\n\\(T^{\\prime 2}\\) at 20 min\n\\(\\overline{T^{\\prime}}\\)\n\\(\\overline{T^{\\prime 2}}\\)\n\\(\\overline{T^{\\prime}}^2\\)\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\n\\(\\overline{T}\\) is the temporal average of \\(T\\): \\[\n\\begin{eqnarray*}\n\\overline{T} &=& \\frac{1}{6} \\sum_{t=0}^{5} T(t) \\\\\n&=& \\frac{1}{6} \\left(12.6 + 11.2 + 11.9 + 13.1 + 12.0 + 11.8 \\right) \\\\\n&=& \\underline{12.1^{\\circ}\\textrm{C}}\n\\end{eqnarray*}\n\\]\n\\(T^{\\prime}\\) is the deviation of a single measured value from the temporal average of the time series (\\(\\overline{T}\\)). For the time step at 40 min we can write:\n\n\\[\n\\begin{eqnarray*}\nT(40\\textrm{min}) &=& \\overline{T^{\\prime}} + \\overline{T}(40\\textrm{min}) \\\\\nT^{\\prime}(40\\textrm{min}) &=& T(40\\textrm{min}) - \\overline{T} \\\\\n&=& 13.1^{\\circ}\\textrm{C} - 12.1^{\\circ}\\textrm{C} \\\\\n&=& \\underline{1\\, \\textrm{K}}\\\\\n\\end{eqnarray*}\n\\]\n\n\\(T^{\\prime 2}\\) is the squared deviation for a a single measured value from the temporal average of the time series. For the time step at 20 min we can write: (\\(\\overline{T}\\)):\n\n\\[\n\\begin{eqnarray*}\nT^{\\prime 2}(20\\textrm{min}) &=& (T(20\\textrm{min}) - \\overline{T})^2 \\\\\n&=& (11.2^{\\circ}\\textrm{C} - 12.1^{\\circ}\\textrm{C})^2 \\\\\n&=& (-0.9^{\\circ}\\textrm{C})^2 \\\\\n&=& \\underline{0.81\\, \\textrm{K}^2}\\\\\n\\end{eqnarray*}\n\\]\n\n\\(\\overline{T^{\\prime}}\\) is the average deviation in the time series. By definition, this term must be always zero, i.e \\(\\overline{T^{\\prime}}=0\\) (or more general \\(\\overline{a^{\\prime}} = 0\\), where \\(a\\) is any parameter or term). Let’s check this:\n\n\\[\n\\begin{eqnarray*}\n\\overline{T^{\\prime}} &=& \\frac{1}{6} \\sum_{t=0}^{5} (T(t)-\\overline{T}) \\\\\n&=& \\frac{1}{6} \\left( (12.6-12.1) + (11.2-12.1) + (11.9-12.1) \\right. \\\\\n&& \\left. + (13.1-12.1) + (12.0-12.1) + (11.8-12.1) \\right) \\\\\n&=& \\frac{1}{6} \\left( 0.5 - 0.9 -0.2 + 1.0 - 0.1 - 0.3 \\right) \\\\\n&=& \\underline{0\\,\\textrm{K}}\n\\end{eqnarray*}\n\\]\n\n\\(\\overline{T^{\\prime 2}}\\) is the the variance of the time series of \\(T\\). It is defined as the average of the squared deviations of all time steps. This term is necessarily zero\\footnote{Note for those who have taken statistics: You might be used to the , where you divide by \\(N-1\\), not \\(N\\):\n\n\\[\n\\begin{eqnarray*}\n\\overline{T^{\\prime 2}} &=& \\frac{1}{N-1} \\sum_{t=0}^{N-1} (T(t)-\\overline{T})^2 = \\frac{1}{5} \\sum_{t=0}^{5} (T(t)-\\overline{T})^2 \\\\\n\\end{eqnarray*}\n\\]\nHowever, in atmospheric turbulence studies, we prefer the biased variance (divided by \\(N\\), as shown in the question above and the lecture slides where we divide by \\(N\\)). The biased variance is a good estimation of the dispersion of a sample of observations, but not necessarily the best measure of the whole population of possible observations.\n\\[\n\\begin{eqnarray*}\n\\overline{T^{\\prime 2}} &=& \\frac{1}{6} \\sum_{t=0}^{5} (T(t)-\\overline{T})^2 \\\\\n&=& \\frac{1}{6} \\left( (12.6-12.1)^2 + (11.2-12.1)^2 + (11.9-12.1) ^2\\right. \\\\\n&& \\left. + (13.1-12.1)^2 + (12.0-12.1)^2 + (11.8-12.1)^2 \\right) \\\\\n&=& \\frac{1}{6} \\left( 0.25 + 0.81 + 0.04 + 1 + 0.01 + 0.09 \\right) \\\\\n&=& \\underline{0.37\\,\\textrm{K}^2}\n\\end{eqnarray*}\n\\]\n\n\\(\\overline{T^{\\prime}}^2\\) is the temporal average of the deviations squared. Note the fine (but essential) difference of the overbar that does not include the square, and because \\(\\overline{T^{\\prime}} = 0\\) (see (d)) also its square is zero:\n\n\\[\n\\begin{eqnarray*}\n\\overline{T^{\\prime}}^2 &=& \\overline{T^{\\prime}} \\times \\overline{T^{\\prime}} \\\\\n&=& 0\\,\\textrm{K} \\times 0\\,\\textrm{K} \\\\\n&=& \\underline{0\\,\\textrm{K}^2}\n\\end{eqnarray*}\n\\]\n\n\n\n\nSimplify the following terms. \\(T\\) is temperature, \\(p\\) is pressure, \\(q\\) is absolute humidity, \\(u\\), \\(v\\), \\(w\\) are the longitudinal, lateral and vertical wind components.\n\n\n\\(\\overline{5}\\)\n\\(\\overline{8v}\\)\n\\(\\overline{\\overline{T}\\overline{p}}\\)\n\\(\\overline{\\overline{u}}\\)\n\\(\\overline{q^{\\prime}}\\)\n\\(\\overline{T^{\\prime}} \\times \\overline{w}\\)\n\\(\\overline{3q^{\\prime}}\\)\n\\(\\overline{w^{\\prime} \\times \\overline{u}}\\)\n\\(\\overline{\\overline{T}p}\\)\n\\(\\overline{wT}\\)\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\nThe average of a constant is equal the constant itself \\[\n\\begin{eqnarray*}\n\\overline{5} = \\frac{1}{1}\\sum_{i=0}^{0} 5 = 5\n\\end{eqnarray*}\n\\]\nThe average of a constant times a value is equal the constant times the averaged value:\n\n\\[\n\\begin{eqnarray*}\n\\overline{8v} = 8 \\times \\overline{v}\n\\end{eqnarray*}\n\\]\n\nSimilarly we can regard temporal averages as constants (they are not changing over time):\n\n\\[\n\\begin{eqnarray*}\n\\overline{\\overline{T}\\overline{p}} = \\overline{T}\\overline{p}\n\\end{eqnarray*}\n\\]\n\nThe average of an averaged value is equal the averaged value\n\n\\[\n\\begin{eqnarray*}\n\\overline{\\overline{u}} = \\overline{u}\n\\end{eqnarray*}\n\\]\n\nSimilar to 1(d):\n\n\\[\n\\begin{eqnarray*}\n\\overline{q^{\\prime}} = 0\n\\end{eqnarray*}\n\\]\n\nAgain, the first term is zero - so is it’s product:\n\n\\[\n\\begin{eqnarray*}\n\\overline{T^{\\prime}} \\times \\overline{w} = 0 \\times \\overline{w} = 0\n\\end{eqnarray*}\n\\]\n\n\n\n\\[\n\\begin{eqnarray*}\n\\overline{3q^{\\prime}} = 3 \\times \\overline{q^{\\prime}} = 3 \\times 0 = 0\n\\end{eqnarray*}\n\\]\n\n\n\n\\[\n\\begin{eqnarray*}\n\\overline{w^{\\prime} \\times \\overline{u}} = \\overline{w^{\\prime}} \\times \\overline{u} = 0 \\times \\overline{u} = 0\n\\end{eqnarray*}\n\\]\n\nCombining the results from (c) and (e):\n\n\\[\n\\begin{eqnarray*}\n\\overline{\\overline{T}p} &=& \\overline{T} \\times \\overline{(\\overline{p}+p^{\\prime})} \\\\\n&=& \\overline{T}\\overline{p} + \\overline{T} \\times \\underbrace{\\overline{p^{\\prime}}}_{=0} \\\\\n&=& \\overline{T}\\overline{p}\n\\end{eqnarray*}\n\\]\n\nIn a first step apply Reynold’s decomposition to both, \\(w\\) and \\(T\\). One of the resulting terms is a covariance (\\(\\overline{w^{\\prime}T^{\\prime}}\\)) which is not zero (see lecture):\n\n\\[\n\\begin{eqnarray*}\n\\overline{wT} &=& \\overline{(\\overline{w}+w^{\\prime}) \\times (\\overline{T}+T^{\\prime})} \\\\\n&=& \\overline{\\overline{w}\\overline{T}} + \\underbrace{\\overline{\\overline{w} T^{\\prime}}}_{=0} + \\underbrace{\\overline{w^{\\prime}\\,\\overline{T}}}_{=0}  +\\overline{w^{\\prime}T^{\\prime}}\\\\\n&=& \\overline{w}\\overline{T} + \\underbrace{\\overline{w^{\\prime}T^{\\prime}}}_{\\textrm{Covariance}}\n\\end{eqnarray*}\n\\]\n\n\n\n\nCalculate the following parameters if \\(\\overline{u} = 4\\, \\textrm{m}\\, \\textrm{s}^{-1}\\), \\(\\overline{v} = 0\\, \\textrm{m}\\, \\textrm{s}^{-1}\\), \\(\\overline{w} = 0\\, \\textrm{m}\\, \\textrm{s}^{-1}\\), \\(\\sigma_u = 0.4\\, \\textrm{m}\\, \\textrm{s}^{-1}\\), \\(\\sigma_v = 0.2\\, \\textrm{m}\\, \\textrm{s}^{-1}\\), and \\(\\sigma_w = 0.1\\, \\textrm{m}\\, \\textrm{s}^{-1}\\).\n\n\n\\(I_u\\)\n\\(I_w\\)\n\\(\\overline{w^{\\prime 2}}\\)\n\\(\\overline{u^{\\prime 2}} + \\overline{v^{\\prime 2}} + \\overline{w^{\\prime 2}}\\)\nMKE/m\n\\(\\overline{e}\\)\n\n\n\n\n\n\n\nTip\n\n\n\n\n\n\n\\(I_u\\) is the turbulence intensity of the longitudinal wind component \\(u\\). \\(I_u\\) has no unit.\n\n\\[\n\\begin{eqnarray*}\nI_u &=& \\sigma_u / \\overline{u} \\\\\n&=& 0.4\\,\\textrm{m}\\,\\, \\textrm{s}^{-1} / 4 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1} \\\\\n&=& \\underline{0.1}\n\\end{eqnarray*}\n\\]\n\n\\(I_w\\) is the turbulence intensity of the vertical wind component \\(w\\). \\(I_w\\) has no unit.\n\n\\[\n\\begin{eqnarray*}\nI_w &=& \\sigma_w / \\overline{u} \\\\\n&=& 0.1\\,\\textrm{m}\\,\\, \\textrm{s}^{-1} / 4 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1} \\\\\n&=& \\underline{0.025}\n\\end{eqnarray*}\n\\]\n\n\\(\\overline{w^{\\prime 2}}\\) is the variance of the vertical wind component \\(w\\). The variance is the square of the standard deviation \\(\\sigma_w\\):\n\n\\[\n\\begin{eqnarray*}\n\\overline{w^{\\prime 2}} &=& \\sigma_w^2  \\\\\n&=& (0.1 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 \\\\\n&=& \\underline{0.01 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2}}\n\\end{eqnarray*}\n\\]\n\n\n\n\\[\n\\begin{eqnarray*}\n\\overline{u^{\\prime 2}} + \\overline{v^{\\prime 2}} + \\overline{w^{\\prime 2}} &=& \\sigma_u^2 + \\sigma_v^2 + \\sigma_w^2  \\\\\n&=& (0.4 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 + (0.2 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 + (0.1 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 \\\\\n&=& 0.16 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2} + 0.04 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2} + 0.01 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2} \\\\\n&=& \\underline{0.21\\, \\textrm{m}^2\\,\\, \\textrm{s}^{-2}}\n\\end{eqnarray*}\n\\]\n\n\\(MKE / m\\) is the mean kinetic energy per unit mass (lecture 12, slide 18), i.e.\n\n\\[\n\\begin{eqnarray*}\nMKE / m &=& \\frac{1}{2}(\\overline{u}^2+\\overline{v}^2+\\overline{w}^2)\\\\\n&=& \\frac{1}{2}(4^2+0^2+0^2)\\\\\n&=& \\frac{1}{2}(16)\\\\\n&=& \\underline{8\\, \\textrm{m}^2\\,\\, \\textrm{s}^{-2}}\\\\\n\\end{eqnarray*}\n\\]\n\n\\(\\overline{e}\\) is the turbulent kinetic energy per unit mass (lecture 12, slide 18) i.e.\n\n\\[\n\\begin{eqnarray*}\n\\overline{e} &=&  \\frac{1}{2}(\\overline{u^{\\prime 2}}+\\overline{v^{\\prime 2}}+\\overline{w^{\\prime 2}})\\\\\n&=& \\frac{1}{2}(\\sigma_u^2+\\sigma_v^2+\\sigma_w^2)\\\\\n&=& \\frac{1}{2}\\left( (0.4 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 + (0.2 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 + (0.1 \\,\\textrm{m}\\,\\, \\textrm{s}^{-1})^2 \\right) \\\\\n&=& \\frac{1}{2}(0.16 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2} + 0.04 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2} + 0.01 \\,\\textrm{m}^2\\,\\, \\textrm{s}^{-2}) \\\\\n&=& \\underline{0.115\\, \\textrm{m}^2\\,\\, \\textrm{s}^{-2}}\n\\end{eqnarray*}\n\\]",
+    "crumbs": [
+      "Study Questions",
+      "Study Question Set 06"
+    ]
+  },
+  {
     "objectID": "Study_Questions/04.html",
     "href": "Study_Questions/04.html",
     "title": "Study Question Set 04",
@@ -993,10 +1004,322 @@
     "href": "Lectures/index.html",
     "title": "Lecture Slides",
     "section": "",
-    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\nMomentum Exchange + Profile Laws\n\n\n\n\n2024-03-25\nProfile Laws + Flux Gradient Relationships\n\n\n\n\n2024-03-27\nEddy Covariance\n\n\n\n\n2024-04-01\nEaster Monday, no class\n\n\n\n\n2024-04-03\nStability and Turbulent Exchange\n\n\n\n\n2024-04-08\nGeneral Boundary Layer Characteristics & Flow in Complex Terrain\n\n\n\n\n2024-04-10\nWater & Carbon Cycles\n\n\n\n\n2024-04-15\nOffice Hours Drop-in Exam PrepOffice Hours Drop-in Exam Prep\n\n\n\n\n2024-04-17\n\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
+    "text": "Your lectures and any readings will be posted here as they become available.\n\n\n\n\nTable 1: Class schedule\n\n\n\n\n\n\n\nTopic\nSuggested Reading\nStudy Questions\n\n\n\n\n2024-01-08\nCourse Overview\n\n\n\n\n2024-01-10\nWhat is Micrometeorology?\nOpen Geomatics section 3.1 & 3.2\n\n\n\n2024-01-15\nEnergy and Mass Balances\n\n01\n\n\n2024-01-17\nSnow Day/No Class\n\n\n\n\n2024-01-22\nA Deeper Dive into Surface Energy Balances\n\n\n\n\n2024-01-24\nRadiation Geometry\nAdditional Reading\n02\n\n\n2024-01-29\nShortwave Radiation\n\n\n\n\n2024-01-31\nLongwave Radiation\nAdditional Reading\n\n\n\n2024-02-05\nNet-Radiation\n\n\n\n\n2024-02-07\nFinishing our Discussion of Radiation\n\n03\n\n\n2024-02-12\nThermal Properties of Soil\nAdditional Reading\n\n\n\n2024-02-14\nFinishing our Discussion on Thermal Properties of Soil\n\n\n\n\n2024-02-19\nReading Break\n\n\n\n\n2024-02-21\nReading Break\n\n\n\n\n2024-02-26\nModelling Sub-Surface Temperatures\n\n04 & 05\n\n\n2024-02-28\nWater & Ice\n\n\n\n\n2024-03-04\nLaminar & Turbulent Flow\n\n\n\n\n2024-03-06\nProduction of Atmospheric Turbulence\n\n\n\n\n2024-03-11\nDissipation of Turbulence\n\n\n\n\n2024-03-13\nMidterm Exam\n\n1-5 Due\n\n\n2024-03-18\nTurbulence Statistics + Momentum Exchange\n\n\n\n\n2024-03-20\nMomentum Exchange + Profile Laws\n\n\n\n\n2024-03-25\nProfile Laws + Flux Gradient Relationships\n\n\n\n\n2024-03-27\nEddy Covariance\n\n\n\n\n2024-04-01\nEaster Monday, no class\n\n\n\n\n2024-04-03\nStability and Turbulent Exchange\n\n\n\n\n2024-04-08\nGeneral Boundary Layer Characteristics & Flow in Complex Terrain\n\n\n\n\n2024-04-10\nWater & Carbon Cycles\n\n\n\n\n2024-04-15\nOffice Hours Drop-in Exam Prep\n\n\n\n\n2024-04-17\nOffice Hours Drop-in Exam Prep\n\n\n\n\n2024-04-24\nFinal Exam\n\n6+ Due",
     "crumbs": [
       "Lectures",
       "Lecture Slides"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#the-final-exam",
+    "href": "Lectures/22.html#the-final-exam",
+    "title": "Plant-atmosphere interactions",
+    "section": "The Final Exam",
+    "text": "The Final Exam\nThe final exam will be open between April Wednesday April 24th and Thursday April 25th. It will be completed asynchronously over canvas.\n\nThe exam will not be timed. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.\n\nThe exam will be open for 48 hours starting at 8 AM Wednesday April 24th\n\nLate submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes\n\n\nThe final is cumulative; any topics from the course are fair game. Similar to the midterm:\nA collection of multiple choice, fill in the blanks, matching etc. (~50%)\nProblem set + short answer questions (~50%)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#teaching-evaluations-iclicker",
+    "href": "Lectures/22.html#teaching-evaluations-iclicker",
+    "title": "Plant-atmosphere interactions",
+    "section": "Teaching Evaluations (iClicker)",
+    "text": "Teaching Evaluations (iClicker)\n:::: {.columns} ::: {.column width=“35%”}\nHave you filled out an evaluation yet?\n\nA Yes\nB No, but I will\nC No, and I don’t plan to\n\n::: ::: {.column width=“65%”}\nAbout Evaluations\n\nThey are completely anonymous!\nThey matter!\n\nI read every comment & value constructive feedback!\nThis was my first time teaching the course, so I would like to know how I could improve it!\n\nYou can follow this link to the evaluation\n\n:::",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#learning-objectives",
+    "href": "Lectures/22.html#learning-objectives",
+    "title": "Plant-atmosphere interactions",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\n\n\nExplain why plant processes are important for the atmosphere.\nAssess the importance of the energy absorbed in photosynthesis or heat released by respiration.\nDescribe what controls the exchange of water and carbon between a leaf and the atmosphere.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#photosynthesis-across-the-globe",
+    "href": "Lectures/22.html#photosynthesis-across-the-globe",
+    "title": "Plant-atmosphere interactions",
+    "section": "Photosynthesis across the globe",
+    "text": "Photosynthesis across the globe",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#the-breathing-of-the-biosphere",
+    "href": "Lectures/22.html#the-breathing-of-the-biosphere",
+    "title": "Plant-atmosphere interactions",
+    "section": "The ‘breathing’ of the biosphere",
+    "text": "The ‘breathing’ of the biosphere",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#the-land-sink-for-co2",
+    "href": "Lectures/22.html#the-land-sink-for-co2",
+    "title": "Plant-atmosphere interactions",
+    "section": "The land sink for CO2",
+    "text": "The land sink for CO2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#looking-inside-a-leaf",
+    "href": "Lectures/22.html#looking-inside-a-leaf",
+    "title": "Plant-atmosphere interactions",
+    "section": "Looking Inside a Leaf",
+    "text": "Looking Inside a Leaf",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#plant-atmosphere-exchnage",
+    "href": "Lectures/22.html#plant-atmosphere-exchnage",
+    "title": "Plant-atmosphere interactions",
+    "section": "Plant-Atmosphere Exchnage",
+    "text": "Plant-Atmosphere Exchnage\n\n\nExchange of CO2, H2O, and O2 between plant interior and atmosphere occurs through stomata.\n\nFound on the underside of the leaf\nOpen/close to regulate exchange\n\n\n\n\n\n\nEpidermis: the outer layer of tissue in a plant.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#photosynthesis-vs.-respiration",
+    "href": "Lectures/22.html#photosynthesis-vs.-respiration",
+    "title": "Plant-atmosphere interactions",
+    "section": "Photosynthesis vs. Respiration",
+    "text": "Photosynthesis vs. Respiration\n\n\nHeterotrophs cannot produce organic compounds from inorganic sources and therefore rely on consuming other organisms in the food chain. Growth respiration (to grow new tissue, repair injured tissue) and maintenance respiration (re-synthesis of compounds, maintenance of chemical gradients, metabolic processes in physiological adjustment to change in plant’s environment).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#gross-chemical-processes",
+    "href": "Lectures/22.html#gross-chemical-processes",
+    "title": "Plant-atmosphere interactions",
+    "section": "Gross chemical processes",
+    "text": "Gross chemical processes\n\n\nPhotosynthesis and cellular respiration are like two sides of the same coin. The products of one process are the reactants of the other. Growth respiration (to grow new tissue, repair injured tissue) and maintenance respiration (re-synthesis of compounds, maintenance of chemical gradients, metabolic processes in physiological adjustment to change in plant’s environment). Together, the two processes store and release energy in living organisms. The two processes also work together to recycle oxygen in Earth’s atmosphere.\nBy breaking the chemical bonds in glucose, cells release the stored energy and make the ATP they need. The process in which glucose is broken down and ATP is made is called cellular respiration. This is apparent from Figure below.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#net-ecosystem-exchange-nee",
+    "href": "Lectures/22.html#net-ecosystem-exchange-nee",
+    "title": "Plant-atmosphere interactions",
+    "section": "Net Ecosystem Exchange (NEE)",
+    "text": "Net Ecosystem Exchange (NEE)\nDefined by atmospheric scientists; the atmosphere is the reference reserviour for CO2; Units are generally in mol m-2 s-1 or g m-2 s-1. Negative values indicates uptake by the ecosystem, positive indicates accumulation in the atmosphere:\n\\[\nNEE = F_c = \\overline{w^{\\prime}\\rho_c^{\\prime}}\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#net-ecosystem-productivity-nep",
+    "href": "Lectures/22.html#net-ecosystem-productivity-nep",
+    "title": "Plant-atmosphere interactions",
+    "section": "Net ecosystem productivity (NEP)",
+    "text": "Net ecosystem productivity (NEP)\nReference reserviour for CO2 is the ecosystem. In simple cases, \\(NEP \\approx - NEE\\). NEP is more comprehensive; it also includes land-water fluxes, but much more difficult to measure.\nIt is defined as the difference between ecosystem Gross Primary Productivity (GPP) and Ecosystem Respiration (ER) :\n\\[\nNEP = GPP-ER\n\\]\nER is the total aerobic respiration of CO2 by an ecosystem:\n\\[\nER = AR + HR\n\\]\n\nAutotrophic respiration (AR) is CO2 respired by primary producers (plants)\nHeterotrophic respiration (HR) is CO2 respired by all other living organisms (bacteria, animals, fungi). This CO2 is also derived from GPP, but in a more roundabout way.\n\n\nNet rate of photosynthesis\nGEP = true photosynthesis – photorespiration\nPhotorespiration (also known as the oxidative photosynthetic carbon cycle, or C2 photosynthesis) refers to a process in plant metabolism where the enzyme RuBisCO oxygenates RuBP, wasting some of the energy produced by photosynthesis. The desired reaction is the addition of carbon dioxide to RuBP (carboxylation), a key step in the Calvin–Benson cycle, however approximately 25% of reactions by RuBisCO instead add oxygen to RuBP (oxygenation), creating a product that cannot be used within the Calvin–Benson cycle. This process reduces the efficiency of photosynthesis, potentially reducing photosynthetic output by 25% in C3 plants.[1] Photorespiration involves a complex network of enzyme reactions that exchange metabolites between chloroplasts, leaf peroxisomes and mitochondria.\nLeaf net photosynthesis: Pn = Vc − 0.5Vo − Rday​.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#carbon-uptake-or-release-from-ecosystems",
+    "href": "Lectures/22.html#carbon-uptake-or-release-from-ecosystems",
+    "title": "Plant-atmosphere interactions",
+    "section": "Carbon uptake or release from ecosystems?",
+    "text": "Carbon uptake or release from ecosystems?",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#energy-balance-nep",
+    "href": "Lectures/22.html#energy-balance-nep",
+    "title": "Plant-atmosphere interactions",
+    "section": "Energy Balance & NEP",
+    "text": "Energy Balance & NEP\nEnergy absorbed in photosynthesis or heat released by respiration can be expressed as a storage term in W m-2:\n\\[\n\\Delta P = \\Phi NEP\n\\]\n\nwhere \\(\\Phi\\) is the heat of assimilation of carbon, which is 469 kJ mol-1, or aproximately 3 W h g(CO2)-1.\n\\(\\Delta P\\) is small; often neglected in energy balance calculations\n\nStomatal control of transpiration is much more relevant in the surface energy balance!\n\n\n\nIn comparison with most other terms of the energy balance, QP is so small that it is often neglected in energy balance considerations. Much more relevant in the surface energy balance of a land- atmosphere interface is the stomatal control of transpiration. BUT NEP is key to the carbon balance",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#conversion-efficiency",
+    "href": "Lectures/22.html#conversion-efficiency",
+    "title": "Plant-atmosphere interactions",
+    "section": "Conversion Efficiency",
+    "text": "Conversion Efficiency\n\n\nPAR (0.4 to 0.7 \\(\\mu m\\)) is ~ 50% of \\(SW\\)\n\nEffieciency of PAR absoprtion is &lt; 20%\n\nSince &gt; 50% of this goes to heat; &lt; 10% of energy from \\(SW\\downarrow\\) is converted to chemical energy\n\n10% is an upper limit under optimal conditoins\n\nIn reality it is often &lt; 1%\n\nWater & temperature stress, sub-optimal light intensities, nutrient limitations, etc.\n\n\n\n\n\n\n\nCuvet method of measuring photosynthesis",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#light-response-curve-light-saturation",
+    "href": "Lectures/22.html#light-response-curve-light-saturation",
+    "title": "Plant-atmosphere interactions",
+    "section": "Light response curve & light saturation",
+    "text": "Light response curve & light saturation\n\n\nIncreasing photon flux above this point results in a proportional increase in photosynthetic rate, represented by a linear relationship between photon flux and photosynthetic rate. In this part photosynthesis is light limited, so the more light is incident the more photosynthesis comes about. Thus, the plant reaches a “light saturation point” and the rate of photosynthesis is limited due to a limited amount of carbon dioxide, or due to some other limiting factor (e.g. temperature).\nAt higher photon fluxes, the photosynthetic response to light starts to level off and reaches saturation, after which further increase in photon flux no longer affect photosynthetic rates, indicating that factors other than incident light, (electron transport rate, rubisco activity etc.) limit photosynthesis. After the saturation point, photosynthesis is referred to as CO2 limited, due to the inability of the Calvin cycle enzymes to keep pace with the absorbed light energy.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#exchange-of-water-through-plants",
+    "href": "Lectures/22.html#exchange-of-water-through-plants",
+    "title": "Plant-atmosphere interactions",
+    "section": "Exchange of water through plants",
+    "text": "Exchange of water through plants\n\n\nWhen stomata are open:\n\nThey expose the moist plant interior to dry ambient air\nAs they take up CO2, they loose H2O\n\nThis is transpiration",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#evaporation-vs.-transpiration",
+    "href": "Lectures/22.html#evaporation-vs.-transpiration",
+    "title": "Plant-atmosphere interactions",
+    "section": "Evaporation vs. transpiration",
+    "text": "Evaporation vs. transpiration",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#photosynthesis-biochemistry-rules-efficiency",
+    "href": "Lectures/22.html#photosynthesis-biochemistry-rules-efficiency",
+    "title": "Plant-atmosphere interactions",
+    "section": "Photosynthesis – Biochemistry Rules Efficiency",
+    "text": "Photosynthesis – Biochemistry Rules Efficiency\n\n\nC3: Such plants whose first product after the carbon assimilation from sunlight is 3-carbon molecule  Plants in the tropical area, convert the sunlight energy into 4-carbon molecule, which takes place before the C3 cycle and then it further convert into the energy, is called C4 plants and pathway is called as the C4 pathway. This is more efficient than the C3 pathway. CAM: The plants which store the energy from the sun and then convert it into energy during night follows the CAM or crassulacean acid metabolism. (semi-arid) An example of C3 are Sunflower, Spinach, Beans, Rice, Cotton, while the example of C4 plants is Sugarcane, Sorghum, and Maize, and Cacti, orchids are the example of CAM plants.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#temperature-response-of-photosynthesis",
+    "href": "Lectures/22.html#temperature-response-of-photosynthesis",
+    "title": "Plant-atmosphere interactions",
+    "section": "Temperature Response of Photosynthesis",
+    "text": "Temperature Response of Photosynthesis\n\n\nLow = temperature limited High = increase in photorespiration and under extreme conditions enzyme inactivation and destruction of photosynthetic pigments Net photosynthesis = Net photosynthesis is true photosynthesis minus photorespiration and dark respiration (mitochondrial respiration)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#co2-response-of-photosynthesis",
+    "href": "Lectures/22.html#co2-response-of-photosynthesis",
+    "title": "Plant-atmosphere interactions",
+    "section": "CO2 Response of Photosynthesis",
+    "text": "CO2 Response of Photosynthesis\n\n\nMesophyll cell – which contain chloroplasts which are the site of photosynthesis\nGreatest response of C3 plants Higher Photosynthesis, higher WUE, and increased soil moisture and runoff with higher CO2 concentrations Increased growth under elevated CO2 and higher yields with elevated CO2 (Ainsworth 2008; Long et al. 2006) Lower protein concentrations and nutrient status in crops grown at elevated CO2",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#resistance-approach",
+    "href": "Lectures/22.html#resistance-approach",
+    "title": "Plant-atmosphere interactions",
+    "section": "Resistance Approach",
+    "text": "Resistance Approach\n\n\nMesophyll cell – which contain chloroplasts which are the site of photosynthesis Resistances are additive in series",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#stomatal-response-to-humidity-and-temperature",
+    "href": "Lectures/22.html#stomatal-response-to-humidity-and-temperature",
+    "title": "Plant-atmosphere interactions",
+    "section": "Stomatal Response to Humidity and Temperature",
+    "text": "Stomatal Response to Humidity and Temperature",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#stomatal-resistance",
+    "href": "Lectures/22.html#stomatal-resistance",
+    "title": "Plant-atmosphere interactions",
+    "section": "Stomatal Resistance",
+    "text": "Stomatal Resistance\n\n\nWater potential = water status of plants",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#timelapse-photosynthesis-from-space",
+    "href": "Lectures/22.html#timelapse-photosynthesis-from-space",
+    "title": "Plant-atmosphere interactions",
+    "section": "Timelapse: photosynthesis from space",
+    "text": "Timelapse: photosynthesis from space",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
+    ]
+  },
+  {
+    "objectID": "Lectures/22.html#take-home-points",
+    "href": "Lectures/22.html#take-home-points",
+    "title": "Plant-atmosphere interactions",
+    "section": "Take home points",
+    "text": "Take home points\n\nEcosystems take up CO2 by photosynthesis and release it by respiration.\nEnergy used by photosynthesis is minor, won’t exceed 10% of \\(R_n\\)\nStomatal resistance is a very important control over partitioning of \\(LE\\) and \\(H\\)\nProperly representing stomatal resistance is essential for weather and climate models.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Plant-atmosphere interactions"
     ]
   },
   {
@@ -4386,7 +4709,7 @@
     "href": "index.html#examinations",
     "title": "Syllabus",
     "section": "Examinations",
-    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and and completed asynchronously. The midterm will be Wednesday on March 13th. The final exam will be completed April Wednesday April 24th. I will give further details closer to the date of the exams.\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
+    "text": "Examinations\nExams will make up the half of your overall grade. Exams will be open book, and and completed asynchronously. The midterm will be Wednesday on March 13th.\n\nThe Final Exam\nThe final exam will be open between April Wednesday April 24th and Thursday April 25th. It will be completed asynchronously over canvas.\n\nThe exam will not be timed. It is not intended to take longer that a normal exam period (250 minutes), but I want you to have more time if you need it.\n\nThe exam will be open for 48 hours starting at 8 AM Wednesday April 24th\n\nLate submissions will not be accepted. If you experience extenuating circumstances, contact me before the exam period closes\n\n\nThe final is cumulative; any topics from the course are fair game. Similar to the midterm:\nA collection of multiple choice, fill in the blanks, matching etc. (~50%)\nProblem set + short answer questions (~50%)\n\n\n\nStudy Questions\nSelf-study questions are assigned regularly throughout the semester. These are an opportunity for you to apply some of the concepts covered in class, and will help prepare you for assignments and exams. Solutions to the self-study questions are available to you, but you are required to upload your own answers to these questions on Canvas (either as a word document, pdf, or html file) to get credit.",
     "crumbs": [
       "Syllabus"
     ]
@@ -5319,7 +5642,7 @@
     "href": "AssignmentsR_out/04.html#question-7",
     "title": "Assignment 4",
     "section": "Question 7",
-    "text": "Question 7\nFor 16:00, calculate the Obukhov-length \\(L\\) and the stability parameter \\(\\zeta = z/L\\). Does \\(\\zeta\\) qualitatively agree with \\(Rf\\)? Is \\(\\zeta = z/L\\) really indicating `neutral’ as assumed in using the aerodynamic method above?"
+    "text": "Question 7\nFor 16:00, calculate the Obukhov-length \\(L\\) and the stability parameter \\(\\zeta = z/L\\). Is \\(\\zeta = z/L\\) really indicating `neutral’ as assumed in using the aerodynamic method above?"
   },
   {
     "objectID": "AssignmentsR_out/04.html#question-8",
@@ -9183,6 +9506,198 @@
     ]
   },
   {
+    "objectID": "Lectures/23.html#learning-objectives",
+    "href": "Lectures/23.html#learning-objectives",
+    "title": "Ecosystem Water Balance",
+    "section": "Learning objectives",
+    "text": "Learning objectives\n\nDescribe the water balance at a surface-atmosphere interface.\nExplain how the surface water balance is linked to the energy balance.\nKnow what are water inputs, outputs and stores within vegetation canopies.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#evapotranspiration",
+    "href": "Lectures/23.html#evapotranspiration",
+    "title": "Ecosystem Water Balance",
+    "section": "Evapotranspiration",
+    "text": "Evapotranspiration\nVideo",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#precipitation",
+    "href": "Lectures/23.html#precipitation",
+    "title": "Ecosystem Water Balance",
+    "section": "Precipitation",
+    "text": "Precipitation\nVideo",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#mass-balance-of-drainage-basins",
+    "href": "Lectures/23.html#mass-balance-of-drainage-basins",
+    "title": "Ecosystem Water Balance",
+    "section": "Mass Balance of Drainage Basins",
+    "text": "Mass Balance of Drainage Basins\nIn hydrology, we use mass conservation for water:\n\n\n\nInput\n\nPrecipitation P\n\nOutput\n\nEvapotranspiration E\nRun off R\n\nInternal mass change\n\nStorage change \\(\\Delta S\\)",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#land-atmosphere-water-balance",
+    "href": "Lectures/23.html#land-atmosphere-water-balance",
+    "title": "Ecosystem Water Balance",
+    "section": "Land-Atmosphere Water Balance",
+    "text": "Land-Atmosphere Water Balance\nComponents can be considered as mass flux densities:\n\n\n\nVolume of water per unit ground area \\(\\rm{m}^3 \\ \\rm{m}^{-2} \\ \\rm{s}^{-1}\\)\n\nEquivalent to depth of water \\(\\rm{mm} \\ \\rm{h}^{-1}\\)\n\n\n\\[\nP = E + I + \\Delta R + \\Delta S\n\\]",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#evapotranspiration-1",
+    "href": "Lectures/23.html#evapotranspiration-1",
+    "title": "Ecosystem Water Balance",
+    "section": "Evapotranspiration",
+    "text": "Evapotranspiration\nLatent heat flux \\(LE\\) (in \\(\\rm{W} \\ \\rm{m}^{-2}\\)) and evapotranspiration \\(E\\) (in \\(\\rm{mm} \\ \\rm{s}^{-1}\\)) are linked by the latent heat of vaporization:\n\\[\nLE = L_v E\n\\qquad(1)\\]\nYou might notice then, that we can also define \\(E\\) as:\n\\[\nE = \\overline{w^{\\prime}\\rho_v^{\\prime}}\n\\qquad(2)\\]\n\nCondensation operates in the reverse sense by adding to both the mass and energy stores. Melting and freezing are energetically less significant, but still of importance especially in soil climate. Latent heat is thermal energy released or absorbed",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#water-balance-as-a-climate-index",
+    "href": "Lectures/23.html#water-balance-as-a-climate-index",
+    "title": "Ecosystem Water Balance",
+    "section": "Water Balance as a Climate Index",
+    "text": "Water Balance as a Climate Index\n\n\n\nWe can use two ratios as climatic indices:\n\nRun-off ratio (\\(\\frac{R}{P}\\))\nEvaporation ratio (\\(\\frac{E}{P}\\))\n\nFor similar annual precipitation and similar \\(R_n\\), the annual Bowen ratio (β = H / LE) increases as R/P increases and E/P decreases.\n\n\n\n\n\n\nTable 1: Runoff and evaporation ratios for selected ecosystems\n\n\n\n\n\n\nEcosystem\nR P\nE P\n\n\n\n\nTundra\n&gt; 0.7\n&lt; 0.3\n\n\nForest\n0.3 – 0.7\n0.3 – 0.7\n\n\nSteppe\n0.1 – 0.3\n0.7 – 0.9\n\n\nSemi-desert\n0.03 – 0.1\n0.9 – 0.97\n\n\nDesert\n&lt; 0.03\n&gt; 0.97\n\n\n\n\n\n\n\n\n\n\n\nKnowledge of a region’s annual water balance tells us a great deal about its climate. Several climatic indices based on components of the water balance have been used.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#bowen-ratio-and-climate",
+    "href": "Lectures/23.html#bowen-ratio-and-climate",
+    "title": "Ecosystem Water Balance",
+    "section": "Bowen ratio and climate",
+    "text": "Bowen ratio and climate\n\nWilson et al.. (2002). Water Res. Research, 38 (12)\nDistinct clustering based on water and energy balance. Lines of constant total turbulent energy fluxes (solid diagonal lines). Enclosed circles denote subjective delineations between different vegetation types and climates, although there are exceptions. conifers = needle-like leaves such as the fir, pine, spruce and larch",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#water-balance-of-plant-canopies",
+    "href": "Lectures/23.html#water-balance-of-plant-canopies",
+    "title": "Ecosystem Water Balance",
+    "section": "Water balance of plant canopies",
+    "text": "Water balance of plant canopies\n\n\n\nInside a canopy there are significant air, soil, and plant flows\n\nRe-distribution of water and temporary water storage (on leaves, in plants, soils, surface)\n\nThe plant structure can cause atmospheric water to condense\nWater vapour is released from plant into atmosphere\n\n\n\n\n\nOke, 1987\n\n\n\n\n\nHorizontal exchanges (in the air, along the ground, and within the soil) can be neglected. These conditions are met in the middle of an extensive plant community or crop growing on level terrain. The intercepted water contributes to a form of storage Termed dewfall if the water comes from the air above, the distillation if it comes from the soil Guttation is the exudation of drops of xylem sap on the tips or edges of leaves of some vascular plants. It is defined as the movement of water within the spaces of a porous material due to the forces of adhesion, cohesion, and surface tension. Infiltrate or percolate",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#throughfall-p_t",
+    "href": "Lectures/23.html#throughfall-p_t",
+    "title": "Ecosystem Water Balance",
+    "section": "Throughfall (\\(P_T\\))",
+    "text": "Throughfall (\\(P_T\\))\n\n\nPrecipitation directly falling through the canopy or deflected by the tree crowns reaching the ground.\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nWater balance of plant canopies",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#canopy-drip",
+    "href": "Lectures/23.html#canopy-drip",
+    "title": "Ecosystem Water Balance",
+    "section": "Canopy Drip",
+    "text": "Canopy Drip\n\n\nA special case of throughfall:\n\nConiferous trees prefer to direct water to the edge of the tree, due to their characteristic shape.\n\nCauses, \\(\\theta_W\\) is increased in a ring around a tree, while reducing \\(\\theta_W\\) at base of tree\n\n\n\n\n\n\nJ. Seemann, et al. (1979): “Agrometeorology”, Springer.\n\n\n\n\n\nCanopy or leaf drip",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#stem-flow-p_s",
+    "href": "Lectures/23.html#stem-flow-p_s",
+    "title": "Ecosystem Water Balance",
+    "section": "Stem Flow (\\(P_S\\))",
+    "text": "Stem Flow (\\(P_S\\))\n\n\n\nProcess where water is drained along leaves / branches, and directed to the stem\nIncreased \\(\\theta_w\\) close to the stem\n\nCommon strategy for plants in drier ecosystems\n\n\n\n\n\n\nMeasurement of stem flow, Photo: A. Christen",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#interception-pi",
+    "href": "Lectures/23.html#interception-pi",
+    "title": "Ecosystem Water Balance",
+    "section": "Interception (PI)",
+    "text": "Interception (PI)\n\n\n\nWater form a precipitation event that remains on the surface of the plant\n\nEvaporates or drips down to the ground later\n\n\n\n\n\n\nPhoto: A. Christen\n\n\n\n\n\nForests are able to retain a large proportion of their precipitation as interception storage. The canopy of a deciduous forest can intercept 10 - 25% of the total annual precipitation, and the range for coniferous forests is 15 - 40%. Water dripping off leaves to the ground surface is technically called leaf drip. Interception is important in the water balance of forests because it is capable of ‘short-circuiting’ the availability of water to the ecosystem. The direct evaporation of intercepted water can constitute the major portion of evapotranspiration (i.e. exceeding transpiration). This water therefore does not enter the soil moisture store for use by trees and under story, nor is it released as runoff to streams. Throughfall, Stem flow, and interception.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#interception-vs.-precipitation",
+    "href": "Lectures/23.html#interception-vs.-precipitation",
+    "title": "Ecosystem Water Balance",
+    "section": "Interception vs. Precipitation",
+    "text": "Interception vs. Precipitation\n\nInterception for different trees and intensities of rainfall events Oke, 1987\nFor an individual storm the efficiency can be almost 100% in the early stages but when the maximum storage capacity is exceeded the efficiency drops. Figure 3 illustrates this fact for a range of tropical and temperate forests. It also shows that interception depends more upon the nature of the rainstorm than upon the tree species. The maximum storage capacity for rain is from 0.5 to 2 mm for all forest types, and from 2 to 6 mm for snow.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#partitioning-precipitation",
+    "href": "Lectures/23.html#partitioning-precipitation",
+    "title": "Ecosystem Water Balance",
+    "section": "Partitioning Precipitation",
+    "text": "Partitioning Precipitation\nFor the partitioning of P in a vegetation canopy: \\(P = P_T + P_S + P_I\\)\n\n\n\n\nTable 2: Annual fractions of interception, stemflow and throughfall relative to total P. Average values based on 60 studies worldwide.\n\n\n\n\n\n\nForest type\nInterception\nStemflow\nThroughfall\n\n\n\n\nTropical rainforest\n13%\n2%\n85%\n\n\nMediterranean forests\n17%\n2%\n81%\n\n\nDry scrubland\n17%\n11%\n72%\n\n\nDeciduous forests\n19%\n7%\n74%\n\n\nConiferous forests\n20%\n3%\n77%\n\n\n\n\n\n\n\n\n\nSclerophyll is a type of vegetation that has hard leaves, short internodes (the distance between leaves along the stem) and leaf orientation parallel or oblique to direct sunlight. The word comes from the Greek sklēros (hard) and phyllon (leaf). Sclerophyllous plants occur in many parts of the world,[1] but are most typical in the chaparral biomes. Scrubland, also called shrubland, heathland, or chaparral, diverse assortment of vegetation types sharing the common physical characteristic of dominance by shrubs.  Coniferous forest, vegetation composed primarily of cone-bearing needle-leaved or scale-leaved evergreen trees, found in areas that have long winters and moderate to high annual precipitation.",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
+    "objectID": "Lectures/23.html#take-home-points",
+    "href": "Lectures/23.html#take-home-points",
+    "title": "Ecosystem Water Balance",
+    "section": "Take home points",
+    "text": "Take home points\n\nWater at land-atmosphere interfaces can be balanced the same way we accounted for energy using a flux per unit area (resulting in mm per time).\nWater balance and energy balance are linked through the latent heat flux / Evapotranspiration (by latent heat of vaporization, \\(LE = L_v E\\)).\nThe three-dimensional structure of a plant canopy causes vertical differences in the input, storage and re-distribution of water (throughfall, interception, stem flow, fog drip).",
+    "crumbs": [
+      "Lectures",
+      "Lecture Slides",
+      "Ecosystem Water Balance"
+    ]
+  },
+  {
     "objectID": "MidTerm/MidTerm.html",
     "href": "MidTerm/MidTerm.html",
     "title": "MidTerm",
@@ -9234,6 +9749,17 @@
     "crumbs": [
       "Study Questions",
       "Study Question Set 05"
+    ]
+  },
+  {
+    "objectID": "Study_Questions/07.html",
+    "href": "Study_Questions/07.html",
+    "title": "Study Question Set 07",
+    "section": "",
+    "text": "(@)You measure a covariance \\(\\overline{w^{\\prime}T^{\\prime}} = -0.031\\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{K}\\). Average air temperature is 10 \\(^{\\circ}\\)C and the density is 1.230,\n\n\n\n\n\n\nTip\n\n\n\n\n\n\\[\n\\begin{eqnarray*}\nH &=& C_a \\, \\overline{w^{\\prime}T^{\\prime}} = \\rho_a \\, c_p \\, \\overline{w^{\\prime}T^{\\prime}} \\\\\n&=& 1.230\\,\\rm{kg}\\,\\rm{m}^{-3} \\times 1010 \\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1} \\times -0.031 \\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{K} \\\\\n&=& -38.5 \\,\\rm{J}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1} =  \\underline{ - 38.5\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray*}\n\\]\nThis is likely a night-time situation, when the surface is cold and that atmosphere is warmer. The profile of potential temperature is likely increasing with height. Excess sensible heat (i.e. \\(\\rho_a c_p T\\)) is transported from higher levels of the atmosphere down to the layers close to the surface, as indicated by the negative sign of \\(H\\).\n\n\n\n(@)You measure a covariance \\(\\overline{w^{\\prime}\\rho_v^{\\prime}} = 1.73 \\times 10^{-4}\\, \\rm{kg}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1}\\). \\(\\rho_v\\) is the water vapour density in \\(\\rm{kg}\\,\\rm{m}^{-3}\\). Average air temperature is 30 \\(^{\\circ}\\) C. Calculate \\(LE\\).\n\n\n\n\n\n\nTip\n\n\n\n\n\nUse the latent heat of vaporization for water, \\(L_v\\), form Lecture. Rounding to the nearest whole number, we’ll get:\n\\[\n\\begin{eqnarray*}\nLE &=& L_v \\, \\overline{w^{\\prime}\\rho_v^{\\prime}} \\\\\n&=& 2427 \\times 10^{6} \\,\\rm{J}\\,\\rm{kg}^{-1} \\times 1.73 \\times 10^{-4}\\, \\rm{kg}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1} \\\\\n&=& 420 \\,\\rm{J}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1} =  \\underline{420\\,\\rm{W}\\,\\rm{m}^{-2}}\n\\end{eqnarray*}\n\\]\n\n\n\n(@)Determine the Bowen ratio \\(\\beta\\) if \\(\\overline{w^{\\prime}T^{\\prime}} = -0.121\\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{K}\\) and \\(\\overline{w^{\\prime}\\rho_v^{\\prime}} = 1.21 \\times 10^{-4}\\, \\rm{kg}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1}\\). Average air temperature is 20 \\(^{\\circ}\\) C and density is 1.188 \\(\\rm{kg}\\,\\rm{m}^{-3}\\) .\n\n\n\n\n\n\nTip\n\n\n\n\n\nThe bowen ratio is \\(\\beta = H / LE\\). Analogous to Question 1, calculate \\(H\\):\n\\[\n\\begin{eqnarray*}\nH &=& \\rho_a \\, c_p \\, \\overline{w^{\\prime}T^{\\prime}} \\\\\n&=& 1.188\\,\\rm{kg}\\,\\rm{m}^{-3} \\times 1010 \\,\\rm{J}\\,\\rm{kg}^{-1}\\,\\rm{K}^{-1} \\times 0.121 \\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{K} \\\\\n&=& 145.1  \\,\\rm{W}\\,\\rm{m}^{-2}\n\\end{eqnarray*}\n\\]\nAnalogous to Question 2, calculate \\(LE\\):\n\\[\n\\begin{eqnarray*}\nLE &=& L_v \\, \\overline{w^{\\prime}\\rho_v^{\\prime}} \\\\\n&=& 2.453 \\times 10^{6} \\,\\rm{J}\\,\\rm{kg}^{-1} \\times 1.21 \\times 10^{-4}\\, \\rm{kg}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1} \\\\\n&=& 296.8 \\,\\rm{W}\\,\\rm{m}^{-2}\n\\end{eqnarray*}\n\\]\nHence\n\\[\n\\begin{eqnarray*}\n\\beta &=& \\frac{H}{LE} = \\frac{145.1\\,\\rm{W}\\,\\rm{m}^{-2}}{296.8\\,\\rm{W}\\,\\rm{m}^{-2}} = \\underline{0.49}\n\\end{eqnarray*}\n\\]\n\n\n\n(@)Given is \\(LE\\) = 240 W m \\(^{-2}\\) at 20 \\(^{\\circ}\\) C air temperature. Determine the covariance \\(\\overline{w^{\\prime}q^{\\prime}}\\), where \\(q\\) is the specific humidity (in g water vapour per kg air ,i.e. g kg \\(^{-1}\\)).\n2452 ::: {.callout-tip collapse=“true”} The relation between specific humidity \\(q\\) and water vapour density \\(\\rho_v\\) is: \\(\\rho_v = \\rho_a q\\), where \\(\\rho_a\\) is the density of the (moist) air. Because \\(\\rho_a\\) is not changing significantly it can be taken out of the averaging operator:\n\\[\n\\begin{eqnarray*}\nLE &=& L_v \\, \\overline{w^{\\prime}\\rho_v^{\\prime}} \\\\\n    &=& \\, L_v\\, \\overline{w^{\\prime}(\\rho_a q)^{\\prime}} \\\\\n    &=& \\rho_a \\, L_v\\, \\overline{w^{\\prime}q^{\\prime}}\n\\end{eqnarray*}\n\\]\nrearrange:\n\\[\n\\begin{eqnarray*}\n\\overline{w^{\\prime}q^{\\prime}} &=& \\frac{LE}{\\rho_a \\, L_v}\\\\\n&=& \\frac{240\\,\\rm{J}\\,\\rm{s}^{-1}\\,\\rm{m}^{-2}}{1.188\\,\\rm{kg}\\,\\rm{m}^{-3}  \\times 2.453 \\times 10^{6} \\,\\rm{J}\\,\\rm{kg}^{-1} } \\\\\n&=& 8.24 \\times 10^{-5}\\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{kg}\\,\\rm{kg}^{-1} \\\\\n&=& \\underline{0.0824\\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{g}\\,\\rm{kg}^{-1}}\n\\end{eqnarray*}\n\\]\n:::\n(@)Over a rice paddy you measure a covariance between vertical wind and methane concentration \\(\\rho_{\\rm{CH}_4}\\) in \\(\\rm{\\mu g}\\,\\rm{m}^{-3}\\) of \\(\\overline{w^{\\prime}\\rho_{\\rm{CH}_4}^{\\prime}} = 10 \\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{\\mu g}\\,\\rm{m}^{-3}\\,\\). Determine the mass flux density between surface and atmosphere.\n\n\n\n\n\n\nTip\n\n\n\n\n\nThis covariance is already a mass flux density, because its units are mass per square meter and per second if sorted properly:\n\\[\n\\begin{eqnarray*}\nF_{\\rm{CH}_4} &=& \\overline{w^{\\prime}\\rho_{\\rm{CH}_4}^{\\prime}} \\\\\n&=& 10 \\,\\rm{m}\\,\\rm{s}^{-1}\\,\\rm{\\mu g}\\,\\rm{m}^{-3}\\\\\n&=& \\underline{10 \\,\\rm{\\mu g}\\,\\rm{m}^{-2}\\,\\rm{s}^{-1}}\\\\\n\\end{eqnarray*}\n\\]",
+    "crumbs": [
+      "Study Questions",
+      "Study Question Set 07"
     ]
   }
 ]

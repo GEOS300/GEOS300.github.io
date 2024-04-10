@@ -1,0 +1,298 @@
+---
+title: Study Question Set 06
+subtitle: Turbulence Statistics
+---
+
+(@) During an hour, you measure air temperature $T$ every 10 minutes according the table below. Calculate the following terms:
+
+Minutes | $T$ 
+--------|----
+10 | $12.6^{\circ}\textrm{C}$
+20 | $11.2^{\circ}\textrm{C}$
+30 | $11.9^{\circ}\textrm{C}$
+40 | $13.1^{\circ}\textrm{C}$
+50 | $12.0^{\circ}\textrm{C}$
+60 | $11.8^{\circ}\textrm{C}$
+
+a. $\overline{T}$
+b. $T^{\prime}$ at 40 min
+c. $T^{\prime 2}$ at 20 min
+d. $\overline{T^{\prime}}$
+e. $\overline{T^{\prime 2}}$
+f. $\overline{T^{\prime}}^2$
+
+
+::: {.callout-tip collapse="true"}
+
+a. $\overline{T}$ is the temporal average of $T$: 
+$$
+\begin{eqnarray*}
+\overline{T} &=& \frac{1}{6} \sum_{t=0}^{5} T(t) \\
+&=& \frac{1}{6} \left(12.6 + 11.2 + 11.9 + 13.1 + 12.0 + 11.8 \right) \\
+&=& \underline{12.1^{\circ}\textrm{C}}
+\end{eqnarray*}
+$$
+
+b. $T^{\prime}$ is the deviation of a single measured value from the temporal average of the time series ($\overline{T}$). For the time step at 40 min we can write:  
+
+$$
+\begin{eqnarray*}
+T(40\textrm{min}) &=& \overline{T^{\prime}} + \overline{T}(40\textrm{min}) \\
+T^{\prime}(40\textrm{min}) &=& T(40\textrm{min}) - \overline{T} \\
+ &=& 13.1^{\circ}\textrm{C} - 12.1^{\circ}\textrm{C} \\
+ &=& \underline{1\, \textrm{K}}\\
+\end{eqnarray*}
+$$
+
+c. $T^{\prime 2}$ is the squared deviation for a a single measured value from the temporal average of the time series. For the time step at 20 min we can write: ($\overline{T}$): 
+
+$$
+\begin{eqnarray*}
+T^{\prime 2}(20\textrm{min}) &=& (T(20\textrm{min}) - \overline{T})^2 \\
+ &=& (11.2^{\circ}\textrm{C} - 12.1^{\circ}\textrm{C})^2 \\
+ &=& (-0.9^{\circ}\textrm{C})^2 \\
+ &=& \underline{0.81\, \textrm{K}^2}\\
+\end{eqnarray*}
+$$
+
+d. $\overline{T^{\prime}}$ is the average deviation in the time series. By definition, this term must be always zero, i.e $\overline{T^{\prime}}=0$ (or more general $\overline{a^{\prime}} = 0$, where $a$ is any parameter or term). Let's check this: 
+
+$$
+\begin{eqnarray*}
+\overline{T^{\prime}} &=& \frac{1}{6} \sum_{t=0}^{5} (T(t)-\overline{T}) \\
+&=& \frac{1}{6} \left( (12.6-12.1) + (11.2-12.1) + (11.9-12.1) \right. \\
+&& \left. + (13.1-12.1) + (12.0-12.1) + (11.8-12.1) \right) \\
+&=& \frac{1}{6} \left( 0.5 - 0.9 -0.2 + 1.0 - 0.1 - 0.3 \right) \\
+&=& \underline{0\,\textrm{K}}
+\end{eqnarray*}
+$$
+
+e. $\overline{T^{\prime 2}}$ is the the variance of the time series of $T$. It is defined as the average of the squared deviations of all time steps. This term is \underline{not} necessarily zero\footnote{Note for those who have taken statistics: You might be used to the \emph{unbiased variance}, where you divide by $N-1$, not $N$:
+
+$$
+\begin{eqnarray*}
+\overline{T^{\prime 2}} &=& \frac{1}{N-1} \sum_{t=0}^{N-1} (T(t)-\overline{T})^2 = \frac{1}{5} \sum_{t=0}^{5} (T(t)-\overline{T})^2 \\
+\end{eqnarray*}
+$$
+
+However, in atmospheric turbulence studies, we prefer the biased variance (divided by $N$, as shown in the question above and the lecture slides where we divide by $N$). The biased variance is a good estimation of the dispersion of a sample of observations, but not necessarily the best measure of the whole population of possible observations.
+
+$$
+\begin{eqnarray*}
+\overline{T^{\prime 2}} &=& \frac{1}{6} \sum_{t=0}^{5} (T(t)-\overline{T})^2 \\
+&=& \frac{1}{6} \left( (12.6-12.1)^2 + (11.2-12.1)^2 + (11.9-12.1) ^2\right. \\
+&& \left. + (13.1-12.1)^2 + (12.0-12.1)^2 + (11.8-12.1)^2 \right) \\
+&=& \frac{1}{6} \left( 0.25 + 0.81 + 0.04 + 1 + 0.01 + 0.09 \right) \\
+&=& \underline{0.37\,\textrm{K}^2}
+\end{eqnarray*}
+$$
+
+f. $\overline{T^{\prime}}^2$ is the temporal average of the deviations squared. Note the fine (but essential) difference of the overbar that does not include the square, and because $\overline{T^{\prime}} = 0$ (see (d)) also its square is zero:
+
+$$
+\begin{eqnarray*}
+\overline{T^{\prime}}^2 &=& \overline{T^{\prime}} \times \overline{T^{\prime}} \\
+&=& 0\,\textrm{K} \times 0\,\textrm{K} \\
+&=& \underline{0\,\textrm{K}^2}
+\end{eqnarray*}
+$$
+
+:::
+
+(@) Simplify the following terms. $T$ is temperature, $p$ is pressure, $q$ is absolute humidity, $u$, $v$, $w$ are the longitudinal, lateral and vertical wind components.
+
+a. $\overline{5}$ 
+
+b. $\overline{8v}$
+
+c. $\overline{\overline{T}\overline{p}}$
+
+d. $\overline{\overline{u}}$
+
+e. $\overline{q^{\prime}}$ 
+
+f. $\overline{T^{\prime}} \times \overline{w}$
+
+g. $\overline{3q^{\prime}}$
+
+h. $\overline{w^{\prime} \times \overline{u}}$
+
+i. $\overline{\overline{T}p}$
+
+j. $\overline{wT}$ 
+
+::: {.callout-tip collapse="true"}
+
+a. The average of a constant is equal the constant itself
+$$
+\begin{eqnarray*}
+\overline{5} = \frac{1}{1}\sum_{i=0}^{0} 5 = 5
+\end{eqnarray*}
+$$
+
+b. The average of a constant times a value is equal the constant times the averaged value:
+
+$$
+\begin{eqnarray*}
+\overline{8v} = 8 \times \overline{v}
+\end{eqnarray*}
+$$
+
+c. Similarly we can regard temporal averages as constants (they are not changing over time): 
+
+$$
+\begin{eqnarray*}
+\overline{\overline{T}\overline{p}} = \overline{T}\overline{p}
+\end{eqnarray*}
+$$
+
+d. The average of an averaged value is equal the averaged value
+
+$$
+\begin{eqnarray*}
+\overline{\overline{u}} = \overline{u}
+\end{eqnarray*}
+$$
+
+e. Similar to 1(d):
+
+$$
+\begin{eqnarray*}
+\overline{q^{\prime}} = 0 
+\end{eqnarray*}
+$$
+
+f. Again, the first term is zero - so is it's product:
+
+$$
+\begin{eqnarray*}
+\overline{T^{\prime}} \times \overline{w} = 0 \times \overline{w} = 0
+\end{eqnarray*}
+$$
+
+g.
+
+$$
+\begin{eqnarray*}
+\overline{3q^{\prime}} = 3 \times \overline{q^{\prime}} = 3 \times 0 = 0
+\end{eqnarray*}
+$$
+
+h.
+
+$$
+\begin{eqnarray*}
+\overline{w^{\prime} \times \overline{u}} = \overline{w^{\prime}} \times \overline{u} = 0 \times \overline{u} = 0 
+\end{eqnarray*}
+$$
+
+i. Combining the results from (c) and (e): 
+
+$$
+\begin{eqnarray*}
+\overline{\overline{T}p} &=& \overline{T} \times \overline{(\overline{p}+p^{\prime})} \\
+&=& \overline{T}\overline{p} + \overline{T} \times \underbrace{\overline{p^{\prime}}}_{=0} \\
+&=& \overline{T}\overline{p}
+\end{eqnarray*}
+$$
+
+j. In a first step apply Reynold's decomposition to both, $w$ and $T$. One of the resulting terms is a covariance ($\overline{w^{\prime}T^{\prime}}$) which is not zero (see lecture):
+
+$$
+\begin{eqnarray*}
+\overline{wT} &=& \overline{(\overline{w}+w^{\prime}) \times (\overline{T}+T^{\prime})} \\
+&=& \overline{\overline{w}\overline{T}} + \underbrace{\overline{\overline{w} T^{\prime}}}_{=0} + \underbrace{\overline{w^{\prime}\,\overline{T}}}_{=0}  +\overline{w^{\prime}T^{\prime}}\\
+&=& \overline{w}\overline{T} + \underbrace{\overline{w^{\prime}T^{\prime}}}_{\textrm{Covariance}}
+\end{eqnarray*}
+$$
+
+:::
+
+(@) Calculate the following parameters if $\overline{u} = 4\, \textrm{m}\, \textrm{s}^{-1}$, $\overline{v} = 0\, \textrm{m}\, \textrm{s}^{-1}$, $\overline{w} = 0\, \textrm{m}\, \textrm{s}^{-1}$, $\sigma_u = 0.4\, \textrm{m}\, \textrm{s}^{-1}$, $\sigma_v = 0.2\, \textrm{m}\, \textrm{s}^{-1}$, and $\sigma_w = 0.1\, \textrm{m}\, \textrm{s}^{-1}$.
+
+a. $I_u$
+
+b. $I_w$
+
+c. $\overline{w^{\prime 2}}$
+
+d. $\overline{u^{\prime 2}} + \overline{v^{\prime 2}} + \overline{w^{\prime 2}}$
+
+e. MKE/m
+
+f. $\overline{e}$
+
+:::{.callout-tip collapse="true"}
+
+
+a. $I_u$ is the turbulence intensity of the longitudinal wind component $u$. $I_u$ has no unit.
+
+$$
+\begin{eqnarray*}
+I_u &=& \sigma_u / \overline{u} \\
+&=& 0.4\,\textrm{m}\,\, \textrm{s}^{-1} / 4 \,\textrm{m}\,\, \textrm{s}^{-1} \\
+&=& \underline{0.1}
+\end{eqnarray*}
+$$
+
+
+b. $I_w$ is the turbulence intensity of the vertical wind component $w$. $I_w$ has no unit.
+
+$$
+\begin{eqnarray*}
+I_w &=& \sigma_w / \overline{u} \\
+&=& 0.1\,\textrm{m}\,\, \textrm{s}^{-1} / 4 \,\textrm{m}\,\, \textrm{s}^{-1} \\
+&=& \underline{0.025}
+\end{eqnarray*}
+$$
+
+
+c. $\overline{w^{\prime 2}}$ is the variance of the vertical wind component $w$. The variance is the square of the standard deviation $\sigma_w$:
+
+$$
+\begin{eqnarray*}
+\overline{w^{\prime 2}} &=& \sigma_w^2  \\
+&=& (0.1 \,\textrm{m}\,\, \textrm{s}^{-1})^2 \\
+&=& \underline{0.01 \,\textrm{m}^2\,\, \textrm{s}^{-2}}
+\end{eqnarray*}
+$$
+
+
+d. 
+
+$$
+\begin{eqnarray*}
+\overline{u^{\prime 2}} + \overline{v^{\prime 2}} + \overline{w^{\prime 2}} &=& \sigma_u^2 + \sigma_v^2 + \sigma_w^2  \\
+&=& (0.4 \,\textrm{m}\,\, \textrm{s}^{-1})^2 + (0.2 \,\textrm{m}\,\, \textrm{s}^{-1})^2 + (0.1 \,\textrm{m}\,\, \textrm{s}^{-1})^2 \\
+&=& 0.16 \,\textrm{m}^2\,\, \textrm{s}^{-2} + 0.04 \,\textrm{m}^2\,\, \textrm{s}^{-2} + 0.01 \,\textrm{m}^2\,\, \textrm{s}^{-2} \\
+&=& \underline{0.21\, \textrm{m}^2\,\, \textrm{s}^{-2}}
+\end{eqnarray*}
+$$
+
+
+e. $MKE / m$ is the mean kinetic energy per unit mass (lecture 12, slide 18), i.e.
+
+$$
+\begin{eqnarray*}
+MKE / m &=& \frac{1}{2}(\overline{u}^2+\overline{v}^2+\overline{w}^2)\\
+&=& \frac{1}{2}(4^2+0^2+0^2)\\
+&=& \frac{1}{2}(16)\\
+&=& \underline{8\, \textrm{m}^2\,\, \textrm{s}^{-2}}\\
+\end{eqnarray*}
+$$
+
+
+f. $\overline{e}$ is the turbulent kinetic energy per unit mass (lecture 12, slide 18) i.e.
+
+$$
+\begin{eqnarray*}
+\overline{e} &=&  \frac{1}{2}(\overline{u^{\prime 2}}+\overline{v^{\prime 2}}+\overline{w^{\prime 2}})\\
+&=& \frac{1}{2}(\sigma_u^2+\sigma_v^2+\sigma_w^2)\\
+&=& \frac{1}{2}\left( (0.4 \,\textrm{m}\,\, \textrm{s}^{-1})^2 + (0.2 \,\textrm{m}\,\, \textrm{s}^{-1})^2 + (0.1 \,\textrm{m}\,\, \textrm{s}^{-1})^2 \right) \\
+&=& \frac{1}{2}(0.16 \,\textrm{m}^2\,\, \textrm{s}^{-2} + 0.04 \,\textrm{m}^2\,\, \textrm{s}^{-2} + 0.01 \,\textrm{m}^2\,\, \textrm{s}^{-2}) \\
+&=& \underline{0.115\, \textrm{m}^2\,\, \textrm{s}^{-2}}
+\end{eqnarray*}
+$$
+
+
+:::
