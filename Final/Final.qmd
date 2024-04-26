@@ -1,0 +1,334 @@
+---
+title: "Final Exam"
+jupyter: python3
+keep-ipynb: true
+---
+
+# Written Portion
+
+## Problem Question
+
+```{python}
+#| echo: false
+#| label: tbl-Constants
+#| tbl-cap: You may assume these values for the following constants wherever necessary.
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from IPython.display import Markdown
+from tabulate import tabulate
+
+
+Constants = {
+    'Heat Capacity of Air':{'value':0.001,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_a$'},
+    'Heat Capacity of Water':{'value':4.2,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_w$'},
+    'Heat Capacity of Organic Soil':{'value':2.5,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_o$'},
+    'Heat Capacity of Mineral Soil':{'value':2.0,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_a$'},
+    'Solar Constant':{'value':1361,'unit':'$W m^{-2}$','Symbol':'$I_0$'},
+    'Ideal Gas Constant': {'value': 8.31446261815324, 'unit': '$Pa\ m^3\ mol^{-1} K ^{-1}$','Symbol':'$R$'},
+    'Molar Mass of Air': {'value': 0.028964, 'unit': '$kg mol^{-1}$','Symbol':'$M$'},
+    'Dry Adiabatic Lapse Rate':{'value':0.01, 'unit': '$K m^{-1}$','Symbol':'$DALR$'}
+}
+
+Constants = pd.DataFrame(Constants).T[['Symbol','value','unit']]
+
+Markdown(tabulate(
+  Constants,headers=['Constant','Symbol','Value','Units']
+))
+```
+
+```{python}
+#| echo: false
+#| label: tbl-Symbols
+#| tbl-cap: Definitions of selected symbols.
+
+Symbols = {
+    '$R_n$':{'name':'Net Radiation','unit':'$W m^{-2}$'},
+    '$LE$':{'name':'Latent Heat Flux','unit':'$W m^{-2}$'},
+    '$H$':{'name':'Sensible Heat Flux','unit':'$W m^{-2}$'},
+    '$H_g$':{'name':'Ground Heat Flux','unit':'$W m^{-2}$'},
+    '$Ta_z$':{'name':'Air Temperature at the Height (z in m) Above the Surface','unit':'$^{\circ}C$'},
+    '$RH_z$':{'name':'Relative Humidity at the Height (z in m) Above the Surface','unit':'%'},
+    '$T_0$':{'name':'Temperature at the Ground Surface','unit':'$^{\circ}C$'},
+    '$Ts_z$':{'name':'Air Temperature at the Depth (z in m) Below the Surface','unit':'$^{\circ}C$'},
+    '$\Theta_o$':{'name':'Volumetric Fraction of Organic Matter','unit':'%'},
+    '$\Theta_w$':{'name':'Volumetric Fraction of Liquid Fresh Water','unit':'%'},
+    '$P_a$':{'name':'Air Pressure','unit':'$kPa$'},
+    '$rho_a$':{'name':'Density of Air','unit':'$g m^{-3}$'},
+    '$rho_v$':{'name':'Partial Density of Water Vapor (aka. Absolute Humidity)','unit':'$g m^{-3}$'},
+    '$L_v$':{'name':'Latent heat of vaporization','unit':'$J g^{-1}$'},
+    '$Fc$':{'name':'Carbon Dioxide Flux','unit':'$\mu mol m^{-2} s^{-1}$'},
+    '$\overline{u}$':{'name':'Mean Wind Speed','unit':'$m s^{-1}$'},
+}
+
+df = pd.DataFrame(Symbols).T[['name','unit']]
+
+Markdown(tabulate(
+  df,headers=['Symbol','Name','Units']
+))
+
+```
+
+
+
+```{python}
+#| echo: false
+#| label: tbl-data
+#| tbl-cap: Data from Burns Bog. Each observation was averaged over one half hour, between 12:30-13:00 under clear sky conditions on the specified day of the year (DOY).  Sensible and latent heat fluxes were estimated using EC sensors mounted at $z = 2$ m above the ground.  You can assume that the observations were collected during an average year, where temperature and precipitation conditions were preceding the observations were typical for the season (e.g., not abnormally hot/cold and not anomalously wet/dry).
+
+# Just a function to randomly generate permutations of data
+def pmute(N,u=0,range=1,resolution = 1,i=0):
+    seed=69
+    np.random.seed(seed+i)
+    A = (np.random.rand(N)*range)+u
+    return(np.round(A,resolution))
+
+N = 6
+DALR = 0.01
+
+# Artificially generate some data
+# "Early Summer" with higher net radiation and latent heat fluxes due more wetter conditions in early summer
+Profile = pd.DataFrame({
+    'DOY':list(range(150,150+N)),
+    '$R_n$':pmute(N,650,50,0),
+    '$LE$':pmute(N,275,30,0),
+    '$H$':pmute(N,205,30,0),
+    '$Ta_{2.0}$':pmute(N,25,.4),# (0.1 m above surface)
+    '$Ta_{0.2}$':pmute(N,27,.5),# (0.1 m above surface)
+    '$RH_{2.0}$':pmute(N,55,5),# (0.1 m above surface)
+    'Fc':pmute(N,-1,.2,2),# (0.1 m above surface)
+    '$\overline{u}_{2.0}$':pmute(N,.1,.05,2)
+    },index=list(map(chr, range(65,65+N))))
+
+# "Late Summer" with slightly lower net radiation and reduced latent heat fluxes due more drier conditions in late summer
+Profile2 = pd.DataFrame({
+    'DOY':list(range(235,235+N)),
+    '$R_n$':pmute(N,600,50,0),
+    '$LE$':pmute(N,125,30,0),
+    '$H$':pmute(N,315,30,0),
+    '$Ta_{2.0}$':pmute(N,20,.3),# (0.1 m above surface)
+    '$Ta_{0.2}$':pmute(N,22,.4),# (0.1 m above surface)
+    '$RH_{2.0}$':pmute(N,45,5),# (0.1 m above surface)
+    'Fc':pmute(N,1,.2,2),# (0.1 m above surface)
+    '$\overline{u}_{2.0}$':pmute(N,.3,.05,2)
+    },index=list(map(chr, range(65,65+N))))
+
+# Combine the two
+Profile = pd.concat([Profile,Profile2])
+
+# Plot the table
+Markdown(tabulate(
+  Profile.values,headers=Profile.columns.values
+))
+```
+
+You have randomly been assigned observations of conditions from Burns Bog, on two separate days which listed in @tbl-data.  
+
+(@) Given the conditions for both of your assigned observations, do you expect the stable, neutral, or unstable atmospheric conditions? Why?  
+
+* We'd expect unstable conditions.  No need to do any calculations here, we can see from the relatively high sensible heat fluxes and the temperature gradient between z = 0.2 m and 2.0 m that parcels will experience positive buoyancy.
+
+(@) Calculate the eddy diffusivity of sensible heat flux for both of your assigned observations.
+
+```{python}
+
+# Convert to potential temperatures
+Profile['Theta_a2'] = Profile['$Ta_{2.0}$']+2*DALR
+Profile['Theta_a0.2'] = Profile['$Ta_{0.2}$']+0.2*DALR
+# Get the gradient
+Profile['DTheta_a'] = (Profile['Theta_a2']-Profile['Theta_a0.2'])/1.8
+# Calculate K_H: https://geos300.github.io/Lectures/17.html#/k-theory
+# Use the assumed heat capacity of air listed in Table 1 above
+Profile['K_H'] = Profile['$H$']/(-0.001*1e6*Profile['DTheta_a'])
+
+Profile['K_H']
+
+```
+
+(@) Calculate $\overline{w^{\prime}\rho_v^{\prime}}$ for both of your assigned observations.
+
+```{Python}
+Profile['Lv'] = 2500.8−2.36*Profile['$Ta_{2.0}$']*−0.0016*Profile['$Ta_{2.0}$']**2−0.00006*Profile['$Ta_{2.0}$']**3
+Profile['w_prime_rho_v_prime_bar'] = Profile['Lv']*Profile['LE']
+Profile['w_prime_rho_v_prime_bar'] 
+```
+
+(@) Calculate the total mass of $CO_2$ uptake/emission (in $\rm{mg \ m}^{-2}$) over both of your assigned observations.  Was the site was a source or sink for atmospheric $CO_2$ during each period?  Speculate on which component of the carbon balance (Ecosystem Respiration or Gross Primary Productivity) was greater for each period.
+
+```{Python}
+Profile['F_CO2_g'] = Profile['Fc']*44.01*1e-6*1800
+```
+
+(@) Estimate the magnitude of ground heat flux ($H_g$) for both of your assigned observations.  You can assume that any storage terms not listed in the table are negligible.
+
+```{python}
+Heat_Assimilation = 469#kJ mol-1
+Profile['G'] = Profile['$R_n$']-(Profile['$LE$']+Profile['$H$']+Profile['Fc']*1e-6*Heat_Assimilation*1e3)
+Profile['G']
+```
+
+(@) Calculate the Bowen Ratio ($\beta$) for both of your assigned observations.  Discuss what the difference in $\beta$ between your two days means, and speculate on the underlying reason for the difference between the two observations.  For context, you can refer to the image below, which shows a 30-year climate normals for a near-by site.
+
+```{python}
+#| echo: false
+#| label: fig-data
+#| fig-cap: Climate information from the Vancouver International Airport, which is approximately 15km north-west of Burns Bog. 
+
+Rainfall=[157.5,	98.9,	111.8,	88.1,	65,	53.8,	35.6,	36.7,	50.9,	120.7,	185.8,	148.3]
+Month = list(range(1,13))
+plt.figure()
+plt.bar(Month,Rainfall)
+plt.xlabel('Month')
+plt.ylabel('Total Precipitation (mm)')
+plt.title('Average Monthly Precipitation at Vancouver International Airport')
+
+```
+
+
+
+
+## Short Answers
+
+
+(@) Briefly explain the concept of Reynolds decomposition?  Then use it to calculate the $\overline{u^{\prime}w^{\prime}}$ and $u_*$ for the following data set
+
+* Reynolds decomposition partitions a time series into two components, the mean value and the instantaneous deviation from the mean at any given point in time.  
+
+```{python}
+#| echo: false
+#| label: tbl-data2
+
+u = np.array([1.0,0.0,1.0,2.0,1.0,0.0,0.50,1.25])
+w = np.array([0.0,0.1,0.0,-.1,0.0,0.0,-.25,0.25])
+
+df = pd.DataFrame(data={'u_a':u,'w_a':w})
+
+df['u_b'] = df['u_a']*2
+df['w_b'] = df['w_a']*2
+
+df['u_c'] = df['u_a']*3
+df['w_c'] = df['w_a']*3
+
+df['u_d'] = df['u_a']*4
+df['w_d'] = df['w_a']*4
+
+for p in ['a','b','c','d']:
+  df[f'u_{p}_prime'] = df[f'u_{p}']-df[f'u_{p}'].mean()
+  df[f'w_{p}_prime'] = df[f'w_{p}']-df[f'w_{p}'].mean()
+  df[f'u_{p}_prime_w_{p}_prime'] = (df[f'u_{p}_prime']*df[f'w_{p}_prime']).mean()
+
+Markdown(tabulate(
+  df.values,headers=df.columns.values
+))
+
+```
+
+
+(@) Briefly explain what factors influence evapotranspiration from a vegetated surface?
+
+* Based on this lecture: https://geos300.github.io/Lectures/23.html#/title-slide
+
+* Plant activity is big, transpiration is a byproduct of photosynthesis, transpiration rates will vary as a function of: (**2/3**)
+  * Vapor pressure deficit
+  * Plant type (C3, C4, or CAM)
+    + CAM evolved to minimize evaporation
+    + C4 use less water per g of C than C3 plants
+  * Plant health (e.g., dead plants aren't going to photosynthesize)
+  * Density of vegetation coverage (i.e., dense tropical rain forest vs. sparsely vegetated desert)
+  * Day vs. night, transpiration will be lower at night because photosynthesis isn't happening and VPD is lower at night, but will still occur at reduced rate.  CAM plants only transpire h20 at night
+
+* Evaporation is also important from soil and sometimes plant surfaces: (**1/3**)
+  * After rainfall, intercepted precipitation will evaporate from leaf surface
+  * Without recent precipitation, evaporation will be limited to soil and open water surfaces.  Soil evaporation rates will depend on:
+    + Soil moisture content
+    + Atmospheric vapor pressure deficit
+    + Soil temperature (warmer soils = warmer soil water = lower latent heat of vaporization = more evaporation)
+
+(@) Briefly explain what factors influence net all-wave radiation ($R_n$) at the earth's surface?
+
+* This question is basically a re-hash of a question on the midterm (see answer below).  With the added caveat that they need to mention how they tie together.  Should present the equation for R_n (or clear description of it) $R_n = (SW \downarrow - SW \uparrow) + (LW \downarrow - LW \uparrow)$ along with emphasizing that $SW \uparrow$, $LW \downarrow$, $LW \uparrow$ are all dependent derived from $SW \downarrow$.  The sun is the source of *almost all of our energy.
+
+* [This slide](../Lectures/07.html#/component-fluxes) summarizes the important aspects:
+  * $SW^*$ depends on:
+    + $SW\downarrow$ > influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity).  **Only** sourced from the Sun (**1/5**)
+    + $SW\uparrow$ > determined by albedo & magnitude of $SW\downarrow$.  Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles).  For some "surfaces" (ice, water, etc.) it also depends on the transmissivity of the volume.  Surface can absorb $SW\downarrow$, but **cannot** emit it! (**1/5**)
+  * $LW^*$ depends on:
+    + $LW\downarrow$ > determined by the temperature and emissivity $\epsilon$ of the atmosphere.  Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions.  Clouds are a good example: $LW\downarrow$ tends to be higher (for equivalent surface temps/seasons) when clouds are present (**1/5**)
+    + $LW\uparrow$ > determined by the temperature, emissivity $\epsilon$, and **reflectivity** of the surface.  Warmer surface = higher LW emissions; more emissive surface = higher LW emissions.  Should mention that $\epsilon = \zeta$ (absorptivity) in the **long-wave** portion of the spectrum (Khirchoff's law).  Also influenced by surface albedo ($SW$): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(**1/5**)
+
+
+# Calculations
+
+```{python}
+import numpy as np
+import pandas as pd
+seed = 69
+N = 3
+np.random.seed(seed)
+
+SW_in = np.round(np.random.rand(N)*375)
+Albedo = np.round(np.random.rand(N)*.9,3)
+# SW_out = np.round(np.random.rand(N)*125,3)
+
+epsilon = np.round(np.random.rand(N)*.065+.9,3)
+np.random.seed(seed)
+LW_in = np.round(np.random.rand(N)*20+100)
+```
+
+
+(@) Given $SW_\downarrow$ of `{python} SW_in` and $LW\downarrow$ is `{python} LW_in` $W m^{-2}$, with a surface albedo $\alpha$ of `{python} Albedo` and a surface emissivity ($\epsilon_{o,LW}$) of `{python} epsilon`, estimate net radiation $R_n$?
+
+```{python}
+a=epsilon
+alpha = 1-a 
+print('alpha = ', alpha)
+LW_out = LW_in*alpha
+SW_out = SW_in*alpha
+R_n = SW_in-SW_out+LW_in-LW_out
+print(R_n)
+```
+
+
+```{python}
+import numpy as np
+k = 0.41
+R = 40 # m
+E = 0.35 # %
+z = 100 # m
+z0 = 0.25 # m
+u_star = 0.75 # m/s
+rho = 1.22 # kg m-3
+
+u_bar = u_star/k*np.log(z/z0)
+
+U = np.pi/2*rho*E*(R**2)*(u_bar**3)
+
+print(f'{U*1e-3:.1f} kW')
+
+```
+
+
+(@) Estimate the power generation (in kilowatts) of a wind turbine with R = `{python} R` m, z = `{python} z` m and E = `{python} E`% under the following conditions: Neutral stability, $u_∗$ = `{python} u_star` m/s, z0 = `{python} z0` m, $\rho$ = `{python} rho` $\rm{kg m^{-3}}$.
+
+
+```{python}
+import numpy as np
+k = 0.41
+R = 25 # m
+E = 0.35 # %
+z = 60 # m
+z0 = 0.2 # m
+u_star = 0.85 # m/s
+rho = 1.22 # kg m-3
+
+u_bar = u_star/k*np.log(z/z0)
+
+U = np.pi/2*rho*E*(R**2)*(u_bar**3)
+
+print(f'{U*1e-3:.1f} kW')
+
+```
+
+
+(@) Estimate the power generation (in kilowatts) of a wind turbine with R = `{python} R` m, z = `{python} z` m and E = `{python} E`% under the following conditions: Neutral stability, $u_∗$ = `{python} u_star` m/s, z0 = `{python} z0` m, $\rho$ = `{python} rho` $\rm{kg m^{-3}}$.

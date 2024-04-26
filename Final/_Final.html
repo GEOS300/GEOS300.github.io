@@ -1,0 +1,1222 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+
+<head>
+
+<meta charset="utf-8" />
+<meta name="generator" content="quarto-1.4.533" />
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+
+
+<title>Final Exam</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+<!-- htmldependencies:E3FAD763 -->
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
+</head>
+
+<body>
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+<div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Final Exam</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="written-portion" class="level1">
+<h1>Written Portion</h1>
+<section id="problem-question" class="level2">
+<h2>Problem Question</h2>
+<div class="cell" data-execution_count="1">
+<div id="tbl-constants" class="cell quarto-float" data-execution_count="1">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-constants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 1: You may assume these values for the following constants wherever necessary.
+</figcaption>
+<div aria-describedby="tbl-constants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="37">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Constant</th>
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: right;">Value</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Heat Capacity of Air</td>
+<td style="text-align: left;"><span class="math inline">\(C_a\)</span></td>
+<td style="text-align: right;">0.001</td>
+<td style="text-align: left;"><span class="math inline">\(MJ m^{-3} K^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Heat Capacity of Water</td>
+<td style="text-align: left;"><span class="math inline">\(C_w\)</span></td>
+<td style="text-align: right;">4.2</td>
+<td style="text-align: left;"><span class="math inline">\(MJ m^{-3} K^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Heat Capacity of Organic Soil</td>
+<td style="text-align: left;"><span class="math inline">\(C_o\)</span></td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: left;"><span class="math inline">\(MJ m^{-3} K^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Heat Capacity of Mineral Soil</td>
+<td style="text-align: left;"><span class="math inline">\(C_a\)</span></td>
+<td style="text-align: right;">2</td>
+<td style="text-align: left;"><span class="math inline">\(MJ m^{-3} K^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Solar Constant</td>
+<td style="text-align: left;"><span class="math inline">\(I_0\)</span></td>
+<td style="text-align: right;">1361</td>
+<td style="text-align: left;"><span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Ideal Gas Constant</td>
+<td style="text-align: left;"><span class="math inline">\(R\)</span></td>
+<td style="text-align: right;">8.31446</td>
+<td style="text-align: left;"><span class="math inline">\(Pa\ m^3\ mol^{-1} K ^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Molar Mass of Air</td>
+<td style="text-align: left;"><span class="math inline">\(M\)</span></td>
+<td style="text-align: right;">0.028964</td>
+<td style="text-align: left;"><span class="math inline">\(kg mol^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Dry Adiabatic Lapse Rate</td>
+<td style="text-align: left;"><span class="math inline">\(DALR\)</span></td>
+<td style="text-align: right;">0.01</td>
+<td style="text-align: left;"><span class="math inline">\(K m^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell" data-execution_count="2">
+<div id="tbl-symbols" class="cell quarto-float" data-execution_count="2">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-symbols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 2: Definitions of selected symbols.
+</figcaption>
+<div aria-describedby="tbl-symbols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="38">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: left;">Symbol</th>
+<th style="text-align: left;">Name</th>
+<th style="text-align: left;">Units</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(R_n\)</span></td>
+<td style="text-align: left;">Net Radiation</td>
+<td style="text-align: left;"><span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(LE\)</span></td>
+<td style="text-align: left;">Latent Heat Flux</td>
+<td style="text-align: left;"><span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(H\)</span></td>
+<td style="text-align: left;">Sensible Heat Flux</td>
+<td style="text-align: left;"><span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(H_g\)</span></td>
+<td style="text-align: left;">Ground Heat Flux</td>
+<td style="text-align: left;"><span class="math inline">\(W m^{-2}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(Ta_z\)</span></td>
+<td style="text-align: left;">Air Temperature at the Height (z in m) Above the Surface</td>
+<td style="text-align: left;"><span class="math inline">\(^{\circ}C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(RH_z\)</span></td>
+<td style="text-align: left;">Relative Humidity at the Height (z in m) Above the Surface</td>
+<td style="text-align: left;">%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(T_0\)</span></td>
+<td style="text-align: left;">Temperature at the Ground Surface</td>
+<td style="text-align: left;"><span class="math inline">\(^{\circ}C\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(Ts_z\)</span></td>
+<td style="text-align: left;">Air Temperature at the Depth (z in m) Below the Surface</td>
+<td style="text-align: left;"><span class="math inline">\(^{\circ}C\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(\Theta_o\)</span></td>
+<td style="text-align: left;">Volumetric Fraction of Organic Matter</td>
+<td style="text-align: left;">%</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\Theta_w\)</span></td>
+<td style="text-align: left;">Volumetric Fraction of Liquid Fresh Water</td>
+<td style="text-align: left;">%</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(P_a\)</span></td>
+<td style="text-align: left;">Air Pressure</td>
+<td style="text-align: left;"><span class="math inline">\(kPa\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(rho_a\)</span></td>
+<td style="text-align: left;">Density of Air</td>
+<td style="text-align: left;"><span class="math inline">\(g m^{-3}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(rho_v\)</span></td>
+<td style="text-align: left;">Partial Density of Water Vapor (aka. Absolute Humidity)</td>
+<td style="text-align: left;"><span class="math inline">\(g m^{-3}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(L_v\)</span></td>
+<td style="text-align: left;">Latent heat of vaporization</td>
+<td style="text-align: left;"><span class="math inline">\(J g^{-1}\)</span></td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><span class="math inline">\(Fc\)</span></td>
+<td style="text-align: left;">Carbon Dioxide Flux</td>
+<td style="text-align: left;"><span class="math inline">\(\mu mol m^{-2} s^{-1}\)</span></td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><span class="math inline">\(\overline{u}\)</span></td>
+<td style="text-align: left;">Mean Wind Speed</td>
+<td style="text-align: left;"><span class="math inline">\(m s^{-1}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<div class="cell" data-execution_count="3">
+<div id="tbl-data" class="cell quarto-float" data-execution_count="3">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 3: Data from Burns Bog. Each observation was averaged over one half hour, between 12:30-13:00 under clear sky conditions on the specified day of the year (DOY). Sensible and latent heat fluxes were estimated using EC sensors mounted at <span class="math inline">\(z = 2\)</span> m above the ground. You can assume that the observations were collected during an average year, where temperature and precipitation conditions were preceding the observations were typical for the season (e.g., not abnormally hot/cold and not anomalously wet/dry).
+</figcaption>
+<div aria-describedby="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="39">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: right;">DOY</th>
+<th style="text-align: right;"><span class="math inline">\(R_n\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(LE\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(H\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(Ta_{2.0}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(Ta_{0.2}\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(RH_{2.0}\)</span></th>
+<th style="text-align: right;">Fc</th>
+<th style="text-align: right;"><span class="math inline">\(\overline{u}_{2.0}\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">150</td>
+<td style="text-align: right;">665</td>
+<td style="text-align: right;">284</td>
+<td style="text-align: right;">214</td>
+<td style="text-align: right;">25.1</td>
+<td style="text-align: right;">27.1</td>
+<td style="text-align: right;">56.5</td>
+<td style="text-align: right;">-0.94</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">151</td>
+<td style="text-align: right;">690</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">25.3</td>
+<td style="text-align: right;">27.4</td>
+<td style="text-align: right;">59</td>
+<td style="text-align: right;">-0.84</td>
+<td style="text-align: right;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">152</td>
+<td style="text-align: right;">668</td>
+<td style="text-align: right;">286</td>
+<td style="text-align: right;">216</td>
+<td style="text-align: right;">25.1</td>
+<td style="text-align: right;">27.2</td>
+<td style="text-align: right;">56.8</td>
+<td style="text-align: right;">-0.93</td>
+<td style="text-align: right;">0.12</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">153</td>
+<td style="text-align: right;">689</td>
+<td style="text-align: right;">299</td>
+<td style="text-align: right;">229</td>
+<td style="text-align: right;">25.3</td>
+<td style="text-align: right;">27.4</td>
+<td style="text-align: right;">58.9</td>
+<td style="text-align: right;">-0.84</td>
+<td style="text-align: right;">0.14</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">154</td>
+<td style="text-align: right;">678</td>
+<td style="text-align: right;">292</td>
+<td style="text-align: right;">222</td>
+<td style="text-align: right;">25.2</td>
+<td style="text-align: right;">27.3</td>
+<td style="text-align: right;">57.8</td>
+<td style="text-align: right;">-0.89</td>
+<td style="text-align: right;">0.13</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">155</td>
+<td style="text-align: right;">663</td>
+<td style="text-align: right;">283</td>
+<td style="text-align: right;">213</td>
+<td style="text-align: right;">25.1</td>
+<td style="text-align: right;">27.1</td>
+<td style="text-align: right;">56.3</td>
+<td style="text-align: right;">-0.95</td>
+<td style="text-align: right;">0.11</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">235</td>
+<td style="text-align: right;">615</td>
+<td style="text-align: right;">134</td>
+<td style="text-align: right;">324</td>
+<td style="text-align: right;">20.1</td>
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">46.5</td>
+<td style="text-align: right;">1.06</td>
+<td style="text-align: right;">0.31</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">236</td>
+<td style="text-align: right;">640</td>
+<td style="text-align: right;">149</td>
+<td style="text-align: right;">339</td>
+<td style="text-align: right;">20.2</td>
+<td style="text-align: right;">22.3</td>
+<td style="text-align: right;">49</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">237</td>
+<td style="text-align: right;">618</td>
+<td style="text-align: right;">136</td>
+<td style="text-align: right;">326</td>
+<td style="text-align: right;">20.1</td>
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">46.8</td>
+<td style="text-align: right;">1.07</td>
+<td style="text-align: right;">0.32</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">238</td>
+<td style="text-align: right;">639</td>
+<td style="text-align: right;">149</td>
+<td style="text-align: right;">339</td>
+<td style="text-align: right;">20.2</td>
+<td style="text-align: right;">22.3</td>
+<td style="text-align: right;">48.9</td>
+<td style="text-align: right;">1.16</td>
+<td style="text-align: right;">0.34</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">239</td>
+<td style="text-align: right;">628</td>
+<td style="text-align: right;">142</td>
+<td style="text-align: right;">332</td>
+<td style="text-align: right;">20.2</td>
+<td style="text-align: right;">22.2</td>
+<td style="text-align: right;">47.8</td>
+<td style="text-align: right;">1.11</td>
+<td style="text-align: right;">0.33</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">240</td>
+<td style="text-align: right;">613</td>
+<td style="text-align: right;">133</td>
+<td style="text-align: right;">323</td>
+<td style="text-align: right;">20.1</td>
+<td style="text-align: right;">22.1</td>
+<td style="text-align: right;">46.3</td>
+<td style="text-align: right;">1.05</td>
+<td style="text-align: right;">0.31</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<p>You have randomly been assigned observations of conditions from Burns Bog, on two separate days which listed in <a href="#tbl-data" class="quarto-xref">Table 3</a>.</p>
+<ol class="example" type="1">
+<li><p>Given the conditions for both of your assigned observations, do you expect the stable, neutral, or unstable atmospheric conditions? Why?</p></li>
+<li><p>Calculate the eddy diffusivity of sensible heat flux for both of your assigned observations.</p></li>
+<li><p>Calculate <span class="math inline">\(\overline{w^{\prime}\rho_v^{\prime}}\)</span> for both of your assigned observations.</p></li>
+<li><p>Calculate the total mass of <span class="math inline">\(CO_2\)</span> uptake/emission (in <span class="math inline">\(\rm{mg \ m}^{-2}\)</span>) over both of your assigned observations. Was the site was a source or sink for atmospheric <span class="math inline">\(CO_2\)</span> during each period? Speculate on which component of the carbon balance (Ecosystem Respiration or Gross Primary Productivity) was greater for each period.</p></li>
+<li><p>Estimate the magnitude of ground heat flux (<span class="math inline">\(H_g\)</span>) for both of your assigned observations. You can assume that any storage terms not listed in the table are negligible.</p></li>
+<li><p>Calculate the Bowen Ratio (<span class="math inline">\(\beta\)</span>) for both of your assigned observations. Discuss what the difference in <span class="math inline">\(\beta\)</span> between your two days means, and speculate on the underlying reason for the difference between the two observations. For context, you can refer to the image below, which shows a 30-year climate normals for a near-by site.</p></li>
+</ol>
+<div class="cell" data-execution_count="4">
+<div id="fig-data" class="cell quarto-figure quarto-figure-center quarto-float" data-execution_count="4">
+<figure class="quarto-float quarto-float-fig">
+<div aria-describedby="fig-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div id="fig-data-1" class="cell-output cell-output-display quarto-figure quarto-figure-center quarto-float" data-execution_count="40">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-data-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<pre id="fig-data-1" class="cell-output cell-output-display" data-execution_count="40"><code>Text(0.5, 1.0, &#39;Average Monthly Precipitation at Vancouver International Airport&#39;)</code></pre>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-data-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(a) Climate information from the Vancouver International Airport, which is approximately 15km north-west of Burns Bog.
+</figcaption>
+</figure>
+</div>
+<div class="cell-output cell-output-display">
+<div id="fig-data-2" class="quarto-figure quarto-figure-center quarto-float" width="593" height="449">
+<figure class="quarto-float quarto-subfloat-fig">
+<div aria-describedby="fig-data-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<img src="_Final_files/figure-html/fig-data-output-2.png" id="fig-data-2" data-ref-parent="fig-data" width="593" height="449" />
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-data-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+(b)
+</figcaption>
+</figure>
+</div>
+</div>
+</div>
+<figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig quarto-uncaptioned" id="fig-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Figure 1
+</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="short-answers" class="level2">
+<h2>Short Answers</h2>
+<ol start="7" class="example" type="1">
+<li>Briefly explain the concept of Reynolds decomposition? Then use it to calculate the <span class="math inline">\(\overline{u^{\prime}w^{\prime}}\)</span> and <span class="math inline">\(u_*\)</span> for the following data set</li>
+</ol>
+<div class="cell" data-execution_count="5">
+<div id="tbl-data2" class="cell quarto-float" data-execution_count="5">
+<figure class="quarto-float quarto-float-tbl">
+<figcaption class="quarto-float-caption-top quarto-float-caption quarto-float-tbl" id="tbl-data2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+Table 4: Sample of .
+</figcaption>
+<div aria-describedby="tbl-data2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="41">
+<table class="do-not-create-environment cell">
+<thead>
+<tr class="header">
+<th style="text-align: right;"><span class="math inline">\(u_a\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(w_a\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(u_b\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(w_b\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(u_c\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(w_c\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(u_d\)</span></th>
+<th style="text-align: right;"><span class="math inline">\(w_d\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-0.1</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">-0.2</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">-0.3</td>
+<td style="text-align: right;">8</td>
+<td style="text-align: right;">-0.4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">-0.25</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">-0.5</td>
+<td style="text-align: right;">1.5</td>
+<td style="text-align: right;">-0.75</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">-1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1.25</td>
+<td style="text-align: right;">0.25</td>
+<td style="text-align: right;">2.5</td>
+<td style="text-align: right;">0.5</td>
+<td style="text-align: right;">3.75</td>
+<td style="text-align: right;">0.75</td>
+<td style="text-align: right;">5</td>
+<td style="text-align: right;">1</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</figure>
+</div>
+</div>
+<ol start="8" class="example" type="1">
+<li><p>Briefly explain what factors influence evapotranspiration from a vegetated surface?</p></li>
+<li><p>Briefly explain what factors influence net all-wave radiation (<span class="math inline">\(R_n\)</span>) at the earth’s surface?</p></li>
+</ol>
+<!-- * [This slide](../Lectures/07.html#/component-fluxes) summarizes the important aspects:
+* $SW^*$ depends on:
+  + $SW\downarrow$ > influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity).  **Only** sourced from the Sun (**1/4**)
+  + $SW\uparrow$ > determined by albedo & magnitude of $SW\downarrow$.  Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles).  For some "surfaces" (ice, water, etc.) it also depends on the transitivity of the volume.  Surface can absorb $SW\downarrow$, but **cannot** emit it! (**1/4**)
+* $LW^*$ depends on:
+  + $LW\downarrow$ > determined by the temperature and emissivity $\epsilon$ of the atmosphere.  Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions.  Clouds are a good example: $LW\downarrow$ tends to be higher (for equivalent surface temps/seasons) when clouds are present (**1/4**)
+  + $LW\uparrow$ > determined by the temperature, emissivity $\epsilon$, and **reflectivity** of the surface.  Warmer surface = higher LW emissions; more emissive surface = higher LW emissions.  Should mention that $\epsilon = \zeta$ (absorptivity) in the **long-wave** portion of the spectrum (Khirchoff's law).  Also influenced by surface albedo ($SW$): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(**1/4**) -->
+</section>
+</section>
+<section id="fill-in-the-blanks" class="level1">
+<h1>Fill in the blanks</h1>
+<ol start="10" class="example" type="1">
+<li><p>Negative sensible heat flux is more likely to occur during the _____ than during the _____.</p></li>
+<li><p>Positive _____ heat flux indicates that _____ is occurring at the surface.</p></li>
+<li><p>A(n) _____ process is on where temperature changes due to compression/expansion of a gas, ____ the exchange of energy with the surrounding environment.</p></li>
+<li><p>For any given soil, it’s _____ increases linearly as a function of volumetric _____ content.</p></li>
+</ol>
+</section>
+<section id="multiple-choice" class="level1">
+<h1>Multiple Choice</h1>
+<ol start="14" class="example" type="1">
+<li>A temperature inversion in the atmosphere near the Earth’s surface would result in</li>
+</ol>
+<ul>
+<li>Negative (downward) sensible heat flux</li>
+<li>Positive (downward) sensible heat flux</li>
+<li>Positive (upward) sensible heat flux</li>
+<li>Suppression of turbulence</li>
+<li>Production of turbulence</li>
+</ul>
+<ol start="15" class="example" type="1">
+<li>This is the time of year when the earth is closest to the sun</li>
+</ol>
+<ul>
+<li>Perihelion</li>
+<li>Aphelion</li>
+<li>Summer Solstice</li>
+<li>Winter Solstice</li>
+<li>Every day, Earth is always the same distance from the sun</li>
+</ul>
+<ol start="16" class="example" type="1">
+<li>Obukhov length (<span class="math inline">\(L\)</span>) is a measure of atmospheric:</li>
+</ol>
+<ul>
+<li>Humidity</li>
+<li>Stability</li>
+<li>Temperature</li>
+<li>Kinetic Energy</li>
+<li>Energy Density</li>
+</ul>
+<ol start="17" class="example" type="1">
+<li>Which surface would you expect to have the greatest aerodynamic roughness length (<span class="math inline">\(z_0\)</span>)</li>
+</ol>
+<ul>
+<li>Ice</li>
+<li>Water</li>
+<li>Bare Soil</li>
+<li>Grassland</li>
+<li>Forest</li>
+</ul>
+<ol start="18" class="example" type="1">
+<li>Which of the following locations would you expect to have the highest average latent heat flux over an entire year?</li>
+</ol>
+<ul>
+<li>At the Equator in the Pacific Ocean</li>
+<li>Sahara Desert</li>
+<li>An irrigated cotton farm in California</li>
+<li>Lake Superior</li>
+<li>A temperate rain forest in British Columbia</li>
+</ul>
+<ol start="19" class="example" type="1">
+<li>This type of flow most common on calm, clear nights with weak winds</li>
+</ol>
+<ul>
+<li>Laminar</li>
+<li>Adiabatic</li>
+<li>Turbulent</li>
+<li>Kinetic</li>
+<li>Stable</li>
+</ul>
+<ol start="20" class="example" type="1">
+<li>Mechanical turbulence increases with increasing:</li>
+</ol>
+<ul>
+<li>Mean wind speeds</li>
+<li>Height above the surface</li>
+<li>Latent heat flux</li>
+<li>Surface roughness</li>
+<li>Ground heat flux</li>
+</ul>
+</section>
+<section id="truefalse" class="level1">
+<h1>True/False</h1>
+<ol start="21" class="example" type="1">
+<li><p>Positive ground heat flux (<span class="math inline">\(H_g\)</span>) indicates that heat energy is moving from the soil into the atmosphere.</p></li>
+<li><p>Days with strong winds and high sensible heat flux are the optimal conditions for producing wind power.</p></li>
+</ol>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<ol start="23" class="example" type="1">
+<li>Typically, on a hot and sunny day in mid-summer, we expect <span class="math inline">\(\overline{w}&gt;0 \ \rm{m s}^{-1}\)</span></li>
+</ol>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<ol start="24" class="example" type="1">
+<li><span class="math inline">\(NPP \approx -NEE\)</span>, therefore NEE and NPP are synonymous.</li>
+</ol>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<ol start="25" class="example" type="1">
+<li>Soil temperatures tend to become more variable with increasing depth.</li>
+</ol>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+<ol start="26" class="example" type="1">
+<li>Select true for 5 free points:</li>
+</ol>
+<ul>
+<li>True</li>
+<li>False</li>
+</ul>
+</section>
+<section id="calculations" class="level1">
+<h1>Calculations</h1>
+<div id="5ddb978b" class="cell" data-execution_count="6">
+<div class="sourceCode" id="cb1"><pre class="sourceCode python cell-code"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">69</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">375</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Albedo <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># SW_out = np.round(np.random.rand(N)*125,3)</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.065</span><span class="op">+</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>LW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">20</span><span class="op">+</span><span class="dv">100</span>)</span></code></pre></div>
+</div>
+<ol start="27" class="example" type="1">
+<li>Given <span class="math inline">\(SW_\downarrow\)</span> of array([111., 303., 131.]) and <span class="math inline">\(LW\downarrow\)</span> is array([106., 116., 107.]) <span class="math inline">\(W m^{-2}\)</span>, with a surface albedo <span class="math inline">\(\alpha\)</span> of array([0.71 , 0.505, 0.228]) and a surface emissivity (<span class="math inline">\(\epsilon_{o,LW}\)</span>) of array([0.907, 0.904, 0.944]), estimate net radiation <span class="math inline">\(R_n\)</span>?</li>
+</ol>
+<div id="9d6337c1" class="cell" data-execution_count="7">
+<div class="sourceCode" id="cb2"><pre class="sourceCode python cell-code"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>a<span class="op">=</span>epsilon</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>alpha <span class="op">=</span> <span class="dv">1</span><span class="op">-</span>a </span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">&#39;alpha = &#39;</span>, alpha)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>LW_out <span class="op">=</span> LW_in<span class="op">*</span>alpha</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>SW_out <span class="op">=</span> SW_in<span class="op">*</span>alpha</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>R_n <span class="op">=</span> SW_in<span class="op">-</span>SW_out<span class="op">+</span>LW_in<span class="op">-</span>LW_out</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(R_n)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>alpha =  [0.093 0.096 0.056]
+[196.819 378.776 224.672]</code></pre>
+</div>
+</div>
+<div id="c3fe094b" class="cell" data-execution_count="8">
+<div class="sourceCode" id="cb4"><pre class="sourceCode python cell-code"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">40</span> <span class="co"># m</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.35</span> <span class="co"># %</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">100</span> <span class="co"># m</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.25</span> <span class="co"># m</span></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.75</span> <span class="co"># m/s</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.22</span> <span class="co"># kg m-3</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW&#39;</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>1412.9 kW</code></pre>
+</div>
+</div>
+<ol start="28" class="example" type="1">
+<li>Estimate the power generation (in kilowatts) of a wind turbine with R = 40 m, z = 100 m and E = 0.35% under the following conditions: Neutral stability, <span class="math inline">\(u_∗\)</span> = 0.75 m/s, z0 = 0.25 m, <span class="math inline">\(\rho\)</span> = 1.22 <span class="math inline">\(\rm{kg m^{-3}}\)</span>.</li>
+</ol>
+<div id="a2c69838" class="cell" data-execution_count="9">
+<div class="sourceCode" id="cb6"><pre class="sourceCode python cell-code"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">25</span> <span class="co"># m</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.35</span> <span class="co"># %</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">60</span> <span class="co"># m</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.2</span> <span class="co"># m</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.85</span> <span class="co"># m/s</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.22</span> <span class="co"># kg m-3</span></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f&#39;</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW&#39;</span>)</span></code></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>693.1 kW</code></pre>
+</div>
+</div>
+<ol start="29" class="example" type="1">
+<li>Estimate the power generation (in kilowatts) of a wind turbine with R = 25 m, z = 60 m and E = 0.35% under the following conditions: Neutral stability, <span class="math inline">\(u_∗\)</span> = 0.85 m/s, z0 = 0.2 m, <span class="math inline">\(\rho\)</span> = 1.22 <span class="math inline">\(\rm{kg m^{-3}}\)</span>.</li>
+</ol>
+</section>
+
+</main>
+<!-- /main column -->
+<script id = "quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      return note.innerHTML;
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+</body>
+
+</html>

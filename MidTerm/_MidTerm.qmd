@@ -1,0 +1,231 @@
+---
+title: "MidTerm"
+jupyter: python3
+keep-ipynb: true
+---
+
+# Written Portion
+
+## Problem Question
+
+```{python}
+#| echo: false
+#| label: tbl-Constants
+#| tbl-cap: Constants
+
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+from IPython.display import Markdown
+from tabulate import tabulate
+
+
+Constants = {
+    'Heat Capacity of Air':{'value':0.001,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_a$'},
+    'Heat Capacity of Water':{'value':4.2,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_w$'},
+    'Heat Capacity of Organic Soil':{'value':2.5,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_o$'},
+    'Heat Capacity of Mineral Soil':{'value':2.0,'unit':'$MJ m^{-3} K^{-1}$','Symbol':'$C_a$'},
+    'Solar Constant':{'value':1361,'unit':'$W m^{-2}$','Symbol':'$I_0$'},
+    'Latent Heat of Vaporization':{'value':2.50,'unit':'$MJ kg^{-1}$','Symbol':'$L_v$'},
+    'Latent Heat of Fusion':{'value':0.34,'unit':'$MJ kg^{-1}$','Symbol':'$L_f$'},
+}
+
+Constants = pd.DataFrame(Constants).T[['Symbol','value','unit']]
+
+Markdown(tabulate(
+  Constants,headers=['Constant','Symbol','Value','Units']
+))
+```
+
+```{python}
+#| echo: false
+#| label: tbl-Symbols
+#| tbl-cap: Symbols
+
+Symbols = {
+    '$R_n$':{'name':'Net Radiation','unit':'$W m^{-2}$'},
+    '$LE$':{'name':'Latent Heat Flux','unit':'$W m^{-2}$'},
+    '$H$':{'name':'Sensible Heat Flux','unit':'$W m^{-2}$'},
+    '$H_g$':{'name':'Ground Heat Flux','unit':'$W m^{-2}$'},
+    '$Ta_z$':{'name':'Air Temperature at the Height (z in m) Above the Surface','unit':'$^{\circ}C$'},
+    '$RH_z$':{'name':'Relative Humidity at the Height (z in m) Above the Surface','unit':'%'},
+    '$T_0$':{'name':'Temperature at the Ground Surface','unit':'$^{\circ}C$'},
+    '$Ts_z$':{'name':'Air Temperature at the Depth (z in m) Below the Surface','unit':'$^{\circ}C$'},
+    '$\Theta_o$':{'name':'Volumetric Fraction of Organic Matter','unit':'%'},
+    '$\Theta_w$':{'name':'Volumetric Fraction of Liquid Fresh Water','unit':'%'},
+    '$r_b$':{'name':'Boundary Layer Resistance','unit':'$s m^{-1}$'},
+}
+
+df = pd.DataFrame(Symbols).T[['name','unit']]
+
+
+Markdown(tabulate(
+  df,headers=['Symbol','Name','Units']
+))
+
+```
+
+
+
+You have randomly been assigned observations of conditions above and below different the ground surface at a collection of different sites @tbl-data.  Each set observation was taken at midnight in early winter, under partly cloudy skies with light winds.  The observations were precede by a period of dry weather, such that there is no liquid or solid water present on or above the soil surface.  You will use these data to answer the questions below.
+
+```{python}
+#| echo: false
+#| label: tbl-data
+#| tbl-cap: Observations
+def pmute(N,u=0,range=1,resolution = 1,i=0):
+    seed=42
+    np.random.seed(seed+i)
+    A = (np.random.rand(N)*range)+u
+    return(np.round(A,resolution))
+
+N = 6
+
+Profile = pd.DataFrame({
+    'ID':list(map(chr, range(65,65+N))),
+    '$R_n$':pmute(N,-50,5,0),
+    '$LE$':pmute(N,-5,1,0),
+    '$Ta_{0.1}$':pmute(N,-1,.3),# (0.1 m above surface)
+    '$RH_{0.1}$':pmute(N,100,0),# (0.1 m above surface)
+    '$T_0$':pmute(N,1,.3,i=1),# (at the ground surface)
+    '$Ts_{0.1}$':pmute(N,3,.3,i=2),# (0.1 m below ground surface)
+    '$\Theta_o$':pmute(N,25,5,0),# Organic %
+    'Porosity':pmute(N,30,5,0),# Porosity %
+    '$\Theta_w$':pmute(N,15,5,0),#Volumetric Water Content (theta_w) [%]
+    '$r_b$':pmute(N,50,5,0)#Laminar Boundary Layer Resistance [s m-1]
+    },index=list(map(chr, range(65,65+N))))
+
+Markdown(tabulate(
+  Profile.values,headers=Profile.columns.values
+))
+```
+
+(@) Based on the observations, what phenomena do you anticipate might occur at the ground surface over the next few hours? **1/6**
+
+* Surface (+ adjacent air/soil) will cool because $R_n$ is negative.
+
+* Dew/frost are are expected to occur.  As surface T_0 is just above 0 and RH = 100, with negative LE, Dew is probable to occur at first, but may transition to frost as the surface cools more.
+  * Should mention possibility of frost for full marks
+
+(@) Assuming heat storage fluxes ($\Delta S$) are negligible; calculate $H$ approximate $H_g$.  You can assume that the laminar boundary layer for each site is exactly 0.1m thick. **1/4**
+
+
+```{python}
+Ca = Constants.loc['Heat Capacity of Air','value']
+Profile['H'] = Ca*1e6*(Profile['$T_0$']-Profile['$Ta_{0.1}$'])/Profile['$r_b$']
+Profile['Hg'] = Profile['$R_n$']-Profile['$LE$']-Profile['H']
+Profile[['H','Hg']]
+```
+
+
+(@) Estimate thermal admittance ($\mu$) of the soil surface and report any intermediary parameters you calculated to obtain these values. **1/4**
+
+
+```{python}
+Ca = Constants.loc['Heat Capacity of Air','value']
+Cm = Constants.loc['Heat Capacity of Mineral Soil','value']
+Co = Constants.loc['Heat Capacity of Organic Soil','value']
+Cw = Constants.loc['Heat Capacity of Water','value']
+Profile['k W m-1 K-1'] = -1*Profile['Hg']*(.1)/(Profile['$Ts_{0.1}$']-Profile['$T_0$'])
+Profile['C MJ m-3 K-1'] = (Profile['$\Theta_o$']*Co+(100-Profile['Porosity']-Profile['$\Theta_o$'])*Cm+Profile['$\Theta_w$']*Cw+(Profile['Porosity']-Profile['$\Theta_w$'])*Ca)*0.01
+Profile['mu kJ m-2 K-1 s-1/2'] = (Profile['k W m-1 K-1']*Profile['C MJ m-3 K-1'])**.5
+
+Profile[['C MJ m-3 K-1','k W m-1 K-1','mu kJ m-2 K-1 s-1/2']]
+```
+
+(@) On another day, the same initial conditions are observed at each of your sites: $R_n = 0 W m^{-2}$, $LE = 0 W m^{-2}$, and $Ta_{0.1} = -1 ^{\circ}C$, $T_0 = 1 ^{\circ}C$, and $Ts_{0.1} = 2 ^{\circ}C$.  While the thermal properties of the soils that you estimated in the previous question have not changed.  You can assume that $R_n$, $LE$, and $Ta_{0.1}$ remain fixed at their initial values, but $T_0$ and $Ts_{0.1}$ will change.  It begins to snow heavily for 6 hours, and at the end of the snow-storm all three sites have experienced some amount of snow accumulation.  Assuming that no snow accumulated at each site until $T_0 < 0 ^{\circ}C$ which site do you expect would have the most snow, and which would have the least snow at the end of the snow storm? Explain your reasoning.  *Note* you are not expected to specify how much snow accumulation will occur, just rank the sites in relative terms. **1/3**
+
+* $R_n$ and $LE$ are zero.  From the temperature gradients, we can assume $H$ will be positive slightly positive (soil surface losing heat to atmosphere) and $H_g$ will be negative soil at depth losing heat to soil surface.  However, we can't assume that $0 = H+H_G$ (same magnitude/opposite sign) in this case, because we have to account for another component of the energy balance, $\Delta M$, that we did not have to think about in previously.  
+
+  * Given the outlined assumption (snow won't accumulate until $T_0 < 0 ^{\circ} C$) the first soil to have $T_0$ < 0 will accumulate snow first.  Until then, snow will melt on the grounds surface until $T_0 < 0 ^{\circ} C$.  The process of melting will remove heat from the soil as well $\Delta M >0$; which means $0 = H + H_G + \Delta_M$.
+
+* Snowfall accumulation is expected to be inversely related to to thermal admittance $\mu$ because lower thermal admittance means surface cools rapidly (less heat transfer from depth).
+  * Thermal admittance does increase as a function of $\Theta_w$, and the water input from melting will increase $\mu$ slightly.  While the increase is not linear, since all soils have initial $\Theta_w > 0.15$, its close enough to linear that one could reasonably assume a linear relationship.  The increases in $\mu$ wouldn't be drastically different between soils anyway as they have fairly similar properties.
+  * Since $T_0$ is quite close to 0 C to start, there isn't much cooling that needs to be done before accumulation will occur.  So its reasonable to just look at the starting values of $\mu$ and use those to guess the order of which will reach 0 C first.
+
+
+```{python}
+Ranked = Profile.sort_values(by='mu kJ m-2 K-1 s-1/2').reset_index()
+Markdown(tabulate(
+  Ranked,headers=Ranked.columns.values
+))
+```
+
+
+## Short Answers
+
+
+(@) Briefly describe two ways in which a soil temperature wave changes with depth as it moves down in response to radiate forcing at the surface.  Which thermal property of soil that we discussed in lecture influences how the temperature wave will propagate through the soil?  All else equal, what happens if this property decreases?
+
+* The changes are described by the equation on [this slide](../Lectures/09.html#a-solution-of-fouriers-heat-conduction)
+  * Attenuation/damping (reduction in amplitude) with increasing depth (**1/3**)
+  * Phase shift (time offset) with increasing depth (**1/3**)
+* Thermal **diffusivity** ($K = \frac{k}{C}$) is the property that controls it (as per the equation).  If K is higher > phase shift and attenuation are reduced (reduced attenuation would mean damping depth increases) (**1/3**)
+  + Thermal conductivity ($k$) or heat capacity ($C$) can be accepted (for partial marks).  However $K = \frac{k}{C}$, so its not strictly controlled by either
+
+(@) Briefly explain what factors influence net short-wave SW* and net long-wave LW* radiation at the earth's surface?
+
+* [This slide](../Lectures/07.html#/component-fluxes) summarizes the important aspects:
+* $SW^*$ depends on:
+  + $SW\downarrow$ > influenced by sun earth geometry (distance from sun, solar declination); beam spreading (latitude, time of day, and slope, should mention of cosine law of attenuation for full credit), along with atmospheric scattering & reflection (bulk transitivity).  **Only** sourced from the Sun (**1/4**)
+  + $SW\uparrow$ > determined by albedo & magnitude of $SW\downarrow$.  Albedo is determined by surface properties (e.g., presence of snow, vegetation health, soil type/moisture, etc.) and varies by sun angle (albedo is higher for lower sun angles).  For some "surfaces" (ice, water, etc.) it also depends on the transitivity of the volume.  Surface can absorb $SW\downarrow$, but **cannot** emit it! (**1/4**)
+* $LW^*$ depends on:
+  + $LW\downarrow$ > determined by the temperature and emissivity $\epsilon$ of the atmosphere.  Warmer atmosphere = higher LW emissions; more emissive atmosphere = higher LW emissions.  Clouds are a good example: $LW\downarrow$ tends to be higher (for equivalent surface temps/seasons) when clouds are present (**1/4**)
+  + $LW\uparrow$ > determined by the temperature, emissivity $\epsilon$, and **reflectivity** of the surface.  Warmer surface = higher LW emissions; more emissive surface = higher LW emissions.  Should mention that $\epsilon = \zeta$ (absorptivity) in the **long-wave** portion of the spectrum (Khirchoff's law).  Also influenced by surface albedo ($SW$): Lower albedo = higher SW absorption = warmer surface = higher LW emissions.(**1/4**)
+
+# Calculations
+
+```{python}
+import numpy as np
+import pandas as pd
+seed = 69
+N = 3
+np.random.seed(seed)
+epsilon = np.round(np.random.rand(N)*.075+.9,3)
+np.random.seed(seed)
+LW = np.round(np.random.rand(N)*20+100)
+```
+
+(@) Assuming that a surface has an emissivity ($\epsilon_{o,LW}$) of `{python} epsilon`, how much of the incoming long-wave radiation $LW\downarrow$ is reflected from the surface when $LW\downarrow$ is `{python} LW` $W m^{-2}$?
+
+```{python}
+a=epsilon
+alpha = 1-a 
+print('alpha = ', alpha)
+print('LW_reflected = ',LW*alpha)
+```
+
+
+```{python}
+Dates = pd.DatetimeIndex(['2024-12-15','2024-03-31','2024-07-20','2024-10-01'])
+Psi_a = np.array([0.85,0.7,0.65,0.8])
+np.random.seed(seed)
+Lat = np.array([np.random.randint(20,80) for i in range(0,4)])
+```
+
+
+(@) At Local solar noon (LAT = 12:00) on `{python} Dates` at `{python} Lat` $^{\circ}$ N, $\Psi_a$ = `{python} Psi_a`.  Estimate $SW\downarrow$ 
+
+```{python}
+
+def Extraterrestrial_Irradiance(DOY,Lat):
+    I0 = 1361
+    gamma = 2*np.pi/365*(DOY-1)
+    print('gamma ',gamma)
+    delta = 0.006918 - 0.399912 * np.cos(gamma)+0.070257 *np.sin(gamma)-0.006758 *np.cos(2*gamma) + 0.000907*np.sin(2*gamma)-0.002697*np.cos(3*gamma)+0.00148 *np.sin(3*gamma)
+    print('delta = ',delta)
+    print('delta deg = ',delta*180/np.pi)
+    Z = np.arccos(np.sin(Lat*np.pi/180)*np.sin(delta)+np.cos(Lat*np.pi/180)*np.cos(delta))*180/np.pi
+    print('z = ',Z)
+    R_av_Rsq = 1.00011+0.034221*np.cos(gamma)+0.001280*np.sin(gamma)+0.000819*np.cos(2*gamma)+0.000077*np.sin(2*gamma)
+    print('R_av_Rsq = ',R_av_Rsq)
+    I_ex=I0*R_av_Rsq*np.cos(Z*np.pi/180)
+    print('I_ex = ',I_ex)
+    return(delta,Z,I_ex)
+
+print('DOY:',Dates.dayofyear.values)
+delta,Z,I_ex = Extraterrestrial_Irradiance(Dates.dayofyear.values,Lat)
+SW = I_ex*Psi_a**(1/np.cos(Z*np.pi/180))
+print('SW incoming ',np.round(SW,2))
+```
+
