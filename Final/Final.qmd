@@ -306,6 +306,12 @@ U = np.pi/2*rho*E*(R**2)*(u_bar**3)
 
 print(f'{U*1e-3:.1f} kW')
 
+print('Alternate accepted answer with erroenous E = 0.35%')
+
+E = 0.0035
+U = np.pi/2*rho*E*(R**2)*(u_bar**3)
+
+print(f'{U*1e-3:.1f} kW')
 ```
 
 
@@ -328,6 +334,12 @@ U = np.pi/2*rho*E*(R**2)*(u_bar**3)
 
 print(f'{U*1e-3:.1f} kW')
 
+print('Alternate accepted answer with erroenous E = 0.35%')
+
+E = 0.0035
+U = np.pi/2*rho*E*(R**2)*(u_bar**3)
+
+print(f'{U*1e-3:.1f} kW')
 ```
 
 
