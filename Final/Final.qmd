@@ -148,10 +148,12 @@ Profile['K_H']
 
 (@) Calculate $\overline{w^{\prime}\rho_v^{\prime}}$ for both of your assigned observations.
 
-```{Python}
-Profile['Lv'] = 2500.8−2.36*Profile['$Ta_{2.0}$']*−0.0016*Profile['$Ta_{2.0}$']**2−0.00006*Profile['$Ta_{2.0}$']**3
-Profile['w_prime_rho_v_prime_bar'] = Profile['Lv']*Profile['LE']
+```{python}
+
+Profile['Lv'] = 2500.8-2.36*Profile['$Ta_{2.0}$']*-0.0016*Profile['$Ta_{2.0}$']**2-0.00006*Profile['$Ta_{2.0}$']**3
+Profile['w_prime_rho_v_prime_bar'] = Profile['Lv']*Profile['$LE$']
 Profile['w_prime_rho_v_prime_bar'] 
+
 ```
 
 (@) Calculate the total mass of $CO_2$ uptake/emission (in $\rm{mg \ m}^{-2}$) over both of your assigned observations.  Was the site was a source or sink for atmospheric $CO_2$ during each period?  Speculate on which component of the carbon balance (Ecosystem Respiration or Gross Primary Productivity) was greater for each period.
@@ -280,15 +282,8 @@ LW_in = np.round(np.random.rand(N)*20+100)
 
 Given $SW_\downarrow$ of `{python} SW_in` and $LW\downarrow$ is `{python} LW_in` $W m^{-2}$, with a surface albedo $\alpha$ of `{python} Albedo` and a surface emissivity ($\epsilon_{o,LW}$) of `{python} epsilon`, estimate net radiation $R_n$?
 
-```{python}
-absorptivity=epsilon
-alpha_LW = 1-absorptivity 
-print('alpha = ', alpha_LW)
-LW_out = LW_in*alpha_LW
-SW_out = SW_in*Albedo
-R_n = SW_in-SW_out+LW_in-LW_out
-print(R_n)
-```
+* This questions was incomplete, so everyone gets free 20 pts for it!
+
 
 
 ## Q18
@@ -305,11 +300,13 @@ rho = 1.22 # kg m-3
 
 u_bar = u_star/k*np.log(z/z0)
 
+print('u_bar: ',u_bar)
+
 U = np.pi/2*rho*E*(R**2)*(u_bar**3)
 
 print(f'{U*1e-3:.1f} kW')
 
-print('Alternate accepted answer with erroenous E = 0.35%')
+print('Alternate accepted answer with erroneous E = 0.35%')
 
 E = 0.0035
 U = np.pi/2*rho*E*(R**2)*(u_bar**3)
@@ -333,11 +330,13 @@ rho = 1.22 # kg m-3
 
 u_bar = u_star/k*np.log(z/z0)
 
+print('u_bar: ',u_bar)
+
 U = np.pi/2*rho*E*(R**2)*(u_bar**3)
 
 print(f'{U*1e-3:.1f} kW')
 
-print('Alternate accepted answer with erroenous E = 0.35%')
+print('Alternate accepted answer with erroneous E = 0.35%')
 
 E = 0.0035
 U = np.pi/2*rho*E*(R**2)*(u_bar**3)
