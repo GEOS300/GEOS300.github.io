@@ -239,7 +239,8 @@ Markdown(tabulate(
   * Day vs. night, transpiration will be lower at night because photosynthesis isn't happening and VPD is lower at night, but will still occur at reduced rate.  CAM plants only transpire h20 at night
 
 * Evaporation is also important from soil and sometimes plant surfaces: (**1/3**)
-  * After rainfall, intercepted precipitation will evaporate from leaf surface
+  * After rainfall, intercepted precipitation will evaporate from leaf surface.
+    + Throughfall & stemflow will either soak into the soil (and could be evaporated transpired later) or evaporate from soil surface
   * Without recent precipitation, evaporation will be limited to soil and open water surfaces.  Soil evaporation rates will depend on:
     + Soil moisture content
     + Atmospheric vapor pressure deficit
@@ -260,6 +261,7 @@ Markdown(tabulate(
 
 # Calculations
 
+## Q17
 ```{python}
 import numpy as np
 import pandas as pd
@@ -276,19 +278,20 @@ np.random.seed(seed)
 LW_in = np.round(np.random.rand(N)*20+100)
 ```
 
-
-(@) Given $SW_\downarrow$ of `{python} SW_in` and $LW\downarrow$ is `{python} LW_in` $W m^{-2}$, with a surface albedo $\alpha$ of `{python} Albedo` and a surface emissivity ($\epsilon_{o,LW}$) of `{python} epsilon`, estimate net radiation $R_n$?
+Given $SW_\downarrow$ of `{python} SW_in` and $LW\downarrow$ is `{python} LW_in` $W m^{-2}$, with a surface albedo $\alpha$ of `{python} Albedo` and a surface emissivity ($\epsilon_{o,LW}$) of `{python} epsilon`, estimate net radiation $R_n$?
 
 ```{python}
-a=epsilon
-alpha = 1-a 
-print('alpha = ', alpha)
-LW_out = LW_in*alpha
-SW_out = SW_in*alpha
+absorptivity=epsilon
+alpha_LW = 1-absorptivity 
+print('alpha = ', alpha_LW)
+LW_out = LW_in*alpha_LW
+SW_out = SW_in*Albedo
 R_n = SW_in-SW_out+LW_in-LW_out
 print(R_n)
 ```
 
+
+## Q18
 
 ```{python}
 import numpy as np
