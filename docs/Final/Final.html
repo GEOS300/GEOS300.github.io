@@ -218,7 +218,7 @@ window.Quarto = {
 Table&nbsp;1: You may assume these values for the following constants wherever necessary.
 </figcaption>
 <div aria-describedby="tbl-constants-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="11">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="1">
 <table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -291,7 +291,7 @@ Table&nbsp;1: You may assume these values for the following constants wherever n
 Table&nbsp;2: Definitions of selected symbols.
 </figcaption>
 <div aria-describedby="tbl-symbols-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="12">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="2">
 <table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -395,7 +395,7 @@ Table&nbsp;2: Definitions of selected symbols.
 Table&nbsp;3: Data from Burns Bog. Each observation was averaged over one half hour, between 12:30-13:00 under clear sky conditions on the specified day of the year (DOY). Sensible and latent heat fluxes were estimated using EC sensors mounted at <span class="math inline">\(z = 2\)</span> m above the ground. You can assume that the observations were collected during an average year, where temperature and precipitation conditions were preceding the observations were typical for the season (e.g., not abnormally hot/cold and not anomalously wet/dry).
 </figcaption>
 <div aria-describedby="tbl-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="13">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="3">
 <table class="do-not-create-environment cell table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -560,7 +560,7 @@ Table&nbsp;3: Data from Burns Bog. Each observation was averaged over one half h
 <ol start="2" class="example" type="1">
 <li>Calculate the eddy diffusivity of sensible heat flux for both of your assigned observations.</li>
 </ol>
-<div id="4c626485" class="cell" data-execution_count="4">
+<div id="7b5c42c1" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert to potential temperatures</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Theta_a2'</span>] <span class="op">=</span> Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">+</span><span class="dv">2</span><span class="op">*</span>DALR</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Theta_a0.2'</span>] <span class="op">=</span> Profile[<span class="st">'$Ta_</span><span class="sc">{0.2}</span><span class="st">$'</span>]<span class="op">+</span><span class="fl">0.2</span><span class="op">*</span>DALR</span>
@@ -571,83 +571,123 @@ Table&nbsp;3: Data from Burns Bog. Each observation was averaged over one half h
 <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'K_H'</span>] <span class="op">=</span> Profile[<span class="st">'$H$'</span>]<span class="op">/</span>(<span class="op">-</span><span class="fl">0.001</span><span class="op">*</span><span class="fl">1e6</span><span class="op">*</span>Profile[<span class="st">'DTheta_a'</span>])</span>
 <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'K_H'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="14">
-<pre><code>A    0.194349
-B    0.197983
-C    0.186744
-D    0.197983
-E    0.191931
-F    0.193441
-A    0.294248
-B    0.293084
-C    0.296065
-D    0.293084
-E    0.301514
-F    0.293340
+<div class="cell-output cell-output-display" data-execution_count="4">
+<pre><code>150    0.194349
+151    0.197983
+152    0.186744
+153    0.197983
+154    0.191931
+155    0.193441
+235    0.294248
+236    0.293084
+237    0.296065
+238    0.293084
+239    0.301514
+240    0.293340
 Name: K_H, dtype: float64</code></pre>
 </div>
 </div>
 <ol start="3" class="example" type="1">
 <li>Calculate <span class="math inline">\(\overline{w^{\prime}\rho_v^{\prime}}\)</span> for both of your assigned observations.</li>
 </ol>
-<div id="f4c961da" class="cell" data-execution_count="5">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Lv'</span>] <span class="op">=</span> <span class="fl">2500.8</span><span class="op">-</span><span class="fl">2.36</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">*-</span><span class="fl">0.0016</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">**</span><span class="dv">2</span><span class="op">-</span><span class="fl">0.00006</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">**</span><span class="dv">3</span></span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'w_prime_rho_v_prime_bar'</span>] <span class="op">=</span> Profile[<span class="st">'Lv'</span>]<span class="op">*</span>Profile[<span class="st">'$LE$'</span>]</span>
+<div id="0437b549" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Lv'</span>] <span class="op">=</span> <span class="fl">2500.8</span><span class="op">-</span><span class="fl">2.36</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">-</span><span class="fl">0.0016</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">**</span><span class="dv">2</span><span class="op">-</span><span class="fl">0.00006</span><span class="op">*</span>Profile[<span class="st">'$Ta_</span><span class="sc">{2.0}</span><span class="st">$'</span>]<span class="op">**</span><span class="dv">3</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'w_prime_rho_v_prime_bar'</span>] <span class="op">=</span> Profile[<span class="st">'$LE$'</span>]<span class="op">/</span>Profile[<span class="st">'Lv'</span>]</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'w_prime_rho_v_prime_bar'</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="15">
-<pre><code>A    726915.619563
-B    765732.402066
-C    732034.743645
-D    765732.402066
-E    747598.015897
-F    724356.057523
-A    339150.804544
-B    377182.889431
-C    344212.756851
-D    377182.889431
-E    359462.887914
-F    336619.828391
+<div class="cell-output cell-output-display" data-execution_count="5">
+<pre><code>150    0.116412
+151    0.122586
+152    0.117232
+153    0.122586
+154    0.119704
+155    0.116002
+235    0.054644
+236    0.060767
+237    0.055460
+238    0.060767
+239    0.057912
+240    0.054236
 Name: w_prime_rho_v_prime_bar, dtype: float64</code></pre>
 </div>
 </div>
 <ol start="4" class="example" type="1">
 <li>Calculate the total mass of <span class="math inline">\(CO_2\)</span> uptake/emission (in <span class="math inline">\(\rm{mg \ m}^{-2}\)</span>) over both of your assigned observations. Was the site was a source or sink for atmospheric <span class="math inline">\(CO_2\)</span> during each period? Speculate on which component of the carbon balance (Ecosystem Respiration or Gross Primary Productivity) was greater for each period.</li>
 </ol>
-<pre class="{Python}"><code>Profile['F_CO2_g'] = Profile['Fc']*44.01*1e-6*1800</code></pre>
+<div id="e99fa380" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'F_CO2_g'</span>] <span class="op">=</span> Profile[<span class="st">'Fc'</span>]<span class="op">*</span><span class="fl">44.01</span><span class="op">*</span><span class="fl">1e-3</span><span class="op">*</span><span class="dv">1800</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'F_CO2_g'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="6">
+<pre><code>150   -74.46492
+151   -66.54312
+152   -73.67274
+153   -66.54312
+154   -70.50402
+155   -75.25710
+235    83.97108
+236    91.89288
+237    84.76326
+238    91.89288
+239    87.93198
+240    83.17890
+Name: F_CO2_g, dtype: float64</code></pre>
+</div>
+</div>
 <ol start="5" class="example" type="1">
 <li>Estimate the magnitude of ground heat flux (<span class="math inline">\(H_g\)</span>) for both of your assigned observations. You can assume that any storage terms not listed in the table are negligible.</li>
 </ol>
-<div id="2e451400" class="cell" data-execution_count="6">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>Heat_Assimilation <span class="op">=</span> <span class="dv">469</span><span class="co">#kJ mol-1</span></span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'G'</span>] <span class="op">=</span> Profile[<span class="st">'$R_n$'</span>]<span class="op">-</span>(Profile[<span class="st">'$LE$'</span>]<span class="op">+</span>Profile[<span class="st">'$H$'</span>]<span class="op">+</span>Profile[<span class="st">'Fc'</span>]<span class="op">*</span><span class="fl">1e-6</span><span class="op">*</span>Heat_Assimilation<span class="op">*</span><span class="fl">1e3</span>)</span>
-<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'G'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-display" data-execution_count="16">
-<pre><code>A    167.44086
-B    162.39396
-C    166.43617
-D    161.39396
-E    164.41741
-F    167.44555
-A    156.50286
-B    151.45596
-C    155.49817
-D    150.45596
-E    153.47941
-F    156.50755
+<div id="b20495f5" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>Heat_Assimilation <span class="op">=</span> <span class="dv">469</span><span class="co">#kJ mol-1</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'G'</span>] <span class="op">=</span> Profile[<span class="st">'$R_n$'</span>]<span class="op">-</span>(Profile[<span class="st">'$LE$'</span>]<span class="op">+</span>Profile[<span class="st">'$H$'</span>]<span class="op">+</span>Profile[<span class="st">'Fc'</span>]<span class="op">*</span><span class="fl">1e-6</span><span class="op">*</span>Heat_Assimilation<span class="op">*</span><span class="fl">1e3</span>)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'G'</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>150    167.44086
+151    162.39396
+152    166.43617
+153    161.39396
+154    164.41741
+155    167.44555
+235    156.50286
+236    151.45596
+237    155.49817
+238    150.45596
+239    153.47941
+240    156.50755
 Name: G, dtype: float64</code></pre>
 </div>
 </div>
 <ol start="6" class="example" type="1">
 <li>Calculate the Bowen Ratio (<span class="math inline">\(\beta\)</span>) for both of your assigned observations. Discuss what the difference in <span class="math inline">\(\beta\)</span> between your two days means, and speculate on the underlying reason for the difference between the two observations. For context, you can refer to the image below, which shows a 30-year climate normals for a near-by site.</li>
 </ol>
-<div class="cell" data-execution_count="7">
-<div id="fig-data" class="cell quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="7">
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>Rainfall<span class="op">=</span>[<span class="fl">157.5</span>,    <span class="fl">98.9</span>,   <span class="fl">111.8</span>,  <span class="fl">88.1</span>,   <span class="dv">65</span>, <span class="fl">53.8</span>,   <span class="fl">35.6</span>,   <span class="fl">36.7</span>,   <span class="fl">50.9</span>,   <span class="fl">120.7</span>,  <span class="fl">185.8</span>,  <span class="fl">148.3</span>]</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>Month <span class="op">=</span> <span class="bu">list</span>(<span class="bu">range</span>(<span class="dv">1</span>,<span class="dv">13</span>))</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>plt.figure()</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>plt.bar(Month,Rainfall)</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Month'</span>)</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Total Precipitation (mm)'</span>)</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Monthly Precipitation at Vancouver International Airport'</span>)</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Beta'</span>] <span class="op">=</span> Profile[<span class="st">'$H$'</span>]<span class="op">/</span>Profile[<span class="st">'$LE$'</span>]</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>Profile[<span class="st">'Beta'</span>] </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="fig-data" class="cell quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="8">
 <figure class="quarto-float quarto-float-fig figure">
 <div aria-describedby="fig-data-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<div id="fig-data-1" class="cell-output cell-output-display quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="17">
+<div id="fig-data-1" class="cell-output cell-output-display quarto-figure quarto-figure-center quarto-float anchored" data-execution_count="8">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-data-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<pre id="fig-data-1" class="cell-output cell-output-display" data-execution_count="17"><code>Text(0.5, 1.0, 'Average Monthly Precipitation at Vancouver International Airport')</code></pre>
+<pre id="fig-data-1" class="cell-output cell-output-display" data-execution_count="8"><code>150    0.753521
+151    0.765886
+152    0.755245
+153    0.765886
+154    0.760274
+155    0.752650
+235    2.417910
+236    2.275168
+237    2.397059
+238    2.275168
+239    2.338028
+240    2.428571
+Name: Beta, dtype: float64</code></pre>
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-subfloat-caption quarto-subfloat-fig" id="fig-data-1-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 (a) Climate information from the Vancouver International Airport, which is approximately 15km north-west of Burns Bog.
@@ -655,7 +695,7 @@ Name: G, dtype: float64</code></pre>
 </figure>
 </div>
 <div class="cell-output cell-output-display">
-<div id="fig-data-2" class="quarto-figure quarto-figure-center quarto-float anchored" height="449" width="593">
+<div id="fig-data-2" class="quarto-figure quarto-figure-center quarto-float anchored" width="593" height="449">
 <figure class="quarto-float quarto-subfloat-fig figure">
 <div aria-describedby="fig-data-2-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 <img src="Final_files/figure-html/fig-data-output-2.png" id="fig-data-2" data-ref-parent="fig-data" width="593" height="449" class="figure-img">
@@ -682,8 +722,8 @@ Figure&nbsp;1
 <ul>
 <li>Reynolds decomposition partitions a time series into two components, the mean value and the instantaneous deviation from the mean at any given point in time.</li>
 </ul>
-<div id="tbl-data2" class="cell anchored" data-execution_count="8">
-<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="18">
+<div id="tbl-data2" class="cell anchored" data-execution_count="9">
+<div class="cell-output cell-output-display cell-output-markdown" data-execution_count="9">
 <table class="table table-sm table-striped small">
 <thead>
 <tr class="header">
@@ -946,20 +986,20 @@ Figure&nbsp;1
 <h1>Calculations</h1>
 <section id="q17" class="level2">
 <h2 class="anchored" data-anchor-id="q17">Q17</h2>
-<div id="9832f03c" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">69</span></span>
-<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">3</span></span>
-<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
-<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">375</span>)</span>
-<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>Albedo <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
-<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co"># SW_out = np.round(np.random.rand(N)*125,3)</span></span>
-<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.065</span><span class="op">+</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
-<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
-<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>LW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">20</span><span class="op">+</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="4042e0b9" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>seed <span class="op">=</span> <span class="dv">69</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>N <span class="op">=</span> <span class="dv">3</span></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>SW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">375</span>)</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>Albedo <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="co"># SW_out = np.round(np.random.rand(N)*125,3)</span></span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>epsilon <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="fl">.065</span><span class="op">+</span><span class="fl">.9</span>,<span class="dv">3</span>)</span>
+<span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>np.random.seed(seed)</span>
+<span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a>LW_in <span class="op">=</span> np.<span class="bu">round</span>(np.random.rand(N)<span class="op">*</span><span class="dv">20</span><span class="op">+</span><span class="dv">100</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Given <span class="math inline">\(SW_\downarrow\)</span> of array([111., 303., 131.]) and <span class="math inline">\(LW\downarrow\)</span> is array([106., 116., 107.]) <span class="math inline">\(W m^{-2}\)</span>, with a surface albedo <span class="math inline">\(\alpha\)</span> of array([0.71 , 0.505, 0.228]) and a surface emissivity (<span class="math inline">\(\epsilon_{o,LW}\)</span>) of array([0.907, 0.904, 0.944]), estimate net radiation <span class="math inline">\(R_n\)</span>?</p>
 <ul>
@@ -968,48 +1008,14 @@ Figure&nbsp;1
 </section>
 <section id="q18" class="level2">
 <h2 class="anchored" data-anchor-id="q18">Q18</h2>
-<div id="1b2abbe9" class="cell" data-execution_count="10">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">40</span> <span class="co"># m</span></span>
-<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.35</span> <span class="co"># %</span></span>
-<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">100</span> <span class="co"># m</span></span>
-<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.25</span> <span class="co"># m</span></span>
-<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.75</span> <span class="co"># m/s</span></span>
-<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.22</span> <span class="co"># kg m-3</span></span>
-<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
-<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'u_bar: '</span>,u_bar)</span>
-<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW'</span>)</span>
-<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Alternate accepted answer with erroneous E = 0.35%'</span>)</span>
-<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.0035</span></span>
-<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
-<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>u_bar:  10.959996122758504
-1412.9 kW
-Alternate accepted answer with erroneous E = 0.35%
-14.1 kW</code></pre>
-</div>
-</div>
-<ol start="10" class="example" type="1">
-<li>Estimate the power generation (in kilowatts) of a wind turbine with R = 40 m, z = 100 m and E = 0.0035% under the following conditions: Neutral stability, <span class="math inline">\(u_∗\)</span> = 0.75 m/s, z0 = 0.25 m, <span class="math inline">\(\rho\)</span> = 1.22 <span class="math inline">\(\rm{kg m^{-3}}\)</span>.</li>
-</ol>
-<div id="0e10044a" class="cell" data-execution_count="11">
+<div id="3efa6289" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">25</span> <span class="co"># m</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">40</span> <span class="co"># m</span></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.35</span> <span class="co"># %</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">60</span> <span class="co"># m</span></span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.2</span> <span class="co"># m</span></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.85</span> <span class="co"># m/s</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">100</span> <span class="co"># m</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.25</span> <span class="co"># m</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.75</span> <span class="co"># m/s</span></span>
 <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.22</span> <span class="co"># kg m-3</span></span>
 <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
@@ -1026,6 +1032,40 @@ Alternate accepted answer with erroneous E = 0.35%
 <span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
 <span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>u_bar:  10.959996122758504
+1412.9 kW
+Alternate accepted answer with erroneous E = 0.35%
+14.1 kW</code></pre>
+</div>
+</div>
+<ol start="10" class="example" type="1">
+<li>Estimate the power generation (in kilowatts) of a wind turbine with R = 40 m, z = 100 m and E = 0.0035% under the following conditions: Neutral stability, <span class="math inline">\(u_∗\)</span> = 0.75 m/s, z0 = 0.25 m, <span class="math inline">\(\rho\)</span> = 1.22 <span class="math inline">\(\rm{kg m^{-3}}\)</span>.</li>
+</ol>
+<div id="aa56e7c2" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>k <span class="op">=</span> <span class="fl">0.41</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>R <span class="op">=</span> <span class="dv">25</span> <span class="co"># m</span></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.35</span> <span class="co"># %</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>z <span class="op">=</span> <span class="dv">60</span> <span class="co"># m</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>z0 <span class="op">=</span> <span class="fl">0.2</span> <span class="co"># m</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>u_star <span class="op">=</span> <span class="fl">0.85</span> <span class="co"># m/s</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a>rho <span class="op">=</span> <span class="fl">1.22</span> <span class="co"># kg m-3</span></span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a>u_bar <span class="op">=</span> u_star<span class="op">/</span>k<span class="op">*</span>np.log(z<span class="op">/</span>z0)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'u_bar: '</span>,u_bar)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW'</span>)</span>
+<span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Alternate accepted answer with erroneous E = 0.35%'</span>)</span>
+<span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>E <span class="op">=</span> <span class="fl">0.0035</span></span>
+<span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>U <span class="op">=</span> np.pi<span class="op">/</span><span class="dv">2</span><span class="op">*</span>rho<span class="op">*</span>E<span class="op">*</span>(R<span class="op">**</span><span class="dv">2</span>)<span class="op">*</span>(u_bar<span class="op">**</span><span class="dv">3</span>)</span>
+<span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>U<span class="op">*</span><span class="fl">1e-3</span><span class="sc">:.1f}</span><span class="ss"> kW'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>u_bar:  11.824914886482368
 693.1 kW

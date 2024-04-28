@@ -99,7 +99,7 @@ Profile = pd.DataFrame({
     '$RH_{2.0}$':pmute(N,55,5),# (0.1 m above surface)
     'Fc':pmute(N,-1,.2,2),# (0.1 m above surface)
     '$\overline{u}_{2.0}$':pmute(N,.1,.05,2)
-    },index=list(map(chr, range(65,65+N))))
+    },index=list(range(150,150+N)))
 
 # "Late Summer" with slightly lower net radiation and reduced latent heat fluxes due more drier conditions in late summer
 Profile2 = pd.DataFrame({
@@ -112,7 +112,7 @@ Profile2 = pd.DataFrame({
     '$RH_{2.0}$':pmute(N,45,5),# (0.1 m above surface)
     'Fc':pmute(N,1,.2,2),# (0.1 m above surface)
     '$\overline{u}_{2.0}$':pmute(N,.3,.05,2)
-    },index=list(map(chr, range(65,65+N))))
+    },index=list(range(235,235+N)))
 
 # Combine the two
 Profile = pd.concat([Profile,Profile2])
@@ -150,16 +150,17 @@ Profile['K_H']
 
 ```{python}
 
-Profile['Lv'] = 2500.8-2.36*Profile['$Ta_{2.0}$']*-0.0016*Profile['$Ta_{2.0}$']**2-0.00006*Profile['$Ta_{2.0}$']**3
-Profile['w_prime_rho_v_prime_bar'] = Profile['Lv']*Profile['$LE$']
+Profile['Lv'] = 2500.8-2.36*Profile['$Ta_{2.0}$']-0.0016*Profile['$Ta_{2.0}$']**2-0.00006*Profile['$Ta_{2.0}$']**3
+Profile['w_prime_rho_v_prime_bar'] = Profile['$LE$']/Profile['Lv']
 Profile['w_prime_rho_v_prime_bar'] 
 
 ```
 
 (@) Calculate the total mass of $CO_2$ uptake/emission (in $\rm{mg \ m}^{-2}$) over both of your assigned observations.  Was the site was a source or sink for atmospheric $CO_2$ during each period?  Speculate on which component of the carbon balance (Ecosystem Respiration or Gross Primary Productivity) was greater for each period.
 
-```{Python}
-Profile['F_CO2_g'] = Profile['Fc']*44.01*1e-6*1800
+```{python}
+Profile['F_CO2_g'] = Profile['Fc']*44.01*1e-3*1800
+Profile['F_CO2_g']
 ```
 
 (@) Estimate the magnitude of ground heat flux ($H_g$) for both of your assigned observations.  You can assume that any storage terms not listed in the table are negligible.
@@ -173,7 +174,7 @@ Profile['G']
 (@) Calculate the Bowen Ratio ($\beta$) for both of your assigned observations.  Discuss what the difference in $\beta$ between your two days means, and speculate on the underlying reason for the difference between the two observations.  For context, you can refer to the image below, which shows a 30-year climate normals for a near-by site.
 
 ```{python}
-#| echo: false
+#| echo: true
 #| label: fig-data
 #| fig-cap: Climate information from the Vancouver International Airport, which is approximately 15km north-west of Burns Bog. 
 
@@ -184,6 +185,9 @@ plt.bar(Month,Rainfall)
 plt.xlabel('Month')
 plt.ylabel('Total Precipitation (mm)')
 plt.title('Average Monthly Precipitation at Vancouver International Airport')
+
+Profile['Beta'] = Profile['$H$']/Profile['$LE$']
+Profile['Beta'] 
 
 ```
 
