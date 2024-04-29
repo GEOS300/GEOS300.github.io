@@ -202,7 +202,7 @@ Profile['Beta']
 * Reynolds decomposition partitions a time series into two components, the mean value and the instantaneous deviation from the mean at any given point in time.  
 
 ```{python}
-#| echo: false
+#| echo: true
 #| label: tbl-data2
 
 u = np.array([1.0,0.0,1.0,2.0,1.0,0.0,0.50,1.25])
