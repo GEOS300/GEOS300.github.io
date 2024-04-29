@@ -199,34 +199,24 @@ Profile['Beta']
 
 (@) Briefly explain the concept of Reynolds decomposition?  Then use it to calculate the $\overline{u^{\prime}w^{\prime}}$ and $u_*$ for the following data set
 
-* Reynolds decomposition partitions a time series into two components, the mean value and the instantaneous deviation from the mean at any given point in time.  
+* Reynolds decomposition partitions a time series into two components, the mean value and the instantaneous deviation from the mean at any given point in time.  This allows us to investigate turbulent fluctuations of atmospheric phenomena.  It also us to assess turbulent transport of scalars, by calculating the covariance between two properties, such as vertical wind speeds and carbon dioxide concentrations.
 
 ```{python}
-#| echo: true
-#| label: tbl-data2
 
 u = np.array([1.0,0.0,1.0,2.0,1.0,0.0,0.50,1.25])
 w = np.array([0.0,0.1,0.0,-.1,0.0,0.0,-.25,0.25])
 
-df = pd.DataFrame(data={'u_a':u,'w_a':w})
+for p,m in zip(['a','b','c','d'],[1,2,3,4]):
+  df = pd.DataFrame(data={'u':u*m,'w':w*m})
 
-df['u_b'] = df['u_a']*2
-df['w_b'] = df['w_a']*2
+  df['u_prime'] = df['u']-df['u'].mean()
+  df['w_prime'] = df['w']-df['w'].mean()
+  u_prime_w_prime_bar = (df['u_prime']*df[f'w_prime']).mean()
+  u_star = (-u_prime_w_prime_bar)**.5
 
-df['u_c'] = df['u_a']*3
-df['w_c'] = df['w_a']*3
-
-df['u_d'] = df['u_a']*4
-df['w_d'] = df['w_a']*4
-
-for p in ['a','b','c','d']:
-  df[f'u_{p}_prime'] = df[f'u_{p}']-df[f'u_{p}'].mean()
-  df[f'w_{p}_prime'] = df[f'w_{p}']-df[f'w_{p}'].mean()
-  df[f'u_{p}_prime_w_{p}_prime'] = (df[f'u_{p}_prime']*df[f'w_{p}_prime']).mean()
-
-Markdown(tabulate(
-  df.values,headers=df.columns.values
-))
+  print(p)
+  print(df.round(4))
+  print('u_prime_w_prime_bar',np.round(u_prime_w_prime_bar,4),'\nu_star',np.round(u_star,4))
 
 ```
 
